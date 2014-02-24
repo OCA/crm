@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<openerp>
+  <data>
+      <menuitem parent="base.menu_base_partner" id="menu_newsletter"
+          name="Newsletters" />
+      <act_window res_model="newsletter.newsletter" id="action_newsletters"
+          name="Newsletters"/>
+      <menuitem parent="menu_newsletter" id="menu_newsletters"
+          name="Newsletters" action="action_newsletters" />
+      <act_window res_model="newsletter.type" id="action_newsletter_types"
+          name="Newsletter types" />
+      <menuitem parent="base.menu_base_config" id="menu_newsletter_types"
+          action="action_newsletter_types" />
+  </data>
+</openerp>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<openerp>
+  <data>
+    <record model="ir.ui.view" id="form_newsletter_type">
+      <field name="name">form.newsletter.type</field>
+      <field name="model">newsletter.type</field>
+      <field name="type">form</field>
+      <field name="arch" type="xml">
+          <form col="4" string="Newsletter type" version="7.0">
+              <header>
+                  <button name="action_show_recipient_objects" type="object" string="Show recipient objects" class="oe_highlight" />
+              </header>
+              <sheet>
+                  <group>
+                      <field name="name" />
+                      <field name="model" />
+                      <field name="domain" />
+                      <field name="email_template_id" />
+                      <field name="email_from" widget="email" />
+                      <field name="group_ids" />
+                      <field name="plaintext_mode" invisible="1" />
+                  </group>
+              </sheet>
+          </form>
+      </field>
+    </record>
+  </data>
+</openerp>

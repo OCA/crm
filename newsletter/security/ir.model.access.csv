@@ -1,0 +1,10 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"access_newsletter_newsletter_system","Newsletters access for admin","model_newsletter_newsletter","base.group_system",1,1,1,1
+"access_newsletter_type_system","Newsletters type access for admin","model_newsletter_type","base.group_system",1,1,1,1
+"access_newsletter_topic_system","Newsletter topic access for admin","model_newsletter_topic","base.group_system",1,1,1,1
+"access_newsletter_newsletter_users","Newsletters access for users","model_newsletter_newsletter","base.group_user",1,0,0,0
+"access_newsletter_type_users","Newsletters type access for users","model_newsletter_type","base.group_user",1,0,0,0
+"access_newsletter_topic_users","Newsletter topic access for users","model_newsletter_topic","base.group_user",1,0,0,0
+"access_newsletter_newsletter_editor","Newsletters access for newsletter editors","model_newsletter_newsletter","group_newsletter_editor",1,1,1,1
+"access_newsletter_topic_editor","Newsletter topic access for newsletter editors","model_newsletter_topic","group_newsletter_editor",1,1,1,1
+"access_newsletter_type_manager","Newsletter type access for manager","model_newsletter_type","group_newsletter_manager",1,1,1,1
