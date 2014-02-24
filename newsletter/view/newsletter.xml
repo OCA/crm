@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<openerp>
+  <data>
+    <record model="ir.ui.view" id="form_newsletter">
+      <field name="name">form.newsletter</field>
+      <field name="model">newsletter.newsletter</field>
+      <field name="type">form</field>
+      <field name="arch" type="xml">
+          <form col="2">
+              <field name="plaintext_mode" invisible="1" />
+              <field name="may_send" invisible="1" />
+              <field name="type_id" on_change="on_change_type_id(type_id)" />
+              <field name="subject" />
+              <field name="text_intro_plain" attrs="{'invisible': ['|', ('type_id','=',False), ('plaintext_mode','in',['from_html'])]}" />
+              <field name="text_intro_html" widget="text_email_html" />
+              <field name="topic_ids" context="{'plaintext_mode': plaintext_mode}">
+                <form col="2">
+                    <field name="plaintext_mode" invisible="1" />
+                    <field name="title" />
+                    <field name="text_plain" attrs="{'invisible': [('plaintext_mode', '=', 'from_html')]}" />
+                    <field name="text_html" widget="text_email_html" />
+                </form>
+                <tree>
+                    <field name="title" />
+                </tree>
+              </field>
+              <field name="text_outro_plain" attrs="{'invisible': ['|', ('type_id','=',False), ('plaintext_mode','in',['from_html'])]}" />
+              <field name="text_outro_html" widget="text_email_html" />
+              <button name="action_show_recipient_objects" type="object" string="Show recipient objects" colspan="4" />
+              <button type="object" name="action_preview" string="Preview" colspan="2" />
+              <button type="object" name="action_send" string="Send" colspan="2" groups="newsletter.group_newsletter_sender" attrs="{'invisible': ['|', ('may_send','=',False), ('state', '!=', 'testing')]}" />
+              <group states="sending" colspan="2">
+                  <label string="Busy sending the newsletter..." />
+              </group>
+              <field name="state" widget="statusbar" colspan="2" />
+          </form>
+      </field>
+    </record>
+  </data>
+</openerp>

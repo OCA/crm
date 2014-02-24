@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<openerp>
+    <data noupdate="1">
+        <record id="email_template_newsletter_default" model="email.template">
+            <field name="name">Newletter default template</field>
+            <field name="email_from">${object.type_id.email_from}</field>
+            <field name="subject">${object.subject}</field>
+            <field name="email_to">${'${object.user_email}'}</field>
+            <field name="email_bcc"></field>
+            <field name="model_id" ref="model_newsletter_newsletter"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="lang"></field>
+            <field name="body_text"><![CDATA[${object.text_intro_plain or ''}
+%for topic in object.topic_ids:
+
+${topic.title}
+
+${topic.text_plain}
+%endfor
+
+${object.text_outro_plain or ''}
+]]></field>
+            <field name="body_html"><![CDATA[${object.text_intro_html or ''}
+%for topic in object.topic_ids:
+<div>
+<h2>${topic.title}</h2>
+<div>${topic.text_html}</div>
+</div>
+%endfor
+${object.text_outro_html or ''}
+]]></field>
+        </record>
+    </data>
+</openerp>
