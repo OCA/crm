@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openerp>
+  <data>
+
+    <!-- Views -->
+
+    <record model="ir.ui.view" id="res_letter_intern_tree_view">
+      <field name="name">Internal Letter Tree</field>
+      <field name="model">res.letter</field>
+      <field name="arch" type="xml">
+        <tree string="Letters">
+          <field name="name"/>
+          <field name="number"/>
+          <field name="move"/>
+          <field name="type"/>
+          <field name="class"/>
+          <field name="date"/>
+          <field name="partner_id"/>
+          <field name="state"/>
+          <field name="channel_id"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="res_letter_intern_calendar_view">
+      <field name="name">Internal Letter Calendar</field>
+      <field name="model">res.letter</field>
+      <field name="priority" eval="2"/>
+      <field name="arch" type="xml">
+        <calendar string="Letters" date_start="date" color="move">
+          <field name="name"/>
+          <field name="partner_id"/>
+        </calendar>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="res_letter_out_form_view">
+      <field name="model">res.letter</field>
+      <field name="inherit_id" ref="lettermgmt.res_letter_out_form_view"/>
+      <field name="arch" type="xml">
+
+        <notebook name="Extra">
+          <page string="Copies to Departments">
+            <group col="2">
+              <label for="cc_employee_ids"/>
+              <label for="cc_department_ids"/>
+              <field name="cc_employee_ids" nolabel="1">
+                <tree version="7.0" editable="1">
+                  <field name="name"/>
+                  <field name="department_id"/>
+                </tree>
+              </field>
+              <field name="cc_department_ids" nolabel="1">
+                <tree version="7.0" editable="1">
+                  <field name="name"/>
+                  <field name="code"/>
+                </tree>
+              </field>
+            </group>
+          </page>
+        </notebook>
+
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="res_letter_in_form_view">
+      <field name="model">res.letter</field>
+      <field name="inherit_id" ref="lettermgmt.res_letter_in_form_view"/>
+      <field name="arch" type="xml">
+
+        <field name="partner_id" position="before">
+          <field name="department_id"/>
+        </field>
+
+        <notebook name="Extra">
+
+          <page string="Copies to Departments">
+            <group col="2">
+              <label for="cc_employee_ids"/>
+              <label for="cc_department_ids"/>
+              <field name="cc_employee_ids" nolabel="1">
+                <tree version="7.0" editable="1">
+                  <field name="name"/>
+                  <field name="department_id"/>
+                </tree>
+              </field>
+              <field name="cc_department_ids" nolabel="1">
+                <tree version="7.0" editable="1">
+                  <field name="name"/>
+                  <field name="code"/>
+                </tree>
+              </field>
+            </group>
+          </page>
+        </notebook>
+
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="res_letter_intern_form_view">
+      <field name="name">Internal Letter Form</field>
+      <field name="model">res.letter</field>
+      <field name="arch" type="xml">
+        <form string="Letter" version="7.0">
+          <header name="Toolbar">
+            <button name="action_create" states="draft" string="Create" type="object" class="oe_highlight"/>
+            <button name="action_validate" states="created" string="Validate" type="object" class="oe_highlight"/>
+            <button name="action_received" states="validated" string="Received" type="object" icon="STOCK_OK"/>
+            <button name="action_rec_ret" states="validated" string="Received but Returned" type="object" icon="STOCK_UNDO"/>
+            <button name="action_rec_bad" states="validated" string="Received Damage" type="object" icon="STOCK_DIALOG_WARNING"/>
+            <button name="action_set_draft" string="Set To Draft" type="object" icon="STOCK_CONVERT"/>
+            <button name="action_cancel" states="draft,created,validated" string="Cancel" type="object" icon="STOCK_CANCEL"/>
+            <field name="state" widget="statusbar" statusbar_visible="draft,created,validated,rec,rec_bad,rec_ret,cancel"/>
+          </header>
+          <sheet>
+            <group col="4">
+              <group string="References" col="2" colspan="2">
+                <field name="folder_id"/>
+                <field name="number"/>
+                <field name="orig_ref"/>
+                <field name="department_id"/>
+              </group>
+              <group string="Details" col="2" colspan="2">
+                <field name="date"/>
+                <field name="snd_rec_date" string="Send Date"/>
+                <field name="type"/>
+                <field name="class"/>
+                <field name="channel_id" string="Source"/>
+                <field name="track_ref"/>
+              </group>
+              <group string="Subject" col="2" colspan="2">
+                <field name="name"/>
+              </group>
+              <group string="Dimensions" col="2" colspan="2">
+                <field name="size"/>
+                <field name="weight"/>
+              </group>
+              <group string="Recipients" col="4" colspan="4">
+                <field name="recipient_intern_ids" nolabel="1">
+                  <tree version="7.0" editable="1">
+                    <field name="name" readonly="1"/>
+                    <field name="department_id" readonly="1"/>
+                  </tree>
+                </field>
+              </group>
+            </group>
+
+            <notebook name="Extra">
+              <page string="Thread">
+                <field name="child_line" colspan="4" nolabel="1"/>
+              </page>
+              <page string="Action History">
+                <field name="history_line" colspan="4" nolabel="1"/>
+              </page>
+              <page string="Copies to External">
+                <group name="extern_grp" col="1">
+                  <group col="1">
+                    <field name="extern_partner_ids"/>
+                  </group>
+                </group>
+              </page>
+            </notebook>
+
+          </sheet>
+          <div class="oe_chatter">
+            <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+            <field name="message_ids" widget="mail_thread"/>
+          </div>
+        </form>
+      </field>
+    </record>
+
+    <!-- Actions -->
+
+    <record model="ir.actions.act_window" id="action_res_letter_intern_tree_view">
+      <field name="name">Internal Letters</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">res.letter</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form,calendar</field>
+      <field name="domain">[('move','=','intern')]</field>
+      <field name="context">{'move':'intern'}</field>
+      <field name="view_id" ref="res_letter_intern_tree_view"/>
+    </record>
+
+    <record model="ir.actions.act_window.view" id="action_res_letter_intern_tree_mode">
+      <field name="sequence" eval="1"/>
+      <field name="view_mode">tree</field>
+      <field name="view_id" ref="res_letter_intern_tree_view"/>
+      <field name="act_window_id" ref="action_res_letter_intern_tree_view"/>
+    </record>
+
+    <record model="ir.actions.act_window.view" id="action_res_letter_intern_form_mode">
+      <field name="sequence" eval="2"/>
+      <field name="view_mode">form</field>
+      <field name="view_id" ref="res_letter_intern_form_view"/>
+      <field name="act_window_id" ref="action_res_letter_intern_tree_view"/>
+    </record>
+
+    <record model="ir.actions.act_window.view" id="action_res_letter_intern_calendar_mode">
+      <field name="sequence" eval="3"/>
+      <field name="view_mode">calendar</field>
+      <field name="view_id" ref="res_letter_intern_calendar_view"/>
+      <field name="act_window_id" ref="action_res_letter_intern_tree_view"/>
+    </record>
+
+    <!-- Menus -->
+
+    <menuitem id="res_letter_intern_menu"
+              name="Internal Letters"
+              parent="lettermgmt.res_letter_menu"
+              action="action_res_letter_intern_tree_view"/>
+
+  </data>
+</openerp>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openerp>
+  <data>
+
+    <!-- Views -->
+
+    <record model="ir.ui.view" id="letter_reassignment_tree_view">
+      <field name="model">letter.reassignment</field>
+      <field name="inherit_id" ref="lettermgmt.letter_reassignment_tree_view"/>
+      <field name="arch" type="xml">
+        <field name="name" position="after">
+          <field name="department_id"/>
+        </field>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="letter_reassignment_form_view">
+      <field name="model">letter.reassignment</field>
+      <field name="inherit_id" ref="lettermgmt.letter_reassignment_form_view"/>
+      <field name="arch" type="xml">
+        <field name="name" position="after">
+          <field name="department_id"/>
+        </field>
+      </field>
+    </record>
+
+  </data>
+</openerp>
