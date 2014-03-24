@@ -1,0 +1,9 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"access_res_letter","res_letter_user","model_res_letter","base.group_user",1,1,1,1
+"access_letter_history","letter_history_user","model_letter_history","base.group_user",1,1,1,1
+"access_letter_type_user","letter_type_user","model_letter_type","base.group_user",1,0,0,0
+"access_letter_type_system","letter_type_system","model_letter_type","base.group_system",1,1,1,1
+"access_letter_class_user","letter_class_user","model_letter_class","base.group_user",1,0,0,0
+"access_letter_class_system","letter_class_system","model_letter_class","base.group_system",1,1,1,1
+"access_letter_channel_user","letter_channel_user","model_letter_channel","base.group_user",1,0,0,0
+"access_letter_channel_system","letter_channel_system","model_letter_channel","base.group_system",1,1,1,1
