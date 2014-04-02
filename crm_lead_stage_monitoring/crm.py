@@ -41,6 +41,6 @@ class CrmLead(orm.Model):
     def copy(self, cr, uid, id, default=None, context=None):
         if not default:
             default = {}
-        ## Do not dupplicate last_activity_stage
+        ## Do not duplicate last_activity_stage
         default['last_activity_stage'] = False
         return super(CrmLead, self).copy(cr, uid, id, default, context=context)
