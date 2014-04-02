@@ -22,7 +22,10 @@
 {'name': 'CRM - Add last activity on stage field',
  'version': '1.0.0',
  'category': 'other',
- 'description': """CRM Last activity on stage""",
+ 'description': """This module allow the sale manager to have a quick review of recent stage change on his lead/opportunities.
+Each time a lead/opportunity switches from a stage to on other, the Current stage date is updated.
+You can make "group by" and search on the Current stage date field 
+""",
  'author': 'Camptocamp',
  'website': 'http://www.camptocamp.com',
  'depends': ['crm'],
