@@ -56,7 +56,7 @@ class crm_claim_merge(orm.TransientModel):
     def action_merge(self, cr, uid, ids, context=None):
         claim_obj = self.pool['crm.claim']
         if isinstance(ids, (tuple, list)):
-            assert len(ids) == 0, "Expect 1 ID, got: %s" % ids
+            assert len(ids) == 1, "Expect 1 ID, got: %s" % ids
             ids = ids[0]
         wizard = self.browse(cr, uid, ids, context=context)
         merge_ids = [claim.id for claim in wizard.claim_ids]
