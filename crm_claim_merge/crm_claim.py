@@ -3,6 +3,9 @@
 #
 #    Author: Guewen Baconnier
 #    Copyright 2014 Camptocamp SA
+#    Merge code freely adapted to claims from merge of crm leads by
+#    OpenERP
+#    Copyright (C) 2004-today OpenERP SA (<http://www.openerp.com>)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -138,6 +141,36 @@ class crm_claim(orm.Model):
                           context=context)
         return True
 
+    def _merge_claim_attachments(self, cr, uid, merge_in, claims, context=None):
+        attach_obj = self.pool['ir.attachment']
+
+        # return attachments of claims
+        def _get_attachments(claim_id):
+            attachment_ids = attach_obj.search(
+                cr, uid,
+                [('res_model', '=', self._name),
+                 ('res_id', '=', claim_id)],
+                context=context)
+            return attach_obj.browse(cr, uid, attachment_ids, context=context)
+
+        first_attachments = _get_attachments(merge_in.id)
+        merge_in_id = merge_in.id
+
+        # Counter of all attachments to move.
+        # Used to make sure the name is different for all attachments
+        count = 1
+        for claim in claims:
+            attachments = _get_attachments(claim.id)
+            for attachment in attachments:
+                values = {'res_id': merge_in_id}
+                for attachment_in_first in first_attachments:
+                    if attachment.name == attachment_in_first.name:
+                        name = "%s (%s)" % (attachment.name, count)
+                        values['name'] = name
+                count += 1
+                attachment.write(values)
+        return True
+
     def merge(self, cr, uid, ids, merge_in_id=None, context=None):
         """ Merge claims together.
 
@@ -161,4 +194,7 @@ class crm_claim(orm.Model):
                                 fields, context=context)
 
         self._merge_claim_history(cr, uid, merge_in, claims, context=context)
+        self._merge_claim_attachments(cr, uid, merge_in, claims,
+                                      context=context)
+
         import pdb; pdb.set_trace()
