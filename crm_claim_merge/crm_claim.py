@@ -31,7 +31,6 @@ from openerp.tools.translate import _
 
 CRM_CLAIM_FIELDS_TO_MERGE = (
     'name',
-    'ref',
     'partner_id',
     'user_id',
     'categ_id',
@@ -46,6 +45,7 @@ CRM_CLAIM_FIELDS_TO_MERGE = (
     'stage_id',
     'priority',
     'resolution',
+    'ref',
     'date_action_next',
     'action_next',
     'date_closed',
@@ -101,6 +101,10 @@ class crm_claim(orm.Model):
                     return value
             return False
 
+        def _get_first_reference(attr):
+            rel = _get_first_not_falsish(attr)
+            return '%s,%s' % (rel._model._name, rel.id) if rel else False
+
         def _get_first_m2o(attr):
             rel = _get_first_not_falsish(attr)
             return rel.id if rel else False
@@ -122,6 +126,8 @@ class crm_claim(orm.Model):
                 data[field_name] = _get_first_m2o(field_name)
             elif field._type == 'text':
                 data[field_name] = _concat_text(field_name)
+            elif field._type == 'reference':
+                data[field_name] = _get_first_reference(field_name)
             else:
                 data[field_name] = _get_first_not_falsish(field_name)
 
@@ -202,7 +208,7 @@ class crm_claim(orm.Model):
                 else:
                     key = field.selection
                 value = dict(key).get(claim[field_name], claim[field_name])
-            elif field._type == 'many2one':
+            elif field._type in ('many2one', 'reference'):
                 if claim[field_name]:
                     value = claim[field_name].name_get()[0][1]
             elif field._type == 'many2many':
