@@ -123,6 +123,21 @@ class crm_claim(orm.Model):
 
         return data
 
+    def _merge_claim_history(self, cr, uid, merge_in, claims, context=None):
+        merge_in_id = merge_in.id
+        for claim in claims:
+            history_ids = set()
+            for history in claim.message_ids:
+                history_ids.add(history.id)
+            message = self.pool['mail.message']
+            message.write(cr, uid,
+                          list(history_ids),
+                          {'res_id': merge_in_id,
+                           'subject': _("From %s") % claim.name,
+                           },
+                          context=context)
+        return True
+
     def merge(self, cr, uid, ids, merge_in_id=None, context=None):
         """ Merge claims together.
 
@@ -144,4 +159,6 @@ class crm_claim(orm.Model):
         fields = list(self._merge_fields(cr, uid, context=None))
         data = self._merge_data(cr, uid, merge_in, claims,
                                 fields, context=context)
+
+        self._merge_claim_history(cr, uid, merge_in, claims, context=context)
         import pdb; pdb.set_trace()
