@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <!-- Merge Claims  -->
+        <record model="ir.ui.view" id="view_crm_claim_merge_form">
+            <field name="name">crm.claim.merge.form</field>
+            <field name="model">crm.claim.merge</field>
+            <field name="arch" type="xml">
+                <form string="Merge Claims" version="7.0">
+                    <group string="Select Claims">
+                        <field name="claim_ids">
+                            <tree>
+                                <field name="create_date"/>
+                                <field name="name"/>
+                                <field name="partner_id"/>
+                                <field name="email_from"/>
+                                <field name="partner_phone"/>
+                                <field name="stage_id"/>
+                                <field name="user_id"/>
+                                <field name="section_id"/>
+                            </tree>
+                        </field>
+                        <field name="merge_in_id" />
+                    </group>
+                    <footer>
+                        <button name="action_merge" type="object" string="Merge" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!--  Merge leads/claim action -->
+        <record model="ir.actions.act_window" id="action_crm_claim_merge">
+            <field name="name">Merge Claims</field>
+            <field name="res_model">crm.claim.merge</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_crm_claim_merge_form"/>
+            <field name="target">new</field>
+        </record>
+
+        <act_window id="action_merge_claim"
+            multi="True"
+            key2="client_action_multi" name="Merge Claims"
+            res_model="crm.claim.merge" src_model="crm.claim"
+            view_mode="form" target="new" view_type="form"/>
+
+    </data>
+</openerp>

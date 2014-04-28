@@ -1,0 +1,64 @@
+-
+  Create claims to test their merge
+-
+  !record {model: crm.claim, id: test_crm_claim_01}:
+    type: 'claim'
+    name: 'Test claim 1'
+    partner_id: base.res_partner_1
+    stage_id: crm_claim.stage_claim1
+    description: This is the description of the test claim 1.
+    partner_phone: (373) 907-1009
+    email_from: bill@example.com
+-
+  !record {model: crm.claim, id: test_crm_claim_02}:
+    type: 'claim'
+    name: 'Test claim 2'
+    partner_id: base.res_partner_3
+    stage_id: crm_claim.stage_claim5
+    description: This is the description of the test claim 2.
+    partner_phone:
+    email_from: bill@example.com
+-
+  !record {model: crm.claim, id: test_crm_claim_03}:
+    type: 'claim'
+    name: 'Test claim 3'
+    partner_id: base.res_partner_3
+    stage_id: crm_claim.stage_claim3
+    description: This is the description of the test claim 3.
+    partner_phone: (373) 907-1010
+    email_from: tom@example.com
+-
+  !python {model: crm.claim}: |
+    claim_ids = [ref('test_crm_claim_01'),
+                 ref('test_crm_claim_02'),
+                 ref('test_crm_claim_03')]
+    context.update({'active_model': 'crm.claim',
+                    'active_ids': claim_ids,
+                    'active_id': claim_ids[0]})
+-
+  I create a merge wizard and merge the claims together in the second claim
+-
+  !record {model: crm.claim.merge, id: merge_claim_wizard_01}:
+    merge_in_id: crm_claim.test_crm_claim_02
+-
+  !python {model: crm.claim.merge}: |
+    self.action_merge(cr, uid, [ref("merge_claim_wizard_01")], context=context)
+-
+  I check for the resulting merged claim (based on name and partner).
+-
+  !python {model: crm.claim}: |
+    merge_id = self.search(cr, uid,
+                           [('name', '=', 'Test claim 2'),
+                            ('partner_id','=', ref("base.res_partner_3"))])
+    assert merge_id, 'Failed to create the merged claim'
+    merge_result = self.browse(cr, uid, merge_id[0])
+    assert merge_result.description == 'This is the description of the test claim 1.\n\nThis is the description of the test claim 2.\n\nThis is the description of the test claim 3.', 'Description mismatch: when merging claims with different text values, these values should get concatenated and separated with line returns'
+-
+  The other (tailing) claims shouldn't exist anymore.
+-
+  !python {model: crm.claim}: |
+    tailing_claim = self.search(cr, uid, [('id', '=', ref('test_crm_claim_01'))])
+    assert not tailing_claim, 'This tailing claim (id %s) should not exist anymore' % ref('test_crm_claim_01')
+
+    tailing_claim = self.search(cr, uid, [('id', '=', ref('test_crm_claim_03'))])
+    assert not tailing_claim, 'This tailing claim (id %s) should not exist anymore' % ref('test_crm_claim_03')
