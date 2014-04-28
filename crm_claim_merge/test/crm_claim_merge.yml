@@ -2,8 +2,8 @@
   Create claims to test their merge
 -
   !record {model: crm.claim, id: test_crm_claim_01}:
-    type: 'claim'
     name: 'Test claim 1'
+    date: !eval time.strftime('%Y-02-08')
     partner_id: base.res_partner_1
     stage_id: crm_claim.stage_claim1
     description: This is the description of the test claim 1.
@@ -11,8 +11,8 @@
     email_from: bill@example.com
 -
   !record {model: crm.claim, id: test_crm_claim_02}:
-    type: 'claim'
     name: 'Test claim 2'
+    date: !eval time.strftime('%Y-02-04')
     partner_id: base.res_partner_3
     stage_id: crm_claim.stage_claim5
     description: This is the description of the test claim 2.
@@ -20,8 +20,8 @@
     email_from: bill@example.com
 -
   !record {model: crm.claim, id: test_crm_claim_03}:
-    type: 'claim'
     name: 'Test claim 3'
+    date: !eval time.strftime('%Y-02-06')
     partner_id: base.res_partner_3
     stage_id: crm_claim.stage_claim3
     description: This is the description of the test claim 3.
@@ -39,7 +39,6 @@
   I create a merge wizard and merge the claims together in the second claim
 -
   !record {model: crm.claim.merge, id: merge_claim_wizard_01}:
-    merge_in_id: crm_claim.test_crm_claim_02
 -
   !python {model: crm.claim.merge}: |
     self.action_merge(cr, uid, [ref("merge_claim_wizard_01")], context=context)
