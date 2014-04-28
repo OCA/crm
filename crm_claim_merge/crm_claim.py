@@ -23,7 +23,9 @@
 ##############################################################################
 
 from operator import attrgetter
+from itertools import chain
 
+from openerp import SUPERUSER_ID
 from openerp.osv import orm
 from openerp.tools.translate import _
 
@@ -124,6 +126,18 @@ class crm_claim(orm.Model):
             else:
                 data[field_name] = _get_first_not_falsish(field_name)
 
+        # Check if the stage is in the stages of the sales team. If not,
+        # assign the stage with the lowest sequence
+        if data.get('section_id'):
+            stage_obj = self.pool['crm.case.stage']
+            section_stage_ids = stage_obj.search(
+                cr, uid,
+                [('section_ids', 'in', data['section_id'])],
+                order='sequence',
+                context=context)
+            if data.get('stage_id') not in section_stage_ids:
+                data['stage_id'] = (section_stage_ids[0] if
+                                    section_stage_ids else False)
         return data
 
     def _merge_claim_history(self, cr, uid, merge_in, claims, context=None):
@@ -171,6 +185,56 @@ class crm_claim(orm.Model):
                 attachment.write(values)
         return True
 
+    def _merge_mail_body(self, cr, uid, claim, fields, title=False, context=None):
+        body = []
+        if title:
+            body.append("%s\n" % title)
+
+        for field_name in fields:
+            field_info = self._all_columns.get(field_name)
+            if field_info is None:
+                continue
+            field = field_info.column
+            value = ''
+
+            if field._type == 'selection':
+                if hasattr(field.selection, '__call__'):
+                    key = field.selection(self, cr, uid, context=context)
+                else:
+                    key = field.selection
+                value = dict(key).get(claim[field_name], claim[field_name])
+            elif field._type == 'many2one':
+                if claim[field_name]:
+                    value = claim[field_name].name_get()[0][1]
+            elif field._type == 'many2many':
+                if claim[field_name]:
+                    for val in claim[field_name]:
+                        field_value = val.name_get()[0][1]
+                        value += field_value + ","
+            else:
+                value = claim[field_name]
+
+            body.append("%s: %s" % (field.string, value or ''))
+        return "<br/>".join(body + ['<br/>'])
+
+    def _merge_notify(self, cr, uid, merge_in, claims, context=None):
+        """ Create a message gathering merged claims information.  """
+        details = []
+        subject = [_('Merged claims')]
+        for claim in chain([merge_in] + claims):
+            subject.append(claim.name)
+            title = "%s: %s" % (_('Merged claim'), claim.name)
+            fields = list(self._merge_fields(cr, uid, context=context))
+            details.append(self._merge_mail_body(cr, uid, claim, fields,
+                                                 title=title, context=context))
+
+        # Chatter message's subject
+        subject = subject[0] + ": " + ", ".join(subject[1:])
+        details = "\n\n".join(details)
+        return self.message_post(cr, uid, [merge_in.id],
+                                 body=details, subject=subject,
+                                 context=context)
+
     def merge(self, cr, uid, ids, merge_in_id=None, context=None):
         """ Merge claims together.
 
@@ -197,4 +261,17 @@ class crm_claim(orm.Model):
         self._merge_claim_attachments(cr, uid, merge_in, claims,
                                       context=context)
 
-        import pdb; pdb.set_trace()
+        self._merge_notify(cr, uid, merge_in, claims, context=context)
+
+        # Write merged data into first claim
+        self.write(cr, uid, [merge_in.id], data, context=context)
+
+        # Delete tail claims
+        # We use the SUPERUSER to avoid access rights issues because as
+        # the user had the rights to see the records it should be safe
+        # to do so
+        self.unlink(cr, SUPERUSER_ID,
+                    [claim.id for claim in claims],
+                    context=context)
+
+        return merge_in.id
