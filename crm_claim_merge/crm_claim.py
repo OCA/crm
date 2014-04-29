@@ -288,8 +288,9 @@ class crm_claim(orm.Model):
         details = []
         subject = [_('Merged claims')]
         for claim in chain([merge_in] + claims):
-            subject.append(claim.name)
-            title = "%s: %s" % (_('Merged claim'), claim.name)
+            name = claim.name_get()[0][1]
+            subject.append(name)
+            title = "%s: %s" % (_('Merged claim'), name)
             fields = list(self._merge_fields(cr, uid, context=context))
             details.append(self._merge_mail_body(cr, uid, claim, fields,
                                                  title=title, context=context))
