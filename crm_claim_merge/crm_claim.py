@@ -216,7 +216,7 @@ class crm_claim(orm.Model):
             message.write(cr, uid,
                           list(history_ids),
                           {'res_id': merge_in_id,
-                           'subject': _("From %s") % claim.name,
+                           'subject': _("From %s") % claim.name_get()[0][1],
                            },
                           context=context)
 
