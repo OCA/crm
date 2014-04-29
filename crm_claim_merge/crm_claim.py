@@ -158,7 +158,6 @@ class crm_claim(orm.Model):
                            'subject': _("From %s") % claim.name,
                            },
                           context=context)
-        return True
 
     def _merge_claim_attachments(self, cr, uid, merge_in, claims, context=None):
         attach_obj = self.pool['ir.attachment']
@@ -188,7 +187,6 @@ class crm_claim(orm.Model):
                         values['name'] = name
                 count += 1
                 attachment.write(values)
-        return True
 
     def _merge_mail_body(self, cr, uid, claim, fields, title=False, context=None):
         body = []
@@ -240,6 +238,26 @@ class crm_claim(orm.Model):
                                  body=details, subject=subject,
                                  context=context)
 
+    def _merge_followers(self, cr, uid, merge_in, claims, context=None):
+        """ Subscribe the same followers on the final claim. """
+        follower_ids = [fol.id for fol in merge_in.message_follower_ids]
+
+        fol_obj = self.pool.get('mail.followers')
+        fol_ids = fol_obj.search(
+            cr, SUPERUSER_ID,
+            [('res_model', '=', self._name),
+             ('res_id', 'in', [claim.id for claim in claims])],
+            context=context)
+
+        for fol in fol_obj.browse(cr, SUPERUSER_ID, fol_ids, context=context):
+            if fol.res_id in follower_ids:
+                continue
+            subtype_ids = [st.id for st in fol.subtype_ids]
+            self.message_subscribe(cr, SUPERUSER_ID, [merge_in.id],
+                                   [fol.partner_id.id],
+                                   subtype_ids=subtype_ids,
+                                   context=context)
+
     def merge(self, cr, uid, ids, merge_in_id=None, context=None):
         """ Merge claims together.
 
@@ -267,6 +285,7 @@ class crm_claim(orm.Model):
                                       context=context)
 
         self._merge_notify(cr, uid, merge_in, claims, context=context)
+        self._merge_followers(cr, uid, merge_in, claims, context=context)
 
         # Write merged data into first claim
         self.write(cr, uid, [merge_in.id], data, context=context)
