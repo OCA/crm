@@ -4,7 +4,7 @@
   !record {model: crm.claim, id: test_crm_claim_01}:
     name: 'Test claim 1'
     date: !eval time.strftime('%Y-02-08')
-    partner_id: base.res_partner_1
+    partner_id: base.res_partner_3
     stage_id: crm_claim.stage_claim1
     description: This is the description of the test claim 1.
     partner_phone: (373) 907-1009
@@ -51,7 +51,13 @@
                             ('partner_id','=', ref("base.res_partner_3"))])
     assert merge_id, 'Failed to create the merged claim'
     merge_result = self.browse(cr, uid, merge_id[0])
-    assert merge_result.description == 'This is the description of the test claim 1.\n\nThis is the description of the test claim 2.\n\nThis is the description of the test claim 3.', 'Description mismatch: when merging claims with different text values, these values should get concatenated and separated with line returns'
+    expected = ('This is the description of the test claim 2.\n\n'
+                'This is the description of the test claim 3.\n\n'
+                'This is the description of the test claim 1.')
+    assert merge_result.description == expected, (
+                                        'Description mismatch: when merging claims with '
+                                        'different text values, these values should get '
+                                        'concatenated and separated with line returns')
 -
   The other (tailing) claims shouldn't exist anymore.
 -
