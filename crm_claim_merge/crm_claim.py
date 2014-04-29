@@ -29,30 +29,9 @@ from openerp import SUPERUSER_ID
 from openerp.osv import orm
 from openerp.tools.translate import _
 
-CRM_CLAIM_FIELDS_TO_MERGE = (
-    'name',
-    'partner_id',
-    'user_id',
-    'categ_id',
-    'cause',
-    'date',
-    'company_id',
-    'section_id',
-    'description',
-    'email_from',
-    'email_cc',
-    'partner_phone',
-    'stage_id',
-    'priority',
-    'resolution',
-    'ref',
-    'date_action_next',
-    'action_next',
-    'date_closed',
-    'date_deadline',
-    'type_action',
-    'user_fault',
-)
+CRM_CLAIM_FIELD_BLACKLIST = [
+    'message_ids',
+]
 
 
 class crm_claim(orm.Model):
@@ -84,7 +63,12 @@ class crm_claim(orm.Model):
                     _('Cannot merge claims of different partners.'))
 
     def _merge_fields(self, cr, uid, context=None):
-        return CRM_CLAIM_FIELDS_TO_MERGE
+        fields = self._all_columns
+        fields = (name for name, info in fields.iteritems()
+                  if not info.column.readonly)
+        fields = (name for name in fields if
+                  name not in CRM_CLAIM_FIELD_BLACKLIST)
+        return list(fields)
 
     def _merge_data(self, cr, uid, merge_in, claims, fields, context=None):
         """
