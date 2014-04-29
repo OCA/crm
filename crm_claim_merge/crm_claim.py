@@ -120,13 +120,14 @@ class crm_claim(orm.Model):
             if field_info is None:
                 continue
             field = field_info.column
-            if field._type in ('many2many', 'one2many'):
+            field_type = field._type  # noqa
+            if field_type in ('many2many', 'one2many'):
                 continue
-            elif field._type == 'many2one':
+            elif field_type == 'many2one':
                 data[field_name] = _get_first_m2o(field_name)
-            elif field._type == 'text':
+            elif field_type == 'text':
                 data[field_name] = _concat_text(field_name)
-            elif field._type == 'reference':
+            elif field_type == 'reference':
                 data[field_name] = _get_first_reference(field_name)
             else:
                 data[field_name] = _get_first_not_falsish(field_name)
@@ -200,16 +201,18 @@ class crm_claim(orm.Model):
             field = field_info.column
             value = ''
 
-            if field._type == 'selection':
+            field_type = field._type  # noqa
+
+            if field_type == 'selection':
                 if hasattr(field.selection, '__call__'):
                     key = field.selection(self, cr, uid, context=context)
                 else:
                     key = field.selection
                 value = dict(key).get(claim[field_name], claim[field_name])
-            elif field._type in ('many2one', 'reference'):
+            elif field_type in ('many2one', 'reference'):
                 if claim[field_name]:
                     value = claim[field_name].name_get()[0][1]
-            elif field._type == 'many2many':
+            elif field_type == 'many2many':
                 if claim[field_name]:
                     for val in claim[field_name]:
                         field_value = val.name_get()[0][1]
