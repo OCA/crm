@@ -9,18 +9,7 @@
             <field name="arch" type="xml">
                 <form string="Merge Claims" version="7.0">
                     <group string="Select Claims">
-                        <field name="claim_ids">
-                            <tree>
-                                <field name="create_date"/>
-                                <field name="name"/>
-                                <field name="partner_id"/>
-                                <field name="email_from"/>
-                                <field name="partner_phone"/>
-                                <field name="stage_id"/>
-                                <field name="user_id"/>
-                                <field name="section_id"/>
-                            </tree>
-                        </field>
+                        <field name="claim_ids"/>
                         <field name="merge_in_id" />
                     </group>
                     <footer>
