@@ -61,6 +61,14 @@ class crm_claim(orm.Model):
     def _merge_get_default_main(self, cr, uid, claims, context=None):
         return sorted(claims, key=attrgetter('date'))[0]
 
+    def _merge_sort(self, cr, uid, claims, context=None):
+        """ Sort the tailing claims.
+
+        When claims have concurrent values, the (true-ish) value from the
+        first claim is used.
+        """
+        return sorted(claims, key=attrgetter('date'))
+
     def _merge_check(self, cr, uid, claims, context=None):
         if len(claims) <= 1:
             raise orm.except_orm(
@@ -278,6 +286,7 @@ class crm_claim(orm.Model):
                     merge_in = claim
                     break
         claims.remove(merge_in)  # keep the tail
+        claims = self._merge_sort(cr, uid, claims, context=context)
 
         fields = list(self._merge_fields(cr, uid, context=None))
         data = self._merge_data(cr, uid, merge_in, claims,
