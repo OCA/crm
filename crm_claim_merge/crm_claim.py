@@ -3,8 +3,8 @@
 #
 #    Author: Guewen Baconnier
 #    Copyright 2014 Camptocamp SA
-#    Merge code freely adapted to claims from merge of crm leads by
-#    OpenERP
+#    Merge code freely adapted to claims from merge of crm leads
+#    and partners by OpenERP
 #    Copyright (C) 2004-today OpenERP SA (<http://www.openerp.com>)
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -31,6 +31,7 @@ from openerp.tools.translate import _
 
 CRM_CLAIM_FIELD_BLACKLIST = [
     'message_ids',
+    'message_follower_ids',
 ]
 
 
@@ -69,6 +70,73 @@ class crm_claim(orm.Model):
         fields = (name for name in fields if
                   name not in CRM_CLAIM_FIELD_BLACKLIST)
         return list(fields)
+
+    def _get_fk_on(self, cr, table):
+        """ Get all FK pointing to a table """
+        q = """  SELECT cl1.relname as table,
+                        att1.attname as column
+                   FROM pg_constraint as con, pg_class as cl1, pg_class as cl2,
+                        pg_attribute as att1, pg_attribute as att2
+                  WHERE con.conrelid = cl1.oid
+                    AND con.confrelid = cl2.oid
+                    AND array_lower(con.conkey, 1) = 1
+                    AND con.conkey[1] = att1.attnum
+                    AND att1.attrelid = cl1.oid
+                    AND cl2.relname = %s
+                    AND att2.attname = 'id'
+                    AND array_lower(con.confkey, 1) = 1
+                    AND con.confkey[1] = att2.attnum
+                    AND att2.attrelid = cl2.oid
+                    AND con.contype = 'f'
+        """
+        return cr.execute(q, (table,))
+
+    def _merge_update_foreign_keys(self, cr, uid, merge_in,
+                                   claims, context=None):
+        claim_ids = [claim.id for claim in claims]
+
+        # find the many2one relation to a claim
+        self._get_fk_on(cr, 'crm_claim')
+
+        for table, column in cr.fetchall():
+            if 'crm_claim_merge' in table:
+                # ignore the wizard tables (TransientModel + relation
+                # table)
+                continue
+            query = ("SELECT column_name FROM information_schema.columns"
+                     "  WHERE table_name = %s")
+            cr.execute(query, (table, ))
+            columns = []
+            for data in cr.fetchall():
+                if data[0] != column:
+                    columns.append(data[0])
+
+            query_dic = {
+                'table': table,
+                'column': column,
+                'value': columns[0],
+            }
+            if len(columns) <= 1:
+                # update of m2m
+                query = """
+                    UPDATE "%(table)s" as ___tu
+                    SET %(column)s = %%s
+                    WHERE
+                        %(column)s = %%s AND
+                        NOT EXISTS (
+                            SELECT 1
+                            FROM "%(table)s" as ___tw
+                            WHERE
+                                %(column)s = %%s AND
+                                ___tu.%(value)s = ___tw.%(value)s
+                        )""" % query_dic
+                for claim_id in claim_ids:
+                    cr.execute(query, (merge_in.id, claim_id,
+                                       merge_in.id))
+            else:
+                query = ('UPDATE "%(table)s" SET %(column)s = %%s WHERE '
+                         '%(column)s IN %%s') % query_dic
+                cr.execute(query, (merge_in.id, tuple(claim_ids)))
 
     def _merge_data(self, cr, uid, merge_in, claims, fields, context=None):
         """
@@ -283,6 +351,8 @@ class crm_claim(orm.Model):
         self._merge_notify(cr, uid, merge_in, claims, context=context)
         self._merge_followers(cr, uid, merge_in, claims, context=context)
 
+        self._merge_update_foreign_keys(cr, uid, merge_in,
+                                        claims, context=context)
         # Write merged data into first claim
         self.write(cr, uid, [merge_in.id], data, context=context)
 
