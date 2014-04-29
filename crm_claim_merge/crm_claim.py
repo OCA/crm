@@ -237,17 +237,19 @@ class crm_claim(orm.Model):
 
         # Counter of all attachments to move.
         # Used to make sure the name is different for all attachments
-        count = 1
+        existing_names = [att.name for att in first_attachments]
         for claim in claims:
             attachments = _get_attachments(claim.id)
             for attachment in attachments:
                 values = {'res_id': merge_in_id}
-                for attachment_in_first in first_attachments:
-                    if attachment.name == attachment_in_first.name:
-                        name = "%s (%s)" % (attachment.name, count)
-                        values['name'] = name
-                count += 1
+                name = attachment.name
+                count = 1
+                while name in existing_names:
+                    name = "%s (%s)" % (attachment.name, count)
+                    count += 1
+                values['name'] = name
                 attachment.write(values)
+                existing_names.append(name)
 
     def _merge_mail_body(self, cr, uid, claim, fields, title=False, context=None):
         body = []
