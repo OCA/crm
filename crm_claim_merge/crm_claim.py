@@ -336,7 +336,7 @@ class crm_claim(orm.Model):
             merge_in = self._merge_get_default_main(cr, uid, claims,
                                                     context=context)
         else:
-            for claim in claims[:]:
+            for claim in claims:
                 if claim.id == merge_in_id:
                     merge_in = claim
                     break
