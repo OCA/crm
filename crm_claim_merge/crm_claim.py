@@ -272,7 +272,7 @@ class crm_claim(orm.Model):
             elif field_type in ('many2one', 'reference'):
                 if claim[field_name]:
                     value = claim[field_name].name_get()[0][1]
-            elif field_type == 'many2many':
+            elif field_type in ('many2many', 'one2many'):
                 if claim[field_name]:
                     for val in claim[field_name]:
                         field_value = val.name_get()[0][1]
