@@ -1,0 +1,24 @@
+# German translation for openerp-crm
+# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
+# This file is distributed under the same license as the openerp-crm package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: openerp-crm\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-04-02 12:16+0000\n"
+"PO-Revision-Date: 2014-06-07 14:09+0000\n"
+"Last-Translator: Rudolf Schnapka <rs@techno-flex.de>\n"
+"Language-Team: German <de@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2014-06-08 06:13+0000\n"
+"X-Generator: Launchpad (build 17031)\n"
+
+#. module: crm_lead_stage_monitoring
+#: view:crm.lead:0
+#: field:crm.lead,last_activity_stage:0
+msgid "Current stage date"
+msgstr "Stadiumsdatum"
