@@ -14,7 +14,7 @@ install:
 
 script:
     - travis_run_flake8
-    - travis_run_tests 7.0
+    - travis_run_tests 7.0 ~/web-addons
 
 after_success:
   coveralls
