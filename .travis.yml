@@ -10,6 +10,7 @@ install:
  - export PATH=$HOME/maintainer-quality-tools/travis:$PATH
  - travis_install_nightly 7.0
  - pip install coveralls flake8
+ - bzr branch --stacked lp:web-addons/7.0 ~/web-addons
 
 script:
     - travis_run_flake8
