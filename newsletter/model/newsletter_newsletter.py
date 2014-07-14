@@ -28,7 +28,7 @@ from newsletter_type import newsletter_type
 
 
 def _get_plaintext(obj, cr, uid, ids, field_name, arg, context=None):
-    #TODO: we need a write function for that too
+    # TODO: we need a write function for that too
     result = {}
     for this in obj.browse(cr, uid, ids, context=context):
         if this.plaintext_mode == 'from_html' and this[arg]:
@@ -37,7 +37,7 @@ def _get_plaintext(obj, cr, uid, ids, field_name, arg, context=None):
             doc = html.document_fromstring(this[arg])
             result[this.id] = doc.text_content()
         else:
-            #TODO: read from database
+            # TODO: read from database
             result[this.id] = ''
     return result
 
