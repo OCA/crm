@@ -33,7 +33,6 @@ def _get_plaintext(obj, cr, uid, ids, field_name, arg, context=None):
     for this in obj.browse(cr, uid, ids, context=context):
         if this.plaintext_mode == 'from_html' and this[arg]:
             from lxml import html
-            from lxml.html.clean import clean_html
 
             doc = html.document_fromstring(this[arg])
             result[this.id] = doc.text_content()
@@ -49,58 +48,64 @@ class newsletter_newsletter(Model):
     _logger = logging.getLogger(_name)
 
     _state_selection = [
-            ('draft', 'draft'),
-            ('testing', 'testing'),
-            ('sending', 'sending'),
-            ('sent', 'sent'),
-            ]
+        ('draft', 'draft'),
+        ('testing', 'testing'),
+        ('sending', 'sending'),
+        ('sent', 'sent'),
+    ]
 
     def _may_send_get(self, cr, uid, ids, field_name, arg, context=None):
         result = {}
-        user_groups = set([group.id for group in 
-            self.pool.get('res.users').browse(
-                cr, uid, uid, context=context).groups_id])
+        user_groups = set(
+            [
+                group.id for group in
+                self.pool.get('res.users').browse(
+                    cr, uid, uid, context=context).groups_id
+            ])
 
         for this in self.browse(cr, uid, ids, context=context):
             result[this.id] = True
             if this.type_id.group_ids:
-                result[this.id] = bool(user_groups.intersection(
+                result[this.id] = bool(
+                    user_groups.intersection(
                         set([group.id for group in this.type_id.group_ids])))
-            
+
         return result
 
     _columns = {
-            'state': fields.selection(_state_selection, 'State'),
-            'type_id': fields.many2one(
-                'newsletter.type', 'Type', required=True),
-            'subject': fields.char('Subject', size=256, required=True),
-            'text_intro_plain': fields.function(_get_plaintext, type='text',
-                string='Intro (plain)', arg='text_intro_html', store=True),
-            'text_intro_html': fields.text('Intro (HTML)'),
-            'text_outro_plain': fields.function(_get_plaintext, type='text',
-                string='Outro (plain)', arg='text_outro_html', store=True),
-            'text_outro_html': fields.text('Outro (HTML)'),
-            'topic_ids': fields.one2many(
-                'newsletter.topic', 'newsletter_id', 'Topics'),
-            'plaintext_mode': fields.related(
-                'type_id', 'plaintext_mode', type='selection',
-                selection=newsletter_type._plaintext_mode_selection,
-                string='Plaintext mode', readonly=True),
-            'may_send': fields.function(_may_send_get, type='boolean'),
-            }
+        'state': fields.selection(_state_selection, 'State'),
+        'type_id': fields.many2one(
+            'newsletter.type', 'Type', required=True),
+        'subject': fields.char('Subject', size=256, required=True),
+        'text_intro_plain': fields.function(
+            _get_plaintext, type='text', string='Intro (plain)',
+            arg='text_intro_html', store=True),
+        'text_intro_html': fields.text('Intro (HTML)'),
+        'text_outro_plain': fields.function(
+            _get_plaintext, type='text', string='Outro (plain)',
+            arg='text_outro_html', store=True),
+        'text_outro_html': fields.text('Outro (HTML)'),
+        'topic_ids': fields.one2many(
+            'newsletter.topic', 'newsletter_id', 'Topics'),
+        'plaintext_mode': fields.related(
+            'type_id', 'plaintext_mode', type='selection',
+            selection=newsletter_type._plaintext_mode_selection,
+            string='Plaintext mode', readonly=True),
+        'may_send': fields.function(_may_send_get, type='boolean'),
+    }
 
     _defaults = {
-            'state': 'draft',
-            }
+        'state': 'draft',
+    }
 
     def on_change_type_id(self, cr, uid, ids, type_id, context=None):
         newsletter_type = self.pool.get('newsletter.type').browse(
-                cr, uid, type_id, context=context)
+            cr, uid, type_id, context=context)
         return {
-                'value': {
-                    'plaintext_mode': newsletter_type.plaintext_mode,
-                    }
-                }
+            'value': {
+                'plaintext_mode': newsletter_type.plaintext_mode,
+            }
+        }
 
     def action_preview(self, cr, uid, ids, context=None):
         for this in self.browse(cr, uid, ids, context):
@@ -113,33 +118,32 @@ class newsletter_newsletter(Model):
                 'context': {
                     'template_id': this.type_id.email_template_id.id,
                     'default_res_id': this.id,
-                    'newsletter_res_id': self.pool.get(
-                        this.type_id.model.model).search(
+                    'newsletter_res_id':
+                        self.pool[this.type_id.model.model].search(
                             cr, uid, safe_eval(this.type_id.domain))[0],
-                    },
+                },
                 'view_mode': 'form',
                 'view_id': self.pool.get('ir.model.data').get_object_reference(
-                    cr, uid, 'newsletter',
-                    'email_template_preview_form')[1],
-                }
+                    cr, uid, 'newsletter', 'email_template_preview_form')[1],
+            }
 
     def action_send(self,  cr,  uid,  ids,  context=None):
         self.write(cr, uid, ids, {'state': 'sending'}, context=context)
         self.pool.get('ir.cron').create(
-                cr, uid,
-                {
-                    'name': 'newsletter._cronjob_send_newsletter',
-                    'user_id': uid,
-                    'priority': 9,
-                    'model': self._name,
-                    'function': '_cronjob_send_newsletter',
-                    'args': str((ids,)),
-                    'interval_type': False,
-                    'numbercall': 1,
-                    'doall': False,
-                })
+            cr, uid,
+            {
+                'name': 'newsletter._cronjob_send_newsletter',
+                'user_id': uid,
+                'priority': 9,
+                'model': self._name,
+                'function': '_cronjob_send_newsletter',
+                'args': str((ids,)),
+                'interval_type': False,
+                'numbercall': 1,
+                'doall': False,
+            })
         return {'type': 'ir.actions.act_window_close'}
-        
+
     def _cronjob_send_newsletter(self,  cr,  uid,  ids,  context=None):
         for this in self.browse(cr,  uid,  ids,  context):
             model = self.pool.get(this.type_id.model.model)
@@ -154,15 +158,15 @@ class newsletter_newsletter(Model):
                 this.type_id.model.model, search_domain))
 
             while True:
-                ids = model.search(cr, uid, search_domain, offset=offset,
-                                  limit=step)
+                ids = model.search(
+                    cr, uid, search_domain, offset=offset, limit=step)
 
                 if not ids:
                     break
 
                 for id in ids:
                     self._logger.debug('sending mail to %d' % id)
-                    
+
                     try:
                         template_obj.send_mail(
                             cr,
@@ -174,7 +178,7 @@ class newsletter_newsletter(Model):
                                 })
                     except Exception as e:
                         self._error(e)
-                            
+
                 offset += step
 
             self._logger.info('sending newsletter %s finished' % this.subject)

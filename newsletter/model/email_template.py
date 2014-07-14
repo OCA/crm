@@ -23,23 +23,21 @@
 from mako.template import Template as MakoTemplate
 from urllib import quote as quote
 from openerp.osv.orm import Model
-from openerp.osv import fields
 
 
 class email_template(Model):
     _inherit = 'email.template'
 
     def render_template(self, cr, uid, template, model, res_id, context=None):
-        result = super(email_template, self).render_template(cr, uid, template,
-                model, res_id, context)
+        result = super(email_template, self).render_template(
+            cr, uid, template, model, res_id, context)
         if (model == 'newsletter.newsletter' and res_id
-            and context.get('newsletter_res_id')):
-            
-            newsletter = self.pool.get(model).browse(cr, uid, res_id,
-                    context=context)
-            user = self.pool.get('res.users').browse(cr, uid, uid,
-                    context=context)
+                and context.get('newsletter_res_id')):
 
+            newsletter = self.pool.get(model).browse(cr, uid, res_id,
+                                                     context=context)
+            user = self.pool.get('res.users').browse(cr, uid, uid,
+                                                     context=context)
 
             result = MakoTemplate(result).render_unicode(
                 object=self.pool.get(newsletter.type_id.model.model).browse(
@@ -52,9 +50,11 @@ class email_template(Model):
 
         return result
 
+
 class email_template_preview(Model):
     _inherit = 'email_template.preview'
 
     def render_template(self, cr, uid, template, model, res_id, context=None):
-        return email_template.render_template(self.pool.get('email.template'),
-                cr, uid, template, model, res_id, context)
+        return email_template.render_template(
+            self.pool['email.template'], cr, uid, template, model, res_id,
+            context)
