@@ -106,7 +106,7 @@ always also is an editor and a manager is a sender as well as an editor.
     'js': [
         'static/src/js/newsletter.js',
         ],
-    'installable': True,
+    'installable': False,
     'auto_install': False,
     'application': True,
 }

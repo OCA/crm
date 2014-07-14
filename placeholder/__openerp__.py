@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#   Copyright (c) 2014 Camptocamp SA (http://www.camptocamp.com)
-#   @author Vincent Renaville
+#    OpenERP, Open Source Management Solution
+#    This module copyright (C) 2014 Therp BV (<http://therp.nl>).
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -18,22 +18,34 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
+{
+    "name": "placeholder",
+    "version": "1.0",
+    "author": "Therp BV",
+    "license": "AGPL-3",
+    "complexity": "normal",
+    "description": """
+This is a placeholder module because odoo checks if an addons path contains
+addons at all. This makes travis fail, so we need this until the first addon is
+ported.
 
-{'name': 'CRM - Add last activity on stage field',
- 'version': '1.0.0',
- 'category': 'other',
- 'description': """This module allow the sale manager to have a quick review of recent stage change on his lead/opportunities.
-Each time a lead/opportunity switches from a stage to on other, the Current stage date is updated.
-You can make "group by" and search on the Current stage date field 
-""",
- 'author': 'Camptocamp',
- 'website': 'http://www.camptocamp.com',
- 'depends': ['crm'],
- 'data': [
-          'crm_view.xml'
-          ],
- 'demo_xml': [],
- 'test': [],
- 'installable': True,
- 'active': False,
- }
+Please remove as soon as you commit your first port!
+    """,
+    "category": "",
+    "depends": [
+    ],
+    "data": [
+    ],
+    "js": [
+    ],
+    "css": [
+    ],
+    "qweb": [
+    ],
+    "auto_install": False,
+    "installable": True,
+    "application": False,
+    "external_dependencies": {
+        'python': [],
+    },
+}

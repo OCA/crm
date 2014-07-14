@@ -21,46 +21,39 @@
 ###############################################################################
 
 {
-    'name': 'Letter Management',
+    'name': 'Letter Management - HR Bindings',
     'version': '0.1',
     'author': 'Savoir-faire Linux',
     'maintainer': 'Savoir-faire Linux',
     'website': 'http://www.savoirfairelinux.com',
     'license': 'AGPL-3',
     'category': 'Social Network',
-    'summary': 'Track letters, parcels, registered documents',
+    'summary': 'Human Resources bindings for Letter Management',
     'description': """
 Letter Management
 =================
 
-Using this module you can track Incoming / Outgoing letters, parcels, registered documents
+Using this module you can track Internal letters, parcels, registered documents
 or any other paper documents that are important for company to keep track of.
 
 Contributors
 ------------
 * Sandy Carter <sandy.carter@savoirfairelinux.com>
-* Parthiv Patel, Tech Receptives (Original 6.0 Author)
 
 """,
-    'depends': ['mail'],
+    'depends': ['hr', 'lettermgmt'],
     'external_dependencies': {
         'python': [],
     },
     'data': [
         "res_letter_view.xml",
-        "letter_folder_view.xml",
-        "letter_channel_view.xml",
-        "letter_class_view.xml",
-        "letter_history_view.xml",
         "letter_reassignment_view.xml",
-        "letter_type_view.xml",
         "letter_sequence.xml",
-        'security/ir.model.access.csv',
     ],
-    'demo': ["letter_demo.xml"],
+    'demo': [],
     'test': [],
-    'installable': True,
-    'auto_install': False,
+    'installable': False,
+    'auto_install': True,
 }
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
