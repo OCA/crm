@@ -20,10 +20,7 @@
 #
 ##############################################################################
 
-from mako.template import Template as MakoTemplate
-from urllib import quote as quote
 from openerp.osv.orm import Model
-from openerp.osv import fields
 from openerp.addons.email_template.email_template import mako_template_env
 
 
@@ -35,29 +32,32 @@ class email_template(Model):
         try:
             mako_template_env.autoescape = False
             result = super(email_template, self).render_template(
-                    cr, uid, template, model, res_id, context)
+                cr, uid, template, model, res_id, context)
         finally:
             mako_template_env.autoescape = True
 
         if (model == 'newsletter.newsletter' and res_id
-            and context.get('newsletter_res_id')):
-            
+                and context.get('newsletter_res_id')):
+
             newsletter = self.pool.get(model).browse(cr, uid, res_id,
-                    context=context)
+                                                     context=context)
             user = self.pool.get('res.users').browse(cr, uid, uid,
-                    context=context)
+                                                     context=context)
 
             result = mako_template_env.from_string(result).render({
                 'object': self.pool.get(newsletter.type_id.model.model).browse(
                     cr, uid, context.get('newsletter_res_id'), context),
                 'user': user,
-                'ctx': context})
+                'ctx': context
+            })
 
         return result
+
 
 class email_template_preview(Model):
     _inherit = 'email_template.preview'
 
     def render_template(self, cr, uid, template, model, res_id, context=None):
-        return email_template.render_template(self.pool.get('email.template'),
-                cr, uid, template, model, res_id, context)
+        return email_template.render_template(
+            self.pool.get('email.template'),
+            cr, uid, template, model, res_id, context)

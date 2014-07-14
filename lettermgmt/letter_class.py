@@ -26,7 +26,8 @@ from openerp.tools.translate import _
 
 
 class letter_class(orm.Model):
-    """ Class to define the classification of letter like : classified, confidential, personal, etc. """
+    """ Class to define the classification of letter like : classified,
+    confidential, personal, etc. """
     _name = 'letter.class'
     _description = _("Letter Classification")
     _columns = {

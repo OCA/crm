@@ -33,8 +33,9 @@
 Letter Management
 =================
 
-Using this module you can track Incoming / Outgoing letters, parcels, registered documents
-or any other paper documents that are important for company to keep track of.
+Using this module you can track Incoming / Outgoing letters, parcels,
+registered documents or any other paper documents that are important for your
+company to keep track of.
 
 Contributors
 ------------

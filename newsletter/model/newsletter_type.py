@@ -30,28 +30,28 @@ class newsletter_type(Model):
     _description = 'Newsletter type'
 
     _plaintext_mode_selection = [
-            ('from_html', 'from HTML')
-            ];
+        ('from_html', 'from HTML')
+    ]
 
     _columns = {
-            'name': fields.char('Name', size=64, required=True),
-            'email_template_id': fields.many2one('email.template',
-                'Email template', required=True),
-            'model': fields.many2one('ir.model', 'Model', required=True),
-            'domain': fields.char('Domain', size=256, required=True),
-            'email_from': fields.char('From address', size=128, required=True),
-            'plaintext_mode': fields.selection(_plaintext_mode_selection,
-                'Plaintext mode', required=True),
-            'group_ids': fields.many2many('res.groups',
-                'newsletter_type_groups_rel', 'newsletter_id', 'group_id',
-                'Groups',
-                help='The groups that may send this type of newsletter. '
-                'Leave empty for all members of group Newsletter / Senders'),
-            }
+        'name': fields.char('Name', size=64, required=True),
+        'email_template_id': fields.many2one(
+            'email.template', 'Email template', required=True),
+        'model': fields.many2one('ir.model', 'Model', required=True),
+        'domain': fields.char('Domain', size=256, required=True),
+        'email_from': fields.char('From address', size=128, required=True),
+        'plaintext_mode': fields.selection(
+            _plaintext_mode_selection, 'Plaintext mode', required=True),
+        'group_ids': fields.many2many(
+            'res.groups', 'newsletter_type_groups_rel', 'newsletter_id',
+            'group_id', 'Groups',
+            help='The groups that may send this type of newsletter. '
+            'Leave empty for all members of group Newsletter / Senders'),
+    }
 
     _defaults = {
-            'plaintext_mode': 'from_html',
-            }
+        'plaintext_mode': 'from_html',
+    }
 
     def action_show_recipient_objects(self, cr, uid, ids, context=None):
         for this in self.browse(cr, uid, ids, context=context):
@@ -62,4 +62,4 @@ class newsletter_type(Model):
                 'res_model': this.model.model,
                 'domain': this.domain,
                 'name': _('Recipients'),
-                }
+            }
