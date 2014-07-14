@@ -31,13 +31,13 @@ class CrmLead(orm.Model):
 
     def write(self, cr, uid, ids, vals, context=None):
         if vals.get('stage_id'):
-            ## Add the last_activity_stage for the current date
+            # Add the last_activity_stage for the current date
             vals['last_activity_stage'] = fields.datetime.now()
         return super(CrmLead, self).write(cr, uid, ids, vals, context=context)
 
     def copy(self, cr, uid, id, default=None, context=None):
         if default is None:
             default = {}
-        ## Do not duplicate last_activity_stage
+        # Do not duplicate last_activity_stage
         default['last_activity_stage'] = False
         return super(CrmLead, self).copy(cr, uid, id, default, context=context)
