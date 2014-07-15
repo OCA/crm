@@ -26,7 +26,8 @@ from openerp.tools.translate import _
 
 
 class letter_type(orm.Model):
-    """Class to define various types for letters like : envelope,parcel, etc."""
+    """Class to define various types for letters like : envelope,parcel,
+    etc."""
     _name = 'letter.type'
     _description = _("Letter Type")
     _columns = {

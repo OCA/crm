@@ -29,9 +29,12 @@ class letter_reassignment(orm.Model):
     _name = 'letter.reassignment'
     _description = _('Reassignment line')
     _columns = {
-        'name': fields.many2one('res.users', string='Name', help='User to forward letter to.'),
-        'comment': fields.text('Comment', help='Comment for user explaining forward.'),
-        'letter_id': fields.many2one('res.letter', string='Letter', help='Letter in question.'),
+        'name': fields.many2one(
+            'res.users', string='Name', help='User to forward letter to.'),
+        'comment': fields.text(
+            'Comment', help='Comment for user explaining forward.'),
+        'letter_id': fields.many2one(
+            'res.letter', string='Letter', help='Letter in question.'),
     }
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

@@ -51,7 +51,7 @@ Usage
 After a newsletter type is configured, the handling is pretty straightworfard:
 Go to Sales/Newsletters/Newsletters and create a new one. Choose the type you
 configured before and fill in a subject.
-    
+
 Often, a template will be chosen that enforces a certain layout for different
 subsections of your text. That's why the text is broken up into an intro, an
 outro and topics with optional heading in between. This way, you can put most

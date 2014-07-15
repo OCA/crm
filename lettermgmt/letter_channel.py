@@ -26,7 +26,8 @@ from openerp.tools.translate import _
 
 
 class letter_channel(orm.Model):
-    """ Class to define various channels using which letters can be sent or received like : post, fax, email. """
+    """ Class to define various channels using which letters can be sent or
+    received like : post, fax, email. """
     _name = 'letter.channel'
     _description = _("Send/Receive channel")
     _columns = {

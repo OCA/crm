@@ -30,15 +30,16 @@ class newsletter_topic(Model):
     _name = 'newsletter.topic'
 
     _columns = {
-            'newsletter_id': fields.many2one('newsletter.newsletter',
-                'Newsletter'),
-            'title': fields.char('Title', size=256),
-            'text_plain': fields.function(_get_plaintext, type='text',
-                string='Text (plain)', arg='text_html', store=True),
-            'text_html': fields.text('Text (html)'),
-            'plaintext_mode': fields.related(
-                'newsletter_id', 'type_id', 'plaintext_mode',
-                type='selection',
-                selection=newsletter_type._plaintext_mode_selection,
-                string='Plaintext mode', readonly=True),
-            }
+        'newsletter_id': fields.many2one(
+            'newsletter.newsletter', 'Newsletter'),
+        'title': fields.char('Title', size=256),
+        'text_plain': fields.function(
+            _get_plaintext, type='text', string='Text (plain)',
+            arg='text_html', store=True),
+        'text_html': fields.text('Text (html)'),
+        'plaintext_mode': fields.related(
+            'newsletter_id', 'type_id', 'plaintext_mode',
+            type='selection',
+            selection=newsletter_type._plaintext_mode_selection,
+            string='Plaintext mode', readonly=True),
+    }
