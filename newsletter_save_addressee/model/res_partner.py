@@ -28,7 +28,7 @@ class ResPartner(Model):
 
     _columns = {
         'newsletter_ids': fields.many2many(
-            'newsletter_newsletter',
+            'newsletter.newsletter',
             'newsletter_partner_rel', 'partner_id', 'newsletter_id',
             string='Newsletter'),
     }
