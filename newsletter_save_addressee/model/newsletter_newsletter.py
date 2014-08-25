@@ -37,7 +37,7 @@ class NewsletterNewsletter(Model):
 
     def _do_send_newsletter(self, cr, uid, this, record_id, context=None):
         result = super(NewsletterNewsletter, self)._do_send_newsletter(
-            cr, uid, this, record_id, context=None)
+            cr, uid, this, record_id, context=context)
         if this.type_id.model.model == 'res.partner':
             self.pool['newsletter.partner.rel'].create(
                 cr, uid,
