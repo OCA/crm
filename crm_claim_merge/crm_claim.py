@@ -39,13 +39,20 @@ class crm_claim(orm.Model):
     _inherit = 'crm.claim'
 
     def _merge_get_default_main(self, cr, uid, claims, context=None):
+        """ From the whole selection of claims, return the main claim.
+
+        The main claim will be the claim in which the others (tail
+        claims) will be merged.
+        """
         return sorted(claims, key=attrgetter('date'))[0]
 
     def _merge_sort(self, cr, uid, claims, context=None):
-        """ Sort the tailing claims.
+        """ Sort the tail claims.
 
-        When claims have concurrent values, the (true-ish) value from the
-        first claim is used.
+        The tail claims are the selection of claims but the main claim.
+        The sorting of the tail claim will determine what the priority
+        is when several claims have a value for a field: the first in
+        the list will have its value kept.
         """
         return sorted(claims, key=attrgetter('date'))
 
