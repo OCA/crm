@@ -42,4 +42,4 @@ The messages will be grouped in one thread.
           ],
  'installable': True,
  'auto_install': False,
-}
+ }

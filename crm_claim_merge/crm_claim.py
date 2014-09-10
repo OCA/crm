@@ -220,7 +220,8 @@ class crm_claim(orm.Model):
                            },
                           context=context)
 
-    def _merge_claim_attachments(self, cr, uid, merge_in, claims, context=None):
+    def _merge_claim_attachments(self, cr, uid, merge_in, claims,
+                                 context=None):
         attach_obj = self.pool['ir.attachment']
 
         # return attachments of claims
@@ -251,7 +252,8 @@ class crm_claim(orm.Model):
                 attachment.write(values)
                 existing_names.append(name)
 
-    def _merge_mail_body(self, cr, uid, claim, fields, title=False, context=None):
+    def _merge_mail_body(self, cr, uid, claim, fields, title=False,
+                         context=None):
         body = []
         if title:
             body.append("%s\n" % title)
