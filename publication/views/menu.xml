@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record
+        id="action_distribution_list"
+        model="ir.actions.act_window"
+        >
+        <field name="view_mode">tree,form</field>
+        <field name="res_model">distribution.list</field>
+        <field name="name">Distribution List</field>
+    </record>
+
+    <menuitem
+        id="menu_distribution_list"
+        action="action_distribution_list"
+        name="Distribution List"
+        parent="partner_noncommercial.menu_partner"
+        sequence="60"
+        />
+
+    <record
+        id="action_publication"
+        model="ir.actions.act_window"
+        >
+        <field name="view_mode">tree,form</field>
+        <field name="res_model">product.template</field>
+        <field name="name">Publications</field>
+        <field name="domain">[('publication','=',True)]</field>
+        <field name="context">{'default_publication': True}</field>
+    </record>
+
+    <menuitem
+        id="menu_publication"
+        action="action_publication"
+        name="Publications"
+        parent="partner_noncommercial.menu_partner"
+        sequence="76"
+        />
+
+    <record
+        id="action_publication_edition"
+        model="ir.actions.act_window"
+        >
+        <field name="view_mode">tree,form</field>
+        <field name="res_model">publication.edition</field>
+        <field name="name">Publication Editons</field>
+    </record>
+
+    <menuitem
+        id="menu_publication_edition"
+        action="action_publication_edition"
+        name="Publication Editons"
+        parent="partner_noncommercial.menu_partner"
+        sequence="78"
+        />
+
+</odoo>

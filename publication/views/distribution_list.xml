@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="subscription_search" model="ir.ui.view">
+        <field name="name">Search view for subscriptions</field>
+        <field name="model">distribution.list</field>
+        <field name="arch" type="xml">
+            <search string="Subscriptions">
+                <field name="product_id" />
+                <field name="partner_id" />
+                <field name="contract_partner_id" />
+                <group expand="0" string="Group By...">
+                    <filter
+                        string="Publication"
+                        context="{'group_by':'product_id'}"
+                        />
+                    <filter
+                        string="Receiving Partner"
+                        context="{'group_by':'partner_id'}"
+                        />
+                    <filter
+                        string="Contract Partner"
+                        context="{'group_by':'contract_partner_id'}"
+                        />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record
+        id="subscription_tree"
+        model="ir.ui.view">
+        <field name="name">subscription.tree</field>
+        <field name="model">distribution.list</field>
+        <field name="type">tree</field>
+        <field
+            name="arch"
+            type="xml"
+            >
+            <tree string="Subscriptions">
+                <field name="product_id" />
+                <field name="partner_id" />
+                <field name="contract_partner_id" />
+                <field name="display_address" />
+                <field name="copies" />
+            </tree>
+        </field>
+    </record>
+
+    <record
+        id="subscription_form"
+        model="ir.ui.view"
+        >
+        <field name="name">subscription.form</field>
+        <field name="model">distribution.list</field>
+        <field name="type">form</field>
+        <field
+            name="arch"
+            type="xml"
+            >
+            <form string="Subscription Address">
+                <group colspan="6" col="4">
+                    <group colspan="4" col="4">
+                        <field
+                            name="product_id"
+                            options="{'create': false, 'create_edit': false}"
+                            />
+                        <field
+                            name="contract_partner_id"
+                            options="{'create': false, 'create_edit': false}"
+                            />
+                    </group>
+                    <group
+                        attrs="{'invisible': ['|',('product_id','=',False),('contract_partner_id','=',False)]}"
+                        colspan="4" col="6"
+                        >
+                        <field name="contract_count" />
+                        <field name="assigned_count" />
+                        <field name="available_count" />
+                        <field
+                            name="partner_id"
+                            options="{'create': false, 'create_edit': false}"
+                            />
+                        <field name="date_start" />
+                        <field name="date_end" />
+                        <field name="distribution_type" readonly="1" />
+                        <field
+                            name="copies"
+                            attrs="{'invisible': [('distribution_type','=','email')]}"
+                            />
+                        <field name="display_address" />
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+
+</odoo>

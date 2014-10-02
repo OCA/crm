@@ -1,0 +1,288 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* publication
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-01 10:39+0000\n"
+"PO-Revision-Date: 2017-12-01 10:39+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: publication
+#: model:ir.model.fields,field_description:publication.field_distribution_list_active
+msgid "Active"
+msgstr ""
+
+#. module: publication
+#: model:ir.model.fields,help:publication.field_product_product_publishing_frequency_type
+#: model:ir.model.fields,help:publication.field_product_template_publishing_frequency_type
+msgid "At what intervals publication is published"
+msgstr ""
+
+#. module: publication
+#: model:ir.model.fields,field_description:publication.field_distribution_list_contract_partner_id
+#: model:ir.ui.view,arch_db:publication.subscription_search
+msgid "Contract Partner"
+msgstr ""
+
+#. module: publication
+#: model:ir.model.fields,field_description:publication.field_distribution_list_create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: publication
+#: model:ir.model.fields,field_description:publication.field_distribution_list_create_date
+msgid "Created on"
+msgstr ""
+
+#. module: publication
+#: model:ir.model.fields,field_description:publication.field_distribution_list_date_end
+msgid "Date end"
+msgstr ""
+
+#. module: publication
+#: model:ir.model.fields,field_description:publication.field_distribution_list_date_start
+msgid "Date start"
+msgstr ""
+
+#. module: publication
+#: selection:product.template,publishing_frequency_type:0
+msgid "Day(s)"
+msgstr ""
+
+#. module: publication
+#: model:ir.model.fields,field_description:publication.field_distribution_list_display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: publication
+#: model:ir.model.fields,field_description:publication.field_product_product_distribution_type
+#: model:ir.model.fields,field_description:publication.field_product_template_distribution_type
+msgid "Distribution"
+msgstr ""
+
+#. module: publication
+#: model:ir.actions.act_window,name:publication.action_distribution_list
+#: model:ir.ui.menu,name:publication.menu_distribution_list
+msgid "Distribution List"
+msgstr ""
+
+#. module: publication
+#: selection:product.template,distribution_type:0
+msgid "Electronic"
+msgstr ""
+
+#. module: publication
+#: model:ir.model.fields,help:publication.field_distribution_list_date_end
+msgid "End date is exclusive."
+msgstr ""
+
+#. module: publication
+#: model:ir.ui.view,arch_db:publication.subscription_search
+msgid "Group By..."
+msgstr ""
+
+#. module: publication
+#: model:ir.model.fields,field_description:publication.field_distribution_list_id
+msgid "ID"
+msgstr ""
+
+#. module: publication
+#: selection:product.template,publishing_frequency_type:0
+msgid "Irregular"
+msgstr ""
+
+#. module: publication
+#: model:ir.model.fields,field_description:publication.field_distribution_list___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: publication
+#: model:ir.model.fields,field_description:publication.field_distribution_list_write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: publication
+#: model:ir.model.fields,field_description:publication.field_distribution_list_write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: publication
+#: selection:product.template,publishing_frequency_type:0
+msgid "Month(s)"
+msgstr ""
+
+#. module: publication
+#: model:ir.model.fields,field_description:publication.field_distribution_list_name
+msgid "Name"
+msgstr ""
+
+#. module: publication
+#: model:ir.model.fields,field_description:publication.field_distribution_list_assigned_count
+msgid "Number already assigned"
+msgstr ""
+
+#. module: publication
+#: model:ir.model.fields,field_description:publication.field_distribution_list_copies
+msgid "Number of copies"
+msgstr ""
+
+#. module: publication
+#: model:ir.model.fields,field_description:publication.field_distribution_list_available_count
+msgid "Number still available"
+msgstr ""
+
+#. module: publication
+#: model:ir.model.fields,field_description:publication.field_distribution_list_contract_count
+msgid "Number to distribute"
+msgstr ""
+
+#. module: publication
+#: model:ir.model,name:publication.model_res_partner
+#: model:ir.model.fields,field_description:publication.field_account_analytic_contract_line_partner_id
+#: model:ir.model.fields,field_description:publication.field_account_analytic_invoice_line_partner_id
+msgid "Partner"
+msgstr ""
+
+#. module: publication
+#: selection:product.template,distribution_type:0
+msgid "Print"
+msgstr ""
+
+#. module: publication
+#: model:ir.model,name:publication.model_product_template
+msgid "Product Template"
+msgstr ""
+
+#. module: publication
+#: model:ir.model.fields,field_description:publication.field_product_product_publication
+#: model:ir.model.fields,field_description:publication.field_product_template_publication
+msgid "Product is a publication?"
+msgstr ""
+
+#. module: publication
+#: model:ir.model.fields,field_description:publication.field_distribution_list_product_id
+#: model:ir.ui.view,arch_db:publication.product_template_only_form_view
+#: model:ir.ui.view,arch_db:publication.subscription_search
+msgid "Publication"
+msgstr ""
+
+#. module: publication
+#: model:ir.actions.act_window,name:publication.action_publication
+#: model:ir.ui.menu,name:publication.menu_publication
+msgid "Publications"
+msgstr ""
+
+#. module: publication
+#: model:ir.model.fields,field_description:publication.field_res_partner_distribution_list_ids
+#: model:ir.model.fields,field_description:publication.field_res_users_distribution_list_ids
+msgid "Publications received"
+msgstr ""
+
+#. module: publication
+#: model:ir.ui.view,arch_db:publication.view_partner_form
+msgid "Publications to receive"
+msgstr ""
+
+#. module: publication
+#: model:ir.model.fields,field_description:publication.field_product_product_publishing_frequency_interval
+#: model:ir.model.fields,field_description:publication.field_product_template_publishing_frequency_interval
+msgid "Publish Every"
+msgstr ""
+
+#. module: publication
+#: model:ir.model.fields,help:publication.field_product_product_publishing_frequency_interval
+#: model:ir.model.fields,help:publication.field_product_template_publishing_frequency_interval
+msgid "Publish every (Days/Week/Month/Quarter/Year)"
+msgstr ""
+
+#. module: publication
+#: model:ir.model.fields,field_description:publication.field_product_product_publishing_frequency_type
+#: model:ir.model.fields,field_description:publication.field_product_template_publishing_frequency_type
+msgid "Publishing frequency"
+msgstr ""
+
+#. module: publication
+#: selection:product.template,publishing_frequency_type:0
+msgid "Quarterly"
+msgstr ""
+
+#. module: publication
+#: model:ir.model.fields,field_description:publication.field_distribution_list_partner_id
+#: model:ir.ui.view,arch_db:publication.subscription_search
+msgid "Receiving Partner"
+msgstr ""
+
+#. module: publication
+#: model:ir.model.fields,field_description:publication.field_distribution_list_display_address
+msgid "Receiving address"
+msgstr ""
+
+#. module: publication
+#: model:ir.model.fields,help:publication.field_product_product_distribution_type
+#: model:ir.model.fields,help:publication.field_product_template_distribution_type
+msgid "Required if product is  publication"
+msgstr ""
+
+#. module: publication
+#: model:ir.ui.view,arch_db:publication.subscription_form
+msgid "Subscription Address"
+msgstr ""
+
+#. module: publication
+#: model:ir.model.fields,field_description:publication.field_res_partner_subscription_ids
+#: model:ir.model.fields,field_description:publication.field_res_users_subscription_ids
+#: model:ir.ui.view,arch_db:publication.view_partner_form
+msgid "Subscription contract lines"
+msgstr ""
+
+#. module: publication
+#: model:ir.model.fields,field_description:publication.field_account_analytic_contract_line_publication
+#: model:ir.model.fields,field_description:publication.field_account_analytic_invoice_line_publication
+msgid "Subscription product line"
+msgstr ""
+
+#. module: publication
+#: model:ir.ui.view,arch_db:publication.view_partner_form
+#: model:ir.ui.view,arch_db:publication.subscription_search
+#: model:ir.ui.view,arch_db:publication.subscription_tree
+msgid "Subscriptions"
+msgstr ""
+
+#. module: publication
+#: selection:product.template,publishing_frequency_type:0
+msgid "Week(s)"
+msgstr ""
+
+#. module: publication
+#: selection:product.template,publishing_frequency_type:0
+msgid "Year(s)"
+msgstr ""
+
+#. module: publication
+#: model:ir.model,name:publication.model_account_analytic_invoice_line
+msgid "account.analytic.invoice.line"
+msgstr ""
+
+#. module: publication
+#: model:ir.model,name:publication.model_distribution_list
+msgid "distribution.list"
+msgstr ""
+
+#. module: publication
+#: model:ir.ui.view,arch_db:publication.view_partner_form
+msgid "Subscription contract lines"
+msgstr ""
+
+#. module: publication
+#: model:ir.ui.view,arch_db:publication.view_partner_form
+msgid "Publications to receive"
+msgstr ""
+
