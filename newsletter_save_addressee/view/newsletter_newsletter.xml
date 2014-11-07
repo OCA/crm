@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="form_newsletter" model="ir.ui.view">
+            <field name="model">newsletter.newsletter</field>
+            <field name="inherit_id" ref="newsletter.form_newsletter" />
+            <field name="arch" type="xml">
+                <form position="inside">
+                    <field name="type_model" invisible="1" />
+                </form>
+                <button name="action_show_recipient_objects" position="attributes">
+                    <attribute name="attrs">{'invisible': [('state', '=', 'sent'), ('type_model', '=', 'res.partner')]}</attribute>
+                </button>
+                <button name="action_show_recipient_objects" position="after">
+                    <button type="object" name="button_show_partners" string="Show recipients" attrs="{'invisible': ['|', ('state', '!=', 'sent'), ('type_model', '!=', 'res.partner')]}" />
+                </button>
+            </field>
+        </record>
+    </data>
+</openerp>

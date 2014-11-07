@@ -1,0 +1,3 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"r_newsletter_partner_rel","Read newsletter partners","model_newsletter_partner_rel","base.group_user",1,0,0,0
+"crud_newsletter_partner_rel","CRUD newsletter partners","model_newsletter_partner_rel","newsletter.group_newsletter_sender",1,1,1,1

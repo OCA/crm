@@ -147,7 +147,6 @@ class newsletter_newsletter(Model):
     def _cronjob_send_newsletter(self,  cr,  uid,  ids,  context=None):
         for this in self.browse(cr,  uid,  ids,  context):
             model = self.pool.get(this.type_id.model.model)
-            template_obj = self.pool.get('email.template')
 
             step = 100
             offset = 0
@@ -165,24 +164,27 @@ class newsletter_newsletter(Model):
                     break
 
                 for id in ids:
-                    self._logger.debug('sending mail to %d' % id)
-
                     try:
-                        template_obj.send_mail(
-                            cr,
-                            uid,
-                            this.type_id.email_template_id.id,
-                            this.id,
-                            context={
-                                'newsletter_res_id': id
-                                })
+                        self._do_send_newsletter(cr, uid, this, id,
+                                                 context=context)
                     except Exception as e:
-                        self._error(e)
+                        self._logger.error(e)
 
                 offset += step
 
             self._logger.info('sending newsletter %s finished' % this.subject)
             this.write({'state': 'sent'})
+
+    def _do_send_newsletter(self, cr, uid, this, record_id, context=None):
+        self._logger.debug('sending mail to %d' % record_id)
+        self.pool['email.template'].send_mail(
+            cr,
+            uid,
+            this.type_id.email_template_id.id,
+            this.id,
+            context={
+                'newsletter_res_id': record_id
+            })
 
     def action_show_recipient_objects(self, cr, uid, ids, context=None):
         for this in self.browse(cr, uid, ids, context=context):
