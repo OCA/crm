@@ -22,8 +22,8 @@
 
 from openerp.osv.orm import Model
 from openerp.osv import fields
-from newsletter_type import newsletter_type
-from newsletter_newsletter import _get_plaintext
+from .newsletter_type import newsletter_type
+from .newsletter_newsletter import _get_plaintext
 
 
 class newsletter_topic(Model):

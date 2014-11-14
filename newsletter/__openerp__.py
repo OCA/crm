@@ -89,9 +89,9 @@ always also is an editor and a manager is a sender as well as an editor.
     "depends": [
         'email_template',
         'web_ckeditor4',
-        ],
+    ],
     'css': [
-        ],
+    ],
     'data': [
         'data/ir_module_cateogry.xml',
         'security/res_groups.xml',
@@ -102,10 +102,10 @@ always also is an editor and a manager is a sender as well as an editor.
         'view/menu.xml',
         'view/email_template_preview_view.xml',
         'view/newsletter_type.xml',
-        ],
+    ],
     'js': [
         'static/src/js/newsletter.js',
-        ],
+    ],
     'installable': True,
     'auto_install': False,
     'application': True,

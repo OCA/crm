@@ -24,6 +24,7 @@ from openerp.osv import fields, orm
 
 
 class letter_reassignment(orm.Model):
+
     """A line to forward a letter with a comment"""
     _inherit = 'letter.reassignment'
     _columns = {

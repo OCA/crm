@@ -24,7 +24,7 @@ import logging
 from openerp.osv.orm import Model, except_orm
 from openerp.osv import fields
 from openerp.tools.safe_eval import safe_eval
-from newsletter_type import newsletter_type
+from .newsletter_type import newsletter_type
 from openerp.tools.translate import _
 
 

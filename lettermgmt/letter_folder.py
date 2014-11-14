@@ -25,6 +25,7 @@ from openerp.tools.translate import _
 
 
 class letter_folder(orm.Model):
+
     """Folder which contains collections of letters"""
     _name = 'letter.folder'
     _description = _('Letter Folder')

@@ -25,6 +25,7 @@ from openerp.tools.translate import _
 
 
 class letter_reassignment(orm.Model):
+
     """A line to forward a letter with a comment"""
     _name = 'letter.reassignment'
     _description = _('Reassignment line')

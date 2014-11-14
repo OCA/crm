@@ -27,6 +27,7 @@ import time
 
 
 class res_letter(orm.Model):
+
     """A register class to log all movements regarding letters"""
     _name = 'res.letter'
     _description = _("Log of Letter Movements")
