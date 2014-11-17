@@ -30,10 +30,7 @@
     ],
     "category": "Custom Module",
     "website": "http://www.avanzosc.es",
-    "summary": "",
-    "description": """
-    This module provide :
-    """,
+    "summary": "Deadline visible on crm.claim tree view",
     "data": [
         "views/crm_claim_view.xml",
     ],
