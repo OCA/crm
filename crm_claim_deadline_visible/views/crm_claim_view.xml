@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="crm_claim_tree_view_inh">
+            <field name="name">crm.claim.tree.view.inh</field>
+            <field name="model">crm.claim</field>
+            <field name="inherit_id" ref="crm_claim.crm_case_claims_tree_view" />
+            <field name="arch" type="xml">
+                <field name="date" position="after">
+                    <field name="date_deadline" />
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="crm_claim_search_view_inh">
+            <field name="name">crm.clain.search.view.inh</field>
+            <field name="model">crm.claim</field>
+            <field name="inherit_id" ref="crm_claim.view_crm_case_claims_filter" />
+            <field name="arch" type="xml">
+                <field name="user_id" position="after">
+                    <field name="date_deadline" />
+                </field>
+            </field>
+        </record>
+    </data>
+</openerp>
