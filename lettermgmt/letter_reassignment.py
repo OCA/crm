@@ -36,5 +36,3 @@ class letter_reassignment(orm.Model):
         'letter_id': fields.many2one(
             'res.letter', string='Letter', help='Letter in question.'),
     }
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

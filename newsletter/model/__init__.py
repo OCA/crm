@@ -19,7 +19,7 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-import newsletter_newsletter
-import newsletter_topic
-import newsletter_type
-import email_template
+from . import newsletter_newsletter
+from . import newsletter_topic
+from . import newsletter_type
+from . import email_template

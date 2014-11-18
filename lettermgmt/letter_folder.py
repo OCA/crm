@@ -36,5 +36,3 @@ class letter_folder(orm.Model):
             help='Letters contained in this folder.'),
     }
     _sql_constraints = [('code_uniq', 'unique(code)', 'Code must be unique !')]
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

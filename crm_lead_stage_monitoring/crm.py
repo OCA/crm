@@ -35,9 +35,10 @@ class CrmLead(orm.Model):
             vals['last_activity_stage'] = fields.datetime.now()
         return super(CrmLead, self).write(cr, uid, ids, vals, context=context)
 
-    def copy(self, cr, uid, id, default=None, context=None):
+    def copy(self, cr, uid, rec_id, default=None, context=None):
         if default is None:
             default = {}
         # Do not duplicate last_activity_stage
         default['last_activity_stage'] = False
-        return super(CrmLead, self).copy(cr, uid, id, default, context=context)
+        return super(CrmLead, self).copy(cr, uid, rec_id, default,
+                                         context=context)

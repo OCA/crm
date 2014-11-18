@@ -31,5 +31,3 @@ class letter_reassignment(orm.Model):
             'hr.department', string='Department',
             help='Department of user to whom letter is reassigned.'),
     }
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

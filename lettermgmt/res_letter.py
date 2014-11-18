@@ -27,6 +27,7 @@ import time
 
 
 class res_letter(orm.Model):
+
     """A register class to log all movements regarding letters"""
     _name = 'res.letter'
     _description = _("Log of Letter Movements")
@@ -112,10 +113,10 @@ class res_letter(orm.Model):
 
     def history(self, cr, uid, ids, keyword=False, context=None):
         lh_pool = self.pool.get('letter.history')
-        for id in ids:
+        for rec_id in ids:
             lh_pool.create(
                 cr, uid,
-                {'name': keyword, 'user_id': uid, 'register_id': id},
+                {'name': keyword, 'user_id': uid, 'register_id': rec_id},
                 context=context)
         return True
 
