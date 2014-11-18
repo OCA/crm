@@ -25,7 +25,6 @@ from openerp.tools.translate import _
 
 
 class letter_reassignment(orm.Model):
-
     """A line to forward a letter with a comment"""
     _name = 'letter.reassignment'
     _description = _('Reassignment line')
@@ -37,5 +36,3 @@ class letter_reassignment(orm.Model):
         'letter_id': fields.many2one(
             'res.letter', string='Letter', help='Letter in question.'),
     }
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
