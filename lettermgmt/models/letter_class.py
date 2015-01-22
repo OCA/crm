@@ -20,16 +20,14 @@
 #    along with this program.  If not, see http://www.gnu.org/licenses/.
 #
 ##############################################################################
-
 from openerp.osv import fields, orm
-from openerp.tools.translate import _
 
 
 class letter_class(orm.Model):
     """ Class to define the classification of letter like : classified,
     confidential, personal, etc. """
     _name = 'letter.class'
-    _description = _("Letter Classification")
+    _description = "Letter Classification"
     _columns = {
-        'name': fields.char('Type', size=32, required=True),
+        'name': fields.char('Type', required=True),
     }

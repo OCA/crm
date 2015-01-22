@@ -19,15 +19,13 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ###############################################################################
-
 from openerp.osv import fields, orm
-from openerp.tools.translate import _
 
 
 class letter_reassignment(orm.Model):
     """A line to forward a letter with a comment"""
     _name = 'letter.reassignment'
-    _description = _('Reassignment line')
+    _description = 'Reassignment line'
     _columns = {
         'name': fields.many2one(
             'res.users', string='Name', help='User to forward letter to.'),
