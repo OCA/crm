@@ -21,8 +21,10 @@
       <field name="model">letter.folder</field>
       <field name="arch" type="xml">
         <form string="Letter Folder">
-          <field name="code"/>
-          <field name="name"/>
+            <group>
+                <field name="code"/>
+                <field name="name"/>
+            </group>
         </form>
       </field>
     </record>

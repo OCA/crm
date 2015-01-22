@@ -20,7 +20,9 @@
       <field name="model">letter.channel</field>
       <field name="arch" type="xml">
         <form string="Letter Channel">
-          <field name="name"/>
+            <group>
+                <field name="name"/>
+            </group>
         </form>
       </field>
     </record>
