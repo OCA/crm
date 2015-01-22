@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openerp>
+  <data>
+
+    <!-- Views -->
+
+    <record model="ir.ui.view" id="letter_type_tree_view">
+      <field name="name">Letter Type Tree</field>
+      <field name="model">letter.type</field>
+      <field name="arch" type="xml">
+        <tree string="Letter Type">
+          <field name="name"/>
+          <field name="code"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="letter_type_form_view">
+      <field name="name">Letter Type Form</field>
+      <field name="model">letter.type</field>
+      <field name="arch" type="xml">
+        <form string="Letter Type">
+          <field name="name"/>
+          <field name="code"/>
+        </form>
+      </field>
+    </record>
+
+    <!-- Actions -->
+
+    <record model="ir.actions.act_window" id="action_letter_type_tree_view">
+      <field name="name">Letter Type</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">letter.type</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+      <field name="view_id" ref="letter_type_tree_view"/>
+    </record>
+
+    <!-- Menus -->
+
+    <menuitem id="letter_type_menu"
+              name="Letter Type"
+              parent="letter_log_config_menu"
+              action="action_letter_type_tree_view"/>
+
+  </data>
+</openerp>

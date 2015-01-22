@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data noupdate="1">
+
+    <!-- Letter Types -->
+
+    <record id="data_type_evl" model="letter.type">
+      <field name="name">Envelope</field>
+      <field name="code">EVL</field>
+    </record>
+
+    <record id="data_type_par" model="letter.type">
+      <field name="name">Parcel</field>
+      <field name="code">PAR</field>
+    </record>
+
+    <!-- Letter Classes -->
+
+    <record id="data_class_con" model="letter.class">
+      <field name="name">Confidential</field>
+    </record>
+
+    <record id="data_class_per" model="letter.class">
+      <field name="name">Personal</field>
+    </record>
+
+    <record id="data_class_class" model="letter.class">
+      <field name="name">Classified</field>
+    </record>
+
+    <!-- Letter Channels -->
+
+    <record id="data_channel_post" model="letter.channel">
+      <field name="name">Post</field>
+    </record>
+
+    <record id="data_channel_ups" model="letter.channel">
+      <field name="name">UPS</field>
+    </record>
+
+    <record id="data_channel_fedex" model="letter.channel">
+      <field name="name">FedEx</field>
+    </record>
+
+  </data>
+</openerp>
