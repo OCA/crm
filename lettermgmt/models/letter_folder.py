@@ -19,18 +19,16 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ###############################################################################
-
 from openerp.osv import orm, fields
-from openerp.tools.translate import _
 
 
 class letter_folder(orm.Model):
     """Folder which contains collections of letters"""
     _name = 'letter.folder'
-    _description = _('Letter Folder')
+    _description = 'Letter Folder'
     _columns = {
         'name': fields.char('Name', required=True),
-        'code': fields.char('Code', size=8, required=True),
+        'code': fields.char('Code', required=True),
         'letter_ids': fields.one2many(
             'res.letter', 'folder_id', string='Letters',
             help='Letters contained in this folder.'),

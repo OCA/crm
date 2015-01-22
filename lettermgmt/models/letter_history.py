@@ -20,23 +20,20 @@
 #    along with this program.  If not, see http://www.gnu.org/licenses/.
 #
 ##############################################################################
-
 from openerp.osv import fields, orm
-from openerp.tools.translate import _
-import time
 
 
 class letter_history(orm.Model):
     _name = "letter.history"
-    _description = _("Letter Communication History")
+    _description = "Letter Communication History"
     _order = "id desc"
     _columns = {
         'register_id': fields.many2one('res.letter', 'Register'),
-        'name': fields.char('Action', size=64),
+        'name': fields.char('Action'),
         'date': fields.datetime('Date'),
         'user_id': fields.many2one(
             'res.users', 'User Responsible', readonly=True),
     }
     _defaults = {
-        'date': time.strftime('%Y-%m-%d %H:%M:%S'),
+        'date': fields.datetime.now,
     }
