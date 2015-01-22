@@ -20,16 +20,13 @@
 #    along with this program.  If not, see http://www.gnu.org/licenses/.
 #
 ##############################################################################
-
 from openerp.osv import fields, orm
-from openerp.tools.translate import _
-import time
 
 
 class res_letter(orm.Model):
     """A register class to log all movements regarding letters"""
     _name = 'res.letter'
-    _description = _("Log of Letter Movements")
+    _description = "Log of Letter Movements"
     _inherit = 'mail.thread'
 
     def _get_number(self, cr, uid, context=None):
@@ -46,7 +43,7 @@ class res_letter(orm.Model):
             'letter.folder', string='Folder',
             help='Folder which contains letter.'),
         'number': fields.char(
-            'Number', size=32, help="Auto Generated Number of letter.",
+            'Number', help="Auto Generated Number of letter.",
             required=True),
         'move': fields.selection(
             [('in', 'IN'), ('out', 'OUT')], 'Move', readonly=True,
@@ -95,7 +92,7 @@ class res_letter(orm.Model):
         'track_ref': fields.char(
             'Tracking Reference', help="Reference Number used for Tracking."),
         'weight': fields.float('Weight (in KG)'),
-        'size': fields.char('Size', size=64),
+        'size': fields.char('Size'),
         'reassignment_ids': fields.one2many(
             'letter.reassignment', 'letter_id', string='Reassignment lines',
             help='Reassignment users and comments'),
@@ -105,7 +102,7 @@ class res_letter(orm.Model):
 
     _defaults = {
         'number': _get_number,
-        'date': time.strftime('%Y-%m-%d %H:%M:%S'),
+        'date': fields.datetime.now,
         'move': lambda self, cr, uid, context: context.get('move', 'in'),
         'state': 'draft',
     }
