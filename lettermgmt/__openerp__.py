@@ -29,20 +29,6 @@
     'license': 'AGPL-3',
     'category': 'Social Network',
     'summary': 'Track letters, parcels, registered documents',
-    'description': """
-Letter Management
-=================
-
-Using this module you can track Incoming / Outgoing letters, parcels,
-registered documents or any other paper documents that are important for your
-company to keep track of.
-
-Contributors
-------------
-* Sandy Carter <sandy.carter@savoirfairelinux.com>
-* Parthiv Patel, Tech Receptives (Original 6.0 Author)
-
-""",
     'depends': ['mail'],
     'external_dependencies': {
         'python': [],
