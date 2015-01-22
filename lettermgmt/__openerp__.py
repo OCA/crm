@@ -22,7 +22,7 @@
 
 {
     'name': 'Letter Management',
-    'version': '0.1',
+    'version': '0.2',
     'author': 'Savoir-faire Linux',
     'maintainer': 'Savoir-faire Linux',
     'website': 'http://www.savoirfairelinux.com',
@@ -33,8 +33,9 @@
 Letter Management
 =================
 
-Using this module you can track Incoming / Outgoing letters, parcels, registered documents
-or any other paper documents that are important for company to keep track of.
+Using this module you can track Incoming / Outgoing letters, parcels,
+registered documents or any other paper documents that are important for your
+company to keep track of.
 
 Contributors
 ------------
@@ -47,19 +48,19 @@ Contributors
         'python': [],
     },
     'data': [
-        "res_letter_view.xml",
-        "letter_folder_view.xml",
-        "letter_channel_view.xml",
-        "letter_class_view.xml",
-        "letter_history_view.xml",
-        "letter_reassignment_view.xml",
-        "letter_type_view.xml",
-        "letter_sequence.xml",
+        "views/res_letter_view.xml",
+        "views/letter_folder_view.xml",
+        "views/letter_channel_view.xml",
+        "views/letter_class_view.xml",
+        "views/letter_history_view.xml",
+        "views/letter_reassignment_view.xml",
+        "views/letter_type_view.xml",
+        "data/letter_sequence.xml",
         'security/ir.model.access.csv',
     ],
-    'demo': ["letter_demo.xml"],
+    'demo': ["data/letter_demo.xml"],
     'test': [],
-    'installable': False,
+    'installable': True,
     'auto_install': False,
 }
 

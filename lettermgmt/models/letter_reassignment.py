@@ -20,20 +20,21 @@
 #
 ###############################################################################
 
-from openerp.osv import orm, fields
+from openerp.osv import fields, orm
 from openerp.tools.translate import _
 
 
-class letter_folder(orm.Model):
-    """Folder which contains collections of letters"""
-    _name = 'letter.folder'
-    _description = _('Letter Folder')
+class letter_reassignment(orm.Model):
+    """A line to forward a letter with a comment"""
+    _name = 'letter.reassignment'
+    _description = _('Reassignment line')
     _columns = {
-        'name': fields.char('Name', required=True),
-        'code': fields.char('Code', size=8, required=True),
-        'letter_ids': fields.one2many('res.letter', 'folder_id', string='Letters',
-                                      help='Letters contained in this folder.'),
+        'name': fields.many2one(
+            'res.users', string='Name', help='User to forward letter to.'),
+        'comment': fields.text(
+            'Comment', help='Comment for user explaining forward.'),
+        'letter_id': fields.many2one(
+            'res.letter', string='Letter', help='Letter in question.'),
     }
-    _sql_constraints = [('code_uniq', 'unique(code)', 'Code must be unique !')]
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

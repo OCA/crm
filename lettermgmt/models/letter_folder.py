@@ -20,10 +20,21 @@
 #
 ###############################################################################
 
-from . import letter_class
-from . import letter_folder
-from . import res_letter
-from . import letter_type
-from . import letter_reassignment
-from . import letter_history
-from . import letter_channel
+from openerp.osv import orm, fields
+from openerp.tools.translate import _
+
+
+class letter_folder(orm.Model):
+    """Folder which contains collections of letters"""
+    _name = 'letter.folder'
+    _description = _('Letter Folder')
+    _columns = {
+        'name': fields.char('Name', required=True),
+        'code': fields.char('Code', size=8, required=True),
+        'letter_ids': fields.one2many(
+            'res.letter', 'folder_id', string='Letters',
+            help='Letters contained in this folder.'),
+    }
+    _sql_constraints = [('code_uniq', 'unique(code)', 'Code must be unique !')]
+
+# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

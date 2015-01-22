@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    This module copyright (C) 2014 Therp BV (<http://therp.nl>).
+#    This module copyright (C) 2015 Therp BV <http://therp.nl>.
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -18,34 +18,10 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-{
-    "name": "placeholder",
-    "version": "1.0",
-    "author": "Therp BV",
-    "license": "AGPL-3",
-    "complexity": "normal",
-    "description": """
-This is a placeholder module because odoo checks if an addons path contains
-addons at all. This makes travis fail, so we need this until the first addon is
-ported.
-
-Please remove as soon as you commit your first port!
-    """,
-    "category": "",
-    "depends": [
-    ],
-    "data": [
-    ],
-    "js": [
-    ],
-    "css": [
-    ],
-    "qweb": [
-    ],
-    "auto_install": False,
-    "installable": True,
-    "application": False,
-    "external_dependencies": {
-        'python': [],
-    },
-}
+from . import letter_class
+from . import letter_folder
+from . import res_letter
+from . import letter_type
+from . import letter_reassignment
+from . import letter_history
+from . import letter_channel

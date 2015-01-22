@@ -34,7 +34,8 @@ class letter_history(orm.Model):
         'register_id': fields.many2one('res.letter', 'Register'),
         'name': fields.char('Action', size=64),
         'date': fields.datetime('Date'),
-        'user_id': fields.many2one('res.users', 'User Responsible', readonly=True),
+        'user_id': fields.many2one(
+            'res.users', 'User Responsible', readonly=True),
     }
     _defaults = {
         'date': time.strftime('%Y-%m-%d %H:%M:%S'),

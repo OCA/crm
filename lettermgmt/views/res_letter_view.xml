@@ -107,7 +107,7 @@
                     <field name="street" readonly="1"/>
                     <field name="city" readonly="1"/>
                     <field name="zip" readonly="1"/>
-                    <field name="country" readonly="1"/>
+                    <field name="country_id" readonly="1"/>
                   </tree>
                 </field>
                 <field name="note"/>
