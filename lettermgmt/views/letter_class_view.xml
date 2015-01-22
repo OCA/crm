@@ -20,7 +20,9 @@
       <field name="model">letter.class</field>
       <field name="arch" type="xml">
         <form string="Letter Class">
-          <field name="name"/>
+            <group>
+                <field name="name"/>
+            </group>
         </form>
       </field>
     </record>

@@ -23,10 +23,12 @@
       <field name="model">letter.history</field>
       <field name="arch" type="xml">
         <form string="History">
-          <field name="name"/>
-          <field name="register_id"/>
-          <field name="date"/>
-          <field name="user_id"/>
+            <group>
+                <field name="name"/>
+                <field name="register_id"/>
+                <field name="date"/>
+                <field name="user_id"/>
+            </group>
         </form>
       </field>
     </record>
