@@ -21,8 +21,10 @@
       <field name="model">letter.reassignment</field>
       <field name="arch" type="xml">
         <form string="Reassignment">
-          <field name="name"/>
-          <field name="comment"/>
+            <group>
+                <field name="name"/>
+                <field name="comment"/>
+            </group>
         </form>
       </field>
     </record>
