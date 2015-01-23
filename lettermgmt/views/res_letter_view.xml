@@ -111,9 +111,6 @@
               <page string="Thread">
                 <field name="child_line" colspan="4" nolabel="1"/>
               </page>
-              <page string="Action History">
-                <field name="history_line" colspan="4" nolabel="1"/>
-              </page>
               <page string="Copies to External">
                 <group name="extern_grp" col="1">
                   <group col="1">
@@ -181,9 +178,6 @@
             <notebook name="Extra">
               <page string="Thread">
                 <field name="child_line" colspan="4" nolabel="1"/>
-              </page>
-              <page string="Action History">
-                <field name="history_line" colspan="4" nolabel="1"/>
               </page>
               <page string="Reassignment">
                 <field name="reassignment_ids" nolabel="1"/>

@@ -23,5 +23,4 @@ from . import letter_folder
 from . import res_letter
 from . import letter_type
 from . import letter_reassignment
-from . import letter_history
 from . import letter_channel
