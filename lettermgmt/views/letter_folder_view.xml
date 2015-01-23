@@ -44,7 +44,7 @@
 
     <menuitem id="letter_folder_menu"
               name="Letter Folders"
-              parent="res_letter_menu"
+              parent="letter_log_config_menu"
               sequence="1"
               action="action_letter_folder_tree_view"/>
 
