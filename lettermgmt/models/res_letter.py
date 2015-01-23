@@ -59,9 +59,9 @@ class res_letter(orm.Model):
             'Sent / Received Date', required=True,
             help='Created Date of Letter Logging.'),
         'recipient_partner_id': fields.many2one(
-            'res.partner', string='Recipient'),
+            'res.partner', string='Recipient', track_visibility='onchange'),
         'sender_partner_id': fields.many2one(
-            'res.partner', string='Sender'),
+            'res.partner', string='Sender', track_visibility='onchange'),
         'note': fields.text('Note'),
         'state': fields.selection([('draft', 'Draft'),
                                    ('created', 'Created'),
@@ -71,14 +71,13 @@ class res_letter(orm.Model):
                                    ('rec_bad', 'Received Damage'),
                                    ('rec_ret', 'Received But Returned'),
                                    ('cancel', 'Cancelled')],
-                                  'State', readonly=True),
+                                  'State', readonly=True,
+                                  track_visibility='onchange'),
         'parent_id': fields.many2one('res.letter', 'Parent'),
         'child_line': fields.one2many(
             'res.letter', 'parent_id', 'Letter Lines'),
         'channel_id': fields.many2one(
             'letter.channel', 'Sent / Receive Source'),
-        'history_line': fields.one2many(
-            'letter.history', 'register_id', 'History'),
         'orig_ref': fields.char(
             'Original Reference', help="Reference Number at Origin."),
         'expeditor_ref': fields.char(
@@ -100,15 +99,6 @@ class res_letter(orm.Model):
         'move': lambda self, cr, uid, context: context.get('move', 'in'),
         'state': 'draft',
     }
-
-    def history(self, cr, uid, ids, keyword=False, context=None):
-        lh_pool = self.pool.get('letter.history')
-        for id in ids:
-            lh_pool.create(
-                cr, uid,
-                {'name': keyword, 'user_id': uid, 'register_id': id},
-                context=context)
-        return True
 
     def action_received(self, cr, uid, ids, context=None):
         """Put the state of the letter into Received"""
@@ -164,33 +154,3 @@ class res_letter(orm.Model):
             self.write(
                 cr, uid, [letter.id], {'state': 'draft'}, context=context)
         return True
-
-    def onchange_send_id(self, cr, uid, ids, send_id=False, context=None):
-        """Automatically set address from Receiver/Sender"""
-        result = {}
-        if send_id:
-            user = self.pool['res.users'].browse(cr, uid, send_id,
-                                                 context=context)
-            if user:
-                result['value'] = {
-                    'send_street': user.street,
-                    'send_city': user.city,
-                    'send_zip': user.zip,
-                    'send_country': user.country_id.id,
-                }
-        return result
-
-    def create(self, cr, user, vals, context=None):
-        """Set address from Receiver/Sender on create"""
-        address_vals = self.onchange_send_id(
-            cr, user, [], vals.get('send_id'), context=context)
-        vals = dict(vals.items() + address_vals.get('value', {}).items())
-        return super(res_letter, self).create(cr, user, vals, context=context)
-
-    def write(self, cr, user, ids, vals, context=None):
-        """Set address from Receiver/Sender on write"""
-        address_vals = self.onchange_send_id(
-            cr, user, ids, vals.get('send_id'), context=context)
-        vals = dict(vals.items() + address_vals.get('value', {}).items())
-        return super(res_letter, self).write(cr, user, ids, vals,
-                                             context=context)
