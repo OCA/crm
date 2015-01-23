@@ -1,9 +1,8 @@
-# -*- encoding: utf-8 -*-
-###############################################################################
+# -*- coding: utf-8 -*-
+##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    This module copyright (C) 2013 Savoir-faire Linux
-#    (<http://www.savoirfairelinux.com>).
+#    This module copyright (C) 2015 Therp BV <http://therp.nl>.
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -18,6 +17,11 @@
 #    You should have received a copy of the GNU Affero General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
-###############################################################################
-
-from . import models
+##############################################################################
+from . import letter_class
+from . import letter_folder
+from . import res_letter
+from . import letter_type
+from . import letter_reassignment
+from . import letter_history
+from . import letter_channel
