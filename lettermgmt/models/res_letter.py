@@ -57,17 +57,10 @@ class res_letter(orm.Model):
             'Letter Date', required=True,
             help='Created Date of Letter Logging.'),
         'snd_rec_date': fields.datetime('Sent / Received Date'),
-        'partner_id': fields.many2one(
-            'res.partner', string='Follow up by', help='Recipient of letter.'),
-        'recipient_ids': fields.many2many(
-            'res.users', string="Send to",
-            help="Persons who will receive Letter."),
-        'send_id': fields.many2one(
-            'res.users', "Send By", help="Person who sent Letter."),
-        'send_street': fields.char('Street'),
-        'send_city': fields.char('City'),
-        'send_zip': fields.char('Zip'),
-        'send_country': fields.many2one('res.country', 'Country'),
+        'recipient_partner_id': fields.many2one(
+            'res.partner', string='Recipient'),
+        'sender_partner_id': fields.many2one(
+            'res.partner', string='Sender'),
         'note': fields.text('Note'),
         'state': fields.selection([('draft', 'Draft'),
                                    ('created', 'Created'),
