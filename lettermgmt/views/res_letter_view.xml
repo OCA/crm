@@ -81,40 +81,41 @@
           <sheet>
             <group col="4">
               <group string="References" col="2" colspan="2">
-                <field name="folder_id"/>
-                <field name="number"/>
-                <field name="orig_ref"/>
+                <field name="number" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
+                <field name="orig_ref" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
+                <field name="parent_id" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
+                <field name="folder_id" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
               </group>
-              <group string="Details" col="2" colspan="2">
-                <field name="date"/>
-                <field name="snd_rec_date" string="Send Date"/>
-                <field name="type"/>
-                <field name="class"/>
-                <field name="channel_id" string="Inbound Source"/>
-                <field name="track_ref"/>
+              <group string="Details" col="2" colspan="2" attrs="{'readonly': [('state', 'not in', ['draft'])]}">
+                <field name="date" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
+                <field name="snd_rec_date" string="Send Date" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
+                <field name="type" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
+                <field name="class" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
+                <field name="channel_id" string="Inbound Source" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
+                <field name="track_ref" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
               </group>
               <group string="Subject" col="2" colspan="2">
-                <field name="name"/>
+                <field name="name" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
               </group>
               <group string="Dimensions" col="2" colspan="2">
-                <field name="size"/>
-                <field name="weight"/>
+                <field name="size" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
+                <field name="weight" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
               </group>
               <group string="Addresses" col="4" colspan="4">
-                <field name="recipient_partner_id" required="True" />
-                <field name="sender_partner_id" />
+                <field name="recipient_partner_id" required="True" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}" />
+                <field name="sender_partner_id" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
                 <field name="note" colspan="4"/>
               </group>
             </group>
 
             <notebook name="Extra">
               <page string="Thread">
-                <field name="child_line" colspan="4" nolabel="1"/>
+                <field name="child_line" colspan="4" nolabel="1" readonly="True"/>
               </page>
               <page string="Copies to External">
                 <group name="extern_grp" col="1">
                   <group col="1">
-                    <field name="extern_partner_ids"/>
+                    <field name="extern_partner_ids" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
                   </group>
                 </group>
               </page>
@@ -148,36 +149,37 @@
           <sheet>
             <group col="4">
               <group string="References" col="2" colspan="2">
-                <field name="folder_id"/>
-                <field name="number"/>
-                <field name="orig_ref"/>
-                <field name="expeditor_ref"/>
+                <field name="number" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
+                <field name="orig_ref" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
+                <field name="expeditor_ref" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
+                <field name="parent_id" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
+                <field name="folder_id" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
               </group>
               <group string="Details" col="2" colspan="2">
-                <field name="date"/>
-                <field name="snd_rec_date" string="Arrival Date"/>
-                <field name="type"/>
-                <field name="class"/>
-                <field name="channel_id" string="Outbound Source"/>
-                <field name="track_ref"/>
+                <field name="date" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
+                <field name="snd_rec_date" string="Arrival Date" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
+                <field name="type" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
+                <field name="class" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
+                <field name="channel_id" string="Outbound Source" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
+                <field name="track_ref" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
               </group>
               <group string="Subject" col="2" colspan="2">
-                <field name="name"/>
+                  <field name="name" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
               </group>
               <group string="Dimensions" col="2" colspan="2">
-                <field name="size"/>
-                <field name="weight"/>
+                <field name="size" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
+                <field name="weight" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
               </group>
               <group string="Addresses" col="4" colspan="4">
-                <field name="recipient_partner_id"/>
-                <field name="sender_partner_id" required="True"/>
-                <field name="note" colspan="4"/>
+                <field name="recipient_partner_id" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
+                <field name="sender_partner_id" required="True" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
+                <field name="note" />
               </group>
             </group>
 
             <notebook name="Extra">
               <page string="Thread">
-                <field name="child_line" colspan="4" nolabel="1"/>
+                <field name="child_line" colspan="4" nolabel="1" readonly="True"/>
               </page>
               <page string="Reassignment">
                 <field name="reassignment_ids" nolabel="1"/>
