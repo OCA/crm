@@ -3,6 +3,7 @@
 #
 #    Parthiv Pate, Tech Receptives, Open Source For Ideas
 #    Copyright (C) 2009-Today Tech Receptives(http://techreceptives.com).
+#    Copyright (C) 2015 Therp BV <http://therp.nl>.
 #    All Rights Reserved
 #
 #
@@ -53,10 +54,10 @@ class res_letter(orm.Model):
             help="Type of Letter, Depending upon size."),
         'class': fields.many2one(
             'letter.class', 'Class', help="Classification of Document."),
-        'date': fields.datetime(
-            'Letter Date', required=True,
+        'date': fields.datetime('Letter Date', help='The letter\'s date'),
+        'snd_rec_date': fields.datetime(
+            'Sent / Received Date', required=True,
             help='Created Date of Letter Logging.'),
-        'snd_rec_date': fields.datetime('Sent / Received Date'),
         'recipient_partner_id': fields.many2one(
             'res.partner', string='Recipient'),
         'sender_partner_id': fields.many2one(
@@ -95,7 +96,7 @@ class res_letter(orm.Model):
 
     _defaults = {
         'number': _get_number,
-        'date': fields.datetime.now,
+        'snd_rec_date': fields.datetime.now,
         'move': lambda self, cr, uid, context: context.get('move', 'in'),
         'state': 'draft',
     }
