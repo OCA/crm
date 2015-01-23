@@ -16,7 +16,7 @@
           <field name="type"/>
           <field name="class"/>
           <field name="date"/>
-          <field name="partner_id"/>
+          <field name="recipient_partner_id"/>
           <field name="state"/>
           <field name="channel_id"/>
         </tree>
@@ -34,7 +34,7 @@
           <field name="type"/>
           <field name="class"/>
           <field name="date"/>
-          <field name="partner_id"/>
+          <field name="recipient_partner_id"/>
           <field name="state"/>
           <field name="channel_id"/>
         </tree>
@@ -48,7 +48,7 @@
       <field name="arch" type="xml">
         <calendar string="Letters" date_start="date" color="move">
           <field name="name"/>
-          <field name="partner_id"/>
+          <field name="recipient_partner_id"/>
         </calendar>
       </field>
     </record>
@@ -60,7 +60,7 @@
       <field name="arch" type="xml">
         <calendar string="Letters" date_start="date" color="move">
           <field name="name"/>
-          <field name="partner_id"/>
+          <field name="recipient_partner_id"/>
         </calendar>
       </field>
     </record>
@@ -100,17 +100,10 @@
                 <field name="size"/>
                 <field name="weight"/>
               </group>
-              <group string="Recipients" col="1" colspan="4">
-                <field name="recipient_ids" nolabel="1">
-                  <tree version="7.0" editable="1">
-                    <field name="name" readonly="1"/>
-                    <field name="street" readonly="1"/>
-                    <field name="city" readonly="1"/>
-                    <field name="zip" readonly="1"/>
-                    <field name="country_id" readonly="1"/>
-                  </tree>
-                </field>
-                <field name="note"/>
+              <group string="Addresses" col="4" colspan="4">
+                <field name="recipient_partner_id" required="True" />
+                <field name="sender_partner_id" />
+                <field name="note" colspan="4"/>
               </group>
             </group>
 
@@ -178,16 +171,10 @@
                 <field name="size"/>
                 <field name="weight"/>
               </group>
-              <group string="Recipient" col="2" colspan="2">
-                <field name="partner_id"/>
-                <field name="note"/>
-              </group>
-              <group string="Sender" col="2" colspan="2">
-                <field name="send_id" on_change="onchange_send_id(send_id)"/>
-                <field name="send_street" readonly="1"/>
-                <field name="send_city" readonly="1"/>
-                <field name="send_zip" readonly="1"/>
-                <field name="send_country" readonly="1"/>
+              <group string="Addresses" col="4" colspan="4">
+                <field name="recipient_partner_id"/>
+                <field name="sender_partner_id" required="True"/>
+                <field name="note" colspan="4"/>
               </group>
             </group>
 
