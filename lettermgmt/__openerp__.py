@@ -22,7 +22,7 @@
 
 {
     'name': 'Letter Management',
-    'version': '0.2',
+    'version': '1.1',
     'author': 'Savoir-faire Linux',
     'maintainer': 'Savoir-faire Linux',
     'website': 'http://www.savoirfairelinux.com',
