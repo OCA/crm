@@ -38,7 +38,6 @@
         "views/letter_folder_view.xml",
         "views/letter_channel_view.xml",
         "views/letter_class_view.xml",
-        "views/letter_history_view.xml",
         "views/letter_reassignment_view.xml",
         "views/letter_type_view.xml",
         "data/letter_sequence.xml",
