@@ -18,6 +18,8 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
+
+
 def migrate(cr, previous_version):
     if previous_version == '7.0.0.1':
         # probably nobody used this version anyway

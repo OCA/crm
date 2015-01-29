@@ -18,6 +18,8 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
+
+
 def migrate(cr, previous_version):
     if previous_version == '6.1.1.0':
         # migration from letter_mgmt_v6
