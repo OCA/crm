@@ -1,5 +1,5 @@
 # -*- encoding: utf-8 -*-
-##############################################################################
+###############################################################################
 #
 #    OpenERP, Open Source Management Solution
 #    This module copyright (C) 2013 Savoir-faire Linux
@@ -18,7 +18,21 @@
 #    You should have received a copy of the GNU Affero General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
-##############################################################################
+###############################################################################
+from openerp.osv import orm, fields
 
-from . import res_letter
-from . import letter_reassignment
+
+class letter_folder(orm.Model):
+    """Folder which contains collections of letters"""
+    _name = 'letter.folder'
+    _description = 'Letter Folder'
+    _columns = {
+        'name': fields.char('Name', required=True),
+        'code': fields.char('Code', required=True),
+        'letter_ids': fields.one2many(
+            'res.letter', 'folder_id', string='Letters',
+            help='Letters contained in this folder.'),
+    }
+    _sql_constraints = [('code_uniq', 'unique(code)', 'Code must be unique !')]
+
+# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

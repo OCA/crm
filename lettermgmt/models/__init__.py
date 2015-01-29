@@ -1,9 +1,8 @@
-# -*- encoding: utf-8 -*-
-###############################################################################
+# -*- coding: utf-8 -*-
+##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    This module copyright (C) 2013 Savoir-faire Linux
-#    (<http://www.savoirfairelinux.com>).
+#    This module copyright (C) 2015 Therp BV <http://therp.nl>.
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -18,18 +17,10 @@
 #    You should have received a copy of the GNU Affero General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
-###############################################################################
-
-from openerp.osv import fields, orm
-
-
-class letter_reassignment(orm.Model):
-    """A line to forward a letter with a comment"""
-    _inherit = 'letter.reassignment'
-    _columns = {
-        'department_id': fields.many2one(
-            'hr.department', string='Department',
-            help='Department of user to whom letter is reassigned.'),
-    }
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
+##############################################################################
+from . import letter_class
+from . import letter_folder
+from . import res_letter
+from . import letter_type
+from . import letter_reassignment
+from . import letter_channel

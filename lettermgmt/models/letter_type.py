@@ -20,16 +20,16 @@
 #    along with this program.  If not, see http://www.gnu.org/licenses/.
 #
 ##############################################################################
-
 from openerp.osv import fields, orm
-from openerp.tools.translate import _
 
 
-class letter_channel(orm.Model):
-    """ Class to define various channels using which letters can be sent or
-    received like : post, fax, email. """
-    _name = 'letter.channel'
-    _description = _("Send/Receive channel")
+class letter_type(orm.Model):
+    """Class to define various types for letters like : envelope,parcel,
+    etc."""
+    _name = 'letter.type'
+    _description = "Letter Type"
     _columns = {
-        'name': fields.char('Type', size=32, required=True),
+        'name': fields.char('Type', required=True),
+        'code': fields.char('Code', required=True),
     }
+    _sql_constraints = [('code_uniq', 'unique(code)', 'Code must be unique !')]

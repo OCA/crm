@@ -21,8 +21,10 @@
       <field name="model">letter.folder</field>
       <field name="arch" type="xml">
         <form string="Letter Folder">
-          <field name="code"/>
-          <field name="name"/>
+            <group>
+                <field name="code"/>
+                <field name="name"/>
+            </group>
         </form>
       </field>
     </record>
@@ -42,7 +44,7 @@
 
     <menuitem id="letter_folder_menu"
               name="Letter Folders"
-              parent="res_letter_menu"
+              parent="letter_log_config_menu"
               sequence="1"
               action="action_letter_folder_tree_view"/>
 

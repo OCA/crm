@@ -19,41 +19,20 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ###############################################################################
+from openerp.osv import fields, orm
 
-{
-    'name': 'Letter Management - HR Bindings',
-    'version': '0.1',
-    'author': 'Savoir-faire Linux',
-    'maintainer': 'Savoir-faire Linux',
-    'website': 'http://www.savoirfairelinux.com',
-    'license': 'AGPL-3',
-    'category': 'Social Network',
-    'summary': 'Human Resources bindings for Letter Management',
-    'description': """
-Letter Management
-=================
 
-Using this module you can track Internal letters, parcels, registered documents
-or any other paper documents that are important for company to keep track of.
-
-Contributors
-------------
-* Sandy Carter <sandy.carter@savoirfairelinux.com>
-
-""",
-    'depends': ['hr', 'lettermgmt'],
-    'external_dependencies': {
-        'python': [],
-    },
-    'data': [
-        "res_letter_view.xml",
-        "letter_reassignment_view.xml",
-        "letter_sequence.xml",
-    ],
-    'demo': [],
-    'test': [],
-    'installable': True,
-    'auto_install': True,
-}
+class letter_reassignment(orm.Model):
+    """A line to forward a letter with a comment"""
+    _name = 'letter.reassignment'
+    _description = 'Reassignment line'
+    _columns = {
+        'name': fields.many2one(
+            'res.users', string='Name', help='User to forward letter to.'),
+        'comment': fields.text(
+            'Comment', help='Comment for user explaining forward.'),
+        'letter_id': fields.many2one(
+            'res.letter', string='Letter', help='Letter in question.'),
+    }
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

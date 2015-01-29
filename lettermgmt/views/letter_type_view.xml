@@ -21,8 +21,10 @@
       <field name="model">letter.type</field>
       <field name="arch" type="xml">
         <form string="Letter Type">
-          <field name="name"/>
-          <field name="code"/>
+            <group>
+                <field name="name"/>
+                <field name="code"/>
+            </group>
         </form>
       </field>
     </record>
