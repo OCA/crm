@@ -65,17 +65,17 @@ class crm_claim_merge(orm.TransientModel):
                                     context=context)
         return self.redirect_new_claim(cr, uid, merged_id, context=context)
 
-    def default_get(self, cr, uid, fields, context=None):
+    def default_get(self, cr, uid, field_list, context=None):
         """
         Use active_ids from the context to fetch the claims to merge.
         """
         if context is None:
             context = {}
         res = super(crm_claim_merge, self).default_get(
-            cr, uid, fields, context=context)
-        if 'claim_ids' in fields:
+            cr, uid, field_list, context=context)
+        if 'claim_ids' in field_list:
             res['claim_ids'] = claim_ids = context.get('active_ids')
-            if 'merge_in_id' in fields and claim_ids:
+            if 'merge_in_id' in field_list and claim_ids:
                 claim_obj = self.pool['crm.claim']
                 claims = claim_obj.browse(cr, uid, claim_ids, context=context)
                 res['merge_in_id'] = claim_obj._merge_get_default_main(

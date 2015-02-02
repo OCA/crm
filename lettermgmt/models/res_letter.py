@@ -25,6 +25,7 @@ from openerp.osv import fields, orm
 
 
 class res_letter(orm.Model):
+
     """A register class to log all movements regarding letters"""
     _name = 'res.letter'
     _description = "Log of Letter Movements"
