@@ -24,7 +24,7 @@ import logging
 from openerp.osv.orm import Model, except_orm
 from openerp.osv import fields
 from openerp.tools.safe_eval import safe_eval
-from newsletter_type import newsletter_type
+from .newsletter_type import newsletter_type
 from openerp.tools.translate import _
 
 
@@ -99,11 +99,11 @@ class newsletter_newsletter(Model):
     }
 
     def on_change_type_id(self, cr, uid, ids, type_id, context=None):
-        newsletter_type = self.pool.get('newsletter.type').browse(
+        record = self.pool['newsletter.type'].browse(
             cr, uid, type_id, context=context)
         return {
             'value': {
-                'plaintext_mode': newsletter_type.plaintext_mode,
+                'plaintext_mode': record.plaintext_mode,
             }
         }
 
@@ -163,9 +163,9 @@ class newsletter_newsletter(Model):
                 if not ids:
                     break
 
-                for id in ids:
+                for rec_id in ids:
                     try:
-                        self._do_send_newsletter(cr, uid, this, id,
+                        self._do_send_newsletter(cr, uid, this, rec_id,
                                                  context=context)
                     except Exception as e:
                         self._logger.error(e)
