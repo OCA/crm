@@ -34,8 +34,8 @@ msgstr "handmatig"
 
 #. module: newsletter
 #: selection:newsletter.newsletter,state:0
-msgid "testing"
-msgstr "testen"
+msgid "Testing"
+msgstr "Testen"
 
 #. module: newsletter
 #: view:newsletter.newsletter:0
@@ -110,8 +110,13 @@ msgstr "Email-sjablonen"
 
 #. module: newsletter
 #: selection:newsletter.newsletter,state:0
-msgid "draft"
-msgstr "concept"
+msgid "Sending"
+msgstr "Wordt verzonden"
+
+#. module: newsletter
+#: selection:newsletter.newsletter,state:0
+msgid "Draft"
+msgstr "Concept"
 
 #. module: newsletter
 #: field:newsletter.type,group_ids:0
@@ -125,8 +130,8 @@ msgstr "Onderwerp"
 
 #. module: newsletter
 #: selection:newsletter.newsletter,state:0
-msgid "sent"
-msgstr "Verzend"
+msgid "Sent"
+msgstr "Verzonden"
 
 #. module: newsletter
 #: field:newsletter.type,name:0

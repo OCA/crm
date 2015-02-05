@@ -50,10 +50,10 @@ class newsletter_newsletter(Model):
     _logger = logging.getLogger(_name)
 
     _state_selection = [
-        ('draft', 'draft'),
-        ('testing', 'testing'),
-        ('sending', 'sending'),
-        ('sent', 'sent'),
+        ('draft', 'Draft'),
+        ('testing', 'Testing'),
+        ('sending', 'Sending'),
+        ('sent', 'Sent'),
     ]
 
     def _may_send_get(self, cr, uid, ids, field_name, arg, context=None):
