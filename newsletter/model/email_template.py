@@ -21,43 +21,42 @@
 ##############################################################################
 
 from openerp.osv.orm import Model
-from openerp.addons.email_template.email_template import mako_template_env
+from openerp.addons.email_template.email_template import mako_template_env,\
+    format_tz
 
 
 class email_template(Model):
     _inherit = 'email.template'
 
-    def render_template(self, cr, uid, template, model, res_id, context=None):
-        result = ''
+    def render_template_batch(self, cr, uid, template, model, res_ids,
+                              context=None, post_process=False):
+        result = {}
         try:
-            mako_template_env.autoescape = False
-            result = super(email_template, self).render_template(
-                cr, uid, template, model, res_id, context)
+            if model == 'newsletter.newsletter':
+                mako_template_env.autoescape = False
+                post_process=False
+            result = super(email_template, self).render_template_batch(
+                cr, uid, template, model, res_ids, context=context,
+                post_process=post_process)
         finally:
-            mako_template_env.autoescape = True
+            if model == 'newsletter.newsletter':
+                mako_template_env.autoescape = True
 
-        if (model == 'newsletter.newsletter' and res_id
-                and context.get('newsletter_res_id')):
-
-            newsletter = self.pool.get(model).browse(cr, uid, res_id,
-                                                     context=context)
-            user = self.pool.get('res.users').browse(cr, uid, uid,
-                                                     context=context)
-
-            result = mako_template_env.from_string(result).render({
-                'object': self.pool.get(newsletter.type_id.model.model).browse(
-                    cr, uid, context.get('newsletter_res_id'), context),
-                'user': user,
-                'ctx': context
-            })
+        if model == 'newsletter.newsletter' and res_ids and result and\
+                context.get('newsletter_res_id'):
+            for res_id, rendered in result.iteritems():
+                newsletter = self.pool[model].browse(
+                    cr, uid, res_id, context=context)
+                user = self.pool['res.users'].browse(
+                    cr, uid, uid, context=context)
+                template = mako_template_env.from_string(rendered)
+                result[res_id] = template.render({
+                    'object': self.pool[newsletter.type_id.model.model].browse(
+                        cr, uid, context.get('newsletter_res_id'), context),
+                    'user': user,
+                    'ctx': context,
+                    'format_tz': lambda dt, tz=False, fmt=False:
+                    format_tz(self.pool, cr, uid, dt, tz, fmt, context),
+                })
 
         return result
-
-
-class email_template_preview(Model):
-    _inherit = 'email_template.preview'
-
-    def render_template(self, cr, uid, template, model, res_id, context=None):
-        return email_template.render_template(
-            self.pool.get('email.template'),
-            cr, uid, template, model, res_id, context)

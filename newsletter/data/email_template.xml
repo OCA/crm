@@ -8,17 +8,7 @@
             <field name="email_to">${'${object.email}'}</field>
             <field name="model_id" ref="model_newsletter_newsletter"/>
             <field name="auto_delete" eval="True"/>
-            <field name="lang"></field>
-            <field name="body_text"><![CDATA[${object.text_intro_plain or ''}
-%for topic in object.topic_ids:
-
-${topic.title}
-
-${topic.text_plain}
-%endfor
-
-${object.text_outro_plain or ''}
-]]></field>
+            <field name="lang">${'${object.partner_id.lang.code}'}</field>
             <field name="body_html"><![CDATA[${object.text_intro_html or ''}
 %for topic in object.topic_ids:
 <div>
