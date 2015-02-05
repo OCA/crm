@@ -4,7 +4,8 @@ With this addon, you can send HTML-formatted mass emails to your customers.
 While it was developed with primarily newsletters in mind, it works for
 arbitrary objects and arbitrary content.
 
-From odoo version 8.0, this is an extension of the mass_mailing module.
+This is something else than the mass_mailing module, which is geared very much
+on marketing campaigns with appropriate language and measuring tools.
 
 Installation
 ============
@@ -65,6 +66,11 @@ send the newsletter. The sending process uses OpenERP's standard email queue.
 For further information, please visit:
 
  * https://www.odoo.com/forum/help-1
+
+Known issues / Roadmap
+======================
+
+ * a glue module between this and mass_mailing would be nice
 
 Credits
 =======
