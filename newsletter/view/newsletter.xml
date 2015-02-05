@@ -17,7 +17,7 @@
               </header>
               <sheet>
                   <group>
-                      <field name="type_id" on_change="on_change_type_id(type_id)" attrs="{'readonly': [('state', 'not in', ['testing', 'draft'])]}" />
+                      <field name="type_id" attrs="{'readonly': [('state', 'not in', ['testing', 'draft'])]}" />
                       <field name="subject" attrs="{'readonly': [('state', 'not in', ['testing', 'draft'])]}"/>
                       <field name="text_intro_html" widget="text_email_html" attrs="{'readonly': [('state', 'not in', ['testing', 'draft'])]}" />
                       <field name="topic_ids" attrs="{'readonly': [('state', 'not in', ['testing', 'draft'])]}">
