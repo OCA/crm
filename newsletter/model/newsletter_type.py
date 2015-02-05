@@ -42,7 +42,7 @@ class newsletter_type(models.Model):
     def action_show_recipient_objects(self):
         return {
             'type': 'ir.actions.act_window',
-            'view_mode': 'tree',
+            'view_mode': 'tree,form',
             'view_type': 'form',
             'res_model': self.model.model,
             'domain': self.domain,
