@@ -25,10 +25,12 @@
     'author': 'Therp BV',
     'website': 'http://www.therp.nl',
     "category": "Newsletter",
+    'summary': 'Send newsletters to customers, employees or other entities',
     "depends": [
         'email_template',
         'web_ckeditor4',
-        ],
+        'web',
+    ],
     'data': [
         "view/qweb.xml",
         'data/ir_module_cateogry.xml',
