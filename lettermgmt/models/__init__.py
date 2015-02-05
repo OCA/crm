@@ -18,9 +18,11 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-from . import letter_class
-from . import letter_folder
-from . import res_letter
-from . import letter_type
-from . import letter_reassignment
-from . import letter_channel
+from . import (
+    letter_class,
+    letter_folder,
+    res_letter,
+    letter_type,
+    letter_reassignment,
+    letter_channel,
+)
