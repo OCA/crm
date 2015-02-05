@@ -34,7 +34,7 @@ class email_template(Model):
         try:
             if model == 'newsletter.newsletter':
                 mako_template_env.autoescape = False
-                post_process=False
+                post_process = False
             result = super(email_template, self).render_template_batch(
                 cr, uid, template, model, res_ids, context=context,
                 post_process=post_process)
