@@ -20,11 +20,11 @@
 #
 ############################################################################*/
 
-openerp.newsletter = function(openerp)
+openerp.newsletter = function(instance)
 {
-    openerp.web.form.widgets.add('text_email_html',
+    instance.web.form.widgets.add('text_email_html',
             'openerp.newsletter.FieldEmailHTML');
-    openerp.newsletter.FieldEmailHTML = openerp.web_ckeditor4.FieldCKEditor4.extend({
+    openerp.newsletter.FieldEmailHTML = instance.web_ckeditor4.FieldCKEditor4.extend({
         init: function()
         {
             this.ckeditor_config.removePlugins+=',scayt,preview,a11yhelp,about,wsc';
