@@ -17,25 +17,20 @@
               </header>
               <sheet>
                   <group>
-                      <field name="plaintext_mode" invisible="1" />
                       <field name="type_id" on_change="on_change_type_id(type_id)" attrs="{'readonly': [('state', 'not in', ['testing', 'draft'])]}" />
                       <field name="subject" attrs="{'readonly': [('state', 'not in', ['testing', 'draft'])]}"/>
-                      <field name="text_intro_plain" attrs="{'invisible': ['|', ('type_id','=',False), ('plaintext_mode','in',['from_html'])], 'readonly': [('state', 'not in', ['testing', 'draft'])]}" />
                       <field name="text_intro_html" widget="text_email_html" attrs="{'readonly': [('state', 'not in', ['testing', 'draft'])]}" />
-                      <field name="topic_ids" context="{'plaintext_mode': plaintext_mode}" attrs="{'readonly': [('state', 'not in', ['testing', 'draft'])]}">
+                      <field name="topic_ids" attrs="{'readonly': [('state', 'not in', ['testing', 'draft'])]}">
                         <form col="2" version="7.0">
-                            <sheet>
-                                <field name="plaintext_mode" invisible="1" />
+                            <group>
                                 <field name="title" />
-                                <field name="text_plain" attrs="{'invisible': [('plaintext_mode', '=', 'from_html')]}" />
                                 <field name="text_html" widget="text_email_html" />
-                            </sheet>
+                            </group>
                         </form>
                         <tree>
                             <field name="title" />
                         </tree>
                       </field>
-                      <field name="text_outro_plain" attrs="{'invisible': ['|', ('type_id','=',False), ('plaintext_mode','in',['from_html'])], 'readonly': [('state', 'not in', ['testing', 'draft'])]}" />
                       <field name="text_outro_html" widget="text_email_html" attrs="{'readonly': [('state', 'not in', ['testing', 'draft'])]}" />
                   </group>
               </sheet>

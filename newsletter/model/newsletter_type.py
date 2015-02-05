@@ -19,47 +19,32 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-
-from openerp.osv.orm import Model
-from openerp.osv import fields
-from openerp.tools.translate import _
+from openerp import api, models, fields, _
 
 
-class newsletter_type(Model):
+class newsletter_type(models.Model):
     _name = 'newsletter.type'
     _description = 'Newsletter type'
 
-    _plaintext_mode_selection = [
-        ('from_html', 'from HTML')
-    ]
+    name = fields.Char('Name', required=True)
+    email_template_id = fields.Many2one(
+        'email.template', 'Email template', required=True)
+    model = fields.Many2one('ir.model', 'Model', required=True)
+    domain = fields.Char('Domain', required=True)
+    email_from = fields.Char('From address', required=True)
+    group_ids = fields.Many2many(
+        'res.groups', relation='newsletter_type_groups_rel',
+        column1='newsletter_id', column2='group_id', string='Groups',
+        help='The groups that may send this type of newsletter. '
+        'Leave empty for all members of group Newsletter / Senders')
 
-    _columns = {
-        'name': fields.char('Name', size=64, required=True),
-        'email_template_id': fields.many2one(
-            'email.template', 'Email template', required=True),
-        'model': fields.many2one('ir.model', 'Model', required=True),
-        'domain': fields.char('Domain', size=256, required=True),
-        'email_from': fields.char('From address', size=128, required=True),
-        'plaintext_mode': fields.selection(
-            _plaintext_mode_selection, 'Plaintext mode', required=True),
-        'group_ids': fields.many2many(
-            'res.groups', 'newsletter_type_groups_rel', 'newsletter_id',
-            'group_id', 'Groups',
-            help='The groups that may send this type of newsletter. '
-            'Leave empty for all members of group Newsletter / Senders'),
-    }
-
-    _defaults = {
-        'plaintext_mode': 'from_html',
-    }
-
-    def action_show_recipient_objects(self, cr, uid, ids, context=None):
-        for this in self.browse(cr, uid, ids, context=context):
-            return {
-                'type': 'ir.actions.act_window',
-                'view_mode': 'tree',
-                'view_type': 'form',
-                'res_model': this.model.model,
-                'domain': this.domain,
-                'name': _('Recipients'),
-            }
+    @api.multi
+    def action_show_recipient_objects(self):
+        return {
+            'type': 'ir.actions.act_window',
+            'view_mode': 'tree',
+            'view_type': 'form',
+            'res_model': self.model.model,
+            'domain': self.domain,
+            'name': _('Recipients'),
+        }

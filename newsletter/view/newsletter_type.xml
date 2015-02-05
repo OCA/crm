@@ -18,7 +18,6 @@
                       <field name="email_template_id" domain="[('model_id.model', '=', 'newsletter.newsletter')]" />
                       <field name="email_from" widget="email" />
                       <field name="group_ids" />
-                      <field name="plaintext_mode" invisible="1" />
                   </group>
               </sheet>
           </form>

@@ -29,17 +29,14 @@ from openerp.tools.translate import _
 
 
 def _get_plaintext(obj, cr, uid, ids, field_name, arg, context=None):
-    # TODO: we need a write function for that too
     result = {}
     for this in obj.browse(cr, uid, ids, context=context):
-        if this.plaintext_mode == 'from_html' and this[arg]:
-            from lxml import html
-
-            doc = html.document_fromstring(this[arg])
-            result[this.id] = doc.text_content()
-        else:
-            # TODO: read from database
-            result[this.id] = ''
+        if not this[arg]:
+            result[this.id] = False
+            continue
+        from lxml import html
+        doc = html.document_fromstring(this[arg])
+        result[this.id] = doc.text_content()
     return result
 
 
@@ -87,25 +84,12 @@ class newsletter_newsletter(Model):
         'text_outro_html': fields.text('Outro (HTML)'),
         'topic_ids': fields.one2many(
             'newsletter.topic', 'newsletter_id', 'Topics'),
-        'plaintext_mode': fields.related(
-            'type_id', 'plaintext_mode', type='selection',
-            selection=newsletter_type._plaintext_mode_selection,
-            string='Plaintext mode', readonly=True),
         'may_send': fields.function(_may_send_get, type='boolean'),
     }
 
     _defaults = {
         'state': 'draft',
     }
-
-    def on_change_type_id(self, cr, uid, ids, type_id, context=None):
-        newsletter_type = self.pool.get('newsletter.type').browse(
-            cr, uid, type_id, context=context)
-        return {
-            'value': {
-                'plaintext_mode': newsletter_type.plaintext_mode,
-            }
-        }
 
     def action_preview(self, cr, uid, ids, context=None):
         for this in self.browse(cr, uid, ids, context):

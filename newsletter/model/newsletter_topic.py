@@ -37,9 +37,4 @@ class newsletter_topic(Model):
             _get_plaintext, type='text', string='Text (plain)',
             arg='text_html', store=True),
         'text_html': fields.text('Text (html)'),
-        'plaintext_mode': fields.related(
-            'newsletter_id', 'type_id', 'plaintext_mode',
-            type='selection',
-            selection=newsletter_type._plaintext_mode_selection,
-            string='Plaintext mode', readonly=True),
     }
