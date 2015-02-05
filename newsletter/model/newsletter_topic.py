@@ -19,22 +19,15 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-
-from openerp.osv.orm import Model
-from openerp.osv import fields
-from newsletter_type import newsletter_type
-from newsletter_newsletter import _get_plaintext
+from openerp import models, fields
 
 
-class newsletter_topic(Model):
+class newsletter_topic(models.Model):
     _name = 'newsletter.topic'
+    _description = 'Newsletter topic'
+    _rec_name = 'title'
 
-    _columns = {
-        'newsletter_id': fields.many2one(
-            'newsletter.newsletter', 'Newsletter'),
-        'title': fields.char('Title', size=256),
-        'text_plain': fields.function(
-            _get_plaintext, type='text', string='Text (plain)',
-            arg='text_html', store=True),
-        'text_html': fields.text('Text (html)'),
-    }
+    newsletter_id = fields.Many2one(
+        'newsletter.newsletter', 'Newsletter')
+    title = fields.Char('Title')
+    text_html = fields.Text('Text')
