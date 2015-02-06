@@ -12,11 +12,11 @@ virtualenv:
   system_site_packages: true
 
 install:
-  - git clone https://github.com/OCA/maintainer-quality-tools.git ${HOME}/maintainer-quality-tools
+  - git clone --depth=1 https://github.com/OCA/maintainer-quality-tools.git ${HOME}/maintainer-quality-tools
   - export PATH=${HOME}/maintainer-quality-tools/travis:${PATH}
   - travis_install_nightly
 # example: dependency
-  - git clone https://github.com/OCA/web -b ${VERSION} $HOME/web
+  - git clone --depth=1 https://github.com/OCA/web -b ${VERSION} $HOME/web
 
 script:
   - travis_run_tests
