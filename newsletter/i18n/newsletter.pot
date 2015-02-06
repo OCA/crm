@@ -93,7 +93,7 @@ msgstr ""
 
 #. module: newsletter
 #: field:newsletter.newsletter,text_intro_html:0
-msgid "Intro (HTML)"
+msgid "Intro"
 msgstr ""
 
 #. module: newsletter
@@ -157,7 +157,7 @@ msgstr ""
 
 #. module: newsletter
 #: field:newsletter.newsletter,text_outro_html:0
-msgid "Outro (HTML)"
+msgid "Outro"
 msgstr ""
 
 #. module: newsletter
@@ -220,7 +220,7 @@ msgstr ""
 
 #. module: newsletter
 #: field:newsletter.topic,text_html:0
-msgid "Text (html)"
+msgid "Text"
 msgstr ""
 
 #. module: newsletter

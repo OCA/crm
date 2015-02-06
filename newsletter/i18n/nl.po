@@ -22,8 +22,8 @@ msgstr "Titel"
 
 #. module: newsletter
 #: field:newsletter.topic,text_html:0
-msgid "Text (html)"
-msgstr "Tekst (html)"
+msgid "Text"
+msgstr "Tekst"
 
 #. module: newsletter
 #: selection:newsletter.newsletter,plaintext_mode:0
@@ -80,8 +80,8 @@ msgstr "newsletter.topic"
 
 #. module: newsletter
 #: field:newsletter.newsletter,text_outro_html:0
-msgid "Outro (HTML)"
-msgstr "Afsluiting (HTML)"
+msgid "Outro"
+msgstr "Afsluiting"
 
 #. module: newsletter
 #: help:newsletter.type,group_ids:0
@@ -155,8 +155,8 @@ msgstr "Inleiding (plain)"
 
 #. module: newsletter
 #: field:newsletter.newsletter,text_intro_html:0
-msgid "Intro (HTML)"
-msgstr "Inleiding (HTML)"
+msgid "Intro"
+msgstr "Inleiding"
 
 #. module: newsletter
 #: model:ir.model,name:newsletter.model_newsletter_newsletter
