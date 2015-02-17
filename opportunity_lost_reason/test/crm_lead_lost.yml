@@ -1,0 +1,31 @@
+-
+  In order to test the choice of a lost reason when marking as lost an opportunity
+  I create a new lost reason
+-
+  !record {model: crm.lead.lost.reason, id: lost_reason_test}:
+    name: Lost for tests
+-
+  Given I create an opportunity
+-
+  !record {model: crm.lead, id: crm_lead_lost_01}:
+    name: Test Opportunity
+    type: opportunity
+-
+  When I mark it as lost with the wizard asking for the reason
+-
+  !python {model: crm.lead.lost}: |
+    context = {'active_model': 'crm.lead',
+               'active_ids': [ref('crm_lead_lost_01')],
+               }
+    reason_id = ref('lost_reason_test')
+    wizard_id = self.create(cr, uid,
+                            {'reason_id': reason_id},
+                            context=context)
+    self.confirm_lost(cr, uid, wizard_id, context=context)
+-
+  Then the opportunity should be marked as lost
+  and the reason stored
+-
+  !assert {model: crm.lead, id: crm_lead_lost_01, string: the opportunity should be lost}:
+    - stage_id.name == 'Lost'
+    - lost_reason_id.name == 'Lost for tests'
