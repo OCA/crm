@@ -27,20 +27,6 @@
     'license': 'AGPL-3',
     'category': 'Others',
     'summary': 'CRM Quotation Link',
-    'description': """
-CRM Quotation Link
-==================
-This module extends the functionality of crm to deliver two
-contexted buttons into the opportunity form view :
-    the first opens all quotes linked to this opportunity
-    the second opens all sales order linked to this opportunity
-
-Contributors
-------------
-* Bruno Joliveau <bruno.joliveau@savoirfairelinux.com>
-* Jordi Riera <jordi.riera@savoirfairelinux.com>
-* David Dufresne <david.dufresne@savoirfairelinux.com>
-""",
     'depends': [
         'sale_crm',
     ],

@@ -29,7 +29,7 @@ sales_order_states = [
 quotations_states = ['draft', 'sent', 'waiting_date']
 
 
-class crm_lead(models.Model):
+class CrmLead(models.Model):
     _inherit = 'crm.lead'
 
     def count_sales_order(self):
@@ -48,23 +48,32 @@ class crm_lead(models.Model):
     quotations_count = fields.Integer(compute='count_sales_order')
 
     @api.multi
-    def get_sale_order_view(self, order_state, view_title):
-        partner_ids = list({
-            lead.partner_id.id for lead in self
-            if lead.partner_id
-        })
+    def get_sale_order_view(self, order_states, view_title):
+        partner_ids = [lead.partner_id.id for lead in self]
 
-        return {
+        orders = self.env['sale.order'].search([
+            ('partner_id', 'in', partner_ids),
+            ('state', 'in', order_states),
+        ])
+
+        res = {
             'name': view_title,
             'type': 'ir.actions.act_window',
             'res_model': 'sale.order',
             'view_type': 'form',
-            'view_mode': 'tree,form',
-            'domain': [
-                ('state', 'in', order_state),
-                ('partner_id', 'in', partner_ids),
-            ],
         }
+
+        if len(orders) == 1:
+            res['res_id'] = orders[0].id
+            res['view_mode'] = 'form'
+        else:
+            res['domain'] = [
+                ('state', 'in', order_states),
+                ('partner_id', 'in', partner_ids),
+            ]
+            res['view_mode'] = 'tree,form'
+
+        return res
 
     @api.multi
     def button_sales_orders(self):

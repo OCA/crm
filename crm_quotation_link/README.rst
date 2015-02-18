@@ -27,21 +27,21 @@ To use this module, you need to :
 Known issues / Roadmap
 ======================
 
-Contributors
-============
-
-David DUFRESNE <david.dufresne@savoirfairelinux.com>
-Jordi RIERA <jordi.riera@savoirfairelinux.com>
-Bruno JOLIVEAU <bruno.joliveau@savoirfairelinux.com>
-
 Credits
 =======
 
 Module developed and tested with Odoo version 8.0
 For questions, please contact our support services <support@savoirfairelinux.com>
 
+Contributors
+------------
+
+David DUFRESNE <david.dufresne@savoirfairelinux.com>
+Jordi RIERA <jordi.riera@savoirfairelinux.com>
+Bruno JOLIVEAU <bruno.joliveau@savoirfairelinux.com>
+
 Maintainer
-==========
+----------
 
 Odoo Community Association
 
