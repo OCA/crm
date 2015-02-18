@@ -13,7 +13,7 @@
                     <button name="%(action_crm_lead_lost)d" string="Mark Lost" type="action" class="oe_highlight" groups="base.group_user"/>
                 </xpath>
                 <xpath expr="/form/sheet/div[@class='oe_title']/h2" position="after">
-                    <h2>
+                    <h2 attrs="{'invisible':[('lost_reason_id','=',False)]}">
                         <label for="lost_reason_id" string="Lost reason:"/>
                         <field name="lost_reason_id" class="oe_inline"
                           options='{"no_open": True}' />
