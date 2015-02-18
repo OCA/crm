@@ -19,7 +19,7 @@
 #
 #
 
-from openerp import models, fields
+from openerp import models, fields, api, exceptions
 
 
 class CrmLead(models.Model):
@@ -30,6 +30,23 @@ class CrmLead(models.Model):
         string="Reason for lost",
         readonly=True,
         ondelete="restrict")
+
+    @api.multi
+    def write(self, vals):
+        """Check if a lost reason is given when you
+        mark an opportunity as lost.
+        If there is no lost reason, it indicates you to pass by form
+        to provide a lost reason. It's the choice of the simplicity to
+        avoid to struggle with kanban javascript code.
+        """
+        if 'stage_id' in vals:
+            new_stage = self.env['crm.case.stage'].browse(vals['stage_id'])
+            for lead in self:
+                if new_stage.name == 'Lost' and not lead.lost_reason_id:
+                    raise exceptions.Warning('Please pass by form '
+                                             'to provide a lost reason.')
+        result = super(CrmLead, self).write(vals)
+        return result
 
 
 class CrmLeadLostReason(models.Model):
