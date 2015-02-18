@@ -44,7 +44,8 @@ class CrmLead(models.Model):
             lost_stage = self.env.ref('crm.stage_lead7')
             for lead in self:
                 if new_stage == lost_stage and not lead.lost_reason_id:
-                    raise exceptions.Warning('Please pass by form '
+                    raise exceptions.Warning('Please pass by the red button '
+                                             '"Mark Lost" on the form '
                                              'to provide a lost reason.')
         result = super(CrmLead, self).write(vals)
         return result
