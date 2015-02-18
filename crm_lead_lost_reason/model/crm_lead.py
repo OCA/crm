@@ -41,8 +41,9 @@ class CrmLead(models.Model):
         """
         if 'stage_id' in vals:
             new_stage = self.env['crm.case.stage'].browse(vals['stage_id'])
+            lost_stage = self.env.ref('crm.stage_lead7')
             for lead in self:
-                if new_stage.name == 'Lost' and not lead.lost_reason_id:
+                if new_stage == lost_stage and not lead.lost_reason_id:
                     raise exceptions.Warning('Please pass by form '
                                              'to provide a lost reason.')
         result = super(CrmLead, self).write(vals)
