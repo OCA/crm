@@ -21,12 +21,12 @@
 ##############################################################################
 
 {
-    'name': 'CRM Actions',
+    'name': 'CRM Action',
     'version': '1.0',
     'author': 'Savoir-faire Linux',
     'license': 'AGPL-3',
     'category': 'Others',
-    'summary': 'CRM Actions',
+    'summary': 'CRM Action',
     'depends': [
         'sale_crm',
     ],
@@ -34,11 +34,11 @@
         'python': [],
     },
     'data': [
+        'security/res_groups_data.xml',
+        'security/ir.model.access.csv',
         'views/crm_lead_view.xml',
         'views/crm_action_view.xml',
         'views/crm_action_type_view.xml',
-        'security/res_groups_data.xml',
-        'security/ir.model.access.csv',
     ],
     'installable': True,
     'application': True,

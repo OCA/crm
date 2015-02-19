@@ -63,7 +63,7 @@
             </field>
         </record>
 
-        <record model="ir.actions.act_window" id="action_crm_actions_view">
+        <record model="ir.actions.act_window" id="action_crm_action_view">
             <field name="name">Actions</field>
             <field name="res_model">crm.action</field>
             <field name="view_mode">tree,form</field>
@@ -71,8 +71,8 @@
             <field name="search_view_id" ref="view_crm_action_filter"/>
         </record>
 
-        <menuitem name="Actions" id="menu_crm_actions" parent="base.menu_sales" sequence="5"
-        action="action_crm_actions_view"
+        <menuitem name="Actions" id="menu_crm_action" parent="base.menu_sales" sequence="5"
+        action="action_crm_action_view"
         groups="group_crm_action_user,group_crm_action_manager"/>
 
     </data>

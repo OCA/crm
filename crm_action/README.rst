@@ -1,5 +1,5 @@
-CRM Actions
-===========
+CRM Action
+==========
 
 This module was written to extend crm features.
 It delivers new object named "Actions" to follow history around leads and opportunites.
@@ -8,7 +8,7 @@ This new object depends on ACL groups you give to users.
 Installation
 ============
 
-To install this module, you just need to select the module and insure yourself dependancies are available.
+To install this module, you just need to select the module and insure yourself dependencies are available.
 
 Configuration
 =============
