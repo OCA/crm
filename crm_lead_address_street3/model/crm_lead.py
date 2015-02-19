@@ -37,3 +37,13 @@ class crm_lead(models.Model):
         return partner
 
     street3 = fields.Char('Street 3')
+
+    def on_change_partner_id(self, cr, uid, ids, partner_id, context=None):
+        res = super(crm_lead, self).on_change_partner_id(cr, uid, ids,
+                                                         partner_id,
+                                                         context=context)
+        if partner_id:
+            partner = self.pool['res.partner'].browse(cr, uid, partner_id,
+                                                      context=context)
+            res['value'].update({'street3': partner.street3})
+        return res
