@@ -21,12 +21,12 @@
 ##############################################################################
 
 {
-    'name': 'CRM Quotation Link',
+    'name': 'CRM Lead Sale Link',
     'version': '1.0',
     'author': 'Savoir-faire Linux',
     'license': 'AGPL-3',
     'category': 'Others',
-    'summary': 'CRM Quotation Link',
+    'summary': 'CRM Lead Sale Link',
     'depends': [
         'sale_crm',
     ],

@@ -1,4 +1,4 @@
-CRM Quotation Link
+CRM Lead Sale Link
 ==================
 
 This module extends the functionality of crm to deliver two contexted buttons into the opportunity form view :
