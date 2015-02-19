@@ -1,0 +1,28 @@
+-
+  In order to test that the street3 is well passed to the future partner
+  I create a new lead
+-
+  !record {model: crm.lead, id: lead_test}:
+    name: Jester Smurf
+    contact_name: Jester Smurf
+    street: Sarsaparilla Street
+    street2: Cursed Country
+    street3: Third Mushroom
+    city: Schtroumpf les Bains
+    type: lead
+-
+  When I transform the lead in an opportunity
+-
+  !python {model: crm.lead2opportunity.partner}: |
+    context = {'active_model': 'crm.lead',
+               'active_id': ref('lead_test'),
+               'active_ids': [ref('lead_test')],
+               }
+    wizard_id = self.create(cr, uid, {'action':'create',
+                                      'name':'convert'}, context=context)
+    self.action_apply(cr, uid, wizard_id, context=context)
+-
+  Then the partner on the opportunity should have the adequate street3
+-
+  !assert {model: crm.lead, id: lead_test, string: the opportunity should be lost}:
+    - partner_id.street3 == 'Third Mushroom'

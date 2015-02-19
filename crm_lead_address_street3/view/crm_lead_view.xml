@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+
+    <record id="add_street3_in_lead_form_view" model="ir.ui.view">
+      <field name="name">add street3 in lead form view</field>
+      <field name="model">crm.lead</field>
+      <field name="inherit_id" ref="crm.crm_case_form_view_leads"/>
+      <field name="arch" type="xml">
+        <field name="street2" position="after">
+          <field name="street3"/>
+        </field>
+      </field>
+    </record>
+
+    <record id="add_street3_in_opportunity_form_view" model="ir.ui.view">
+      <field name="name">add street3 in form view</field>
+      <field name="model">crm.lead</field>
+      <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
+      <field name="arch" type="xml">
+        <field name="street2" position="after">
+          <field name="street3"/>
+        </field>
+      </field>
+    </record>
+
+  </data>
+</openerp>
