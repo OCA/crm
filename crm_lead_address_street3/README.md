@@ -1,9 +1,13 @@
 Street3 in CRM Lead Addresses
 =============================
 
-Add a third field to the lead addresses.
-Check that this field is well passed when the
-lead is converted in an opportunity.
+It depends on partner_address_street3 addon
+(located in OCA partner-contact project) that adds
+a street3 field on partner object.
+
+This addon adds a third field to the lead addresses
+and passes the street3 address value on the created partner
+when the lead is converted in an opportunity.
 
 Credits
 =======
