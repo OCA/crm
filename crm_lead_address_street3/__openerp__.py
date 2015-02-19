@@ -25,7 +25,7 @@
     'maintainer': 'Camptocamp',
     'category': 'Customer Relationship Management',
     'complexity': 'easy',
-    'depends': ['partner_address_street3','crm'],
+    'depends': ['partner_address_street3', 'crm'],
     'description': """Add a third field to the lead addresses
                       Check that this field is well passed when the
                       lead is converted in an opportunity.""",

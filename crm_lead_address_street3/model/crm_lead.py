@@ -18,10 +18,10 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-from openerp.osv import orm, fields
+from openerp import models, fields
 
 
-class crm_lead(orm.Model):
+class crm_lead(models.Model):
     """Add third field in lead address"""
 
     _inherit = "crm.lead"
@@ -37,5 +37,3 @@ class crm_lead(orm.Model):
         return partner
 
     street3 = fields.Char('Street 3')
-
-
