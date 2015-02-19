@@ -73,7 +73,7 @@
 
         <menuitem name="Actions" id="menu_crm_actions" parent="base.menu_sales" sequence="5"
         action="action_crm_actions_view"
-        groups="base.group_sale_salesman,base.group_sale_manager"/>
+        groups="group_crm_action_user,group_crm_action_manager"/>
 
     </data>
 </openerp>

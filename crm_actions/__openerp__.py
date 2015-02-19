@@ -37,6 +37,7 @@
         'views/crm_lead_view.xml',
         'views/crm_action_view.xml',
         'views/crm_action_type_view.xml',
+        'security/res_groups_data.xml',
         'security/ir.model.access.csv',
     ],
     'installable': True,
