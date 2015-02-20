@@ -40,6 +40,10 @@ David DUFRESNE <david.dufresne@savoirfairelinux.com>
 Jordi RIERA <jordi.riera@savoirfairelinux.com>
 Bruno JOLIVEAU <bruno.joliveau@savoirfairelinux.com>
 
++Icon
++----
++* http://en.wikipedia.org/wiki/File:People%27s_Action_Party_of_Singapore_logo.svg
+
 Maintainer
 ----------
 
