@@ -22,12 +22,12 @@
 
 {
     'name': 'Letter Management',
-    'version': '0.2',
+    'version': '1.2',
     'author': 'Savoir-faire Linux',
     'maintainer': 'Savoir-faire Linux',
     'website': 'http://www.savoirfairelinux.com',
     'license': 'AGPL-3',
-    'category': 'Social Network',
+    'category': 'Customer Relationship Management',
     'summary': 'Track letters, parcels, registered documents',
     'depends': ['mail'],
     'external_dependencies': {
