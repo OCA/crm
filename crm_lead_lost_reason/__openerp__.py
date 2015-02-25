@@ -27,15 +27,6 @@
  'complexity': 'normal',
  'images': [],
  'website': "http://www.camptocamp.com",
- 'description': """
-Opportunity Lost Reason
-=======================
-
-When an opportunity is lost, a reason must be given,
-it is chosen from a configured list.
-(strongly inspired from sale_cancel_reason addon)
-
-""",
  'depends': ['crm',
              ],
  'demo': [],
