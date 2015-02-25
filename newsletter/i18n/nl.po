@@ -65,6 +65,11 @@ msgstr "${object.subject}"
 
 #. module: newsletter
 #: view:newsletter.newsletter:0
+msgid "Test newsletter"
+msgstr "Test newsletter"
+
+#. module: newsletter
+#: view:newsletter.newsletter:0
 msgid "Preview"
 msgstr "Voorbeeld"
 

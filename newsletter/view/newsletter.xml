@@ -10,7 +10,7 @@
               <header>
                   <field name="may_send" invisible="1" />
                   <button name="action_show_recipient_objects" type="object" string="Show recipient objects" />
-                  <button type="object" name="action_preview" string="Preview" states="draft" class="oe_highlight" />
+                  <button type="object" name="action_preview" string="Test newsletter" states="draft" class="oe_highlight" />
                   <button type="object" name="action_preview" string="Preview" states="testing,sending,sent" />
                   <button type="object" name="action_send" string="Send" groups="newsletter.group_newsletter_sender" attrs="{'invisible': ['|', ('may_send','=',False), ('state', '!=', 'testing')]}" class="oe_highlight"/>
                   <field name="state" widget="statusbar" />
