@@ -56,8 +56,7 @@ class res_letter(orm.Model):
             'letter.class', 'Class', help="Classification of Document."),
         'date': fields.datetime('Letter Date', help='The letter\'s date'),
         'snd_rec_date': fields.datetime(
-            'Sent / Received Date', required=True,
-            help='Created Date of Letter Logging.'),
+            'Sent / Received Date', help='Created Date of Letter Logging.'),
         'recipient_partner_id': fields.many2one(
             'res.partner', string='Recipient', track_visibility='onchange'),
         'sender_partner_id': fields.many2one(
@@ -131,7 +130,13 @@ class res_letter(orm.Model):
         """Put the state of the letter into sent"""
         for letter in self.browse(cr, uid, ids, context=context):
             self.write(
-                cr, uid, [letter.id], {'state': 'sent'}, context=context)
+                cr, uid, [letter.id],
+                {
+                    'state': 'sent',
+                    'snd_rec_date': letter.snd_rec_date or
+                    fields.datetime.now()
+                },
+                context=context)
         return True
 
     def action_rec_ret(self, cr, uid, ids, context=None):
