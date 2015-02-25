@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="0">
+        <record id="view_crm_lead_lost" model="ir.ui.view">
+            <field name="name">Reason for the lost</field>
+            <field name="model">crm.lead.lost</field>
+            <field name="arch" type="xml">
+             <form string="Reason for the lost" version="7.0">
+                <p class="oe_grey">
+                    Choose the reason for the lost of the
+                    lead.
+                </p>
+                <group>
+                    <field name="reason_id" widget="selection"/>
+                </group>
+                <footer>
+                    <button name="confirm_lost"
+                        string="Confirm" type="object"
+                        class="oe_highlight"/>
+                    or
+                    <button string="Cancel" class="oe_link"
+                        special="cancel" />
+                </footer>
+            </form>
+            </field>
+        </record>
+
+        <record id="action_crm_lead_lost" model="ir.actions.act_window">
+            <field name="name">Reason for the lost</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">crm.lead.lost</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_crm_lead_lost"/>
+            <field name="target">new</field>
+        </record>
+    </data>
+</openerp>

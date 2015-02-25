@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+        <record id="lost_reason_other_competitor" model="crm.lead.lost.reason">
+            <field name="name">Other competitor</field>
+        </record>
+        <record id="lost_reason_price" model="crm.lead.lost.reason">
+            <field name="name">Price / No budget</field>
+        </record>
+        <record id="lost_reason_not_match" model="crm.lead.lost.reason">
+            <field name="name">Can not match the requirement</field>
+        </record>
+        <record id="lost_reason_cancelled" model="crm.lead.lost.reason">
+            <field name="name">Project cancelled</field>
+        </record>
+        <record id="lost_reason_no_news" model="crm.lead.lost.reason">
+            <field name="name">No news from the prospect</field>
+        </record>
+        <record id="lost_reason_other" model="crm.lead.lost.reason">
+            <field name="name">Other reason</field>
+        </record>
+    </data>
+</openerp>
