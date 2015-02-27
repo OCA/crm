@@ -3,7 +3,7 @@ CRM Lead Sale Link
 
 This module extends the functionality of crm to deliver two contexted buttons into the opportunity form view :
     the first opens all quotes linked to this opportunity
-    the second opens all sales order linked to this opportunity
+    the second opens all sales orders linked to this opportunity
 
 Installation
 ============
@@ -22,7 +22,7 @@ To use this module, you need to :
 - create a lead
 - transform it into an opportunity
 - create a quote from this opportunity by using the button
-- you should get back and keep link beetween the models
+- you should get back and keep link between the models
 
 Known issues / Roadmap
 ======================
@@ -39,10 +39,6 @@ Contributors
 David DUFRESNE <david.dufresne@savoirfairelinux.com>
 Jordi RIERA <jordi.riera@savoirfairelinux.com>
 Bruno JOLIVEAU <bruno.joliveau@savoirfairelinux.com>
-
-+Icon
-+----
-+* http://en.wikipedia.org/wiki/File:People%27s_Action_Party_of_Singapore_logo.svg
 
 Maintainer
 ----------
