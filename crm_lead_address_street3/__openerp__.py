@@ -21,7 +21,7 @@
 {
     'name': 'Street3 in lead addresses',
     'version': '0.1',
-    'author': 'Camptocamp',
+    'author': "Camptocamp,Odoo Community Association (OCA)",
     'maintainer': 'Camptocamp',
     'category': 'Customer Relationship Management',
     'complexity': 'easy',

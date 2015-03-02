@@ -23,7 +23,7 @@
 {
     'name': 'CRM Lead Sale Link',
     'version': '1.0',
-    'author': 'Savoir-faire Linux',
+    'author': "Savoir-faire Linux,Odoo Community Association (OCA)",
     'license': 'AGPL-3',
     'category': 'Others',
     'summary': 'CRM Lead Sale Link',

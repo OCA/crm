@@ -26,7 +26,7 @@
 Each time a lead/opportunity switches from a stage to on other, the Current stage date is updated.
 You can make "group by" and search on the Current stage date field 
 """,
- 'author': 'Camptocamp',
+ 'author': "Camptocamp,Odoo Community Association (OCA)",
  'website': 'http://www.camptocamp.com',
  'depends': ['crm'],
  'data': [

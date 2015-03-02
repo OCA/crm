@@ -83,7 +83,7 @@ newsletter manager
 Note that the groups are listed in order of inheritance, so a newsletter sender
 always also is an editor and a manager is a sender as well as an editor.
     """,
-    'author': 'Therp BV',
+    'author': "Therp BV,Odoo Community Association (OCA)",
     'website': 'http://www.therp.nl',
     "category": "Newsletter",
     "depends": [

@@ -21,7 +21,7 @@
 
 {'name': 'Opportunity Lost Reason',
  'version': '1.0',
- 'author': 'Camptocamp',
+ 'author': "Camptocamp,Odoo Community Association (OCA)",
  'category': 'Customer Relationship Management',
  'license': 'AGPL-3',
  'complexity': 'normal',
