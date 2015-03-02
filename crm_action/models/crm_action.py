@@ -41,7 +41,7 @@ class CrmAction(models.Model):
 
     date = fields.Date(
         'Date', required=True,
-        default=lambda self: fields.Date.context_today(self))
+        default=fields.Date.context_today)
 
     user_id = fields.Many2one(
         'res.users', string='User', required=True,
@@ -49,7 +49,7 @@ class CrmAction(models.Model):
 
     def search_action_types(self):
         return self.env['crm.action.type'].search(
-            [('is_active', '=', True)]).sorted(lambda a: a.priority)
+            [('is_active', '=', True)], order='priority')
 
     def default_action_type(self):
         action_types = self.search_action_types()
