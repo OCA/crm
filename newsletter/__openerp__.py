@@ -26,7 +26,7 @@
     'description': """
     This addon provides the UI and mailing mechanisms for newsletters
     """,
-    'author': 'Therp BV',
+    'author': "Therp BV,Odoo Community Association (OCA)",
     'website': 'http://www.therp.nl',
     "category": "Newsletter",
     "depends": [
