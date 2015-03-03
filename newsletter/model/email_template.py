@@ -36,8 +36,9 @@ class email_template(Model):
         finally:
             mako_template_env.autoescape = True
 
-        if (model == 'newsletter.newsletter' and res_id
-                and context.get('newsletter_res_id')):
+        if (model == 'newsletter.newsletter' and
+                res_id and
+                context.get('newsletter_res_id')):
 
             newsletter = self.pool.get(model).browse(cr, uid, res_id,
                                                      context=context)
