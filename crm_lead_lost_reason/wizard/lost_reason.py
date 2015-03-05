@@ -28,10 +28,18 @@ class CrmLeadLost(models.TransientModel):
     _name = 'crm.lead.lost'
     _description = __doc__
 
+    def _default_reason(self):
+        active_id = self._context.get('active_id')
+        lead_model = self._context.get('active_model') == 'crm.lead'
+        if active_id and lead_model:
+            lead = self.env['crm.lead'].browse(active_id)
+            return lead.lost_reason_id.id
+
     reason_id = fields.Many2one(
         'crm.lead.lost.reason',
         string='Reason',
-        required=True)
+        required=True,
+        default=_default_reason)
 
     @api.one
     def confirm_lost(self):
