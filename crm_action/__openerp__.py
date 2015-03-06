@@ -22,7 +22,7 @@
 
 {
     'name': 'CRM Action',
-    'version': '1.0',
+    'version': '1.1',
     'author': 'Savoir-faire Linux',
     'license': 'AGPL-3',
     'category': 'Others',
