@@ -30,8 +30,8 @@ class CrmLeadLost(models.TransientModel):
 
     def _default_reason(self):
         active_id = self._context.get('active_id')
-        lead_model = self._context.get('active_model') == 'crm.lead'
-        if active_id and lead_model:
+        active_model = self._context.get('active_model')
+        if active_id and active_model == 'crm.lead':
             lead = self.env['crm.lead'].browse(active_id)
             return lead.lost_reason_id.id
 
