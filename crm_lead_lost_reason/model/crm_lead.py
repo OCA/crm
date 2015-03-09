@@ -38,6 +38,8 @@ class CrmLead(models.Model):
         If there is no lost reason, it indicates you to pass by form
         to provide a lost reason. It's the choice of the simplicity to
         avoid to struggle with kanban javascript code.
+        Erases too the lost reason if the lead is passed from lost to
+        another stage.
         """
         if 'stage_id' in vals:
             new_stage = self.env['crm.case.stage'].browse(vals['stage_id'])
@@ -47,6 +49,8 @@ class CrmLead(models.Model):
                     raise exceptions.Warning('Please pass by the red button '
                                              '"Mark Lost" on the form '
                                              'to provide a lost reason.')
+                if lead.stage_id == lost_stage and new_stage != lost_stage:
+                    lead.lost_reason_id = False
         result = super(CrmLead, self).write(vals)
         return result
 
