@@ -2,7 +2,7 @@ CRM Action
 ==========
 
 This module was written to extend crm features.
-It delivers new object named "Actions" to follow history around leads and opportunites.
+It delivers new object named "Actions" to follow history around leads and opportunities.
 This new object depends on ACL groups you give to users.
 
 Installation
@@ -23,7 +23,7 @@ Usage
 To use this module, you need to :
 - create a lead or an opportunity
 - create a new action by using the button
-- you should get back and keep link beetween the models
+- you should get back and keep link between the models
 - you can overview all actions for any lead or opportunity with the new menu entry
 
 Known issues / Roadmap
