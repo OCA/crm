@@ -19,11 +19,20 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ###############################################################################
+from openerp.osv import fields, orm
 
-from . import letter_class
-from . import letter_folder
-from . import res_letter
-from . import letter_type
-from . import letter_reassignment
-from . import letter_history
-from . import letter_channel
+
+class letter_reassignment(orm.Model):
+    """A line to forward a letter with a comment"""
+    _name = 'letter.reassignment'
+    _description = 'Reassignment line'
+    _columns = {
+        'name': fields.many2one(
+            'res.users', string='Name', help='User to forward letter to.'),
+        'comment': fields.text(
+            'Comment', help='Comment for user explaining forward.'),
+        'letter_id': fields.many2one(
+            'res.letter', string='Letter', help='Letter in question.'),
+    }
+
+# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
