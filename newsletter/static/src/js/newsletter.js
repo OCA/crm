@@ -1,4 +1,4 @@
-# -*- encoding: utf-8 -*-
+/* -*- encoding: utf-8 -*-
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
@@ -18,8 +18,20 @@
 #    You should have received a copy of the GNU Affero General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
-##############################################################################
-import newsletter_newsletter
-import newsletter_topic
-import newsletter_type
-import email_template
+############################################################################*/
+
+openerp.newsletter = function(instance)
+{
+    instance.web.form.widgets.add('text_email_html',
+            'openerp.newsletter.FieldEmailHTML');
+    openerp.newsletter.FieldEmailHTML = instance.web_ckeditor4.FieldCKEditor4.extend({
+        init: function()
+        {
+            this.ckeditor_config.removePlugins+=',scayt,preview,a11yhelp,about,wsc';
+            _.extend(this.ckeditor_config, {
+                disableNativeSpellChecker: false,
+            });
+            return this._super.apply(this, arguments);
+        }
+    });
+}

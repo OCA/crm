@@ -19,26 +19,32 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-
-from openerp.osv.orm import Model
-from openerp.osv import fields
-from newsletter_type import newsletter_type
-from newsletter_newsletter import _get_plaintext
-
-
-class newsletter_topic(Model):
-    _name = 'newsletter.topic'
-
-    _columns = {
-            'newsletter_id': fields.many2one('newsletter.newsletter',
-                'Newsletter'),
-            'title': fields.char('Title', size=256),
-            'text_plain': fields.function(_get_plaintext, type='text',
-                string='Text (plain)', arg='text_html', store=True),
-            'text_html': fields.text('Text (html)'),
-            'plaintext_mode': fields.related(
-                'newsletter_id', 'type_id', 'plaintext_mode',
-                type='selection',
-                selection=newsletter_type._plaintext_mode_selection,
-                string='Plaintext mode', readonly=True),
-            }
+{
+    'name': 'Newsletters',
+    'version': '2.0',
+    'author': 'Therp BV,Odoo Community Association (OCA)',
+    'website': 'http://www.therp.nl',
+    "category": "Newsletter",
+    'summary': 'Send newsletters to customers, employees or other entities',
+    "depends": [
+        'email_template',
+        'web_ckeditor4',
+        'web',
+    ],
+    'data': [
+        "view/qweb.xml",
+        'data/ir_module_cateogry.xml',
+        'security/res_groups.xml',
+        'security/ir.model.access.csv',
+        'data/email_template.xml',
+        'data/newsletter_type.xml',
+        'view/newsletter.xml',
+        'view/menu.xml',
+        'view/email_template_preview_view.xml',
+        'view/newsletter_type.xml',
+        ],
+    'installable': True,
+    'auto_install': False,
+    'application': True,
+    'license': 'AGPL-3',
+}

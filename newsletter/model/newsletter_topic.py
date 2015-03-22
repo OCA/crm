@@ -1,4 +1,4 @@
-/* -*- encoding: utf-8 -*-
+# -*- encoding: utf-8 -*-
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
@@ -18,20 +18,16 @@
 #    You should have received a copy of the GNU Affero General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
-############################################################################*/
+##############################################################################
+from openerp import models, fields
 
-openerp.newsletter = function(openerp)
-{
-    openerp.web.form.widgets.add('text_email_html',
-            'openerp.newsletter.FieldEmailHTML');
-    openerp.newsletter.FieldEmailHTML = openerp.web_ckeditor4.FieldCKEditor4.extend({
-        init: function()
-        {
-            this.ckeditor_config.removePlugins+=',scayt,preview,a11yhelp,about,wsc';
-            _.extend(this.ckeditor_config, {
-                disableNativeSpellChecker: false,
-            });
-            return this._super.apply(this, arguments);
-        }
-    });
-}
+
+class newsletter_topic(models.Model):
+    _name = 'newsletter.topic'
+    _description = 'Newsletter topic'
+    _rec_name = 'title'
+
+    newsletter_id = fields.Many2one(
+        'newsletter.newsletter', 'Newsletter')
+    title = fields.Char('Title')
+    text_html = fields.Text('Text')

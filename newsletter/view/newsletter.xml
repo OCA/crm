@@ -10,32 +10,27 @@
               <header>
                   <field name="may_send" invisible="1" />
                   <button name="action_show_recipient_objects" type="object" string="Show recipient objects" />
-                  <button type="object" name="action_preview" string="Preview" states="draft" class="oe_highlight" />
+                  <button type="object" name="action_preview" string="Test newsletter" states="draft" class="oe_highlight" />
                   <button type="object" name="action_preview" string="Preview" states="testing,sending,sent" />
                   <button type="object" name="action_send" string="Send" groups="newsletter.group_newsletter_sender" attrs="{'invisible': ['|', ('may_send','=',False), ('state', '!=', 'testing')]}" class="oe_highlight"/>
                   <field name="state" widget="statusbar" />
               </header>
               <sheet>
                   <group>
-                      <field name="plaintext_mode" invisible="1" />
-                      <field name="type_id" on_change="on_change_type_id(type_id)" attrs="{'readonly': [('state', 'not in', ['testing', 'draft'])]}" />
+                      <field name="type_id" attrs="{'readonly': [('state', 'not in', ['testing', 'draft'])]}" />
                       <field name="subject" attrs="{'readonly': [('state', 'not in', ['testing', 'draft'])]}"/>
-                      <field name="text_intro_plain" attrs="{'invisible': ['|', ('type_id','=',False), ('plaintext_mode','in',['from_html'])], 'readonly': [('state', 'not in', ['testing', 'draft'])]}" />
                       <field name="text_intro_html" widget="text_email_html" attrs="{'readonly': [('state', 'not in', ['testing', 'draft'])]}" />
-                      <field name="topic_ids" context="{'plaintext_mode': plaintext_mode}" attrs="{'readonly': [('state', 'not in', ['testing', 'draft'])]}">
+                      <field name="topic_ids" attrs="{'readonly': [('state', 'not in', ['testing', 'draft'])]}">
                         <form col="2" version="7.0">
-                            <sheet>
-                                <field name="plaintext_mode" invisible="1" />
+                            <group>
                                 <field name="title" />
-                                <field name="text_plain" attrs="{'invisible': [('plaintext_mode', '=', 'from_html')]}" />
                                 <field name="text_html" widget="text_email_html" />
-                            </sheet>
+                            </group>
                         </form>
                         <tree>
                             <field name="title" />
                         </tree>
                       </field>
-                      <field name="text_outro_plain" attrs="{'invisible': ['|', ('type_id','=',False), ('plaintext_mode','in',['from_html'])], 'readonly': [('state', 'not in', ['testing', 'draft'])]}" />
                       <field name="text_outro_html" widget="text_email_html" attrs="{'readonly': [('state', 'not in', ['testing', 'draft'])]}" />
                   </group>
               </sheet>

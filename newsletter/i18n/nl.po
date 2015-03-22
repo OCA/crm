@@ -22,8 +22,8 @@ msgstr "Titel"
 
 #. module: newsletter
 #: field:newsletter.topic,text_html:0
-msgid "Text (html)"
-msgstr "Tekst (html)"
+msgid "Text"
+msgstr "Tekst"
 
 #. module: newsletter
 #: selection:newsletter.newsletter,plaintext_mode:0
@@ -34,8 +34,8 @@ msgstr "handmatig"
 
 #. module: newsletter
 #: selection:newsletter.newsletter,state:0
-msgid "testing"
-msgstr "testen"
+msgid "Testing"
+msgstr "Testen"
 
 #. module: newsletter
 #: view:newsletter.newsletter:0
@@ -65,6 +65,11 @@ msgstr "${object.subject}"
 
 #. module: newsletter
 #: view:newsletter.newsletter:0
+msgid "Test newsletter"
+msgstr "Nieuwsbrief testen"
+
+#. module: newsletter
+#: view:newsletter.newsletter:0
 msgid "Preview"
 msgstr "Voorbeeld"
 
@@ -80,8 +85,8 @@ msgstr "newsletter.topic"
 
 #. module: newsletter
 #: field:newsletter.newsletter,text_outro_html:0
-msgid "Outro (HTML)"
-msgstr "Afsluiting (HTML)"
+msgid "Outro"
+msgstr "Afsluiting"
 
 #. module: newsletter
 #: help:newsletter.type,group_ids:0
@@ -110,8 +115,13 @@ msgstr "Email-sjablonen"
 
 #. module: newsletter
 #: selection:newsletter.newsletter,state:0
-msgid "draft"
-msgstr "concept"
+msgid "Sending"
+msgstr "Wordt verzonden"
+
+#. module: newsletter
+#: selection:newsletter.newsletter,state:0
+msgid "Draft"
+msgstr "Concept"
 
 #. module: newsletter
 #: field:newsletter.type,group_ids:0
@@ -125,8 +135,8 @@ msgstr "Onderwerp"
 
 #. module: newsletter
 #: selection:newsletter.newsletter,state:0
-msgid "sent"
-msgstr "Verzend"
+msgid "Sent"
+msgstr "Verzonden"
 
 #. module: newsletter
 #: field:newsletter.type,name:0
@@ -150,8 +160,8 @@ msgstr "Inleiding (plain)"
 
 #. module: newsletter
 #: field:newsletter.newsletter,text_intro_html:0
-msgid "Intro (HTML)"
-msgstr "Inleiding (HTML)"
+msgid "Intro"
+msgstr "Inleiding"
 
 #. module: newsletter
 #: model:ir.model,name:newsletter.model_newsletter_newsletter

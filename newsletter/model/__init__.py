@@ -19,5 +19,9 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-
-import model
+from . import (
+    newsletter_newsletter,
+    newsletter_topic,
+    newsletter_type,
+    email_template,
+)
