@@ -23,7 +23,7 @@
 {
     "name": "Sequential Code for Claims",
     "version": "1.0",
-    "author": "Avanzosc S.L.",
+    "author": "Avanzosc S.L., OdooMRP team, Pedro Baeza",
     "website": "http://www.avanzosc.es",
     "contributors": [
         "Pedro M. Baeza <pedro.baeza@serviciosbaeza.com",
