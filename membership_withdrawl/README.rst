@@ -42,6 +42,12 @@ None
 Credits
 =======
 
+Icon
+----
+
+* Original source : https://thenounproject.com/term/add-group/79375 by Mundo (https://thenounproject.com/DMundo), 2014
+* Modified by Antonio Espinosa using GIMP image editor, 2015
+
 Contributors
 ------------
 
