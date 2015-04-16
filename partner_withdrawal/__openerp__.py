@@ -22,7 +22,7 @@
 ##############################################################################
 
 {
-    'name': "Membership withdrawal",
+    'name': "Partner membership withdrawal",
     'category': 'Association',
     'version': '1.0',
     'depends': [
