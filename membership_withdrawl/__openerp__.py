@@ -26,7 +26,7 @@
     'category': 'Association',
     'version': '1.0',
     'depends': [
-        'membership',
+        'base',
     ],
     'data': [
         'views/res_partner_view.xml',

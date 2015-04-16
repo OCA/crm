@@ -34,13 +34,6 @@ class ResPartner(models.Model):
         string="Withdrawal reason",
         comodel_name="membership.withdrawal_reason")
 
-    @api.onchange('membership_state', 'free_member')
-    def onchange_membership_signup(self):
-        if (not self.membership_signup and
-                (self.free_member or
-                 self.membership_state in ('free', 'paid'))):
-            self.membership_signup = fields.Date.today()
-
     @api.onchange('membership_withdrawal')
     def onchange_membership_withdrawal_reason(self):
         if not self.membership_withdrawal:
