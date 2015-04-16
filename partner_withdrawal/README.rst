@@ -18,8 +18,8 @@ To install this module, go to Settings > Local Modules and install it as usual.
 Configuration
 =============
 
-Go to Association > Configuration > Member withdrawal reason, to configure
-all available reasons you want
+Go to Sales > Configuration > Address Book > Member withdrawal reason,
+to configure all available reasons you want
 
 
 Usage
