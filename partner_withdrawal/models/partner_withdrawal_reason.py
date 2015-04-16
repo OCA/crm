@@ -25,8 +25,8 @@
 from openerp import models, fields
 
 
-class MembershipWithdrawalReason(models.Model):
-    _name = 'membership.withdrawal_reason'
-    _description = 'Membership withdrawal reason'
+class PartnerWithdrawalReason(models.Model):
+    _name = 'partner.withdrawal_reason'
+    _description = 'Partner membership withdrawal reason'
 
     name = fields.Char(string="Reason", translate=True, required=True)

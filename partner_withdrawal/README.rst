@@ -1,10 +1,10 @@
 .. image:: https://img.shields.io/badge/licence-AGPL--3-blue.svg
     :alt: License
 
-Membership withdrawal
-=====================
+Partner Membership withdrawal
+=============================
 
-This module was written to extend the functionality of membership to support
+This module was written to extend the functionality of partner and support
 tracking of members signup and withdrawal. Also, allows to select a withdrawal
 reason from a configurated list of reasons
 
@@ -25,12 +25,9 @@ to configure all available reasons you want
 Usage
 =====
 
-When a member signs up because changes its Membership State to 'Free Member'
-or 'Paid Member' and its Signup date is empty, then is automatically filled
-with today date.
-
-User has to set withdrawal date and select a withdrawal reason manually. These
-fields are not related with Membership Lines or Membership State
+User has to set signup date and withdrawal date (and optionally select a
+withdrawal reason) manually. These fields are not related with
+Membership Lines or Membership State of Membership addon and don't depends on it.
 
 
 Known issues / Roadmap

@@ -30,7 +30,7 @@
     ],
     'data': [
         'views/res_partner_view.xml',
-        'views/membership_withdrawal_reason_view.xml',
+        'views/partner_withdrawal_reason_view.xml',
         'security/ir.model.access.csv',
     ],
     'author': 'Antiun Ingeniería S.L.',

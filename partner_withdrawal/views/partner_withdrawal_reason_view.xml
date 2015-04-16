@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+<record id="partner_withdrawal_reason_tree" model="ir.ui.view">
+    <field name="name">Partner Membership Withdrawal Reason tree</field>
+    <field name="model">partner.withdrawal_reason</field>
+    <field name="arch" type="xml">
+        <tree string="Partner membership withdrawal reasons" editable="bottom">
+            <field name="name"/>
+        </tree>
+    </field>
+</record>
+
+<record id="partner_withdrawal_reason_action" model="ir.actions.act_window">
+    <field name="name">Partner Membership Withdrawal Reasons</field>
+    <field name="res_model">partner.withdrawal_reason</field>
+    <field name="view_type">form</field>
+    <field name="view_mode">tree</field>
+</record>
+
+<menuitem action="partner_withdrawal_reason_action"
+          id="partner_withdrawal_reason_menu"
+          name="Partner Membership Withdrawal Reasons"
+          parent="base.menu_config_address_book"
+          sequence="40"/>
+
+</data>
+</openerp>

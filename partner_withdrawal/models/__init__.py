@@ -22,5 +22,5 @@
 #
 ##############################################################################
 
-from . import membership_withdrawal_reason
+from . import partner_withdrawal_reason
 from . import res_partner

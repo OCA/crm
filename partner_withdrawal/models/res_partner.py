@@ -32,7 +32,7 @@ class ResPartner(models.Model):
     membership_withdrawal = fields.Date(string="Withdrawal date")
     membership_withdrawal_reason = fields.Many2one(
         string="Withdrawal reason",
-        comodel_name="membership.withdrawal_reason")
+        comodel_name="partner.withdrawal_reason")
 
     @api.onchange('membership_withdrawal')
     def onchange_membership_withdrawal_reason(self):
