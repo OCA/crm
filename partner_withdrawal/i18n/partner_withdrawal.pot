@@ -18,71 +18,71 @@ msgstr ""
 #. module: partner_withdrawal
 #: field:partner.withdrawal_reason,create_uid:0
 msgid "Created by"
-msgstr "Creado por"
+msgstr ""
 
 #. module: partner_withdrawal
 #: field:partner.withdrawal_reason,create_date:0
 msgid "Created on"
-msgstr "Creado en"
+msgstr ""
 
 #. module: partner_withdrawal
 #: field:partner.withdrawal_reason,id:0
 msgid "ID"
-msgstr "ID"
+msgstr ""
 
 #. module: partner_withdrawal
 #: field:partner.withdrawal_reason,write_uid:0
 msgid "Last Updated by"
-msgstr "Última actualización por"
+msgstr ""
 
 #. module: partner_withdrawal
 #: field:partner.withdrawal_reason,write_date:0
 msgid "Last Updated on"
-msgstr "Última actualización en"
+msgstr ""
 
 #. module: partner_withdrawal
 #: model:ir.model,name:partner_withdrawal.model_membership_withdrawal_reason
 msgid "Membership withdrawal reason"
-msgstr "Motivo de baja de un miembro"
+msgstr ""
 
 #. module: partner_withdrawal
 #: model:ir.model,name:partner_withdrawal.model_res_partner
 msgid "Partner"
-msgstr "Empresa"
+msgstr ""
 
 #. module: partner_withdrawal
 #: model:ir.actions.act_window,name:partner_withdrawal.partner_withdrawal_reason_action
 #: model:ir.ui.menu,name:partner_withdrawal.partner_withdrawal_reason_menu
 msgid "Partner Membership Withdrawal Reasons"
-msgstr "Motivos de baja de miembros"
+msgstr ""
 
 #. module: partner_withdrawal
 #: model:ir.model,name:partner_withdrawal.model_partner_withdrawal_reason
 msgid "Partner membership withdrawal reason"
-msgstr "Motivo de baja del miembro"
+msgstr ""
 
 #. module: partner_withdrawal
 #: view:partner.withdrawal_reason:partner_withdrawal.partner_withdrawal_reason_tree
 msgid "Partner membership withdrawal reasons"
-msgstr "Motivos de baja de miembros"
+msgstr ""
 
 #. module: partner_withdrawal
 #: field:partner.withdrawal_reason,name:0
 msgid "Reason"
-msgstr "Motivo"
+msgstr ""
 
 #. module: partner_withdrawal
 #: field:res.partner,membership_signup:0
 msgid "Signup date"
-msgstr "Fecha de alta"
+msgstr ""
 
 #. module: partner_withdrawal
 #: field:res.partner,membership_withdrawal:0
 msgid "Withdrawal date"
-msgstr "Fecha de baja"
+msgstr ""
 
 #. module: partner_withdrawal
 #: field:res.partner,membership_withdrawal_reason:0
 msgid "Withdrawal reason"
-msgstr "Motivo de la baja"
+msgstr ""
 
