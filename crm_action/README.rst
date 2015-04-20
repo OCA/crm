@@ -33,7 +33,6 @@ Credits
 =======
 
 Module developed and tested with Odoo version 8.0
-For questions, please contact our support services <support@savoirfairelinux.com>
 
 Contributors
 ------------
