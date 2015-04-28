@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+<record id="view_partner_form" model="ir.ui.view">
+    <field name="name">Add Membership signup and withdrawl dates</field>
+    <field name="model">res.partner</field>
+    <field name="inherit_id" ref="base.view_partner_form"/>
+    <field name="arch" type="xml">
+        <field name="website" position="after">
+            <field name="membership_signup"/>
+            <field name="membership_withdrawal"/>
+            <field name="membership_withdrawal_reason"
+                   attrs="{'invisible':[('membership_withdrawal','=',False)]}"
+                   options='{"no_open": True}'/>
+        </field>
+    </field>
+</record>
+
+</data>
+</openerp>
