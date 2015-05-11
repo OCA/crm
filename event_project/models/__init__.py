@@ -23,5 +23,5 @@
 #
 ##############################################################################
 
-import project_task
-import event_event
+from . import project_task
+from . import event_event
