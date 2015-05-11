@@ -24,7 +24,6 @@
 ##############################################################################
 
 from openerp import models, fields, api
-from datetime import datetime, timedelta
 
 
 class EventEvent(models.Model):
@@ -37,25 +36,6 @@ class EventEvent(models.Model):
         comodel_name='project.project', string='Related project',
         readonly=True)
 
-    def reorganize_project(self, project, event, date_begin=None):
-        project_task_obj = self.env['project.task']
-        project.write({'name': event.name})
-        obj_ids = project_task_obj.search([('project_id', '=', project.id)])
-        for obj_id in obj_ids:
-            project_task = project_task_obj.browse(int(obj_id))
-            if date_begin:
-                if type(date_begin) is str:
-                    date_begin = datetime.strptime(
-                        date_begin, "%Y-%m-%d %H:%M:%S")
-            else:
-                date_begin = datetime.strptime(
-                    event.date_begin, "%Y-%m-%d %H:%M:%S")
-            if project_task.previous_day:
-                pdays = int(project_task.previous_day) * -1
-                date_start = (date_begin + timedelta(days=pdays)).strftime(
-                    "%Y-%m-%d %H:%M:%S")
-                project_task.write({'date_start': str(date_start)})
-
     @api.model
     def create(self, vals):
         event = super(EventEvent, self).create(vals)
@@ -65,7 +45,7 @@ class EventEvent(models.Model):
             obj_ids = project_obj.search([])
             event.project_related = obj_ids[len(obj_ids) - 1]
             project = project_obj.browse(int(event.project_related))
-            self.reorganize_project(project, event)
+            project.reorganize_project(event)
         return event
 
     @api.one
@@ -97,7 +77,7 @@ class EventEvent(models.Model):
 
         if (date_begin or
                 ('project_related' in vals and vals['project_related'])):
-            self.reorganize_project(project_related, self, date_begin)
+            project_related.reorganize_project(self, date_begin=date_begin)
 
         if 'name' in vals and vals['name'] and project_related:
             project_related.write({'name': vals['name']})

@@ -8,8 +8,8 @@
       <field name="arch" type="xml">
 
         <field name="date_tz" position="after">
-            <field name="project_related"/>
-            <field name="project_template" attrs="{'readonly':[('project_related','!=',False)]}"/>
+            <field name="project_related" attrs="{'invisible':[('project_template','=',False)]}"/>
+            <field name="project_template" attrs="{'readonly':[('project_related','!=',False)],'invisible':[('project_related','!=',False)]}"/>
         </field>
 
       </field>
