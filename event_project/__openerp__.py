@@ -30,16 +30,6 @@
     "website": "http://www.antiun.com",
     "license": "AGPL-3",
     "category": "Event Management",
-    "description": """
-Event project
-=============
-This module allows you to create retro planning for managing your events.\n\n
--First step, you create a project template.\n
--Second step, you indicate in to task of template the
-previous days to begin task.\n
--And Last step, you create a new event and select project template.\n\n
-Automatically, will be create a new related project with event.
-    """,
     "depends": ['base', 'event', 'project'],
     'data': [
         "views/event_event_view.xml",
