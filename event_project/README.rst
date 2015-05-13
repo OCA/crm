@@ -1,22 +1,12 @@
 .. image:: https://img.shields.io/badge/licence-AGPL--3-blue.svg
     :alt: License: AGPL-3
 
-Module name
-===========
+Event project
+=============
 
-This module allows you to create events with assigned a project.
-You can make project template and assign this template to new event,
-this, create and calculate the project tasks dates.
-And if the event date start modify, recalculate tasks dates.
+This module allows you to assign a project template to an event, creating the corresponding project for the event that ends on the event start date, and plan the project tasks backwards according a new field "Event anticipation days".
 
-
-Installation
-============
-
-To install this module, you need to:
-
-* event
-* project
+If the event date is changed, then all the pending tasks are retro-planned again according the new date."
 
 
 Usage
@@ -24,9 +14,9 @@ Usage
 
 To use this module, you need to:
 
--First step, you create a project template.
--Second step, you indicate in to task of template the previous days to begin task.
--And Last step, you create a new event and select project template.
+* First step, create a project template.
+* Second step, indicate in to task of template the previous days to begin task.
+* And Last step, create a new event and select project template.
 Automatically, will be create a new related project with event.
 
 
@@ -36,7 +26,6 @@ Credits
 Contributors
 ------------
 
-* Antiun Ingenieria S.L. (Madrid, Spain, http://www.antiun.com)
 * Endika Iglesias <endikaig@antiun.com>
 
 Maintainer

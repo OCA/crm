@@ -23,8 +23,8 @@
 #
 ##############################################################################
 
-from openerp import models
-from datetime import datetime, timedelta
+from openerp import models, fields
+from datetime import timedelta
 
 
 class ProjectProject(models.Model):
@@ -36,20 +36,10 @@ class ProjectProject(models.Model):
         obj_ids = project_task_obj.search([('project_id', '=', self.id)])
         for obj_id in obj_ids:
             project_task = project_task_obj.browse(int(obj_id))
-            if date_begin:
-                if type(date_begin) is str:
-                    date_begin = datetime.strptime(
-                        date_begin, "%Y-%m-%d %H:%M:%S")
-            else:
-                date_begin = datetime.strptime(
-                    event.date_begin, "%Y-%m-%d %H:%M:%S")
+            if not date_begin:
+                date_begin = fields.Datetime.from_string(event.date_begin)
 
-            if project_task.previous_day > 0:
-                pdays = int(project_task.previous_day) * -1
-                date_start = (date_begin + timedelta(days=pdays)).strftime(
-                    "%Y-%m-%d %H:%M:%S")
-                project_task.write({'date_start': str(date_start)})
-            else:
-                date_start = (date_begin).strftime(
-                    "%Y-%m-%d %H:%M:%S")
-                project_task.write({'date_start': str(date_start)})
+            date_start = fields.Datetime.to_string(
+                date_begin - timedelta(
+                    days=int(project_task.anticipation_days)))
+            project_task.write({'date_start': str(date_start)})

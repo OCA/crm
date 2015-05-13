@@ -8,7 +8,7 @@
       <field name="arch" type="xml">
 
         <field name="planned_hours" position="after">
-            <field name="previous_day"/>
+            <field name="anticipation_days"/>
         </field>
 
       </field>

@@ -29,5 +29,5 @@ from openerp import models, fields
 class ProjectTask(models.Model):
     _inherit = 'project.task'
 
-    previous_day = fields.Integer(
+    anticipation_days = fields.Integer(
         string='Previous day', help='Previous day to event date begin')

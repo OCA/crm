@@ -32,19 +32,18 @@ class EventEvent(models.Model):
     project_template = fields.Many2one(
         comodel_name='project.project', string='Template project',
         domain="[('state', '=', 'template')]")
-    project_related = fields.Many2one(
+    project = fields.Many2one(
         comodel_name='project.project', string='Related project',
         readonly=True)
 
     @api.model
     def create(self, vals):
         event = super(EventEvent, self).create(vals)
-        if (event.project_template and not event.project_related):
+        if (event.project_template and not event.project):
             project_obj = self.env['project.project']
-            event.project_template.duplicate_template()
-            obj_ids = project_obj.search([])
-            event.project_related = obj_ids[len(obj_ids) - 1]
-            project = project_obj.browse(int(event.project_related))
+            result = event.project_template.duplicate_template()
+            event.project = result['res_id']
+            project = project_obj.browse(int(event.project))
             project.reorganize_project(event)
         return event
 
@@ -52,34 +51,31 @@ class EventEvent(models.Model):
     def write(self, vals):
         project_obj = self.env['project.project']
         project_template = None
-        project_related = None
+        project = None
         date_begin = None
 
         if ((self.project_template or
-                ('project_template' in vals and vals['project_template'])) and
-                not self.project_related):
+                vals.get('project_template')) and
+                not self.project):
 
-            if 'project_template' in vals and vals['project_template']:
+            if vals.get('project_template'):
                 project_template = project_obj.browse(
                     int(vals['project_template']))
             else:
                 project_template = self.project_template
-            project_template.duplicate_template()
-
-            obj_ids = project_obj.search([])
-            project_related = obj_ids[len(obj_ids) - 1]
-            vals['project_related'] = project_related.id
+            result = project_template.duplicate_template()
+            project = project_obj.browse(int(result['res_id']))
+            vals['project'] = project.id
         else:
-            project_related = self.project_related
+            project = self.project
 
-        if 'date_begin' in vals and vals['date_begin']:
+        if vals.get('date_begin'):
             date_begin = vals['date_begin']
 
-        if (date_begin or
-                ('project_related' in vals and vals['project_related'])):
-            project_related.reorganize_project(self, date_begin=date_begin)
+        if date_begin or vals.get('project'):
+            project.reorganize_project(self, date_begin=date_begin)
 
-        if 'name' in vals and vals['name'] and project_related:
-            project_related.write({'name': vals['name']})
+        if vals.get('date_begin') and project:
+            project.write({'name': vals['name']})
 
         return super(EventEvent, self).write(vals)
