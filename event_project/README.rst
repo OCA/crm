@@ -1,7 +1,7 @@
 .. image:: https://img.shields.io/badge/licence-AGPL--3-blue.svg
     :alt: License: AGPL-3
 
-Event project
+Plan events through projects
 =============
 
 This module allows you to assign a project template to an event, creating the corresponding project for the event that ends on the event start date, and plan the project tasks backwards according a new field "Event anticipation days".
@@ -17,8 +17,7 @@ To use this module, you need to:
 * First step, create a project template.
 * Second step, indicate in to task of template the previous days to begin task.
 * And Last step, create a new event and select project template.
-Automatically, will be create a new related project with event.
-
+It will then create automatically a new project related with the event.
 
 Credits
 =======

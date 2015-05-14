@@ -30,16 +30,26 @@ from datetime import timedelta
 class ProjectProject(models.Model):
     _inherit = 'project.project'
 
-    def reorganize_project(self, event, date_begin=None):
+    def reorganize_project(self, event, date_begin=None, name=None):
         project_task_obj = self.env['project.task']
-        self.write({'name': event.name})
-        obj_ids = project_task_obj.search([('project_id', '=', self.id)])
-        for obj_id in obj_ids:
-            project_task = project_task_obj.browse(int(obj_id))
-            if not date_begin:
-                date_begin = fields.Datetime.from_string(event.date_begin)
-
+        project_task_ids = project_task_obj.search(
+            [('project_id', '=', self.id)])
+        if not date_begin:
+            date_begin = fields.Datetime.from_string(event.date_begin)
+        max_anticipation_days = 0
+        for project_task in project_task_ids:
             date_start = fields.Datetime.to_string(
                 date_begin - timedelta(
                     days=int(project_task.anticipation_days)))
             project_task.write({'date_start': str(date_start)})
+            if max_anticipation_days < int(project_task.anticipation_days):
+                max_anticipation_days = int(project_task.anticipation_days)
+        first_date_start = fields.Datetime.to_string(
+            date_begin - timedelta(
+                days=int(max_anticipation_days)))
+
+        vals = {'date': date_begin,
+                'date_start': first_date_start}
+        if name:
+            vals['name'] = name
+        self.write(vals)

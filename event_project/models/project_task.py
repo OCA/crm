@@ -30,4 +30,4 @@ class ProjectTask(models.Model):
     _inherit = 'project.task'
 
     anticipation_days = fields.Integer(
-        string='Previous day', help='Previous day to event date begin')
+        string='Event anticipation days', help='Event anticipation days')
