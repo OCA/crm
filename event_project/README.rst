@@ -2,7 +2,7 @@
     :alt: License: AGPL-3
 
 Plan events through projects
-=============
+============================
 
 This module allows you to assign a project template to an event, creating the corresponding project for the event that ends on the event start date, and plan the project tasks backwards according a new field "Event anticipation days".
 
