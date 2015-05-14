@@ -32,12 +32,10 @@ class ProjectProject(models.Model):
 
     def reorganize_project(self, event, date_begin=None, name=None):
         project_task_obj = self.env['project.task']
-        project_task_type_obj = self.env['project.task.type']
-        project_task_type_done = project_task_type_obj.browse(
-            self.env.ref('project.project_tt_deployment'))
+        project_task_type_done = self.env.ref('project.project_tt_deployment')
         project_task_ids = project_task_obj.search(
             [('project_id', '=', self.id),
-             ('stage_id', '!=', project_task_type_done[0].id.id)])
+             ('stage_id', '!=', project_task_type_done.id)])
         if not date_begin:
             date_begin = fields.Datetime.from_string(event.date_begin)
         max_anticipation_days = 0
