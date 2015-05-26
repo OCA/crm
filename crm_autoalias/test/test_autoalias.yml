@@ -1,0 +1,20 @@
+-
+  In order to test that the alias is created
+  I create a new lead
+-
+  !record {model: crm.lead, id: alias_test_lead}:
+    name: Autoalias Lead
+    type: lead
+-
+  Then the autoalias must be created
+-
+  !assert {model: crm.lead, id: alias_test_lead, string: the lead must have an alias}:
+    - email_alias != None
+    - email_alias_email != None
+-
+  Check if the alias is correctly generated
+-
+  !python {model: crm.lead}: |
+    lead = self.pool['crm.lead'].browse(cr, uid, ref("alias_test_lead"))
+    assert lead.email_alias.alias_name.endswith('-crm'), 'Alias Must End with CRM'
+    assert len(lead.email_alias.alias_name) == 36, 'Alias must have 36 characters, 32 from uuid and 4 from -crm'
