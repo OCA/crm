@@ -22,7 +22,7 @@
 ##############################################################################
 
 from openerp import models, fields, api
-from openerp.osv import osv
+from openerp.exceptions import Warning  # , RedirectWarning
 from openerp.tools.translate import _
 
 
@@ -41,18 +41,14 @@ class ProjectRecalculateWizard(models.TransientModel):
         res['project'] = self.env.context.get('active_id', False)
         project = self.env['project.project'].browse(res['project'])
         if not project.calculation_type:
-            raise osv.except_osv(_('Error!'), _("Cannot recalculate project "
-                                                "because your project don't "
-                                                "have calculation type."))
+            raise Warning(_('Cannot recalculate project because your project '
+                            'don\'t have calculation type.'))
         if project.calculation_type == 'date_begin' and not project.date_start:
-            raise osv.except_osv(_('Error!'), _("Cannot recalculate project "
-                                                "because your project don't "
-                                                "have date start."))
-
+            raise Warning(_('Cannot recalculate project because your project '
+                            'don\'t have date start.'))
         if project.calculation_type == 'date_end' and not project.date:
-            raise osv.except_osv(_('Error!'), _("Cannot recalculate project "
-                                                "because your project don't "
-                                                "have date end."))
+            raise Warning(_('Cannot recalculate project because your project '
+                            'don\'t have date end.'))
 
         res['project_date'] = (project.date_start
                                if project.calculation_type == 'date_begin'
@@ -62,10 +58,3 @@ class ProjectRecalculateWizard(models.TransientModel):
     @api.one
     def confirm_button(self):
         return self.project.project_recalculate()
-        return {'type': 'ir.actions.act_window',
-                'res_model': 'project.recalculate.wizard',
-                'view_mode': 'form',
-                'view_type': 'form',
-                'res_id': 'project.projet',
-                'views': [(False, 'form')],
-                'target': 'new'}
