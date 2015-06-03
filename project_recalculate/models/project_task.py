@@ -24,10 +24,6 @@
 from openerp import models, fields, api
 from datetime import timedelta
 
-import logging
-from pprint import pformat
-_logger = logging.getLogger(__name__)
-
 
 class ProjectTask(models.Model):
     _inherit = 'project.task'
