@@ -83,11 +83,11 @@ class ProjectTask(models.Model):
 
     @api.multi
     def write(self, vals):
-        if vals.get('date_start') or vals.get('date_end'):
-            date_start = (vals.get('date_start')
-                          if vals.get('date_start') else self.date_start)
-            date_end = (vals.get('date_end')
-                        if vals.get('date_end') else self.date_end)
+        date_start = (vals.get('date_start')
+                      if vals.get('date_start') else self.date_start)
+        date_end = (vals.get('date_end')
+                    if vals.get('date_end') else self.date_end)
+        if date_start and date_end:
             self.estimated_days = self.count_days_without_weekend(
                 fields.Datetime.from_string(date_start),
                 fields.Datetime.from_string(date_end))
@@ -95,8 +95,8 @@ class ProjectTask(models.Model):
             if calculation_type:
                 date_start = (self.project_id.date_start
                               if calculation_type == 'date_begin'
-                              else self.date_end)
-                date_end = (self.date_start
+                              else date_end)
+                date_end = (date_start
                             if calculation_type == 'date_begin'
                             else self.project_id.date)
                 self.from_days = self.count_days_without_weekend(

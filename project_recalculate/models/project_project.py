@@ -38,9 +38,13 @@ class ProjectProject(models.Model):
         project_task_obj = self.env['project.task']
         project_task_ids = project_task_obj.search(
             [('project_id', '=', self.id)])
-        date_start = fields.Datetime.from_string(self.date_start)
-        date_end = fields.Datetime.from_string(self.date)
-        if not project_task_ids:
+        date_start = (fields.Datetime.from_string(self.date_start)
+                      if self.date_start
+                      else fields.Datetime.from_string(self.date))
+        date_end = (fields.Datetime.from_string(self.date)
+                    if self.date
+                    else fields.Datetime.from_string(self.date_start))
+        if len(project_task_ids) > 0:
             min_date_start = fields.Datetime.from_string(
                 project_task_ids[0].date_start)
             date_start_from_days = project_task_ids[0].from_days
