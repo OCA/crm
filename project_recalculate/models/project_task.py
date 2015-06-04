@@ -102,7 +102,7 @@ class ProjectTask(models.Model):
                 self.from_days = self.count_days_without_weekend(
                     fields.Datetime.from_string(date_start),
                     fields.Datetime.from_string(date_end))
-        super(ProjectTask, self).write(vals)
+        return super(ProjectTask, self).write(vals)
 
     def task_recalculate(self):
         self.ensure_one()
