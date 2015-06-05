@@ -54,6 +54,12 @@ class ProjectProject(models.Model):
             date_start = fields.Datetime.from_string(
                 project_task_ids[0].date_start)
             for project_task in project_task_ids:
+                if not project_task.date_start and project_task.date_end:
+                    project_task.date_start = project_task.date_end
+                if not project_task.date_end and project_task.date_start:
+                    project_task.date_end = project_task.date_start
+                if not project_task.date_start or not project_task.date_end:
+                    continue
                 date_start = fields.Datetime.from_string(
                     project_task.date_start)
                 date_end = fields.Datetime.from_string(project_task.date_end)
