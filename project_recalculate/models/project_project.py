@@ -56,7 +56,10 @@ class ProjectProject(models.Model):
             for project_task in project_task_ids:
                 date_start = fields.Datetime.from_string(
                     project_task.date_start)
-                date_end = fields.Datetime.from_string(project_task.date_end)
+                date_end = (fields.Datetime.from_string(project_task.date_end)
+                            if project_task.date_end else
+                            fields.Datetime.from_string(
+                                project_task.date_start))
                 if min_date_start > date_start:
                     min_date_start = date_start
                     date_start_from_days = project_task.from_days
