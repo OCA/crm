@@ -68,18 +68,22 @@ class ProjectTask(models.Model):
         date = self.correct_days_to_workable(date, increment)
         return date
 
-    def on_change_dates(self, date_start, date_end):
-        if self.date_start is not False and self.date_end is not False:
-            date_start = fields.Datetime.from_string(self.date_start)
-            date_end = fields.Datetime.from_string(self.date_end)
-            self.estimated_days = self.count_days_without_weekend(
-                date_start, date_end)
-            if self.project_id.calculation_type == 'date_begin':
-                date_start = fields.Datetime.from_string(
-                    self.project_id.date_start)
-                date_end = fields.Datetime.from_string(self.date_start)
-            self.from_days = self.count_days_without_weekend(
-                date_start, date_end)
+    def on_change_dates(self, date_start, date_end, vals):
+        vals['estimated_days'] = self.count_days_without_weekend(
+            fields.Datetime.from_string(date_start),
+            fields.Datetime.from_string(date_end))
+        calculation_type = self.project_id.calculation_type
+        if calculation_type:
+            date_start = (self.project_id.date_start
+                          if calculation_type == 'date_begin'
+                          else date_end)
+            date_end = (date_start
+                        if calculation_type == 'date_begin'
+                        else self.project_id.date)
+            vals['from_days'] = self.count_days_without_weekend(
+                fields.Datetime.from_string(date_start),
+                fields.Datetime.from_string(date_end))
+        return vals
 
     @api.multi
     def write(self, vals):
@@ -88,20 +92,7 @@ class ProjectTask(models.Model):
         date_end = (vals.get('date_end')
                     if vals.get('date_end') else self.date_end)
         if date_start and date_end:
-            self.estimated_days = self.count_days_without_weekend(
-                fields.Datetime.from_string(date_start),
-                fields.Datetime.from_string(date_end))
-            calculation_type = self.project_id.calculation_type
-            if calculation_type:
-                date_start = (self.project_id.date_start
-                              if calculation_type == 'date_begin'
-                              else date_end)
-                date_end = (date_start
-                            if calculation_type == 'date_begin'
-                            else self.project_id.date)
-                self.from_days = self.count_days_without_weekend(
-                    fields.Datetime.from_string(date_start),
-                    fields.Datetime.from_string(date_end))
+            vals = self.on_change_dates(date_start, date_end, vals)
         return super(ProjectTask, self).write(vals)
 
     def task_recalculate(self):
