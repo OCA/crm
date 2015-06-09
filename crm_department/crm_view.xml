@@ -5,18 +5,18 @@
     <record id="crm_case_section_view_form" model="ir.ui.view">
       <field name="name">crm.case.section.form</field>
       <field name="model">crm.case.section</field>
-      <field name="inherit_id" ref="crm.crm_case_section_view_form" />
+      <field name="inherit_id" ref="sales_team.crm_case_section_view_form" />
       <field name="arch" type="xml">
-        <xpath expr="/form/group//group[2]/field[@name='active']" position="after">
-          <field name="department_id" widget="selection"/>
-        </xpath>
+	<field name="active" position="after">
+	  <field name="department_id" widget="selection"/>
+	</field>
       </field>
     </record>
 
     <record id="crm_case_section_view_tree" model="ir.ui.view">
       <field name="name">crm.case.section.tree</field>
       <field name="model">crm.case.section</field>
-      <field name="inherit_id" ref="crm.crm_case_section_view_tree" />
+      <field name="inherit_id" ref="sales_team.crm_case_section_view_tree" />
       <field name="arch" type="xml">
         <xpath expr="/tree/field[@name='user_id']" position="after">
           <field name="department_id"/>
