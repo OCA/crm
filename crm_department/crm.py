@@ -22,6 +22,7 @@
 ##############################################################################
 from openerp.osv import orm, fields
 
+
 class CrmSalesTeam(orm.Model):
     _inherit = "crm.case.section"
     _columns = {
@@ -29,13 +30,13 @@ class CrmSalesTeam(orm.Model):
         }
 
     def _get_department(self, cr, uid, ids, context=None):
-        employee_obj = self.pool['hr.employee']
+        employee = self.pool['hr.employee']
         department_id = False
-        employee_ids = employee_obj.search(cr, uid, [('user_id','=', uid)])
+        employee_ids = employee.search(cr, uid, [('user_id', '=', uid)])
         if employee_ids:
-            department_id = employee_obj.browse(cr, uid, 
-                                                employee_ids[0], 
-                                                context=context).department_id.id
+            department_id = employee.browse(cr, uid,
+                                            employee_ids[0],
+                                            context=context).department_id.id
         return department_id
 
     _defaults = {
@@ -47,21 +48,21 @@ class CrmLead(orm.Model):
     _inherit = "crm.lead"
 
     def on_change_user(self, cr, uid, ids, user_id, context=None):
-        """ Updates res dictionary with the department 
+        """ Updates res dictionary with the department
         corresponding to the section """
         employee_obj = self.pool['hr.employee']
-        res = {}        
+        res = {}
         res['department_id'] = False
         if user_id:
-            employee_ids = employee_obj.search(cr, uid, 
-                                               [('user_id','=',user_id)],
-                                                context=context)
-            for employee in employee_obj.browse(cr, uid, 
-                                               employee_ids, context=context):
+            employee_ids = employee_obj.search(cr, uid,
+                                               [('user_id', '=', user_id)],
+                                               context=context)
+            for employee in employee_obj.browse(cr, uid,
+                                                employee_ids, context=context):
                 if employee.department_id.id:
                     res['department_id'] = employee.department_id.id
         return {'value': res}
-    
+
     _columns = {
         'department_id': fields.many2one('hr.department', 'Department'),
         }
