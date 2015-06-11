@@ -30,17 +30,17 @@ class CrmLead(models.Model):
     _inherit = 'crm.lead'
 
     @api.one
-    @api.onchange('better_zip_id')
+    @api.onchange('location_id')
     def on_change_city(self):
-        if self.better_zip_id:
-            self.zip = self.better_zip_id.name
-            self.city = self.better_zip_id.city
-            self.state_id = self.better_zip_id.state_id
-            self.country_id = self.better_zip_id.country_id
+        if self.location_id:
+            self.zip = self.location_id.name
+            self.city = self.location_id.city
+            self.state_id = self.location_id.state_id
+            self.country_id = self.location_id.country_id
 
-    better_zip_id = fields.Many2one(
+    location_id = fields.Many2one(
         'res.better.zip',
         string='Location',
-        select=1,
+        index=True,
         help='Use the city name or the zip code to search the location',
     )

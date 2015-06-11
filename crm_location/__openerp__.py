@@ -23,7 +23,6 @@
 ##############################################################################
 
 {
-    # Addon information
     'name': 'CRM location',
     'category': 'Customer Relationship Management',
     'version': '1.0',
@@ -32,22 +31,12 @@
         'base_location',
     ],
     'external_dependencies': {},
-    # Views templates, pages, menus, options and snippets
-    'data': [
-        'views/crm_lead_view.xml',
-    ],
-    # Qweb templates
-    'qweb': [
-    ],
-    # Your information
-    'author': 'Antiun Ingeniería S.L.',
+    'data': ['views/crm_lead_view.xml',],
+    'author': 'Antiun Ingeniería S.L., '
+              'Odoo Community Association (OCA)',
     'website': 'http://www.antiun.com',
     'license': 'AGPL-3',
-    # Technical options
     'demo': [],
     'test': [],
     'installable': True,
-    # 'auto_install':False,
-    # 'active':True,
-
 }

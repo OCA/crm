@@ -7,12 +7,11 @@
             <field name="model">crm.lead</field>
             <field name="inherit_id" ref="crm.crm_case_form_view_leads" />
             <field name="arch" type="xml">
-                <field name="street2" position="after">
-                    <field name="better_zip_id"
+                <field name="city" position="before">
+                    <field name="location_id"
                         options="{'create_name_field': 'city'}"
                         colspan="4"
-                        placeholder="City completion"
-                        class="oe_edit_only" />
+                        placeholder="City completion"/>
                 </field>
             </field>
         </record>
@@ -22,12 +21,11 @@
             <field name="model">crm.lead</field>
             <field name="inherit_id" ref="crm.crm_case_form_view_oppor" />
             <field name="arch" type="xml">
-                <field name="street2" position="after">
-                    <field name="better_zip_id"
+                <field name="city" position="before">
+                    <field name="location_id"
                         options="{'create_name_field': 'city'}"
                         colspan="4"
-                        placeholder="City completion"
-                        class="oe_edit_only" />
+                        placeholder="City completion"/>
                 </field>
             </field>
         </record>
