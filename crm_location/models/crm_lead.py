@@ -26,7 +26,6 @@ from openerp import models, fields, api
 
 
 class CrmLead(models.Model):
-
     _inherit = 'crm.lead'
 
     @api.one

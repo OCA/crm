@@ -31,7 +31,7 @@
         'base_location',
     ],
     'external_dependencies': {},
-    'data': ['views/crm_lead_view.xml',],
+    'data': ['views/crm_lead_view.xml'],
     'author': 'Antiun Ingeniería S.L., '
               'Odoo Community Association (OCA)',
     'website': 'http://www.antiun.com',
