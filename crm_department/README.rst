@@ -56,8 +56,21 @@ Credits
 Contributors
 ------------
 
-* Firstname Lastname <email.address@example.org>
-* Second Person <second.person@example.org>
+*(in alphabetical order)*
+
+* Alexandre Fayolle <alexandre.fayolle@camptocamp.com>
+* Ángel Moya <angel.moya@domatix.com>
+* Charbel Jacquin <charbel.jacquin@camptocamp.com>
+* Daniel Reis <dgreis@sapo.pt>
+* Guewen Baconnier <guewen.baconnier@camptocamp.com>
+* Jordi Ballester Alomar <jordi.ballester@eficent.com>
+* Joël Grand-Guillaume <joel.grandguillaume@camptocamp.com>
+* Leonardo Pistone <leonardo.pistone@camptocamp.com>
+* Omar (Pexego) <omarcs7r@gmail.com>
+* Pedro M. Baeza <pedro.baeza@gmail.com>
+* Vincent Renaville <vincent.renaville@camptocamp.com>
+* Yannick Vaucher <yannick.vaucher@camptocamp.com>
+
 
 Maintainer
 ----------
