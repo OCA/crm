@@ -2,7 +2,7 @@
     :alt: License: AGPL-3
 
 CRM with Department Categorization
-===========
+==================================
 
 
 
