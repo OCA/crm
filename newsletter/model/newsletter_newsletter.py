@@ -29,6 +29,7 @@ class newsletter_newsletter(models.Model):
     _name = 'newsletter.newsletter'
     _description = 'Newsletter'
     _rec_name = 'subject'
+    _order = 'create_date desc'
     _logger = logging.getLogger(_name)
 
     _state_selection = [
