@@ -37,6 +37,12 @@ class CrmLead(models.Model):
             self.state_id = self.location_id.state_id
             self.country_id = self.location_id.country_id
 
+    better_zip_id = fields.Many2one(
+        'res.better.zip',
+        string='Location',
+        index=True,
+        help='Use the city name or the zip code to search the location',
+    )
     location_id = fields.Many2one(
         'res.better.zip',
         string='Location',
