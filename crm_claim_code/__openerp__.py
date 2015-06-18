@@ -23,8 +23,13 @@
 {
     "name": "Sequential Code for Claims",
     "version": "1.0",
-    "author": "Avanzosc S.L., OdooMRP team, Pedro Baeza",
+    "category": "Customer Relationship Management",
+    "author": "OdooMRP team, "
+              "AvanzOSC, "
+              "Serv. Tecnol. Avanzados - Pedro M. Baeza, "
+              "Odoo Community Association (OCA)",
     "website": "http://www.avanzosc.es",
+    "license": "AGPL-3",
     "contributors": [
         "Pedro M. Baeza <pedro.baeza@serviciosbaeza.com",
         "Ana Juaristi <ajuaristo@gmail.com>",
@@ -32,7 +37,6 @@
         "Oihane Crucelaegui <oihanecrucelaegi@avanzosc.es>",
         "Alfredo de la Fuente <alfredodelafuente@avanzosc.es>",
     ],
-    "category": "Customer Relationship Management",
     "depends": [
         "crm_claim",
     ],
