@@ -22,3 +22,10 @@ class CrmClaim(models.Model):
         if vals.get('code', '/') == '/':
             vals['code'] = self.env['ir.sequence'].get('crm.claim')
         return super(CrmClaim, self).create(vals)
+
+    @api.one
+    def copy(self, default=None):
+        if default is None:
+            default = {}
+        default['code'] = self.env['ir.sequence'].get('crm.claim')
+        return super(CrmClaim, self).copy(default)
