@@ -31,7 +31,7 @@
     "website": "http://www.avanzosc.es",
     "license": "AGPL-3",
     "contributors": [
-        "Pedro M. Baeza <pedro.baeza@serviciosbaeza.com",
+        "Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>",
         "Ana Juaristi <ajuaristo@gmail.com>",
         "Iker Coranti <ikercoranti@avanzosc.com>",
         "Oihane Crucelaegui <oihanecrucelaegi@avanzosc.es>",
