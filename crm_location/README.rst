@@ -27,6 +27,7 @@ If you spotted it first, help us smashing it by providing a detailed and welcome
 Contributors
 ------------
 * Endika Iglesias <endikaig@antiun.com>
+* Rafael Blasco <rafabn@antiun.com>
 
 
 Maintainer
