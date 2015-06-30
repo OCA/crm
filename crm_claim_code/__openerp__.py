@@ -45,5 +45,6 @@
         "data/claim_sequence.xml",
     ],
     "installable": True,
+    "pre_init_hook": "create_code_equal_to_id",
     "post_init_hook": "assign_old_sequences",
 }
