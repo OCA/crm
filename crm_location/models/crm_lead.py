@@ -49,5 +49,5 @@ class CrmLead(models.Model):
         values = super(CrmLead, self).on_change_partner_id(partner_id)
         if partner_id:
             partner = self.env['res.partner'].browse(partner_id)
-            values['location_id'] = partner.zip_id
+            values['location_id'] = partner.zip_id.id
         return {'value': values}
