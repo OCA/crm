@@ -7,6 +7,14 @@ from . import models
 from openerp import SUPERUSER_ID
 
 
+def create_code_equal_to_id(cr):
+    cr.execute('ALTER TABLE crm_claim '
+               'ADD COLUMN code character varying;')
+    cr.execute('UPDATE crm_claim '
+               'SET code = id '
+               'WHERE code IS NULL;')
+
+
 def assign_old_sequences(cr, registry):
     claim_obj = registry['crm.claim']
     sequence_obj = registry['ir.sequence']
