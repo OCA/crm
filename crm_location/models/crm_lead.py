@@ -46,8 +46,10 @@ class CrmLead(models.Model):
 
     @api.multi
     def on_change_partner_id(self, partner_id):
-        values = super(CrmLead, self).on_change_partner_id(partner_id)
+        res = super(CrmLead, self).on_change_partner_id(partner_id)
+        if 'value' not in res:
+            res['value'] = {}
         if partner_id:
             partner = self.env['res.partner'].browse(partner_id)
-            values['location_id'] = partner.zip_id.id
-        return {'value': values}
+            res['value']['location_id'] = partner.zip_id.id
+        return {'value': res['value']}
