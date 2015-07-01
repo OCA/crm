@@ -7,7 +7,6 @@
             <field name="model" ref="base.model_res_users" />
             <field name="domain">[('id','=',1)]</field>
             <field name="email_from">test@test.com</field>
-            <field name="plaintext_mode">from_html</field>
         </record>
     </data>
 </openerp>
