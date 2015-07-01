@@ -6,3 +6,7 @@
 "access_letter_class_system","letter_class_system","model_letter_class","base.group_system",1,1,1,1
 "access_letter_channel_user","letter_channel_user","model_letter_channel","base.group_user",1,0,0,0
 "access_letter_channel_system","letter_channel_system","model_letter_channel","base.group_system",1,1,1,1
+"access_letter_folder_user","letter_folder_user","model_letter_folder","base.group_user",1,0,0,0
+"access_letter_folder_system","letter_folder_system","model_letter_folder","base.group_system",1,1,1,1
+"access_letter_reassignment_user","letter_reassignment_user","model_letter_reassignment","base.group_user",1,0,0,0
+"access_letter_reassignment_system","letter_reassignment_system","model_letter_reassignment","base.group_system",1,1,1,1

@@ -1,3 +1,6 @@
+.. image:: https://img.shields.io/badge/licence-AGPL--3-blue.svg
+    :alt: License: AGPL-3
+
 CRM location
 ============
 
@@ -27,6 +30,7 @@ If you spotted it first, help us smashing it by providing a detailed and welcome
 Contributors
 ------------
 * Endika Iglesias <endikaig@antiun.com>
+* Rafael Blasco <rafabn@antiun.com>
 
 
 Maintainer

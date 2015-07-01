@@ -43,3 +43,13 @@ class CrmLead(models.Model):
         index=True,
         help='Use the city name or the zip code to search the location',
     )
+
+    @api.multi
+    def on_change_partner_id(self, partner_id):
+        res = super(CrmLead, self).on_change_partner_id(partner_id)
+        if 'value' not in res:
+            res['value'] = {}
+        if partner_id:
+            partner = self.env['res.partner'].browse(partner_id)
+            res['value']['location_id'] = partner.zip_id.id
+        return {'value': res['value']}
