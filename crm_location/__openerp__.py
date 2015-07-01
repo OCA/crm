@@ -30,13 +30,10 @@
         'crm',
         'base_location',
     ],
-    'external_dependencies': {},
     'data': ['views/crm_lead_view.xml'],
     'author': 'Antiun Ingeniería S.L., '
               'Odoo Community Association (OCA)',
     'website': 'http://www.antiun.com',
     'license': 'AGPL-3',
-    'demo': [],
-    'test': [],
     'installable': True,
 }
