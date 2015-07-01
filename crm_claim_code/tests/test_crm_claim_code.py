@@ -15,12 +15,12 @@ class TestCrmClaimCode(common.TransactionCase):
         self.crm_sequence = self.env.ref('crm_claim_code.sequence_claim')
         self.crm_claim = self.env.ref('crm_claim.crm_claim_1')
 
-    def test_old_claim_code_assing(self):
+    def test_old_claim_code_assign(self):
         crm_claims = self.crm_claim_model.search([])
         for crm_claim in crm_claims:
             self.assertNotEqual(crm_claim.code, '/')
 
-    def test_new_claim_code_assing(self):
+    def test_new_claim_code_assign(self):
         code = self._get_next_code()
         crm_claim = self.crm_claim_model.create({
             'name': 'Testing claim code',
@@ -28,7 +28,7 @@ class TestCrmClaimCode(common.TransactionCase):
         self.assertNotEqual(crm_claim.code, '/')
         self.assertEqual(crm_claim.code, code)
 
-    def test_copy_claim_code_assing(self):
+    def test_copy_claim_code_assign(self):
         code = self._get_next_code()
         crm_claim_copy = self.crm_claim.copy()
         self.assertNotEqual(crm_claim_copy.code, self.crm_claim.code)
