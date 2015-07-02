@@ -69,7 +69,7 @@ class newsletter_newsletter(models.Model):
                 'template_id': self.type_id.email_template_id.id,
                 'default_res_id': self.id,
                 'newsletter_res_id': self.env[self.type_id.model.model].search(
-                    safe_eval(self.type_id.domain)).id or False,
+                    safe_eval(self.type_id.domain)).ids[:-1] or False,
             },
             'view_mode': 'form',
             'view_id': self.env.ref(
