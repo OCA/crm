@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openerp>
     <data>
-        <record model="ir.ui.view" id="crm_claim_tree_view_inh">
-            <field name="name">crm.claim.tree.view.inh</field>
+        <record model="ir.ui.view" id="crm_claim_deadline_tree_view">
+            <field name="name">crm.claim.deadline.tree</field>
             <field name="model">crm.claim</field>
             <field name="inherit_id" ref="crm_claim.crm_case_claims_tree_view" />
             <field name="arch" type="xml">
@@ -12,8 +12,8 @@
             </field>
         </record>
 
-        <record model="ir.ui.view" id="crm_claim_search_view_inh">
-            <field name="name">crm.clain.search.view.inh</field>
+        <record model="ir.ui.view" id="crm_claim_deadline_search_view">
+            <field name="name">crm.claim.deadline.search</field>
             <field name="model">crm.claim</field>
             <field name="inherit_id" ref="crm_claim.view_crm_case_claims_filter" />
             <field name="arch" type="xml">

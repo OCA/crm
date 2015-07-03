@@ -18,19 +18,23 @@
 
 {
     "name": "CRM claims deadline made visible",
+    "summary": "Deadline visible on crm.claim tree view",
     "version": "1.0",
-    "depends": [
-        "crm_claim",
-    ],
-    "author": "Avanzosc, S.L.",
+    "category": "Customer Relationship Management",
+    "license": "AGPL-3",
+    "author": "OdooMRP team, "
+              "AvanzOSC, "
+              "Serv. Tecnol. Avanzados - Pedro M. Baeza, "
+              "Odoo Community Association (OCA)",
     "contributors": [
         "Oihane Crucelaegui <oihanecrucelaegi@avanzosc.es>",
         "Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>",
-        "Ana Juaristi <ajuaristio@gmail.com>"
+        "Ana Juaristi <anajuaristi@avanzosc.es>"
     ],
-    "category": "Custom Module",
     "website": "http://www.avanzosc.es",
-    "summary": "Deadline visible on crm.claim tree view",
+    "depends": [
+        "crm_claim",
+    ],
     "data": [
         "views/crm_claim_view.xml",
     ],
