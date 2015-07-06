@@ -25,13 +25,8 @@
 import urlparse
 import urllib
 
-from openerp import models, fields
+from openerp import models
 from openerp.tools.translate import _
-
-import logging
-from pprint import pprint, pformat
-import traceback
-_logger = logging.getLogger(__name__)
 
 
 class MailMail(models.Model):
