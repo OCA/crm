@@ -4,10 +4,8 @@
 Customizable unsubscribe link on mass mailing emails
 ====================================================
 
-With this module you can set an unsubscribe link append at bottom of mass
+With this module you can set a custom unsubscribe link append at bottom of mass
 mailing emails.
-
-Additionally, you can disable this link if you set an empty label.
 
 
 Configuration
@@ -22,6 +20,15 @@ For example:
 <small>You can unsubscribe <a href="%(url)s">here</a></small>
 
 ```
+
+Additionally, you can disable this link if you set this parameter to 'False'
+
+
+Known issues / Roadmap
+======================
+
+* This custom html is not translatable, so you can define the same text in
+several languages
 
 
 Bug Tracker

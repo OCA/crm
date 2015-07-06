@@ -53,7 +53,6 @@ class MailMail(models.Model):
                 })
             }
         )
-
         html = ''
         _logger.info('config_msg = ' + pformat(config_msg))
         if config_msg is False:
