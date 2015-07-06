@@ -49,7 +49,6 @@ class MailMail(models.Model):
             }
         )
         html = ''
-        _logger.info('config_msg = ' + pformat(config_msg))
         if config_msg is False:
             html = '<small><a href="%(url)s">%(label)s</a></small>' % {
                 'url': url,
@@ -59,5 +58,4 @@ class MailMail(models.Model):
             html = config_msg % {
                 'url': url,
             }
-        _logger.info('html = ' + pformat(html))
         return html
