@@ -29,8 +29,8 @@
         'mail',
     ],
     "data": [
-        "data/ir_actions.xml",
         "data/ir_config_parameter.xml",
+        "data/ir_actions.xml",
     ],
     "auto_install": False,
     "installable": True,
