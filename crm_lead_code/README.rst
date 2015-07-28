@@ -1,10 +1,10 @@
 .. image:: https://img.shields.io/badge/licence-AGPL--3-blue.svg
     :alt: License: AGPL-3
 
-Sequential code for leads
-=========================
+Sequential code for Leads / Opportunities
+=========================================
 
-* This module adds a sequential code for leads.
+* This module adds a sequential code for leads / opportunities.
 
 
 Bug Tracker
