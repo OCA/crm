@@ -21,8 +21,8 @@
 ##############################################################################
 
 {
-    "name": "Sequential Code for Leads",
-    "version": "1.0",
+    "name": "Sequential Code for Leads / Opportunities",
+    "version": "8.0.1.0.0",
     "category": "Customer Relationship Management",
     "author": "OdooMRP team, "
               "AvanzOSC, "
