@@ -11,7 +11,7 @@ Usage
 =====
 
 Go to any record that can be referenced in a claim, and you will see in a
-smart-button called _linked claims_ a number indicating the number of
+smart-button called "linked claims" a number indicating the number of
 claims that reference this record. Clicking on the button, it will navigate
 to a list of these claims.
 
