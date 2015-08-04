@@ -1,6 +1,7 @@
-# -*- encoding: utf-8 -*-
+# -*- coding: utf-8 -*-
 ##############################################################################
-# For copyright and license notices, see __openerp__.py file in root directory
+# (c) 2015 Pedro M. Baeza
+# License AGPL-3 - See LICENSE file on root folder for details
 ##############################################################################
 
 from openerp import fields, api, _
