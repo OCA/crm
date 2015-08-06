@@ -29,6 +29,7 @@
     'author': 'Odoo Community Association (OCA),'
               'Vauxoo',
     'website': 'www.vauxoo.com',
+    'version': '1.0',
     'depends': [
         'crm_claim',
     ],
