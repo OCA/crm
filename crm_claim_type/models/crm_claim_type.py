@@ -31,6 +31,6 @@ class CrmClaimType(models.Model):
     """
     _name = 'crm.claim.type'
 
-    name = fields.Char('Name', required=True)
-    active = fields.Boolean('Active', default=True)
-    description = fields.Text('Decription')
+    name = fields.Char(required=True)
+    active = fields.Boolean(default=True)
+    description = fields.Text()
