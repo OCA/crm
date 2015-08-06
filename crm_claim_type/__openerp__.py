@@ -12,12 +12,11 @@
         'base',
         'crm_claim',
     ],
-    'security': [
-        'security/ir.model.access.csv',
-    ],
     'data': [
+        'security/ir.model.access.csv',
         'views/crm_claim_type_view.xml',
         'data/crm_claim_type_data.xml',
+
     ],
     'installable': True,
     'auto_install': False,
