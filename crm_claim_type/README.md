@@ -1,7 +1,7 @@
 CRM Claim Types
 ==============
 
-This module was written to extend crm_claim module features.
+Includes a way to clasify claims adding the concept of type.
 It gives a section to define a set of claim types.
 
 Installation
@@ -14,6 +14,7 @@ Configuration
 
 This modules do not require special configurations.
 It contains a predefined set of claim types.
+But if you want add your own types go to Sales > Configurations > Claims > Claim Types
 
 Usage
 =====

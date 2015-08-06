@@ -5,6 +5,7 @@
 #    All Rights Reserved
 # ############ Credits ########################################################
 #    Coded by: Yanina Aular <yani@vauxoo.com>
+#              Osval Reyes <osval@vauxoo.com>
 #    Planified by: Yanina Aular <yani@vauxoo.com>
 #    Audited by: Moises Lopez <moylop260@vauxoo.com>
 #                Nhomar Hernandez <nhomar@vauxoo.com>
