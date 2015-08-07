@@ -39,7 +39,7 @@ msgstr "Tipos de Reclamaciones"
 #. module: crm_claim_type
 #: view:crm.claim.type:crm_claim_type.crm_claim_type_form
 msgid "Claim type"
-msgstr "Tipos de Reclamación"
+msgstr "Tipo de Reclamación"
 
 #. module: crm_claim_type
 #: view:crm.claim.type:crm_claim_type.crm_claim_type_tree

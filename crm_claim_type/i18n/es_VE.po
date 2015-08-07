@@ -14,3 +14,34 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+
+#. module: crm_claim_type
+#: model:ir.model,name:crm_claim_type.model_crm_claim
+msgid "Claim"
+msgstr "Reclamo"
+
+#. module: crm_claim_type
+#: field:crm.claim,claim_type:0
+msgid "Claim Type"
+msgstr "Tipo de reclamo"
+
+#. module: crm_claim_type
+#: model:ir.actions.act_window,name:crm_claim_type.crm_claim_type_act
+#: model:ir.ui.menu,name:crm_claim_type.menu_crm_claim_type_act
+msgid "Claim Types"
+msgstr "Tipos de Reclamos"
+
+#. module: crm_claim_type
+#: view:crm.claim.type:crm_claim_type.crm_claim_type_form
+msgid "Claim type"
+msgstr "Tipo de Reclamo"
+
+#. module: crm_claim_type
+#: view:crm.claim.type:crm_claim_type.crm_claim_type_tree
+msgid "Claim types"
+msgstr "Tipos de reclamos"
+
+#. module: crm_claim_type
+#: help:crm.claim,claim_type:0
+msgid "Claim classification"
+msgstr "Clasificación de reclamo"
