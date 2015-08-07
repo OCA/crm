@@ -33,5 +33,4 @@ class CrmClaim(models.Model):
 
     claim_type = \
         fields.Many2one('crm.claim.type',
-                        help="Customer: When customer makes a claim to the company.\n"
-                             "Supplier: When the company makes a claim to supplier.")
+                        help="Claim classification")
