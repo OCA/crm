@@ -23,28 +23,28 @@ msgstr "Activo"
 #. module: crm_claim_type
 #: model:ir.model,name:crm_claim_type.model_crm_claim
 msgid "Claim"
-msgstr "Reclamo"
+msgstr "Reclamación"
 
 #. module: crm_claim_type
 #: field:crm.claim,claim_type:0
 msgid "Claim Type"
-msgstr "Tipo de reclamo"
+msgstr "Tipo de reclamación"
 
 #. module: crm_claim_type
 #: model:ir.actions.act_window,name:crm_claim_type.crm_claim_type_act
 #: model:ir.ui.menu,name:crm_claim_type.menu_crm_claim_type_act
 msgid "Claim Types"
-msgstr "Tipos de Reclamos"
+msgstr "Tipos de Reclamaciones"
 
 #. module: crm_claim_type
 #: view:crm.claim.type:crm_claim_type.crm_claim_type_form
 msgid "Claim type"
-msgstr "Tipos de Reclamo"
+msgstr "Tipos de Reclamación"
 
 #. module: crm_claim_type
 #: view:crm.claim.type:crm_claim_type.crm_claim_type_tree
 msgid "Claim types"
-msgstr "Tipos de reclamos"
+msgstr "Tipos de reclamaciones"
 
 #. module: crm_claim_type
 #: field:crm.claim.type,create_uid:0
@@ -58,10 +58,8 @@ msgstr "Creado el"
 
 #. module: crm_claim_type
 #: help:crm.claim,claim_type:0
-msgid "Customer: When customer makes a claim to the company.\n"
-"Supplier: When the company makes a claim to supplier."
-msgstr "Cliente: Cuando el cliente hace un reclamo a la compañia.\n"
-"Proveedor: Cuando la compañía hace un reclamo al proveedor"
+msgid "Claim classification"
+msgstr "Clasificación de reclamación"
 
 #. module: crm_claim_type
 #: field:crm.claim.type,description:0
