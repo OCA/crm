@@ -1,3 +1,6 @@
+.. image:: https://img.shields.io/badge/licence-AGPL--3-blue.svg
+    :alt: License: AGPL-3
+
 CRM Claim Types
 ===============
 
@@ -21,8 +24,11 @@ Usage
 
 To use this module, you need to:
 
-* Go to Sales > Configurations > Claims > Claim Types
-* Then, go to Claims, and select a claim type when creating/editing a claim
+* Go to Claims, and select a claim type when creating/editing a claim
+
+.. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
+   :alt: Try me on Runbot
+   :target: https://runbot.odoo-community.org/runbot/111/8.0
 
 For further information, please visit:
 
