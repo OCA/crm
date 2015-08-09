@@ -34,7 +34,7 @@
         'data/crm_claim_type_data.xml',
         'security/ir.model.access.csv',
         'views/crm_claim_type_view.xml',
-        'views/crm_case_claims_form_view.xml',
+        'views/crm_claim_view_form.xml',
     ],
     'installable': True,
     'auto_install': False,
