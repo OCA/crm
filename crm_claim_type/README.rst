@@ -1,8 +1,10 @@
+.. image:: https://img.shields.io/badge/licence-AGPL--3-blue.svg
+    :alt: License: AGPL-3
+
 CRM Claim Types
 ===============
 
 Includes a way to classify claims adding the concept of type.
-It gives a section to define a set of claim types.
 
 Installation
 ============
@@ -14,15 +16,18 @@ Configuration
 
 This modules do not require special configurations.
 It contains a predefined set of claim types.
-But if you want add your own types go to Sales > Configurations > Claims > Claim Types
+But if you want add your own types go to Sales > Configurations > Claim > Claim Types
 
 Usage
 =====
 
 To use this module, you need to:
 
-* Go to Sales > Configurations > Claims > Claim Types
-* Then, go to Claims, and select a claim type when creating/editing a claim
+* Go to Claims, and select a claim type when creating/editing a claim
+
+.. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
+   :alt: Try me on Runbot
+   :target: https://runbot.odoo-community.org/runbot/111/8.0
 
 For further information, please visit:
 

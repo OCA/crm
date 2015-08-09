@@ -64,7 +64,7 @@ msgstr ""
 
 #. module: crm_claim_type
 #: field:crm.claim.type,description:0
-msgid "Decription"
+msgid "Description"
 msgstr ""
 
 #. module: crm_claim_type
