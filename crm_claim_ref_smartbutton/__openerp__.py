@@ -18,6 +18,10 @@
         "Oihane Crucelaegui <oihanecrucelaegi@avanzosc.es>",
         "Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>",
     ],
+    "data": [
+        'security/ir.model.access.csv',
+    ],
     "category": "Customer Relationship Management",
     "installable": True,
+    "uninstall_hook": "uninstall_hook",
 }

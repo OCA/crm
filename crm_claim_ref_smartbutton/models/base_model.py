@@ -4,12 +4,12 @@
 # License AGPL-3 - See LICENSE file on root folder for details
 ##############################################################################
 
-from openerp import fields, api, _
-from openerp.models import BaseModel
+from openerp import fields, api, models, _
 from lxml import etree
 
 
-base_fields_view_get = BaseModel.fields_view_get
+base_fields_view_get = models.BaseModel.fields_view_get
+registered_dbs = []
 
 
 @api.model
@@ -21,7 +21,7 @@ def fields_view_get_crm_claim(
     res = base_fields_view_get(
         self, view_id=view_id, view_type=view_type, toolbar=toolbar,
         submenu=submenu)
-    if view_type != 'form':
+    if view_type != 'form' or self.env.cr.dbname not in registered_dbs:
         return res
     has_model = self.env['res.request.link'].search(
         [('object', '=', res['model'])])
@@ -86,8 +86,6 @@ def _add_magic_fields_wrapper(wrapped_func):
         wrapped_func(*args, **kwargs)
 
     return classmethod(_w)
-BaseModel._add_magic_fields = _add_magic_fields_wrapper(
-    BaseModel._add_magic_fields)
 
 
 @api.one
@@ -96,7 +94,20 @@ def count_linked_claim_tech(self):
         [('ref', '=', '%s,%i' % (self._model, self.id))])
 
 
-# Monkey patch functions
-BaseModel.action_open_linked_claims_tech = _open_related_claims
-BaseModel.fields_view_get = fields_view_get_crm_claim
-BaseModel.count_linked_claim_tech = count_linked_claim_tech
+# This should be monkey-patched always, or the computed field won't be
+# added to all models due to the module loading order
+models.BaseModel._add_magic_fields = _add_magic_fields_wrapper(
+    models.BaseModel._add_magic_fields)
+models.BaseModel.count_linked_claim_tech = count_linked_claim_tech
+
+
+class CrmClaimMonkeyPatcher(models.Model):
+    _name = 'cr.claim.monkey.patcher'
+    _auto = False  # doesn't create table in database
+
+    def _register_hook(self, cr):
+        # Monkey patch functions - Only when the module is installed
+        models.BaseModel.action_open_linked_claims_tech = _open_related_claims
+        models.BaseModel.base_fields_view_get = base_fields_view_get
+        models.BaseModel.fields_view_get = fields_view_get_crm_claim
+        registered_dbs.append(cr.dbname)

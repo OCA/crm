@@ -8,10 +8,13 @@ import openerp.tests.common as common
 from lxml import etree
 
 
+@common.at_install(False)
+@common.post_install(True)
 class TestCrmClaimRefSmartButton(common.TransactionCase):
 
     def setUp(self):
         super(TestCrmClaimRefSmartButton, self).setUp()
+        self.post_install = True
         self.partner_1 = self.env.ref('base.res_partner_1')
         self.new_partner = self.env['res.partner'].create(
             {'name': 'Test partner for crm_claim_ref_smartbutton'}

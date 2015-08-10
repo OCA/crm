@@ -15,7 +15,7 @@ smart-button called "linked claims" a number indicating the number of
 claims that reference this record. Clicking on the button, it will navigate
 to a list of these claims.
 
-If you click _New_ on the claim list, the created claim will be automatically
+If you click *New* on the claim list, the created claim will be automatically
 linked to the referenced record.
 
 Known issues / Roadmap
