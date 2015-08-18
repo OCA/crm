@@ -1,0 +1,203 @@
+﻿# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* partner_city_autocomplete
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-04-29 13:33+0000\n"
+"PO-Revision-Date: 2015-04-29 13:33+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: partner_city_autocomplete
+#: field:country.installer,be:0
+msgid "Belgium"
+msgstr "Belgique"
+
+#. module: partner_city_autocomplete
+#: field:city.import,file:0
+msgid "CSV File"
+msgstr "Fichier CSV"
+
+#. module: partner_city_autocomplete
+#: view:city.import:partner_city_autocomplete.view_cityzip
+#: view:country.installer:partner_city_autocomplete.view_country_installer
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: partner_city_autocomplete
+#: model:ir.actions.act_window,name:partner_city_autocomplete.open_zip_city
+#: model:ir.ui.menu,name:partner_city_autocomplete.menu_zip_city
+#: view:res.partner:partner_city_autocomplete.view_partner_form_inh
+#: field:res.partner,city2:0
+#: view:zip.city:partner_city_autocomplete.zip_city_filter_view
+#: view:zip.city:partner_city_autocomplete.zip_city_form_view
+#: view:zip.city:partner_city_autocomplete.zip_city_tree_view
+#: field:zip.city,name:0
+msgid "City"
+msgstr "Ville"
+
+#. module: partner_city_autocomplete
+#: code:addons/partner_city_autocomplete/installer.py:81
+#: code:addons/partner_city_autocomplete/installer.py:114
+#: view:city.import:partner_city_autocomplete.view_cityzip
+#: view:country.installer:partner_city_autocomplete.view_country_installer
+#: model:ir.actions.act_window,name:partner_city_autocomplete.action_country_configuration_installer
+#, python-format
+msgid "Configure Country data"
+msgstr "Configuration des données"
+
+#. module: partner_city_autocomplete
+#: view:country.installer:partner_city_autocomplete.view_country_installer
+msgid "Continue"
+msgstr "Continuer"
+
+#. module: partner_city_autocomplete
+#: field:account.fiscal.position,country:0
+#: field:city.import,country_id:0
+#: model:ir.model,name:partner_city_autocomplete.model_res_country
+#: view:res.partner:partner_city_autocomplete.view_partner_form_inh
+#: field:zip.city,country:0
+msgid "Country"
+msgstr "Pays"
+
+#. module: partner_city_autocomplete
+#: model:ir.model,name:partner_city_autocomplete.model_account_fiscal_position
+#: field:res.country,pos_fis:0
+msgid "Fiscal Position"
+msgstr "Position fiscale"
+
+#. module: partner_city_autocomplete
+#: field:country.installer,fr:0
+msgid "France"
+msgstr "France"
+
+#. module: partner_city_autocomplete
+#: field:country.installer,de:0
+msgid "Germany"
+msgstr "Allemagne"
+
+#. module: partner_city_autocomplete
+#: view:zip.city:partner_city_autocomplete.zip_city_filter_view
+msgid "Group By"
+msgstr "Grouper Par"
+
+#. module: partner_city_autocomplete
+#: field:city.import,id:0
+#: field:country.installer,id:0
+#: field:zip.city,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: partner_city_autocomplete
+#: view:city.import:partner_city_autocomplete.view_cityzip
+msgid "Import"
+msgstr "Import"
+
+#. module: partner_city_autocomplete
+#: field:country.installer,it:0
+msgid "Italy"
+msgstr "Italie"
+
+#. module: partner_city_autocomplete
+#: field:country.installer,lu:0
+msgid "Luxembourg"
+msgstr "Luxembourg"
+
+#. module: partner_city_autocomplete
+#: field:country.installer,nl:0
+msgid "Netherlands"
+msgstr "Pays-Bas"
+
+#. module: partner_city_autocomplete
+#: view:country.installer:partner_city_autocomplete.view_country_installer
+msgid "Other Country"
+msgstr "Autres Pays"
+
+#. module: partner_city_autocomplete
+#: model:ir.model,name:partner_city_autocomplete.model_res_partner
+msgid "Partner"
+msgstr "Partenaire"
+
+#. module: partner_city_autocomplete
+#: field:country.installer,po:0
+msgid "Portugal"
+msgstr "Portugal"
+
+#. module: partner_city_autocomplete
+#: view:country.installer:partner_city_autocomplete.view_country_installer
+msgid "Select the country you want to import informations of city and zip code or click on the button to select an other file."
+msgstr "Sélectionnez le pays dont vous souhaitez importer les informations de villes et codes postaux ou cliquez sur le bouton 'Autres Pays'"
+
+#. module: partner_city_autocomplete
+#: field:country.installer,es:0
+msgid "Spain"
+msgstr "Espagne"
+
+#. module: partner_city_autocomplete
+#: view:res.partner:partner_city_autocomplete.view_partner_form_inh
+msgid "State"
+msgstr "État"
+
+#. module: partner_city_autocomplete
+#: view:account.fiscal.position:partner_city_autocomplete.view_account_position_form
+msgid "Taxes Mapping"
+msgstr "Affectation des taxes"
+
+#. module: partner_city_autocomplete
+#: view:city.import:partner_city_autocomplete.view_cityzip
+msgid "The file must be a csv file with delimiter ';'  without header and formated like this :"
+msgstr "Le fichier doit être un csv avec délimiteur ';'  sans en-tête et formaté comme suit : "
+
+#. module: partner_city_autocomplete
+#: field:country.installer,uk:0
+msgid "United Kingdom"
+msgstr "Royaume-Uni"
+
+#. module: partner_city_autocomplete
+#: view:res.partner:partner_city_autocomplete.view_partner_form_inh
+msgid "ZIP"
+msgstr "Code postal"
+
+#. module: partner_city_autocomplete
+#: field:zip.city,zip:0
+msgid "Zip"
+msgstr "Code Postal"
+
+#. module: partner_city_autocomplete
+#: view:zip.city:partner_city_autocomplete.zip_city_filter_view
+msgid "city"
+msgstr "Ville"
+
+#. module: partner_city_autocomplete
+#: view:city.import:partner_city_autocomplete.view_cityzip
+msgid "column A : zip"
+msgstr "colonne A : Code postal"
+
+#. module: partner_city_autocomplete
+#: view:city.import:partner_city_autocomplete.view_cityzip
+msgid "column B : city"
+msgstr "colonne B : ville"
+
+#. module: partner_city_autocomplete
+#: view:zip.city:partner_city_autocomplete.zip_city_filter_view
+msgid "country"
+msgstr "Pays"
+
+#. module: partner_city_autocomplete
+#: view:city.import:partner_city_autocomplete.view_cityzip
+#: view:country.installer:partner_city_autocomplete.view_country_installer
+msgid "or"
+msgstr "Ou"
+
+#. module: partner_city_autocomplete
+#: view:zip.city:partner_city_autocomplete.zip_city_filter_view
+msgid "zip"
+msgstr "Code Postal"
+
