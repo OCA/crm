@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data >
+        <record id="crm_claim.stage_claim1" model="crm.claim.stage">
+            <field name="claim_common">1</field>
+            <field name="name">New</field>
+            <field name="stage_name_uniq">new</field>
+            <field name="sequence">1</field>
+        </record>
+
+        <record id="crm_claim.stage_claim2" model="crm.claim.stage">
+            <field name="claim_type" ref="crm_claim_type.crm_claim_type_customer"/>
+            <field name="name">In Progress</field>
+            <field name="stage_name_uniq">in_progress</field>
+            <field name="sequence">10</field>
+        </record>
+
+        <record id="crm_claim.stage_claim3" model="crm.claim.stage">
+            <field name="claim_type" ref="crm_claim_type.crm_claim_type_customer"/>
+            <field name="name">Settled</field>
+            <field name="stage_name_uniq">settled</field>
+            <field name="sequence">90</field>
+        </record>
+
+        <record id="crm_claim.stage_claim4" model="crm.claim.stage">
+            <field name="claim_type" ref="crm_claim_type.crm_claim_type_supplier"/>
+            <field name="name">Received</field>
+            <field name="stage_name_uniq">received</field>
+            <field name="sequence">10</field>
+        </record>
+
+        <record id="crm_claim.stage_claim5" model="crm.claim.stage">
+            <field name="claim_type" ref="crm_claim_type.crm_claim_type_supplier"/>
+            <field name="name">Accepted</field>
+            <field name="stage_name_uniq">accepted</field>
+            <field name="sequence">90</field>
+        </record>
+
+        <record id="crm_claim.stage_claim6" model="crm.claim.stage">
+            <field name="name">Rejected</field>
+            <field name="claim_common">1</field>
+            <field name="stage_name_uniq">rejected</field>
+            <field name="sequence">100</field>
+        </record>
+    </data>
+</openerp>

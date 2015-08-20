@@ -29,7 +29,5 @@
         <record id="crm_claim.crm_claim_7" model="crm.claim">
             <field name="claim_type" ref="crm_claim_type_customer"/>
         </record>
-
-
     </data>
 </openerp>
