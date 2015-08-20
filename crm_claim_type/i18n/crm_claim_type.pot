@@ -1,13 +1,13 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* crm_claim_type
+#   * crm_claim_type
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-06 16:36+0000\n"
-"PO-Revision-Date: 2015-08-06 16:36+0000\n"
+"POT-Creation-Date: 2015-08-20 13:46+0000\n"
+"PO-Revision-Date: 2015-08-20 13:46+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -26,7 +26,7 @@ msgid "Claim"
 msgstr ""
 
 #. module: crm_claim_type
-#: field:crm.claim,claim_type:0
+#: view:crm.claim.stage:crm_claim_type.crm_stage_claim_type_search
 msgid "Claim Type"
 msgstr ""
 
@@ -37,6 +37,19 @@ msgid "Claim Types"
 msgstr ""
 
 #. module: crm_claim_type
+#: help:crm.claim,claim_type:0
+#: help:crm.claim.stage,claim_type:0
+msgid "Claim classification"
+msgstr ""
+
+#. module: crm_claim_type
+#: model:ir.model,name:crm_claim_type.model_crm_claim_stage
+msgid "Claim stages"
+msgstr ""
+
+#. module: crm_claim_type
+#: field:crm.claim,claim_type:0
+#: field:crm.claim.stage,claim_type:0
 #: view:crm.claim.type:crm_claim_type.crm_claim_type_form
 msgid "Claim type"
 msgstr ""
@@ -44,6 +57,11 @@ msgstr ""
 #. module: crm_claim_type
 #: view:crm.claim.type:crm_claim_type.crm_claim_type_tree
 msgid "Claim types"
+msgstr ""
+
+#. module: crm_claim_type
+#: field:crm.claim.stage,claim_common:0
+msgid "Common to All Claim Types"
 msgstr ""
 
 #. module: crm_claim_type
@@ -57,9 +75,8 @@ msgid "Created on"
 msgstr ""
 
 #. module: crm_claim_type
-#: help:crm.claim,claim_type:0
-msgid "Customer: from customer to company.\n"
-"Supplier: from company to supplier."
+#: model:crm.claim.type,name:crm_claim_type.crm_claim_type_customer
+msgid "Customer"
 msgstr ""
 
 #. module: crm_claim_type
@@ -68,8 +85,23 @@ msgid "Description"
 msgstr ""
 
 #. module: crm_claim_type
+#: view:crm.claim.stage:crm_claim_type.crm_stage_claim_type_search
+msgid "Group By"
+msgstr ""
+
+#. module: crm_claim_type
 #: field:crm.claim.type,id:0
 msgid "ID"
+msgstr ""
+
+#. module: crm_claim_type
+#: help:crm.claim.stage,claim_common:0
+msgid "If you check this field, this stage will be proposed by default on each claim type."
+msgstr ""
+
+#. module: crm_claim_type
+#: help:crm.claim.stage,stage_name_uniq:0
+msgid "It used like name unique for readonly in view"
 msgstr ""
 
 #. module: crm_claim_type
@@ -87,3 +119,22 @@ msgstr ""
 msgid "Name"
 msgstr ""
 
+#. module: crm_claim_type
+#: model:crm.claim.type,name:crm_claim_type.crm_claim_type_other
+msgid "Other"
+msgstr ""
+
+#. module: crm_claim_type
+#: view:crm.claim.stage:crm_claim_type.crm_stage_claim_type_search
+msgid "Search Stages"
+msgstr ""
+
+#. module: crm_claim_type
+#: field:crm.claim.stage,stage_name_uniq:0
+msgid "Stage Name"
+msgstr ""
+
+#. module: crm_claim_type
+#: model:crm.claim.type,name:crm_claim_type.crm_claim_type_supplier
+msgid "Supplier"
+msgstr ""

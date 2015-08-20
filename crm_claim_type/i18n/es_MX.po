@@ -32,6 +32,8 @@ msgid "Claim Types"
 msgstr "Tipos de Reclamos"
 
 #. module: crm_claim_type
+#: field:crm.claim,claim_type:0
+#: field:crm.claim.stage,claim_type:0
 #: view:crm.claim.type:crm_claim_type.crm_claim_type_form
 msgid "Claim type"
 msgstr "Tipo de Reclamo"
@@ -43,5 +45,16 @@ msgstr "Tipos de reclamos"
 
 #. module: crm_claim_type
 #: help:crm.claim,claim_type:0
+#: help:crm.claim.stage,claim_type:0
 msgid "Claim classification"
 msgstr "Clasificación de reclamo"
+
+#. module: crm_claim_type
+#: field:crm.claim.stage,claim_common:0
+msgid "Common to All Claim Types"
+msgstr "Es común para todos los tipos de reclamos"
+
+#. module: crm_claim_type
+#: help:crm.claim.stage,claim_common:0
+msgid "If you check this field, this stage will be proposed by default on each claim type."
+msgstr "Si es marcada esta casilla, esta etapa será definida de manera predeterminada para cada tipo de reclamo"

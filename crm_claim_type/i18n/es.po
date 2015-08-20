@@ -37,6 +37,19 @@ msgid "Claim Types"
 msgstr "Tipos de Reclamaciones"
 
 #. module: crm_claim_type
+#: help:crm.claim,claim_type:0
+#: help:crm.claim.stage,claim_type:0
+msgid "Claim classification"
+msgstr "Clasificación de reclamación"
+
+#. module: crm_claim_type
+#: model:ir.model,name:crm_claim_type.model_crm_claim_stage
+msgid "Claim stages"
+msgstr "Etapas de la reclamación"
+
+#. module: crm_claim_type
+#: field:crm.claim,claim_type:0
+#: field:crm.claim.stage,claim_type:0
 #: view:crm.claim.type:crm_claim_type.crm_claim_type_form
 msgid "Claim type"
 msgstr "Tipo de Reclamación"
@@ -45,6 +58,11 @@ msgstr "Tipo de Reclamación"
 #: view:crm.claim.type:crm_claim_type.crm_claim_type_tree
 msgid "Claim types"
 msgstr "Tipos de reclamaciones"
+
+#. module: crm_claim_type
+#: field:crm.claim.stage,claim_common:0
+msgid "Common to All Claim Types"
+msgstr "Es común para todos los tipos de reclamaciones"
 
 #. module: crm_claim_type
 #: field:crm.claim.type,create_uid:0
@@ -57,9 +75,9 @@ msgid "Created on"
 msgstr "Creado el"
 
 #. module: crm_claim_type
-#: help:crm.claim,claim_type:0
-msgid "Claim classification"
-msgstr "Clasificación de reclamación"
+#: model:crm.claim.type,name:crm_claim_type.crm_claim_type_customer
+msgid "Customer"
+msgstr "Cliente"
 
 #. module: crm_claim_type
 #: field:crm.claim.type,description:0
@@ -67,9 +85,24 @@ msgid "Description"
 msgstr "Descripción"
 
 #. module: crm_claim_type
+#: view:crm.claim.stage:crm_claim_type.crm_stage_claim_type_search
+msgid "Group By"
+msgstr "Agrupar por"
+
+#. module: crm_claim_type
 #: field:crm.claim.type,id:0
 msgid "ID"
 msgstr "ID"
+
+#. module: crm_claim_type
+#: help:crm.claim.stage,claim_common:0
+msgid "If you check this field, this stage will be proposed by default on each claim type."
+msgstr "Si es marcada esta casilla, esta etapa será definida de manera predeterminada para cada tipo de reclamación"
+
+#. module: crm_claim_type
+#: help:crm.claim.stage,stage_name_uniq:0
+msgid "It used like name unique for readonly in view"
+msgstr "Es usado como nombre único para solo lectura en la vista"
 
 #. module: crm_claim_type
 #: field:crm.claim.type,write_uid:0
@@ -86,3 +119,22 @@ msgstr "Actualizado por última vez el"
 msgid "Name"
 msgstr "Nombre"
 
+#. module: crm_claim_type
+#: model:crm.claim.type,name:crm_claim_type.crm_claim_type_other
+msgid "Other"
+msgstr "Otro"
+
+#. module: crm_claim_type
+#: view:crm.claim.stage:crm_claim_type.crm_stage_claim_type_search
+msgid "Search Stages"
+msgstr "Buscar etapas"
+
+#. module: crm_claim_type
+#: field:crm.claim.stage,stage_name_uniq:0
+msgid "Stage Name"
+msgstr "Nombre de Etapa"
+
+#. module: crm_claim_type
+#: model:crm.claim.type,name:crm_claim_type.crm_claim_type_supplier
+msgid "Supplier"
+msgstr "Proveedor"
