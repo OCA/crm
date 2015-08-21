@@ -100,11 +100,6 @@ msgid "If you check this field, this stage will be proposed by default on each c
 msgstr "Si es marcada esta casilla, esta etapa será definida de manera predeterminada para cada tipo de reclamación"
 
 #. module: crm_claim_type
-#: help:crm.claim.stage,stage_name_uniq:0
-msgid "It used like name unique for readonly in view"
-msgstr "Es usado como nombre único para solo lectura en la vista"
-
-#. module: crm_claim_type
 #: field:crm.claim.type,write_uid:0
 msgid "Last Updated by"
 msgstr "Actualizado por última vez por"
@@ -128,11 +123,6 @@ msgstr "Otro"
 #: view:crm.claim.stage:crm_claim_type.crm_stage_claim_type_search
 msgid "Search Stages"
 msgstr "Buscar etapas"
-
-#. module: crm_claim_type
-#: field:crm.claim.stage,stage_name_uniq:0
-msgid "Stage Name"
-msgstr "Nombre de Etapa"
 
 #. module: crm_claim_type
 #: model:crm.claim.type,name:crm_claim_type.crm_claim_type_supplier

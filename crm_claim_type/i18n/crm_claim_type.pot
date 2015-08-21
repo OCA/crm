@@ -100,11 +100,6 @@ msgid "If you check this field, this stage will be proposed by default on each c
 msgstr ""
 
 #. module: crm_claim_type
-#: help:crm.claim.stage,stage_name_uniq:0
-msgid "It used like name unique for readonly in view"
-msgstr ""
-
-#. module: crm_claim_type
 #: field:crm.claim.type,write_uid:0
 msgid "Last Updated by"
 msgstr ""
@@ -127,11 +122,6 @@ msgstr ""
 #. module: crm_claim_type
 #: view:crm.claim.stage:crm_claim_type.crm_stage_claim_type_search
 msgid "Search Stages"
-msgstr ""
-
-#. module: crm_claim_type
-#: field:crm.claim.stage,stage_name_uniq:0
-msgid "Stage Name"
 msgstr ""
 
 #. module: crm_claim_type

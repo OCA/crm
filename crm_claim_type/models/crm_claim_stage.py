@@ -34,11 +34,6 @@ class CrmClaimStage(models.Model):
     def _get_claim_type(self):
         return self.env['crm.claim']._get_claim_type()
 
-    stage_name_uniq = fields.Char(string='Stage Name',
-                                  help='It used like name '
-                                       'unique for readonly in view',
-                                  translate=False)
-
     claim_type = \
         fields.Many2one('crm.claim.type',
                         selection=_get_claim_type,
