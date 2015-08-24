@@ -24,5 +24,5 @@ from openerp import models, fields
 class CrmLead(models.Model):
     _inherit = 'crm.lead'
 
-    date_action = fields.Date('Next Action Date', track_visibility='onchange')
-    title_action = fields.Char('Next Action', track_visibility='onchange')
+    date_action = fields.Date(track_visibility='onchange')
+    title_action = fields.Char(track_visibility='onchange')
