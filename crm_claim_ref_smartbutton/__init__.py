@@ -1,12 +1,9 @@
 # -*- coding: utf-8 -*-
-##############################################################################
 # (c) 2015 Pedro M. Baeza
-# License AGPL-3 - See LICENSE file on root folder for details
-##############################################################################
+# License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0.html
 
 from openerp.models import BaseModel
-from openerp.addons.crm_claim_ref_smartbutton.models.base_model import (
-    registered_dbs)
+from .models.base_model import registered_dbs
 from . import models
 
 

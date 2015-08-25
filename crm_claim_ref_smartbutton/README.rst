@@ -1,10 +1,11 @@
 .. image:: https://img.shields.io/badge/licence-AGPL--3-blue.svg
     :alt: License: AGPL-3
 
+==================================
 Smart-button for referenced claims
 ==================================
 
-This module adds an smart-button in the models that can be referenced in a
+This module adds a smart-button in the models that can be referenced in a
 claim with the number of linked claims and a shortcut to them.
 
 Usage
@@ -17,6 +18,10 @@ to a list of these claims.
 
 If you click *New* on the claim list, the created claim will be automatically
 linked to the referenced record.
+
+.. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
+   :alt: Try me on Runbot
+   :target: https://runbot.odoo-community.org/runbot/111/8.0
 
 Known issues / Roadmap
 ======================

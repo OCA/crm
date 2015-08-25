@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
-##############################################################################
 # (c) 2015 Pedro M. Baeza
-# License AGPL-3 - See LICENSE file on root folder for details
-##############################################################################
+# License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0.html
 
 from openerp import fields, api, models, _
 from lxml import etree
@@ -102,7 +100,7 @@ models.BaseModel.count_linked_claim_tech = count_linked_claim_tech
 
 
 class CrmClaimMonkeyPatcher(models.Model):
-    _name = 'cr.claim.monkey.patcher'
+    _name = 'crm.claim.monkey.patcher'
     _auto = False  # doesn't create table in database
 
     def _register_hook(self, cr):
