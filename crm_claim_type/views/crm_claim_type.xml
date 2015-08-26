@@ -1,9 +1,7 @@
 <?xml version="1.0"?>
 <openerp>
     <data>
-
-
-    <record id="crm_claim_type_tree" model="ir.ui.view">
+        <record id="crm_claim_type_tree" model="ir.ui.view">
             <field name="name">crm.claim.type.tree</field>
             <field name="model">crm.claim.type</field>
             <field name="arch" type="xml">
