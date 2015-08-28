@@ -42,7 +42,8 @@ class MailMassMailingContact(models.Model):
                 category = mailing_list.partner_category
                 if category:
                     vals['_partner_category'] = [(4, category.id, 0)]
-            vals['partner_id'] = self._check_partner(vals, partner_mandatory)
+            vals['partner_id'] = self._check_partner(
+                vals, mailing_list.partner_mandatory)
             vals.pop('_partner_category')
         return super(MailMassMailingContact, self).create(vals)
 

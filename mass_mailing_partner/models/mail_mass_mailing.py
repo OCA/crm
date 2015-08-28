@@ -3,7 +3,7 @@
 # License AGPL-3 - See LICENSE file on root folder for details
 ##############################################################################
 
-from openerp import models, fields, api
+from openerp import models, fields
 
 
 class MailMassMailingList(models.Model):
