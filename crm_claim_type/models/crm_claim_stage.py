@@ -37,8 +37,7 @@ class CrmClaimStage(models.Model):
     claim_type = \
         fields.Many2one('crm.claim.type',
                         selection=_get_claim_type,
-                        help="Claim classification",
-                        translate=True)
+                        help="Claim classification")
 
     claim_common = fields.Boolean(string='Common to All Claim Types',
                                   help="If you check this field,"
