@@ -17,7 +17,5 @@ def _match_existing_contacts(cr, registry):
                 cr, SUPERUSER_ID, [('email', '=ilike', contact.email)])
             if partner_ids:
                 partner_id = partner_ids[0]
-                partner_model.write(cr, SUPERUSER_ID, partner_id,
-                                    {'opt_out': contact.opt_out})
                 contact_model.write(cr, SUPERUSER_ID, contact.id,
                                     {'partner_id': partner_id})
