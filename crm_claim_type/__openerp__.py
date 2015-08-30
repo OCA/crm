@@ -23,7 +23,7 @@
     'name': 'CRM Claim Types',
     'category': 'Customer Relationship Management',
     'summary': 'Claim types for CRM',
-    'author': 'Odoo Community Association (OCA), '
+    'author': 'Odoo Community Association (OCA),'
               'Vauxoo',
     'website': 'www.vauxoo.com',
     'license': 'AGPL-3',
@@ -33,6 +33,7 @@
     ],
     'data': [
         'data/crm_claim_type.xml',
+        'data/crm_claim_stage.xml',
         'security/ir.model.access.csv',
         'views/crm_claim.xml',
         'views/crm_claim_stage.xml',
