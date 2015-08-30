@@ -128,3 +128,13 @@ msgstr "Buscar etapas"
 #: model:crm.claim.type,name:crm_claim_type.crm_claim_type_supplier
 msgid "Supplier"
 msgstr "Proveedor"
+
+#. module: crm_claim_type
+#: model:crm.claim.stage,name:crm_claim_type.stage_claim10
+msgid "Accepted"
+msgstr "Aceptado"
+
+#. module: crm_claim_type
+#: model:crm.claim.stage,name:crm_claim_type.stage_claim11
+msgid "Done"
+msgstr "Hecho"

@@ -128,3 +128,13 @@ msgstr ""
 #: model:crm.claim.type,name:crm_claim_type.crm_claim_type_supplier
 msgid "Supplier"
 msgstr ""
+
+#. module: crm_claim_type
+#: model:crm.claim.stage,name:crm_claim_type.stage_claim10
+msgid "Accepted"
+msgstr ""
+
+#. module: crm_claim_type
+#: model:crm.claim.stage,name:crm_claim_type.stage_claim11
+msgid "Done"
+msgstr ""
