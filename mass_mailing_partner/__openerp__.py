@@ -5,7 +5,7 @@
 
 {
     "name": "Link partners with mass-mailing",
-    "version": "1.0",
+    "version": "8.0.1.0.0",
     "author": "Serv. Tecnol. Avanzados - Pedro M. Baeza, "
               "Antiun Ingeniería S.L., "
               "Odoo Community Association (OCA)",

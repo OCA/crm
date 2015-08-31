@@ -4,18 +4,18 @@
 ##############################################################################
 
 from . import models
-from openerp import SUPERUSER_ID
+from openerp import api, SUPERUSER_ID
 
 
 def _match_existing_contacts(cr, registry):
-    contact_model = registry['mail.mass_mailing.contact']
-    partner_model = registry['res.partner']
-    contact_ids = contact_model.search(cr, SUPERUSER_ID, [])
-    for contact in contact_model.browse(cr, SUPERUSER_ID, contact_ids):
-        if contact.email:
-            partner_ids = partner_model.search(
-                cr, SUPERUSER_ID, [('email', '=ilike', contact.email)])
-            if partner_ids:
-                partner_id = partner_ids[0]
-                contact_model.write(cr, SUPERUSER_ID, contact.id,
-                                    {'partner_id': partner_id})
+    with api.Environment.manage():
+        env = api.Environment(cr, SUPERUSER_ID)
+        contact_model = env['mail.mass_mailing.contact']
+        partner_model = env['res.partner']
+        contacts = contact_model.search([])
+        for contact in contacts:
+            if contact.email:
+                partners = partner_model.search([('email', '=ilike',
+                                                  contact.email)])
+                if partners:
+                    contact.write({'partner_id': partners[0].id})
