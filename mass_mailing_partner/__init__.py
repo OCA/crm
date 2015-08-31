@@ -9,7 +9,7 @@ from openerp import api, SUPERUSER_ID
 
 def _match_existing_contacts(cr, registry):
     with api.Environment.manage():
-        env = api.Environment(cr, SUPERUSER_ID, context=None)
+        env = api.Environment(cr, SUPERUSER_ID, context={})
         contact_model = env['mail.mass_mailing.contact']
         partner_model = env['res.partner']
         contacts = contact_model.search([])
