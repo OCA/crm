@@ -23,6 +23,7 @@ from openerp import fields, models
 
 
 class CrmClaim(models.Model):
+
     """
         CRM Claim
     """
@@ -31,3 +32,11 @@ class CrmClaim(models.Model):
     claim_type = \
         fields.Many2one('crm.claim.type',
                         help="Claim classification")
+
+    stage_id = fields.Many2one('crm.claim.stage',
+                               'Stage',
+                               track_visibility='onchange',
+                               domain="[ '&','|',('section_ids', '=', "
+                               "section_id), ('case_default', '=', True), "
+                               "'|',('claim_type', '=', claim_type)"
+                               ",('claim_common', '=', True)]")
