@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
-##############################################################################
-# License AGPL-3 - See LICENSE file on root folder for details
-##############################################################################
+# See README.rst file on addon root folder for license details
 
 from openerp import models, fields, api
 
@@ -44,7 +42,8 @@ class MailMassMailingContact(models.Model):
                     vals['_partner_category'] = [(4, category.id, 0)]
             vals['partner_id'] = self._check_partner(
                 vals, mailing_list.partner_mandatory)
-            vals.pop('_partner_category')
+            if '_partner_category' in vals:
+                vals.pop('_partner_category')
         return super(MailMassMailingContact, self).create(vals)
 
     @api.onchange('partner_id')

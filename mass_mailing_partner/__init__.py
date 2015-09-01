@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
-##############################################################################
-# License AGPL-3 - See LICENSE file on root folder for details
-##############################################################################
+# See README.rst file on addon root folder for license details
 
 from . import models
 from openerp import api, SUPERUSER_ID

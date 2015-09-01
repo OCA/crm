@@ -1,13 +1,11 @@
 # -*- coding: utf-8 -*-
-##############################################################################
-# License AGPL-3 - See LICENSE file on root folder for details
-##############################################################################
+# See README.rst file on addon root folder for license details
 
 {
     "name": "Link partners with mass-mailing",
     "version": "8.0.1.0.0",
-    "author": "Serv. Tecnol. Avanzados - Pedro M. Baeza, "
-              "Antiun Ingeniería S.L., "
+    "author": "Antiun Ingeniería S.L., "
+              "Serv. Tecnol. Avanzados - Pedro M. Baeza, "
               "Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "category": "Marketing",
