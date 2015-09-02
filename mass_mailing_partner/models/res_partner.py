@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 # See README.rst file on addon root folder for license details
 
-from openerp import models, fields, api
+from openerp import models, fields, api, _
+from openerp.exceptions import ValidationError
 
 
 class ResPartner(models.Model):
@@ -21,8 +22,17 @@ class ResPartner(models.Model):
 
     @api.one
     def write(self, vals):
-        self.mass_mailing_contacts.write({
-            'name': vals.get('name') or self.name,
-            'email': vals.get('email') or self.email
-        })
-        return super(ResPartner, self).write(vals)
+        old_name = self.name
+        old_email = self.email
+        res = super(ResPartner, self).write(vals)
+        if old_name != self.name or old_email != self.email:
+            try:
+                self.mass_mailing_contacts.write({
+                    'name': self.name,
+                    'email': self.email
+                })
+            except:
+                raise ValidationError(
+                    _("This partner '%s' is subscribed to one or more "
+                      "mailing lists." % old_name))
+        return res
