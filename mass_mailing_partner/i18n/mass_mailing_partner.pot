@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-06 09:21+0000\n"
-"PO-Revision-Date: 2015-08-06 09:21+0000\n"
+"POT-Creation-Date: 2015-09-03 09:06+0000\n"
+"PO-Revision-Date: 2015-09-03 09:06+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -26,8 +26,7 @@ msgid "Mailing list number"
 msgstr ""
 
 #. module: mass_mailing_partner
-#: model:ir.actions.act_window,name:mass_mailing_partner.act_partner_mass_mailing_contacts
-#: view:res.partner:mass_mailing_partner.view_partner_form_mass_mailing_contacts
+#: view:res.partner:mass_mailing_partner.view_partner_form
 msgid "Mailing lists"
 msgstr ""
 
@@ -48,7 +47,7 @@ msgstr ""
 
 #. module: mass_mailing_partner
 #: model:ir.model,name:mass_mailing_partner.model_res_partner
-#: view:mail.mass_mailing.contact:mass_mailing_partner.view_mail_mass_mailing_contact_search_partner
+#: view:mail.mass_mailing.contact:mass_mailing_partner.view_mail_mass_mailing_contact_search
 #: field:mail.mass_mailing.contact,partner_id:0
 msgid "Partner"
 msgstr ""
@@ -59,7 +58,19 @@ msgid "Partner Tag"
 msgstr ""
 
 #. module: mass_mailing_partner
-#: view:mail.mass_mailing.contact:mass_mailing_partner.view_mail_mass_mailing_contact_tree_partner
+#: code:addons/mass_mailing_partner/models/mail_mass_mailing_contact.py:33
+#, python-format
+msgid "Partner already exists in this mailing list."
+msgstr ""
+
+#. module: mass_mailing_partner
+#: code:addons/mass_mailing_partner/models/res_partner.py:36
+#, python-format
+msgid "This partner '%s' is subscribed to one or more mailing lists."
+msgstr ""
+
+#. module: mass_mailing_partner
+#: view:mail.mass_mailing.contact:mass_mailing_partner.view_mail_mass_mailing_contact_tree
 msgid "{'readonly': [('partner_id', '!=', False)]}"
 msgstr ""
 

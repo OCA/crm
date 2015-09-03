@@ -9,7 +9,7 @@
     <field name="arch" type="xml">
         <field name="email" position="after">
             <field name="partner_mandatory" invisible="1"/>
-            <field name="partner_id" attrs="{'required': [('partner_mandatory', '=', True)]}"/>
+            <field name="partner_id"/>
         </field>
         <field name="email" position="attributes">
             <attribute name="attrs">{'readonly': [('partner_id', '!=', False)]}</attribute>

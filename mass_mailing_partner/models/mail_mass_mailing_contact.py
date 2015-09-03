@@ -10,7 +10,6 @@ class MailMassMailingContact(models.Model):
 
     partner_id = fields.Many2one(comodel_name='res.partner', string="Partner",
                                  domain=[('email', '!=', False)])
-    partner_mandatory = fields.Boolean(related='list_id.partner_mandatory')
 
     @api.one
     @api.onchange('partner_id')
