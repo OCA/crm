@@ -20,9 +20,8 @@ class MailMassMailingContactCase(base.BaseCase):
              'list_id': self.mailing_list2.id})
         self.check_mailing_contact_partner(contact)
         with self.assertRaises(ValidationError):
-            contact2 = self.create_mailing_contact(
-                {'email': 'partner2@test.com',
-                 'list_id': self.mailing_list2.id})
+            self.create_mailing_contact({'email': 'partner2@test.com',
+                                         'list_id': self.mailing_list2.id})
 
     def test_write_mass_mailing_contact(self):
         contact = self.create_mailing_contact(

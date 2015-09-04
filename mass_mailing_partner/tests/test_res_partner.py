@@ -8,10 +8,10 @@ from openerp.exceptions import ValidationError
 class ResPartnerCase(base.BaseCase):
 
     def test_count_mass_mailing_contacts(self):
-        contact = self.create_mailing_contact(
-            {'email': 'partner@test.com', 'list_id': self.mailing_list.id})
-        contact2 = self.create_mailing_contact(
-            {'email': 'partner@test.com', 'list_id': self.mailing_list2.id})
+        self.create_mailing_contact({'email': 'partner@test.com',
+                                     'list_id': self.mailing_list.id})
+        self.create_mailing_contact({'email': 'partner@test.com',
+                                     'list_id': self.mailing_list2.id})
         self.partner._count_mass_mailing_contacts()
         self.assertEqual(self.partner.mass_mailing_contacts_count, 2)
 
