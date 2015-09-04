@@ -26,13 +26,12 @@ class ResPartner(models.Model):
         old_email = self.email
         res = super(ResPartner, self).write(vals)
         if old_name != self.name or old_email != self.email:
-            try:
-                self.mass_mailing_contacts.write({
-                    'name': self.name,
-                    'email': self.email
-                })
-            except:
+            if self.mass_mailing_contacts and not self.email:
                 raise ValidationError(
                     _("This partner '%s' is subscribed to one or more "
                       "mailing lists." % old_name))
+            self.mass_mailing_contacts.write({
+                'name': self.name,
+                'email': self.email
+            })
         return res

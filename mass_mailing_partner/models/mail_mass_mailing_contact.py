@@ -62,8 +62,6 @@ class MailMassMailingContact(models.Model):
         list_id = vals.get('list_id') or self.list_id.id
         email = vals.get('email') or self.email
         mailing_list = m_mailing.browse(list_id)
-        if not email:
-            return vals
         # Look for a partner with that email
         email = email.strip()
         partners = m_partner.search([('email', '=ilike', email)], limit=1)
