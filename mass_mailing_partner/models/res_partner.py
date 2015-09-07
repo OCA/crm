@@ -21,7 +21,7 @@ class ResPartner(models.Model):
         if self.mass_mailing_contacts and not self.email:
             raise ValidationError(
                 _("This partner '%s' is subscribed to one or more "
-                  "mailing lists." % old_name))
+                  "mailing lists." % self.name))
 
     @api.one
     @api.depends('mass_mailing_contacts')

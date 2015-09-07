@@ -7,7 +7,6 @@ from openerp.tests.common import TransactionCase
 class BaseCase(TransactionCase):
     def setUp(self):
         super(BaseCase, self).setUp()
-        m_data = self.registry("ir.model.data")
         m_partner_category = self.env['res.partner.category']
         m_mailing_list = self.env['mail.mass_mailing.list']
         self.company_id = self.env.ref('base.main_company')
