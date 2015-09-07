@@ -103,6 +103,8 @@ class res_letter(orm.Model):
         """Put the state of the letter into Received"""
         for letter in self.browse(cr, uid, ids, context=context):
             self.write(cr, uid, [letter.id], {'state': 'rec'}, context=context)
+            if letter.recipient_partner_id:
+                letter.message_subscribe([letter.recipient_partner_id.id])
         return True
 
     def action_cancel(self, cr, uid, ids, context=None):
@@ -137,6 +139,8 @@ class res_letter(orm.Model):
                     fields.datetime.now()
                 },
                 context=context)
+            if letter.sender_partner_id:
+                letter.message_subscribe([letter.sender_partner_id.id])
         return True
 
     def action_rec_ret(self, cr, uid, ids, context=None):
