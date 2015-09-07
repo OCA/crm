@@ -32,7 +32,10 @@ class ResPartner(models.Model):
     def write(self, vals):
         res = super(ResPartner, self).write(vals)
         if vals.get('name') or vals.get('email'):
-            for partner in self:
-                partner.mass_mailing_contacts.write({'name': partner.name,
-                                                     'email': partner.email})
+            mm_vals = {}
+            if vals.get('name'):
+                mm_vals['name'] = vals['name']
+            if vals.get('email'):
+                mm_vals['name'] = vals['email']
+            self.mapped('mass_mailing_contacts').write(mm_vals)
         return res
