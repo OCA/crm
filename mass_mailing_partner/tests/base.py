@@ -10,8 +10,7 @@ class BaseCase(TransactionCase):
         m_data = self.registry("ir.model.data")
         m_partner_category = self.env['res.partner.category']
         m_mailing_list = self.env['mail.mass_mailing.list']
-        self.company_id = m_data.get_object_reference(
-            self.cr, self.uid, "base", "main_company")[1]
+        self.company_id = self.env.ref('base.main_company')
         self.company = self.env['res.company'].browse(self.company_id)
         self.partner = self.create_partner({'name': 'Partner test',
                                             'email': 'partner@test.com'})

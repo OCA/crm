@@ -16,22 +16,23 @@ class ResPartner(models.Model):
         store=True)
 
     @api.one
+    @api.constrains('email')
+    def _check_email_mass_mailing_contacts(self):
+        if self.mass_mailing_contacts and not self.email:
+            raise ValidationError(
+                _("This partner '%s' is subscribed to one or more "
+                  "mailing lists." % old_name))
+
+    @api.one
     @api.depends('mass_mailing_contacts')
     def _count_mass_mailing_contacts(self):
         self.mass_mailing_contacts_count = len(self.mass_mailing_contacts)
 
-    @api.one
+    @api.multi
     def write(self, vals):
-        old_name = self.name
-        old_email = self.email
         res = super(ResPartner, self).write(vals)
-        if old_name != self.name or old_email != self.email:
-            if self.mass_mailing_contacts and not self.email:
-                raise ValidationError(
-                    _("This partner '%s' is subscribed to one or more "
-                      "mailing lists." % old_name))
-            self.mass_mailing_contacts.write({
-                'name': self.name,
-                'email': self.email
-            })
+        if vals.get('name') or vals.get('email'):
+            for partner in self:
+                partner.mass_mailing_contacts.write({'name': partner.name,
+                                                     'email': partner.email})
         return res

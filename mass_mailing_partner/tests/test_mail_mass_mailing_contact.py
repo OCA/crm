@@ -3,7 +3,7 @@
 
 from . import base
 from .. import _match_existing_contacts
-from openerp.exceptions import ValidationError
+from psycopg2 import IntegrityError
 
 
 class MailMassMailingContactCase(base.BaseCase):
@@ -19,7 +19,7 @@ class MailMassMailingContactCase(base.BaseCase):
             {'email': 'partner2@test.com', 'name': 'Partner test 2',
              'list_id': self.mailing_list2.id})
         self.check_mailing_contact_partner(contact)
-        with self.assertRaises(ValidationError):
+        with self.assertRaises(IntegrityError):
             self.create_mailing_contact({'email': 'partner2@test.com',
                                          'list_id': self.mailing_list2.id})
 
