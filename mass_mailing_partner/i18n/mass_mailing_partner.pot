@@ -66,7 +66,7 @@ msgstr ""
 #. module: mass_mailing_partner
 #: code:addons/mass_mailing_partner/models/res_partner.py:36
 #, python-format
-msgid "This partner '%s' is subscribed to one or more mailing lists."
+msgid "This partner '%s' is subscribed to one or more mailing lists. Email must be assigned."
 msgstr ""
 
 #. module: mass_mailing_partner

@@ -66,8 +66,8 @@ msgstr "La empresa ya existe en esta lista de correo."
 #. module: mass_mailing_partner
 #: code:addons/mass_mailing_partner/models/res_partner.py:36
 #, python-format
-msgid "This partner '%s' is subscribed to one or more mailing lists."
-msgstr "Esta empresa '%s' está suscrita a una o más listas de correo."
+msgid "This partner '%s' is subscribed to one or more mailing lists. Email must be assigned."
+msgstr "Esta empresa '%s' está suscrita a una o más listas de correo. El email debe estar asignado."
 
 #. module: mass_mailing_partner
 #: view:mail.mass_mailing.contact:mass_mailing_partner.view_mail_mass_mailing_contact_tree

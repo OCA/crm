@@ -23,6 +23,7 @@ class MailMassMailingContact(models.Model):
             self.email = self.partner_id.email
 
     @api.model
+    @api.returns('self', lambda x: x.id)
     def create(self, vals):
         if not vals.get('partner_id'):
             vals = self._set_partner(vals)
@@ -47,10 +48,12 @@ class MailMassMailingContact(models.Model):
         return vals
 
     def _set_partner(self, vals):
+        email = vals.get('email', self.email)
+        if not email:
+            return vals
         m_mailing = self.env['mail.mass_mailing.list']
         m_partner = self.env['res.partner']
-        list_id = vals.get('list_id') or self.list_id.id
-        email = vals.get('email') or self.email
+        list_id = vals.get('list_id', self.list_id.id)
         mailing_list = m_mailing.browse(list_id)
         # Look for a partner with that email
         email = email.strip()
