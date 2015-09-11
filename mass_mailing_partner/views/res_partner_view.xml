@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+<record model="ir.ui.view" id="view_partner_form">
+    <field name="name">Partner Form with mailing contacts</field>
+    <field name="model">res.partner</field>
+    <field name="inherit_id" ref="base.view_partner_form"/>
+    <field name="arch" type="xml">
+        <div class="oe_right oe_button_box" position="inside">
+            <button name="%(mass_mailing.action_view_mass_mailing_contacts)d"
+                    context="{'search_default_partner_id': active_id,
+                              'default_partner_id': active_id}"
+                    type="action"
+                    class="oe_stat_button oe_inline"
+                    icon="fa-envelope-o">
+                <field name="mass_mailing_contacts_count"
+                       widget="statinfo"
+                       string="Mailing lists"/>
+            </button>
+        </div>
+    </field>
+</record>
+
+</data>
+</openerp>
