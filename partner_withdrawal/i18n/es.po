@@ -74,12 +74,12 @@ msgstr "Motivo"
 #. module: partner_withdrawal
 #: field:res.partner,membership_signup:0
 msgid "Signup date"
-msgstr "Fecha de alta"
+msgstr "Fecha de alta socio"
 
 #. module: partner_withdrawal
 #: field:res.partner,membership_withdrawal:0
 msgid "Withdrawal date"
-msgstr "Fecha de baja"
+msgstr "Fecha de baja socio"
 
 #. module: partner_withdrawal
 #: field:res.partner,membership_withdrawal_reason:0
