@@ -32,10 +32,12 @@ class CrmClaim(models.Model):
         return super(CrmClaim, self).copy(default)
 
     @api.multi
-    @api.depends('code', 'name')
+    @api.depends('code')
     def name_get(self):
+        orig_names = dict(super(CrmClaim, self).name_get())
+
         res = []
         for claim in self:
-            name = "[{0.code}] {0.name}".format(claim)
+            name = "[{}] {}".format(claim.code, orig_names[claim.id])
             res.append((claim.id, name))
         return res
