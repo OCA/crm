@@ -27,6 +27,6 @@ msgstr "Número de reclamación"
 
 #. module: crm_claim_code
 #: sql_constraint:crm.claim:0
-msgid "The code must be unique!"
-msgstr "¡El número debe de ser único!"
+msgid "The code must be unique per Company!"
+msgstr "¡El número debe de ser único por compañía!"
 
