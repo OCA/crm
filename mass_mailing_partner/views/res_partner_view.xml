@@ -22,5 +22,18 @@
     </field>
 </record>
 
+<record id="view_res_partner_filter" model="ir.ui.view">
+    <field name="name">Partner Search with mailing contacts</field>
+    <field name="model">res.partner</field>
+    <field name="inherit_id" ref="base.view_res_partner_filter"/>
+    <field name="priority">20</field>
+    <field name="arch" type="xml">
+        <field name="category_id" position="after">
+            <field name="mass_mailing_contacts" string="Mailing List"
+                filter_domain="[('mass_mailing_contacts.list_id','ilike', self)]"/>
+        </field>
+    </field>
+</record>
+
 </data>
 </openerp>

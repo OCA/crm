@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-03 09:06+0000\n"
-"PO-Revision-Date: 2015-09-03 09:06+0000\n"
+"POT-Creation-Date: 2015-09-30 07:46+0000\n"
+"PO-Revision-Date: 2015-09-30 07:46+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -17,6 +17,7 @@ msgstr ""
 
 #. module: mass_mailing_partner
 #: model:ir.model,name:mass_mailing_partner.model_mail_mass_mailing_list
+#: view:res.partner:mass_mailing_partner.view_res_partner_filter
 msgid "Mailing List"
 msgstr "Lista de correo"
 
@@ -58,13 +59,14 @@ msgid "Partner Tag"
 msgstr "Etiqueta de empresa"
 
 #. module: mass_mailing_partner
-#: code:addons/mass_mailing_partner/models/mail_mass_mailing_contact.py:33
+#: code:addons/mass_mailing_partner/models/mail_mass_mailing_contact.py:15
+#: sql_constraint:mail.mass_mailing.contact:0
 #, python-format
 msgid "Partner already exists in this mailing list."
 msgstr "La empresa ya existe en esta lista de correo."
 
 #. module: mass_mailing_partner
-#: code:addons/mass_mailing_partner/models/res_partner.py:36
+#: code:addons/mass_mailing_partner/models/res_partner.py:23
 #, python-format
 msgid "This partner '%s' is subscribed to one or more mailing lists. Email must be assigned."
 msgstr "Esta empresa '%s' está suscrita a una o más listas de correo. El email debe estar asignado."
