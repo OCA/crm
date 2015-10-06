@@ -23,4 +23,4 @@ class LeadCase(TransactionCase):
         self.partner.vat = self.test_vat
         self.lead.partner_id = self.partner
         result = self.lead.on_change_partner_id(self.partner.id)
-        self.assertEqual(result["vat"], self.test_vat)
+        self.assertEqual(result["value"]["vat"], self.test_vat)

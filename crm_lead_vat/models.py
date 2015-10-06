@@ -25,10 +25,10 @@ class Lead(models.Model):
         result = super(Lead, self).on_change_partner_id(
             cr, uid, ids, partner_id, context=context)
 
-        if result:
+        if result.get("value"):
             partner = self.pool.get("res.partner").browse(
                 cr, uid, partner_id, context=context)
             if partner.vat:
-                result["vat"] = partner.vat
+                result["value"]["vat"] = partner.vat
 
         return result
