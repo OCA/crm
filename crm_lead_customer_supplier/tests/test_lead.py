@@ -1,0 +1,31 @@
+# -*- coding: utf-8 -*-
+# © 2015 Antiun Ingeniería, S.L.
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+
+from openerp.tests.common import TransactionCase
+
+
+class LeadCase(TransactionCase):
+    def setUp(self):
+        super(LeadCase, self).setUp()
+        values = {
+            "name": __file__,
+            "customer": True,
+            "supplier": True,
+        }
+        self.lead = self.env["crm.lead"].create(values)
+        self.partner = self.env["res.partner"].create(values)
+
+    def test_mapped_values(self):
+        """Fields get mapped when creating partner."""
+        mapped = self.lead._map_values_to_partner(self.lead.name, False)[0]
+        self.assertEqual(mapped["customer"], self.lead.customer)
+        self.assertEqual(mapped["supplier"], self.lead.supplier)
+
+    def test_onchange_partner_id(self):
+        """Lead gets customer and supplier from partner when linked to it."""
+        self.lead.customer = self.lead.supplier = False
+        self.lead.partner_id = self.partner
+        result = self.lead.on_change_partner_id(self.partner.id)
+        self.assertEqual(result["value"]["customer"], self.partner.customer)
+        self.assertEqual(result["value"]["supplier"], self.partner.supplier)
