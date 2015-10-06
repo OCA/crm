@@ -10,11 +10,12 @@ class CrmClaim(models.Model):
     _inherit = "crm.claim"
 
     code = fields.Char(
-        string='Claim Number', required=True, default="/", readonly=True)
+        string='Claim Number', required=True, default="/", readonly=True,
+        oldname='number')
 
     _sql_constraints = [
-        ('crm_claim_unique_code', 'UNIQUE (code)',
-         'The code must be unique!'),
+        ('crm_claim_unique_code', 'UNIQUE (code, company_id)',
+         'The code must be unique per Company!'),
     ]
 
     @api.model
@@ -29,3 +30,14 @@ class CrmClaim(models.Model):
             default = {}
         default['code'] = self.env['ir.sequence'].get('crm.claim')
         return super(CrmClaim, self).copy(default)
+
+    @api.multi
+    @api.depends('code')
+    def name_get(self):
+        orig_names = dict(super(CrmClaim, self).name_get())
+
+        res = []
+        for claim in self:
+            name = "[{}] {}".format(claim.code, orig_names[claim.id])
+            res.append((claim.id, name))
+        return res

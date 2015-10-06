@@ -22,11 +22,12 @@
 
 {
     "name": "Sequential Code for Claims",
-    "version": "1.0",
+    "version": "8.0.1.1.0",
     "category": "Customer Relationship Management",
     "author": "OdooMRP team, "
               "AvanzOSC, "
               "Serv. Tecnol. Avanzados - Pedro M. Baeza, "
+              "credativ ltd., "
               "Odoo Community Association (OCA)",
     "website": "http://www.avanzosc.es",
     "license": "AGPL-3",

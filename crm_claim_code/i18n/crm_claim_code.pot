@@ -27,6 +27,6 @@ msgstr ""
 
 #. module: crm_claim_code
 #: sql_constraint:crm.claim:0
-msgid "The code must be unique!"
+msgid "The code must be unique per Company!"
 msgstr ""
 

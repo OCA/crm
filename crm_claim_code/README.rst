@@ -27,6 +27,7 @@ Contributors
 * Iker Coranti <ikercoranti@avanzosc.com>
 * Oihane Crucelaegui <oihanecrucelaegi@avanzosc.es>
 * Alfredo de la Fuente <alfredodelafuente@avanzosc.es>
+* Ondřej Kuzník <ondrej.kuznik@credativ.co.uk>
 
 Maintainer
 ----------
