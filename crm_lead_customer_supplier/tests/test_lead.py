@@ -18,9 +18,11 @@ class LeadCase(TransactionCase):
 
     def test_mapped_values(self):
         """Fields get mapped when creating partner."""
-        mapped = self.lead._map_values_to_partner(self.lead.name, False)[0]
-        self.assertEqual(mapped["customer"], self.lead.customer)
-        self.assertEqual(mapped["supplier"], self.lead.supplier)
+        self.lead.handle_partner_assignation()
+        self.assertEqual(self.lead.partner_id.customer,
+                         self.lead.customer)
+        self.assertEqual(self.lead.partner_id.supplier,
+                         self.lead.supplier)
 
     def test_onchange_partner_id(self):
         """Lead gets customer and supplier from partner when linked to it."""
