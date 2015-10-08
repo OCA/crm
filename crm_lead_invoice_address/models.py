@@ -21,11 +21,12 @@ class Lead(models.Model):
     invoice_country_id = fields.Many2one("res.country",
                                          "Invoice address country")
 
-    @api.one
-    def _map_values_to_partner(self, name, is_company, *args, **kwargs):
-        """Add invoice address to mapped values."""
-        result = super(Lead, self)._map_values_to_partner(
-            name, is_company, *args, **kwargs)[0]
+    @api.returns("res.partner")
+    def _lead_create_contact(self, name, is_company, *args, **kwargs):
+        """Add invoice address to partner."""
+        self.ensure_one()
+        result = (super(Lead, self)
+                  ._lead_create_contact(name, is_company, *args, **kwargs))
 
         if is_company and not self.invoice_equal:
             result.update({
@@ -44,9 +45,9 @@ class Lead(models.Model):
 
         return result
 
-    @api.one
     @api.onchange("invoice_state_id")
     def _invoice_state_id_change(self):
         """Update country in UI."""
+        self.ensure_one()
         if self.invoice_state_id:
             self.invoice_country_id = self.invoice_state_id.country_id
