@@ -21,7 +21,7 @@
 ##############################################################################
 {
     'name': 'Newsletters',
-    'version': '2.0',
+    'version': '8.0.2.0.0',
     'author': 'Therp BV,Odoo Community Association (OCA)',
     'website': 'http://www.therp.nl',
     "category": "Newsletter",
