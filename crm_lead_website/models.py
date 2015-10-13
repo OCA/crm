@@ -10,12 +10,11 @@ class Lead(models.Model):
 
     website = fields.Char()
 
-    @api.one
-    def _map_values_to_partner(self, *args, **kwargs):
-        """Add website to mapped values."""
-        result = super(Lead, self)._map_values_to_partner(*args, **kwargs)[0]
-        result["website"] = self.website
-        return result
+    @api.model
+    def _lead_create_contact(self, lead, name, is_company, parent_id=False):
+        """Add trade name to partner."""
+        return (super(Lead, self.with_context(default_website=lead.website))
+                ._lead_create_contact(lead, name, is_company, parent_id))
 
     def on_change_partner_id(self, cr, uid, ids, partner_id, context=None):
         """Recover website from partner if available."""
