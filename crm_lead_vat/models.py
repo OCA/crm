@@ -19,15 +19,12 @@ class Lead(models.Model):
         return (super(Lead, self.with_context(default_vat=lead.vat))
                 ._lead_create_contact(lead, name, is_company, parent_id))
 
-    def on_change_partner_id(self, cr, uid, ids, partner_id, context=None):
+    def on_change_partner_id(self, partner_id):
         """Recover VAT from partner if available."""
-        result = super(Lead, self).on_change_partner_id(
-            cr, uid, ids, partner_id, context=context)
+        result = super(Lead, self).on_change_partner_id(partner_id)
 
         if result.get("value"):
-            partner = self.pool.get("res.partner").browse(
-                cr, uid, partner_id, context=context)
-            if partner.vat:
-                result["value"]["vat"] = partner.vat
+            if self.partner_id and self.partner_id.vat:
+                result["value"]["vat"] = self.partner_id.vat
 
         return result
