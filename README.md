@@ -27,7 +27,7 @@ Unported addons
 ---------------
 addon | version | summary
 --- | --- | ---
-[crm_lead_stage_monitoring](__unported__/crm_lead_stage_monitoring/) | 1.0.0 (unported) | CRM - Add last activity on stage field
-[lettermgmt_hr](__unported__/lettermgmt_hr/) | 0.1 (unported) | Human Resources bindings for Letter Management
+[crm_lead_stage_monitoring](crm_lead_stage_monitoring/) | 1.0.0 (unported) | CRM - Add last activity on stage field
+[lettermgmt_hr](lettermgmt_hr/) | 0.1 (unported) | Human Resources bindings for Letter Management
 
 [//]: # (end addons)
