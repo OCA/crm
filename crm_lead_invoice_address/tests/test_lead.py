@@ -10,12 +10,13 @@ class LeadCase(TransactionCase):
         super(LeadCase, self).setUp()
         self.lead = self.env["crm.lead"].create({
             "name": __file__,
+            "partner_name": u"HÎ",
             "invoice_equal": False,
         })
         self.partner = self.env["res.partner"].create({"name": __file__})
 
-    def test_mapped_values(self):
-        """Invoice address gets mapped when creating partner."""
+    def test_transfered_values(self):
+        """Field gets transfered when creating partner."""
         self.lead.invoice_street = "invoice_street"
         self.lead.invoice_street2 = "invoice_street2"
         self.lead.invoice_city = "invoice_city"
@@ -23,15 +24,29 @@ class LeadCase(TransactionCase):
         self.lead.invoice_state_id = self.env.ref("base.state_us_2")
         self.lead.invoice_country_id = self.env.ref("base.us")
 
-        mapped = self.lead._map_values_to_partner(self.lead.name, True)[0]
+        self.lead.handle_partner_assignation()
 
-        self.assertEqual(mapped["type"], "invoice")
-        self.assertEqual(mapped["street"], self.lead.invoice_street)
-        self.assertEqual(mapped["street2"], self.lead.invoice_street2)
-        self.assertEqual(mapped["city"], self.lead.invoice_city)
-        self.assertEqual(mapped["zip"], self.lead.invoice_zip)
-        self.assertEqual(mapped["state_id"], self.lead.invoice_state_id.id)
-        self.assertEqual(mapped["country_id"], self.lead.invoice_country_id.id)
+        self.assertEqual(
+            self.lead.partner_id.type,
+            "invoice")
+        self.assertEqual(
+            self.lead.partner_id.street,
+            self.lead.invoice_street)
+        self.assertEqual(
+            self.lead.partner_id.street2,
+            self.lead.invoice_street2)
+        self.assertEqual(
+            self.lead.partner_id.city,
+            self.lead.invoice_city)
+        self.assertEqual(
+            self.lead.partner_id.zip,
+            self.lead.invoice_zip)
+        self.assertEqual(
+            self.lead.partner_id.state_id,
+            self.lead.invoice_state_id)
+        self.assertEqual(
+            self.lead.partner_id.country_id,
+            self.lead.invoice_country_id)
 
     def test_state_id_change(self):
         """Country reflects state change."""
