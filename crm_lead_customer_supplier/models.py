@@ -13,22 +13,23 @@ class Lead(models.Model):
     supplier = fields.Boolean(
         help="Check this box if this contact is a supplier.")
 
-    @api.returns("res.partner")
-    def _lead_create_contact(self, *args, **kwargs):
-        """Add trade name to partner."""
-        self.ensure_one()
-        return (super(Lead, self.with_context(default_customer=self.customer,
-                                              default_supplier=self.supplier))
-                ._lead_create_contact(*args, **kwargs))
+    @api.model
+    def _lead_create_contact(self, lead, name, is_company, parent_id=False):
+        """Add fields to partner."""
+        ctx = {
+            "default_customer": lead.customer,
+            "default_supplier": lead.supplier,
+        }
+        return (super(Lead, self.with_context(**ctx))
+                ._lead_create_contact(lead, name, is_company, parent_id))
 
     def on_change_partner_id(self, partner_id):
         """Recover customer and supplier from partner if available."""
         result = super(Lead, self).on_change_partner_id(partner_id)
 
         if result.get("value"):
-            partner = self.pool.get("res.partner").browse(partner_id)
-            if partner:
-                result["value"]["customer"] = partner.customer
-                result["value"]["supplier"] = partner.supplier
+            if self.partner_id:
+                result["value"]["customer"] = self.partner_id.customer
+                result["value"]["supplier"] = self.partner_id.supplier
 
         return result

@@ -10,14 +10,15 @@ class LeadCase(TransactionCase):
         super(LeadCase, self).setUp()
         values = {
             "name": __file__,
+            "partner_name": u"HÎ",
             "customer": True,
             "supplier": True,
         }
         self.lead = self.env["crm.lead"].create(values)
         self.partner = self.env["res.partner"].create(values)
 
-    def test_mapped_values(self):
-        """Fields get mapped when creating partner."""
+    def test_transfered_values(self):
+        """Fields get transfered when creating partner."""
         self.lead.handle_partner_assignation()
         self.assertEqual(self.lead.partner_id.customer,
                          self.lead.customer)
