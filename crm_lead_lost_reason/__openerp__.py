@@ -38,5 +38,5 @@
  'auto_install': False,
  'test': ['test/crm_lead_lost.yml',
           ],
- 'installable': True,
+ 'installable': False,
  }

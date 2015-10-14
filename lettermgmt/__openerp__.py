@@ -45,7 +45,7 @@
     ],
     'demo': ["data/letter_demo.xml"],
     'test': [],
-    'installable': True,
+    'installable': False,
     'auto_install': False,
 }
 

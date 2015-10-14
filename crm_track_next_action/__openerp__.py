@@ -28,6 +28,6 @@
     'depends': [
         'crm',
     ],
-    'installable': True,
+    'installable': False,
     'data': [],
 }

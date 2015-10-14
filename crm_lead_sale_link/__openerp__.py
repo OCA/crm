@@ -36,6 +36,6 @@
     'data': [
         'views/crm_lead_view.xml',
     ],
-    'installable': True,
+    'installable': False,
     'application': True,
 }

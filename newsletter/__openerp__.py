@@ -43,7 +43,7 @@
         'view/email_template_preview_view.xml',
         'view/newsletter_type.xml',
         ],
-    'installable': True,
+    'installable': False,
     'auto_install': False,
     'application': True,
     'license': 'AGPL-3',

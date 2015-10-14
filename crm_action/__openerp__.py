@@ -41,6 +41,6 @@
         'views/crm_action_view.xml',
         'views/crm_action_type_view.xml',
     ],
-    'installable': True,
+    'installable': False,
     'application': True,
 }

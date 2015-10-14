@@ -30,7 +30,7 @@
     'data': ['view/crm_lead_view.xml'],
     'demo': [],
     'test': ['test/test_street3.yml'],
-    'installable': True,
+    'installable': False,
     'auto_install': False,
     'license': 'AGPL-3',
     'application': False,
