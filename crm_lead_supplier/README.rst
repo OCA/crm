@@ -2,12 +2,12 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-======================================
-Customer/supplier check boxes in leads
-======================================
+===========================
+Supplier check box in leads
+===========================
 
 This module was written to extend the functionality of CRM leads to support
-knowing if a lead is from a customer or from a supplier.
+knowing if a lead is from a supplier.
 
 Usage
 =====

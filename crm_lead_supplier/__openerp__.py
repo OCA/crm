@@ -2,8 +2,8 @@
 # © 2015 Antiun Ingeniería, S.L.
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 {
-    "name": "Customer/supplier check boxes in leads",
-    "summary": "Add fields to know if leads are customers or suppliers",
+    "name": "Supplier check box in leads",
+    "summary": "Add fields to know if leads are suppliers too",
     "version": "8.0.1.0.0",
     "category": "Customer Relationship Management",
     "website": "https://odoo-community.org/",

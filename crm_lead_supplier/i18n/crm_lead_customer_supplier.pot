@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* crm_lead_customer_supplier
+#	* crm_lead_supplier
 #
 msgid ""
 msgstr ""
@@ -15,27 +15,27 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
 
-#. module: crm_lead_customer_supplier
+#. module: crm_lead_supplier
 #: help:crm.lead,customer:0
 msgid "Check this box if this contact is a customer."
 msgstr ""
 
-#. module: crm_lead_customer_supplier
+#. module: crm_lead_supplier
 #: help:crm.lead,supplier:0
 msgid "Check this box if this contact is a supplier."
 msgstr ""
 
-#. module: crm_lead_customer_supplier
+#. module: crm_lead_supplier
 #: field:crm.lead,customer:0
 msgid "Customer"
 msgstr ""
 
-#. module: crm_lead_customer_supplier
-#: model:ir.model,name:crm_lead_customer_supplier.model_crm_lead
+#. module: crm_lead_supplier
+#: model:ir.model,name:crm_lead_supplier.model_crm_lead
 msgid "Lead/Opportunity"
 msgstr ""
 
-#. module: crm_lead_customer_supplier
+#. module: crm_lead_supplier
 #: field:crm.lead,supplier:0
 msgid "Supplier"
 msgstr ""
