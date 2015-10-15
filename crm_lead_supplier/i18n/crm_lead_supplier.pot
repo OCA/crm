@@ -16,18 +16,8 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: crm_lead_supplier
-#: help:crm.lead,customer:0
-msgid "Check this box if this contact is a customer."
-msgstr ""
-
-#. module: crm_lead_supplier
 #: help:crm.lead,supplier:0
 msgid "Check this box if this contact is a supplier."
-msgstr ""
-
-#. module: crm_lead_supplier
-#: field:crm.lead,customer:0
-msgid "Customer"
 msgstr ""
 
 #. module: crm_lead_supplier
@@ -39,4 +29,3 @@ msgstr ""
 #: field:crm.lead,supplier:0
 msgid "Supplier"
 msgstr ""
-

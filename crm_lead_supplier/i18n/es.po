@@ -18,19 +18,9 @@ msgstr ""
 "Language: es\n"
 
 #. module: crm_lead_supplier
-#: help:crm.lead,customer:0
-msgid "Check this box if this contact is a customer."
-msgstr "Marque esta casilla si el contacto es un cliente."
-
-#. module: crm_lead_supplier
 #: help:crm.lead,supplier:0
 msgid "Check this box if this contact is a supplier."
 msgstr "Marque esta casilla si el contacto es un proveedor."
-
-#. module: crm_lead_supplier
-#: field:crm.lead,customer:0
-msgid "Customer"
-msgstr "Cliente"
 
 #. module: crm_lead_supplier
 #: model:ir.model,name:crm_lead_supplier.model_crm_lead
