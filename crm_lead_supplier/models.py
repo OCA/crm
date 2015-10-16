@@ -20,6 +20,7 @@ class Lead(models.Model):
         return (super(Lead, self.with_context(**ctx))
                 ._lead_create_contact(lead, name, is_company, parent_id))
 
+    @api.multi
     def on_change_partner_id(self, partner_id):
         """Recover supplier from partner if available."""
         result = super(Lead, self).on_change_partner_id(partner_id)
