@@ -6,7 +6,7 @@
     "summary": "Add Invoice address field to leads",
     "version": "8.0.1.0.0",
     "category": "Customer Relationship Management",
-    "invoice address": "https://odoo-community.org/",
+    "website": "https://odoo-community.org/",
     "author": "Antiun Ingeniería, S.L., Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "application": False,
