@@ -21,7 +21,7 @@
 from openerp import models, fields, api
 
 
-class Lead(models.Model):
+class CrmLead(models.Model):
     """Add third field in lead address"""
     _inherit = "crm.lead"
 
@@ -29,12 +29,12 @@ class Lead(models.Model):
 
     @api.model
     def _lead_create_contact(self, lead, name, is_company, parent_id=False):
-        return (super(Lead, self.with_context(default_street3=lead.street3))
+        return (super(CrmLead, self.with_context(default_street3=lead.street3))
                 ._lead_create_contact(lead, name, is_company, parent_id))
 
     @api.multi
     def on_change_partner_id(self, partner_id):
-        res = super(Lead, self).on_change_partner_id(partner_id)
+        res = super(CrmLead, self).on_change_partner_id(partner_id)
         if partner_id:
             partner = self.env['res.partner'].browse(partner_id)
             res['value'].update({'street3': partner.street3})
