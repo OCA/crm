@@ -1,8 +1,16 @@
-sudo: required
 language: python
 
 python:
   - "2.7"
+
+sudo: false
+cache: pip
+
+addons:
+  apt:
+    packages:
+      - expect-dev  # provides unbuffer utility
+      - python-lxml  # because pip installation is slow
 
 env:
   - VERSION="8.0" LINT_CHECK="1"
@@ -15,7 +23,7 @@ virtualenv:
 install:
   - pip install unicodecsv
   - git clone --depth=1 https://github.com/OCA/maintainer-quality-tools.git ${HOME}/maintainer-quality-tools
-  - git clone --depth=1 https://github.com/OCA/partner-contact.git ${HOME}/partner-contact
+  - git clone --depth=1 https://github.com/OCA/partner-contact.git ${HOME}/partner-contact  -b ${VERSION}
   - export PATH=${HOME}/maintainer-quality-tools/travis:${PATH}
   - travis_install_nightly
 # example: dependency

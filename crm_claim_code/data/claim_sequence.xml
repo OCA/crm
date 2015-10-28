@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data noupdate="1">
+        <record id="sequence_type_claim" model="ir.sequence.type">
+            <field name="name">Claim code type</field>
+            <field name="code">crm.claim</field>
+        </record>
+        <record id="sequence_claim" model="ir.sequence">
+            <field name="name">Claim Code</field>
+            <field name="code">crm.claim</field>
+            <field eval="4" name="padding" />
+            <field name="prefix">CLM</field>
+        </record>
+    </data>
+</openerp>

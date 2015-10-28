@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <record id="view_action_form" model="ir.ui.view">
+            <field name="name">crm.action.form</field>
+            <field name="model">crm.action</field>
+            <field name="arch" type="xml">
+                <form string="Actions">
+                    <header>
+                        <button string="Confirm" name="button_confirm" type="object" states="draft" class="oe_highlight"/>
+                        <button string="Set To Draft" name="button_set_to_draft" type="object" states="done"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="lead_id"/>
+                            <field name="partner_id"/>
+                            <field name="date"/>
+                            <field name="user_id"/>
+                            <field name="action_type" domain="[('is_active', '=', True)]"/>
+                            <field name="details" width="200"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_action_tree" model="ir.ui.view">
+            <field name="name">crm.action.tree</field>
+            <field name="model">crm.action</field>
+            <field name="arch" type="xml">
+                <tree editable="top">
+                    <field name="lead_id"/>
+                    <field name="partner_id"/>
+                    <field name="date"/>
+                    <field name="user_id"/>
+                    <field name="action_type" domain="[('is_active', '=', True)]"/>
+                    <field name="details"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_crm_action_filter" model="ir.ui.view">
+            <field name="name">CRM - Actions</field>
+            <field name="model">crm.action</field>
+            <field name="arch" type="xml">
+                <search string="Search Actions">
+                    <field name="lead_id"/>
+                    <field name="partner_id"/>
+                    <field name="date"/>
+                    <field name="user_id"/>
+                    <separator/>
+                    <filter string="Draft" name="draft_only"
+                            domain="[('state', '=', 'draft')]"/>
+                    <filter string="Done" name="done_only"
+                            domain="[('state', '=', 'done')]"/>
+                    <separator/>
+                    <filter string="My Actions" name="user_me"
+                            domain="[('user_id', '=', uid)]"
+                            help="Actions done by me"/>
+                </search>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_crm_action_view">
+            <field name="name">Actions</field>
+            <field name="res_model">crm.action</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" eval="False"/>
+            <field name="search_view_id" ref="view_crm_action_filter"/>
+            <field name="context">{'search_default_user_me':1}</field>
+        </record>
+
+        <menuitem name="Actions" id="menu_crm_action" parent="base.menu_sales" sequence="5"
+        action="action_crm_action_view"
+        groups="group_crm_action_user,group_crm_action_manager"/>
+
+    </data>
+</openerp>

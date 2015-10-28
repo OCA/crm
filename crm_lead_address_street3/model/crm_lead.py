@@ -21,31 +21,21 @@
 from openerp import models, fields, api
 
 
-class crm_lead(models.Model):
+class CrmLead(models.Model):
     """Add third field in lead address"""
-
     _inherit = "crm.lead"
-
-    @api.v7
-    def _lead_create_contact(self, cr, uid, lead, name, is_company,
-                             parent_id=False, context=None):
-        partner_obj = self.pool['res.partner']
-        partner = super(crm_lead, self)._lead_create_contact(
-            cr, uid, lead, name, is_company, parent_id=parent_id,
-            context=context)
-        partner_obj.write(cr, uid, [partner], {'street3': lead.street3},
-                          context=context)
-        return partner
 
     street3 = fields.Char('Street 3')
 
-    @api.v7
-    def on_change_partner_id(self, cr, uid, ids, partner_id, context=None):
-        res = super(crm_lead, self).on_change_partner_id(cr, uid, ids,
-                                                         partner_id,
-                                                         context=context)
+    @api.model
+    def _lead_create_contact(self, lead, name, is_company, parent_id=False):
+        return (super(CrmLead, self.with_context(default_street3=lead.street3))
+                ._lead_create_contact(lead, name, is_company, parent_id))
+
+    @api.multi
+    def on_change_partner_id(self, partner_id):
+        res = super(CrmLead, self).on_change_partner_id(partner_id)
         if partner_id:
-            partner = self.pool['res.partner'].browse(cr, uid, partner_id,
-                                                      context=context)
+            partner = self.env['res.partner'].browse(partner_id)
             res['value'].update({'street3': partner.street3})
         return res
