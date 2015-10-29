@@ -3,6 +3,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 from openerp import api, fields, models
+from .. import exceptions as ex
 
 
 class Lead(models.Model):
@@ -27,20 +28,23 @@ class Lead(models.Model):
         result = (super(Lead, self)
                   ._lead_create_contact(lead, name, is_company, parent_id))
 
-        if is_company and not lead.invoice_equal:
-            self.env["res.partner"].browse(result).update({
-                "type": "invoice",
-                "street": lead.invoice_street or result.get("street"),
-                "street2": lead.invoice_street2 or result.get("street2"),
-                "zip": lead.invoice_zip or result.get("zip"),
-                "city": lead.invoice_city or result.get("city"),
-                "state_id": (lead.invoice_state_id and
-                             lead.invoice_state_id.id or
-                             result.get("state_id")),
-                "country_id": (lead.invoice_country_id and
-                               lead.invoice_country_id.id or
-                               result.get("country_id")),
-            })
+        partner = self.env["res.partner"].browse(result)
+        if not lead.invoice_equal:
+            if not (lead.contact_name and lead.partner_name):
+                raise ex.Need2PartnersError()
+
+            elif parent_id:
+                partner.parent_id.update({
+                    "type": "invoice",
+                    "street": lead.invoice_street,
+                    "street2": lead.invoice_street2,
+                    "zip": lead.invoice_zip,
+                    "city": lead.invoice_city,
+                    "state_id": (lead.invoice_state_id and
+                                 lead.invoice_state_id.id),
+                    "country_id": (lead.invoice_country_id and
+                                   lead.invoice_country_id.id),
+                })
 
         return result
 

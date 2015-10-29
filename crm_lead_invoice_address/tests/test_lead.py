@@ -3,6 +3,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 from openerp.tests.common import TransactionCase
+from .. import exceptions as ex
 
 
 class LeadCase(TransactionCase):
@@ -11,9 +12,63 @@ class LeadCase(TransactionCase):
         self.lead = self.env["crm.lead"].create({
             "name": __file__,
             "partner_name": u"HÎ",
+            "contact_name": u"Yoü",
             "invoice_equal": False,
         })
         self.partner = self.env["res.partner"].create({"name": __file__})
+        self.fields = (
+            "street",
+            "street2",
+            "city",
+            "zip",
+            "state_id",
+            "country_id",
+        )
+
+    def tearDown(self):
+        if self.lead.partner_id:
+            self.assertEqual(self.lead.partner_id.type, "contact")
+            self.assertEqual(self.lead.partner_id.parent_id.type, "invoice")
+
+            for field in self.fields:
+                self.assertEqual(
+                    self.lead.partner_id[field],
+                    self.lead[field],
+                    "Checking field %s" % field)
+                self.assertEqual(
+                    self.lead.partner_id.parent_id[field],
+                    self.lead["invoice_%s" % field],
+                    "Checking field invoice_%s" % field)
+
+        return super(LeadCase, self).tearDown()
+
+    def test_no_address_mix(self):
+        """Addresses do not get mixed.
+
+        If this happens, some ``street2`` could get mixed with
+        ``invoice_street`` for example.
+        """
+        self.lead.write({
+            "street": "street",
+            "street2": "street2",
+            "city": "city",
+            "zip": "zip",
+            "state_id": self.env.ref("base.state_us_2").id,
+            "country_id": self.env.ref("base.us").id,
+        })
+        self.lead.handle_partner_assignation()
+
+    def test_required_contact_name(self):
+        """Need :attr:`~.contact_name` for adding invoice address to one."""
+        self.lead.contact_name = False
+        with self.assertRaises(ex.Need2PartnersError):
+            self.lead.handle_partner_assignation()
+
+    def test_required_partner_name(self):
+        """Need :attr:`~.partner_name` for adding invoice address to one."""
+        self.lead.partner_name = False
+        with self.assertRaises(ex.Need2PartnersError):
+            self.lead.handle_partner_assignation()
 
     def test_transfered_values(self):
         """Field gets transfered when creating partner."""
@@ -25,28 +80,6 @@ class LeadCase(TransactionCase):
         self.lead.invoice_country_id = self.env.ref("base.us")
 
         self.lead.handle_partner_assignation()
-
-        self.assertEqual(
-            self.lead.partner_id.type,
-            "invoice")
-        self.assertEqual(
-            self.lead.partner_id.street,
-            self.lead.invoice_street)
-        self.assertEqual(
-            self.lead.partner_id.street2,
-            self.lead.invoice_street2)
-        self.assertEqual(
-            self.lead.partner_id.city,
-            self.lead.invoice_city)
-        self.assertEqual(
-            self.lead.partner_id.zip,
-            self.lead.invoice_zip)
-        self.assertEqual(
-            self.lead.partner_id.state_id,
-            self.lead.invoice_state_id)
-        self.assertEqual(
-            self.lead.partner_id.country_id,
-            self.lead.invoice_country_id)
 
     def test_state_id_change(self):
         """Country reflects state change."""
