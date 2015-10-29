@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-29 16:00+0100\n"
-"PO-Revision-Date: 2015-10-29 16:00+0100\n"
+"POT-Creation-Date: 2015-10-29 17:07+0100\n"
+"PO-Revision-Date: 2015-10-29 17:07+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es\n"
@@ -19,53 +19,27 @@ msgstr ""
 
 #. module: crm_lead_invoice_address
 #: view:crm.lead:crm_lead_invoice_address.form_view
+#: view:crm.lead:crm_lead_invoice_address.opportunity_form_view
 msgid "Address"
 msgstr "Dirección"
 
 #. module: crm_lead_invoice_address
 #: view:crm.lead:crm_lead_invoice_address.form_view
+#: view:crm.lead:crm_lead_invoice_address.opportunity_form_view
 msgid "City"
 msgstr "Ciudad"
 
 #. module: crm_lead_invoice_address
 #: view:crm.lead:crm_lead_invoice_address.form_view
+#: view:crm.lead:crm_lead_invoice_address.opportunity_form_view
 msgid "Country"
 msgstr "País"
 
 #. module: crm_lead_invoice_address
 #: view:crm.lead:crm_lead_invoice_address.form_view
+#: view:crm.lead:crm_lead_invoice_address.opportunity_form_view
 msgid "Invoice address"
 msgstr "Dirección de facturación"
-
-#. module: crm_lead_invoice_address
-#: field:crm.lead,invoice_zip:0
-msgid "Invoice address ZIP code"
-msgstr "CP de la dirección de facturación"
-
-#. module: crm_lead_invoice_address
-#: field:crm.lead,invoice_city:0
-msgid "Invoice address city"
-msgstr "Ciudad de la dirección de facturación"
-
-#. module: crm_lead_invoice_address
-#: field:crm.lead,invoice_country_id:0
-msgid "Invoice address country"
-msgstr "País de la dirección de facturación"
-
-#. module: crm_lead_invoice_address
-#: field:crm.lead,invoice_state_id:0
-msgid "Invoice address state"
-msgstr "Provincia de la dirección de facturación"
-
-#. module: crm_lead_invoice_address
-#: field:crm.lead,invoice_street:0
-msgid "Invoice address street"
-msgstr "Calle de la dirección de facturación"
-
-#. module: crm_lead_invoice_address
-#: field:crm.lead,invoice_street2:0
-msgid "Invoice address street 2"
-msgstr "Calle 2 de la dirección de facturación"
 
 #. module: crm_lead_invoice_address
 #: model:ir.model,name:crm_lead_invoice_address.model_crm_lead
@@ -77,32 +51,23 @@ msgstr "Iniciativa/Oportunidad"
 #, python-format
 msgid "Need partner and contact names to separate invoice address."
 msgstr ""
-"Es necesario el nombre de la empresa y el del contacto para separar "
-"la dirección de facturación."
+"Es necesario el nombre de la empresa y el del contacto para separar la "
+"dirección de facturación."
 
 #. module: crm_lead_invoice_address
 #: view:crm.lead:crm_lead_invoice_address.form_view
+#: view:crm.lead:crm_lead_invoice_address.opportunity_form_view
 msgid "State"
 msgstr "Provincia"
 
 #. module: crm_lead_invoice_address
 #: view:crm.lead:crm_lead_invoice_address.form_view
+#: view:crm.lead:crm_lead_invoice_address.opportunity_form_view
 msgid "Street..."
 msgstr "Calle..."
 
 #. module: crm_lead_invoice_address
-#: help:crm.lead,invoice_equal:0
-msgid "Uncheck this option to specify a different billing address."
-msgstr ""
-"Desactive esta opción para especificar una dirección de facturación "
-"diferente."
-
-#. module: crm_lead_invoice_address
-#: field:crm.lead,invoice_equal:0
-msgid "Use same adress for billing"
-msgstr "Usar la misma dirección para la facturación"
-
-#. module: crm_lead_invoice_address
 #: view:crm.lead:crm_lead_invoice_address.form_view
+#: view:crm.lead:crm_lead_invoice_address.opportunity_form_view
 msgid "ZIP"
 msgstr "CP"
