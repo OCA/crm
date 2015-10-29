@@ -4,7 +4,7 @@
 {
     "name": "Supplier check box in leads",
     "summary": "Add fields to know if leads are suppliers too",
-    "version": "8.0.1.0.0",
+    "version": "8.0.1.1.0",
     "category": "Customer Relationship Management",
     "website": "https://odoo-community.org/",
     "author": "Antiun Ingeniería, S.L., Odoo Community Association (OCA)",

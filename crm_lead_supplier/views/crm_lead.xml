@@ -15,5 +15,16 @@
         </field>
     </record>
 
+    <record model="ir.ui.view" id="opportunity_form_view">
+        <field name="name">Add supplier to opportunity</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='active']" position="after">
+                <field name="supplier"/>
+            </xpath>
+        </field>
+    </record>
+
 </data>
 </openerp>
