@@ -1,3 +1,6 @@
+2015-10-29 14:58:58,807 18 INFO demo openerp.modules.loading: Modules loaded.
+2015-10-29 14:58:59,452 18 INFO demo openerp: translation file written successfully
+Outputting language template (*.pot) for module(s): crm_lead_invoice_address
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 #	* crm_lead_invoice_address
@@ -6,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-06 16:32+0000\n"
-"PO-Revision-Date: 2015-10-06 16:32+0000\n"
+"POT-Creation-Date: 2015-10-29 14:58+0000\n"
+"PO-Revision-Date: 2015-10-29 14:58+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -71,6 +74,12 @@ msgid "Lead/Opportunity"
 msgstr ""
 
 #. module: crm_lead_invoice_address
+#: code:addons/crm_lead_invoice_address/exceptions.py:15
+#, python-format
+msgid "Need partner and contact names to separate invoice address."
+msgstr ""
+
+#. module: crm_lead_invoice_address
 #: view:crm.lead:crm_lead_invoice_address.form_view
 msgid "State"
 msgstr ""
@@ -94,4 +103,3 @@ msgstr ""
 #: view:crm.lead:crm_lead_invoice_address.form_view
 msgid "ZIP"
 msgstr ""
-
