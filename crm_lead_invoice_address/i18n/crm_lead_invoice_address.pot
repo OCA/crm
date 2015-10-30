@@ -1,0 +1,70 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* crm_lead_invoice_address
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-10-29 16:07+0000\n"
+"PO-Revision-Date: 2015-10-29 16:07+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: crm_lead_invoice_address
+#: view:crm.lead:crm_lead_invoice_address.form_view
+#: view:crm.lead:crm_lead_invoice_address.opportunity_form_view
+msgid "Address"
+msgstr ""
+
+#. module: crm_lead_invoice_address
+#: view:crm.lead:crm_lead_invoice_address.form_view
+#: view:crm.lead:crm_lead_invoice_address.opportunity_form_view
+msgid "City"
+msgstr ""
+
+#. module: crm_lead_invoice_address
+#: view:crm.lead:crm_lead_invoice_address.form_view
+#: view:crm.lead:crm_lead_invoice_address.opportunity_form_view
+msgid "Country"
+msgstr ""
+
+#. module: crm_lead_invoice_address
+#: view:crm.lead:crm_lead_invoice_address.form_view
+#: view:crm.lead:crm_lead_invoice_address.opportunity_form_view
+msgid "Invoice address"
+msgstr ""
+
+#. module: crm_lead_invoice_address
+#: model:ir.model,name:crm_lead_invoice_address.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr ""
+
+#. module: crm_lead_invoice_address
+#: code:addons/crm_lead_invoice_address/exceptions.py:15
+#, python-format
+msgid "Need partner and contact names to separate invoice address."
+msgstr ""
+
+#. module: crm_lead_invoice_address
+#: view:crm.lead:crm_lead_invoice_address.form_view
+#: view:crm.lead:crm_lead_invoice_address.opportunity_form_view
+msgid "State"
+msgstr ""
+
+#. module: crm_lead_invoice_address
+#: view:crm.lead:crm_lead_invoice_address.form_view
+#: view:crm.lead:crm_lead_invoice_address.opportunity_form_view
+msgid "Street..."
+msgstr ""
+
+#. module: crm_lead_invoice_address
+#: view:crm.lead:crm_lead_invoice_address.form_view
+#: view:crm.lead:crm_lead_invoice_address.opportunity_form_view
+msgid "ZIP"
+msgstr ""
+
