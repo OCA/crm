@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_mail_mass_mailing_form" model="ir.ui.view">
+            <field name="name">mail.mass_mailing.keep_archives.form</field>
+            <field name="model">mail.mass_mailing</field>
+            <field name="inherit_id" ref="mass_mailing.view_mail_mass_mailing_form"/>
+            <field name="arch" type="xml">
+                <label for="reply_to" position="before">
+                    <field name="keep_archives"/>
+                </label>
+            </field>
+        </record>
+    </data>
+</openerp>
