@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-09-30 07:46+0000\n"
-"PO-Revision-Date: 2015-09-30 07:46+0000\n"
+"POT-Creation-Date: 2015-11-03 14:42+0000\n"
+"PO-Revision-Date: 2015-11-03 14:42+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,54 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: mass_mailing_partner
+#: view:partner.mail.list.wizard:mass_mailing_partner.partner_mail_list_wizard_form
+msgid "Add contacts to mailing list"
+msgstr "Añadir contactos a la lista de correo"
+
+#. module: mass_mailing_partner
+#: model:ir.actions.act_window,name:mass_mailing_partner.action_partner_mail_list
+msgid "Add to mailing list"
+msgstr "Añadir a lista de correo"
+
+#. module: mass_mailing_partner
+#: view:partner.mail.list.wizard:mass_mailing_partner.partner_mail_list_wizard_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: mass_mailing_partner
+#: model:ir.model,name:mass_mailing_partner.model_partner_mail_list_wizard
+#: view:partner.mail.list.wizard:mass_mailing_partner.partner_mail_list_wizard_form
+msgid "Create contact mailing list"
+msgstr "Crear lista de correo de contactos"
+
+#. module: mass_mailing_partner
+#: field:partner.mail.list.wizard,create_uid:0
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: mass_mailing_partner
+#: field:partner.mail.list.wizard,create_date:0
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: mass_mailing_partner
+#: field:partner.mail.list.wizard,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: mass_mailing_partner
+#: field:partner.mail.list.wizard,write_uid:0
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: mass_mailing_partner
+#: field:partner.mail.list.wizard,write_date:0
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: mass_mailing_partner
 #: model:ir.model,name:mass_mailing_partner.model_mail_mass_mailing_list
+#: field:partner.mail.list.wizard,mail_list_id:0
 #: view:res.partner:mass_mailing_partner.view_res_partner_filter
 msgid "Mailing List"
 msgstr "Lista de correo"
@@ -54,6 +101,12 @@ msgid "Partner"
 msgstr "Empresa"
 
 #. module: mass_mailing_partner
+#: code:addons/mass_mailing_partner/wizard/partner_mail_list_wizard.py:24
+#, python-format
+msgid "Partner '%s' has no email."
+msgstr "La empresa '%s' no tiene email."
+
+#. module: mass_mailing_partner
 #: field:mail.mass_mailing.list,partner_category:0
 msgid "Partner Tag"
 msgstr "Etiqueta de empresa"
@@ -63,7 +116,12 @@ msgstr "Etiqueta de empresa"
 #: sql_constraint:mail.mass_mailing.contact:0
 #, python-format
 msgid "Partner already exists in this mailing list."
-msgstr "La empresa ya existe en esta lista de correo."
+msgstr "La empresa ya existe en esta lista de correo"
+
+#. module: mass_mailing_partner
+#: field:partner.mail.list.wizard,partner_ids:0
+msgid "Partner ids"
+msgstr "IDS de empresas"
 
 #. module: mass_mailing_partner
 #: code:addons/mass_mailing_partner/models/res_partner.py:23
@@ -72,7 +130,11 @@ msgid "This partner '%s' is subscribed to one or more mailing lists. Email must 
 msgstr "Esta empresa '%s' está suscrita a una o más listas de correo. El email debe estar asignado."
 
 #. module: mass_mailing_partner
+#: view:partner.mail.list.wizard:mass_mailing_partner.partner_mail_list_wizard_form
+msgid "or"
+msgstr "o"
+
+#. module: mass_mailing_partner
 #: view:mail.mass_mailing.contact:mass_mailing_partner.view_mail_mass_mailing_contact_tree
 msgid "{'readonly': [('partner_id', '!=', False)]}"
 msgstr ""
-
