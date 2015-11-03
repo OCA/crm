@@ -26,6 +26,10 @@ partners.
 Usage
 =====
 
+In partner view, there is a new action called "Add to mailing list". This
+action open a pop-up to select a mailing list. Selected partners will be added
+as mailing list contacts.
+
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
    :target: https://runbot.odoo-community.org/runbot/111/8.0

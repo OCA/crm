@@ -17,6 +17,7 @@
         'views/mail_mass_mailing_contact_view.xml',
         'views/mail_mass_mailing_view.xml',
         'views/res_partner_view.xml',
+        'wizard/partner_mail_list_wizard.xml'
     ],
     "installable": True,
 }
