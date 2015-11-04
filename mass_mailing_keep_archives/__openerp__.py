@@ -21,12 +21,6 @@
 {
     'name': 'Mass Mailing Keep Archives',
     'version': '8.0.0.0.0',
-    'description': """
-Mass Mailing Keep Archives
-==========================
-This module adds an option on mass mailing campaings to allow you set if you
-want to keep archives (mails sent) or not.
-""",
     'author': 'ADHOC SA',
     'website': 'www.adhoc.com.ar',
     'depends': [
