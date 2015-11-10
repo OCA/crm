@@ -30,6 +30,7 @@
         'mass_mailing_view.xml',
         ],
     'demo': [
+        'demo/mass_mailing_demo.xml'
         ],
     'test': [],
     'installable': True,
