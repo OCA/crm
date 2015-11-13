@@ -1,0 +1,2 @@
+partner-contact https://github.com/OCA/partner-contact.git
+web https://github.com/OCA/web.git
