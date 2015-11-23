@@ -6,7 +6,7 @@
     "summary": "Add fields to know if leads are suppliers too",
     "version": "8.0.1.1.0",
     "category": "Customer Relationship Management",
-    "website": "https://odoo-community.org/",
+    "website": "http://www.antiun.com",
     "author": "Antiun Ingeniería, S.L., Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "application": False,
