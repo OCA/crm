@@ -18,7 +18,7 @@ msgstr ""
 #. module: crm_lead_lost_reason
 #: model:ir.model,name:crm_lead_lost_reason.model_crm_lead_lost
 msgid " Ask a reason for the opportunity lost."
-msgstr " Demande un raison pour la perte de l'opportunité."
+msgstr " Demande une raison pour la perte de l'opportunité."
 
 #. module: crm_lead_lost_reason
 #: view:crm.lead.lost:crm_lead_lost_reason.view_crm_lead_lost
@@ -91,7 +91,7 @@ msgstr "Raisons de perte"
 #. module: crm_lead_lost_reason
 #: view:crm.lead:crm_lead_lost_reason.crm_case_form_view_oppor_reason
 msgid "Lost reason:"
-msgstr "Raison de la perte:"
+msgstr "Raison de la perte :"
 
 #. module: crm_lead_lost_reason
 #: view:crm.lead:crm_lead_lost_reason.crm_case_form_view_oppor_reason
