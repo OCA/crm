@@ -9,7 +9,7 @@
         <field name="arch" type="xml">
             <data>
                 <xpath expr="//field[@name='fax']" position="after">
-                    <field name="website"/>
+                    <field name="website" widget="url"/>
                 </xpath>
             </data>
         </field>
@@ -22,7 +22,7 @@
         <field name="arch" type="xml">
             <data>
                 <xpath expr="//field[@name='fax']" position="after">
-                    <field name="website"/>
+                    <field name="website" widget="url"/>
                 </xpath>
             </data>
         </field>
