@@ -22,6 +22,7 @@ addon | version | summary
 [crm_lead_vat](crm_lead_vat/) | 8.0.1.1.0 | Add VAT field to leads
 [crm_lead_website](crm_lead_website/) | 8.0.1.0.0 | Add Website field to leads
 [crm_location](crm_location/) | 8.0.1.0.0 | CRM location
+[crm_sector](crm_sector/) | 8.0.1.0.0 | Link leads/opportunities to sectors
 [crm_track_next_action](crm_track_next_action/) | 8.0.1.0.0 | CRM Track Next Action
 [lettermgmt](lettermgmt/) | 8.0.1.2.0 | Track letters, parcels, registered documents
 [mass_mailing_partner](mass_mailing_partner/) | 8.0.1.0.0 | Link partners with mass-mailing
