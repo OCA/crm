@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+    <record id="view_report_crm_lead_filter" model="ir.ui.view">
+        <field name="name">Leads report search (substage)</field>
+        <field name="model">crm.lead.report</field>
+        <field name="inherit_id" ref="crm.view_report_crm_lead_filter"/>
+        <field name="arch" type="xml">
+            <filter context="{'group_by':'stage_id'}" position="after">
+                <filter string="Substage"
+                        context="{'group_by': 'substage_id'}"
+                />
+            </filter>
+        </field>
+    </record>
+
+    </data>
+</openerp>
