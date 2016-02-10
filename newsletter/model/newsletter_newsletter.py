@@ -79,7 +79,7 @@ class newsletter_newsletter(models.Model):
     @api.multi
     def action_send(self):
         self.write({'state': 'sending'})
-        self.env['ir.cron'].create({
+        self.env['ir.cron'].sudo().create({
             'name': 'newsletter._cronjob_send_newsletter',
             'user_id': self.env.uid,
             'priority': 9,
