@@ -66,6 +66,3 @@ class CrmLead(orm.Model):
     _columns = {
         'department_id': fields.many2one('hr.department', 'Department'),
         }
-
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

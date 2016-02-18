@@ -21,16 +21,12 @@
 ##############################################################################
 {
     'name': 'CRM with Department Categorization',
-    'version': '8.0.1.0.1',
+    'version': '9.0.1.0.0',
     'category': 'Generic Modules/CRM & SRM',
-    'author': "Camptocamp,Odoo Community Association (OCA)",
+    'author': 'Camptocamp, Odoo Community Association (OCA)',
     'website': 'http://camptocamp.com',
     'license': 'AGPL-3',
     'depends': ['crm', 'hr'],
     'data': ['crm_view.xml'],
-    'demo_xml': [],
     'installable': True,
-    'auto_install': False,
 }
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
