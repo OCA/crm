@@ -18,4 +18,7 @@
         "security/crm_deduplicate_acl_security.xml",
         "wizards/partner_merge_view.xml",
     ],
+    "images": [
+        "images/perms.png",
+    ],
 }
