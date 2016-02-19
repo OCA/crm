@@ -17,7 +17,7 @@ To configure this module, you need to:
 
 #. Go to *Settings > Users > Users*.
 #. Choose a user.
-#. Choose the desired permission level in *Appplication > Deduplicate
+#. Choose the desired permission level(s) in *Appplication > Deduplicate
    Contacts*:
 
    - *Manually* allows him to do the manual deduplication process.
@@ -27,9 +27,10 @@ To configure this module, you need to:
          Automatic contact deduplication can easily lead to unwanted results.
          Better backup before doing it.
 
-   - *Without restrictions* performs the deduplication with admin rigts, to
-     be able to update objects where the user would normally not have write
-     rights, and to allow him to merge contacts with different email addresses.
+   - *Without restrictions* executes the chosen deduplication method with admin
+     rigts, to be able to update objects where the user would normally not have
+     write rights, and to allow him to merge contacts with different email
+     addresses.
 
      .. warning::
         This is an advanced feature, be sure to train the user before enabling
