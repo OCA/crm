@@ -20,49 +20,33 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-from openerp.osv import orm, fields
+
+from openerp import models, fields
 
 
-class CrmSalesTeam(orm.Model):
-    _inherit = "crm.case.section"
-    _columns = {
-        'department_id': fields.many2one('hr.department', 'Department'),
-        }
+class CrmSalesTeam(models.Model):
+    _inherit = 'crm.team'
 
-    def _get_department(self, cr, uid, ids, context=None):
-        employee = self.pool['hr.employee']
-        department_id = False
-        employee_ids = employee.search(cr, uid, [('user_id', '=', uid)])
-        if employee_ids:
-            department_id = employee.browse(cr, uid,
-                                            employee_ids[0],
-                                            context=context).department_id.id
-        return department_id
-
-    _defaults = {
-        'department_id': _get_department,
-        }
+    department_id = fields.Many2one(
+        'hr.department',
+        'Department',
+        default=lambda s: s.env.user.employee_ids[0].department_id or None)
 
 
-class CrmLead(orm.Model):
-    _inherit = "crm.lead"
+class CrmLead(models.Model):
+    _inherit = 'crm.lead'
+
+    department_id = fields.Many2one('hr.department', 'Department')
 
     def on_change_user(self, cr, uid, ids, user_id, context=None):
-        """ Updates res dictionary with the department
-        corresponding to the section """
-        employee_obj = self.pool['hr.employee']
-        res = {}
-        res['department_id'] = False
-        if user_id:
-            employee_ids = employee_obj.search(cr, uid,
-                                               [('user_id', '=', user_id)],
-                                               context=context)
-            for employee in employee_obj.browse(cr, uid,
-                                                employee_ids, context=context):
-                if employee.department_id.id:
-                    res['department_id'] = employee.department_id.id
-        return {'value': res}
-
-    _columns = {
-        'department_id': fields.many2one('hr.department', 'Department'),
-        }
+        """
+        Updates res dictionary with the department
+        corresponding to the User Employee, consistent with the default value
+        """
+        res = super(CrmLead, self).on_change_user(
+            cr, uid, ids, user_id, context=context)
+        res.setdefault('value', {})
+        user = self.pool['res.users'].browse(cr, uid, user_id, context=context)
+        dptm_id = user.employee_ids[0].department_id.id or None
+        res['value']['department_id'] = dptm_id
+        return res
