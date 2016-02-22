@@ -21,10 +21,18 @@ class FirstnameCase(TransactionCase):
 
     def test_create_contact(self):
         """Contact correctly created."""
-        partner_id = self.lead._create_lead_partner(self.lead)
+        partner_id = self.lead.handle_partner_assignation()[self.lead.id]
         partner = self.env["res.partner"].browse(partner_id)
         self.assertEqual(self.lead.contact_name, partner.firstname)
         self.assertEqual(self.lead.contact_lastname, partner.lastname)
+
+    def test_create_contact_empty(self):
+        """No problems creating a contact without names."""
+        self.lead.update({
+            "contact_name": False,
+            "contact_lastname": False,
+        })
+        self.lead.handle_partner_assignation()
 
     def test_onchange_partner(self):
         """When changing partner, fields get correctly updated."""
