@@ -19,6 +19,8 @@ class CrmLead(models.Model):
             lead, name, is_company, parent_id)
         if not is_company and partner_id:
             partner = self.env["res.partner"].browse(partner_id)
+
+            # Write fields with values first
             partner.update(
                 OrderedDict(
                     sorted(
