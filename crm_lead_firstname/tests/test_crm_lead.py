@@ -28,7 +28,7 @@ class FirstnameCase(TransactionCase):
 
     def test_create_contact_empty(self):
         """No problems creating a contact without names."""
-        self.lead.update({
+        self.lead.write({
             "contact_name": False,
             "contact_lastname": False,
         })
