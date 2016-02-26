@@ -7,8 +7,8 @@ Phonecall Category
 ==================
 
 This module extends the functionality of CRM phone calls to support showing the
-category directly in their tree view and allow you to search by that field too.
-Category here usually means *Inbound* or *Outbound*.
+category directly in their tree view allowing you to search and group by that
+field too. Category here usually means *Inbound* or *Outbound*.
 
 Usage
 =====

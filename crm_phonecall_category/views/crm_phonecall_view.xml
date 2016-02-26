@@ -39,6 +39,9 @@
         <xpath expr="//field[@name='user_id']" position="after">
             <field name="categ_id"/>
         </xpath>
+        <xpath expr="//group[@string='Group By']">
+            <filter string="Category" context="{'group_by': 'category'}"/>
+        </xpath>
     </field>
 </record>
 
