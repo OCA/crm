@@ -16,6 +16,6 @@
         "partner_firstname",
     ],
     "data": [
-        "views/crm_lead.xml",
+        "views/crm_lead_view.xml",
     ],
 }
