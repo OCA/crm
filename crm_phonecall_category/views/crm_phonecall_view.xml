@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2016 Antiun Ingeniería S.L. - Jairo Llopis
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+
+<openerp>
+<data>
+
+<record id="crm_case_phone_tree_view" model="ir.ui.view">
+    <field name="name">Show category</field>
+    <field name="model">crm.phonecall</field>
+    <field name="inherit_id" ref="crm.crm_case_phone_tree_view"/>
+    <field name="arch" type="xml">
+        <xpath expr="//field[@name='categ_id']" position="attributes">
+            <attribute name="invisible">False</attribute>
+            <attribute name="widget">selection</attribute>
+            <attribute name="domain">[
+                ('object_id.model', '=', 'crm.phonecall'),
+            ]</attribute>
+        </xpath>
+    </field>
+</record>
+
+<record id="crm_case_inbound_phone_tree_view" model="ir.ui.view">
+    <field name="name">Show category</field>
+    <field name="model">crm.phonecall</field>
+    <field name="inherit_id" ref="crm.crm_case_inbound_phone_tree_view"/>
+    <field name="arch" type="xml">
+        <xpath expr="//field[@name='categ_id']" position="attributes">
+            <attribute name="invisible">False</attribute>
+        </xpath>
+    </field>
+</record>
+
+<record id="view_crm_case_phonecalls_filter" model="ir.ui.view">
+    <field name="name">Search by category</field>
+    <field name="model">crm.phonecall</field>
+    <field name="inherit_id" ref="crm.view_crm_case_phonecalls_filter"/>
+    <field name="arch" type="xml">
+        <xpath expr="//field[@name='user_id']" position="after">
+            <field name="categ_id"/>
+        </xpath>
+        <xpath expr="//group[@string='Group By']">
+            <filter string="Category" context="{'group_by': 'category'}"/>
+        </xpath>
+    </field>
+</record>
+
+</data>
+</openerp>
