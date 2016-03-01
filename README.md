@@ -13,8 +13,10 @@ addon | version | summary
 [crm_action](crm_action/) | 8.0.1.1.0 | CRM Action
 [crm_claim_code](crm_claim_code/) | 8.0.1.0.0 | Sequential Code for Claims
 [crm_claim_type](crm_claim_type/) | 8.0.1.0.0 | Claim types for CRM
+[crm_deduplicate_acl](crm_deduplicate_acl/) | 8.0.1.0.0 | Contact deduplication with fine-grained permission control
 [crm_lead_address_street3](crm_lead_address_street3/) | 8.0.0.1.0 | Street3 in lead addresses
 [crm_lead_code](crm_lead_code/) | 8.0.1.0.0 | Sequential Code for Leads / Opportunities
+[crm_lead_firstname](crm_lead_firstname/) | 8.0.1.0.0 | Specify split names for contacts in leads
 [crm_lead_invoice_address](crm_lead_invoice_address/) | 8.0.1.0.0 | Add Invoice address field to leads
 [crm_lead_lost_reason](crm_lead_lost_reason/) | 8.0.1.0.0 | Opportunity Lost Reason
 [crm_lead_sale_link](crm_lead_sale_link/) | 8.0.1.0.0 | CRM Lead Sale Link
@@ -22,6 +24,8 @@ addon | version | summary
 [crm_lead_vat](crm_lead_vat/) | 8.0.1.1.0 | Add VAT field to leads
 [crm_lead_website](crm_lead_website/) | 8.0.1.0.0 | Add Website field to leads
 [crm_location](crm_location/) | 8.0.1.0.0 | CRM location
+[crm_phonecall_category](crm_phonecall_category/) | 8.0.1.0.0 | Show the already-existing field in tree and search views
+[crm_phonecall_summary_predefined](crm_phonecall_summary_predefined/) | 8.0.1.0.0 | Allows to choose from a defined summary list
 [crm_sector](crm_sector/) | 8.0.1.0.0 | Link leads/opportunities to sectors
 [crm_track_next_action](crm_track_next_action/) | 8.0.1.0.0 | CRM Track Next Action
 [lettermgmt](lettermgmt/) | 8.0.1.2.0 | Track letters, parcels, registered documents
