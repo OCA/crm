@@ -13,10 +13,17 @@ addons:
       - python-lxml  # because pip installation is slow
 
 env:
-  - VERSION="8.0" LINT_CHECK="1"
-  - VERSION="8.0" ODOO_REPO="odoo/odoo" LINT_CHECK="0"
-  - VERSION="8.0" ODOO_REPO="OCA/OCB" LINT_CHECK="0"
+  global:
+  - VERSION="8.0" TESTS="0" LINT_CHECK="0" TRANSIFEX="0"
+  - TRANSIFEX_USER='transbot@odoo-community.org'
+  - secure: FFyWAwM7PmCbOI8lSIFNkDknkspQQv3sD8aKyz5tTPtAmLdALEj+MaPsuZJS9PoHzqjrylrhHEg+lB5lNjHR+3t2oOgHZb44l+mob22N6WDB5nag11jnBI+q0hGEHrbYNe5r3mnNvUQKXSfmjyKE181755fnOvhc88x5DnHXo0Q=
 
+  matrix:
+  - LINT_CHECK="1"
+  - TRANSIFEX="1"
+  - TESTS="1" ODOO_REPO="odoo/odoo"
+  - TESTS="1" ODOO_REPO="OCA/OCB"
+  
 virtualenv:
   system_site_packages: true
 
@@ -30,4 +37,4 @@ script:
   - travis_run_tests
 
 after_success:
-  coveralls
+  - travis_after_tests_success
