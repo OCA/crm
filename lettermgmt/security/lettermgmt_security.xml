@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2016 Iván Todorovich <ivan.todorovich@gmail.com>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<openerp>
+  <data noupdate="0">
+
+    <record id="lettermgmt.module_category" model="ir.module.category">
+      <field name="name">Letter Management</field>
+      <field name="sequence">2</field>
+    </record>
+
+    <record id="lettermgmt.group_letter_reasignment" model="res.groups">
+      <field name="name">Use Letter Reasignments</field>
+      <field name="category_id" ref="lettermgmt.module_category"/>
+      <field name="users" eval="[(4, ref('base.user_root'))]"/>
+      <field name="comment">Members of this group can view and edit Letter Reasignments.</field>
+    </record>
+
+    <record id="lettermgmt.group_letter_thread" model="res.groups">
+      <field name="name">Use Letter Parent and Thread</field>
+      <field name="category_id" ref="lettermgmt.module_category"/>
+      <field name="users" eval="[(4, ref('base.user_root'))]"/>
+      <field name="comment">Members of this group can set letters' parent and/or childs.</field>
+    </record>
+
+  </data>
+</openerp>

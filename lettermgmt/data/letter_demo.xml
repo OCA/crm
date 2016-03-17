@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- © 2016 Iván Todorovich <ivan.todorovich@gmail.com>
+     © 2015 Holger Brunn <hbrunn@therp.nl>
+     © 2009 Sandy Carter <sandy.carter@savoirfairelinux.com>
+     © 2009 Parthiv Patel, Tech Receptives
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+     
 <openerp>
   <data noupdate="1">
 
@@ -16,15 +22,15 @@
 
     <!-- Letter Classes -->
 
-    <record id="data_class_con" model="letter.class">
+    <record id="data_class_con" model="letter.category">
       <field name="name">Confidential</field>
     </record>
 
-    <record id="data_class_per" model="letter.class">
+    <record id="data_class_per" model="letter.category">
       <field name="name">Personal</field>
     </record>
 
-    <record id="data_class_class" model="letter.class">
+    <record id="data_class_class" model="letter.category">
       <field name="name">Classified</field>
     </record>
 

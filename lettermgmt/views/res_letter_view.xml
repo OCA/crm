@@ -1,48 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
+<!-- © 2016 Iván Todorovich <ivan.todorovich@gmail.com>
+     © 2015 Holger Brunn <hbrunn@therp.nl>
+     © 2009 Sandy Carter <sandy.carter@savoirfairelinux.com>
+     © 2009 Parthiv Patel, Tech Receptives
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+     
 <openerp>
   <data>
 
     <!-- Views -->
 
-    <record model="ir.ui.view" id="res_letter_out_tree_view">
-      <field name="name">Outbound Letter Tree</field>
+    <record model="ir.ui.view" id="res_letter_tree_view">
+      <field name="name">Letter Tree</field>
       <field name="model">res.letter</field>
       <field name="arch" type="xml">
-        <tree string="Letters">
-          <field name="name"/>
+        <tree colors="blue:state in ('draft','created','validated');black:state in ('sent','rec');red:state in ('rec_bad','rec_ret');gray:state == 'cancel'" string="Letters">
           <field name="number"/>
-          <field name="move"/>
-          <field name="type"/>
-          <field name="class"/>
+          <field name="sender_partner_id"    invisible="context.get('move',False) == 'out'"/>
+          <field name="recipient_partner_id" invisible="context.get('move',False) == 'in'" />
+          <field name="name"/>
+          <field name="category_ids" widget="many2many_tags"/>
           <field name="date"/>
-          <field name="recipient_partner_id"/>
-          <field name="state"/>
           <field name="channel_id"/>
+          <field name="track_ref"/>
+          <field name="state"/>
         </tree>
       </field>
     </record>
 
-    <record model="ir.ui.view" id="res_letter_in_tree_view">
-      <field name="name">Inbound Letter Tree</field>
-      <field name="model">res.letter</field>
-      <field name="arch" type="xml">
-        <tree string="Letters">
-          <field name="name"/>
-          <field name="number"/>
-          <field name="move"/>
-          <field name="type"/>
-          <field name="class"/>
-          <field name="date"/>
-          <field name="recipient_partner_id"/>
-          <field name="state"/>
-          <field name="channel_id"/>
-        </tree>
-      </field>
-    </record>
-
-    <record model="ir.ui.view" id="res_letter_out_calendar_view">
-      <field name="name">Outbound Letter Calendar</field>
+    <record model="ir.ui.view" id="res_letter_calendar_view">
+      <field name="name">Letter Calendar</field>
       <field name="model">res.letter</field>
       <field name="priority" eval="2"/>
       <field name="arch" type="xml">
@@ -53,139 +40,87 @@
       </field>
     </record>
 
-    <record model="ir.ui.view" id="res_letter_in_calendar_view">
-      <field name="name">Inbound Letter Calendar</field>
+    <record model="ir.ui.view" id="res_letter_filter">
+      <field name="name">Letter Search</field>
       <field name="model">res.letter</field>
-      <field name="priority" eval="2"/>
       <field name="arch" type="xml">
-        <calendar string="Letters" date_start="date" color="move">
-          <field name="name"/>
-          <field name="recipient_partner_id"/>
-        </calendar>
+        <search string="Search Letters">
+          <field name="sender_partner_id" operator="child_of"/>
+          <field name="recipient_partner_id" operator="child_of"/>
+          <field name="name" />
+          <field name="category_ids" filter_domain="[('category_ids', 'ilike', self)]"/>
+          <field name="date"/>
+          <separator/>
+          <filter string="Pending" name="pending"
+                  domain="[('state','in', ['draft', 'sent'])]"
+                  help="Letters that haven't arrived to its destination yet."/>
+        </search>
       </field>
     </record>
 
-    <record model="ir.ui.view" id="res_letter_out_form_view">
-      <field name="name">Outbound Letter Form</field>
+    <record model="ir.ui.view" id="res_letter_form_view">
+      <field name="name">Letter Form</field>
       <field name="model">res.letter</field>
       <field name="arch" type="xml">
         <form string="Letter" version="7.0">
           <header name="Toolbar">
-            <button name="action_create" states="draft" string="Create" type="object" class="oe_highlight"/>
-            <button name="action_validate" states="created" string="Validate" type="object" class="oe_highlight"/>
-            <button name="action_send" states="validated" string="Send" type="object" class="oe_highlight"/>
-            <button name="action_cancel" states="draft,created,validated" string="Cancel" type="object" icon="STOCK_CANCEL"/>
-            <button name="action_set_draft" string="Set To Draft" type="object" icon="STOCK_CONVERT"/>
-            <field name="state" widget="statusbar" statusbar_visible="draft,created,validated,sent,cancel"/>
+            <button name="action_send" states="draft" string="Send" type="object" class="oe_highlight" />
+            <button name="action_received" states="sent" string="Received" type="object" class="oe_highlight" />
+            <button name="action_rec_ret" states="sent" string="Received but Returned" type="object" />
+            <button name="action_rec_bad" states="sent" string="Received Damage" type="object" />
+            <button name="action_cancel" states="draft,sent,rec,rec_ret,rec_bad" string="Cancel" type="object" />
+            <button name="action_cancel_draft" states="cancel" string="Back to Draft" type="object" />
+            <field name="state" widget="statusbar" statusbar_visible="draft,sent,rec"/>
           </header>
           <sheet>
-            <group col="4">
-              <group string="References" col="2" colspan="2">
-                <field name="number" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
-                <field name="orig_ref" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
-                <field name="parent_id" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
-                <field name="folder_id" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
+            <div class="oe_title oe_left">
+              <h1><field name="number" class="oe_inline" readonly="1" /></h1>
+              <field name="category_ids" widget="many2many_tags" placeholder="Tags... (eg: Classified)" attrs="{'readonly': [('state', 'not in', ['draft'])]}"/>
+              <field name="parent_id" placeholder="Parent..." attrs="{'readonly': [('state', 'not in', ['draft'])]}"/>
+            </div> 
+            <group>
+              <group>
+                <field name="sender_partner_id"    attrs="{'readonly': [('state', 'not in', ['draft'])], 'required': True}"/>
+                <field name="recipient_partner_id" attrs="{'readonly': [('state', 'not in', ['draft'])], 'required': True}"/>
+                <field name="name" attrs="{'readonly': [('state', 'not in', ['draft'])]}"/>
               </group>
-              <group string="Details" col="2" colspan="2" attrs="{'readonly': [('state', 'not in', ['draft'])]}">
-                <field name="date" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
-                <field name="snd_rec_date" string="Send Date" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
-                <field name="type" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
-                <field name="class" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
-                <field name="channel_id" string="Inbound Source" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
-                <field name="track_ref" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
-              </group>
-              <group string="Subject" col="2" colspan="2">
-                <field name="name" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
-              </group>
-              <group string="Dimensions" col="2" colspan="2">
-                <field name="size" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
-                <field name="weight" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
-              </group>
-              <group string="Addresses" col="4" colspan="4">
-                <field name="recipient_partner_id" required="True" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}" />
-                <field name="sender_partner_id" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
-                <field name="note" colspan="4"/>
+              <group>
+                <field name="date" attrs="{'readonly': [('state', 'not in', ['draft'])]}"/>
+                <field name="channel_id" string="Outbound Source" attrs="{'readonly': [('state', 'not in', ['draft'])]}"/>
+                <field name="track_ref" attrs="{'readonly': [('state', 'not in', ['draft', 'sent'])]}"/>
               </group>
             </group>
-
             <notebook name="Extra">
-              <page string="Thread">
-                <field name="child_line" colspan="4" nolabel="1" readonly="True"/>
+              <page string="Delivery Notes">
+                <field name="note" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
               </page>
-              <page string="Copies to External">
-                <group name="extern_grp" col="1">
-                  <group col="1">
-                    <field name="extern_partner_ids" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
+              <page string="Additional Information">
+                <group>
+                  <group>
+                    <field name="type_id" attrs="{'readonly': [('state', 'not in', ['draft'])]}"/>
+                    <field name="folder_id" attrs="{'readonly': [('state', 'not in', ['draft'])]}"/>
+                  </group>
+                  <group>
+                    <field name="snd_date" attrs="{'readonly': [('state', 'not in', ['draft', 'sent'])]}"/>
+                    <field name="rec_date"/>
+                  </group>
+                  <group>
+                    <field name="size" attrs="{'readonly': [('state', 'not in', ['draft'])]}"/>
+                    <field name="weight" attrs="{'readonly': [('state', 'not in', ['draft'])]}"/>
+                  </group>
+                  <group>
+                    <field name="orig_ref" attrs="{'readonly': [('state', 'not in', ['draft', 'sent'])]}"/>
+                    <field name="expeditor_ref" attrs="{'readonly': [('state', 'not in', ['draft', 'sent'])]}"/>
                   </group>
                 </group>
               </page>
-            </notebook>
-
-          </sheet>
-          <div class="oe_chatter">
-            <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
-            <field name="message_ids" widget="mail_thread"/>
-          </div>
-        </form>
-      </field>
-    </record>
-
-
-    <record model="ir.ui.view" id="res_letter_in_form_view">
-      <field name="name">Inbound Letter Form</field>
-      <field name="model">res.letter</field>
-      <field name="arch" type="xml">
-        <form string="Letter" version="7.0">
-          <header name="Toolbar">
-            <button name="action_create" states="draft" string="Create" type="object" class="oe_highlight"/>
-            <button name="action_validate" states="created" string="Validate" type="object" class="oe_highlight"/>
-            <button name="action_received" states="validated" string="Received" type="object" icon="STOCK_OK"/>
-            <button name="action_rec_ret" states="validated" string="Received but Returned" type="object" icon="STOCK_UNDO"/>
-            <button name="action_rec_bad" states="validated" string="Received Damage" type="object" icon="STOCK_DIALOG_WARNING"/>
-            <button name="action_set_draft" string="Set To Draft" type="object" icon="STOCK_CONVERT"/>
-            <button name="action_cancel" states="draft,created,validated" string="Cancel" type="object" icon="STOCK_CANCEL"/>
-            <field name="state" widget="statusbar" statusbar_visible="draft,created,validated,rec,rec_bad,rec_ret,cancel"/>
-          </header>
-          <sheet>
-            <group col="4">
-              <group string="References" col="2" colspan="2">
-                <field name="number" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
-                <field name="orig_ref" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
-                <field name="expeditor_ref" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
-                <field name="parent_id" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
-                <field name="folder_id" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
-              </group>
-              <group string="Details" col="2" colspan="2">
-                <field name="date" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
-                <field name="snd_rec_date" string="Arrival Date" required="True" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
-                <field name="type" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
-                <field name="class" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
-                <field name="channel_id" string="Outbound Source" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
-                <field name="track_ref" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
-              </group>
-              <group string="Subject" col="2" colspan="2">
-                  <field name="name" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
-              </group>
-              <group string="Dimensions" col="2" colspan="2">
-                <field name="size" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
-                <field name="weight" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
-              </group>
-              <group string="Addresses" col="4" colspan="4">
-                <field name="recipient_partner_id" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
-                <field name="sender_partner_id" required="True" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
-                <field name="note" />
-              </group>
-            </group>
-
-            <notebook name="Extra">
-              <page string="Thread">
+              <page string="Thread" groups="lettermgmt.group_letter_thread">
                 <field name="child_line" colspan="4" nolabel="1" readonly="True"/>
               </page>
-              <page string="Reassignment">
+              <page string="Reassignment" groups="lettermgmt.group_letter_reasignment">
                 <field name="reassignment_ids" nolabel="1"/>
               </page>
             </notebook>
-
           </sheet>
           <div class="oe_chatter">
             <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
@@ -204,8 +139,7 @@
       <field name="view_type">form</field>
       <field name="view_mode">tree,form,calendar</field>
       <field name="domain">[('move','=','out')]</field>
-      <field name="context">{'move':'out'}</field>
-      <field name="view_id" ref="res_letter_out_tree_view"/>
+      <field name="context">{'move':'out', 'search_default_pending': 1}</field>
     </record>
 
     <record model="ir.actions.act_window" id="action_res_letter_in_tree_view">
@@ -215,49 +149,42 @@
       <field name="view_type">form</field>
       <field name="view_mode">tree,form,calendar</field>
       <field name="domain">[('move','=','in')]</field>
-      <field name="context">{'move':'in'}</field>
-      <field name="view_id" ref="res_letter_in_tree_view"/>
+      <field name="context">{'move':'in', 'search_default_pending': 1}</field>
     </record>
 
     <record model="ir.actions.act_window.view" id="action_res_letter_out_tree_mode">
       <field name="sequence" eval="1"/>
       <field name="view_mode">tree</field>
-      <field name="view_id" ref="res_letter_out_tree_view"/>
       <field name="act_window_id" ref="action_res_letter_out_tree_view"/>
     </record>
 
     <record model="ir.actions.act_window.view" id="action_res_letter_in_tree_mode">
       <field name="sequence" eval="1"/>
       <field name="view_mode">tree</field>
-      <field name="view_id" ref="res_letter_in_tree_view"/>
       <field name="act_window_id" ref="action_res_letter_in_tree_view"/>
     </record>
 
     <record model="ir.actions.act_window.view" id="action_res_letter_out_form_mode">
       <field name="sequence" eval="2"/>
       <field name="view_mode">form</field>
-      <field name="view_id" ref="res_letter_out_form_view"/>
       <field name="act_window_id" ref="action_res_letter_out_tree_view"/>
     </record>
 
     <record model="ir.actions.act_window.view" id="action_res_letter_in_form_mode">
       <field name="sequence" eval="2"/>
       <field name="view_mode">form</field>
-      <field name="view_id" ref="res_letter_in_form_view"/>
       <field name="act_window_id" ref="action_res_letter_in_tree_view"/>
     </record>
 
     <record model="ir.actions.act_window.view" id="action_res_letter_out_calendar_mode">
       <field name="sequence" eval="3"/>
       <field name="view_mode">calendar</field>
-      <field name="view_id" ref="res_letter_out_calendar_view"/>
       <field name="act_window_id" ref="action_res_letter_out_tree_view"/>
     </record>
 
     <record model="ir.actions.act_window.view" id="action_res_letter_in_calendar_mode">
       <field name="sequence" eval="3"/>
       <field name="view_mode">calendar</field>
-      <field name="view_id" ref="res_letter_in_calendar_view"/>
       <field name="act_window_id" ref="action_res_letter_in_tree_view"/>
     </record>
 
