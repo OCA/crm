@@ -3,13 +3,14 @@
 # * crm_action
 # 
 # Translators:
+# Ananias Filho <ananias@kmee.com.br>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-10 18:52+0000\n"
-"PO-Revision-Date: 2016-03-10 18:52+0000\n"
-"Last-Translator: <>\n"
+"POT-Creation-Date: 2016-03-26 09:38+0000\n"
+"PO-Revision-Date: 2016-03-28 21:09+0000\n"
+"Last-Translator: Ananias Filho <ananias@kmee.com.br>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/oca/OCA-crm-8-0/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,7 +22,7 @@ msgstr ""
 #: model:ir.actions.act_window,name:crm_action.action_crm_action_type_view
 #: model:ir.ui.menu,name:crm_action.menu_crm_action_type_act
 msgid "Action Types"
-msgstr ""
+msgstr "Tipo de Ações"
 
 #. module: crm_action
 #: code:addons/crm_action/models/crm_lead.py:41
@@ -33,74 +34,74 @@ msgstr ""
 #: model:ir.ui.menu,name:crm_action.menu_crm_action
 #, python-format
 msgid "Actions"
-msgstr ""
+msgstr "Ações"
 
 #. module: crm_action
 #: view:crm.action:crm_action.view_crm_action_filter
 msgid "Actions done by me"
-msgstr ""
+msgstr "Ações feitas por mim"
 
 #. module: crm_action
 #: view:crm.action.type:crm_action.view_crm_action_type_filter
 #: field:crm.action.type,is_active:0
 msgid "Active"
-msgstr ""
+msgstr "Ativo"
 
 #. module: crm_action
 #: model:ir.model,name:crm_action.model_crm_action
 msgid "CRM Action"
-msgstr ""
+msgstr "Ações no CRM"
 
 #. module: crm_action
 #: model:res.groups,name:crm_action.group_crm_action_manager
 msgid "CRM Action Manager"
-msgstr ""
+msgstr "Gerente de ações no CRM"
 
 #. module: crm_action
 #: model:ir.model,name:crm_action.model_crm_action_type
 msgid "CRM Action Type"
-msgstr ""
+msgstr "Tipos de ações do CRM"
 
 #. module: crm_action
 #: model:res.groups,name:crm_action.group_crm_action_user
 msgid "CRM Action User"
-msgstr ""
+msgstr "Usuário de ações no CRM"
 
 #. module: crm_action
 #: view:crm.action:crm_action.view_action_form
 msgid "Confirm"
-msgstr ""
+msgstr "Confirmar"
 
 #. module: crm_action
 #: field:crm.action,create_uid:0 field:crm.action.type,create_uid:0
 msgid "Created by"
-msgstr ""
+msgstr "Criado por"
 
 #. module: crm_action
 #: field:crm.action,create_date:0 field:crm.action.type,create_date:0
 msgid "Created on"
-msgstr ""
+msgstr "Criado em"
 
 #. module: crm_action
 #: field:crm.action,partner_id:0
 msgid "Customer"
-msgstr ""
+msgstr "Cliente"
 
 #. module: crm_action
 #: field:crm.action,date:0
 msgid "Date"
-msgstr ""
+msgstr "Data"
 
 #. module: crm_action
 #: field:crm.action,details:0
 msgid "Details"
-msgstr ""
+msgstr "Detalhes"
 
 #. module: crm_action
 #: view:crm.action:crm_action.view_crm_action_filter
 #: selection:crm.action,state:0
 msgid "Done"
-msgstr ""
+msgstr "Concluído"
 
 #. module: crm_action
 #: view:crm.action:crm_action.view_crm_action_filter
@@ -111,52 +112,52 @@ msgstr "Rascunho"
 #. module: crm_action
 #: field:crm.action,id:0 field:crm.action.type,id:0
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: crm_action
 #: field:crm.action,write_uid:0 field:crm.action.type,write_uid:0
 msgid "Last Updated by"
-msgstr ""
+msgstr "Última atualização por"
 
 #. module: crm_action
 #: field:crm.action,write_date:0 field:crm.action.type,write_date:0
 msgid "Last Updated on"
-msgstr ""
+msgstr "Última atualização em"
 
 #. module: crm_action
 #: field:crm.action,lead_id:0
 msgid "Lead"
-msgstr ""
+msgstr "Prospecto"
 
 #. module: crm_action
 #: model:ir.model,name:crm_action.model_crm_lead
 msgid "Lead/Opportunity"
-msgstr ""
+msgstr "Prospector/Oportunidade"
 
 #. module: crm_action
 #: view:crm.action:crm_action.view_crm_action_filter
 msgid "My Actions"
-msgstr ""
+msgstr "Minhas ações"
 
 #. module: crm_action
 #: field:crm.action.type,name:0
 msgid "Name"
-msgstr ""
+msgstr "Nome"
 
 #. module: crm_action
 #: field:crm.action.type,priority:0
 msgid "Priority"
-msgstr ""
+msgstr "Prioridade"
 
 #. module: crm_action
 #: view:crm.action.type:crm_action.view_crm_action_type_filter
 msgid "Search Action Types"
-msgstr ""
+msgstr "Procurar tipo de ações"
 
 #. module: crm_action
 #: view:crm.action:crm_action.view_crm_action_filter
 msgid "Search Actions"
-msgstr ""
+msgstr "Procurar ações"
 
 #. module: crm_action
 #: view:crm.action:crm_action.view_action_form
@@ -166,7 +167,7 @@ msgstr "Marcar como Rascunho"
 #. module: crm_action
 #: field:crm.action,state:0
 msgid "Status"
-msgstr ""
+msgstr "Status"
 
 #. module: crm_action
 #: field:crm.action,action_type:0
@@ -176,4 +177,4 @@ msgstr "Tipo"
 #. module: crm_action
 #: field:crm.action,user_id:0
 msgid "User"
-msgstr ""
+msgstr "Usuário"

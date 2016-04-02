@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-10 18:52+0000\n"
+"POT-Creation-Date: 2016-03-26 09:38+0000\n"
 "PO-Revision-Date: 2016-03-10 18:54+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/oca/OCA-crm-8-0/language/pt_BR/)\n"
@@ -41,27 +41,27 @@ msgstr ""
 #. module: mass_mailing_partner
 #: field:partner.mail.list.wizard,create_uid:0
 msgid "Created by"
-msgstr ""
+msgstr "Criado por"
 
 #. module: mass_mailing_partner
 #: field:partner.mail.list.wizard,create_date:0
 msgid "Created on"
-msgstr ""
+msgstr "Criado em"
 
 #. module: mass_mailing_partner
 #: field:partner.mail.list.wizard,id:0
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: mass_mailing_partner
 #: field:partner.mail.list.wizard,write_uid:0
 msgid "Last Updated by"
-msgstr ""
+msgstr "Última atualização por"
 
 #. module: mass_mailing_partner
 #: field:partner.mail.list.wizard,write_date:0
 msgid "Last Updated on"
-msgstr ""
+msgstr "Última atualização em"
 
 #. module: mass_mailing_partner
 #: model:ir.model,name:mass_mailing_partner.model_mail_mass_mailing_list

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-10 18:52+0000\n"
+"POT-Creation-Date: 2016-03-26 09:38+0000\n"
 "PO-Revision-Date: 2016-03-10 18:54+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/oca/OCA-crm-8-0/language/pt_BR/)\n"
@@ -44,13 +44,13 @@ msgstr ""
 #: field:newsletter.newsletter,create_uid:0
 #: field:newsletter.topic,create_uid:0 field:newsletter.type,create_uid:0
 msgid "Created by"
-msgstr ""
+msgstr "Criado por"
 
 #. module: newsletter
 #: field:newsletter.newsletter,create_date:0
 #: field:newsletter.topic,create_date:0 field:newsletter.type,create_date:0
 msgid "Created on"
-msgstr ""
+msgstr "Criado em"
 
 #. module: newsletter
 #: field:newsletter.type,domain:0
@@ -96,7 +96,7 @@ msgstr ""
 #: field:newsletter.newsletter,id:0 field:newsletter.topic,id:0
 #: field:newsletter.type,id:0
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: newsletter
 #: field:newsletter.newsletter,text_intro_html:0
@@ -107,13 +107,13 @@ msgstr ""
 #: field:newsletter.newsletter,write_uid:0 field:newsletter.topic,write_uid:0
 #: field:newsletter.type,write_uid:0
 msgid "Last Updated by"
-msgstr ""
+msgstr "Última atualização por"
 
 #. module: newsletter
 #: field:newsletter.newsletter,write_date:0
 #: field:newsletter.topic,write_date:0 field:newsletter.type,write_date:0
 msgid "Last Updated on"
-msgstr ""
+msgstr "Última atualização em"
 
 #. module: newsletter
 #: model:res.groups,name:newsletter.group_newsletter_manager
@@ -128,7 +128,7 @@ msgstr ""
 #. module: newsletter
 #: field:newsletter.type,name:0
 msgid "Name"
-msgstr ""
+msgstr "Nome"
 
 #. module: newsletter
 #: model:ir.model,name:newsletter.model_newsletter_newsletter
