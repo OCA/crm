@@ -30,6 +30,7 @@ addon | version | summary
 [crm_sector](crm_sector/) | 8.0.1.0.0 | Link leads/opportunities to sectors
 [crm_track_next_action](crm_track_next_action/) | 8.0.1.0.0 | CRM Track Next Action
 [lettermgmt](lettermgmt/) | 8.0.1.2.0 | Track letters, parcels, registered documents
+[marketing_crm_partner](marketing_crm_partner/) | 8.0.1.0.0 | Copy tracking fields from leads to partners
 [mass_mailing_partner](mass_mailing_partner/) | 8.0.1.0.0 | Link partners with mass-mailing
 [newsletter](newsletter/) | 8.0.2.0.0 | Send newsletters to customers, employees or other entities
 [partner_withdrawal](partner_withdrawal/) | 8.0.1.0.0 | Partner membership withdrawal
