@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-10 18:52+0000\n"
-"PO-Revision-Date: 2016-03-10 18:54+0000\n"
+"POT-Creation-Date: 2016-04-14 03:55+0000\n"
+"PO-Revision-Date: 2016-04-07 15:43+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Spanish (http://www.transifex.com/oca/OCA-crm-8-0/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -124,7 +124,7 @@ msgstr ""
 #: view:res.letter:lettermgmt.res_letter_in_form_view
 #: view:res.letter:lettermgmt.res_letter_out_form_view
 msgid "Details"
-msgstr ""
+msgstr "Detalles"
 
 #. module: lettermgmt
 #: view:res.letter:lettermgmt.res_letter_in_form_view
