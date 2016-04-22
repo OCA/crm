@@ -48,7 +48,7 @@ class CRMPhonecall(models.Model):
                 s.summary_id = summary.search([("name", "=", s.name)])
 
     @api.model
-    def _prepare_another_phonecall(
+    def _prepare_another_phonecall_vals(
             self, call, schedule_time, call_summary, user_id=False,
             section_id=False, categ_id=False):
         res = super(CRMPhonecall, self)._prepare_another_phonecall(
