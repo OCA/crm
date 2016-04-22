@@ -33,6 +33,20 @@
         </field>
     </record>
 
+    <record id="phonecall_to_phonecall_view" model="ir.ui.view">
+        <field name="name">Replace name by summary_id</field>
+        <field name="model">crm.phonecall2phonecall</field>
+        <field name="inherit_id" ref="crm.phonecall_to_phonecall_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="summary_id"/>
+            </xpath>
+        </field>
+    </record>
+
     <record id="crm_case_phone_calendar_view" model="ir.ui.view">
         <field name="name">Replace name by summary_id</field>
         <field name="model">crm.phonecall</field>
