@@ -67,6 +67,7 @@ Contributors
 * Rafael Blasco <rafabn@antiun.com>
 * Antonio Espinosa <antonioea@antiun.com>
 * Javier Iniesta <javieria@antiun.com>
+* Torvald Bringsvor <bringsvor@bringsvor.com>
 
 Maintainer
 ----------

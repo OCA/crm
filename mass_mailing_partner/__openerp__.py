@@ -18,5 +18,5 @@
         'views/mail_mass_mailing_view.xml',
         'views/res_partner_view.xml',
     ],
-    'installable': False,
+    'installable': True,
 }
