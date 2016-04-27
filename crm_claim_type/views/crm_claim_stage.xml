@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openerp>
     <data>
-        <record id="crm_claim.crm_case_categ_claim0" model="ir.actions.act_window">
+        <record id="crm_claim.crm_claim_category_claim0" model="ir.actions.act_window">
             <field name="context">
                 {"search_default_user_id":uid, "stage_type":'claim'}
             </field>
