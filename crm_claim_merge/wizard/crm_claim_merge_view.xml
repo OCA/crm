@@ -9,8 +9,8 @@
             <field name="arch" type="xml">
                 <form string="Merge Claims" version="7.0">
                     <group string="Select Claims">
-                        <field name="claim_ids"/>
-                        <field name="merge_in_id" />
+                        <field name="claims"/>
+                        <field name="base_claim" />
                     </group>
                     <footer>
                         <button name="action_merge" type="object" string="Merge" class="oe_highlight"/>

@@ -1,33 +1,11 @@
 # -*- coding: utf-8 -*-
-##############################################################################
-#
-#    Author: Guewen Baconnier
-#    Copyright 2014 Camptocamp SA
-#    Merge code freely adapted to claims from merge of crm leads
-#    and partners by OpenERP
-#    Copyright (C) 2004-today OpenERP SA (<http://www.openerp.com>)
-#
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as
-#    published by the Free Software Foundation, either version 3 of the
-#    License, or (at your option) any later version.
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
-#
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#
-##############################################################################
-
+# © 2014-2016 Camptocamp SA
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html)
 from operator import attrgetter
 from itertools import chain
 
-from openerp import SUPERUSER_ID
-from openerp.osv import orm
-from openerp.tools.translate import _
+from openerp import _, api, models
+from openerp.exceptions import UserError
 
 CRM_CLAIM_FIELD_BLACKLIST = [
     'message_ids',
@@ -35,18 +13,20 @@ CRM_CLAIM_FIELD_BLACKLIST = [
 ]
 
 
-class crm_claim(orm.Model):
+class CrmClaim(models.Model):
     _inherit = 'crm.claim'
 
-    def _merge_get_default_main(self, cr, uid, claims, context=None):
+    @api.multi
+    def _merge_get_default_base(self):
         """ From the whole selection of claims, return the main claim.
 
         The main claim will be the claim in which the others (tail
         claims) will be merged.
         """
-        return sorted(claims, key=attrgetter('date'))[0]
+        return self.sorted(key=attrgetter('date'))[0]
 
-    def _merge_sort(self, cr, uid, claims, context=None):
+    @api.multi
+    def _merge_sort(self):
         """ Sort the tail claims.
 
         The tail claims are the selection of claims but the main claim.
@@ -54,23 +34,24 @@ class crm_claim(orm.Model):
         is when several claims have a value for a field: the first in
         the list will have its value kept.
         """
-        return sorted(claims, key=attrgetter('date'))
+        return self.sorted(key=attrgetter('date'))
 
-    def _merge_check(self, cr, uid, claims, context=None):
-        if len(claims) <= 1:
-            raise orm.except_orm(
-                _('Warning'),
+    @api.multi
+    def _merge_check(self):
+
+        if len(self) <= 1:
+            raise UserError(
                 _('Please select more than one claim from the list view.'))
 
-        partner = next((claim.partner_id for claim in claims), None)
+        partner = next((claim.partner_id for claim in self), None)
         if partner:
-            if any(claim.partner_id != partner for claim in claims
+            if any(claim.partner_id != partner for claim in self
                     if claim.partner_id):
-                raise orm.except_orm(
-                    _('Error'),
+                raise UserError(
                     _('Cannot merge claims of different partners.'))
 
-    def _merge_fields(self, cr, uid, context=None):
+    @api.model
+    def _merge_fields(self):
         fields = self._all_columns
         fields = (name for name, info in fields.iteritems()
                   if not info.column.readonly)
@@ -78,7 +59,8 @@ class crm_claim(orm.Model):
                   name not in CRM_CLAIM_FIELD_BLACKLIST)
         return list(fields)
 
-    def _get_fk_on(self, cr, table):
+    @api.multi
+    def _get_fk_on(self, cursor, table):
         """ Get all FK pointing to a table """
         q = """  SELECT cl1.relname as table,
                         att1.attname as column
@@ -96,25 +78,24 @@ class crm_claim(orm.Model):
                     AND att2.attrelid = cl2.oid
                     AND con.contype = 'f'
         """
-        return cr.execute(q, (table,))
+        cursor.execute(q, (table,))
+        return cursor.fetchall()
 
-    def _merge_update_foreign_keys(self, cr, uid, merge_in,
-                                   claims, context=None):
-        claim_ids = [claim.id for claim in claims]
+    @api.multi
+    def _merge_update_foreign_keys(self, base_claim):
+        cursor = self.env.cr
 
         # find the many2one relation to a claim
-        self._get_fk_on(cr, 'crm_claim')
-
-        for table, column in cr.fetchall():
+        for table, column in self._get_fk_on(cursor, 'crm_claim'):
             if 'crm_claim_merge' in table:
                 # ignore the wizard tables (TransientModel + relation
                 # table)
                 continue
             query = ("SELECT column_name FROM information_schema.columns"
                      "  WHERE table_name = %s")
-            cr.execute(query, (table, ))
+            cursor.execute(query, (table, ))
             columns = []
-            for data in cr.fetchall():
+            for data in cursor.fetchall():
                 if data[0] != column:
                     columns.append(data[0])
 
@@ -137,15 +118,18 @@ class crm_claim(orm.Model):
                                 %(column)s = %%s AND
                                 ___tu.%(value)s = ___tw.%(value)s
                         )""" % query_dic
-                for claim_id in claim_ids:
-                    cr.execute(query, (merge_in.id, claim_id,
-                                       merge_in.id))
+                for claim_id in self.ids:
+                    cursor.execute(
+                        query,
+                        (base_claim.id, claim_id, base_claim.id)
+                    )
             else:
                 query = ('UPDATE "%(table)s" SET %(column)s = %%s WHERE '
                          '%(column)s IN %%s') % query_dic
-                cr.execute(query, (merge_in.id, tuple(claim_ids)))
+                cursor.execute(query, (base_claim.id, tuple(self.ids)))
 
-    def _merge_data(self, cr, uid, merge_in, claims, fields, context=None):
+    @api.multi
+    def _merge_data(self, base_claim, fields):
         """
         Prepare claims data into a dictionary for merging.  Different types
         of fields are processed in different ways:
@@ -159,7 +143,9 @@ class crm_claim(orm.Model):
         :param fields: list of leads' fields to process
         :return data: contains the merged values
         """
-        claims = [merge_in] + claims
+        claims = base_claim | self
+        # Re-sort claims after union
+        claims = claims._merge_sort()
 
         def _get_first_not_falsish(attr):
             for claim in claims:
@@ -199,57 +185,46 @@ class crm_claim(orm.Model):
             else:
                 data[field_name] = _get_first_not_falsish(field_name)
 
-        # Check if the stage is in the stages of the sales team. If not,
-        # assign the stage with the lowest sequence
-        if data.get('section_id'):
-            stage_obj = self.pool['crm.case.stage']
-            section_stage_ids = stage_obj.search(
-                cr, uid,
-                [('section_ids', 'in', data['section_id'])],
-                order='sequence',
-                context=context)
-            if data.get('stage_id') not in section_stage_ids:
-                data['stage_id'] = (section_stage_ids[0] if
-                                    section_stage_ids else False)
+        # Check if the stage is in the stages of the sales team or default.
+        # If not, assign the stage with the lowest sequence
+        stage_obj = self.env['crm.claim.stage']
+        team_stages = stage_obj.search(
+            ['|',
+             ('team_ids', 'in', data['team_id']),
+             ('case_default', '=', True)],
+            order='sequence')
+        if data.get('stage_id') not in team_stages.ids:
+            data['stage_id'] = (team_stages[0].id if
+                                team_stages else False)
         return data
 
-    def _merge_claim_history(self, cr, uid, merge_in, claims, context=None):
-        merge_in_id = merge_in.id
-        for claim in claims:
-            history_ids = set()
-            for history in claim.message_ids:
-                history_ids.add(history.id)
-            message = self.pool['mail.message']
-            message.write(cr, uid,
-                          list(history_ids),
-                          {'res_id': merge_in_id,
-                           'subject': _("From %s") % claim.name_get()[0][1],
-                           },
-                          context=context)
+    @api.multi
+    def _merge_claim_history(self, base_claim):
+        for claim in self:
+            claim.message_ids.write({
+                'res_id': base_claim.id,
+                'subject': _("From %s") % claim.name_get()[0][1],
+            })
 
-    def _merge_claim_attachments(self, cr, uid, merge_in, claims,
-                                 context=None):
-        attach_obj = self.pool['ir.attachment']
+    @api.multi
+    def _merge_claim_attachments(self, base_claim):
+        attach_obj = self.env['ir.attachment']
 
         # return attachments of claims
-        def _get_attachments(claim_id):
-            attachment_ids = attach_obj.search(
-                cr, uid,
+        def _get_attachments(claim):
+            return attach_obj.search(
                 [('res_model', '=', self._name),
-                 ('res_id', '=', claim_id)],
-                context=context)
-            return attach_obj.browse(cr, uid, attachment_ids, context=context)
+                 ('res_id', '=', claim.id)])
 
-        first_attachments = _get_attachments(merge_in.id)
-        merge_in_id = merge_in.id
+        first_attachments = _get_attachments(base_claim)
 
         # Counter of all attachments to move.
         # Used to make sure the name is different for all attachments
         existing_names = [att.name for att in first_attachments]
-        for claim in claims:
-            attachments = _get_attachments(claim.id)
+        for claim in self:
+            attachments = _get_attachments(claim)
             for attachment in attachments:
-                values = {'res_id': merge_in_id}
+                values = {'res_id': base_claim.id}
                 name = attachment.name
                 count = 1
                 while name in existing_names:
@@ -259,8 +234,8 @@ class crm_claim(orm.Model):
                 attachment.write(values)
                 existing_names.append(name)
 
-    def _merge_mail_body(self, cr, uid, claim, fields, title=False,
-                         context=None):
+    @api.multi
+    def _merge_mail_body(self, claim, fields, title=False):
         body = []
         if title:
             body.append("%s\n" % title)
@@ -276,7 +251,7 @@ class crm_claim(orm.Model):
 
             if field_type == 'selection':
                 if hasattr(field.selection, '__call__'):
-                    key = field.selection(self, cr, uid, context=context)
+                    key = field.selection(self)
                 else:
                     key = field.selection
                 value = dict(key).get(claim[field_name], claim[field_name])
@@ -294,86 +269,77 @@ class crm_claim(orm.Model):
             body.append("%s: %s" % (field.string, value or ''))
         return "<br/>".join(body + ['<br/>'])
 
-    def _merge_notify(self, cr, uid, merge_in, claims, context=None):
+    @api.multi
+    def _merge_notify(self, base_claim):
         """ Create a message gathering merged claims information.  """
+        claims = base_claim | self
+        # Re-sort claims after union
+        claims = claims._merge_sort()
+
         details = []
         subject = [_('Merged claims')]
-        for claim in chain([merge_in] + claims):
+        for claim in chain(claims):
             name = claim.name_get()[0][1]
             subject.append(name)
             title = "%s: %s" % (_('Merged claim'), name)
-            fields = list(self._merge_fields(cr, uid, context=context))
-            details.append(self._merge_mail_body(cr, uid, claim, fields,
-                                                 title=title, context=context))
+            fields = list(self._merge_fields())
+            details.append(self._merge_mail_body(claim, fields, title=title))
 
         # Chatter message's subject
         subject = subject[0] + ": " + ", ".join(subject[1:])
         details = "\n\n".join(details)
-        return self.message_post(cr, uid, [merge_in.id],
-                                 body=details, subject=subject,
-                                 context=context)
+        return base_claim.message_post(body=details, subject=subject)
 
-    def _merge_followers(self, cr, uid, merge_in, claims, context=None):
+    @api.multi
+    def _merge_followers(self, base_claim):
         """ Subscribe the same followers on the final claim. """
-        follower_ids = [fol.id for fol in merge_in.message_follower_ids]
+        base_follower_ids = base_claim.sudo().message_follower_ids.ids
 
-        fol_obj = self.pool.get('mail.followers')
-        fol_ids = fol_obj.search(
-            cr, SUPERUSER_ID,
+        follower_obj = self.env['mail.followers']
+        followers = follower_obj.sudo().search(
             [('res_model', '=', self._name),
-             ('res_id', 'in', [claim.id for claim in claims])],
-            context=context)
+             ('res_id', 'in', [claim.id for claim in self])]
+        )
 
-        for fol in fol_obj.browse(cr, SUPERUSER_ID, fol_ids, context=context):
-            if fol.res_id in follower_ids:
+        for follower in followers:
+            if follower.id in base_follower_ids:
                 continue
-            subtype_ids = [st.id for st in fol.subtype_ids]
-            self.message_subscribe(cr, SUPERUSER_ID, [merge_in.id],
-                                   [fol.partner_id.id],
-                                   subtype_ids=subtype_ids,
-                                   context=context)
+            subtype_ids = [st.id for st in follower.subtype_ids]
+            base_claim.sudo().message_subscribe(
+                [follower.partner_id.id],
+                subtype_ids=subtype_ids
+            )
 
-    def merge(self, cr, uid, ids, merge_in_id=None, context=None):
+    @api.multi
+    def merge(self, base_claim=None):
         """ Merge claims together.
 
-        :param merge_in_ids: the other claims will be merged into this one
+        :param base_claim: the other claims will be merged into this one
             if None, the oldest claim will be selected.
         """
-        claims = self.browse(cr, uid, ids, context=context)
-        self._merge_check(cr, uid, claims, context=context)
-        if merge_in_id is None:
-            merge_in = self._merge_get_default_main(cr, uid, claims,
-                                                    context=context)
-        else:
-            for claim in claims:
-                if claim.id == merge_in_id:
-                    merge_in = claim
-                    break
-        claims.remove(merge_in)  # keep the tail
-        claims = self._merge_sort(cr, uid, claims, context=context)
 
-        fields = list(self._merge_fields(cr, uid, context=None))
-        data = self._merge_data(cr, uid, merge_in, claims,
-                                fields, context=context)
+        self._merge_check()
+        if base_claim is None:
+            base_claim = self._merge_get_default_base()
+        # Remove merge_in from self
+        self = self.filtered(lambda claim: claim != base_claim)
+        # Sort the remaining claims
+        self._merge_sort()
 
-        self._merge_claim_history(cr, uid, merge_in, claims, context=context)
-        self._merge_claim_attachments(cr, uid, merge_in, claims,
-                                      context=context)
+        fields = list(self._merge_fields())
+        data = self._merge_data(base_claim, fields)
 
-        self._merge_notify(cr, uid, merge_in, claims, context=context)
-        self._merge_followers(cr, uid, merge_in, claims, context=context)
+        self._merge_claim_history(base_claim)
+        self._merge_claim_attachments(base_claim)
 
-        self._merge_update_foreign_keys(cr, uid, merge_in,
-                                        claims, context=context)
+        self._merge_notify(base_claim)
+        self._merge_followers(base_claim)
+
+        self._merge_update_foreign_keys(base_claim)
         # Write merged data into first claim
-        self.write(cr, uid, [merge_in.id], data, context=context)
+        base_claim.write(data)
 
         # Delete tail claims
-        # We use the SUPERUSER to avoid access rights issues because as
-        # the user had the rights to see the records it should be safe
-        # to do so
-        self.unlink(cr, SUPERUSER_ID,
-                    [claim.id for claim in claims],
-                    context=context)
+        self.sudo().unlink()
 
-        return merge_in.id
+        return base_claim

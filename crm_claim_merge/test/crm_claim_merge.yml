@@ -9,7 +9,6 @@
     description: This is the description of the test claim 1.
     partner_phone: (373) 907-1009
     email_from: bill@example.com
-    ref: !eval ('res.partner,%d' % ref('base.res_partner_5'))
     type_action: correction
 -
   !record {model: crm.claim, id: test_crm_claim_02}:
@@ -30,9 +29,12 @@
     partner_phone: (373) 907-1010
     email_from: tom@example.com
     type_action: prevention
-    section_id: crm.section_sales_department
+    team_id: sales_team.team_sales_department
 -
   !python {model: crm.claim}: |
+    self.write(cr, uid, [ref('test_crm_claim_01')], {
+        'ref': 'res.partner,%d' % ref('base.res_partner_2')
+    })
     claim_ids = [ref('test_crm_claim_01'),
                  ref('test_crm_claim_02'),
                  ref('test_crm_claim_03')]
@@ -79,7 +81,7 @@
     assert claim.partner_phone == expected, (
                                   'Phone mismatch, expected %s, got: %s' %
                                   (expected, claim.partner_phone))
-    expected = ref('base.res_partner_5')
+    expected = ref('base.res_partner_2')
     assert (claim.ref.id == expected
              and claim.ref._model._name == 'res.partner'), (
                                   'Reference mismatch, expected a partner with id %s, got: %s' %
@@ -88,8 +90,8 @@
     assert claim.type_action == expected, (
                                   'Action Type mismatch, expected %s, got: %s' %
                                   (expected, claim.type_action))
-    expected = ref('crm.section_sales_department')
-    assert claim.section_id.id == expected, (
+    expected = ref('sales_team.team_sales_department')
+    assert claim.team_id.id == expected, (
                                   'Section mismatch, expected %s, got: %s' %
                                   (expected, claim.section_id.id))
 -
