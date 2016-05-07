@@ -4,12 +4,13 @@
 # 
 # Translators:
 # Paolo Valier, 2016
+# Paolo Valier, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-19 09:34+0000\n"
-"PO-Revision-Date: 2016-03-19 10:25+0000\n"
+"POT-Creation-Date: 2016-04-16 11:11+0000\n"
+"PO-Revision-Date: 2016-04-30 20:14+0000\n"
 "Last-Translator: Paolo Valier\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-crm-8-0/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -26,7 +27,7 @@ msgstr "Seleziona se il contatto è un fornitore."
 #. module: crm_lead_supplier
 #: model:ir.model,name:crm_lead_supplier.model_crm_lead
 msgid "Lead/Opportunity"
-msgstr ""
+msgstr "Lead/Opportunità"
 
 #. module: crm_lead_supplier
 #: field:crm.lead,supplier:0

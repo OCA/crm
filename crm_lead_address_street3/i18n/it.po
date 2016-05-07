@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * crm_lead_code
+# * crm_lead_address_street3
 # 
 # Translators:
 # Paolo Valier, 2016
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-16 11:11+0000\n"
-"PO-Revision-Date: 2016-04-30 20:14+0000\n"
+"PO-Revision-Date: 2016-04-30 20:15+0000\n"
 "Last-Translator: Paolo Valier\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-crm-8-0/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -18,23 +18,12 @@ msgstr ""
 "Language: it\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#. module: crm_lead_code
-#: field:crm.lead,code:0
-msgid "Lead Number"
-msgstr "Numero Lead"
-
-#. module: crm_lead_code
-#: model:ir.model,name:crm_lead_code.model_crm_lead
+#. module: crm_lead_address_street3
+#: model:ir.model,name:crm_lead_address_street3.model_crm_lead
 msgid "Lead/Opportunity"
 msgstr "Lead/Opportunità"
 
-#. module: crm_lead_code
-#: sql_constraint:crm.lead:0
-msgid "The code must be unique!"
-msgstr "Il codice deve essere univoco!"
-
-#. module: crm_lead_code
-#: view:crm.lead:crm_lead_code.crm_lead_code_search_view
-#: view:crm.lead:crm_lead_code.crm_lead_oppor_code_search_view
-msgid "['|', ('name', 'ilike', self), ('code', 'ilike', self)]"
-msgstr ""
+#. module: crm_lead_address_street3
+#: field:crm.lead,street3:0
+msgid "Street 3"
+msgstr "Indirizzo 3"

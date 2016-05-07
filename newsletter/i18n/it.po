@@ -4,12 +4,13 @@
 # 
 # Translators:
 # Paolo Valier, 2016
+# Paolo Valier, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-19 09:34+0000\n"
-"PO-Revision-Date: 2016-03-19 10:35+0000\n"
+"POT-Creation-Date: 2016-04-16 11:11+0000\n"
+"PO-Revision-Date: 2016-05-01 07:14+0000\n"
 "Last-Translator: Paolo Valier\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-crm-8-0/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -21,7 +22,7 @@ msgstr ""
 #. module: newsletter
 #: model:email.template,subject:newsletter.email_template_newsletter_default
 msgid "${object.subject}"
-msgstr ""
+msgstr "${object.subject}"
 
 #. module: newsletter
 #: model:email.template,body_html:newsletter.email_template_newsletter_default
@@ -76,12 +77,12 @@ msgstr "Anteprima email"
 #. module: newsletter
 #: model:ir.model,name:newsletter.model_email_template
 msgid "Email Templates"
-msgstr ""
+msgstr "Template email"
 
 #. module: newsletter
 #: field:newsletter.type,email_template_id:0
 msgid "Email template"
-msgstr ""
+msgstr "Template email"
 
 #. module: newsletter
 #: field:newsletter.type,email_from:0
@@ -119,7 +120,7 @@ msgstr "Ultimo aggiornamento il"
 #. module: newsletter
 #: model:res.groups,name:newsletter.group_newsletter_manager
 msgid "Manager"
-msgstr ""
+msgstr "Manager"
 
 #. module: newsletter
 #: field:newsletter.type,model:0
@@ -137,7 +138,7 @@ msgstr "Nome"
 #: view:newsletter.newsletter:newsletter.form_newsletter
 #: field:newsletter.topic,newsletter_id:0
 msgid "Newsletter"
-msgstr ""
+msgstr "Newsletter"
 
 #. module: newsletter
 #: model:ir.model,name:newsletter.model_newsletter_topic
@@ -192,7 +193,7 @@ msgstr "Mittente"
 #. module: newsletter
 #: selection:newsletter.newsletter,state:0
 msgid "Sending"
-msgstr ""
+msgstr "Invio in corso"
 
 #. module: newsletter
 #: selection:newsletter.newsletter,state:0
