@@ -4,12 +4,13 @@
 # 
 # Translators:
 # Paolo Valier, 2016
+# Paolo Valier, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-19 09:34+0000\n"
-"PO-Revision-Date: 2016-03-19 10:34+0000\n"
+"POT-Creation-Date: 2016-04-16 11:11+0000\n"
+"PO-Revision-Date: 2016-05-01 07:13+0000\n"
 "Last-Translator: Paolo Valier\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-crm-8-0/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -112,7 +113,7 @@ msgstr ""
 #. module: mass_mailing_partner
 #: field:mail.mass_mailing.list,partner_category:0
 msgid "Partner Tag"
-msgstr ""
+msgstr "Tag Partner"
 
 #. module: mass_mailing_partner
 #: code:addons/mass_mailing_partner/models/mail_mass_mailing_contact.py:15
@@ -124,7 +125,7 @@ msgstr ""
 #. module: mass_mailing_partner
 #: field:partner.mail.list.wizard,partner_ids:0
 msgid "Partner ids"
-msgstr ""
+msgstr "ID Partner"
 
 #. module: mass_mailing_partner
 #: code:addons/mass_mailing_partner/models/res_partner.py:23
