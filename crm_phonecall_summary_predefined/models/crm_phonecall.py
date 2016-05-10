@@ -54,7 +54,6 @@ class CRMPhonecall(models.Model):
         res = super(CRMPhonecall, self)._prepare_another_phonecall_vals(
             call, schedule_time, call_summary, user_id=user_id,
             section_id=section_id, categ_id=categ_id)
-        summary_id = (self.env.context and
-                      self.env.context.get('summary_id', False) or False)
-        res['summary_id'] = summary_id
+        res['summary_id'] = self.env.context.get(
+            'summary_id', res.get('summary_id', False))
         return res

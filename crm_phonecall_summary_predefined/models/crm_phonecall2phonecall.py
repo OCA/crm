@@ -5,7 +5,7 @@
 from openerp import api, fields, models
 
 
-class CRMPhonecall2Phonecall(models.Model):
+class CRMPhonecall2Phonecall(models.TransientModel):
     _inherit = "crm.phonecall2phonecall"
 
     name = fields.Char(
