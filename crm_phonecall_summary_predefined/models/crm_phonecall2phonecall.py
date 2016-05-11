@@ -8,16 +8,16 @@ from openerp import api, fields, models
 class CRMPhonecall2Phonecall(models.TransientModel):
     _inherit = "crm.phonecall2phonecall"
 
-    name = fields.Char(
-        related="summary_id.name",
-        store=True,
-        required=False,
-        readonly=True)
     summary_id = fields.Many2one(
         comodel_name="crm.phonecall.summary",
         string="Summary",
         required=True,
         ondelete="restrict")
+    name = fields.Char(
+        related="summary_id.name",
+        store=True,
+        required=False,
+        readonly=True)
 
     @api.model
     def default_get(self, fields):
