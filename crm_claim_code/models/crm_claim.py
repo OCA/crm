@@ -20,12 +20,15 @@ class CrmClaim(models.Model):
     @api.model
     def create(self, vals):
         if vals.get('code', '/') == '/':
-            vals['code'] = self.env['ir.sequence'].get('crm.claim')
+            vals['code'] = self.env['ir.sequence'].next_by_code('crm.claim')
         return super(CrmClaim, self).create(vals)
 
-    @api.one
+    @api.multi
     def copy(self, default=None):
+        self.ensure_one()
         if default is None:
             default = {}
-        default['code'] = self.env['ir.sequence'].get('crm.claim')
+        if 'code' not in default:
+            default['code'] = self.env['ir.sequence'].next_by_code('crm.claim')
+
         return super(CrmClaim, self).copy(default)
