@@ -35,11 +35,6 @@ class TestCrmClaimCode(common.TransactionCase):
         self.assertEqual(crm_claim_copy.code, code)
 
     def _get_next_code(self):
-        d = self.ir_sequence_model._interpolation_dict()
-        prefix = self.ir_sequence_model._interpolate(
-            self.crm_sequence.prefix, d)
-        suffix = self.ir_sequence_model._interpolate(
-            self.crm_sequence.suffix, d)
-        code = (prefix + ('%%0%sd' % self.crm_sequence.padding %
-                          self.crm_sequence.number_next_actual) + suffix)
-        return code
+        return self.crm_sequence.get_next_char(
+            self.crm_sequence.number_next_actual
+        )

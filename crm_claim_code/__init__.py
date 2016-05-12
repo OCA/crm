@@ -4,6 +4,7 @@
 ##############################################################################
 
 from . import models
+from openerp.api import Environment
 from openerp import SUPERUSER_ID
 
 
@@ -15,11 +16,11 @@ def create_code_equal_to_id(cr):
 
 
 def assign_old_sequences(cr, registry):
-    claim_obj = registry['crm.claim']
-    sequence_obj = registry['ir.sequence']
-    claim_ids = claim_obj.search(cr, SUPERUSER_ID, [], order="id")
-    for claim_id in claim_ids:
-        cr.execute('UPDATE crm_claim '
-                   'SET code = \'%s\' '
-                   'WHERE id = %d;' %
-                   (sequence_obj.get(cr, SUPERUSER_ID, 'crm.claim'), claim_id))
+    with Environment.manage():
+        env = Environment(cr, SUPERUSER_ID, {})
+
+        sequence_model = env['ir.sequence']
+
+        claims = env['crm.claim'].search([], order="id")
+        for claim in claims:
+            claim.code = sequence_model.next_by_code('crm.claim')
