@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-10 18:52+0000\n"
-"PO-Revision-Date: 2016-03-11 10:37+0000\n"
+"POT-Creation-Date: 2016-05-07 11:40+0000\n"
+"PO-Revision-Date: 2016-05-09 08:49+0000\n"
 "Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>\n"
 "Language-Team: Slovenian (http://www.transifex.com/oca/OCA-crm-8-0/language/sl/)\n"
 "MIME-Version: 1.0\n"
@@ -35,6 +35,11 @@ msgstr "Tipi ukrepov"
 #, python-format
 msgid "Actions"
 msgstr "Ukrepi"
+
+#. module: crm_action
+#: field:crm.lead,actions_count:0
+msgid "Actions count"
+msgstr "Števec ukrepov"
 
 #. module: crm_action
 #: view:crm.action:crm_action.view_crm_action_filter
@@ -98,6 +103,11 @@ msgid "Details"
 msgstr "Podrobnosti"
 
 #. module: crm_action
+#: field:crm.action,display_name:0 field:crm.action.type,display_name:0
+msgid "Display Name"
+msgstr "Prikazni naziv"
+
+#. module: crm_action
 #: view:crm.action:crm_action.view_crm_action_filter
 #: selection:crm.action,state:0
 msgid "Done"
@@ -113,6 +123,11 @@ msgstr "Osnutek"
 #: field:crm.action,id:0 field:crm.action.type,id:0
 msgid "ID"
 msgstr "ID"
+
+#. module: crm_action
+#: field:crm.action,__last_update:0 field:crm.action.type,__last_update:0
+msgid "Last Modified on"
+msgstr "Zadnjič spremenjeno"
 
 #. module: crm_action
 #: field:crm.action,write_uid:0 field:crm.action.type,write_uid:0

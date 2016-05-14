@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-10 18:52+0000\n"
-"PO-Revision-Date: 2016-03-11 10:47+0000\n"
+"POT-Creation-Date: 2016-05-07 11:40+0000\n"
+"PO-Revision-Date: 2016-05-09 08:51+0000\n"
 "Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>\n"
 "Language-Team: Slovenian (http://www.transifex.com/oca/OCA-crm-8-0/language/sl/)\n"
 "MIME-Version: 1.0\n"
@@ -31,8 +31,18 @@ msgid "Quotations"
 msgstr "Predračuni"
 
 #. module: crm_lead_sale_link
+#: field:crm.lead,quotations_count:0
+msgid "Quotations count"
+msgstr "Števec predračunov"
+
+#. module: crm_lead_sale_link
 #: code:addons/crm_lead_sale_link/models/crm_lead.py:80
 #: view:crm.lead:crm_lead_sale_link.crm_case_form_view_oppor
 #, python-format
 msgid "Sales Order"
 msgstr "Prodajni nalog"
+
+#. module: crm_lead_sale_link
+#: field:crm.lead,sales_order_count:0
+msgid "Sales order count"
+msgstr "Števec prodajnih nalogov"

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-10 18:52+0000\n"
-"PO-Revision-Date: 2016-03-11 10:51+0000\n"
+"POT-Creation-Date: 2016-05-07 11:40+0000\n"
+"PO-Revision-Date: 2016-05-09 08:50+0000\n"
 "Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>\n"
 "Language-Team: Slovenian (http://www.transifex.com/oca/OCA-crm-8-0/language/sl/)\n"
 "MIME-Version: 1.0\n"
@@ -67,9 +67,21 @@ msgid "Crm Lead Lost Reasons"
 msgstr "CRM razlogi izgube indica"
 
 #. module: crm_lead_lost_reason
+#: field:crm.lead.lost,display_name:0
+#: field:crm.lead.lost.reason,display_name:0
+msgid "Display Name"
+msgstr "Prikazni naziv"
+
+#. module: crm_lead_lost_reason
 #: field:crm.lead.lost,id:0 field:crm.lead.lost.reason,id:0
 msgid "ID"
 msgstr "ID"
+
+#. module: crm_lead_lost_reason
+#: field:crm.lead.lost,__last_update:0
+#: field:crm.lead.lost.reason,__last_update:0
+msgid "Last Modified on"
+msgstr "Zadnjič spremenjeno"
 
 #. module: crm_lead_lost_reason
 #: field:crm.lead.lost,write_uid:0 field:crm.lead.lost.reason,write_uid:0

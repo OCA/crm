@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-16 11:11+0000\n"
-"PO-Revision-Date: 2016-05-01 07:14+0000\n"
+"POT-Creation-Date: 2016-05-07 11:40+0000\n"
+"PO-Revision-Date: 2016-05-10 13:43+0000\n"
 "Last-Translator: Paolo Valier\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-crm-8-0/language/it/)\n"
 "MIME-Version: 1.0\n"
@@ -55,6 +55,12 @@ msgid "Created on"
 msgstr "Creato il"
 
 #. module: newsletter
+#: field:newsletter.newsletter,display_name:0
+#: field:newsletter.topic,display_name:0 field:newsletter.type,display_name:0
+msgid "Display Name"
+msgstr "Nome da visualizzare"
+
+#. module: newsletter
 #: field:newsletter.type,domain:0
 msgid "Domain"
 msgstr "Dominio"
@@ -87,7 +93,7 @@ msgstr "Template email"
 #. module: newsletter
 #: field:newsletter.type,email_from:0
 msgid "From address"
-msgstr ""
+msgstr "Indirizzo d'invio"
 
 #. module: newsletter
 #: field:newsletter.type,group_ids:0
@@ -103,7 +109,14 @@ msgstr "ID"
 #. module: newsletter
 #: field:newsletter.newsletter,text_intro_html:0
 msgid "Intro"
-msgstr ""
+msgstr "Introduzione"
+
+#. module: newsletter
+#: field:newsletter.newsletter,__last_update:0
+#: field:newsletter.topic,__last_update:0
+#: field:newsletter.type,__last_update:0
+msgid "Last Modified on"
+msgstr "Ultima Modifica il"
 
 #. module: newsletter
 #: field:newsletter.newsletter,write_uid:0 field:newsletter.topic,write_uid:0
@@ -121,6 +134,11 @@ msgstr "Ultimo aggiornamento il"
 #: model:res.groups,name:newsletter.group_newsletter_manager
 msgid "Manager"
 msgstr "Manager"
+
+#. module: newsletter
+#: field:newsletter.newsletter,may_send:0
+msgid "May send"
+msgstr ""
 
 #. module: newsletter
 #: field:newsletter.type,model:0
@@ -143,26 +161,26 @@ msgstr "Newsletter"
 #. module: newsletter
 #: model:ir.model,name:newsletter.model_newsletter_topic
 msgid "Newsletter topic"
-msgstr ""
+msgstr "Argomento Newsletter"
 
 #. module: newsletter
 #: model:ir.model,name:newsletter.model_newsletter_type
 #: view:newsletter.type:newsletter.form_newsletter_type
 msgid "Newsletter type"
-msgstr ""
+msgstr "Tipo Newsletter"
 
 #. module: newsletter
 #: model:ir.actions.act_window,name:newsletter.action_newsletter_types
 #: model:ir.ui.menu,name:newsletter.menu_newsletter_types
 msgid "Newsletter types"
-msgstr ""
+msgstr "Tipi Newsletter"
 
 #. module: newsletter
 #: model:ir.actions.act_window,name:newsletter.action_newsletters
 #: model:ir.ui.menu,name:newsletter.menu_newsletter
 #: model:ir.ui.menu,name:newsletter.menu_newsletters
 msgid "Newsletters"
-msgstr ""
+msgstr "Newsletter"
 
 #. module: newsletter
 #: field:newsletter.newsletter,text_outro_html:0
@@ -204,7 +222,7 @@ msgstr "Inviato"
 #: view:newsletter.newsletter:newsletter.form_newsletter
 #: view:newsletter.type:newsletter.form_newsletter_type
 msgid "Show recipient objects"
-msgstr ""
+msgstr "Mostra oggetti destinatario"
 
 #. module: newsletter
 #: field:newsletter.newsletter,state:0
@@ -219,12 +237,12 @@ msgstr "Soggetto"
 #. module: newsletter
 #: view:newsletter.newsletter:newsletter.form_newsletter
 msgid "Test newsletter"
-msgstr ""
+msgstr "Test Newsletter"
 
 #. module: newsletter
 #: selection:newsletter.newsletter,state:0
 msgid "Testing"
-msgstr ""
+msgstr "Test"
 
 #. module: newsletter
 #: field:newsletter.topic,text_html:0
@@ -246,7 +264,7 @@ msgstr "Titolo"
 #. module: newsletter
 #: field:newsletter.newsletter,topic_ids:0
 msgid "Topics"
-msgstr ""
+msgstr "Argomenti"
 
 #. module: newsletter
 #: field:newsletter.newsletter,type_id:0
