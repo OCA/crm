@@ -9,9 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-16 11:11+0000\n"
-"PO-Revision-Date: 2016-05-01 07:16+0000\n"
-"Last-Translator: Paolo Valier\n"
+"POT-Creation-Date: 2016-05-07 11:40+0000\n"
+"PO-Revision-Date: 2016-05-10 13:40+0000\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-crm-8-0/language/it/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -134,6 +134,13 @@ msgid "Dimensions"
 msgstr "Dimensioni"
 
 #. module: lettermgmt
+#: field:letter.channel,display_name:0 field:letter.class,display_name:0
+#: field:letter.folder,display_name:0 field:letter.reassignment,display_name:0
+#: field:letter.type,display_name:0 field:res.letter,display_name:0
+msgid "Display Name"
+msgstr "Nome da visualizzare"
+
+#. module: lettermgmt
 #: selection:res.letter,state:0
 msgid "Draft"
 msgstr "Bozza"
@@ -206,6 +213,14 @@ msgstr "È un Follower"
 #: field:res.letter,message_last_post:0
 msgid "Last Message Date"
 msgstr "Data dell'ultimo messaggio"
+
+#. module: lettermgmt
+#: field:letter.channel,__last_update:0 field:letter.class,__last_update:0
+#: field:letter.folder,__last_update:0
+#: field:letter.reassignment,__last_update:0 field:letter.type,__last_update:0
+#: field:res.letter,__last_update:0
+msgid "Last Modified on"
+msgstr "Ultima Modifica il"
 
 #. module: lettermgmt
 #: field:letter.channel,write_uid:0 field:letter.class,write_uid:0
