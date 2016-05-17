@@ -1,0 +1,99 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* phonecall_plan
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-05-11 13:05+0000\n"
+"PO-Revision-Date: 2016-05-11 13:05+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: phonecall_plan
+#: view:add.call:phonecall_plan.add_call_view_form
+#: view:add.partner_call:phonecall_plan.add_partner_call_view_form
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: phonecall_plan
+#: view:add.call:phonecall_plan.add_call_view_form
+#: model:ir.actions.act_window,name:phonecall_plan.launch_add_calls
+msgid "Convert to call"
+msgstr "Convertir en appel"
+
+#. module: phonecall_plan
+#: field:add.call,create_uid:0
+#: field:add.partner_call,create_uid:0
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: phonecall_plan
+#: field:add.call,create_date:0
+#: field:add.partner_call,create_date:0
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: phonecall_plan
+#: view:add.partner_call:phonecall_plan.add_partner_call_view_form
+msgid "Partners"
+msgstr "Partenaires"
+
+#. module: phonecall_plan
+#: field:add.call,date:0
+#: field:add.partner_call,date:0
+msgid "Date"
+msgstr "Date"
+
+#. module: phonecall_plan
+#: field:add.call,id:0
+#: field:add.partner_call,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: phonecall_plan
+#: field:add.call,write_uid:0
+#: field:add.partner_call,write_uid:0
+msgid "Last Updated by"
+msgstr "Mis à jour par"
+
+#. module: phonecall_plan
+#: field:add.call,write_date:0
+#: field:add.partner_call,write_date:0
+msgid "Last Updated on"
+msgstr "Mis à jour le"
+
+#. module: phonecall_plan
+#: view:add.call:phonecall_plan.add_call_view_form
+#: field:add.call,lead_ids:0
+msgid "Leads"
+msgstr "Pistes"
+
+#. module: phonecall_plan
+#: field:add.partner_call,partner_ids:0
+msgid "Partners"
+msgstr "Partenaires"
+
+#. module: phonecall_plan
+#: view:add.partner_call:phonecall_plan.add_partner_call_view_form
+#: model:ir.actions.act_window,name:phonecall_plan.launch_add_calls_from_partners
+msgid "Plan a call"
+msgstr "Planifier un appel"
+
+#. module: phonecall_plan
+#: field:add.call,salesperson_id:0
+#: field:add.partner_call,salesperson_id:0
+msgid "Salesperson"
+msgstr "Vendeur"
+
+#. module: phonecall_plan
+#: code:addons/phonecall_plan/wizards/phonecall_plan.py:84
+#, python-format
+msgid "To fill !!!"
+msgstr "À préciser !!!"
+
