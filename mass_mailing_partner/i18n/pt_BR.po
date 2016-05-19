@@ -1,0 +1,144 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * mass_mailing_partner
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: crm (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-03-26 09:38+0000\n"
+"PO-Revision-Date: 2016-03-10 18:54+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: Portuguese (Brazil) (http://www.transifex.com/oca/OCA-crm-8-0/language/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. module: mass_mailing_partner
+#: view:partner.mail.list.wizard:mass_mailing_partner.partner_mail_list_wizard_form
+msgid "Add contacts to mailing list"
+msgstr ""
+
+#. module: mass_mailing_partner
+#: model:ir.actions.act_window,name:mass_mailing_partner.action_partner_mail_list
+msgid "Add to mailing list"
+msgstr ""
+
+#. module: mass_mailing_partner
+#: view:partner.mail.list.wizard:mass_mailing_partner.partner_mail_list_wizard_form
+msgid "Cancel"
+msgstr "Cancel"
+
+#. module: mass_mailing_partner
+#: model:ir.model,name:mass_mailing_partner.model_partner_mail_list_wizard
+#: view:partner.mail.list.wizard:mass_mailing_partner.partner_mail_list_wizard_form
+msgid "Create contact mailing list"
+msgstr ""
+
+#. module: mass_mailing_partner
+#: field:partner.mail.list.wizard,create_uid:0
+msgid "Created by"
+msgstr "Criado por"
+
+#. module: mass_mailing_partner
+#: field:partner.mail.list.wizard,create_date:0
+msgid "Created on"
+msgstr "Criado em"
+
+#. module: mass_mailing_partner
+#: field:partner.mail.list.wizard,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: mass_mailing_partner
+#: field:partner.mail.list.wizard,write_uid:0
+msgid "Last Updated by"
+msgstr "Última atualização por"
+
+#. module: mass_mailing_partner
+#: field:partner.mail.list.wizard,write_date:0
+msgid "Last Updated on"
+msgstr "Última atualização em"
+
+#. module: mass_mailing_partner
+#: model:ir.model,name:mass_mailing_partner.model_mail_mass_mailing_list
+#: field:partner.mail.list.wizard,mail_list_id:0
+#: view:res.partner:mass_mailing_partner.view_res_partner_filter
+msgid "Mailing List"
+msgstr ""
+
+#. module: mass_mailing_partner
+#: field:res.partner,mass_mailing_contacts_count:0
+msgid "Mailing list number"
+msgstr ""
+
+#. module: mass_mailing_partner
+#: view:res.partner:mass_mailing_partner.view_partner_form
+msgid "Mailing lists"
+msgstr ""
+
+#. module: mass_mailing_partner
+#: field:mail.mass_mailing.list,partner_mandatory:0
+msgid "Mandatory Partner"
+msgstr ""
+
+#. module: mass_mailing_partner
+#: model:ir.model,name:mass_mailing_partner.model_mail_mass_mailing_contact
+msgid "Mass Mailing Contact"
+msgstr ""
+
+#. module: mass_mailing_partner
+#: field:res.partner,mass_mailing_contacts:0
+msgid "Mass mailing contacts"
+msgstr ""
+
+#. module: mass_mailing_partner
+#: model:ir.model,name:mass_mailing_partner.model_res_partner
+#: view:mail.mass_mailing.contact:mass_mailing_partner.view_mail_mass_mailing_contact_search
+#: field:mail.mass_mailing.contact,partner_id:0
+msgid "Partner"
+msgstr ""
+
+#. module: mass_mailing_partner
+#: code:addons/mass_mailing_partner/wizard/partner_mail_list_wizard.py:23
+#, python-format
+msgid "Partner '%s' has no email."
+msgstr ""
+
+#. module: mass_mailing_partner
+#: field:mail.mass_mailing.list,partner_category:0
+msgid "Partner Tag"
+msgstr ""
+
+#. module: mass_mailing_partner
+#: code:addons/mass_mailing_partner/models/mail_mass_mailing_contact.py:15
+#: sql_constraint:mail.mass_mailing.contact:0
+#, python-format
+msgid "Partner already exists in this mailing list."
+msgstr ""
+
+#. module: mass_mailing_partner
+#: field:partner.mail.list.wizard,partner_ids:0
+msgid "Partner ids"
+msgstr ""
+
+#. module: mass_mailing_partner
+#: code:addons/mass_mailing_partner/models/res_partner.py:23
+#, python-format
+msgid ""
+"This partner '%s' is subscribed to one or more mailing lists. Email must be "
+"assigned."
+msgstr ""
+
+#. module: mass_mailing_partner
+#: view:partner.mail.list.wizard:mass_mailing_partner.partner_mail_list_wizard_form
+msgid "or"
+msgstr ""
+
+#. module: mass_mailing_partner
+#: view:mail.mass_mailing.contact:mass_mailing_partner.view_mail_mass_mailing_contact_tree
+msgid "{'readonly': [('partner_id', '!=', False)]}"
+msgstr ""

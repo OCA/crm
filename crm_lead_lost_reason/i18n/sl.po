@@ -1,0 +1,166 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * crm_lead_lost_reason
+# 
+# Translators:
+# Matjaž Mozetič <m.mozetic@matmoz.si>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: crm (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-05-07 11:40+0000\n"
+"PO-Revision-Date: 2016-05-09 08:50+0000\n"
+"Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>\n"
+"Language-Team: Slovenian (http://www.transifex.com/oca/OCA-crm-8-0/language/sl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: sl\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+
+#. module: crm_lead_lost_reason
+#: model:ir.model,name:crm_lead_lost_reason.model_crm_lead_lost
+msgid " Ask a reason for the opportunity lost."
+msgstr "Vprašaj za razlog izgube priložnosti."
+
+#. module: crm_lead_lost_reason
+#: model:crm.lead.lost.reason,name:crm_lead_lost_reason.lost_reason_not_match
+msgid "Can not match the requirement"
+msgstr "Ne moremo izpolniti zahtev"
+
+#. module: crm_lead_lost_reason
+#: view:crm.lead.lost:crm_lead_lost_reason.view_crm_lead_lost
+msgid "Cancel"
+msgstr "Preklic"
+
+#. module: crm_lead_lost_reason
+#: view:crm.lead.lost:crm_lead_lost_reason.view_crm_lead_lost
+msgid ""
+"Choose the reason for the lost of the\n"
+"                    lead."
+msgstr "Izberite razlog za izgubo\n                    indica."
+
+#. module: crm_lead_lost_reason
+#: view:crm.lead.lost:crm_lead_lost_reason.view_crm_lead_lost
+msgid "Confirm"
+msgstr "Potrdi"
+
+#. module: crm_lead_lost_reason
+#: field:crm.lead.lost,create_uid:0 field:crm.lead.lost.reason,create_uid:0
+msgid "Created by"
+msgstr "Ustvaril"
+
+#. module: crm_lead_lost_reason
+#: field:crm.lead.lost,create_date:0 field:crm.lead.lost.reason,create_date:0
+msgid "Created on"
+msgstr "Ustvarjeno"
+
+#. module: crm_lead_lost_reason
+#: model:ir.model,name:crm_lead_lost_reason.model_crm_lead_lost_reason
+msgid "Crm Lead Lost Reason"
+msgstr "CRM razlog izgube indica"
+
+#. module: crm_lead_lost_reason
+#: view:crm.lead.lost.reason:crm_lead_lost_reason.view_crm_lead_lost_reason_form
+#: view:crm.lead.lost.reason:crm_lead_lost_reason.view_crm_lead_lost_reason_tree
+msgid "Crm Lead Lost Reasons"
+msgstr "CRM razlogi izgube indica"
+
+#. module: crm_lead_lost_reason
+#: field:crm.lead.lost,display_name:0
+#: field:crm.lead.lost.reason,display_name:0
+msgid "Display Name"
+msgstr "Prikazni naziv"
+
+#. module: crm_lead_lost_reason
+#: field:crm.lead.lost,id:0 field:crm.lead.lost.reason,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: crm_lead_lost_reason
+#: field:crm.lead.lost,__last_update:0
+#: field:crm.lead.lost.reason,__last_update:0
+msgid "Last Modified on"
+msgstr "Zadnjič spremenjeno"
+
+#. module: crm_lead_lost_reason
+#: field:crm.lead.lost,write_uid:0 field:crm.lead.lost.reason,write_uid:0
+msgid "Last Updated by"
+msgstr "Zadnjič posodobil"
+
+#. module: crm_lead_lost_reason
+#: field:crm.lead.lost,write_date:0 field:crm.lead.lost.reason,write_date:0
+msgid "Last Updated on"
+msgstr "Zadnjič posodobljeno"
+
+#. module: crm_lead_lost_reason
+#: model:ir.model,name:crm_lead_lost_reason.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Indic/priložnost"
+
+#. module: crm_lead_lost_reason
+#: model:ir.actions.act_window,name:crm_lead_lost_reason.action_crm_lead_lost_reason
+#: model:ir.ui.menu,name:crm_lead_lost_reason.menu_crm_lead_lost_reason
+msgid "Lost Reasons"
+msgstr "Razlogi izgube"
+
+#. module: crm_lead_lost_reason
+#: view:crm.lead:crm_lead_lost_reason.crm_case_form_view_oppor_reason
+msgid "Lost reason:"
+msgstr "Razlog izgube:"
+
+#. module: crm_lead_lost_reason
+#: view:crm.lead:crm_lead_lost_reason.crm_case_form_view_oppor_reason
+msgid "Mark Lost"
+msgstr "Označi kot izgubljeno"
+
+#. module: crm_lead_lost_reason
+#: model:crm.lead.lost.reason,name:crm_lead_lost_reason.lost_reason_no_news
+msgid "No news from the prospect"
+msgstr "Ni novic o perspektivi"
+
+#. module: crm_lead_lost_reason
+#: model:crm.lead.lost.reason,name:crm_lead_lost_reason.lost_reason_other_competitor
+msgid "Other competitor"
+msgstr "Drug konkurent"
+
+#. module: crm_lead_lost_reason
+#: model:crm.lead.lost.reason,name:crm_lead_lost_reason.lost_reason_other
+msgid "Other reason"
+msgstr "Drug razlog"
+
+#. module: crm_lead_lost_reason
+#: model:crm.lead.lost.reason,name:crm_lead_lost_reason.lost_reason_price
+msgid "Price / No budget"
+msgstr "Cena / ni proračuna"
+
+#. module: crm_lead_lost_reason
+#: model:crm.lead.lost.reason,name:crm_lead_lost_reason.lost_reason_cancelled
+msgid "Project cancelled"
+msgstr "Projekt preklican"
+
+#. module: crm_lead_lost_reason
+#: field:crm.lead.lost,reason_id:0 field:crm.lead.lost.reason,name:0
+msgid "Reason"
+msgstr "Razlog"
+
+#. module: crm_lead_lost_reason
+#: field:crm.lead,lost_reason_id:0
+msgid "Reason for lost"
+msgstr "Razlog za izgubo"
+
+#. module: crm_lead_lost_reason
+#: view:crm.lead.lost:crm_lead_lost_reason.view_crm_lead_lost
+#: model:ir.actions.act_window,name:crm_lead_lost_reason.action_crm_lead_lost
+msgid "Reason for the lost"
+msgstr "Razlogi za izgubo"
+
+#. module: crm_lead_lost_reason
+#: view:crm.lead:crm_lead_lost_reason.crm_case_form_view_oppor_reason
+msgid "True"
+msgstr "Pravilno"
+
+#. module: crm_lead_lost_reason
+#: view:crm.lead.lost:crm_lead_lost_reason.view_crm_lead_lost
+msgid "or"
+msgstr "ali"
