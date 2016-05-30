@@ -28,7 +28,9 @@ class MailMassMailingContact(models.Model):
         if not vals.get('partner_id'):
             vals = self._set_partner(vals)
         vals = self._set_name_email(vals)
-        return super(MailMassMailingContact, self).create(vals)
+        result = super(MailMassMailingContact, self).create(vals)
+        result._sync_opt_out(vals)
+        return result
 
     @api.one
     def write(self, vals):
@@ -36,7 +38,9 @@ class MailMassMailingContact(models.Model):
             # If removing partner, search again by email
             vals = self._set_partner(vals)
         vals = self._set_name_email(vals)
-        return super(MailMassMailingContact, self).write(vals)
+        result = super(MailMassMailingContact, self).write(vals)
+        self._sync_opt_out(vals)
+        return result
 
     def _prepare_partner(self, vals, mailing_list):
         vals = {
@@ -76,3 +80,10 @@ class MailMassMailingContact(models.Model):
         vals['email'] = partner.email
         vals['name'] = partner.name
         return vals
+
+    @api.multi
+    def _sync_opt_out(self, vals):
+        """Set partner's opt_out same as contact's."""
+        if "opt_out" in vals:
+            for s in self.filtered("partner_id"):
+                self.partner_id.opt_out = self.opt_out
