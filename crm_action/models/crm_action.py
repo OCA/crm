@@ -18,7 +18,13 @@ class CrmAction(models.Model):
     def check_change(self):
         lead = self.lead_id
         if lead and lead.partner_id:
-            self.partner_id = lead.partner_id.id
+            self.partner_id = lead.partner_id
+            self.company_id = lead.company_id
+
+    company_id = fields.Many2one(
+        'res.company', string='Company',
+        default=lambda self: self.env['res.company']._company_default_get(
+            'crm.action'))
 
     partner_id = fields.Many2one(
         'res.partner', string='Customer')
