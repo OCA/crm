@@ -19,15 +19,18 @@ Configuration
 
 Go to the menu *Sales > Configuration > Leads & Opportunities > Action Types* and create action types.
 
+If you want to have a daily email reminder of your CRM actions to do, go to the menu *Settings > Technical > Automation > Scheduled Actions* and activate the action *CRM Action email reminder* (it is inactive by default). You can customize the email template in the menu *Settings > Technical > Email > Templates* and select the email template named *CRM Action reminder*.
+
 Usage
 =====
 
 To use this module, you need to :
 
 - create a lead or an opportunity
-- create a new action by using the button
-- you should get back and keep link between the models
+- create a new action by using the *Actions* button
+- when the action is done, click on the button *Mark as done*
 - you can overview all actions for any lead or opportunity with the *Actions* menu entry
+- on the form view of an opportunity, you can see the next action to do and there is also a button to mark it as done (it will immediately display the new next action to do).
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
