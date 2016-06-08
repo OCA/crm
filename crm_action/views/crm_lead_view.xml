@@ -1,24 +1,32 @@
 <?xml version="1.0"?>
 <openerp>
     <data>
+
+        <record id="crm_action_simple_action" model="ir.actions.act_window">
+            <field name="name">Actions</field>
+            <field name="res_model">crm.action</field>
+            <field name="view_mode">tree,form,calendar</field>
+        </record>
+
         <record id="crm_case_form_view_oppor" model="ir.ui.view" >
-            <field name="name">CRM - Leads Form</field>
+            <field name="name">CRM - Opportunity Form</field>
             <field name="model">crm.lead</field>
             <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
             <field name="arch" type="xml">
                 <div class="oe_right oe_button_box" position="inside">
                     <button
                             class="oe_inline oe_stat_button"
-                            type="object"
-                            context="{
-                                'default_partner_id': partner_id,
-                                'default_lead_id': id,
-                            }"
-                            name="button_actions"
+                            type="action"
+                            name="%(crm_action.crm_action_simple_action)d"
+                            context="{'search_default_lead_id': active_id, 'search_default_user_me': 0}"
                             icon="fa-list">
                         <field string="Actions" name="actions_count" widget="statinfo"/>
                     </button>
                 </div>
+                <field name="title_action" position="after">
+                    <button name="next_action_done" type="object" help="Mark next action as done" icon="STOCK_APPLY" class="oe_inline" attrs="{'invisible': [('next_action_id', '=', False)]}"/>
+                    <field name="next_action_id" invisible="1" class="oe_inline"/>
+                </field>
             </field>
         </record>
         <record id="crm_case_action_button_form_view" model="ir.ui.view" >
@@ -29,12 +37,9 @@
                 <div class="oe_right oe_button_box" position="inside">
                     <button
                             class="oe_inline oe_stat_button"
-                            type="object"
-                            context="{
-                                'default_partner_id': partner_id,
-                                'default_lead_id': id,
-                            }"
-                            name="button_actions"
+                            type="action"
+                            name="%(crm_action.crm_action_simple_action)d"
+                            context="{'search_default_lead_id': active_id, 'search_default_user_me': 0}"
                             icon="fa-list">
                         <field string="Actions" name="actions_count" widget="statinfo"/>
                     </button>
