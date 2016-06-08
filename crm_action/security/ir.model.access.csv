@@ -1,5 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_crm_action_user,crm.action.user,model_crm_action,group_crm_action_user,1,1,1,0
-access_crm_action_manager,crm.action.manager,model_crm_action,group_crm_action_manager,1,1,1,1
-access_crm_action_type_user,crm.action.type.user,model_crm_action_type,group_crm_action_user,1,0,0,0
-access_crm_action_type_manager,crm.action.type.manager,model_crm_action_type,group_crm_action_manager,1,1,1,1
+access_crm_action_user,crm.action.user,model_crm_action,base.group_sale_salesman,1,1,1,0
+access_crm_action_manager,crm.action.manager,model_crm_action,base.group_sale_manager,1,1,1,1
+access_crm_action_type_user,crm.action.type.user,model_crm_action_type,base.group_user,1,0,0,0
+access_crm_action_type_manager,crm.action.type.manager,model_crm_action_type,base.group_sale_manager,1,1,1,1
