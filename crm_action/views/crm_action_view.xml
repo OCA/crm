@@ -29,7 +29,7 @@
             <field name="name">crm.action.tree</field>
             <field name="model">crm.action</field>
             <field name="arch" type="xml">
-                <tree editable="top" colors="red:date &lt; current_date">
+                <tree editable="top" colors="red:date &lt; current_date and state=='draft';blue:date &gt;= current_date and state=='draft'">
                     <field name="lead_id"/>
                     <field name="partner_id"/>
                     <field name="date"/>
