@@ -16,6 +16,7 @@
         'views/crm_action_view.xml',
         'views/crm_action_type_view.xml',
         'views/crm_lead_view.xml',
+        'data/email_reminder.xml',
     ],
     'demo': ['demo/demo.xml'],
     'installable': True,

@@ -3,6 +3,9 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from openerp import models, fields, api
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 class CrmAction(models.Model):
@@ -77,3 +80,33 @@ class CrmAction(models.Model):
     @api.multi
     def button_set_to_draft(self):
         self.write({'state': 'draft'})
+
+    @api.model
+    def _send_email_reminder(self):
+        today = fields.Date.context_today(self)
+        actions = self.env['crm.action'].search([
+            ('state', '=', 'draft'), ('date', '=', today)])
+        logger.info(
+            'Preparing CRM actions email reminders '
+            '(%d actions found for today)',
+            len(actions))
+        user_company_actions = {}
+        # key = (user, company)
+        # value = list of crm.action records
+        if actions:
+            for action in actions:
+                user_company_actions.setdefault(
+                    (action.user_id, action.company_id), []).append(action)
+        mail_template = self.env.ref(
+            'crm_action.crm_action_reminder_email_template')
+        for (user, company), action_list in user_company_actions.iteritems():
+            if user.email:
+                mail_template.with_context(
+                    crm_action_list=action_list,
+                    company=company).send_mail(user.id)
+                logger.info(
+                    'Sent CRM action email reminder to user %s <%s> '
+                    'company %s', user.name, user.email, company.name)
+            else:
+                logger.warning('Missing email on user %s', user.name)
+        return True
