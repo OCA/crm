@@ -15,6 +15,7 @@
                         <group>
                             <field name="lead_id"/>
                             <field name="partner_id"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
                             <field name="date"/>
                             <field name="user_id"/>
                             <field name="action_type_id"/>
