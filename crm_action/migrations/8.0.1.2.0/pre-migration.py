@@ -9,6 +9,6 @@ def migrate(cr, version):
 
     cr.execute(
         'ALTER TABLE "crm_action_type" RENAME "is_active" TO "active"')
-
+    print "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
     cr.execute(
         'ALTER TABLE "crm_action" RENAME "action_type" TO "action_type_id"')
