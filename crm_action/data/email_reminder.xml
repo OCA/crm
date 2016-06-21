@@ -6,7 +6,7 @@
 
 <openerp>
 
-<data noupdate="1"> <!-- noupdate = 1 for the 'active' field -->
+<data noupdate="1">
 <record id="crm_action_reminder_email_cron" model="ir.cron">
     <field name="name">CRM Action email reminder</field>
     <field name="active" eval="False"/>  <!-- we want it inactive by default -->

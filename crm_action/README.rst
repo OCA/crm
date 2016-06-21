@@ -26,11 +26,11 @@ Usage
 
 To use this module, you need to :
 
-- create a lead or an opportunity
-- create a new action by using the *Actions* button
-- when the action is done, click on the button *Mark as done*
-- you can overview all actions for any lead or opportunity with the *Actions* menu entry
-- on the form view of an opportunity, you can see the next action to do and there is also a button to mark it as done (it will immediately display the new next action to do).
+1. create a lead or an opportunity,
+#. create a new action by using the *Actions* button,
+#. when the action is done, click on the button *Mark as done*.
+
+You can overview all actions for any lead or opportunity with the *Actions* menu entry. On the form view of an opportunity, you can see the next action to do and there is also a button to mark it as done (it will immediately display the new next action to do).
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
