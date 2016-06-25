@@ -14,6 +14,7 @@ addon | version | summary
 [crm_claim_code](crm_claim_code/) | 8.0.1.0.0 | Sequential Code for Claims
 [crm_claim_type](crm_claim_type/) | 8.0.1.0.0 | Claim types for CRM
 [crm_deduplicate_acl](crm_deduplicate_acl/) | 8.0.1.0.0 | Contact deduplication with fine-grained permission control
+[crm_deduplicate_by_website](crm_deduplicate_by_website/) | 8.0.1.0.0 | Deduplicate Contacts by Website
 [crm_lead_address_street3](crm_lead_address_street3/) | 8.0.0.1.0 | Street3 in lead addresses
 [crm_lead_code](crm_lead_code/) | 8.0.1.0.0 | Sequential Code for Leads / Opportunities
 [crm_lead_firstname](crm_lead_firstname/) | 8.0.1.0.0 | Specify split names for contacts in leads
