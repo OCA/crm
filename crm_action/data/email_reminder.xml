@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  © 2016 Akretion (Alexis de Lattre <alexis.delattre@akretion.com>)
+  License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+
+<openerp>
+
+<data noupdate="1">
+<record id="crm_action_reminder_email_cron" model="ir.cron">
+    <field name="name">CRM Action email reminder</field>
+    <field name="active" eval="False"/>  <!-- we want it inactive by default -->
+    <field name="user_id" ref="base.user_root"/>
+    <field name="interval_number">1</field>
+    <field name="interval_type">days</field>
+    <field name="numbercall">-1</field> <!-- don't limit the number of calls -->
+    <field name="doall" eval="False"/>
+    <field name="model" eval="'crm.action'"/>
+    <field name="function" eval="'_send_email_reminder'" />
+    <field name="args" eval="'()'"/>
+</record>
+
+</data>
+<data>
+
+<record id="crm_action_reminder_email_template" model="email.template">
+    <field name="name">CRM Action Reminder</field>
+    <field name="model_id" ref="base.model_res_users"/>
+    <field name="auto_delete" eval="False"/>
+    <field name="email_from">${ctx.get('company').email or 'odoo@example.com'}</field>
+    <field name="email_to">${object.email}</field>
+    <field name="subject">[${ctx.get('company').name}] Today's CRM actions</field>
+    <field name="body_html"><![CDATA[
+<div style="font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; ">
+
+<p>Dear ${object.name},</p>
+
+<p>Here is the list of your CRM actions to perform today for ${ctx.get('company').name}:</p>
+
+<ul>
+% for action in ctx.get('crm_action_list'):
+<li style="margin: 0 0 15px 0;">${action.lead_id and action.lead_id.name or 'Not linked to a lead'}
+<ul>
+% if action.partner_id:
+<li>Customer: ${action.partner_id.name_get()[0][1]}</li>
+% endif
+% if not action.partner_id and action.lead_id.partner_name:
+<li>Customer: ${action.lead_id.partner_name}${action.lead_id.contact_name and ', ' + action.lead_id.contact_name or ''}</li>
+% endif
+<li>Type: ${action.action_type_id.name}</li>
+<li>Details: ${action.details}</li>
+% if action.lead_id and action.lead_id.phone:
+<li>Phone: <a href="tel:${action.lead_id.phone}">${action.lead_id.phone}</a></li>
+% endif
+% if action.lead_id and action.lead_id.mobile:
+<li>Mobile: <a href="tel:${action.lead_id.mobile}">${action.lead_id.mobile}</a></li>
+% endif
+% if action.lead_id and action.lead_id.email_from:
+<li>Email: <a href="mailto:${action.lead_id.email_from}">${action.lead_id.email_from}</a></li>
+% endif
+
+</ul>
+</li>
+% endfor
+</ul>
+
+<p>
+-- <br/>
+Automatic e-mail sent by Odoo. Do not reply.
+</p>
+</div>
+]]></field>
+</record>
+
+</data>
+</openerp>

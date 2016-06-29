@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data noupdate="1">
+
+
+<record id="meeting" model="crm.action.type">
+    <field name="name">Meeting</field>
+</record>
+
+<record id="followup" model="crm.action.type">
+    <field name="name">Followup</field>
+</record>
+
+<record id="demo" model="crm.action.type">
+    <field name="name">Demo</field>
+</record>
+
+<record id="case_11_action_1" model="crm.action">
+    <field name="details">Get news about our quote</field>
+    <field name="date" eval="time.strftime('%Y-%m-01')"/>
+    <field name="action_type_id" ref="followup"/>
+    <field name="lead_id" ref="crm.crm_case_11"/>
+    <field name="partner_id" ref="base.res_partner_1"/>
+    <field name="user_id" ref="base.user_demo"/>
+    <field name="state">done</field>
+</record>
+
+<record id="case_11_action_2" model="crm.action">
+    <field name="details">Meeting</field>
+    <field name="date" eval="time.strftime('%Y-%m-01')"/>
+    <field name="action_type_id" ref="meeting"/>
+    <field name="lead_id" ref="crm.crm_case_11"/>
+    <field name="partner_id" ref="base.res_partner_1"/>
+    <field name="user_id" ref="base.user_demo"/>
+    <field name="state">draft</field>
+</record>
+
+<record id="case_11_action_3" model="crm.action">
+    <field name="details">Organise a demo in our showroom</field>
+    <field name="date" eval="(datetime.now() + relativedelta(day=15)).strftime('%Y-%m-%d')"/>
+    <field name="action_type_id" ref="demo"/>
+    <field name="lead_id" ref="crm.crm_case_11"/>
+    <field name="partner_id" ref="base.res_partner_1"/>
+    <field name="user_id" ref="base.user_demo"/>
+    <field name="state">draft</field>
+</record>
+
+<record id="case_13_action_1" model="crm.action">
+    <field name="details">Get feedback about our quote</field>
+    <field name="date" eval="time.strftime('%Y-%m-01')"/>
+    <field name="action_type_id" ref="followup"/>
+    <field name="lead_id" ref="crm.crm_case_13"/>
+    <field name="user_id" ref="base.user_demo"/>
+    <field name="state">done</field>
+</record>
+
+<record id="case_13_action_2" model="crm.action">
+    <field name="details">Meet in real life</field>
+    <field name="date" eval="time.strftime('%Y-%m-01')"/>
+    <field name="action_type_id" ref="meeting"/>
+    <field name="lead_id" ref="crm.crm_case_13"/>
+    <field name="user_id" ref="base.user_demo"/>
+    <field name="state">draft</field>
+</record>
+
+<record id="case_13_action_3" model="crm.action">
+    <field name="details">Organise a super demo to convince him that it is super easy and super fast</field>
+    <field name="date" eval="(datetime.now() + relativedelta(day=10)).strftime('%Y-%m-%d')"/>
+    <field name="action_type_id" ref="demo"/>
+    <field name="lead_id" ref="crm.crm_case_13"/>
+    <field name="user_id" ref="base.user_demo"/>
+    <field name="state">draft</field>
+</record>
+
+
+</data>
+</openerp>
