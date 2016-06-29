@@ -9,10 +9,13 @@ from openerp import SUPERUSER_ID
 
 
 def create_code_equal_to_id(cr):
-    cr.execute('ALTER TABLE crm_claim '
-               'ADD COLUMN code character varying;')
-    cr.execute('UPDATE crm_claim '
-               'SET code = id;')
+    cr.execute("SELECT column_name FROM information_schema.columns "
+               "WHERE table_name = 'crm_claim' AND column_name = 'code'")
+    if not cr.fetchone():
+        cr.execute('ALTER TABLE crm_claim '
+                   'ADD COLUMN code character varying;')
+        cr.execute('UPDATE crm_claim '
+                   'SET code = id;')
 
 
 def assign_old_sequences(cr, registry):
