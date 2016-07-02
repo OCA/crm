@@ -1,0 +1,33 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * crm_claim_code
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: crm (9.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-07-01 15:03+0000\n"
+"PO-Revision-Date: 2016-05-19 09:44+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: Croatian (http://www.transifex.com/oca/OCA-crm-9-0/language/hr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: hr\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#. module: crm_claim_code
+#: model:ir.model,name:crm_claim_code.model_crm_claim
+msgid "Claim"
+msgstr "Potraživanje"
+
+#. module: crm_claim_code
+#: model:ir.model.fields,field_description:crm_claim_code.field_crm_claim_code
+msgid "Claim Number"
+msgstr ""
+
+#. module: crm_claim_code
+#: sql_constraint:crm.claim:0
+msgid "The code must be unique!"
+msgstr ""
