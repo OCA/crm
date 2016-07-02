@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-14 03:55+0000\n"
+"POT-Creation-Date: 2016-06-30 00:51+0000\n"
 "PO-Revision-Date: 2016-04-04 00:30+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: French (http://www.transifex.com/oca/OCA-crm-8-0/language/fr/)\n"
@@ -46,7 +46,7 @@ msgstr ""
 #. module: marketing_crm_partner
 #: model:ir.model,name:marketing_crm_partner.model_res_partner
 msgid "Partner"
-msgstr ""
+msgstr "Contact"
 
 #. module: marketing_crm_partner
 #: view:res.partner:marketing_crm_partner.view_res_partner_filter
