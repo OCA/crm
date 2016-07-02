@@ -3,13 +3,14 @@
 # * crm_action
 # 
 # Translators:
+# Fabien Bourgeois <fabien@yaltik.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-10 18:52+0000\n"
-"PO-Revision-Date: 2016-03-10 18:54+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
+"POT-Creation-Date: 2016-06-30 00:51+0000\n"
+"PO-Revision-Date: 2016-07-01 15:53+0000\n"
+"Last-Translator: Fabien Bourgeois <fabien@yaltik.com>\n"
 "Language-Team: French (http://www.transifex.com/oca/OCA-crm-8-0/language/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,22 +19,76 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. module: crm_action
+#: model:email.template,body_html:crm_action.crm_action_reminder_email_template
+msgid ""
+"\n"
+"<div style=\"font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; \">\n"
+"\n"
+"<p>Dear ${object.name},</p>\n"
+"\n"
+"<p>Here is the list of your CRM actions to perform today for ${ctx.get('company').name}:</p>\n"
+"\n"
+"<ul>\n"
+"% for action in ctx.get('crm_action_list'):\n"
+"<li style=\"margin: 0 0 15px 0;\">${action.lead_id and action.lead_id.name or 'Not linked to a lead'}\n"
+"<ul>\n"
+"% if action.partner_id:\n"
+"<li>Customer: ${action.partner_id.name_get()[0][1]}</li>\n"
+"% endif\n"
+"% if not action.partner_id and action.lead_id.partner_name:\n"
+"<li>Customer: ${action.lead_id.partner_name}${action.lead_id.contact_name and ', ' + action.lead_id.contact_name or ''}</li>\n"
+"% endif\n"
+"<li>Type: ${action.action_type_id.name}</li>\n"
+"<li>Details: ${action.details}</li>\n"
+"% if action.lead_id and action.lead_id.phone:\n"
+"<li>Phone: <a href=\"tel:${action.lead_id.phone}\">${action.lead_id.phone}</a></li>\n"
+"% endif\n"
+"% if action.lead_id and action.lead_id.mobile:\n"
+"<li>Mobile: <a href=\"tel:${action.lead_id.mobile}\">${action.lead_id.mobile}</a></li>\n"
+"% endif\n"
+"% if action.lead_id and action.lead_id.email_from:\n"
+"<li>Email: <a href=\"mailto:${action.lead_id.email_from}\">${action.lead_id.email_from}</a></li>\n"
+"% endif\n"
+"\n"
+"</ul>\n"
+"</li>\n"
+"% endfor\n"
+"</ul>\n"
+"\n"
+"<p>\n"
+"-- <br/>\n"
+"Automatic e-mail sent by Odoo. Do not reply.\n"
+"</p>\n"
+"</div>\n"
+msgstr "\n<div style=\"font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; \">\n\n<p>Cher ${object.name},</p>\n\n<p>Voici une liste des actions à mener aujourd'hui pour ${ctx.get('company').name}:</p>\n\n<ul>\n% for action in ctx.get('crm_action_list'):\n<li style=\"margin: 0 0 15px 0;\">${action.lead_id and action.lead_id.name or 'Non liée à une piste'}\n<ul>\n% if action.partner_id:\n<li>Client: ${action.partner_id.name_get()[0][1]}</li>\n% endif\n% if not action.partner_id and action.lead_id.partner_name:\n<li>Client: ${action.lead_id.partner_name}${action.lead_id.contact_name and ', ' + action.lead_id.contact_name or ''}</li>\n% endif\n<li>Type: ${action.action_type_id.name}</li>\n<li>Détails: ${action.details}</li>\n% if action.lead_id and action.lead_id.phone:\n<li>Téléphone: <a href=\"tel:${action.lead_id.phone}\">${action.lead_id.phone}</a></li>\n% endif\n% if action.lead_id and action.lead_id.mobile:\n<li>Mobile: <a href=\"tel:${action.lead_id.mobile}\">${action.lead_id.mobile}</a></li>\n% endif\n% if action.lead_id and action.lead_id.email_from:\n<li>Email: <a href=\"mailto:${action.lead_id.email_from}\">${action.lead_id.email_from}</a></li>\n% endif\n\n</ul>\n</li>\n% endfor\n</ul>\n\n<p>\n-- <br/>\nE-mail automatique envoyé depuis Odoo. Merci de ne pas répondre.\n</p>\n</div>\n"
+
+#. module: crm_action
+#: view:crm.action:crm_action.view_crm_action_filter
+msgid "Action Type"
+msgstr "Types d'action"
+
+#. module: crm_action
 #: model:ir.actions.act_window,name:crm_action.action_crm_action_type_view
 #: model:ir.ui.menu,name:crm_action.menu_crm_action_type_act
 msgid "Action Types"
 msgstr "Types d'action"
 
 #. module: crm_action
-#: code:addons/crm_action/models/crm_lead.py:41
 #: view:crm.action:crm_action.view_action_form
+#: view:crm.action:crm_action.view_crm_action_calendar
 #: view:crm.lead:crm_action.crm_case_action_button_form_view
 #: view:crm.lead:crm_action.crm_case_form_view_oppor
 #: field:crm.lead,action_ids:0
 #: model:ir.actions.act_window,name:crm_action.action_crm_action_view
+#: model:ir.actions.act_window,name:crm_action.crm_action_simple_action
 #: model:ir.ui.menu,name:crm_action.menu_crm_action
-#, python-format
 msgid "Actions"
 msgstr "Actions"
+
+#. module: crm_action
+#: field:crm.lead,actions_count:0
+msgid "Actions count"
+msgstr "Nombre d'actions"
 
 #. module: crm_action
 #: view:crm.action:crm_action.view_crm_action_filter
@@ -41,10 +96,15 @@ msgid "Actions done by me"
 msgstr "Actions faites par moi"
 
 #. module: crm_action
-#: view:crm.action.type:crm_action.view_crm_action_type_filter
-#: field:crm.action.type,is_active:0
+#: field:crm.action.type,active:0
 msgid "Active"
 msgstr "Actives"
+
+#. module: crm_action
+#: view:crm.action:crm_action.view_action_form
+#: view:crm.action:crm_action.view_action_tree
+msgid "Back to Todo"
+msgstr "Retour vers \"à faire\""
 
 #. module: crm_action
 #: model:ir.model,name:crm_action.model_crm_action
@@ -52,24 +112,14 @@ msgid "CRM Action"
 msgstr "CRM Action"
 
 #. module: crm_action
-#: model:res.groups,name:crm_action.group_crm_action_manager
-msgid "CRM Action Manager"
-msgstr ""
-
-#. module: crm_action
 #: model:ir.model,name:crm_action.model_crm_action_type
 msgid "CRM Action Type"
 msgstr "CRM Type d'action"
 
 #. module: crm_action
-#: model:res.groups,name:crm_action.group_crm_action_user
-msgid "CRM Action User"
-msgstr ""
-
-#. module: crm_action
-#: view:crm.action:crm_action.view_action_form
-msgid "Confirm"
-msgstr "Conrifmer"
+#: field:crm.action,company_id:0
+msgid "Company"
+msgstr "Société"
 
 #. module: crm_action
 #: field:crm.action,create_uid:0 field:crm.action.type,create_uid:0
@@ -92,9 +142,24 @@ msgid "Date"
 msgstr "Date"
 
 #. module: crm_action
+#: model:crm.action.type,name:crm_action.demo
+msgid "Demo"
+msgstr "Démo"
+
+#. module: crm_action
 #: field:crm.action,details:0
 msgid "Details"
 msgstr "Détails"
+
+#. module: crm_action
+#: field:crm.action.type,display_name:0
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: crm_action
+#: field:crm.action,display_name:0
+msgid "Display name"
+msgstr "Nom affiché"
 
 #. module: crm_action
 #: view:crm.action:crm_action.view_crm_action_filter
@@ -103,15 +168,24 @@ msgid "Done"
 msgstr "Terminé"
 
 #. module: crm_action
+#: model:crm.action.type,name:crm_action.followup
+msgid "Followup"
+msgstr "À suivre"
+
+#. module: crm_action
 #: view:crm.action:crm_action.view_crm_action_filter
-#: selection:crm.action,state:0
-msgid "Draft"
-msgstr "Brouillon"
+msgid "Group By"
+msgstr "Grouper par"
 
 #. module: crm_action
 #: field:crm.action,id:0 field:crm.action.type,id:0
 msgid "ID"
 msgstr "ID"
+
+#. module: crm_action
+#: field:crm.action,__last_update:0 field:crm.action.type,__last_update:0
+msgid "Last Modified on"
+msgstr "Dernière mise-à-jour le"
 
 #. module: crm_action
 #: field:crm.action,write_uid:0 field:crm.action.type,write_uid:0
@@ -134,6 +208,22 @@ msgid "Lead/Opportunity"
 msgstr "Piste/Opportunité"
 
 #. module: crm_action
+#: view:crm.action:crm_action.view_action_form
+#: view:crm.action:crm_action.view_action_tree
+msgid "Mark as Done"
+msgstr "Marquer comme terminé"
+
+#. module: crm_action
+#: view:crm.lead:crm_action.crm_case_form_view_oppor
+msgid "Mark next action as done"
+msgstr "Marquer la prochaine action comme terminée"
+
+#. module: crm_action
+#: model:crm.action.type,name:crm_action.meeting
+msgid "Meeting"
+msgstr "Rendez-vous"
+
+#. module: crm_action
 #: view:crm.action:crm_action.view_crm_action_filter
 msgid "My Actions"
 msgstr "Mes Actions"
@@ -142,6 +232,16 @@ msgstr "Mes Actions"
 #: field:crm.action.type,name:0
 msgid "Name"
 msgstr "Nom"
+
+#. module: crm_action
+#: field:crm.lead,next_action_id:0
+msgid "Next Action"
+msgstr "Prochaine action"
+
+#. module: crm_action
+#: view:crm.action:crm_action.view_crm_action_filter
+msgid "Partner"
+msgstr "Contact"
 
 #. module: crm_action
 #: field:crm.action.type,priority:0
@@ -159,21 +259,38 @@ msgid "Search Actions"
 msgstr "Chercher des actions"
 
 #. module: crm_action
-#: view:crm.action:crm_action.view_action_form
-msgid "Set To Draft"
-msgstr "Mettre à l'état brouillon"
-
-#. module: crm_action
 #: field:crm.action,state:0
 msgid "Status"
 msgstr "Statut"
 
 #. module: crm_action
-#: field:crm.action,action_type:0
+#: view:crm.action:crm_action.view_crm_action_filter
+#: selection:crm.action,state:0
+msgid "Todo"
+msgstr "À faire"
+
+#. module: crm_action
+#: view:crm.action:crm_action.view_crm_action_filter
+msgid "Todo Today"
+msgstr "À faire aujourd'hui"
+
+#. module: crm_action
+#: field:crm.action,action_type_id:0
 msgid "Type"
 msgstr "Type"
 
 #. module: crm_action
+#: view:crm.action:crm_action.view_crm_action_filter
 #: field:crm.action,user_id:0
 msgid "User"
 msgstr "Utilisateur"
+
+#. module: crm_action
+#: view:crm.action:crm_action.view_crm_action_filter
+msgid "Week"
+msgstr "Semaine"
+
+#. module: crm_action
+#: model:email.template,subject:crm_action.crm_action_reminder_email_template
+msgid "[${ctx.get('company').name}] Today's CRM actions"
+msgstr "[${ctx.get('company').name}] CRM : actions du jour"
