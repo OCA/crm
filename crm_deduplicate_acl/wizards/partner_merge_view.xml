@@ -23,10 +23,7 @@
             </field>
         </record>
 
-        <act_window id="crm.action_partner_merge"
-                    res_model="base.partner.merge.automatic.wizard" src_model="res.partner"
-            target="new" multi="True" key2="client_action_multi"
-                    view_mode="form" name="Automatic Merge" groups="group_manually"/>
+        <act_window id="crm.action_partner_merge" groups="group_manually"/>
 
     </data>
 </openerp>
