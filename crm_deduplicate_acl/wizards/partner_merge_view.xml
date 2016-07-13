@@ -20,7 +20,7 @@
         </record>
 
         <record id="crm.action_partner_merge" model="ir.actions.act_window">
-            <field name="groups">group_manually</field>
+            <field name="groups_id">group_manually</field>
         </record>
 
     </data>
