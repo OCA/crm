@@ -23,7 +23,9 @@
             </field>
         </record>
 
-        <act_window id="crm.action_partner_merge" groups="group_manually"/>
+        <record id="crm.action_partner_merge" model="ir.actions.act_window">
+            <field name="groups">group_manually</field>
+        </record>
 
     </data>
 </openerp>
