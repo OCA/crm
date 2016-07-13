@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- © 2015 Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>
+     © 2015 Antonio Espinosa <antonioea@antiun.com>
+     © 2015 Javier Iniesta <javieria@antiun.com>
+     © 2016 Antonio Espinosa - <antonio.espinosa@tecnativa.com>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
 <openerp>
 <data>
 
@@ -17,6 +22,16 @@
                 <field name="mass_mailing_contacts_count"
                        widget="statinfo"
                        string="Mailing lists"/>
+            </button>
+            <button name="%(mass_mailing.action_view_mail_mail_statistics)d"
+                    context="{'search_default_partner_id': active_id,
+                              'default_partner_id': active_id}"
+                    type="action"
+                    class="oe_stat_button oe_inline"
+                    icon="fa-envelope-o">
+                <field name="mass_mailing_stats_count"
+                       widget="statinfo"
+                       string="Mass mailing stats"/>
             </button>
         </div>
     </field>

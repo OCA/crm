@@ -14,14 +14,25 @@ Features
   email, linking matched partner, or creating a new one if no match and the
   maling list partner mandatory field is checked.
 * Mailing contacts smart button in partner form.
+* Mass mailing stats smart button in partner form.
+* Filter and group by partner in mail statistics tree view
 
 
 Configuration
 =============
 
 At first install, all existing mass mailing contacts are matched against
-partners.
+partners. And also mass mailing statistics are matched using model and res_id.
 
+NOTE: When upgrading from version 1.0.0, no mass mailing statistics matching
+are done, because it is done only when installing. You can execute 'partner_link'
+method to all stats using odoo shell or any XML client:
+
+.. code:: python
+
+    # odoo.py --addons-path=<addons_path_list> shell --config=<odoo_config_file> -d <database>
+    stats = self.env['mail.mail.statistics'].search([('model', '!=', False), ('res_id', '!=', False)])
+    stats.partner_link()
 
 Usage
 =====
@@ -85,4 +96,4 @@ OCA, or the Odoo Community Association, is a nonprofit organization whose
 mission is to support the collaborative development of Odoo features and
 promote its widespread use.
 
-To contribute to this module, please visit http://odoo-community.org.
+To contribute to this module, please visit https://odoo-community.org.

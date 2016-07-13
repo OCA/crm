@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
-# See README.rst file on addon root folder for license details
+# © 2015 Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>
+# © 2015 Antonio Espinosa <antonioea@antiun.com>
+# © 2015 Javier Iniesta <javieria@antiun.com>
+# © 2016 Antonio Espinosa - <antonio.espinosa@tecnativa.com>
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 from openerp import models, fields, api, _
 
@@ -49,7 +53,7 @@ class MailMassMailingContact(models.Model):
 
     def _set_partner(self, vals):
         email = vals.get('email', self.email)
-        if not email:
+        if not email:  # pragma: no cover
             return vals
         m_mailing = self.env['mail.mass_mailing.list']
         m_partner = self.env['res.partner']

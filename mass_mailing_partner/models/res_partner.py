@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
-# See README.rst file on addon root folder for license details
+# © 2015 Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>
+# © 2015 Antonio Espinosa <antonioea@antiun.com>
+# © 2015 Javier Iniesta <javieria@antiun.com>
+# © 2016 Antonio Espinosa - <antonio.espinosa@tecnativa.com>
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 from openerp import models, fields, api, _
 from openerp.exceptions import ValidationError
@@ -9,11 +13,17 @@ class ResPartner(models.Model):
     _inherit = 'res.partner'
 
     mass_mailing_contacts = fields.One2many(
+        string="Mailing lists",
         comodel_name='mail.mass_mailing.contact', inverse_name='partner_id')
-
     mass_mailing_contacts_count = fields.Integer(
-        string='Mailing list number', compute='_count_mass_mailing_contacts',
-        store=True)
+        string='Mailing list number',
+        compute='_compute_mass_mailing_contacts_count', store=True)
+    mass_mailing_stats = fields.One2many(
+        string="Mass mailing stats",
+        comodel_name='mail.mail.statistics', inverse_name='partner_id')
+    mass_mailing_stats_count = fields.Integer(
+        string='Mass mailing stats number',
+        compute='_compute_mass_mailing_stats_count', store=True)
 
     @api.one
     @api.constrains('email')
@@ -25,8 +35,13 @@ class ResPartner(models.Model):
 
     @api.one
     @api.depends('mass_mailing_contacts')
-    def _count_mass_mailing_contacts(self):
+    def _compute_mass_mailing_contacts_count(self):
         self.mass_mailing_contacts_count = len(self.mass_mailing_contacts)
+
+    @api.one
+    @api.depends('mass_mailing_stats')
+    def _compute_mass_mailing_stats_count(self):
+        self.mass_mailing_stats_count = len(self.mass_mailing_stats)
 
     @api.multi
     def write(self, vals):
