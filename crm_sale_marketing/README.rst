@@ -6,23 +6,30 @@
 Sales Marketing
 ================
 
-* This module copies the marketing details while converting opportunity to quotation.
-* Which will help to know number of Sales generated from any particular campaign.
+This module extends the functionality of sale_crm module which copies the marketing data  
+from lead to sale and allows one to keep track of sales generated from marketing source.
 
 Installation
 ============
 
-* No external library is used.
+To install this module there is no external library required.
+
+1. Nothing required at all.
 
 Configuration
 =============
 
-* No Configuration Requrired.
+To configure this module, you need to:
+
+1. No Configuration required at all.
 
 Usage
 =====
 
-* This module will be helpful to trace the Sales generated from the any Marketing source.
+To use this module, you need to:
+
+1. Go to Lead, pass the marketing details and when the lead is converted to quotation 
+the module will automatically copy the marketing details to the quotation.
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
