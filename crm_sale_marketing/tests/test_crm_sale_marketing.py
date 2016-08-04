@@ -5,7 +5,6 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
 from openerp.tests import common
-from openerp import netsvc
 
 
 class TestSaleMarketing(common.TransactionCase):
@@ -64,13 +63,7 @@ class TestSaleMarketing(common.TransactionCase):
             'medium_id': medium.id,
             'source_id': source.id,
         })
-        print "campaign_id $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$", crm.campaign_id
         return crm
-
-#               {'lang': 'en_US', 'tz': 'Europe/Brussels', 'uid': 1,
-#               'active_model': 'crm.lead', 'stage_type': 'opportunity',
-#               'params': {'action': 324}, 'search_disable_custom_filters': True,
-#               'needaction_menu_ref': 'sale.menu_sale_quotations', 'active_ids': [25], 'active_id': 25}
 
     def _create_quotation(self, cr, uid):
         """Convert a Opportunity to Quotation."""
@@ -83,14 +76,11 @@ class TestSaleMarketing(common.TransactionCase):
                    'active_model': 'crm.lead',
                    'stage_type': 'opportunity',
                    }
-        print "crm_make_sale ((((((((((((((((((((((((((((((((((((((((", crm_make_sale
-        res = self.registry('crm.make.sale').makeOrder(cr, uid, crm_make_sale.ids,
+        res = self.registry('crm.make.sale').makeOrder(cr, uid,
+                                                       crm_make_sale.ids,
                                                        context)
-#        res = crm_make_sale.makeOrder()
-        print "\n\nres ((((((((((((((((((((((((((((((((((((((((", res
         sale_id = res.get('res_id')
         sale = self.sale_order_model.browse(sale_id)
-        print "sale =======================================", sale, sale.campaign_id.name, sale.medium_id.name, sale.source_id.name
         return sale
 
     def test_marketing_details(self):
