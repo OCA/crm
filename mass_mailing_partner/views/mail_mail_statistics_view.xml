@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2016 Antonio Espinosa - <antonio.espinosa@tecnativa.com>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+<openerp>
+<data>
+
+<record model="ir.ui.view" id="view_mail_mail_statistics_form">
+    <field name="name">Add partner field</field>
+    <field name="model">mail.mail.statistics</field>
+    <field name="inherit_id" ref="mass_mailing.view_mail_mail_statistics_form"/>
+    <field name="arch" type="xml">
+        <field name="res_id" position="after">
+            <field name="partner_id"/>
+        </field>
+    </field>
+</record>
+
+<record model="ir.ui.view" id="view_mail_mail_statistics_tree">
+    <field name="name">Add partner column</field>
+    <field name="model">mail.mail.statistics</field>
+    <field name="inherit_id" ref="mass_mailing.view_mail_mail_statistics_tree"/>
+    <field name="arch" type="xml">
+        <field name="sent" position="before">
+            <field name="partner_id"/>
+        </field>
+    </field>
+</record>
+
+<record model="ir.ui.view" id="view_mail_mail_statistics_search">
+    <field name="name">Add partner search field and group by</field>
+    <field name="model">mail.mail.statistics</field>
+    <field name="inherit_id" ref="mass_mailing.view_mail_mail_statistics_search"/>
+    <field name="arch" type="xml">
+        <field name="mass_mailing_id" position="after">
+            <field name="partner_id"/>
+        </field>
+        <filter name="group_reply_date" position="after">
+            <filter string="Partner"
+                    name="group_partner"
+                    context="{'group_by': 'partner_id'}"/>
+        </filter>
+    </field>
+</record>
+
+</data>
+</openerp>
