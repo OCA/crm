@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- © 2015 Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>
+     © 2015 Antonio Espinosa <antonioea@antiun.com>
+     © 2015 Javier Iniesta <javieria@antiun.com>
+     © 2016 Antonio Espinosa - <antonio.espinosa@tecnativa.com>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
 <openerp>
 <data>
 
@@ -20,7 +25,7 @@
 </record>
 
 <record model="ir.ui.view" id="view_mail_mass_mailing_contact_search">
-    <field name="name">mail.mass_mailing.contact.search.partner</field>
+    <field name="name">Add partner search field and group by</field>
     <field name="model">mail.mass_mailing.contact</field>
     <field name="inherit_id" ref="mass_mailing.view_mail_mass_mailing_contact_search"/>
     <field name="arch" type="xml">
