@@ -27,5 +27,5 @@ class CrmClaim(models.Model):
     def copy(self, default=None):
         if default is None:
             default = {}
-        default['code'] = self.env['ir.sequence'].get('crm.claim')
+        default.setdefault('code', self.env['ir.sequence'].get('crm.claim'))
         return super(CrmClaim, self).copy(default)
