@@ -1,0 +1,277 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * newsletter
+# 
+# Translators:
+# Ana-Maria Olujić <ana-maria.olujic@slobodni-programi.hr>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: crm (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-15 00:49+0000\n"
+"PO-Revision-Date: 2016-08-19 14:02+0000\n"
+"Last-Translator: Ana-Maria Olujić <ana-maria.olujic@slobodni-programi.hr>\n"
+"Language-Team: Croatian (http://www.transifex.com/oca/OCA-crm-8-0/language/hr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: hr\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#. module: newsletter
+#: model:email.template,subject:newsletter.email_template_newsletter_default
+msgid "${object.subject}"
+msgstr ""
+
+#. module: newsletter
+#: model:email.template,body_html:newsletter.email_template_newsletter_default
+msgid ""
+"${object.text_intro_html or ''}\n"
+"%for topic in object.topic_ids:\n"
+"<div>\n"
+"<h2>${topic.title}</h2>\n"
+"<div>${topic.text_html}</div>\n"
+"</div>\n"
+"%endfor\n"
+"${object.text_outro_html or ''}\n"
+msgstr ""
+
+#. module: newsletter
+#: view:email_template.preview:newsletter.email_template_preview_form
+msgid "Close"
+msgstr "Zatvori"
+
+#. module: newsletter
+#: field:newsletter.newsletter,create_uid:0
+#: field:newsletter.topic,create_uid:0 field:newsletter.type,create_uid:0
+msgid "Created by"
+msgstr "Kreirao/la"
+
+#. module: newsletter
+#: field:newsletter.newsletter,create_date:0
+#: field:newsletter.topic,create_date:0 field:newsletter.type,create_date:0
+msgid "Created on"
+msgstr "Kreirano na dan"
+
+#. module: newsletter
+#: field:newsletter.newsletter,display_name:0
+#: field:newsletter.topic,display_name:0 field:newsletter.type,display_name:0
+msgid "Display Name"
+msgstr "Prikaži naziv"
+
+#. module: newsletter
+#: field:newsletter.type,domain:0
+msgid "Domain"
+msgstr "Područje"
+
+#. module: newsletter
+#: selection:newsletter.newsletter,state:0
+msgid "Draft"
+msgstr "Skica"
+
+#. module: newsletter
+#: model:res.groups,name:newsletter.group_newsletter_editor
+msgid "Editor"
+msgstr "Urednik"
+
+#. module: newsletter
+#: view:email_template.preview:newsletter.email_template_preview_form
+msgid "Email Preview"
+msgstr "Pregled e-maila"
+
+#. module: newsletter
+#: model:ir.model,name:newsletter.model_email_template
+msgid "Email Templates"
+msgstr "Predlošci e-maila"
+
+#. module: newsletter
+#: field:newsletter.type,email_template_id:0
+msgid "Email template"
+msgstr "Predložak e-maila"
+
+#. module: newsletter
+#: field:newsletter.type,email_from:0
+msgid "From address"
+msgstr "Poslano sa/od"
+
+#. module: newsletter
+#: field:newsletter.type,group_ids:0
+msgid "Groups"
+msgstr "Grupe"
+
+#. module: newsletter
+#: field:newsletter.newsletter,id:0 field:newsletter.topic,id:0
+#: field:newsletter.type,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: newsletter
+#: field:newsletter.newsletter,text_intro_html:0
+msgid "Intro"
+msgstr "Uvod"
+
+#. module: newsletter
+#: field:newsletter.newsletter,__last_update:0
+#: field:newsletter.topic,__last_update:0
+#: field:newsletter.type,__last_update:0
+msgid "Last Modified on"
+msgstr "Zadnja izmjena"
+
+#. module: newsletter
+#: field:newsletter.newsletter,write_uid:0 field:newsletter.topic,write_uid:0
+#: field:newsletter.type,write_uid:0
+msgid "Last Updated by"
+msgstr "Zadnje ažuriranje izvršio/la"
+
+#. module: newsletter
+#: field:newsletter.newsletter,write_date:0
+#: field:newsletter.topic,write_date:0 field:newsletter.type,write_date:0
+msgid "Last Updated on"
+msgstr "Zadnja izmjena"
+
+#. module: newsletter
+#: model:res.groups,name:newsletter.group_newsletter_manager
+msgid "Manager"
+msgstr "Voditelj"
+
+#. module: newsletter
+#: field:newsletter.newsletter,may_send:0
+msgid "May send"
+msgstr "Može slati"
+
+#. module: newsletter
+#: field:newsletter.type,model:0
+msgid "Model"
+msgstr "Model"
+
+#. module: newsletter
+#: field:newsletter.type,name:0
+msgid "Name"
+msgstr "Naziv"
+
+#. module: newsletter
+#: model:ir.model,name:newsletter.model_newsletter_newsletter
+#: model:ir.module.category,name:newsletter.module_category_newsletter
+#: view:newsletter.newsletter:newsletter.form_newsletter
+#: field:newsletter.topic,newsletter_id:0
+msgid "Newsletter"
+msgstr "Bilten"
+
+#. module: newsletter
+#: model:ir.model,name:newsletter.model_newsletter_topic
+msgid "Newsletter topic"
+msgstr "Tema biltena"
+
+#. module: newsletter
+#: model:ir.model,name:newsletter.model_newsletter_type
+#: view:newsletter.type:newsletter.form_newsletter_type
+msgid "Newsletter type"
+msgstr "Vrsta biltena"
+
+#. module: newsletter
+#: model:ir.actions.act_window,name:newsletter.action_newsletter_types
+#: model:ir.ui.menu,name:newsletter.menu_newsletter_types
+msgid "Newsletter types"
+msgstr "Vrste biltena"
+
+#. module: newsletter
+#: model:ir.actions.act_window,name:newsletter.action_newsletters
+#: model:ir.ui.menu,name:newsletter.menu_newsletter
+#: model:ir.ui.menu,name:newsletter.menu_newsletters
+msgid "Newsletters"
+msgstr "Bilteni"
+
+#. module: newsletter
+#: field:newsletter.newsletter,text_outro_html:0
+msgid "Outro"
+msgstr "Završetak"
+
+#. module: newsletter
+#: view:newsletter.newsletter:newsletter.form_newsletter
+msgid "Preview"
+msgstr "Pregled"
+
+#. module: newsletter
+#: code:addons/newsletter/model/newsletter_type.py:49
+#, python-format
+msgid "Recipients"
+msgstr "Primatelji"
+
+#. module: newsletter
+#: view:newsletter.newsletter:newsletter.form_newsletter
+msgid "Send"
+msgstr "Pošalji"
+
+#. module: newsletter
+#: model:res.groups,name:newsletter.group_newsletter_sender
+msgid "Sender"
+msgstr "Pošiljatelj"
+
+#. module: newsletter
+#: selection:newsletter.newsletter,state:0
+msgid "Sending"
+msgstr "Slanje u tijeku"
+
+#. module: newsletter
+#: selection:newsletter.newsletter,state:0
+msgid "Sent"
+msgstr "Poslano"
+
+#. module: newsletter
+#: view:newsletter.newsletter:newsletter.form_newsletter
+#: view:newsletter.type:newsletter.form_newsletter_type
+msgid "Show recipient objects"
+msgstr ""
+
+#. module: newsletter
+#: field:newsletter.newsletter,state:0
+msgid "State"
+msgstr "Država"
+
+#. module: newsletter
+#: field:newsletter.newsletter,subject:0
+msgid "Subject"
+msgstr "Predmet"
+
+#. module: newsletter
+#: view:newsletter.newsletter:newsletter.form_newsletter
+msgid "Test newsletter"
+msgstr "Testiraj bilten"
+
+#. module: newsletter
+#: selection:newsletter.newsletter,state:0
+msgid "Testing"
+msgstr "Testiranje"
+
+#. module: newsletter
+#: field:newsletter.topic,text_html:0
+msgid "Text"
+msgstr "Tekst"
+
+#. module: newsletter
+#: help:newsletter.type,group_ids:0
+msgid ""
+"The groups that may send this type of newsletter. Leave empty for all "
+"members of group Newsletter / Senders"
+msgstr "Grupe koje mogu slati ovu vrstu biltena. Ostavi prazno za sve članove grupe Bilten/Pošiljatelji"
+
+#. module: newsletter
+#: field:newsletter.topic,title:0
+msgid "Title"
+msgstr "Naslov"
+
+#. module: newsletter
+#: field:newsletter.newsletter,topic_ids:0
+msgid "Topics"
+msgstr "Teme"
+
+#. module: newsletter
+#: field:newsletter.newsletter,type_id:0
+msgid "Type"
+msgstr "Vrsta"
+
+#. module: newsletter
+#: code:addons/newsletter/model/newsletter_newsletter.py:137
+#, python-format
+msgid "You can't delete sent newsletters!"
+msgstr "Ne možete obrisati poslane biltene!"
