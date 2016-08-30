@@ -13,6 +13,9 @@
               "Odoo Community Association (OCA)",
     "website": "https://odoo-community.org/",
     "category": "Hidden",
+    'data': [
+        'security/ir.model.access.csv',
+    ],
     "depends": ["sale_crm", "marketing"],
     "license": "AGPL-3",
     'installable': True,
