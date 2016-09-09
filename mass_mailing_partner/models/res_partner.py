@@ -36,7 +36,8 @@ class ResPartner(models.Model):
                   "mailing lists. Email must be assigned." % self.name))
 
     @api.one
-    @api.depends('mass_mailing_contact_ids')
+    @api.depends('mass_mailing_contact_ids',
+                 'mass_mailing_contact_ids.opt_out')
     def _compute_mass_mailing_contacts_count(self):
         self.mass_mailing_contacts_count = len(self.mass_mailing_contact_ids)
 
