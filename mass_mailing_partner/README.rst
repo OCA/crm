@@ -79,9 +79,10 @@ Contributors
 ------------
 
 * Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>
-* Rafael Blasco <rafabn@antiun.com>
+* Rafael Blasco <rafael.blasco@tecnativa.com>
 * Antonio Espinosa <antonioea@antiun.com>
 * Javier Iniesta <javieria@antiun.com>
+* Jairo Llopis <jairo.llopis@tecnativa.com>
 
 Maintainer
 ----------

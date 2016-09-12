@@ -44,8 +44,8 @@
     <field name="priority">20</field>
     <field name="arch" type="xml">
         <field name="category_id" position="after">
-            <field name="mass_mailing_contacts" string="Mailing List"
-                filter_domain="[('mass_mailing_contacts.list_id','ilike', self)]"/>
+            <field name="mass_mailing_contact_ids" string="Mailing List"
+                filter_domain="[('mass_mailing_contact_ids.list_id','ilike', self)]"/>
         </field>
     </field>
 </record>

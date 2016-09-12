@@ -7,7 +7,7 @@
 
 {
     "name": "Link partners with mass-mailing",
-    "version": "8.0.2.0.0",
+    "version": "8.0.2.1.0",
     "author": "Tecnativa, "
               "Antiun Ingeniería S.L., "
               "Serv. Tecnol. Avanzados - Pedro M. Baeza, "
