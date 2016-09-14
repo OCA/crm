@@ -24,12 +24,17 @@ class PartnerMailListWizard(models.TransientModel):
         for partner in self.partner_ids:
             if not partner.email:
                 raise UserError(_("Partner '%s' has no email.") % partner.name)
-            criteria = [('email', '=', partner.email),
-                        ('list_id', '=', self.mail_list_id.id)]
+            criteria = [
+                '|',
+                ('email', '=', partner.email),
+                ('partner_id', '=', partner.id),
+                ('list_id', '=', self.mail_list_id.id),
+            ]
             contact_test = contact_obj.search(criteria)
             if contact_test:
                 continue
             contact_vals = {
+                'partner_id': partner.id,
                 'email': partner.email,
                 'name': partner.name,
                 'list_id': self.mail_list_id.id
