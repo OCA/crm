@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-30 00:51+0000\n"
-"PO-Revision-Date: 2016-06-29 09:09+0000\n"
+"POT-Creation-Date: 2016-09-14 13:03+0000\n"
+"PO-Revision-Date: 2016-09-16 21:45+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Spanish (http://www.transifex.com/oca/OCA-crm-8-0/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -154,7 +154,7 @@ msgstr "Detalles"
 #. module: crm_action
 #: field:crm.action.type,display_name:0
 msgid "Display Name"
-msgstr ""
+msgstr "Nombre mostrado"
 
 #. module: crm_action
 #: field:crm.action,display_name:0
@@ -185,7 +185,7 @@ msgstr "ID"
 #. module: crm_action
 #: field:crm.action,__last_update:0 field:crm.action.type,__last_update:0
 msgid "Last Modified on"
-msgstr ""
+msgstr "Última modificación el"
 
 #. module: crm_action
 #: field:crm.action,write_uid:0 field:crm.action.type,write_uid:0

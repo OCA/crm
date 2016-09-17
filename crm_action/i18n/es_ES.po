@@ -1,0 +1,295 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * crm_action
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: crm (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-14 13:03+0000\n"
+"PO-Revision-Date: 2016-06-29 09:09+0000\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
+"Language-Team: Spanish (Spain) (http://www.transifex.com/oca/OCA-crm-8-0/language/es_ES/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: es_ES\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: crm_action
+#: model:email.template,body_html:crm_action.crm_action_reminder_email_template
+msgid ""
+"\n"
+"<div style=\"font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; \">\n"
+"\n"
+"<p>Dear ${object.name},</p>\n"
+"\n"
+"<p>Here is the list of your CRM actions to perform today for ${ctx.get('company').name}:</p>\n"
+"\n"
+"<ul>\n"
+"% for action in ctx.get('crm_action_list'):\n"
+"<li style=\"margin: 0 0 15px 0;\">${action.lead_id and action.lead_id.name or 'Not linked to a lead'}\n"
+"<ul>\n"
+"% if action.partner_id:\n"
+"<li>Customer: ${action.partner_id.name_get()[0][1]}</li>\n"
+"% endif\n"
+"% if not action.partner_id and action.lead_id.partner_name:\n"
+"<li>Customer: ${action.lead_id.partner_name}${action.lead_id.contact_name and ', ' + action.lead_id.contact_name or ''}</li>\n"
+"% endif\n"
+"<li>Type: ${action.action_type_id.name}</li>\n"
+"<li>Details: ${action.details}</li>\n"
+"% if action.lead_id and action.lead_id.phone:\n"
+"<li>Phone: <a href=\"tel:${action.lead_id.phone}\">${action.lead_id.phone}</a></li>\n"
+"% endif\n"
+"% if action.lead_id and action.lead_id.mobile:\n"
+"<li>Mobile: <a href=\"tel:${action.lead_id.mobile}\">${action.lead_id.mobile}</a></li>\n"
+"% endif\n"
+"% if action.lead_id and action.lead_id.email_from:\n"
+"<li>Email: <a href=\"mailto:${action.lead_id.email_from}\">${action.lead_id.email_from}</a></li>\n"
+"% endif\n"
+"\n"
+"</ul>\n"
+"</li>\n"
+"% endfor\n"
+"</ul>\n"
+"\n"
+"<p>\n"
+"-- <br/>\n"
+"Automatic e-mail sent by Odoo. Do not reply.\n"
+"</p>\n"
+"</div>\n"
+msgstr ""
+
+#. module: crm_action
+#: view:crm.action:crm_action.view_crm_action_filter
+msgid "Action Type"
+msgstr ""
+
+#. module: crm_action
+#: model:ir.actions.act_window,name:crm_action.action_crm_action_type_view
+#: model:ir.ui.menu,name:crm_action.menu_crm_action_type_act
+msgid "Action Types"
+msgstr ""
+
+#. module: crm_action
+#: view:crm.action:crm_action.view_action_form
+#: view:crm.action:crm_action.view_crm_action_calendar
+#: view:crm.lead:crm_action.crm_case_action_button_form_view
+#: view:crm.lead:crm_action.crm_case_form_view_oppor
+#: field:crm.lead,action_ids:0
+#: model:ir.actions.act_window,name:crm_action.action_crm_action_view
+#: model:ir.actions.act_window,name:crm_action.crm_action_simple_action
+#: model:ir.ui.menu,name:crm_action.menu_crm_action
+msgid "Actions"
+msgstr ""
+
+#. module: crm_action
+#: field:crm.lead,actions_count:0
+msgid "Actions count"
+msgstr ""
+
+#. module: crm_action
+#: view:crm.action:crm_action.view_crm_action_filter
+msgid "Actions done by me"
+msgstr ""
+
+#. module: crm_action
+#: field:crm.action.type,active:0
+msgid "Active"
+msgstr ""
+
+#. module: crm_action
+#: view:crm.action:crm_action.view_action_form
+#: view:crm.action:crm_action.view_action_tree
+msgid "Back to Todo"
+msgstr ""
+
+#. module: crm_action
+#: model:ir.model,name:crm_action.model_crm_action
+msgid "CRM Action"
+msgstr ""
+
+#. module: crm_action
+#: model:ir.model,name:crm_action.model_crm_action_type
+msgid "CRM Action Type"
+msgstr ""
+
+#. module: crm_action
+#: field:crm.action,company_id:0
+msgid "Company"
+msgstr ""
+
+#. module: crm_action
+#: field:crm.action,create_uid:0 field:crm.action.type,create_uid:0
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: crm_action
+#: field:crm.action,create_date:0 field:crm.action.type,create_date:0
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: crm_action
+#: field:crm.action,partner_id:0
+msgid "Customer"
+msgstr ""
+
+#. module: crm_action
+#: field:crm.action,date:0
+msgid "Date"
+msgstr ""
+
+#. module: crm_action
+#: model:crm.action.type,name:crm_action.demo
+msgid "Demo"
+msgstr ""
+
+#. module: crm_action
+#: field:crm.action,details:0
+msgid "Details"
+msgstr ""
+
+#. module: crm_action
+#: field:crm.action.type,display_name:0
+msgid "Display Name"
+msgstr ""
+
+#. module: crm_action
+#: field:crm.action,display_name:0
+msgid "Display name"
+msgstr ""
+
+#. module: crm_action
+#: view:crm.action:crm_action.view_crm_action_filter
+#: selection:crm.action,state:0
+msgid "Done"
+msgstr ""
+
+#. module: crm_action
+#: model:crm.action.type,name:crm_action.followup
+msgid "Followup"
+msgstr ""
+
+#. module: crm_action
+#: view:crm.action:crm_action.view_crm_action_filter
+msgid "Group By"
+msgstr ""
+
+#. module: crm_action
+#: field:crm.action,id:0 field:crm.action.type,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: crm_action
+#: field:crm.action,__last_update:0 field:crm.action.type,__last_update:0
+msgid "Last Modified on"
+msgstr ""
+
+#. module: crm_action
+#: field:crm.action,write_uid:0 field:crm.action.type,write_uid:0
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: crm_action
+#: field:crm.action,write_date:0 field:crm.action.type,write_date:0
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: crm_action
+#: field:crm.action,lead_id:0
+msgid "Lead"
+msgstr ""
+
+#. module: crm_action
+#: model:ir.model,name:crm_action.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr ""
+
+#. module: crm_action
+#: view:crm.action:crm_action.view_action_form
+#: view:crm.action:crm_action.view_action_tree
+msgid "Mark as Done"
+msgstr ""
+
+#. module: crm_action
+#: view:crm.lead:crm_action.crm_case_form_view_oppor
+msgid "Mark next action as done"
+msgstr ""
+
+#. module: crm_action
+#: model:crm.action.type,name:crm_action.meeting
+msgid "Meeting"
+msgstr ""
+
+#. module: crm_action
+#: view:crm.action:crm_action.view_crm_action_filter
+msgid "My Actions"
+msgstr ""
+
+#. module: crm_action
+#: field:crm.action.type,name:0
+msgid "Name"
+msgstr ""
+
+#. module: crm_action
+#: field:crm.lead,next_action_id:0
+msgid "Next Action"
+msgstr ""
+
+#. module: crm_action
+#: view:crm.action:crm_action.view_crm_action_filter
+msgid "Partner"
+msgstr ""
+
+#. module: crm_action
+#: field:crm.action.type,priority:0
+msgid "Priority"
+msgstr ""
+
+#. module: crm_action
+#: view:crm.action.type:crm_action.view_crm_action_type_filter
+msgid "Search Action Types"
+msgstr ""
+
+#. module: crm_action
+#: view:crm.action:crm_action.view_crm_action_filter
+msgid "Search Actions"
+msgstr ""
+
+#. module: crm_action
+#: field:crm.action,state:0
+msgid "Status"
+msgstr ""
+
+#. module: crm_action
+#: view:crm.action:crm_action.view_crm_action_filter
+#: selection:crm.action,state:0
+msgid "Todo"
+msgstr ""
+
+#. module: crm_action
+#: view:crm.action:crm_action.view_crm_action_filter
+msgid "Todo Today"
+msgstr ""
+
+#. module: crm_action
+#: field:crm.action,action_type_id:0
+msgid "Type"
+msgstr ""
+
+#. module: crm_action
+#: view:crm.action:crm_action.view_crm_action_filter
+#: field:crm.action,user_id:0
+msgid "User"
+msgstr ""
+
+#. module: crm_action
+#: view:crm.action:crm_action.view_crm_action_filter
+msgid "Week"
+msgstr ""
+
+#. module: crm_action
+#: model:email.template,subject:crm_action.crm_action_reminder_email_template
+msgid "[${ctx.get('company').name}] Today's CRM actions"
+msgstr ""

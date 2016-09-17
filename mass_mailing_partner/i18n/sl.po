@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-12 10:09+0000\n"
-"PO-Revision-Date: 2016-08-09 10:57+0000\n"
+"POT-Creation-Date: 2016-09-14 13:03+0000\n"
+"PO-Revision-Date: 2016-09-16 21:45+0000\n"
 "Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>\n"
 "Language-Team: Slovenian (http://www.transifex.com/oca/OCA-crm-8-0/language/sl/)\n"
 "MIME-Version: 1.0\n"
@@ -93,7 +93,7 @@ msgstr "Številka poštnega seznama"
 
 #. module: mass_mailing_partner
 #: view:res.partner:mass_mailing_partner.view_partner_form
-#: field:res.partner,mass_mailing_contacts:0
+#: field:res.partner,mass_mailing_contact_ids:0
 msgid "Mailing lists"
 msgstr "Poštni seznami"
 
@@ -151,7 +151,7 @@ msgid "Partner ids"
 msgstr "ID-ji partnerjev"
 
 #. module: mass_mailing_partner
-#: code:addons/mass_mailing_partner/models/res_partner.py:33
+#: code:addons/mass_mailing_partner/models/res_partner.py:35
 #, python-format
 msgid ""
 "This partner '%s' is subscribed to one or more mailing lists. Email must be "

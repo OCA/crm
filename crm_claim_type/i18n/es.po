@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-10 18:52+0000\n"
-"PO-Revision-Date: 2016-03-10 18:54+0000\n"
+"POT-Creation-Date: 2016-09-14 13:03+0000\n"
+"PO-Revision-Date: 2016-09-16 21:45+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Spanish (http://www.transifex.com/oca/OCA-crm-8-0/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -90,6 +90,11 @@ msgid "Description"
 msgstr "Descripción"
 
 #. module: crm_claim_type
+#: field:crm.claim.type,display_name:0
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: crm_claim_type
 #: model:crm.claim.stage,name:crm_claim_type.stage_claim11
 msgid "Done"
 msgstr "Hecho"
@@ -110,6 +115,11 @@ msgid ""
 "If you check this field, this stage will be proposed by default on each "
 "claim type."
 msgstr "Si es marcada esta casilla, esta etapa será definida de manera predeterminada para cada tipo de reclamación"
+
+#. module: crm_claim_type
+#: field:crm.claim.type,__last_update:0
+msgid "Last Modified on"
+msgstr "Última modificación el"
 
 #. module: crm_claim_type
 #: field:crm.claim.type,write_uid:0

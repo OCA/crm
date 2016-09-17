@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-10 18:52+0000\n"
-"PO-Revision-Date: 2016-03-10 18:54+0000\n"
+"POT-Creation-Date: 2016-09-14 13:03+0000\n"
+"PO-Revision-Date: 2016-09-16 21:45+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Spanish (http://www.transifex.com/oca/OCA-crm-8-0/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -28,9 +28,19 @@ msgid "Created on"
 msgstr "Creado en"
 
 #. module: partner_withdrawal
+#: field:partner.withdrawal_reason,display_name:0
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: partner_withdrawal
 #: field:partner.withdrawal_reason,id:0
 msgid "ID"
 msgstr "ID"
+
+#. module: partner_withdrawal
+#: field:partner.withdrawal_reason,__last_update:0
+msgid "Last Modified on"
+msgstr "Última modificación el"
 
 #. module: partner_withdrawal
 #: field:partner.withdrawal_reason,write_uid:0
