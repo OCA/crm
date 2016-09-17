@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-10 18:52+0000\n"
-"PO-Revision-Date: 2016-03-10 18:54+0000\n"
+"POT-Creation-Date: 2016-09-14 13:03+0000\n"
+"PO-Revision-Date: 2016-09-09 11:32+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: German (http://www.transifex.com/oca/OCA-crm-8-0/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -106,14 +106,14 @@ msgstr ""
 #: field:letter.folder,create_uid:0 field:letter.reassignment,create_uid:0
 #: field:letter.type,create_uid:0 field:res.letter,create_uid:0
 msgid "Created by"
-msgstr ""
+msgstr "Erstellt von"
 
 #. module: lettermgmt
 #: field:letter.channel,create_date:0 field:letter.class,create_date:0
 #: field:letter.folder,create_date:0 field:letter.reassignment,create_date:0
 #: field:letter.type,create_date:0 field:res.letter,create_date:0
 msgid "Created on"
-msgstr ""
+msgstr "Erstellt am:"
 
 #. module: lettermgmt
 #: help:res.letter,message_last_post:0
@@ -130,6 +130,13 @@ msgstr ""
 #: view:res.letter:lettermgmt.res_letter_in_form_view
 #: view:res.letter:lettermgmt.res_letter_out_form_view
 msgid "Dimensions"
+msgstr ""
+
+#. module: lettermgmt
+#: field:letter.channel,display_name:0 field:letter.class,display_name:0
+#: field:letter.folder,display_name:0 field:letter.reassignment,display_name:0
+#: field:letter.type,display_name:0 field:res.letter,display_name:0
+msgid "Display Name"
 msgstr ""
 
 #. module: lettermgmt
@@ -168,7 +175,7 @@ msgstr ""
 #: field:letter.channel,id:0 field:letter.class,id:0 field:letter.folder,id:0
 #: field:letter.reassignment,id:0 field:letter.type,id:0 field:res.letter,id:0
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: lettermgmt
 #: selection:res.letter,move:0
@@ -207,18 +214,26 @@ msgid "Last Message Date"
 msgstr ""
 
 #. module: lettermgmt
+#: field:letter.channel,__last_update:0 field:letter.class,__last_update:0
+#: field:letter.folder,__last_update:0
+#: field:letter.reassignment,__last_update:0 field:letter.type,__last_update:0
+#: field:res.letter,__last_update:0
+msgid "Last Modified on"
+msgstr ""
+
+#. module: lettermgmt
 #: field:letter.channel,write_uid:0 field:letter.class,write_uid:0
 #: field:letter.folder,write_uid:0 field:letter.reassignment,write_uid:0
 #: field:letter.type,write_uid:0 field:res.letter,write_uid:0
 msgid "Last Updated by"
-msgstr ""
+msgstr "Zuletzt aktualisiert von"
 
 #. module: lettermgmt
 #: field:letter.channel,write_date:0 field:letter.class,write_date:0
 #: field:letter.folder,write_date:0 field:letter.reassignment,write_date:0
 #: field:letter.type,write_date:0 field:res.letter,write_date:0
 msgid "Last Updated on"
-msgstr ""
+msgstr "Zuletzt aktualisiert am"
 
 #. module: lettermgmt
 #: field:letter.reassignment,letter_id:0
