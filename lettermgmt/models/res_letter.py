@@ -44,17 +44,16 @@ class ResLetter(models.Model):
     sender_partner_id = fields.Many2one(
         'res.partner', string='Sender', track_visibility='onchange')
     note = fields.Text('Note')
-    state = fields.Selection([('draft', 'Draft'),
-                               ('created', 'Created'),
-                               ('validated', 'Validated'),
-                               ('rec', 'Received'),
-                               ('sent', 'Sent'),
-                               ('rec_bad', 'Received Damage'),
-                               ('rec_ret', 'Received But Returned'),
-                               ('cancel', 'Cancelled')],
-                              'State', readonly=True,
-                              default="draft",
-                              track_visibility='onchange')
+    state = fields.Selection([
+        ('draft', 'Draft'),
+        ('created', 'Created'),
+        ('validated', 'Validated'),
+        ('rec', 'Received'),
+        ('sent', 'Sent'),
+        ('rec_bad', 'Received Damage'),
+        ('rec_ret', 'Received But Returned'),
+        ('cancel', 'Cancelled')],
+        'State', readonly=True, default="draft", track_visibility='onchange')
     parent_id = fields.Many2one('res.letter', 'Parent')
     child_line = fields.One2many(
         'res.letter', 'parent_id', 'Letter Lines')

@@ -26,18 +26,28 @@ from openerp.osv import fields, orm
 class res_letter(orm.Model):
     _inherit = 'res.letter'
     _columns = {
-        'move': fields.selection([('in', 'IN'), ('out', 'OUT'), ('intern', 'INTERN')], 'Move', readonly=True,
-                                 help="Incoming, Outgoing or Internal Letter."),
-        'recipient_intern_ids': fields.many2many('hr.employee', string="Send to",
-                                                 help="Persons who will receive Letter."),
-        'department_id': fields.many2one('hr.department', string='Department',
-                                         help='Department who will receive letter.'),
-        'cc_employee_ids': fields.many2many('hr.employee', string='Employee',
-                                            help='Send copies to these employees.'),
-        'cc_department_ids': fields.many2many('hr.department', string='Department',
-                                              help='Send copies to these departments.'),
-        'reassignment_employee_ids': fields.many2many('hr.employee', string='Reassignment',
-                                                      help='Reassign letter to these employees.'),
-        'reassignment_department_ids': fields.many2many('hr.department', string='Department',
-                                                        help='Reassign copies to these departments.'),
+        'move': fields.selection([
+            ('in', 'IN'),
+            ('out', 'OUT'),
+            ('intern', 'INTERN')],
+            'Move', readonly=True,
+            help="Incoming, Outgoing or Internal Letter."),
+        'recipient_intern_ids': fields.many2many(
+            'hr.employee', string="Send to",
+            help="Persons who will receive Letter."),
+        'department_id': fields.many2one(
+            'hr.department', string='Department',
+            help='Department who will receive letter.'),
+        'cc_employee_ids': fields.many2many(
+            'hr.employee', string='Employee',
+            help='Send copies to these employees.'),
+        'cc_department_ids': fields.many2many(
+            'hr.department', string='Department',
+            help='Send copies to these departments.'),
+        'reassignment_employee_ids': fields.many2many(
+            'hr.employee', string='Reassignment',
+            help='Reassign letter to these employees.'),
+        'reassignment_department_ids': fields.many2many(
+            'hr.department', string='Department',
+            help='Reassign copies to these departments.'),
     }

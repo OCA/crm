@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #   Copyright (c) 2014 Camptocamp SA (http://www.camptocamp.com)
-#   @author Vincent Renaville 
+#   @author Vincent Renaville
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,8 +19,6 @@
 #
 ##############################################################################
 from openerp.osv import orm, fields
-from openerp import tools
-from openerp.tools.translate import _
 
 
 class CrmLead(orm.Model):
@@ -28,9 +26,9 @@ class CrmLead(orm.Model):
     _inherit = "crm.lead"
 
     _columns = {
-                'last_activity_stage': fields.date('Current stage date',
-                                                    readonly=True)
-                }
+        'last_activity_stage': fields.date(
+            'Current stage date', readonly=True)
+    }
 
     def write(self, cr, uid, ids, vals, context=None):
         if vals.get('stage_id'):
