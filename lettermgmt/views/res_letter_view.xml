@@ -14,7 +14,7 @@
           <field name="number"/>
           <field name="move"/>
           <field name="type"/>
-          <field name="class"/>
+          <field name="class_id"/>
           <field name="date"/>
           <field name="recipient_partner_id"/>
           <field name="state"/>
@@ -32,7 +32,7 @@
           <field name="number"/>
           <field name="move"/>
           <field name="type"/>
-          <field name="class"/>
+          <field name="class_id"/>
           <field name="date"/>
           <field name="recipient_partner_id"/>
           <field name="state"/>
@@ -90,7 +90,7 @@
                 <field name="date" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
                 <field name="snd_rec_date" string="Send Date" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
                 <field name="type" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
-                <field name="class" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
+                <field name="class_id" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
                 <field name="channel_id" string="Inbound Source" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
                 <field name="track_ref" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
               </group>
@@ -159,7 +159,7 @@
                 <field name="date" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
                 <field name="snd_rec_date" string="Arrival Date" required="True" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
                 <field name="type" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
-                <field name="class" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
+                <field name="class_id" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
                 <field name="channel_id" string="Outbound Source" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
                 <field name="track_ref" attrs="{'readonly': [('state', 'not in', ['draft', 'created'])]}"/>
               </group>
