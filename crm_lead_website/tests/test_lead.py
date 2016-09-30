@@ -13,7 +13,7 @@ class LeadCase(TransactionCase):
             "partner_name": u"HÎ"
         })
         self.partner = self.env["res.partner"].create({"name": __file__})
-        self.test_field = "http://antiun.net"
+        self.test_field = "https://www.tecnativa.com"
 
     def test_transfered_values(self):
         """Field gets transfered when creating partner."""
