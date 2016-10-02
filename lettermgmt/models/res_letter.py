@@ -44,10 +44,10 @@ class ResLetter(models.Model):
         help="Incoming or Outgoing Letter.",
         default=lambda self: self.env.context.get('move', 'in'))
     type_id = fields.Many2one(
-        'letter.type', 'Type',
+        'letter.type', string='Type',
         help="Type of Letter, Depending upon size.")
     category_ids = fields.Many2many(
-        'letter.category', 'Tags', help="Classification of Document.")
+        'letter.category', string='Tags', help="Classification of Document.")
     date = fields.Datetime('Letter Date', help='The letter\'s date')
     snd_date = fields.Datetime(
         'Sent / Received Date', defalut=fields.datetime.now,
@@ -95,7 +95,7 @@ class ResLetter(models.Model):
         for rec in self:
             rec.write({
                 'state': 'rec',
-                'rec_date': self.rec_date or fields.Date.today()
+                'rcv_date': self.rcv_date or fields.Date.today()
             })
         return True
 
@@ -123,21 +123,21 @@ class ResLetter(models.Model):
         return True
 
     @api.multi
-    def action_rec_ret(self, cr, uid, ids, context=None):
+    def action_rec_ret(self):
         """Put the state of the letter into Received but Damaged"""
         for rec in self:
             rec.write({
                 'state': 'rec_ret',
-                'rec_date': self.rec_date or fields.Date.today()
+                'rcv_date': self.rcv_date or fields.Date.today()
             })
         return True
 
     @api.multi
-    def action_rec_bad(self, cr, uid, ids, context=None):
+    def action_rec_bad(self):
         """Put the state of the letter into Received but Damaged"""
         for rec in self:
             rec.write({
                 'state': 'rec_bad',
-                'rec_date': self.rec_date or fields.Date.today()
+                'rcv_date': self.rcv_date or fields.Date.today()
             })
         return True

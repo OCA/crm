@@ -161,42 +161,36 @@
     <record model="ir.actions.act_window.view" id="action_res_letter_out_tree_mode">
       <field name="sequence" eval="1"/>
       <field name="view_mode">tree</field>
-      <field name="view_id" ref="res_letter_out_tree_view"/>
       <field name="act_window_id" ref="action_res_letter_out_tree_view"/>
     </record>
 
     <record model="ir.actions.act_window.view" id="action_res_letter_in_tree_mode">
       <field name="sequence" eval="1"/>
       <field name="view_mode">tree</field>
-      <field name="view_id" ref="res_letter_in_tree_view"/>
       <field name="act_window_id" ref="action_res_letter_in_tree_view"/>
     </record>
 
     <record model="ir.actions.act_window.view" id="action_res_letter_out_form_mode">
       <field name="sequence" eval="2"/>
       <field name="view_mode">form</field>
-      <field name="view_id" ref="res_letter_out_form_view"/>
       <field name="act_window_id" ref="action_res_letter_out_tree_view"/>
     </record>
 
     <record model="ir.actions.act_window.view" id="action_res_letter_in_form_mode">
       <field name="sequence" eval="2"/>
       <field name="view_mode">form</field>
-      <field name="view_id" ref="res_letter_in_form_view"/>
       <field name="act_window_id" ref="action_res_letter_in_tree_view"/>
     </record>
 
     <record model="ir.actions.act_window.view" id="action_res_letter_out_calendar_mode">
       <field name="sequence" eval="3"/>
       <field name="view_mode">calendar</field>
-      <field name="view_id" ref="res_letter_out_calendar_view"/>
       <field name="act_window_id" ref="action_res_letter_out_tree_view"/>
     </record>
 
     <record model="ir.actions.act_window.view" id="action_res_letter_in_calendar_mode">
       <field name="sequence" eval="3"/>
       <field name="view_mode">calendar</field>
-      <field name="view_id" ref="res_letter_in_calendar_view"/>
       <field name="act_window_id" ref="action_res_letter_in_tree_view"/>
     </record>
 
