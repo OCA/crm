@@ -14,10 +14,23 @@ class ResLetter(models.Model):
     _inherit = 'mail.thread'
 
     @api.model
-    def _get_number(self):
-        sequence_pool = self.env['ir.sequence']
-        move_type = self.env.context.get('move', 'in')
-        return sequence_pool.get('%s.letter' % move_type)
+    def create(self, vals):
+        if ('number' not in vals) or (vals.get('number') in ('/', False)):
+            sequence = self.env['ir.sequence']
+            move_type = vals.get('move', self.env.context.get(
+                'default_move', self.env.context.get('move', 'in')))
+            vals['number'] = sequence.get('%s.letter' % move_type)
+        return super(ResLetter, self).create(vals)
+
+    def default_recipient(self):
+        move_type = self.env.context.get('move', False)
+        if move_type == 'in':
+            return self.env.user.company_id.partner_id
+
+    def default_sender(self):
+        move_type = self.env.context.get('move', False)
+        if move_type == 'out':
+            return self.env.user.company_id.partner_id
 
     name = fields.Text('Subject', help="Subject of letter.")
     folder_id = fields.Many2one(
@@ -25,29 +38,32 @@ class ResLetter(models.Model):
         help='Folder which contains letter.')
     number = fields.Char(
         'Number', help="Auto Generated Number of letter.",
-        default=_get_number, required=True)
+        default="/", required=True)
     move = fields.Selection(
         [('in', 'IN'), ('out', 'OUT')], 'Move', readonly=True,
         help="Incoming or Outgoing Letter.",
         default=lambda self: self.env.context.get('move', 'in'))
-    type = fields.Many2one(
+    type_id = fields.Many2one(
         'letter.type', 'Type',
         help="Type of Letter, Depending upon size.")
-    class_id = fields.Many2one(
-        'letter.class', 'Class', help="Classification of Document.")
+    category_ids = fields.Many2many(
+        'letter.category', 'Tags', help="Classification of Document.")
     date = fields.Datetime('Letter Date', help='The letter\'s date')
-    snd_rec_date = fields.Datetime(
+    snd_date = fields.Datetime(
+        'Sent / Received Date', defalut=fields.datetime.now,
+        help='Created Date of Letter Logging.')
+    rcv_date = fields.Datetime(
         'Sent / Received Date', defalut=fields.datetime.now,
         help='Created Date of Letter Logging.')
     recipient_partner_id = fields.Many2one(
-        'res.partner', string='Recipient', track_visibility='onchange')
+        'res.partner', string='Recipient', track_visibility='onchange',
+        default=default_recipient)
     sender_partner_id = fields.Many2one(
-        'res.partner', string='Sender', track_visibility='onchange')
+        'res.partner', string='Sender', track_visibility='onchange',
+        default=default_sender)
     note = fields.Text('Note')
     state = fields.Selection([
         ('draft', 'Draft'),
-        ('created', 'Created'),
-        ('validated', 'Validated'),
         ('rec', 'Received'),
         ('sent', 'Sent'),
         ('rec_bad', 'Received Damage'),
@@ -76,7 +92,11 @@ class ResLetter(models.Model):
     @api.multi
     def action_received(self):
         """Put the state of the letter into Received"""
-        self.write({'state': 'rec'})
+        for rec in self:
+            rec.write({
+                'state': 'rec',
+                'rec_date': self.rec_date or fields.Date.today()
+            })
         return True
 
     @api.multi
@@ -86,42 +106,38 @@ class ResLetter(models.Model):
         return True
 
     @api.multi
-    def action_create(self):
-        """Put the state of the letter into Crated"""
-        self.write({'state': 'created'})
+    def action_cancel_draft(self):
+        """ Go from cancelled state to draf state """
+        self.write({'state': 'draft'})
         return True
 
     @api.multi
-    def action_validate(self):
-        """Put the state of the letter into Validated"""
-        self.write({'state': 'validated'})
-        return True
-
-    @api.multi
-    def action_send(self, cr, uid, ids, context=None):
+    def action_send(self):
         """Put the state of the letter into sent"""
         for rec in self:
             self.write({
                 'state': 'sent',
-                'snd_rec_date': rec.snd_rec_date or
+                'snd_date': rec.snd_date or
                 fields.datetime.now()
             })
         return True
 
     @api.multi
-    def action_rec_ret(self):
-        """Put the state of the letter into Received but Returned"""
-        self.write({'state': 'rec_ret'})
+    def action_rec_ret(self, cr, uid, ids, context=None):
+        """Put the state of the letter into Received but Damaged"""
+        for rec in self:
+            rec.write({
+                'state': 'rec_ret',
+                'rec_date': self.rec_date or fields.Date.today()
+            })
         return True
 
     @api.multi
     def action_rec_bad(self, cr, uid, ids, context=None):
         """Put the state of the letter into Received but Damaged"""
-        self.write({'state': 'rec_bad'})
-        return True
-
-    @api.multi
-    def action_set_draft(self, cr, uid, ids, context=None):
-        """Put the state of the letter into draft"""
-        self.write({'state': 'draft'})
+        for rec in self:
+            rec.write({
+                'state': 'rec_bad',
+                'rec_date': self.rec_date or fields.Date.today()
+            })
         return True
