@@ -7,10 +7,9 @@
 
 {
     "name": "Link partners with mass-mailing",
-    "version": "8.0.2.1.0",
-    "author": "Tecnativa, "
-              "Antiun Ingeniería S.L., "
-              "Serv. Tecnol. Avanzados - Pedro M. Baeza, "
+    "version": "9.0.1.0.0",
+    "author": "Antiun Ingeniería S.L., "
+              "Tecnativa, "
               "Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "category": "Marketing",
@@ -25,5 +24,5 @@
         'views/res_partner_view.xml',
         'wizard/partner_mail_list_wizard.xml'
     ],
-    'installable': False,
+    'installable': True,
 }

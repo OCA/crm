@@ -19,7 +19,6 @@ class MailMassMailingContact(models.Model):
          _('Partner already exists in this mailing list.'))
     ]
 
-    @api.one
     @api.onchange('partner_id')
     def _onchange_partner(self):
         if self.partner_id:
@@ -27,7 +26,6 @@ class MailMassMailingContact(models.Model):
             self.email = self.partner_id.email
 
     @api.model
-    @api.returns('self', lambda x: x.id)
     def create(self, vals):
         if not vals.get('partner_id'):
             vals = self._set_partner(vals)
