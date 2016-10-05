@@ -14,17 +14,17 @@
       <field name="code">PAR</field>
     </record>
 
-    <!-- Letter Classes -->
+    <!-- Letter categories -->
 
-    <record id="data_class_con" model="letter.class">
+    <record id="data_category_con" model="letter.category">
       <field name="name">Confidential</field>
     </record>
 
-    <record id="data_class_per" model="letter.class">
+    <record id="data_category_per" model="letter.category">
       <field name="name">Personal</field>
     </record>
 
-    <record id="data_class_class" model="letter.class">
+    <record id="data_category_1" model="letter.category">
       <field name="name">Classified</field>
     </record>
 
