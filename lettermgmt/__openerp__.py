@@ -22,7 +22,7 @@
 
 {
     'name': 'Letter Management',
-    'version': '8.0.1.2.0',
+    'version': '9.0.1.2.0',
     'author': "Savoir-faire Linux,Odoo Community Association (OCA)",
     'maintainer': 'Savoir-faire Linux',
     'website': 'http://www.savoirfairelinux.com',
@@ -45,7 +45,7 @@
     ],
     'demo': ["data/letter_demo.xml"],
     'test': [],
-    'installable': False,
+    'installable': True,
     'auto_install': False,
 }
 

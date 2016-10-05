@@ -12,6 +12,7 @@ addon | version | summary
 --- | --- | ---
 [crm_claim_code](crm_claim_code/) | 9.0.1.0.0 | Sequential Code for Claims
 [crm_claim_type](crm_claim_type/) | 9.0.1.0.0 | Claim types for CRM
+[lettermgmt](lettermgmt/) | 9.0.1.2.0 | Track letters, parcels, registered documents
 
 Unported addons
 ---------------
@@ -25,7 +26,6 @@ addon | version | summary
 [crm_lead_stage_monitoring](crm_lead_stage_monitoring/) | 1.0.0 (unported) | CRM - Add last activity on stage field
 [crm_location](crm_location/) | 8.0.1.0.0 (unported) | CRM location
 [crm_track_next_action](crm_track_next_action/) | 8.0.1.0.0 (unported) | CRM Track Next Action
-[lettermgmt](lettermgmt/) | 8.0.1.2.0 (unported) | Track letters, parcels, registered documents
 [lettermgmt_hr](lettermgmt_hr/) | 0.1 (unported) | Human Resources bindings for Letter Management
 [mass_mailing_partner](mass_mailing_partner/) | 8.0.1.0.0 (unported) | Link partners with mass-mailing
 [newsletter](newsletter/) | 8.0.2.0.0 (unported) | Send newsletters to customers, employees or other entities
