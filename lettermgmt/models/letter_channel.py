@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # Copyright (C) 2009-Today Tech Receptives(http://techreceptives.com).
 # Parthiv Pate, Tech Receptives, Open Source For Ideas
+# Hardikgiri Goswami <hardikgiri.goswami@gmail.com>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 from openerp import models, fields

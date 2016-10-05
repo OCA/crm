@@ -1,0 +1,16 @@
+-
+  Create res letter to test
+-
+  !record {model: res.letter, id: test_res_letter_01}:
+    name: 'Letter for interview'
+    date: !eval time.strftime('%Y-%m-%d 00:00:00')
+    state: 'draft'
+-
+  !python {model: res.letter}: |
+    test_rec = self.browse(cr, uid, ref('test_res_letter_01'))
+    test_rec.action_received()
+    test_rec.action_cancel()
+    test_rec.action_cancel_draft()
+    test_rec.action_send()
+    test_rec.action_rec_ret()
+    test_rec.action_rec_bad()

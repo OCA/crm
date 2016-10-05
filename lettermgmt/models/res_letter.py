@@ -1,4 +1,5 @@
 # -*- encoding: utf-8 -*-
+#    Hardikgiri Goswami <hardikgiri.goswami@gmail.com>
 #    Parthiv Pate, Tech Receptives, Open Source For Ideas
 #    Copyright (C) 2009-Today Tech Receptives(http://techreceptives.com).
 #    Copyright (C) 2015 Therp BV <http://therp.nl>.
@@ -19,7 +20,7 @@ class ResLetter(models.Model):
             sequence = self.env['ir.sequence']
             move_type = vals.get('move', self.env.context.get(
                 'default_move', self.env.context.get('move', 'in')))
-            vals['number'] = sequence.get('%s.letter' % move_type)
+            vals['number'] = sequence.next_by_code('%s.letter' % move_type)
         return super(ResLetter, self).create(vals)
 
     def default_recipient(self):

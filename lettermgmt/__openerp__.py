@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 # copyright (C) 2013 Savoir-faire Linux <http://www.savoirfairelinux.com>
+# Hardikgiri Goswami <hardikgiri.goswami@gmail.com>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 {
     'name': 'Letter Management',
     'version': '9.0.1.0.0',
     'author': "Savoir-faire Linux,Odoo Community Association (OCA)",
-    'maintainer': 'Savoir-faire Linux',
+    'maintainer': 'Savoir-faire Linux, Hardikgiri Goswami',
     'website': 'http://www.savoirfairelinux.com',
     'license': 'AGPL-3',
     'category': 'Customer Relationship Management',
@@ -26,7 +27,9 @@
         'security/ir.model.access.csv',
     ],
     'demo': ["data/letter_demo.xml"],
-    'test': [],
+    'test': [
+        'test/res_letter.yml',
+    ],
     'installable': True,
     'auto_install': False,
 }
