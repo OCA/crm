@@ -28,6 +28,7 @@ addon | version | summary
 [crm_location](crm_location/) | 8.0.1.0.0 | CRM location
 [crm_phonecall_category](crm_phonecall_category/) | 8.0.1.0.0 | Show the already-existing field in tree and search views
 [crm_phonecall_summary_predefined](crm_phonecall_summary_predefined/) | 8.0.1.0.0 | Allows to choose from a defined summary list
+[crm_sale_marketing](crm_sale_marketing/) | 8.0.1.0.0 | Marketing Details of Sales
 [crm_sector](crm_sector/) | 8.0.1.0.0 | Link leads/opportunities to sectors
 [crm_track_next_action](crm_track_next_action/) | 8.0.1.0.0 | CRM Track Next Action
 [lettermgmt](lettermgmt/) | 8.0.1.2.0 | Track letters, parcels, registered documents
