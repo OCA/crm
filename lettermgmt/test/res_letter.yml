@@ -2,9 +2,16 @@
   Create res letter to test
 -
   !record {model: res.letter, id: test_res_letter_01}:
-    name: 'Letter for interview'
+    name: 'Letter for interview 1'
     date: !eval time.strftime('%Y-%m-%d 00:00:00')
     state: 'draft'
+    move: 'in'
+-
+  !record {model: res.letter, id: test_res_letter_02}:
+    name: 'Letter for interview 2'
+    date: !eval time.strftime('%Y-%m-%d 00:00:00')
+    state: 'draft'
+    move: 'out'
 -
   !python {model: res.letter}: |
     test_rec = self.browse(cr, uid, ref('test_res_letter_01'))
