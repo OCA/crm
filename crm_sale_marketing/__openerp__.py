@@ -16,5 +16,5 @@
     "depends": ["sale_crm"],
     "data": ['views/crm_sale_marketing.xml'],
     "license": "AGPL-3",
-    'installable': True,
+    'installable': False,
 }
