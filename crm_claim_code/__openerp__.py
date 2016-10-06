@@ -27,7 +27,7 @@
         "views/crm_claim_view.xml",
         "data/claim_sequence.xml",
     ],
-    'installable': True,
+    'installable': False,
     "pre_init_hook": "create_code_equal_to_id",
     "post_init_hook": "assign_old_sequences",
 }
