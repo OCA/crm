@@ -26,6 +26,6 @@
         'demo/crm_claim.xml',
         'demo/crm_claim_stage.xml',
     ],
-    'installable': True,
+    'installable': False,
     'auto_install': False,
 }
