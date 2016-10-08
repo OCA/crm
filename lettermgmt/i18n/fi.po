@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-14 13:03+0000\n"
-"PO-Revision-Date: 2016-09-15 12:46+0000\n"
+"POT-Creation-Date: 2016-09-17 09:43+0000\n"
+"PO-Revision-Date: 2016-10-04 09:43+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Finnish (http://www.transifex.com/oca/OCA-crm-8-0/language/fi/)\n"
 "MIME-Version: 1.0\n"
@@ -483,7 +483,7 @@ msgstr ""
 #. module: lettermgmt
 #: selection:res.letter,state:0
 msgid "Sent"
-msgstr ""
+msgstr "Lähetetty"
 
 #. module: lettermgmt
 #: field:res.letter,channel_id:0

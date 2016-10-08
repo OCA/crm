@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-14 13:03+0000\n"
-"PO-Revision-Date: 2016-09-09 11:33+0000\n"
+"POT-Creation-Date: 2016-09-17 09:43+0000\n"
+"PO-Revision-Date: 2016-10-04 09:43+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: German (http://www.transifex.com/oca/OCA-crm-8-0/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -38,7 +38,7 @@ msgstr ""
 #. module: newsletter
 #: view:email_template.preview:newsletter.email_template_preview_form
 msgid "Close"
-msgstr ""
+msgstr "Abschließen"
 
 #. module: newsletter
 #: field:newsletter.newsletter,create_uid:0
@@ -56,7 +56,7 @@ msgstr "Erstellt am:"
 #: field:newsletter.newsletter,display_name:0
 #: field:newsletter.topic,display_name:0 field:newsletter.type,display_name:0
 msgid "Display Name"
-msgstr ""
+msgstr "Anzeigename"
 
 #. module: newsletter
 #: field:newsletter.type,domain:0
@@ -114,7 +114,7 @@ msgstr ""
 #: field:newsletter.topic,__last_update:0
 #: field:newsletter.type,__last_update:0
 msgid "Last Modified on"
-msgstr ""
+msgstr "Zuletzt geändert am"
 
 #. module: newsletter
 #: field:newsletter.newsletter,write_uid:0 field:newsletter.topic,write_uid:0
@@ -146,7 +146,7 @@ msgstr ""
 #. module: newsletter
 #: field:newsletter.type,name:0
 msgid "Name"
-msgstr ""
+msgstr "Bezeichnung"
 
 #. module: newsletter
 #: model:ir.model,name:newsletter.model_newsletter_newsletter

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-14 13:03+0000\n"
-"PO-Revision-Date: 2016-09-16 21:45+0000\n"
+"POT-Creation-Date: 2016-09-17 09:43+0000\n"
+"PO-Revision-Date: 2016-10-04 09:43+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Spanish (http://www.transifex.com/oca/OCA-crm-8-0/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -433,7 +433,7 @@ msgstr ""
 #. module: lettermgmt
 #: field:res.letter,recipient_partner_id:0
 msgid "Recipient"
-msgstr ""
+msgstr "Receptor"
 
 #. module: lettermgmt
 #: field:res.letter,extern_partner_ids:0
@@ -479,7 +479,7 @@ msgstr ""
 #. module: lettermgmt
 #: field:res.letter,sender_partner_id:0
 msgid "Sender"
-msgstr ""
+msgstr "Remitente"
 
 #. module: lettermgmt
 #: selection:res.letter,state:0
