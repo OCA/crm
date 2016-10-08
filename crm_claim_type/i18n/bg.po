@@ -10,12 +10,12 @@ msgstr ""
 "POT-Creation-Date: 2016-09-17 09:48+0000\n"
 "PO-Revision-Date: 2016-05-04 09:31+0000\n"
 "Last-Translator: <>\n"
-"Language-Team: Slovenian (http://www.transifex.com/oca/OCA-crm-9-0/language/sl/)\n"
+"Language-Team: Bulgarian (http://www.transifex.com/oca/OCA-crm-9-0/language/bg/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: sl\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+"Language: bg\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: crm_claim_type
 #: model:crm.claim.stage,name:crm_claim_type.stage_claim10
@@ -25,7 +25,7 @@ msgstr ""
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type_active
 msgid "Active"
-msgstr ""
+msgstr "Активен"
 
 #. module: crm_claim_type
 #: model:ir.model,name:crm_claim_type.model_crm_claim
@@ -74,12 +74,12 @@ msgstr ""
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type_create_uid
 msgid "Created by"
-msgstr "Ustvaril"
+msgstr "Създадено от"
 
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type_create_date
 msgid "Created on"
-msgstr "Ustvarjeno"
+msgstr "Създадено на"
 
 #. module: crm_claim_type
 #: model:crm.claim.type,name:crm_claim_type.crm_claim_type_customer
@@ -89,12 +89,12 @@ msgstr ""
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type_description
 msgid "Description"
-msgstr "Opis"
+msgstr "Описание"
 
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type_display_name
 msgid "Display Name"
-msgstr "Prikazni naziv"
+msgstr ""
 
 #. module: crm_claim_type
 #: model:crm.claim.stage,name:crm_claim_type.stage_claim11
@@ -104,7 +104,7 @@ msgstr ""
 #. module: crm_claim_type
 #: model:ir.ui.view,arch_db:crm_claim_type.crm_stage_claim_type_search
 msgid "Group By"
-msgstr "Združi po"
+msgstr ""
 
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type_id
@@ -121,22 +121,22 @@ msgstr ""
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type___last_update
 msgid "Last Modified on"
-msgstr "Zadnjič spremenjeno"
+msgstr "Последно обновено на"
 
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type_write_uid
 msgid "Last Updated by"
-msgstr "Zadnjič posodobil"
+msgstr "Последно обновено от"
 
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type_write_date
 msgid "Last Updated on"
-msgstr "Zadnjič posodobljeno"
+msgstr "Последно обновено на"
 
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type_name
 msgid "Name"
-msgstr ""
+msgstr "Име"
 
 #. module: crm_claim_type
 #: model:crm.claim.type,name:crm_claim_type.crm_claim_type_other

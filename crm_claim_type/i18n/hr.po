@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (9.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-01 15:03+0000\n"
-"PO-Revision-Date: 2016-06-13 08:16+0000\n"
+"POT-Creation-Date: 2016-09-17 09:48+0000\n"
+"PO-Revision-Date: 2016-10-05 06:35+0000\n"
 "Last-Translator: Bole <bole@dajmi5.com>\n"
 "Language-Team: Croatian (http://www.transifex.com/oca/OCA-crm-9-0/language/hr/)\n"
 "MIME-Version: 1.0\n"
@@ -75,17 +75,17 @@ msgstr ""
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type_create_uid
 msgid "Created by"
-msgstr ""
+msgstr "Kreirao"
 
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type_create_date
 msgid "Created on"
-msgstr ""
+msgstr "Kreirano"
 
 #. module: crm_claim_type
 #: model:crm.claim.type,name:crm_claim_type.crm_claim_type_customer
 msgid "Customer"
-msgstr ""
+msgstr "Kupac"
 
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type_description
@@ -95,7 +95,7 @@ msgstr ""
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type_display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Naziv "
 
 #. module: crm_claim_type
 #: model:crm.claim.stage,name:crm_claim_type.stage_claim11
@@ -110,7 +110,7 @@ msgstr ""
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type_id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: crm_claim_type
 #: model:ir.model.fields,help:crm_claim_type.field_crm_claim_stage_claim_common
@@ -122,17 +122,17 @@ msgstr ""
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type___last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Zadnje modificirano"
 
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type_write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "Zadnji ažurirao"
 
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type_write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "Zadnje ažuriranje"
 
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type_name

@@ -10,12 +10,12 @@ msgstr ""
 "POT-Creation-Date: 2016-09-17 09:48+0000\n"
 "PO-Revision-Date: 2016-05-04 09:31+0000\n"
 "Last-Translator: <>\n"
-"Language-Team: Slovenian (http://www.transifex.com/oca/OCA-crm-9-0/language/sl/)\n"
+"Language-Team: Chinese (China) (http://www.transifex.com/oca/OCA-crm-9-0/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: sl\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #. module: crm_claim_type
 #: model:crm.claim.stage,name:crm_claim_type.stage_claim10
@@ -74,12 +74,12 @@ msgstr ""
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type_create_uid
 msgid "Created by"
-msgstr "Ustvaril"
+msgstr "创建者"
 
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type_create_date
 msgid "Created on"
-msgstr "Ustvarjeno"
+msgstr "创建时间"
 
 #. module: crm_claim_type
 #: model:crm.claim.type,name:crm_claim_type.crm_claim_type_customer
@@ -89,12 +89,12 @@ msgstr ""
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type_description
 msgid "Description"
-msgstr "Opis"
+msgstr ""
 
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type_display_name
 msgid "Display Name"
-msgstr "Prikazni naziv"
+msgstr ""
 
 #. module: crm_claim_type
 #: model:crm.claim.stage,name:crm_claim_type.stage_claim11
@@ -104,7 +104,7 @@ msgstr ""
 #. module: crm_claim_type
 #: model:ir.ui.view,arch_db:crm_claim_type.crm_stage_claim_type_search
 msgid "Group By"
-msgstr "Združi po"
+msgstr ""
 
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type_id
@@ -121,17 +121,17 @@ msgstr ""
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type___last_update
 msgid "Last Modified on"
-msgstr "Zadnjič spremenjeno"
+msgstr ""
 
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type_write_uid
 msgid "Last Updated by"
-msgstr "Zadnjič posodobil"
+msgstr "最后更新者"
 
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type_write_date
 msgid "Last Updated on"
-msgstr "Zadnjič posodobljeno"
+msgstr "上次更新日期"
 
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type_name

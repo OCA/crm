@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (9.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-07-02 13:33+0000\n"
+"POT-Creation-Date: 2016-09-17 09:48+0000\n"
 "PO-Revision-Date: 2016-05-04 09:31+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/oca/OCA-crm-9-0/language/pt_BR/)\n"
@@ -89,12 +89,12 @@ msgstr ""
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type_description
 msgid "Description"
-msgstr ""
+msgstr "Descrição"
 
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type_display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Nome para Mostrar"
 
 #. module: crm_claim_type
 #: model:crm.claim.stage,name:crm_claim_type.stage_claim11
@@ -104,7 +104,7 @@ msgstr ""
 #. module: crm_claim_type
 #: model:ir.ui.view,arch_db:crm_claim_type.crm_stage_claim_type_search
 msgid "Group By"
-msgstr ""
+msgstr "Agrupado por"
 
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type_id
@@ -121,7 +121,7 @@ msgstr ""
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type___last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Última atualização em"
 
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type_write_uid
