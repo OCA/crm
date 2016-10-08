@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-10 18:52+0000\n"
-"PO-Revision-Date: 2016-03-10 18:54+0000\n"
+"POT-Creation-Date: 2016-09-17 09:43+0000\n"
+"PO-Revision-Date: 2016-09-17 18:43+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Dutch (http://www.transifex.com/oca/OCA-crm-8-0/language/nl/)\n"
 "MIME-Version: 1.0\n"
@@ -132,6 +132,13 @@ msgid "Dimensions"
 msgstr "Afmetingen"
 
 #. module: lettermgmt
+#: field:letter.channel,display_name:0 field:letter.class,display_name:0
+#: field:letter.folder,display_name:0 field:letter.reassignment,display_name:0
+#: field:letter.type,display_name:0 field:res.letter,display_name:0
+msgid "Display Name"
+msgstr "Te tonen naam"
+
+#. module: lettermgmt
 #: selection:res.letter,state:0
 msgid "Draft"
 msgstr "Concept"
@@ -204,6 +211,14 @@ msgstr ""
 #: field:res.letter,message_last_post:0
 msgid "Last Message Date"
 msgstr ""
+
+#. module: lettermgmt
+#: field:letter.channel,__last_update:0 field:letter.class,__last_update:0
+#: field:letter.folder,__last_update:0
+#: field:letter.reassignment,__last_update:0 field:letter.type,__last_update:0
+#: field:res.letter,__last_update:0
+msgid "Last Modified on"
+msgstr "Laatst bijgewerkt op"
 
 #. module: lettermgmt
 #: field:letter.channel,write_uid:0 field:letter.class,write_uid:0

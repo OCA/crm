@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-14 13:03+0000\n"
-"PO-Revision-Date: 2016-09-09 11:32+0000\n"
+"POT-Creation-Date: 2016-09-17 09:43+0000\n"
+"PO-Revision-Date: 2016-10-04 09:42+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: German (http://www.transifex.com/oca/OCA-crm-8-0/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -38,7 +38,7 @@ msgstr ""
 #: view:res.letter:lettermgmt.res_letter_in_form_view
 #: view:res.letter:lettermgmt.res_letter_out_form_view
 msgid "Cancel"
-msgstr ""
+msgstr "Abbrechen"
 
 #. module: lettermgmt
 #: selection:res.letter,state:0
@@ -58,7 +58,7 @@ msgstr ""
 #. module: lettermgmt
 #: field:letter.folder,code:0 field:letter.type,code:0
 msgid "Code"
-msgstr ""
+msgstr "Kennung"
 
 #. module: lettermgmt
 #: sql_constraint:letter.folder:0 sql_constraint:letter.type:0
@@ -137,7 +137,7 @@ msgstr ""
 #: field:letter.folder,display_name:0 field:letter.reassignment,display_name:0
 #: field:letter.type,display_name:0 field:res.letter,display_name:0
 msgid "Display Name"
-msgstr ""
+msgstr "Anzeigename"
 
 #. module: lettermgmt
 #: selection:res.letter,state:0
@@ -219,7 +219,7 @@ msgstr ""
 #: field:letter.reassignment,__last_update:0 field:letter.type,__last_update:0
 #: field:res.letter,__last_update:0
 msgid "Last Modified on"
-msgstr ""
+msgstr "Zuletzt geändert am"
 
 #. module: lettermgmt
 #: field:letter.channel,write_uid:0 field:letter.class,write_uid:0
@@ -348,12 +348,12 @@ msgstr ""
 #. module: lettermgmt
 #: field:letter.folder,name:0 field:letter.reassignment,name:0
 msgid "Name"
-msgstr ""
+msgstr "Bezeichnung"
 
 #. module: lettermgmt
 #: field:res.letter,note:0
 msgid "Note"
-msgstr ""
+msgstr "Notiz"
 
 #. module: lettermgmt
 #: field:res.letter,number:0
