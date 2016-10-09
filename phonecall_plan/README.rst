@@ -3,25 +3,18 @@
       :alt: License: AGPL-3
 
 ==============
-phonecall_plan
+Phonecall Plan
 ==============
 
-This module add a wizard to allow you to plan call from lead/partner view.
-
-Installation
-============
-
-To install this module, you just need to select it from availables modules
-
-Configuration
-=============
-
-This module does not require special configuration.
+This module adds a wizard to allow you to plan calls from the lead and partner views.
 
 Usage
 =====
 
 To use this module, you need to:
+
+More
+----
 
 #. Go to partners/leads view
 #. Pick partners/leads using checkboxes
@@ -43,11 +36,6 @@ help us smashing it by providing a detailed and welcomed feedback.
 Credits
 =======
 
-Images
-------
-
-* Odoo Community Association: `Icon <https://github.com/OCA/maintainer-tools/blob/master/template/module/static/description/icon.svg>`_.
-
 Contributors
 ------------
 
@@ -56,9 +44,9 @@ Contributors
 Maintainer
 ----------
 
-     .. image:: https://odoo-community.org/logo.png
-        :alt: Odoo Community Association
-           :target: https://odoo-community.org
+.. image:: https://odoo-community.org/logo.png
+    :alt: Odoo Community Association
+    :target: https://odoo-community.org
 
 This module is maintained by the OCA.
 
@@ -67,4 +55,3 @@ mission is to support the collaborative development of Odoo features and
 promote its widespread use.
 
 To contribute to this module, please visit https://odoo-community.org.
-

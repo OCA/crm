@@ -1,97 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--© 2016 6IT
-	License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+    License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
 <openerp>
-	<data>
-		<record id="add_call_view_form" model="ir.ui.view" >
-			<field name="name">Scheduled calls</field>
-			<field name="model">add.call</field>
-			<field name="arch" type="xml">
-				<form>
-					<sheet>
-						<group>
-							<group>
-								<field name="salesperson_id"/>
-							</group>
-							<group>
-								<field name="date"/>
-							</group>
-						</group>
+    <data>
+        <record id="add_call_view_form" model="ir.ui.view" >
+            <field name="name">Scheduled calls</field>
+            <field name="model">add.call</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="salesperson_id"/>
+                            </group>
+                            <group>
+                                <field name="date"/>
+                            </group>
+                        </group>
 
-						<group string="Leads">
-							<group>
-								<field name="lead_ids" nolabel="1">
-									<tree>
-										<field name="create_date"/>
-										<field name="name"/>
-										<field name="partner_name"/>
-										<field name="partner_id"/>
-									</tree>
-								</field>
-							</group>
-						</group>
-					</sheet>
-					<footer>
-						<button name="action_add_call" type="object"
-							string="Convert to call" class="oe_highlight"/>
-						<button special="cancel" string="Cancel"/>
-					</footer>
-				</form>
-			</field>
-		</record>
+                        <group string="Leads">
+                            <group>
+                                <field name="lead_ids" nolabel="1">
+                                    <tree>
+                                        <field name="create_date"/>
+                                        <field name="name"/>
+                                        <field name="partner_name"/>
+                                        <field name="partner_id"/>
+                                    </tree>
+                                </field>
+                            </group>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="action_add_call" type="object"
+                            string="Convert to call" class="oe_highlight"/>
+                        <button special="cancel" string="Cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
 
-		<record id="add_partner_call_view_form" model="ir.ui.view">
-			<field name="name">Schedule calls</field>
-			<field name="model">add.partner_call</field>
-			<field name="arch" type="xml">
-				<form>
-					<sheet>
-						<group>
-							<group>
-								<field name="salesperson_id"/>
-							</group>
-							<group>
-								<field name="date"/>
-							</group>
-						</group>
+        <record id="add_partner_call_view_form" model="ir.ui.view">
+            <field name="name">Schedule calls</field>
+            <field name="model">add.partner_call</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="salesperson_id"/>
+                            </group>
+                            <group>
+                                <field name="date"/>
+                            </group>
+                        </group>
 
-						<group string="Partners">
-							<group>
-								<field name="partner_ids" nolabel="1">
-									<tree>
-										<field name="display_name"/>
-										<field name="zip" />
-										<field name="city" />
-									</tree>
-								</field>
-							</group>
-						</group>
-					</sheet>
-					<footer>
-						<button name="action_add_call" type="object"
-							string="Plan a call" class="oe_highlight"/>
-						<button special="cancel" string="Cancel"/>
-					</footer>
-				</form>
-			</field>
-		</record>
+                        <group string="Partners">
+                            <group>
+                                <field name="partner_ids" nolabel="1">
+                                    <tree>
+                                        <field name="display_name"/>
+                                        <field name="zip" />
+                                        <field name="city" />
+                                    </tree>
+                                </field>
+                            </group>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="action_add_call" type="object"
+                            string="Plan a call" class="oe_highlight"/>
+                        <button special="cancel" string="Cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
 
-		<act_window id="launch_add_calls"
-			name="Convert to call"
-			src_model="crm.lead"
-			res_model="add.call"
-			view_mode="form"
-			target="new"
-			key2="client_action_multi"/>
+        <act_window id="launch_add_calls"
+            name="Convert to call"
+            src_model="crm.lead"
+            res_model="add.call"
+            view_mode="form"
+            target="new"
+            key2="client_action_multi"/>
 
-		<act_window id="launch_add_calls_from_partners"
-			name="Plan a call"
-			src_model="res.partner"
-			res_model="add.partner_call"
-			view_id="add_partner_call_view_form"
-			view_mode="form"
-			target="new"
-			key2="client_action_multi"/>
+        <act_window id="launch_add_calls_from_partners"
+            name="Plan a call"
+            src_model="res.partner"
+            res_model="add.partner_call"
+            view_id="add_partner_call_view_form"
+            view_mode="form"
+            target="new"
+            key2="client_action_multi"/>
 
-	</data>
+    </data>
 </openerp>
