@@ -12,6 +12,7 @@ addon | version | summary
 --- | --- | ---
 [crm_claim_code](crm_claim_code/) | 9.0.1.0.0 | Sequential Code for Claims
 [crm_claim_type](crm_claim_type/) | 9.0.1.0.0 | Claim types for CRM
+[crm_lead_website](crm_lead_website/) | 9.0.1.0.0 | Add Website field to leads
 [crm_sale_marketing](crm_sale_marketing/) | 9.0.1.0.0 | Marketing Details of Sales
 
 Unported addons
