@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2015 Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>
+     © 2015 Antonio Espinosa <antonioea@antiun.com>
+     © 2015 Javier Iniesta <javieria@antiun.com>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+<openerp>
+<data>
+
+<act_window name="Add to mailing list"
+    res_model="partner.mail.list.wizard"
+    src_model="res.partner"
+    view_mode="form"
+    target="new"
+    key2="client_action_multi"
+    id="action_partner_mail_list"/>
+
+<record model="ir.ui.view" id="partner_mail_list_wizard_form">
+    <field name="name">partner.mail.list.form</field>
+    <field name="model">partner.mail.list.wizard</field>
+    <field name="arch" type="xml">
+        <form string="Create contact mailing list">
+            <group>
+                <field name="mail_list_id"/>
+            </group>
+            <footer>
+                <button string="Add contacts to mailing list" name="add_to_mail_list"
+                    type="object" class="oe_highlight"/>
+                or
+                <button string="Cancel" class="oe_link" special="cancel" />
+            </footer>
+        </form>
+    </field>
+</record>
+
+</data>
+</openerp>
