@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2015 Hugo Santos <hugo.santos@factorlibre.com>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+<openerp>
+    <data>
+
+        <record id="crm_case_form_view_leads_alias" model="ir.ui.view">
+            <field name="name">CRM - Leads Autoalias</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_form_view_leads"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='opt_out']" position="after">
+                    <field name="email_alias_email"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="crm_case_form_view_oppor_alias" model="ir.ui.view">
+            <field name="name">Opportunities</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='opt_out']" position="after">
+                    <field name="email_alias_email"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</openerp>
