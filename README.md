@@ -11,6 +11,7 @@ Available addons
 addon | version | summary
 --- | --- | ---
 [crm_action](crm_action/) | 8.0.1.2.0 | Adds action management in CRM
+[crm_autoalias](crm_autoalias/) | 8.0.1.0.0 | Automatically generates an email alias related to lead
 [crm_claim_code](crm_claim_code/) | 8.0.1.0.0 | Sequential Code for Claims
 [crm_claim_type](crm_claim_type/) | 8.0.1.0.0 | Claim types for CRM
 [crm_deduplicate_acl](crm_deduplicate_acl/) | 8.0.1.0.0 | Contact deduplication with fine-grained permission control
