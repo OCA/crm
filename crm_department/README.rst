@@ -2,9 +2,6 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-CRM with Department Categorization
-==================================
-
 Add the department on Sales Team (with related field on Lead &amp; Opportunities)
 as well as the related filter and button in the search form.
 
