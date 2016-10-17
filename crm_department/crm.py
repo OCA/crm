@@ -47,6 +47,7 @@ class CrmLead(models.Model):
             cr, uid, ids, user_id, context=context)
         res.setdefault('value', {})
         user = self.pool['res.users'].browse(cr, uid, user_id, context=context)
-        dptm_id = user.employee_ids[0].department_id.id or None
-        res['value']['department_id'] = dptm_id
+        if user.employee_ids:
+            dptm_id = user.employee_ids[0].department_id.id or None
+            res['value']['department_id'] = dptm_id
         return res
