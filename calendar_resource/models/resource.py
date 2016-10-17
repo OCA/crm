@@ -18,9 +18,6 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-import logging
-_logger = logging.getLogger(__name__)
-
 from openerp import models, fields
 
 
@@ -28,10 +25,7 @@ class resource_resource(models.Model):
     _inherit = 'resource.resource'
 
     image = fields.Binary(
-        "Image",
-        help="This field holds the image used as avatar for this contact,"
-             " limited to 1024x1024px"
+        help="This field holds the image used as avatar for this resource."
     ),
     display = fields.Boolean()
     note = fields.Text()
-

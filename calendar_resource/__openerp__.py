@@ -22,7 +22,7 @@
 
 {
     'name': 'Calendar Resources',
-    'version': '0.1',
+    'version': '8.0.1.0.1',
     'author': 'Savoir-faire Linux',
     'maintainer': 'Savoir-faire Linux',
     'website': 'http://www.savoirfairelinux.com',
@@ -58,9 +58,6 @@ More information
         'resource',
         'calendar',
     ],
-    'external_dependencies': {
-        'python': [],
-    },
     'data': [
         'views/resource_view.xml',
     ],
