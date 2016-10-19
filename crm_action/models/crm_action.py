@@ -46,12 +46,15 @@ class CrmAction(models.Model):
     date = fields.Date(
         'Date', required=True, default=fields.Date.context_today)
     user_id = fields.Many2one(
-        'res.users', string='User', required=True, default=lambda self: self.env.user)
+        'res.users', string='User', required=True, 
+        default=lambda self: self.env.user)
     action_type = fields.Many2one(
-        'crm.action.type', string='Type', required=True, default=default_action_type)
+        'crm.action.type', string='Type', required=True, 
+        default=default_action_type)
     details = fields.Text('Details')
     state = fields.Selection(
-        [('draft', 'Draft'), ('done', 'Done'), ], string='Status', required=True, default="draft")
+        [('draft', 'Draft'), ('done', 'Done'), ], string='Status', 
+        required=True, default="draft")
 
     @api.multi
     def button_confirm(self):
