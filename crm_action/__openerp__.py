@@ -23,16 +23,13 @@
 {
     'name': 'CRM Action',
     'version': '9.0.1.1.0',
-    'author': 'Savoir-faire Linux,Odoo Community Association (OCA)',
+    'author': 'Savoir-faire Linux,Odoo Community Association (OCA),AtulArvind',
     'license': 'AGPL-3',
     'category': 'Others',
     'summary': 'CRM Action',
     'depends': [
         'sale_crm',
     ],
-    'external_dependencies': {
-        'python': [],
-    },
     'data': [
         'security/res_groups_data.xml',
         'security/ir.model.access.csv',
@@ -40,6 +37,9 @@
         'views/crm_lead_view.xml',
         'views/crm_action_view.xml',
         'views/crm_action_type_view.xml',
+    ],
+    'test': [
+        'test/crm_actions.yml',
     ],
     'installable': True,
     'application': True,
