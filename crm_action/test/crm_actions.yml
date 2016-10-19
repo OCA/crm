@@ -1,8 +1,15 @@
 -
   create CRM LEAD
 -
+  !record {model: res.partner, id: test_res_partner}:
+    name: "Atul Arvind"
+
+-
+  create CRM LEAD
+-
   !record {model: crm.lead, id: test_crm_lead}:
     name: "Odoo Customization Lead"
+    partner_id: test_res_partner
 -
   create CRM ACTION TYPE
 -
