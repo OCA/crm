@@ -6,13 +6,9 @@
         <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
         <field name="arch" type="xml">
             <div class="oe_right oe_button_box" position="inside">
-                <button
-                        class="oe_inline oe_stat_button"
+                <button class="oe_inline oe_stat_button"
                         type="object"
-                        context="{
-                            'default_partner_id': partner_id,
-                            'default_lead_id': id,
-                        }"
+                        context="{'default_partner_id': partner_id, 'default_lead_id': id}"
                         name="button_actions"
                         icon="fa-list">
                     <field string="Actions" name="actions_count" widget="statinfo"/>

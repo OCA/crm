@@ -32,7 +32,7 @@ Known issues / Roadmap
 Credits
 =======
 
-Module developed and tested with Odoo version 10.0
+Module developed and tested with Odoo version 9.0
 
 Contributors
 ------------
