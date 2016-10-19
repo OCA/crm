@@ -32,7 +32,7 @@ Known issues / Roadmap
 Credits
 =======
 
-Module developed and tested with Odoo version 8.0
+Module developed and tested with Odoo version 10.0
 
 Contributors
 ------------
@@ -40,6 +40,7 @@ Contributors
 * David DUFRESNE <david.dufresne@savoirfairelinux.com>
 * Jordi RIERA <jordi.riera@savoirfairelinux.com>
 * Bruno JOLIVEAU <bruno.joliveau@savoirfairelinux.com>
+* Atul ARVIND <hello@atularvind.com>
 
 
 Maintainer

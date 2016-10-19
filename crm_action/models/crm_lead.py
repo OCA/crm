@@ -1,4 +1,4 @@
-# -*- encoding: utf-8 -*-
+# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
@@ -36,7 +36,6 @@ class CrmLead(models.Model):
     @api.multi
     def button_actions(self):
         self.ensure_one()
-
         res = {
             'name': _('Actions'),
             'type': 'ir.actions.act_window',
@@ -45,5 +44,4 @@ class CrmLead(models.Model):
             'view_mode': 'tree,form',
             'domain': [('lead_id', '=', self[0].id)],
         }
-
         return res
