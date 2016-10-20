@@ -9,7 +9,7 @@
         'base',
         'crm'
     ],
-    'author': 'Aurélien Rivet, 6IT, Odoo Community Association (OCA)',
+    'author': '6IT, Odoo Community Association (OCA)',
     'category': 'Customer Relationship Management',
     'website': 'https://6it.fr',
     'license': 'AGPL-3',

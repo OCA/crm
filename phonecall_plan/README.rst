@@ -11,11 +11,6 @@ This module adds a wizard to allow you to plan calls from the lead and partner v
 Usage
 =====
 
-To use this module, you need to:
-
-More
-----
-
 #. Go to partners/leads view
 #. Pick partners/leads using checkboxes
 #. Click on "Plan a call" in the more submenu
