@@ -4,31 +4,27 @@
      © 2009 Sandy Carter <sandy.carter@savoirfairelinux.com>
      © 2009 Parthiv Patel, Tech Receptives
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
-     
+
 <openerp>
   <data>
 
     <!-- Views -->
 
-    <record model="ir.ui.view" id="letter_type_tree_view">
-      <field name="name">Letter Type Tree</field>
-      <field name="model">letter.type</field>
+    <record model="ir.ui.view" id="letter_category_tree_view">
+      <field name="model">letter.category</field>
       <field name="arch" type="xml">
-        <tree string="Letter Type">
+        <tree string="Letter Category">
           <field name="name"/>
-          <field name="code"/>
         </tree>
       </field>
     </record>
 
-    <record model="ir.ui.view" id="letter_type_form_view">
-      <field name="name">Letter Type Form</field>
-      <field name="model">letter.type</field>
+    <record model="ir.ui.view" id="letter_category_form_view">
+      <field name="model">letter.category</field>
       <field name="arch" type="xml">
-        <form string="Letter Type">
+        <form string="Letter Category">
             <group>
                 <field name="name"/>
-                <field name="code"/>
             </group>
         </form>
       </field>
@@ -36,29 +32,29 @@
 
     <!-- Actions -->
 
-    <record model="ir.actions.act_window" id="action_letter_type_tree_view">
-      <field name="name">Letter Type</field>
+    <record model="ir.actions.act_window" id="action_letter_category_tree_view">
+      <field name="name">Letter Category</field>
       <field name="type">ir.actions.act_window</field>
-      <field name="res_model">letter.type</field>
+      <field name="res_model">letter.category</field>
       <field name="view_type">form</field>
       <field name="view_mode">tree,form</field>
-      <field name="view_id" ref="letter_type_tree_view"/>
+      <field name="view_id" ref="letter_category_tree_view"/>
       <field name="help" type="html">
         <p class="oe_view_nocontent_create">
-            Click to create a letter type.
+            Click to create a letter category.
         </p><p>
-            Use types to specify the type of letter sent or received.
-            Eg: Envelope, Parcel, Package...
+            Use categories to classify letters. 
+            Eg: Classified, Confidential, Personal...
         </p>
       </field>
     </record>
 
     <!-- Menus -->
 
-    <menuitem id="letter_type_menu"
-              name="Letter Type"
+    <menuitem id="letter_category_menu"
+              name="Letter Category"
               parent="letter_log_config_menu"
-              action="action_letter_type_tree_view"/>
+              action="action_letter_category_tree_view"/>
 
   </data>
 </openerp>
