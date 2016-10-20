@@ -19,12 +19,12 @@ class TestCrmLeadCode(common.TransactionCase):
         crm_leads = self.crm_lead_model.search([])
         for crm_lead in crm_leads:
             self.assertNotEqual(crm_lead.code, '/')
-
+    
     def _get_next_code(self):
         number = self.crm_sequence.number_next_actual
         code = self.crm_sequence.get_next_char(number)
         return code
-
+    
     def test_new_lead_code_assign(self):
         code = self._get_next_code()
         crm_lead = self.crm_lead_model.create({
