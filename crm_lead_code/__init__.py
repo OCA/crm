@@ -22,4 +22,5 @@ def assign_old_sequences(cr, registry):
         cr.execute('UPDATE crm_lead '
                    'SET code = \'%s\' '
                    'WHERE id = %d;' %
-                   (sequence_obj.get(cr, SUPERUSER_ID, 'crm.lead'), lead_id))
+                   (sequence_obj.next_by_code(cr, SUPERUSER_ID, 'crm.lead'),
+                    lead_id))
