@@ -16,6 +16,7 @@ addon | version | summary
 [crm_claim_type](crm_claim_type/) | 8.0.1.0.0 | Claim types for CRM
 [crm_deduplicate_acl](crm_deduplicate_acl/) | 8.0.1.0.0 | Contact deduplication with fine-grained permission control
 [crm_deduplicate_by_website](crm_deduplicate_by_website/) | 8.0.1.0.0 | Deduplicate Contacts by Website
+[crm_deduplicate_filter](crm_deduplicate_filter/) | 8.0.1.0.0 | Exclude records from the deduplication
 [crm_lead_address_street3](crm_lead_address_street3/) | 8.0.0.1.0 | Street3 in lead addresses
 [crm_lead_code](crm_lead_code/) | 8.0.1.0.0 | Sequential Code for Leads / Opportunities
 [crm_lead_firstname](crm_lead_firstname/) | 8.0.1.0.0 | Specify split names for contacts in leads
@@ -32,7 +33,7 @@ addon | version | summary
 [crm_sale_marketing](crm_sale_marketing/) | 8.0.1.0.0 | Marketing Details of Sales
 [crm_sector](crm_sector/) | 8.0.1.0.0 | Link leads/opportunities to sectors
 [crm_track_next_action](crm_track_next_action/) | 8.0.1.0.0 | CRM Track Next Action
-[lettermgmt](lettermgmt/) | 8.0.1.2.0 | Track letters, parcels, registered documents
+[lettermgmt](lettermgmt/) | 8.0.2.0.0 | Track letters, parcels, registered documents
 [marketing_crm_partner](marketing_crm_partner/) | 8.0.1.0.0 | Copy tracking fields from leads to partners
 [mass_mailing_partner](mass_mailing_partner/) | 8.0.2.1.0 | Link partners with mass-mailing
 [newsletter](newsletter/) | 8.0.2.0.0 | Send newsletters to customers, employees or other entities
