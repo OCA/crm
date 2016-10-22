@@ -17,5 +17,4 @@
         'wizards/phonecall_plan_view.xml'
     ],
     'installable': True,
-    'active': False,
 }
