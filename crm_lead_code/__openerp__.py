@@ -11,7 +11,6 @@
     "author": "OdooMRP team, "
               "AvanzOSC, "
               "Tecnativa - Pedro M. Baeza, "
-              "Atul Arvind, "
               "Odoo Community Association (OCA)",
     "website": "http://www.odoomrp.com",
     "license": "AGPL-3",
