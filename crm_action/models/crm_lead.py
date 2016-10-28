@@ -26,10 +26,10 @@ from openerp import models, fields, api, _
 class CrmLead(models.Model):
     _inherit = 'crm.lead'
 
-    def count_actions(self):
+    def _compute_count_actions(self):
         self.actions_count = len(self.action_ids)
 
-    actions_count = fields.Integer(compute='count_actions')
+    actions_count = fields.Integer(compute='_compute_count_actions')
     action_ids = fields.One2many(
         'crm.action', 'lead_id', string='Actions')
 

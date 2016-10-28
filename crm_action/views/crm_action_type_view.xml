@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-	<record id="view_action_type_form" model="ir.ui.view">
+    <record id="view_action_type_form" model="ir.ui.view">
         <field name="name">crm.action.type.form</field>
         <field name="model">crm.action.type</field>
         <field name="arch" type="xml">
             <form string="Action Type">
-            	<sheet>
-            		<group>
-		                <field name="name"/>
-		                <field name="priority"/>
-		                <field name="is_active"/>
-	                </group>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="priority"/>
+                        <field name="is_active"/>
+                    </group>
                 </sheet>
             </form>
         </field>

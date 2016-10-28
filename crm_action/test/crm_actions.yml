@@ -3,7 +3,6 @@
 -
   !record {model: res.partner, id: test_res_partner}:
     name: "Atul Arvind"
-
 -
   create CRM LEAD
 -
@@ -37,5 +36,5 @@
 -
   !python {model: crm.lead} : |
     lead_rec = self.browse(cr, uid, ref('test_crm_lead'))
-    lead_rec.count_actions()
+    lead_rec._compute_count_actions()
     lead_rec.button_actions()
