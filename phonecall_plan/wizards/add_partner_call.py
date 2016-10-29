@@ -4,6 +4,7 @@
 
 from openerp import models, fields, api, _
 
+
 class AddPartnerCall(models.TransientModel):
     _name = 'add.partner_call'
 

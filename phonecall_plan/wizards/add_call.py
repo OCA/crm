@@ -2,7 +2,8 @@
 # © 2016 6IT
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from openerp import models, fields, api, _
+from openerp import models, fields, api
+
 
 class AddCall(models.TransientModel):
     _name = 'add.call'
