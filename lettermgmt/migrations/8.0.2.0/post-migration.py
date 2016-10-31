@@ -20,22 +20,7 @@ def migrate(cr, version):
     # Rename column 'type' to 'type_id'
     cr.execute("""UPDATE res_letter SET type_id = type""")
 
-    # Rename model 'letter.class' to 'letter.category'
-    cr.execute("""INSERT INTO letter_category SELECT * FROM letter_class""")
-    cr.execute("""UPDATE ir_model_fields SET relation = 'letter.category'
-                  WHERE relation = 'letter.class'""")
-    cr.execute("""UPDATE ir_model_fields SET model = 'letter.category'
-                  WHERE model = 'letter.class'""")
-    cr.execute("""UPDATE ir_model_data SET model = 'letter.category'
-                  WHERE model = 'letter.class'""")
-    cr.execute("""UPDATE ir_attachment SET res_model = 'letter.category'
-                  WHERE res_model = 'letter.class'""")
-
     # Cleanup
     cr.execute("""ALTER TABLE res_letter DROP COLUMN snd_rec_date""")
     cr.execute("""ALTER TABLE res_letter DROP COLUMN type""")
     cr.execute("""ALTER TABLE res_letter DROP COLUMN class""")
-    cr.execute("""DROP INDEX IF EXISTS res_letter_snd_rec_date_index""")
-    cr.execute("""DROP INDEX IF EXISTS res_letter_type_index""")
-    cr.execute("""DROP INDEX IF EXISTS res_letter_class_index""")
-    cr.execute("""DROP TABLE letter_class""")
