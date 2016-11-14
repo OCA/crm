@@ -1,56 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- © 2016 Antiun Ingeniería S.L. - Jairo Llopis
+<!-- © 2016 Tecnativa S.L. - Jairo Llopis
+     © 2016 Tecnativa S.L. - Vicent Cubells
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
 
-<openerp>
-<data>
+<odoo>
 
-<record id="view_partner_form" model="ir.ui.view">
-    <field name="name">Marketing fields</field>
-    <field name="model">res.partner</field>
-    <field name="inherit_id" ref="base.view_partner_form"/>
-    <field name="arch" type="xml">
-        <xpath expr="//page[@name='sales_purchases']/group[1]">
-            <group name="marketing" string="Marketing">
+    <record id="view_partner_form" model="ir.ui.view">
+        <field name="name">Marketing fields</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='sales_purchases']/group[1]">
+                <group name="marketing" string="Marketing">
+                    <field name="medium_id"/>
+                    <field name="campaign_id"/>
+                    <field name="source_id"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_partner_tree" model="ir.ui.view">
+        <field name="name">Marketing fields</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="/tree">
+                <field name="medium_id" invisible="True"/>
+                <field name="campaign_id" invisible="True"/>
+                <field name="source_id" invisible="True"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_res_partner_filter" model="ir.ui.view">
+        <field name="name">Marketing fields</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group" position="before">
+                <separator/>
                 <field name="medium_id"/>
                 <field name="campaign_id"/>
                 <field name="source_id"/>
-            </group>
-        </xpath>
-    </field>
-</record>
+            </xpath>
+            <xpath expr="//group">
+                <filter name="medium" string="Medium" context="{'group_by': 'medium_id'}"/>
+                <filter name="campaign" string="Campaign" context="{'group_by': 'campaign_id'}"/>
+                <filter name="source" string="Source" context="{'group_by': 'source_id'}"/>
+            </xpath>
+        </field>
+    </record>
 
-<record id="view_partner_tree" model="ir.ui.view">
-    <field name="name">Marketing fields</field>
-    <field name="model">res.partner</field>
-    <field name="inherit_id" ref="base.view_partner_tree"/>
-    <field name="arch" type="xml">
-        <xpath expr="/tree">
-            <field name="medium_id" invisible="True"/>
-            <field name="campaign_id" invisible="True"/>
-            <field name="source_id" invisible="True"/>
-        </xpath>
-    </field>
-</record>
-
-<record id="view_res_partner_filter" model="ir.ui.view">
-    <field name="name">Marketing fields</field>
-    <field name="model">res.partner</field>
-    <field name="inherit_id" ref="base.view_res_partner_filter"/>
-    <field name="arch" type="xml">
-        <xpath expr="//group[@string='Group By']" position="before">
-            <separator/>
-            <field name="medium_id"/>
-            <field name="campaign_id"/>
-            <field name="source_id"/>
-        </xpath>
-        <xpath expr="//group[@string='Group By']">
-            <filter string="Medium" context="{'group_by': 'medium_id'}"/>
-            <filter string="Campaign" context="{'group_by': 'campaign_id'}"/>
-            <filter string="Source" context="{'group_by': 'source_id'}"/>
-        </xpath>
-    </field>
-</record>
-
-</data>
-</openerp>
+</odoo>
