@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
-# Copyright (C) 2009-Today Tech Receptives(http://techreceptives.com).
-# Parthiv Pate, Tech Receptives, Open Source For Ideas
-# Hardikgiri Goswami <hardikgiri.goswami@gmail.com>
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+# © 2016 Iván Todorovich <ivan.todorovich@gmail.com>
+# © 2015 Holger Brunn <hbrunn@therp.nl>
+# © 2009 Sandy Carter <sandy.carter@savoirfairelinux.com>
+# © 2009 Parthiv Patel, Tech Receptives
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from openerp import models, fields
 
@@ -13,4 +14,4 @@ class LetterChannel(models.Model):
     _name = 'letter.channel'
     _description = "Send/Receive channel"
 
-    name = fields.Char('Type', required=True)
+    name = fields.Char(required=True)

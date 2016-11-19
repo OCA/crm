@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
+<!-- © 2016 Iván Todorovich <ivan.todorovich@gmail.com>
+     © 2015 Holger Brunn <hbrunn@therp.nl>
+     © 2009 Sandy Carter <sandy.carter@savoirfairelinux.com>
+     © 2009 Parthiv Patel, Tech Receptives
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+     
 <openerp>
   <data>
 
@@ -38,6 +43,14 @@
       <field name="view_type">form</field>
       <field name="view_mode">tree,form</field>
       <field name="view_id" ref="letter_type_tree_view"/>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+            Click to create a letter type.
+        </p><p>
+            Use types to specify the type of letter sent or received.
+            Eg: Envelope, Parcel, Package...
+        </p>
+      </field>
     </record>
 
     <!-- Menus -->

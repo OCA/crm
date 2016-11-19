@@ -1,9 +1,9 @@
-# -*- encoding: utf-8 -*-
-#    Hardikgiri Goswami <hardikgiri.goswami@gmail.com>
-#    Parthiv Pate, Tech Receptives, Open Source For Ideas
-#    Copyright (C) 2009-Today Tech Receptives(http://techreceptives.com).
-#    Copyright (C) 2015 Therp BV <http://therp.nl>.
-#    All Rights Reserved
+# -*- coding: utf-8 -*-
+# © 2016 Iván Todorovich <ivan.todorovich@gmail.com>
+# © 2015 Holger Brunn <hbrunn@therp.nl>
+# © 2009 Sandy Carter <sandy.carter@savoirfairelinux.com>
+# © 2009 Parthiv Patel, Tech Receptives
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from openerp import models, fields, api
 
@@ -38,10 +38,10 @@ class ResLetter(models.Model):
         'letter.folder', string='Folder',
         help='Folder which contains letter.')
     number = fields.Char(
-        'Number', help="Auto Generated Number of letter.",
+        help="Auto Generated Number of letter.",
         default="/", required=True)
     move = fields.Selection(
-        [('in', 'IN'), ('out', 'OUT')], 'Move', readonly=True,
+        [('in', 'IN'), ('out', 'OUT')], readonly=True,
         help="Incoming or Outgoing Letter.",
         default=lambda self: self.env.context.get('move', 'in'))
     type_id = fields.Many2one(
@@ -52,17 +52,21 @@ class ResLetter(models.Model):
     date = fields.Datetime('Letter Date', help='The letter\'s date')
     snd_date = fields.Datetime(
         'Sent / Received Date', defalut=fields.datetime.now,
-        help='Created Date of Letter Logging.')
+        help='The date the letter was sent.')
     rcv_date = fields.Datetime(
         'Sent / Received Date', defalut=fields.datetime.now,
-        help='Created Date of Letter Logging.')
+        help='The date the letter was recieved.')
     recipient_partner_id = fields.Many2one(
         'res.partner', string='Recipient', track_visibility='onchange',
-        default=default_recipient)
+        default=default_recipient, required=True,
+        help='The person who recieve the letter.')
     sender_partner_id = fields.Many2one(
         'res.partner', string='Sender', track_visibility='onchange',
-        default=default_sender)
-    note = fields.Text('Note')
+        default=default_sender, required=True,
+        help='The person who send the letter.')
+    note = fields.Text(
+        string='Delivery Notes',
+        help='Indications for the delivery officer.')
     state = fields.Selection([
         ('draft', 'Draft'),
         ('rec', 'Received'),
@@ -70,7 +74,15 @@ class ResLetter(models.Model):
         ('rec_bad', 'Received Damage'),
         ('rec_ret', 'Received But Returned'),
         ('cancel', 'Cancelled')],
-        'State', readonly=True, default="draft", track_visibility='onchange')
+        readonly=True, default="draft", track_visibility='onchange',
+        copy=False,
+        help="""
+            * Draft: not confirmed yet.\n
+            * Sent: has been sent, can't be modified anymore.\n
+            * Received: has arrived.\n
+            * Received Damage: has been received with damages.\n
+            * Received But Returned: has been received but returned.\n
+            * Cancel: has been cancelled, can't be sent anymore.""")
     parent_id = fields.Many2one('res.letter', 'Parent')
     child_line = fields.One2many(
         'res.letter', 'parent_id', 'Letter Lines')

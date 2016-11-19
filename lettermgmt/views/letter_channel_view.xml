@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
+<!-- © 2016 Iván Todorovich <ivan.todorovich@gmail.com>
+     © 2015 Holger Brunn <hbrunn@therp.nl>
+     © 2009 Sandy Carter <sandy.carter@savoirfairelinux.com>
+     © 2009 Parthiv Patel, Tech Receptives
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+     
 <openerp>
   <data>
 
     <!-- Views -->
 
     <record model="ir.ui.view" id="letter_channel_tree_view">
-      <field name="name">letter.channel.tree</field>
       <field name="model">letter.channel</field>
       <field name="arch" type="xml">
         <tree string="Letter Channel">
@@ -16,7 +20,6 @@
     </record>
 
     <record model="ir.ui.view" id="letter_channel_form_view">
-      <field name="name">letter.channel.form</field>
       <field name="model">letter.channel</field>
       <field name="arch" type="xml">
         <form string="Letter Channel">
@@ -36,6 +39,14 @@
       <field name="view_type">form</field>
       <field name="view_mode">tree,form</field>
       <field name="view_id" ref="letter_channel_tree_view"/>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+            Click to create a letter channel.
+        </p><p>
+            Use channels to specify the different ways a letter can be sent or received.
+            Eg: The Post, Fax, Email..
+        </p>
+      </field>
     </record>
 
     <!-- Menus -->

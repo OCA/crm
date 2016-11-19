@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
+<!-- © 2016 Iván Todorovich <ivan.todorovich@gmail.com>
+     © 2015 Holger Brunn <hbrunn@therp.nl>
+     © 2009 Sandy Carter <sandy.carter@savoirfairelinux.com>
+     © 2009 Parthiv Patel, Tech Receptives
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+     
 <openerp>
   <data>
 
@@ -23,21 +28,8 @@
       </field>
     </record>
 
-
-    <record model="ir.ui.view" id="res_letter_out_calendar_view">
+    <record model="ir.ui.view" id="res_letter_calendar_view">
       <field name="name">Letter Calendar</field>
-      <field name="model">res.letter</field>
-      <field name="priority" eval="2"/>
-      <field name="arch" type="xml">
-        <calendar string="Letters" date_start="date" color="move">
-          <field name="name"/>
-          <field name="recipient_partner_id"/>
-        </calendar>
-      </field>
-    </record>
-
-    <record model="ir.ui.view" id="res_letter_in_calendar_view">
-      <field name="name">Inbound Letter Calendar</field>
       <field name="model">res.letter</field>
       <field name="priority" eval="2"/>
       <field name="arch" type="xml">
@@ -70,8 +62,8 @@
       <field name="name">Letter Form</field>
       <field name="model">res.letter</field>
       <field name="arch" type="xml">
-        <form string="Letter" >
-          <header>
+        <form string="Letter" version="7.0">
+          <header name="Toolbar">
             <button name="action_send" states="draft" string="Send" type="object" class="oe_highlight" />
             <button name="action_received" states="sent" string="Received" type="object" class="oe_highlight" />
             <button name="action_rec_ret" states="sent" string="Received but Returned" type="object" />
@@ -85,11 +77,11 @@
               <h1><field name="number" class="oe_inline" readonly="1" /></h1>
               <field name="category_ids" widget="many2many_tags" placeholder="Tags... (eg: Classified)" attrs="{'readonly': [('state', 'not in', ['draft'])]}"/>
               <field name="parent_id" placeholder="Parent..." attrs="{'readonly': [('state', 'not in', ['draft'])]}"/>
-            </div>
+            </div> 
             <group>
               <group>
-                <field name="sender_partner_id" attrs="{'readonly': [('state', 'not in', ['draft'])]}"/>
-                <field name="recipient_partner_id" attrs="{'readonly': [('state', 'not in', ['draft'])]}"/>
+                <field name="sender_partner_id"    attrs="{'readonly': [('state', 'not in', ['draft'])], 'required': True}"/>
+                <field name="recipient_partner_id" attrs="{'readonly': [('state', 'not in', ['draft'])], 'required': True}"/>
                 <field name="name" attrs="{'readonly': [('state', 'not in', ['draft'])]}"/>
               </group>
               <group>
@@ -110,7 +102,7 @@
                   </group>
                   <group>
                     <field name="snd_date" attrs="{'readonly': [('state', 'not in', ['draft', 'sent'])]}"/>
-                    <field name="rcv_date"/>
+                    <field name="rec_date"/>
                   </group>
                   <group>
                     <field name="size" attrs="{'readonly': [('state', 'not in', ['draft'])]}"/>
@@ -137,6 +129,8 @@
         </form>
       </field>
     </record>
+
+    <!-- Actions -->
 
     <record model="ir.actions.act_window" id="action_res_letter_out_tree_view">
       <field name="name">Outbound Letters</field>
