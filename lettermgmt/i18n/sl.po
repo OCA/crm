@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-07 11:40+0000\n"
-"PO-Revision-Date: 2016-05-09 08:49+0000\n"
+"POT-Creation-Date: 2016-11-02 14:15+0000\n"
+"PO-Revision-Date: 2016-11-22 16:25+0000\n"
 "Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>\n"
 "Language-Team: Slovenian (http://www.transifex.com/oca/OCA-crm-8-0/language/sl/)\n"
 "MIME-Version: 1.0\n"
@@ -19,15 +19,72 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
 
 #. module: lettermgmt
-#: view:res.letter:lettermgmt.res_letter_in_form_view
-#: view:res.letter:lettermgmt.res_letter_out_form_view
-msgid "Addresses"
-msgstr "Naslovi"
+#: help:res.letter,state:0
+msgid ""
+"\n"
+"            * Draft: not confirmed yet.\n"
+"\n"
+"            * Sent: has been sent, can't be modified anymore.\n"
+"\n"
+"            * Received: has arrived.\n"
+"\n"
+"            * Received Damage: has been received with damages.\n"
+"\n"
+"            * Received But Returned: has been received but returned.\n"
+"\n"
+"            * Cancel: has been cancelled, can't be sent anymore."
+msgstr "\n            * Osnutek: ni še potrjeno\n\n            * Poslano: odposlano, ne more se več spreminjati\n\n            * Prejeto\n\n            * Prejeto poškodovano\n\n            * Prejeto a vrnjeno\n\n            * Preklicano: ne more se več odposlati"
 
 #. module: lettermgmt
-#: view:res.letter:lettermgmt.res_letter_in_form_view
-msgid "Arrival Date"
-msgstr "Datum prejema"
+#: model:ir.actions.act_window,help:lettermgmt.action_letter_category_tree_view
+msgid ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"            Click to create a letter category.\n"
+"        </p><p>\n"
+"            Use categories to classify letters. \n"
+"            Eg: Classified, Confidential, Personal...\n"
+"        </p>\n"
+"      "
+msgstr "<p class=\"oe_view_nocontent_create\">\n            Ustvari kategorijo pošte.\n        </p><p>\n            Uporabite kategorije za klasifikacijo pošte. \n            Pr.: Tajno, Zaupno, Osebno...\n        </p>\n      "
+
+#. module: lettermgmt
+#: model:ir.actions.act_window,help:lettermgmt.action_letter_channel_tree_view
+msgid ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"            Click to create a letter channel.\n"
+"        </p><p>\n"
+"            Use channels to specify the different ways a letter can be sent or received.\n"
+"            Eg: The Post, Fax, Email..\n"
+"        </p>\n"
+"      "
+msgstr "<p class=\"oe_view_nocontent_create\">\n            Ustvari poštni kanal.\n        </p><p>\n            Uporabite kanale za določitev različnih načinov odpošiljanja in prejemanja pošte.\n            Pr.: Pošta, Faks, Email..\n        </p>\n      "
+
+#. module: lettermgmt
+#: model:ir.actions.act_window,help:lettermgmt.action_letter_folder_tree_view
+msgid ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"            Click to create a letter folder.\n"
+"            Use folders to group a series of letters.\n"
+"        </p>\n"
+"      "
+msgstr "<p class=\"oe_view_nocontent_create\">\n            Ustvari poštno mapo.\n            Uporabite mape za združevanje pošte v serije.\n        </p>\n      "
+
+#. module: lettermgmt
+#: model:ir.actions.act_window,help:lettermgmt.action_letter_type_tree_view
+msgid ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"            Click to create a letter type.\n"
+"        </p><p>\n"
+"            Use types to specify the type of letter sent or received.\n"
+"            Eg: Envelope, Parcel, Package...\n"
+"        </p>\n"
+"      "
+msgstr "<p class=\"oe_view_nocontent_create\">\n            Ustvari tip pošte.\n        </p><p>\n            Uporabite tipe za določitev tipa poslane ali prejete pošte.\n            Pr: Kuverta, Paket, ...\n        </p>\n      "
+
+#. module: lettermgmt
+#: view:res.letter:lettermgmt.res_letter_form_view
+msgid "Additional Information"
+msgstr "Dodatne informacije"
 
 #. module: lettermgmt
 #: help:res.letter,number:0
@@ -35,8 +92,12 @@ msgid "Auto Generated Number of letter."
 msgstr "Samodejno ustvarjena številka pošte."
 
 #. module: lettermgmt
-#: view:res.letter:lettermgmt.res_letter_in_form_view
-#: view:res.letter:lettermgmt.res_letter_out_form_view
+#: view:res.letter:lettermgmt.res_letter_form_view
+msgid "Back to Draft"
+msgstr "Vrni v osnutek"
+
+#. module: lettermgmt
+#: view:res.letter:lettermgmt.res_letter_form_view
 msgid "Cancel"
 msgstr "Preklic"
 
@@ -46,12 +107,12 @@ msgid "Cancelled"
 msgstr "Preklicano"
 
 #. module: lettermgmt
-#: field:res.letter,class:0
-msgid "Class"
-msgstr "Razred"
+#: field:res.letter,channel_id:0
+msgid "Channel"
+msgstr "Kanal"
 
 #. module: lettermgmt
-#: help:res.letter,class:0
+#: help:res.letter,category_ids:0
 msgid "Classification of Document."
 msgstr "Klasifikacija dokumenta"
 
@@ -81,35 +142,14 @@ msgid "Configuration"
 msgstr "Nastavitve"
 
 #. module: lettermgmt
-#: view:res.letter:lettermgmt.res_letter_out_form_view
-msgid "Copies to External"
-msgstr "Kopije zunanjim"
-
-#. module: lettermgmt
-#: view:res.letter:lettermgmt.res_letter_in_form_view
-#: view:res.letter:lettermgmt.res_letter_out_form_view
-msgid "Create"
-msgstr "Ustvari"
-
-#. module: lettermgmt
-#: selection:res.letter,state:0
-msgid "Created"
-msgstr "Ustvarjeno"
-
-#. module: lettermgmt
-#: help:res.letter,snd_rec_date:0
-msgid "Created Date of Letter Logging."
-msgstr "Datum nastanka dnevnika prispele pošte"
-
-#. module: lettermgmt
-#: field:letter.channel,create_uid:0 field:letter.class,create_uid:0
+#: field:letter.category,create_uid:0 field:letter.channel,create_uid:0
 #: field:letter.folder,create_uid:0 field:letter.reassignment,create_uid:0
 #: field:letter.type,create_uid:0 field:res.letter,create_uid:0
 msgid "Created by"
 msgstr "Ustvaril"
 
 #. module: lettermgmt
-#: field:letter.channel,create_date:0 field:letter.class,create_date:0
+#: field:letter.category,create_date:0 field:letter.channel,create_date:0
 #: field:letter.folder,create_date:0 field:letter.reassignment,create_date:0
 #: field:letter.type,create_date:0 field:res.letter,create_date:0
 msgid "Created on"
@@ -121,19 +161,12 @@ msgid "Date of the last message posted on the record."
 msgstr "Datum zadnjega sporočila pri tem zapisu."
 
 #. module: lettermgmt
-#: view:res.letter:lettermgmt.res_letter_in_form_view
-#: view:res.letter:lettermgmt.res_letter_out_form_view
-msgid "Details"
-msgstr "Podrobnosti"
+#: view:res.letter:lettermgmt.res_letter_form_view field:res.letter,note:0
+msgid "Delivery Notes"
+msgstr "Dostavnice"
 
 #. module: lettermgmt
-#: view:res.letter:lettermgmt.res_letter_in_form_view
-#: view:res.letter:lettermgmt.res_letter_out_form_view
-msgid "Dimensions"
-msgstr "Dimenzije"
-
-#. module: lettermgmt
-#: field:letter.channel,display_name:0 field:letter.class,display_name:0
+#: field:letter.category,display_name:0 field:letter.channel,display_name:0
 #: field:letter.folder,display_name:0 field:letter.reassignment,display_name:0
 #: field:letter.type,display_name:0 field:res.letter,display_name:0
 msgid "Display Name"
@@ -172,8 +205,9 @@ msgid ""
 msgstr "Povzetek pogovorov (število sporočil,..). Povzetek je neposredno v html formatu, da se lahko neposredno vstavi v poglede tipa kanban."
 
 #. module: lettermgmt
-#: field:letter.channel,id:0 field:letter.class,id:0 field:letter.folder,id:0
-#: field:letter.reassignment,id:0 field:letter.type,id:0 field:res.letter,id:0
+#: field:letter.category,id:0 field:letter.channel,id:0
+#: field:letter.folder,id:0 field:letter.reassignment,id:0
+#: field:letter.type,id:0 field:res.letter,id:0
 msgid "ID"
 msgstr "ID"
 
@@ -194,14 +228,14 @@ msgid "Inbound Letters"
 msgstr "Vhodna pošta"
 
 #. module: lettermgmt
-#: view:res.letter:lettermgmt.res_letter_out_form_view
-msgid "Inbound Source"
-msgstr "Vhodni vir"
-
-#. module: lettermgmt
 #: help:res.letter,move:0
 msgid "Incoming or Outgoing Letter."
 msgstr "Vhodna ali odhodna pošta"
+
+#. module: lettermgmt
+#: help:res.letter,note:0
+msgid "Indications for the delivery officer."
+msgstr "Indikacije za dostavnega uradnika."
 
 #. module: lettermgmt
 #: field:res.letter,message_is_follower:0
@@ -214,7 +248,7 @@ msgid "Last Message Date"
 msgstr "Datum zadnjega sporočila"
 
 #. module: lettermgmt
-#: field:letter.channel,__last_update:0 field:letter.class,__last_update:0
+#: field:letter.category,__last_update:0 field:letter.channel,__last_update:0
 #: field:letter.folder,__last_update:0
 #: field:letter.reassignment,__last_update:0 field:letter.type,__last_update:0
 #: field:res.letter,__last_update:0
@@ -222,14 +256,14 @@ msgid "Last Modified on"
 msgstr "Zadnjič spremenjeno"
 
 #. module: lettermgmt
-#: field:letter.channel,write_uid:0 field:letter.class,write_uid:0
+#: field:letter.category,write_uid:0 field:letter.channel,write_uid:0
 #: field:letter.folder,write_uid:0 field:letter.reassignment,write_uid:0
 #: field:letter.type,write_uid:0 field:res.letter,write_uid:0
 msgid "Last Updated by"
 msgstr "Zadnjič posodobil"
 
 #. module: lettermgmt
-#: field:letter.channel,write_date:0 field:letter.class,write_date:0
+#: field:letter.category,write_date:0 field:letter.channel,write_date:0
 #: field:letter.folder,write_date:0 field:letter.reassignment,write_date:0
 #: field:letter.type,write_date:0 field:res.letter,write_date:0
 msgid "Last Updated on"
@@ -237,10 +271,18 @@ msgstr "Zadnjič posodobljeno"
 
 #. module: lettermgmt
 #: field:letter.reassignment,letter_id:0
-#: view:res.letter:lettermgmt.res_letter_in_form_view
-#: view:res.letter:lettermgmt.res_letter_out_form_view
+#: view:res.letter:lettermgmt.res_letter_form_view
 msgid "Letter"
 msgstr "Pošta"
+
+#. module: lettermgmt
+#: model:ir.actions.act_window,name:lettermgmt.action_letter_category_tree_view
+#: model:ir.model,name:lettermgmt.model_letter_category
+#: model:ir.ui.menu,name:lettermgmt.letter_category_menu
+#: view:letter.category:lettermgmt.letter_category_form_view
+#: view:letter.category:lettermgmt.letter_category_tree_view
+msgid "Letter Category"
+msgstr "Kategorija pošte"
 
 #. module: lettermgmt
 #: model:ir.actions.act_window,name:lettermgmt.action_letter_channel_tree_view
@@ -249,19 +291,6 @@ msgstr "Pošta"
 #: view:letter.channel:lettermgmt.letter_channel_tree_view
 msgid "Letter Channel"
 msgstr "Poštni kanal"
-
-#. module: lettermgmt
-#: model:ir.actions.act_window,name:lettermgmt.action_letter_class_tree_view
-#: model:ir.ui.menu,name:lettermgmt.letter_class_menu
-#: view:letter.class:lettermgmt.letter_class_form_view
-#: view:letter.class:lettermgmt.letter_class_tree_view
-msgid "Letter Class"
-msgstr "Razred pošte"
-
-#. module: lettermgmt
-#: model:ir.model,name:lettermgmt.model_letter_class
-msgid "Letter Classification"
-msgstr "Klasifikacija pošte"
 
 #. module: lettermgmt
 #: field:res.letter,date:0
@@ -287,6 +316,7 @@ msgid "Letter Lines"
 msgstr "Poštne postavke"
 
 #. module: lettermgmt
+#: model:ir.module.category,name:lettermgmt.module_category
 #: model:ir.ui.menu,name:lettermgmt.letter_log_menu
 msgid "Letter Management"
 msgstr "Upravljanje pošte"
@@ -313,10 +343,8 @@ msgstr "Dotična pošta."
 #. module: lettermgmt
 #: model:ir.ui.menu,name:lettermgmt.res_letter_menu
 #: field:letter.folder,letter_ids:0
-#: view:res.letter:lettermgmt.res_letter_in_calendar_view
-#: view:res.letter:lettermgmt.res_letter_in_tree_view
-#: view:res.letter:lettermgmt.res_letter_out_calendar_view
-#: view:res.letter:lettermgmt.res_letter_out_tree_view
+#: view:res.letter:lettermgmt.res_letter_calendar_view
+#: view:res.letter:lettermgmt.res_letter_tree_view
 msgid "Letters"
 msgstr "Pošta"
 
@@ -326,9 +354,24 @@ msgid "Letters contained in this folder."
 msgstr "Pošta, ki jo ta mapa vsebuje."
 
 #. module: lettermgmt
+#: view:res.letter:lettermgmt.res_letter_filter
+msgid "Letters that haven't arrived to its destination yet."
+msgstr "Pošta, ki še ni prispela na cilj."
+
+#. module: lettermgmt
 #: model:ir.model,name:lettermgmt.model_res_letter
 msgid "Log of Letter Movements"
 msgstr "Dnevnik premikov pošte"
+
+#. module: lettermgmt
+#: model:res.groups,comment:lettermgmt.group_letter_thread
+msgid "Members of this group can set letters' parent and/or childs."
+msgstr "Člani te skupine lahko nastavljajo podrejeno in nadrejena pošto."
+
+#. module: lettermgmt
+#: model:res.groups,comment:lettermgmt.group_letter_reasignment
+msgid "Members of this group can view and edit Letter Reasignments."
+msgstr "Člani te skupine lahko vidijo in urejajo prerazporejanje pošte."
 
 #. module: lettermgmt
 #: field:res.letter,message_ids:0
@@ -346,14 +389,11 @@ msgid "Move"
 msgstr "Premik"
 
 #. module: lettermgmt
+#: field:letter.category,name:0 field:letter.channel,name:0
 #: field:letter.folder,name:0 field:letter.reassignment,name:0
+#: field:letter.type,name:0
 msgid "Name"
 msgstr "Naziv"
-
-#. module: lettermgmt
-#: field:res.letter,note:0
-msgid "Note"
-msgstr "Opomba"
 
 #. module: lettermgmt
 #: field:res.letter,number:0
@@ -377,7 +417,7 @@ msgid "Outbound Letters"
 msgstr "Izhodna pošta"
 
 #. module: lettermgmt
-#: view:res.letter:lettermgmt.res_letter_in_form_view
+#: view:res.letter:lettermgmt.res_letter_form_view
 msgid "Outbound Source"
 msgstr "Izhodni vir"
 
@@ -387,9 +427,19 @@ msgid "Parent"
 msgstr "Nadrejeni"
 
 #. module: lettermgmt
+#: view:res.letter:lettermgmt.res_letter_form_view
+msgid "Parent..."
+msgstr "Nadrejeni..."
+
+#. module: lettermgmt
+#: view:res.letter:lettermgmt.res_letter_filter
+msgid "Pending"
+msgstr "Čakanje"
+
+#. module: lettermgmt
 #: view:letter.reassignment:lettermgmt.letter_reassignment_form_view
 #: view:letter.reassignment:lettermgmt.letter_reassignment_tree_view
-#: view:res.letter:lettermgmt.res_letter_in_form_view
+#: view:res.letter:lettermgmt.res_letter_form_view
 msgid "Reassignment"
 msgstr "Razporejanje"
 
@@ -409,7 +459,7 @@ msgid "Reassignment users and comments"
 msgstr "Uporabniki in komentarji razporejanja"
 
 #. module: lettermgmt
-#: view:res.letter:lettermgmt.res_letter_in_form_view
+#: view:res.letter:lettermgmt.res_letter_form_view
 #: selection:res.letter,state:0
 msgid "Received"
 msgstr "Prejeto"
@@ -420,13 +470,18 @@ msgid "Received But Returned"
 msgstr "Prejeto a zavrnjeno"
 
 #. module: lettermgmt
-#: view:res.letter:lettermgmt.res_letter_in_form_view
+#: view:res.letter:lettermgmt.res_letter_form_view
 #: selection:res.letter,state:0
 msgid "Received Damage"
 msgstr "Prejeto poškodovano"
 
 #. module: lettermgmt
-#: view:res.letter:lettermgmt.res_letter_in_form_view
+#: field:res.letter,rec_date:0
+msgid "Received Date"
+msgstr "Datum prejema"
+
+#. module: lettermgmt
+#: view:res.letter:lettermgmt.res_letter_form_view
 msgid "Received but Returned"
 msgstr "Prejeto a zavrnjeno"
 
@@ -456,20 +511,14 @@ msgid "Reference Number used for Tracking."
 msgstr "Številka sklica za sledenje."
 
 #. module: lettermgmt
-#: view:res.letter:lettermgmt.res_letter_in_form_view
-#: view:res.letter:lettermgmt.res_letter_out_form_view
-msgid "References"
-msgstr "Sklici"
+#: view:res.letter:lettermgmt.res_letter_filter
+msgid "Search Letters"
+msgstr "Iskanje pošte"
 
 #. module: lettermgmt
-#: view:res.letter:lettermgmt.res_letter_out_form_view
+#: view:res.letter:lettermgmt.res_letter_form_view
 msgid "Send"
 msgstr "Pošlji"
-
-#. module: lettermgmt
-#: view:res.letter:lettermgmt.res_letter_out_form_view
-msgid "Send Date"
-msgstr "Datum pošiljanja"
 
 #. module: lettermgmt
 #: model:ir.model,name:lettermgmt.model_letter_channel
@@ -487,20 +536,14 @@ msgid "Sent"
 msgstr "Poslano"
 
 #. module: lettermgmt
-#: field:res.letter,channel_id:0
+#: help:res.letter,channel_id:0
 msgid "Sent / Receive Source"
 msgstr "Vir pošiljanja/prejema"
 
 #. module: lettermgmt
-#: field:res.letter,snd_rec_date:0
-msgid "Sent / Received Date"
-msgstr "Datum pošiljanja/prejema"
-
-#. module: lettermgmt
-#: view:res.letter:lettermgmt.res_letter_in_form_view
-#: view:res.letter:lettermgmt.res_letter_out_form_view
-msgid "Set To Draft"
-msgstr "Ponastavi v osnutek"
+#: field:res.letter,snd_date:0
+msgid "Sent Date"
+msgstr "Datum odpošiljanja"
 
 #. module: lettermgmt
 #: field:res.letter,size:0
@@ -508,13 +551,17 @@ msgid "Size"
 msgstr "Velikost"
 
 #. module: lettermgmt
+#: help:res.letter,size:0
+msgid "Size of the package."
+msgstr "Velikost paketa"
+
+#. module: lettermgmt
 #: field:res.letter,state:0
 msgid "State"
 msgstr "Stanje"
 
 #. module: lettermgmt
-#: view:res.letter:lettermgmt.res_letter_in_form_view
-#: view:res.letter:lettermgmt.res_letter_out_form_view field:res.letter,name:0
+#: field:res.letter,name:0
 msgid "Subject"
 msgstr "Zadeva"
 
@@ -529,13 +576,32 @@ msgid "Summary"
 msgstr "Povzetek"
 
 #. module: lettermgmt
+#: field:res.letter,category_ids:0
+msgid "Tags"
+msgstr "Oznake"
+
+#. module: lettermgmt
+#: view:res.letter:lettermgmt.res_letter_form_view
+msgid "Tags... (eg: Classified)"
+msgstr "Oznake... (pr. Tajno)"
+
+#. module: lettermgmt
+#: help:res.letter,rec_date:0
+msgid "The date the letter was received."
+msgstr "Datum prejema pošte"
+
+#. module: lettermgmt
+#: help:res.letter,snd_date:0
+msgid "The date the letter was sent."
+msgstr "Datum odpošiljanja pošte"
+
+#. module: lettermgmt
 #: help:res.letter,date:0
-msgid "The letter's date"
+msgid "The letter's date."
 msgstr "Datum pošte"
 
 #. module: lettermgmt
-#: view:res.letter:lettermgmt.res_letter_in_form_view
-#: view:res.letter:lettermgmt.res_letter_out_form_view
+#: view:res.letter:lettermgmt.res_letter_form_view
 msgid "Thread"
 msgstr "Nit"
 
@@ -545,13 +611,12 @@ msgid "Tracking Reference"
 msgstr "Sklic sledenja"
 
 #. module: lettermgmt
-#: field:letter.channel,name:0 field:letter.class,name:0
-#: field:letter.type,name:0 field:res.letter,type:0
+#: field:res.letter,type_id:0
 msgid "Type"
 msgstr "Tip"
 
 #. module: lettermgmt
-#: help:res.letter,type:0
+#: help:res.letter,type_id:0
 msgid "Type of Letter, Depending upon size."
 msgstr "Tip pošte glede na velikost"
 
@@ -561,22 +626,26 @@ msgid "Unread Messages"
 msgstr "Neprebrana sporočila"
 
 #. module: lettermgmt
+#: model:res.groups,name:lettermgmt.group_letter_thread
+msgid "Use Letter Parent and Thread"
+msgstr "Uporabi nadrejeno pošto in nit"
+
+#. module: lettermgmt
+#: model:res.groups,name:lettermgmt.group_letter_reasignment
+msgid "Use Letter Reasignments"
+msgstr "Uporabi razporejanje pošte"
+
+#. module: lettermgmt
 #: help:letter.reassignment,name:0
 msgid "User to forward letter to."
 msgstr "Uporabnik, ki mu posredujemo pošto"
 
 #. module: lettermgmt
-#: view:res.letter:lettermgmt.res_letter_in_form_view
-#: view:res.letter:lettermgmt.res_letter_out_form_view
-msgid "Validate"
-msgstr "Overi"
-
-#. module: lettermgmt
-#: selection:res.letter,state:0
-msgid "Validated"
-msgstr "Overjeno"
-
-#. module: lettermgmt
 #: field:res.letter,weight:0
+msgid "Weight"
+msgstr "Masa"
+
+#. module: lettermgmt
+#: help:res.letter,weight:0
 msgid "Weight (in KG)"
 msgstr "Masa (v kg)"
