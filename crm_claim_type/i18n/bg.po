@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-17 09:43+0000\n"
-"PO-Revision-Date: 2016-09-25 14:00+0000\n"
+"POT-Creation-Date: 2016-11-02 14:15+0000\n"
+"PO-Revision-Date: 2016-11-25 14:57+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Bulgarian (http://www.transifex.com/oca/OCA-crm-8-0/language/bg/)\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 #. module: crm_claim_type
 #: model:crm.claim.stage,name:crm_claim_type.stage_claim10
 msgid "Accepted"
-msgstr ""
+msgstr "Приета"
 
 #. module: crm_claim_type
 #: field:crm.claim.type,active:0
@@ -30,44 +30,44 @@ msgstr "Активен"
 #. module: crm_claim_type
 #: model:ir.model,name:crm_claim_type.model_crm_claim
 msgid "Claim"
-msgstr ""
+msgstr "Жалба"
 
 #. module: crm_claim_type
 #: view:crm.claim.stage:crm_claim_type.crm_stage_claim_type_search
 msgid "Claim Type"
-msgstr ""
+msgstr "Тип Жлабла"
 
 #. module: crm_claim_type
 #: model:ir.actions.act_window,name:crm_claim_type.crm_claim_type_act
 #: model:ir.ui.menu,name:crm_claim_type.menu_crm_claim_type_act
 msgid "Claim Types"
-msgstr ""
+msgstr "Типове Жалби"
 
 #. module: crm_claim_type
 #: help:crm.claim,claim_type:0 help:crm.claim.stage,claim_type:0
 msgid "Claim classification"
-msgstr ""
+msgstr "Класификация на Жалбите"
 
 #. module: crm_claim_type
 #: model:ir.model,name:crm_claim_type.model_crm_claim_stage
 msgid "Claim stages"
-msgstr ""
+msgstr "Етапи на Жалбите"
 
 #. module: crm_claim_type
 #: field:crm.claim,claim_type:0 field:crm.claim.stage,claim_type:0
 #: view:crm.claim.type:crm_claim_type.crm_claim_type_form
 msgid "Claim type"
-msgstr ""
+msgstr "Тип жлабла"
 
 #. module: crm_claim_type
 #: view:crm.claim.type:crm_claim_type.crm_claim_type_tree
 msgid "Claim types"
-msgstr ""
+msgstr "Типове жалби"
 
 #. module: crm_claim_type
 #: field:crm.claim.stage,claim_common:0
 msgid "Common to All Claim Types"
-msgstr ""
+msgstr "Общо за всички Типове Жалби"
 
 #. module: crm_claim_type
 #: field:crm.claim.type,create_uid:0
@@ -82,7 +82,7 @@ msgstr "Създадено на"
 #. module: crm_claim_type
 #: model:crm.claim.type,name:crm_claim_type.crm_claim_type_customer
 msgid "Customer"
-msgstr ""
+msgstr "Клиент"
 
 #. module: crm_claim_type
 #: field:crm.claim.type,description:0
@@ -92,17 +92,17 @@ msgstr "Описание"
 #. module: crm_claim_type
 #: field:crm.claim.type,display_name:0
 msgid "Display Name"
-msgstr ""
+msgstr "Име за Показване"
 
 #. module: crm_claim_type
 #: model:crm.claim.stage,name:crm_claim_type.stage_claim11
 msgid "Done"
-msgstr ""
+msgstr "Готово"
 
 #. module: crm_claim_type
 #: view:crm.claim.stage:crm_claim_type.crm_stage_claim_type_search
 msgid "Group By"
-msgstr ""
+msgstr "Групирай По"
 
 #. module: crm_claim_type
 #: field:crm.claim.type,id:0
@@ -114,7 +114,7 @@ msgstr "ID"
 msgid ""
 "If you check this field, this stage will be proposed by default on each "
 "claim type."
-msgstr ""
+msgstr "Ако изберете това, този етап ще бъде предлаган по подразбиране за всички типове жалби."
 
 #. module: crm_claim_type
 #: field:crm.claim.type,__last_update:0
@@ -139,14 +139,14 @@ msgstr "Име"
 #. module: crm_claim_type
 #: model:crm.claim.type,name:crm_claim_type.crm_claim_type_other
 msgid "Other"
-msgstr ""
+msgstr "Друго"
 
 #. module: crm_claim_type
 #: view:crm.claim.stage:crm_claim_type.crm_stage_claim_type_search
 msgid "Search Stages"
-msgstr ""
+msgstr "Етапи на Търсене"
 
 #. module: crm_claim_type
 #: model:crm.claim.type,name:crm_claim_type.crm_claim_type_supplier
 msgid "Supplier"
-msgstr ""
+msgstr "Доставчик"

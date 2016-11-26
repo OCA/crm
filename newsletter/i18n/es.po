@@ -4,13 +4,14 @@
 # 
 # Translators:
 # Carles Antoli <carlesantoli@hotmail.com>, 2016
+# Pedro M. Baeza <pedro.baeza@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-17 09:43+0000\n"
-"PO-Revision-Date: 2016-10-04 09:43+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
+"POT-Creation-Date: 2016-11-02 14:15+0000\n"
+"PO-Revision-Date: 2016-11-25 14:56+0000\n"
+"Last-Translator: Pedro M. Baeza <pedro.baeza@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/oca/OCA-crm-8-0/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,7 +22,7 @@ msgstr ""
 #. module: newsletter
 #: model:email.template,subject:newsletter.email_template_newsletter_default
 msgid "${object.subject}"
-msgstr ""
+msgstr "${object.subject}"
 
 #. module: newsletter
 #: model:email.template,body_html:newsletter.email_template_newsletter_default
@@ -34,7 +35,7 @@ msgid ""
 "</div>\n"
 "%endfor\n"
 "${object.text_outro_html or ''}\n"
-msgstr ""
+msgstr "${object.text_intro_html or ''}\n%for topic in object.topic_ids:\n<div>\n<h2>${topic.title}</h2>\n<div>${topic.text_html}</div>\n</div>\n%endfor\n${object.text_outro_html or ''}\n"
 
 #. module: newsletter
 #: view:email_template.preview:newsletter.email_template_preview_form
@@ -92,7 +93,7 @@ msgstr "Plantilla correo electrónico"
 #. module: newsletter
 #: field:newsletter.type,email_from:0
 msgid "From address"
-msgstr ""
+msgstr "Remitente"
 
 #. module: newsletter
 #: field:newsletter.type,group_ids:0
@@ -108,7 +109,7 @@ msgstr "ID"
 #. module: newsletter
 #: field:newsletter.newsletter,text_intro_html:0
 msgid "Intro"
-msgstr ""
+msgstr "Introducción"
 
 #. module: newsletter
 #: field:newsletter.newsletter,__last_update:0
@@ -132,17 +133,17 @@ msgstr "Última actualización en"
 #. module: newsletter
 #: model:res.groups,name:newsletter.group_newsletter_manager
 msgid "Manager"
-msgstr ""
+msgstr "Responsable"
 
 #. module: newsletter
 #: field:newsletter.newsletter,may_send:0
 msgid "May send"
-msgstr ""
+msgstr "Puede enviar"
 
 #. module: newsletter
 #: field:newsletter.type,model:0
 msgid "Model"
-msgstr ""
+msgstr "Modelo"
 
 #. module: newsletter
 #: field:newsletter.type,name:0
@@ -155,52 +156,52 @@ msgstr "Nombre"
 #: view:newsletter.newsletter:newsletter.form_newsletter
 #: field:newsletter.topic,newsletter_id:0
 msgid "Newsletter"
-msgstr ""
+msgstr "Boletín de noticias"
 
 #. module: newsletter
 #: model:ir.model,name:newsletter.model_newsletter_topic
 msgid "Newsletter topic"
-msgstr ""
+msgstr "Tema del boletín de noticias"
 
 #. module: newsletter
 #: model:ir.model,name:newsletter.model_newsletter_type
 #: view:newsletter.type:newsletter.form_newsletter_type
 msgid "Newsletter type"
-msgstr ""
+msgstr "Tipo de boletín de noticias"
 
 #. module: newsletter
 #: model:ir.actions.act_window,name:newsletter.action_newsletter_types
 #: model:ir.ui.menu,name:newsletter.menu_newsletter_types
 msgid "Newsletter types"
-msgstr ""
+msgstr "Tipos de boletines de noticias"
 
 #. module: newsletter
 #: model:ir.actions.act_window,name:newsletter.action_newsletters
 #: model:ir.ui.menu,name:newsletter.menu_newsletter
 #: model:ir.ui.menu,name:newsletter.menu_newsletters
 msgid "Newsletters"
-msgstr ""
+msgstr "Boletines de noticias"
 
 #. module: newsletter
 #: field:newsletter.newsletter,text_outro_html:0
 msgid "Outro"
-msgstr ""
+msgstr "Despedida"
 
 #. module: newsletter
 #: view:newsletter.newsletter:newsletter.form_newsletter
 msgid "Preview"
-msgstr ""
+msgstr "Previsualización"
 
 #. module: newsletter
 #: code:addons/newsletter/model/newsletter_type.py:49
 #, python-format
 msgid "Recipients"
-msgstr ""
+msgstr "Destinatarios"
 
 #. module: newsletter
 #: view:newsletter.newsletter:newsletter.form_newsletter
 msgid "Send"
-msgstr ""
+msgstr "Enviar"
 
 #. module: newsletter
 #: model:res.groups,name:newsletter.group_newsletter_sender
@@ -210,7 +211,7 @@ msgstr "Remitente"
 #. module: newsletter
 #: selection:newsletter.newsletter,state:0
 msgid "Sending"
-msgstr ""
+msgstr "Enviando"
 
 #. module: newsletter
 #: selection:newsletter.newsletter,state:0
@@ -221,7 +222,7 @@ msgstr "Enviado"
 #: view:newsletter.newsletter:newsletter.form_newsletter
 #: view:newsletter.type:newsletter.form_newsletter_type
 msgid "Show recipient objects"
-msgstr ""
+msgstr "Mostrar destinatarios"
 
 #. module: newsletter
 #: field:newsletter.newsletter,state:0
@@ -236,34 +237,34 @@ msgstr "Asunto"
 #. module: newsletter
 #: view:newsletter.newsletter:newsletter.form_newsletter
 msgid "Test newsletter"
-msgstr ""
+msgstr "Probar boletín de noticias"
 
 #. module: newsletter
 #: selection:newsletter.newsletter,state:0
 msgid "Testing"
-msgstr ""
+msgstr "Probando"
 
 #. module: newsletter
 #: field:newsletter.topic,text_html:0
 msgid "Text"
-msgstr ""
+msgstr "Testo"
 
 #. module: newsletter
 #: help:newsletter.type,group_ids:0
 msgid ""
 "The groups that may send this type of newsletter. Leave empty for all "
 "members of group Newsletter / Senders"
-msgstr ""
+msgstr "Los grupos que pueden enviar este tipo de boletín de noticias. Dejar vacío para incluir a todos los miembros del grupo \"Boletín de noticias / Remitentes\""
 
 #. module: newsletter
 #: field:newsletter.topic,title:0
 msgid "Title"
-msgstr ""
+msgstr "Título"
 
 #. module: newsletter
 #: field:newsletter.newsletter,topic_ids:0
 msgid "Topics"
-msgstr ""
+msgstr "Temas"
 
 #. module: newsletter
 #: field:newsletter.newsletter,type_id:0
@@ -274,4 +275,4 @@ msgstr "Tipo"
 #: code:addons/newsletter/model/newsletter_newsletter.py:137
 #, python-format
 msgid "You can't delete sent newsletters!"
-msgstr ""
+msgstr "No puede eliminar boletines de noticias enviados"

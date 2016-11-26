@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-14 13:03+0000\n"
-"PO-Revision-Date: 2016-09-09 12:25+0000\n"
+"POT-Creation-Date: 2016-11-02 14:15+0000\n"
+"PO-Revision-Date: 2016-11-25 14:58+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Galician (http://www.transifex.com/oca/OCA-crm-8-0/language/gl/)\n"
 "MIME-Version: 1.0\n"
@@ -40,7 +40,7 @@ msgstr "ID"
 #. module: crm_phonecall_summary_predefined
 #: field:crm.phonecall.summary,__last_update:0
 msgid "Last Modified on"
-msgstr ""
+msgstr "Última modificación"
 
 #. module: crm_phonecall_summary_predefined
 #: field:crm.phonecall.summary,write_uid:0

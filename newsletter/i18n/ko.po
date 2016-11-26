@@ -1,0 +1,276 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * newsletter
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: crm (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-11-02 14:15+0000\n"
+"PO-Revision-Date: 2016-10-11 09:51+0000\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
+"Language-Team: Korean (http://www.transifex.com/oca/OCA-crm-8-0/language/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: newsletter
+#: model:email.template,subject:newsletter.email_template_newsletter_default
+msgid "${object.subject}"
+msgstr ""
+
+#. module: newsletter
+#: model:email.template,body_html:newsletter.email_template_newsletter_default
+msgid ""
+"${object.text_intro_html or ''}\n"
+"%for topic in object.topic_ids:\n"
+"<div>\n"
+"<h2>${topic.title}</h2>\n"
+"<div>${topic.text_html}</div>\n"
+"</div>\n"
+"%endfor\n"
+"${object.text_outro_html or ''}\n"
+msgstr ""
+
+#. module: newsletter
+#: view:email_template.preview:newsletter.email_template_preview_form
+msgid "Close"
+msgstr ""
+
+#. module: newsletter
+#: field:newsletter.newsletter,create_uid:0
+#: field:newsletter.topic,create_uid:0 field:newsletter.type,create_uid:0
+msgid "Created by"
+msgstr "작성자"
+
+#. module: newsletter
+#: field:newsletter.newsletter,create_date:0
+#: field:newsletter.topic,create_date:0 field:newsletter.type,create_date:0
+msgid "Created on"
+msgstr "작성일"
+
+#. module: newsletter
+#: field:newsletter.newsletter,display_name:0
+#: field:newsletter.topic,display_name:0 field:newsletter.type,display_name:0
+msgid "Display Name"
+msgstr "표시 이름"
+
+#. module: newsletter
+#: field:newsletter.type,domain:0
+msgid "Domain"
+msgstr ""
+
+#. module: newsletter
+#: selection:newsletter.newsletter,state:0
+msgid "Draft"
+msgstr ""
+
+#. module: newsletter
+#: model:res.groups,name:newsletter.group_newsletter_editor
+msgid "Editor"
+msgstr ""
+
+#. module: newsletter
+#: view:email_template.preview:newsletter.email_template_preview_form
+msgid "Email Preview"
+msgstr ""
+
+#. module: newsletter
+#: model:ir.model,name:newsletter.model_email_template
+msgid "Email Templates"
+msgstr ""
+
+#. module: newsletter
+#: field:newsletter.type,email_template_id:0
+msgid "Email template"
+msgstr ""
+
+#. module: newsletter
+#: field:newsletter.type,email_from:0
+msgid "From address"
+msgstr ""
+
+#. module: newsletter
+#: field:newsletter.type,group_ids:0
+msgid "Groups"
+msgstr ""
+
+#. module: newsletter
+#: field:newsletter.newsletter,id:0 field:newsletter.topic,id:0
+#: field:newsletter.type,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: newsletter
+#: field:newsletter.newsletter,text_intro_html:0
+msgid "Intro"
+msgstr ""
+
+#. module: newsletter
+#: field:newsletter.newsletter,__last_update:0
+#: field:newsletter.topic,__last_update:0
+#: field:newsletter.type,__last_update:0
+msgid "Last Modified on"
+msgstr "최근 수정"
+
+#. module: newsletter
+#: field:newsletter.newsletter,write_uid:0 field:newsletter.topic,write_uid:0
+#: field:newsletter.type,write_uid:0
+msgid "Last Updated by"
+msgstr "최근 갱신한 사람"
+
+#. module: newsletter
+#: field:newsletter.newsletter,write_date:0
+#: field:newsletter.topic,write_date:0 field:newsletter.type,write_date:0
+msgid "Last Updated on"
+msgstr "최근 갱신 날짜"
+
+#. module: newsletter
+#: model:res.groups,name:newsletter.group_newsletter_manager
+msgid "Manager"
+msgstr ""
+
+#. module: newsletter
+#: field:newsletter.newsletter,may_send:0
+msgid "May send"
+msgstr ""
+
+#. module: newsletter
+#: field:newsletter.type,model:0
+msgid "Model"
+msgstr ""
+
+#. module: newsletter
+#: field:newsletter.type,name:0
+msgid "Name"
+msgstr "이름"
+
+#. module: newsletter
+#: model:ir.model,name:newsletter.model_newsletter_newsletter
+#: model:ir.module.category,name:newsletter.module_category_newsletter
+#: view:newsletter.newsletter:newsletter.form_newsletter
+#: field:newsletter.topic,newsletter_id:0
+msgid "Newsletter"
+msgstr ""
+
+#. module: newsletter
+#: model:ir.model,name:newsletter.model_newsletter_topic
+msgid "Newsletter topic"
+msgstr ""
+
+#. module: newsletter
+#: model:ir.model,name:newsletter.model_newsletter_type
+#: view:newsletter.type:newsletter.form_newsletter_type
+msgid "Newsletter type"
+msgstr ""
+
+#. module: newsletter
+#: model:ir.actions.act_window,name:newsletter.action_newsletter_types
+#: model:ir.ui.menu,name:newsletter.menu_newsletter_types
+msgid "Newsletter types"
+msgstr ""
+
+#. module: newsletter
+#: model:ir.actions.act_window,name:newsletter.action_newsletters
+#: model:ir.ui.menu,name:newsletter.menu_newsletter
+#: model:ir.ui.menu,name:newsletter.menu_newsletters
+msgid "Newsletters"
+msgstr ""
+
+#. module: newsletter
+#: field:newsletter.newsletter,text_outro_html:0
+msgid "Outro"
+msgstr ""
+
+#. module: newsletter
+#: view:newsletter.newsletter:newsletter.form_newsletter
+msgid "Preview"
+msgstr ""
+
+#. module: newsletter
+#: code:addons/newsletter/model/newsletter_type.py:49
+#, python-format
+msgid "Recipients"
+msgstr ""
+
+#. module: newsletter
+#: view:newsletter.newsletter:newsletter.form_newsletter
+msgid "Send"
+msgstr ""
+
+#. module: newsletter
+#: model:res.groups,name:newsletter.group_newsletter_sender
+msgid "Sender"
+msgstr ""
+
+#. module: newsletter
+#: selection:newsletter.newsletter,state:0
+msgid "Sending"
+msgstr ""
+
+#. module: newsletter
+#: selection:newsletter.newsletter,state:0
+msgid "Sent"
+msgstr ""
+
+#. module: newsletter
+#: view:newsletter.newsletter:newsletter.form_newsletter
+#: view:newsletter.type:newsletter.form_newsletter_type
+msgid "Show recipient objects"
+msgstr ""
+
+#. module: newsletter
+#: field:newsletter.newsletter,state:0
+msgid "State"
+msgstr ""
+
+#. module: newsletter
+#: field:newsletter.newsletter,subject:0
+msgid "Subject"
+msgstr ""
+
+#. module: newsletter
+#: view:newsletter.newsletter:newsletter.form_newsletter
+msgid "Test newsletter"
+msgstr ""
+
+#. module: newsletter
+#: selection:newsletter.newsletter,state:0
+msgid "Testing"
+msgstr ""
+
+#. module: newsletter
+#: field:newsletter.topic,text_html:0
+msgid "Text"
+msgstr ""
+
+#. module: newsletter
+#: help:newsletter.type,group_ids:0
+msgid ""
+"The groups that may send this type of newsletter. Leave empty for all "
+"members of group Newsletter / Senders"
+msgstr ""
+
+#. module: newsletter
+#: field:newsletter.topic,title:0
+msgid "Title"
+msgstr "제목"
+
+#. module: newsletter
+#: field:newsletter.newsletter,topic_ids:0
+msgid "Topics"
+msgstr ""
+
+#. module: newsletter
+#: field:newsletter.newsletter,type_id:0
+msgid "Type"
+msgstr "유형"
+
+#. module: newsletter
+#: code:addons/newsletter/model/newsletter_newsletter.py:137
+#, python-format
+msgid "You can't delete sent newsletters!"
+msgstr ""

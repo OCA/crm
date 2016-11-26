@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-14 13:03+0000\n"
-"PO-Revision-Date: 2016-09-15 12:45+0000\n"
+"POT-Creation-Date: 2016-11-02 14:15+0000\n"
+"PO-Revision-Date: 2016-11-25 14:55+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Finnish (http://www.transifex.com/oca/OCA-crm-8-0/language/fi/)\n"
 "MIME-Version: 1.0\n"
@@ -30,7 +30,7 @@ msgstr ""
 #. module: crm_lead_lost_reason
 #: view:crm.lead.lost:crm_lead_lost_reason.view_crm_lead_lost
 msgid "Cancel"
-msgstr ""
+msgstr "Peruuta"
 
 #. module: crm_lead_lost_reason
 #: view:crm.lead.lost:crm_lead_lost_reason.view_crm_lead_lost

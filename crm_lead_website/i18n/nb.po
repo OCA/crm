@@ -1,0 +1,28 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * crm_lead_website
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: crm (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-11-02 14:15+0000\n"
+"PO-Revision-Date: 2016-03-10 18:53+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: Norwegian Bokmål (http://www.transifex.com/oca/OCA-crm-8-0/language/nb/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: nb\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: crm_lead_website
+#: model:ir.model,name:crm_lead_website.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr ""
+
+#. module: crm_lead_website
+#: field:crm.lead,website:0
+msgid "Website"
+msgstr "Nettsted"

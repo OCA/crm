@@ -4,12 +4,13 @@
 # 
 # Translators:
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2011
+# Pedro M. Baeza <pedro.baeza@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-17 09:43+0000\n"
-"PO-Revision-Date: 2016-10-04 09:43+0000\n"
+"POT-Creation-Date: 2016-11-02 14:15+0000\n"
+"PO-Revision-Date: 2016-11-25 14:55+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Spanish (http://www.transifex.com/oca/OCA-crm-8-0/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -19,24 +20,85 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: lettermgmt
-#: view:res.letter:lettermgmt.res_letter_in_form_view
-#: view:res.letter:lettermgmt.res_letter_out_form_view
-msgid "Addresses"
+#: help:res.letter,state:0
+msgid ""
+"\n"
+"            * Draft: not confirmed yet.\n"
+"\n"
+"            * Sent: has been sent, can't be modified anymore.\n"
+"\n"
+"            * Received: has arrived.\n"
+"\n"
+"            * Received Damage: has been received with damages.\n"
+"\n"
+"            * Received But Returned: has been received but returned.\n"
+"\n"
+"            * Cancel: has been cancelled, can't be sent anymore."
 msgstr ""
 
 #. module: lettermgmt
-#: view:res.letter:lettermgmt.res_letter_in_form_view
-msgid "Arrival Date"
+#: model:ir.actions.act_window,help:lettermgmt.action_letter_category_tree_view
+msgid ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"            Click to create a letter category.\n"
+"        </p><p>\n"
+"            Use categories to classify letters. \n"
+"            Eg: Classified, Confidential, Personal...\n"
+"        </p>\n"
+"      "
+msgstr ""
+
+#. module: lettermgmt
+#: model:ir.actions.act_window,help:lettermgmt.action_letter_channel_tree_view
+msgid ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"            Click to create a letter channel.\n"
+"        </p><p>\n"
+"            Use channels to specify the different ways a letter can be sent or received.\n"
+"            Eg: The Post, Fax, Email..\n"
+"        </p>\n"
+"      "
+msgstr ""
+
+#. module: lettermgmt
+#: model:ir.actions.act_window,help:lettermgmt.action_letter_folder_tree_view
+msgid ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"            Click to create a letter folder.\n"
+"            Use folders to group a series of letters.\n"
+"        </p>\n"
+"      "
+msgstr ""
+
+#. module: lettermgmt
+#: model:ir.actions.act_window,help:lettermgmt.action_letter_type_tree_view
+msgid ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"            Click to create a letter type.\n"
+"        </p><p>\n"
+"            Use types to specify the type of letter sent or received.\n"
+"            Eg: Envelope, Parcel, Package...\n"
+"        </p>\n"
+"      "
+msgstr ""
+
+#. module: lettermgmt
+#: view:res.letter:lettermgmt.res_letter_form_view
+msgid "Additional Information"
 msgstr ""
 
 #. module: lettermgmt
 #: help:res.letter,number:0
 msgid "Auto Generated Number of letter."
-msgstr ""
+msgstr "Auto generar número de carta."
 
 #. module: lettermgmt
-#: view:res.letter:lettermgmt.res_letter_in_form_view
-#: view:res.letter:lettermgmt.res_letter_out_form_view
+#: view:res.letter:lettermgmt.res_letter_form_view
+msgid "Back to Draft"
+msgstr "Volver a borrador"
+
+#. module: lettermgmt
+#: view:res.letter:lettermgmt.res_letter_form_view
 msgid "Cancel"
 msgstr "Cancelar"
 
@@ -46,14 +108,14 @@ msgid "Cancelled"
 msgstr "Cancelado"
 
 #. module: lettermgmt
-#: field:res.letter,class:0
-msgid "Class"
-msgstr "Clase"
+#: field:res.letter,channel_id:0
+msgid "Channel"
+msgstr "Canal"
 
 #. module: lettermgmt
-#: help:res.letter,class:0
+#: help:res.letter,category_ids:0
 msgid "Classification of Document."
-msgstr ""
+msgstr "Clasificación del documento."
 
 #. module: lettermgmt
 #: field:letter.folder,code:0 field:letter.type,code:0
@@ -63,17 +125,17 @@ msgstr "Código"
 #. module: lettermgmt
 #: sql_constraint:letter.folder:0 sql_constraint:letter.type:0
 msgid "Code must be unique !"
-msgstr ""
+msgstr "El código debe ser único"
 
 #. module: lettermgmt
 #: field:letter.reassignment,comment:0
 msgid "Comment"
-msgstr ""
+msgstr "Comentarios"
 
 #. module: lettermgmt
 #: help:letter.reassignment,comment:0
 msgid "Comment for user explaining forward."
-msgstr ""
+msgstr "Comentario para el usuario explicando el envío."
 
 #. module: lettermgmt
 #: model:ir.ui.menu,name:lettermgmt.letter_log_config_menu
@@ -81,35 +143,14 @@ msgid "Configuration"
 msgstr "Configuración"
 
 #. module: lettermgmt
-#: view:res.letter:lettermgmt.res_letter_out_form_view
-msgid "Copies to External"
-msgstr ""
-
-#. module: lettermgmt
-#: view:res.letter:lettermgmt.res_letter_in_form_view
-#: view:res.letter:lettermgmt.res_letter_out_form_view
-msgid "Create"
-msgstr ""
-
-#. module: lettermgmt
-#: selection:res.letter,state:0
-msgid "Created"
-msgstr ""
-
-#. module: lettermgmt
-#: help:res.letter,snd_rec_date:0
-msgid "Created Date of Letter Logging."
-msgstr ""
-
-#. module: lettermgmt
-#: field:letter.channel,create_uid:0 field:letter.class,create_uid:0
+#: field:letter.category,create_uid:0 field:letter.channel,create_uid:0
 #: field:letter.folder,create_uid:0 field:letter.reassignment,create_uid:0
 #: field:letter.type,create_uid:0 field:res.letter,create_uid:0
 msgid "Created by"
 msgstr "Creado por"
 
 #. module: lettermgmt
-#: field:letter.channel,create_date:0 field:letter.class,create_date:0
+#: field:letter.category,create_date:0 field:letter.channel,create_date:0
 #: field:letter.folder,create_date:0 field:letter.reassignment,create_date:0
 #: field:letter.type,create_date:0 field:res.letter,create_date:0
 msgid "Created on"
@@ -118,22 +159,15 @@ msgstr "Creado el"
 #. module: lettermgmt
 #: help:res.letter,message_last_post:0
 msgid "Date of the last message posted on the record."
+msgstr "Fecha del último mensaje publicado en el registro."
+
+#. module: lettermgmt
+#: view:res.letter:lettermgmt.res_letter_form_view field:res.letter,note:0
+msgid "Delivery Notes"
 msgstr ""
 
 #. module: lettermgmt
-#: view:res.letter:lettermgmt.res_letter_in_form_view
-#: view:res.letter:lettermgmt.res_letter_out_form_view
-msgid "Details"
-msgstr "Detalles"
-
-#. module: lettermgmt
-#: view:res.letter:lettermgmt.res_letter_in_form_view
-#: view:res.letter:lettermgmt.res_letter_out_form_view
-msgid "Dimensions"
-msgstr ""
-
-#. module: lettermgmt
-#: field:letter.channel,display_name:0 field:letter.class,display_name:0
+#: field:letter.category,display_name:0 field:letter.channel,display_name:0
 #: field:letter.folder,display_name:0 field:letter.reassignment,display_name:0
 #: field:letter.type,display_name:0 field:res.letter,display_name:0
 msgid "Display Name"
@@ -152,7 +186,7 @@ msgstr ""
 #. module: lettermgmt
 #: field:res.letter,folder_id:0
 msgid "Folder"
-msgstr ""
+msgstr "Carpeta"
 
 #. module: lettermgmt
 #: help:res.letter,folder_id:0
@@ -162,18 +196,19 @@ msgstr ""
 #. module: lettermgmt
 #: field:res.letter,message_follower_ids:0
 msgid "Followers"
-msgstr ""
+msgstr "Seguidores"
 
 #. module: lettermgmt
 #: help:res.letter,message_summary:0
 msgid ""
 "Holds the Chatter summary (number of messages, ...). This summary is "
 "directly in html format in order to be inserted in kanban views."
-msgstr ""
+msgstr "Contiene el resumen del chatter (nº de mensajes, ...). Este resumen está directamente en formato html para ser insertado en vistas kanban."
 
 #. module: lettermgmt
-#: field:letter.channel,id:0 field:letter.class,id:0 field:letter.folder,id:0
-#: field:letter.reassignment,id:0 field:letter.type,id:0 field:res.letter,id:0
+#: field:letter.category,id:0 field:letter.channel,id:0
+#: field:letter.folder,id:0 field:letter.reassignment,id:0
+#: field:letter.type,id:0 field:res.letter,id:0
 msgid "ID"
 msgstr "ID"
 
@@ -185,7 +220,7 @@ msgstr ""
 #. module: lettermgmt
 #: help:res.letter,message_unread:0
 msgid "If checked new messages require your attention."
-msgstr ""
+msgstr "Si se marca los nuevos mensajes requerirán su atención."
 
 #. module: lettermgmt
 #: model:ir.actions.act_window,name:lettermgmt.action_res_letter_in_tree_view
@@ -194,13 +229,13 @@ msgid "Inbound Letters"
 msgstr ""
 
 #. module: lettermgmt
-#: view:res.letter:lettermgmt.res_letter_out_form_view
-msgid "Inbound Source"
-msgstr "Fuente de entrada"
-
-#. module: lettermgmt
 #: help:res.letter,move:0
 msgid "Incoming or Outgoing Letter."
+msgstr ""
+
+#. module: lettermgmt
+#: help:res.letter,note:0
+msgid "Indications for the delivery officer."
 msgstr ""
 
 #. module: lettermgmt
@@ -211,10 +246,10 @@ msgstr ""
 #. module: lettermgmt
 #: field:res.letter,message_last_post:0
 msgid "Last Message Date"
-msgstr ""
+msgstr "Fecha del último mensaje"
 
 #. module: lettermgmt
-#: field:letter.channel,__last_update:0 field:letter.class,__last_update:0
+#: field:letter.category,__last_update:0 field:letter.channel,__last_update:0
 #: field:letter.folder,__last_update:0
 #: field:letter.reassignment,__last_update:0 field:letter.type,__last_update:0
 #: field:res.letter,__last_update:0
@@ -222,14 +257,14 @@ msgid "Last Modified on"
 msgstr "Última modificación el"
 
 #. module: lettermgmt
-#: field:letter.channel,write_uid:0 field:letter.class,write_uid:0
+#: field:letter.category,write_uid:0 field:letter.channel,write_uid:0
 #: field:letter.folder,write_uid:0 field:letter.reassignment,write_uid:0
 #: field:letter.type,write_uid:0 field:res.letter,write_uid:0
 msgid "Last Updated by"
 msgstr "Última actualización por"
 
 #. module: lettermgmt
-#: field:letter.channel,write_date:0 field:letter.class,write_date:0
+#: field:letter.category,write_date:0 field:letter.channel,write_date:0
 #: field:letter.folder,write_date:0 field:letter.reassignment,write_date:0
 #: field:letter.type,write_date:0 field:res.letter,write_date:0
 msgid "Last Updated on"
@@ -237,9 +272,17 @@ msgstr "Última actualización en"
 
 #. module: lettermgmt
 #: field:letter.reassignment,letter_id:0
-#: view:res.letter:lettermgmt.res_letter_in_form_view
-#: view:res.letter:lettermgmt.res_letter_out_form_view
+#: view:res.letter:lettermgmt.res_letter_form_view
 msgid "Letter"
+msgstr ""
+
+#. module: lettermgmt
+#: model:ir.actions.act_window,name:lettermgmt.action_letter_category_tree_view
+#: model:ir.model,name:lettermgmt.model_letter_category
+#: model:ir.ui.menu,name:lettermgmt.letter_category_menu
+#: view:letter.category:lettermgmt.letter_category_form_view
+#: view:letter.category:lettermgmt.letter_category_tree_view
+msgid "Letter Category"
 msgstr ""
 
 #. module: lettermgmt
@@ -248,19 +291,6 @@ msgstr ""
 #: view:letter.channel:lettermgmt.letter_channel_form_view
 #: view:letter.channel:lettermgmt.letter_channel_tree_view
 msgid "Letter Channel"
-msgstr ""
-
-#. module: lettermgmt
-#: model:ir.actions.act_window,name:lettermgmt.action_letter_class_tree_view
-#: model:ir.ui.menu,name:lettermgmt.letter_class_menu
-#: view:letter.class:lettermgmt.letter_class_form_view
-#: view:letter.class:lettermgmt.letter_class_tree_view
-msgid "Letter Class"
-msgstr "Carta clase"
-
-#. module: lettermgmt
-#: model:ir.model,name:lettermgmt.model_letter_class
-msgid "Letter Classification"
 msgstr ""
 
 #. module: lettermgmt
@@ -287,6 +317,7 @@ msgid "Letter Lines"
 msgstr ""
 
 #. module: lettermgmt
+#: model:ir.module.category,name:lettermgmt.module_category
 #: model:ir.ui.menu,name:lettermgmt.letter_log_menu
 msgid "Letter Management"
 msgstr ""
@@ -313,10 +344,8 @@ msgstr ""
 #. module: lettermgmt
 #: model:ir.ui.menu,name:lettermgmt.res_letter_menu
 #: field:letter.folder,letter_ids:0
-#: view:res.letter:lettermgmt.res_letter_in_calendar_view
-#: view:res.letter:lettermgmt.res_letter_in_tree_view
-#: view:res.letter:lettermgmt.res_letter_out_calendar_view
-#: view:res.letter:lettermgmt.res_letter_out_tree_view
+#: view:res.letter:lettermgmt.res_letter_calendar_view
+#: view:res.letter:lettermgmt.res_letter_tree_view
 msgid "Letters"
 msgstr ""
 
@@ -326,14 +355,29 @@ msgid "Letters contained in this folder."
 msgstr ""
 
 #. module: lettermgmt
+#: view:res.letter:lettermgmt.res_letter_filter
+msgid "Letters that haven't arrived to its destination yet."
+msgstr ""
+
+#. module: lettermgmt
 #: model:ir.model,name:lettermgmt.model_res_letter
 msgid "Log of Letter Movements"
 msgstr ""
 
 #. module: lettermgmt
+#: model:res.groups,comment:lettermgmt.group_letter_thread
+msgid "Members of this group can set letters' parent and/or childs."
+msgstr ""
+
+#. module: lettermgmt
+#: model:res.groups,comment:lettermgmt.group_letter_reasignment
+msgid "Members of this group can view and edit Letter Reasignments."
+msgstr ""
+
+#. module: lettermgmt
 #: field:res.letter,message_ids:0
 msgid "Messages"
-msgstr ""
+msgstr "Mensajes"
 
 #. module: lettermgmt
 #: help:res.letter,message_ids:0
@@ -346,14 +390,11 @@ msgid "Move"
 msgstr "Mover"
 
 #. module: lettermgmt
+#: field:letter.category,name:0 field:letter.channel,name:0
 #: field:letter.folder,name:0 field:letter.reassignment,name:0
+#: field:letter.type,name:0
 msgid "Name"
 msgstr "Nombre"
-
-#. module: lettermgmt
-#: field:res.letter,note:0
-msgid "Note"
-msgstr "Nota"
 
 #. module: lettermgmt
 #: field:res.letter,number:0
@@ -377,7 +418,7 @@ msgid "Outbound Letters"
 msgstr ""
 
 #. module: lettermgmt
-#: view:res.letter:lettermgmt.res_letter_in_form_view
+#: view:res.letter:lettermgmt.res_letter_form_view
 msgid "Outbound Source"
 msgstr "Fuente de salida"
 
@@ -387,9 +428,19 @@ msgid "Parent"
 msgstr "Padre"
 
 #. module: lettermgmt
+#: view:res.letter:lettermgmt.res_letter_form_view
+msgid "Parent..."
+msgstr ""
+
+#. module: lettermgmt
+#: view:res.letter:lettermgmt.res_letter_filter
+msgid "Pending"
+msgstr "Pendiente"
+
+#. module: lettermgmt
 #: view:letter.reassignment:lettermgmt.letter_reassignment_form_view
 #: view:letter.reassignment:lettermgmt.letter_reassignment_tree_view
-#: view:res.letter:lettermgmt.res_letter_in_form_view
+#: view:res.letter:lettermgmt.res_letter_form_view
 msgid "Reassignment"
 msgstr ""
 
@@ -409,7 +460,7 @@ msgid "Reassignment users and comments"
 msgstr ""
 
 #. module: lettermgmt
-#: view:res.letter:lettermgmt.res_letter_in_form_view
+#: view:res.letter:lettermgmt.res_letter_form_view
 #: selection:res.letter,state:0
 msgid "Received"
 msgstr "Recibido"
@@ -420,13 +471,18 @@ msgid "Received But Returned"
 msgstr "Recibido pero devuelto"
 
 #. module: lettermgmt
-#: view:res.letter:lettermgmt.res_letter_in_form_view
+#: view:res.letter:lettermgmt.res_letter_form_view
 #: selection:res.letter,state:0
 msgid "Received Damage"
 msgstr ""
 
 #. module: lettermgmt
-#: view:res.letter:lettermgmt.res_letter_in_form_view
+#: field:res.letter,rec_date:0
+msgid "Received Date"
+msgstr ""
+
+#. module: lettermgmt
+#: view:res.letter:lettermgmt.res_letter_form_view
 msgid "Received but Returned"
 msgstr ""
 
@@ -438,7 +494,7 @@ msgstr "Receptor"
 #. module: lettermgmt
 #: field:res.letter,extern_partner_ids:0
 msgid "Recipients"
-msgstr ""
+msgstr "Destinatarios"
 
 #. module: lettermgmt
 #: help:res.letter,orig_ref:0
@@ -456,20 +512,14 @@ msgid "Reference Number used for Tracking."
 msgstr ""
 
 #. module: lettermgmt
-#: view:res.letter:lettermgmt.res_letter_in_form_view
-#: view:res.letter:lettermgmt.res_letter_out_form_view
-msgid "References"
+#: view:res.letter:lettermgmt.res_letter_filter
+msgid "Search Letters"
 msgstr ""
 
 #. module: lettermgmt
-#: view:res.letter:lettermgmt.res_letter_out_form_view
+#: view:res.letter:lettermgmt.res_letter_form_view
 msgid "Send"
-msgstr ""
-
-#. module: lettermgmt
-#: view:res.letter:lettermgmt.res_letter_out_form_view
-msgid "Send Date"
-msgstr ""
+msgstr "Enviar"
 
 #. module: lettermgmt
 #: model:ir.model,name:lettermgmt.model_letter_channel
@@ -487,24 +537,23 @@ msgid "Sent"
 msgstr "Enviado"
 
 #. module: lettermgmt
-#: field:res.letter,channel_id:0
+#: help:res.letter,channel_id:0
 msgid "Sent / Receive Source"
 msgstr "Fuente de envió / recepción"
 
 #. module: lettermgmt
-#: field:res.letter,snd_rec_date:0
-msgid "Sent / Received Date"
-msgstr "Fecha enviados / recibidos"
-
-#. module: lettermgmt
-#: view:res.letter:lettermgmt.res_letter_in_form_view
-#: view:res.letter:lettermgmt.res_letter_out_form_view
-msgid "Set To Draft"
-msgstr "Establecer en borrador"
+#: field:res.letter,snd_date:0
+msgid "Sent Date"
+msgstr ""
 
 #. module: lettermgmt
 #: field:res.letter,size:0
 msgid "Size"
+msgstr ""
+
+#. module: lettermgmt
+#: help:res.letter,size:0
+msgid "Size of the package."
 msgstr ""
 
 #. module: lettermgmt
@@ -513,8 +562,7 @@ msgid "State"
 msgstr "Estado"
 
 #. module: lettermgmt
-#: view:res.letter:lettermgmt.res_letter_in_form_view
-#: view:res.letter:lettermgmt.res_letter_out_form_view field:res.letter,name:0
+#: field:res.letter,name:0
 msgid "Subject"
 msgstr "Asunto"
 
@@ -529,13 +577,32 @@ msgid "Summary"
 msgstr "Resumen"
 
 #. module: lettermgmt
-#: help:res.letter,date:0
-msgid "The letter's date"
+#: field:res.letter,category_ids:0
+msgid "Tags"
+msgstr "Etiquetas"
+
+#. module: lettermgmt
+#: view:res.letter:lettermgmt.res_letter_form_view
+msgid "Tags... (eg: Classified)"
 msgstr ""
 
 #. module: lettermgmt
-#: view:res.letter:lettermgmt.res_letter_in_form_view
-#: view:res.letter:lettermgmt.res_letter_out_form_view
+#: help:res.letter,rec_date:0
+msgid "The date the letter was received."
+msgstr ""
+
+#. module: lettermgmt
+#: help:res.letter,snd_date:0
+msgid "The date the letter was sent."
+msgstr ""
+
+#. module: lettermgmt
+#: help:res.letter,date:0
+msgid "The letter's date."
+msgstr ""
+
+#. module: lettermgmt
+#: view:res.letter:lettermgmt.res_letter_form_view
 msgid "Thread"
 msgstr ""
 
@@ -545,19 +612,28 @@ msgid "Tracking Reference"
 msgstr ""
 
 #. module: lettermgmt
-#: field:letter.channel,name:0 field:letter.class,name:0
-#: field:letter.type,name:0 field:res.letter,type:0
+#: field:res.letter,type_id:0
 msgid "Type"
 msgstr "Tipo"
 
 #. module: lettermgmt
-#: help:res.letter,type:0
+#: help:res.letter,type_id:0
 msgid "Type of Letter, Depending upon size."
 msgstr ""
 
 #. module: lettermgmt
 #: field:res.letter,message_unread:0
 msgid "Unread Messages"
+msgstr "Mensajes sin leer"
+
+#. module: lettermgmt
+#: model:res.groups,name:lettermgmt.group_letter_thread
+msgid "Use Letter Parent and Thread"
+msgstr ""
+
+#. module: lettermgmt
+#: model:res.groups,name:lettermgmt.group_letter_reasignment
+msgid "Use Letter Reasignments"
 msgstr ""
 
 #. module: lettermgmt
@@ -566,17 +642,11 @@ msgid "User to forward letter to."
 msgstr ""
 
 #. module: lettermgmt
-#: view:res.letter:lettermgmt.res_letter_in_form_view
-#: view:res.letter:lettermgmt.res_letter_out_form_view
-msgid "Validate"
-msgstr ""
-
-#. module: lettermgmt
-#: selection:res.letter,state:0
-msgid "Validated"
-msgstr ""
-
-#. module: lettermgmt
 #: field:res.letter,weight:0
+msgid "Weight"
+msgstr "Peso"
+
+#. module: lettermgmt
+#: help:res.letter,weight:0
 msgid "Weight (in KG)"
 msgstr ""

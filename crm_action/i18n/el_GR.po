@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-14 13:03+0000\n"
-"PO-Revision-Date: 2016-09-09 12:26+0000\n"
+"POT-Creation-Date: 2016-11-02 14:15+0000\n"
+"PO-Revision-Date: 2016-11-22 16:30+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Greek (Greece) (http://www.transifex.com/oca/OCA-crm-8-0/language/el_GR/)\n"
 "MIME-Version: 1.0\n"
@@ -133,12 +133,12 @@ msgstr "Δημιουργήθηκε στις"
 #. module: crm_action
 #: field:crm.action,partner_id:0
 msgid "Customer"
-msgstr ""
+msgstr "Πελάτης"
 
 #. module: crm_action
 #: field:crm.action,date:0
 msgid "Date"
-msgstr ""
+msgstr "Ημερομηνία"
 
 #. module: crm_action
 #: model:crm.action.type,name:crm_action.demo
@@ -148,7 +148,7 @@ msgstr ""
 #. module: crm_action
 #: field:crm.action,details:0
 msgid "Details"
-msgstr ""
+msgstr "Λεπτομέρειες"
 
 #. module: crm_action
 #: field:crm.action.type,display_name:0
@@ -240,7 +240,7 @@ msgstr ""
 #. module: crm_action
 #: view:crm.action:crm_action.view_crm_action_filter
 msgid "Partner"
-msgstr ""
+msgstr "Συνεργάτης"
 
 #. module: crm_action
 #: field:crm.action.type,priority:0
@@ -260,7 +260,7 @@ msgstr ""
 #. module: crm_action
 #: field:crm.action,state:0
 msgid "Status"
-msgstr ""
+msgstr "Κατάσταση"
 
 #. module: crm_action
 #: view:crm.action:crm_action.view_crm_action_filter

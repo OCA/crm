@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-14 13:03+0000\n"
-"PO-Revision-Date: 2016-09-09 12:27+0000\n"
+"POT-Creation-Date: 2016-11-02 14:15+0000\n"
+"PO-Revision-Date: 2016-11-25 14:58+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Portuguese (http://www.transifex.com/oca/OCA-crm-8-0/language/pt/)\n"
 "MIME-Version: 1.0\n"
@@ -56,7 +56,7 @@ msgstr "Criado em"
 #: field:newsletter.newsletter,display_name:0
 #: field:newsletter.topic,display_name:0 field:newsletter.type,display_name:0
 msgid "Display Name"
-msgstr ""
+msgstr "Nome"
 
 #. module: newsletter
 #: field:newsletter.type,domain:0
@@ -114,7 +114,7 @@ msgstr ""
 #: field:newsletter.topic,__last_update:0
 #: field:newsletter.type,__last_update:0
 msgid "Last Modified on"
-msgstr ""
+msgstr "Modificado a última vez por"
 
 #. module: newsletter
 #: field:newsletter.newsletter,write_uid:0 field:newsletter.topic,write_uid:0
@@ -141,12 +141,12 @@ msgstr ""
 #. module: newsletter
 #: field:newsletter.type,model:0
 msgid "Model"
-msgstr ""
+msgstr "Modelo"
 
 #. module: newsletter
 #: field:newsletter.type,name:0
 msgid "Name"
-msgstr ""
+msgstr "Nome"
 
 #. module: newsletter
 #: model:ir.model,name:newsletter.model_newsletter_newsletter

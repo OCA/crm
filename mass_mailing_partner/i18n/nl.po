@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-17 09:43+0000\n"
-"PO-Revision-Date: 2016-09-17 18:43+0000\n"
+"POT-Creation-Date: 2016-11-02 14:15+0000\n"
+"PO-Revision-Date: 2016-11-25 14:57+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Dutch (http://www.transifex.com/oca/OCA-crm-8-0/language/nl/)\n"
 "MIME-Version: 1.0\n"
@@ -61,7 +61,7 @@ msgstr ""
 #. module: mass_mailing_partner
 #: field:partner.mail.list.wizard,id:0
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: mass_mailing_partner
 #: field:partner.mail.list.wizard,__last_update:0
@@ -160,7 +160,7 @@ msgstr ""
 #. module: mass_mailing_partner
 #: view:partner.mail.list.wizard:mass_mailing_partner.partner_mail_list_wizard_form
 msgid "or"
-msgstr ""
+msgstr "of"
 
 #. module: mass_mailing_partner
 #: view:mail.mass_mailing.contact:mass_mailing_partner.view_mail_mass_mailing_contact_tree

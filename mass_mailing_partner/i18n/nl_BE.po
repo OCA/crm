@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-14 13:03+0000\n"
-"PO-Revision-Date: 2016-09-09 12:24+0000\n"
+"POT-Creation-Date: 2016-11-02 14:15+0000\n"
+"PO-Revision-Date: 2016-11-25 14:55+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Dutch (Belgium) (http://www.transifex.com/oca/OCA-crm-8-0/language/nl_BE/)\n"
 "MIME-Version: 1.0\n"
@@ -41,17 +41,17 @@ msgstr ""
 #. module: mass_mailing_partner
 #: field:partner.mail.list.wizard,create_uid:0
 msgid "Created by"
-msgstr ""
+msgstr "Gemaakt door"
 
 #. module: mass_mailing_partner
 #: field:partner.mail.list.wizard,create_date:0
 msgid "Created on"
-msgstr ""
+msgstr "Gemaakt op"
 
 #. module: mass_mailing_partner
 #: field:partner.mail.list.wizard,display_name:0
 msgid "Display Name"
-msgstr ""
+msgstr "Schermnaam"
 
 #. module: mass_mailing_partner
 #: model:ir.model,name:mass_mailing_partner.model_mail_mail_statistics
@@ -61,22 +61,22 @@ msgstr ""
 #. module: mass_mailing_partner
 #: field:partner.mail.list.wizard,id:0
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: mass_mailing_partner
 #: field:partner.mail.list.wizard,__last_update:0
 msgid "Last Modified on"
-msgstr ""
+msgstr "Laatst Aangepast op"
 
 #. module: mass_mailing_partner
 #: field:partner.mail.list.wizard,write_uid:0
 msgid "Last Updated by"
-msgstr ""
+msgstr "Laatst bijgewerkt door"
 
 #. module: mass_mailing_partner
 #: field:partner.mail.list.wizard,write_date:0
 msgid "Last Updated on"
-msgstr ""
+msgstr "Laatst bijgewerkt op"
 
 #. module: mass_mailing_partner
 #: model:ir.model,name:mass_mailing_partner.model_mail_mass_mailing_list
@@ -160,7 +160,7 @@ msgstr ""
 #. module: mass_mailing_partner
 #: view:partner.mail.list.wizard:mass_mailing_partner.partner_mail_list_wizard_form
 msgid "or"
-msgstr ""
+msgstr "of"
 
 #. module: mass_mailing_partner
 #: view:mail.mass_mailing.contact:mass_mailing_partner.view_mail_mass_mailing_contact_tree

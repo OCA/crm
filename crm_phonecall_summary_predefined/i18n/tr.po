@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-14 13:03+0000\n"
-"PO-Revision-Date: 2016-09-09 11:33+0000\n"
+"POT-Creation-Date: 2016-11-02 14:15+0000\n"
+"PO-Revision-Date: 2016-11-25 14:57+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Turkish (http://www.transifex.com/oca/OCA-crm-8-0/language/tr/)\n"
 "MIME-Version: 1.0\n"
@@ -55,7 +55,7 @@ msgstr "Son güncelleme"
 #. module: crm_phonecall_summary_predefined
 #: field:crm.phonecall.summary,name:0
 msgid "Name"
-msgstr ""
+msgstr "Adı"
 
 #. module: crm_phonecall_summary_predefined
 #: sql_constraint:crm.phonecall.summary:0

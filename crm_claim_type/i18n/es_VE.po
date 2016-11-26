@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-10 18:52+0000\n"
-"PO-Revision-Date: 2016-03-10 18:54+0000\n"
+"POT-Creation-Date: 2016-11-02 14:15+0000\n"
+"PO-Revision-Date: 2016-10-11 09:49+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Spanish (Venezuela) (http://www.transifex.com/oca/OCA-crm-8-0/language/es_VE/)\n"
 "MIME-Version: 1.0\n"
@@ -72,12 +72,12 @@ msgstr "Es común para todos los tipos de reclamos"
 #. module: crm_claim_type
 #: field:crm.claim.type,create_uid:0
 msgid "Created by"
-msgstr ""
+msgstr "Creado por"
 
 #. module: crm_claim_type
 #: field:crm.claim.type,create_date:0
 msgid "Created on"
-msgstr ""
+msgstr "Creado en"
 
 #. module: crm_claim_type
 #: model:crm.claim.type,name:crm_claim_type.crm_claim_type_customer
@@ -87,7 +87,12 @@ msgstr ""
 #. module: crm_claim_type
 #: field:crm.claim.type,description:0
 msgid "Description"
-msgstr ""
+msgstr "Descripción"
+
+#. module: crm_claim_type
+#: field:crm.claim.type,display_name:0
+msgid "Display Name"
+msgstr "Mostrar nombre"
 
 #. module: crm_claim_type
 #: model:crm.claim.stage,name:crm_claim_type.stage_claim11
@@ -97,12 +102,12 @@ msgstr ""
 #. module: crm_claim_type
 #: view:crm.claim.stage:crm_claim_type.crm_stage_claim_type_search
 msgid "Group By"
-msgstr ""
+msgstr "Agrupar por"
 
 #. module: crm_claim_type
 #: field:crm.claim.type,id:0
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: crm_claim_type
 #: help:crm.claim.stage,claim_common:0
@@ -112,19 +117,24 @@ msgid ""
 msgstr "Si es marcada esta casilla, esta etapa será definida de manera predeterminada para cada tipo de reclamo"
 
 #. module: crm_claim_type
+#: field:crm.claim.type,__last_update:0
+msgid "Last Modified on"
+msgstr "Modificada por última vez"
+
+#. module: crm_claim_type
 #: field:crm.claim.type,write_uid:0
 msgid "Last Updated by"
-msgstr ""
+msgstr "Última actualización realizada por"
 
 #. module: crm_claim_type
 #: field:crm.claim.type,write_date:0
 msgid "Last Updated on"
-msgstr ""
+msgstr "Ultima actualizacion en"
 
 #. module: crm_claim_type
 #: field:crm.claim.type,name:0
 msgid "Name"
-msgstr ""
+msgstr "Nombre"
 
 #. module: crm_claim_type
 #: model:crm.claim.type,name:crm_claim_type.crm_claim_type_other

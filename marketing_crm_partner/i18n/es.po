@@ -4,13 +4,14 @@
 # 
 # Translators:
 # Carles Antoli <carlesantoli@hotmail.com>, 2016
+# Pedro M. Baeza <pedro.baeza@gmail.com>, 2016
 msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-14 03:55+0000\n"
-"PO-Revision-Date: 2016-04-07 15:57+0000\n"
-"Last-Translator: Carles Antoli <carlesantoli@hotmail.com>\n"
+"POT-Creation-Date: 2016-11-02 14:15+0000\n"
+"PO-Revision-Date: 2016-11-25 14:56+0000\n"
+"Last-Translator: Pedro M. Baeza <pedro.baeza@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/oca/OCA-crm-8-0/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -60,12 +61,12 @@ msgstr "Origen"
 msgid ""
 "This is a name that helps you keep track of your different campaign efforts "
 "Ex: Fall_Drive, Christmas_Special"
-msgstr "Este es un nombre que facilita la búsqueda de los diferentes esfuerzos de campañas. Por ejemplo: campaña de Navidad, rebajas de otoño"
+msgstr "Éste es un nombre que facilita la búsqueda de los diferentes esfuerzos de campañas. Por ejemplo: campaña de Navidad, rebajas de otoño"
 
 #. module: marketing_crm_partner
 #: help:res.partner,medium_id:0
 msgid "This is the method of delivery. Ex: Postcard, Email, or Banner Ad"
-msgstr "Este es el método de entrega. Por ejemplo: carta postal, correo electrónico o publicidad web"
+msgstr "Éste es el método de entrega. Por ejemplo: carta postal, correo electrónico o publicidad web"
 
 #. module: marketing_crm_partner
 #: help:res.partner,source_id:0

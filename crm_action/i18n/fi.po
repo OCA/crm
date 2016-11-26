@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-14 13:03+0000\n"
-"PO-Revision-Date: 2016-09-15 12:45+0000\n"
+"POT-Creation-Date: 2016-11-02 14:15+0000\n"
+"PO-Revision-Date: 2016-11-25 14:55+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Finnish (http://www.transifex.com/oca/OCA-crm-8-0/language/fi/)\n"
 "MIME-Version: 1.0\n"
@@ -148,7 +148,7 @@ msgstr ""
 #. module: crm_action
 #: field:crm.action,details:0
 msgid "Details"
-msgstr ""
+msgstr "Lisätiedot"
 
 #. module: crm_action
 #: field:crm.action.type,display_name:0
@@ -230,7 +230,7 @@ msgstr ""
 #. module: crm_action
 #: field:crm.action.type,name:0
 msgid "Name"
-msgstr ""
+msgstr "Nimi"
 
 #. module: crm_action
 #: field:crm.lead,next_action_id:0
@@ -240,7 +240,7 @@ msgstr ""
 #. module: crm_action
 #: view:crm.action:crm_action.view_crm_action_filter
 msgid "Partner"
-msgstr ""
+msgstr "Kumppani"
 
 #. module: crm_action
 #: field:crm.action.type,priority:0
@@ -260,7 +260,7 @@ msgstr ""
 #. module: crm_action
 #: field:crm.action,state:0
 msgid "Status"
-msgstr ""
+msgstr "Tila"
 
 #. module: crm_action
 #: view:crm.action:crm_action.view_crm_action_filter
@@ -282,7 +282,7 @@ msgstr ""
 #: view:crm.action:crm_action.view_crm_action_filter
 #: field:crm.action,user_id:0
 msgid "User"
-msgstr ""
+msgstr "Käyttäjä"
 
 #. module: crm_action
 #: view:crm.action:crm_action.view_crm_action_filter

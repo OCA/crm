@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-17 09:43+0000\n"
-"PO-Revision-Date: 2016-10-04 09:43+0000\n"
+"POT-Creation-Date: 2016-11-02 14:15+0000\n"
+"PO-Revision-Date: 2016-11-25 14:56+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/oca/OCA-crm-8-0/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -56,7 +56,7 @@ msgstr "创建时间"
 #: field:newsletter.newsletter,display_name:0
 #: field:newsletter.topic,display_name:0 field:newsletter.type,display_name:0
 msgid "Display Name"
-msgstr ""
+msgstr "显示名称"
 
 #. module: newsletter
 #: field:newsletter.type,domain:0
@@ -114,7 +114,7 @@ msgstr ""
 #: field:newsletter.topic,__last_update:0
 #: field:newsletter.type,__last_update:0
 msgid "Last Modified on"
-msgstr ""
+msgstr "最后修改时间"
 
 #. module: newsletter
 #: field:newsletter.newsletter,write_uid:0 field:newsletter.topic,write_uid:0
@@ -146,7 +146,7 @@ msgstr ""
 #. module: newsletter
 #: field:newsletter.type,name:0
 msgid "Name"
-msgstr ""
+msgstr "名称"
 
 #. module: newsletter
 #: model:ir.model,name:newsletter.model_newsletter_newsletter
@@ -257,7 +257,7 @@ msgstr ""
 #. module: newsletter
 #: field:newsletter.topic,title:0
 msgid "Title"
-msgstr ""
+msgstr "称谓"
 
 #. module: newsletter
 #: field:newsletter.newsletter,topic_ids:0
@@ -267,7 +267,7 @@ msgstr ""
 #. module: newsletter
 #: field:newsletter.newsletter,type_id:0
 msgid "Type"
-msgstr ""
+msgstr "类型"
 
 #. module: newsletter
 #: code:addons/newsletter/model/newsletter_newsletter.py:137

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-14 13:03+0000\n"
-"PO-Revision-Date: 2016-05-07 11:41+0000\n"
+"POT-Creation-Date: 2016-11-02 14:15+0000\n"
+"PO-Revision-Date: 2016-11-25 14:55+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Portuguese (Portugal) (http://www.transifex.com/oca/OCA-crm-8-0/language/pt_PT/)\n"
 "MIME-Version: 1.0\n"
@@ -92,7 +92,7 @@ msgstr ""
 #. module: crm_claim_type
 #: field:crm.claim.type,display_name:0
 msgid "Display Name"
-msgstr ""
+msgstr "Nome a Apresentar"
 
 #. module: crm_claim_type
 #: model:crm.claim.stage,name:crm_claim_type.stage_claim11
@@ -119,7 +119,7 @@ msgstr ""
 #. module: crm_claim_type
 #: field:crm.claim.type,__last_update:0
 msgid "Last Modified on"
-msgstr ""
+msgstr "Última Modificação Em"
 
 #. module: crm_claim_type
 #: field:crm.claim.type,write_uid:0
@@ -134,7 +134,7 @@ msgstr "Atualizado pela última vez em"
 #. module: crm_claim_type
 #: field:crm.claim.type,name:0
 msgid "Name"
-msgstr ""
+msgstr "Nome"
 
 #. module: crm_claim_type
 #: model:crm.claim.type,name:crm_claim_type.crm_claim_type_other

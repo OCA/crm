@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-10 18:52+0000\n"
+"POT-Creation-Date: 2016-11-02 14:15+0000\n"
 "PO-Revision-Date: 2016-03-10 18:53+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: French (http://www.transifex.com/oca/OCA-crm-8-0/language/fr/)\n"
@@ -25,7 +25,7 @@ msgstr "Piste/Opportunité"
 #. module: crm_sector
 #: field:crm.lead,sector_id:0
 msgid "Main Sector"
-msgstr ""
+msgstr "Secteur d'activité principal"
 
 #. module: crm_sector
 #: view:crm.lead:crm_sector.view_crm_case_leads_filter
@@ -36,7 +36,7 @@ msgstr ""
 #. module: crm_sector
 #: field:crm.lead,secondary_sector_ids:0
 msgid "Secondary Sectors"
-msgstr ""
+msgstr "Secteurs d'activité secondaires"
 
 #. module: crm_sector
 #: view:crm.lead:crm_sector.crm_case_form_view_leads
@@ -44,7 +44,7 @@ msgstr ""
 #: view:crm.lead:crm_sector.view_crm_case_leads_filter
 #: view:crm.lead:crm_sector.view_crm_case_opportunities_filter
 msgid "Sector"
-msgstr ""
+msgstr "Secteur d'activité"
 
 #. module: crm_sector
 #: code:addons/crm_sector/models/crm_lead.py:22
