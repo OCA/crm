@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (9.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-17 09:48+0000\n"
-"PO-Revision-Date: 2016-10-05 06:35+0000\n"
+"POT-Creation-Date: 2016-11-26 03:41+0000\n"
+"PO-Revision-Date: 2016-11-25 14:57+0000\n"
 "Last-Translator: Bole <bole@dajmi5.com>\n"
 "Language-Team: Croatian (http://www.transifex.com/oca/OCA-crm-9-0/language/hr/)\n"
 "MIME-Version: 1.0\n"
@@ -90,7 +90,7 @@ msgstr "Kupac"
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type_description
 msgid "Description"
-msgstr ""
+msgstr "Opis"
 
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type_display_name
@@ -100,12 +100,12 @@ msgstr "Naziv "
 #. module: crm_claim_type
 #: model:crm.claim.stage,name:crm_claim_type.stage_claim11
 msgid "Done"
-msgstr ""
+msgstr "Izvršeno"
 
 #. module: crm_claim_type
 #: model:ir.ui.view,arch_db:crm_claim_type.crm_stage_claim_type_search
 msgid "Group By"
-msgstr ""
+msgstr "Grupiraj po"
 
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type_id
@@ -137,7 +137,7 @@ msgstr "Zadnje ažuriranje"
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type_name
 msgid "Name"
-msgstr ""
+msgstr "Naziv"
 
 #. module: crm_claim_type
 #: model:crm.claim.type,name:crm_claim_type.crm_claim_type_other
