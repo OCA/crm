@@ -51,10 +51,10 @@ class ResLetter(models.Model):
         'letter.category', string='Tags', help="Classification of Document.")
     date = fields.Datetime('Letter Date', help='The letter\'s date')
     snd_date = fields.Datetime(
-        'Sent / Received Date', defalut=fields.datetime.now,
+        'Sent Date', defalut=fields.datetime.now,
         help='The date the letter was sent.')
     rcv_date = fields.Datetime(
-        'Sent / Received Date', defalut=fields.datetime.now,
+        'Received Date', defalut=fields.datetime.now,
         help='The date the letter was recieved.')
     recipient_partner_id = fields.Many2one(
         'res.partner', string='Recipient', track_visibility='onchange',
