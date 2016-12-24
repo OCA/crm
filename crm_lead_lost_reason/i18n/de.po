@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-17 09:43+0000\n"
-"PO-Revision-Date: 2016-10-04 09:42+0000\n"
+"POT-Creation-Date: 2016-12-17 01:26+0000\n"
+"PO-Revision-Date: 2016-12-23 08:32+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: German (http://www.transifex.com/oca/OCA-crm-8-0/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -42,7 +42,7 @@ msgstr ""
 #. module: crm_lead_lost_reason
 #: view:crm.lead.lost:crm_lead_lost_reason.view_crm_lead_lost
 msgid "Confirm"
-msgstr ""
+msgstr "Bestätigen"
 
 #. module: crm_lead_lost_reason
 #: field:crm.lead.lost,create_uid:0 field:crm.lead.lost.reason,create_uid:0

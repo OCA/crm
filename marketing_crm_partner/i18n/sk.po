@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-02 14:15+0000\n"
+"POT-Creation-Date: 2016-12-17 01:26+0000\n"
 "PO-Revision-Date: 2016-04-04 00:30+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: Slovak (http://www.transifex.com/oca/OCA-crm-8-0/language/sk/)\n"
@@ -21,7 +21,7 @@ msgstr ""
 #: view:res.partner:marketing_crm_partner.view_res_partner_filter
 #: field:res.partner,campaign_id:0
 msgid "Campaign"
-msgstr ""
+msgstr "Kampaň"
 
 #. module: marketing_crm_partner
 #: field:res.partner,medium_id:0
@@ -31,12 +31,12 @@ msgstr "Kanál"
 #. module: marketing_crm_partner
 #: model:ir.model,name:marketing_crm_partner.model_crm_lead
 msgid "Lead/Opportunity"
-msgstr ""
+msgstr "Iniciatíva/Príležitosť"
 
 #. module: marketing_crm_partner
 #: view:res.partner:marketing_crm_partner.view_partner_form
 msgid "Marketing"
-msgstr ""
+msgstr "Marketing"
 
 #. module: marketing_crm_partner
 #: view:res.partner:marketing_crm_partner.view_res_partner_filter
@@ -46,29 +46,29 @@ msgstr "Stredné"
 #. module: marketing_crm_partner
 #: model:ir.model,name:marketing_crm_partner.model_res_partner
 msgid "Partner"
-msgstr ""
+msgstr "Partner"
 
 #. module: marketing_crm_partner
 #: view:res.partner:marketing_crm_partner.view_res_partner_filter
 #: field:res.partner,source_id:0
 msgid "Source"
-msgstr ""
+msgstr "Zdroj"
 
 #. module: marketing_crm_partner
 #: help:res.partner,campaign_id:0
 msgid ""
 "This is a name that helps you keep track of your different campaign efforts "
 "Ex: Fall_Drive, Christmas_Special"
-msgstr ""
+msgstr "Toto je meno ktoré ti pomôže sledovať rôzne tvoje kampane Napr.: Jesenný_Výpredaj, Vianočný_Špeciál"
 
 #. module: marketing_crm_partner
 #: help:res.partner,medium_id:0
 msgid "This is the method of delivery. Ex: Postcard, Email, or Banner Ad"
-msgstr ""
+msgstr "Toto je spôsob rozoslania. Napr.: Pošta, Email, alebo Reklamný Panel"
 
 #. module: marketing_crm_partner
 #: help:res.partner,source_id:0
 msgid ""
 "This is the source of the link Ex: Search Engine, another domain, or name of"
 " email list"
-msgstr ""
+msgstr "Toto je zdroj linku Napr.: Vyhľadávač, iná doména, alebo názov emailového zoznamu"
