@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-02 14:15+0000\n"
-"PO-Revision-Date: 2016-11-25 14:55+0000\n"
+"POT-Creation-Date: 2016-12-17 01:26+0000\n"
+"PO-Revision-Date: 2016-12-23 14:02+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: German (http://www.transifex.com/oca/OCA-crm-8-0/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -245,7 +245,7 @@ msgstr ""
 #. module: lettermgmt
 #: field:res.letter,message_last_post:0
 msgid "Last Message Date"
-msgstr ""
+msgstr "Datum letzte Nachricht"
 
 #. module: lettermgmt
 #: field:letter.category,__last_update:0 field:letter.channel,__last_update:0
@@ -386,7 +386,7 @@ msgstr ""
 #. module: lettermgmt
 #: field:res.letter,move:0
 msgid "Move"
-msgstr ""
+msgstr "Umlagern"
 
 #. module: lettermgmt
 #: field:letter.category,name:0 field:letter.channel,name:0
