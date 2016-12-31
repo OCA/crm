@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-02 14:15+0000\n"
-"PO-Revision-Date: 2016-10-11 09:48+0000\n"
+"POT-Creation-Date: 2016-12-24 01:14+0000\n"
+"PO-Revision-Date: 2016-12-27 08:24+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Spanish (Costa Rica) (http://www.transifex.com/oca/OCA-crm-8-0/language/es_CR/)\n"
 "MIME-Version: 1.0\n"
@@ -123,7 +123,7 @@ msgstr ""
 #. module: crm_action
 #: field:crm.action,create_uid:0 field:crm.action.type,create_uid:0
 msgid "Created by"
-msgstr ""
+msgstr "Creado por"
 
 #. module: crm_action
 #: field:crm.action,create_date:0 field:crm.action.type,create_date:0
@@ -189,12 +189,12 @@ msgstr ""
 #. module: crm_action
 #: field:crm.action,write_uid:0 field:crm.action.type,write_uid:0
 msgid "Last Updated by"
-msgstr ""
+msgstr "Ultima actualización por"
 
 #. module: crm_action
 #: field:crm.action,write_date:0 field:crm.action.type,write_date:0
 msgid "Last Updated on"
-msgstr ""
+msgstr "Ultima actualización en"
 
 #. module: crm_action
 #: field:crm.action,lead_id:0
@@ -240,7 +240,7 @@ msgstr ""
 #. module: crm_action
 #: view:crm.action:crm_action.view_crm_action_filter
 msgid "Partner"
-msgstr ""
+msgstr "Empresa"
 
 #. module: crm_action
 #: field:crm.action.type,priority:0

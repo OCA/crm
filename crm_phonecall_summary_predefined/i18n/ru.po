@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-02 14:15+0000\n"
-"PO-Revision-Date: 2016-11-22 12:24+0000\n"
+"POT-Creation-Date: 2016-12-24 01:15+0000\n"
+"PO-Revision-Date: 2016-12-27 08:22+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Russian (http://www.transifex.com/oca/OCA-crm-8-0/language/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -20,12 +20,12 @@ msgstr ""
 #. module: crm_phonecall_summary_predefined
 #: field:crm.phonecall.summary,create_uid:0
 msgid "Created by"
-msgstr ""
+msgstr "Создано"
 
 #. module: crm_phonecall_summary_predefined
 #: field:crm.phonecall.summary,create_date:0
 msgid "Created on"
-msgstr ""
+msgstr "Создан"
 
 #. module: crm_phonecall_summary_predefined
 #: field:crm.phonecall.summary,display_name:0
@@ -35,7 +35,7 @@ msgstr ""
 #. module: crm_phonecall_summary_predefined
 #: field:crm.phonecall.summary,id:0
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: crm_phonecall_summary_predefined
 #: field:crm.phonecall.summary,__last_update:0
@@ -45,12 +45,12 @@ msgstr ""
 #. module: crm_phonecall_summary_predefined
 #: field:crm.phonecall.summary,write_uid:0
 msgid "Last Updated by"
-msgstr ""
+msgstr "Последний раз обновлено"
 
 #. module: crm_phonecall_summary_predefined
 #: field:crm.phonecall.summary,write_date:0
 msgid "Last Updated on"
-msgstr ""
+msgstr "Последний раз обновлено"
 
 #. module: crm_phonecall_summary_predefined
 #: field:crm.phonecall.summary,name:0

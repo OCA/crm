@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-14 13:03+0000\n"
-"PO-Revision-Date: 2016-09-09 12:26+0000\n"
+"POT-Creation-Date: 2016-12-24 01:14+0000\n"
+"PO-Revision-Date: 2016-12-27 08:21+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Amharic (http://www.transifex.com/oca/OCA-crm-8-0/language/am/)\n"
 "MIME-Version: 1.0\n"
@@ -240,7 +240,7 @@ msgstr ""
 #. module: crm_action
 #: view:crm.action:crm_action.view_crm_action_filter
 msgid "Partner"
-msgstr ""
+msgstr "ተባባሪ"
 
 #. module: crm_action
 #: field:crm.action.type,priority:0

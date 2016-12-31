@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-02 14:15+0000\n"
-"PO-Revision-Date: 2016-11-25 14:57+0000\n"
+"POT-Creation-Date: 2016-12-24 01:15+0000\n"
+"PO-Revision-Date: 2016-12-30 18:44+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Turkish (http://www.transifex.com/oca/OCA-crm-8-0/language/tr/)\n"
 "MIME-Version: 1.0\n"
@@ -69,7 +69,7 @@ msgstr ""
 #: field:crm.lead.lost,display_name:0
 #: field:crm.lead.lost.reason,display_name:0
 msgid "Display Name"
-msgstr ""
+msgstr "Görünen İsim"
 
 #. module: crm_lead_lost_reason
 #: field:crm.lead.lost,id:0 field:crm.lead.lost.reason,id:0
@@ -80,7 +80,7 @@ msgstr "ID"
 #: field:crm.lead.lost,__last_update:0
 #: field:crm.lead.lost.reason,__last_update:0
 msgid "Last Modified on"
-msgstr ""
+msgstr "Son değişiklik"
 
 #. module: crm_lead_lost_reason
 #: field:crm.lead.lost,write_uid:0 field:crm.lead.lost.reason,write_uid:0

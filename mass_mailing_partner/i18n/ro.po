@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-02 14:15+0000\n"
-"PO-Revision-Date: 2016-11-25 14:55+0000\n"
+"POT-Creation-Date: 2016-12-24 01:15+0000\n"
+"PO-Revision-Date: 2016-12-27 08:24+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Romanian (http://www.transifex.com/oca/OCA-crm-8-0/language/ro/)\n"
 "MIME-Version: 1.0\n"
@@ -41,17 +41,17 @@ msgstr ""
 #. module: mass_mailing_partner
 #: field:partner.mail.list.wizard,create_uid:0
 msgid "Created by"
-msgstr ""
+msgstr "Creat de"
 
 #. module: mass_mailing_partner
 #: field:partner.mail.list.wizard,create_date:0
 msgid "Created on"
-msgstr ""
+msgstr "Creat la"
 
 #. module: mass_mailing_partner
 #: field:partner.mail.list.wizard,display_name:0
 msgid "Display Name"
-msgstr ""
+msgstr "Nume Afişat"
 
 #. module: mass_mailing_partner
 #: model:ir.model,name:mass_mailing_partner.model_mail_mail_statistics
@@ -61,22 +61,22 @@ msgstr ""
 #. module: mass_mailing_partner
 #: field:partner.mail.list.wizard,id:0
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: mass_mailing_partner
 #: field:partner.mail.list.wizard,__last_update:0
 msgid "Last Modified on"
-msgstr ""
+msgstr "Ultima actualizare în"
 
 #. module: mass_mailing_partner
 #: field:partner.mail.list.wizard,write_uid:0
 msgid "Last Updated by"
-msgstr ""
+msgstr "Ultima actualizare făcută de"
 
 #. module: mass_mailing_partner
 #: field:partner.mail.list.wizard,write_date:0
 msgid "Last Updated on"
-msgstr ""
+msgstr "Ultima actualizare la"
 
 #. module: mass_mailing_partner
 #: model:ir.model,name:mass_mailing_partner.model_mail_mass_mailing_list
@@ -124,7 +124,7 @@ msgstr ""
 #: view:mail.mass_mailing.contact:mass_mailing_partner.view_mail_mass_mailing_contact_search
 #: field:mail.mass_mailing.contact,partner_id:0
 msgid "Partner"
-msgstr ""
+msgstr "Partener"
 
 #. module: mass_mailing_partner
 #: code:addons/mass_mailing_partner/wizard/partner_mail_list_wizard.py:26
