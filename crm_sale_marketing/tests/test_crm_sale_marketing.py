@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
-# © 2015 Eficent Business and IT Consulting Services S.L. -
-# Jordi Ballester Alomar
-# © 2015 Serpent Consulting Services Pvt. Ltd. - Sudhir Arya
+# Copyright 2016 Eficent Business and IT Consulting Services S.L.
+# Copyright 2016 Serpent Consulting Services Pvt. Ltd.
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
 from openerp.tests import common
@@ -12,16 +11,22 @@ class TestSaleMarketing(common.TransactionCase):
     def setUp(self):
         super(TestSaleMarketing, self).setUp()
         cr, uid = self.cr, self.uid
-
-        # Admin User
-        self.admin_user = self.env.ref('base.user_root')
-        # Admin User
         self.sale_order_model = self.env['sale.order']
         self.crm_lead_model = self.env['crm.lead']
         self.crm_campaign_model = self.env['crm.tracking.campaign']
         self.crm_medium_model = self.env['crm.tracking.medium']
         self.crm_source_model = self.env['crm.tracking.source']
         self.crm_sale_model = self.env['crm.make.sale']
+        self.res_users = self.env['res.users']
+
+        # company
+        self.company1 = self.env.ref('base.main_company')
+        # users
+        self.admin_user = self.env.ref('base.user_root')
+        self.sale_user = self._create_user(
+            'sale_user', [self.env.ref('base.group_sale_salesman')],
+            self.company1)
+
         # Create CRM Leads
         self.campaign = self._create_campaign()
         self.medium = self._create_medium()
@@ -29,6 +34,21 @@ class TestSaleMarketing(common.TransactionCase):
         self.lead = self._create_crm_lead(self.campaign, self.medium,
                                           self.source)
         self.sale = self._create_quotation(cr, uid)
+
+    def _create_user(self, login, groups, company):
+        """ Create a user."""
+        group_ids = [group.id for group in groups]
+        user = \
+            self.res_users.with_context({'no_reset_password': True}).create({
+                'name': 'Test User',
+                'login': login,
+                'password': 'demo',
+                'email': 'test@yourcompany.com',
+                'company_id': company.id,
+                'company_ids': [(4, company.id)],
+                'groups_id': [(6, 0, group_ids)]
+            })
+        return user
 
     def _create_campaign(self):
         """Create a Campaign."""
@@ -54,11 +74,11 @@ class TestSaleMarketing(common.TransactionCase):
 
     def _create_crm_lead(self, campaign, medium, source):
         """Create a Lead."""
-        crm = self.crm_lead_model.sudo(self.admin_user).create({
+        crm = self.crm_lead_model.sudo(self.sale_user).create({
             'name': 'CRM LEAD',
             'type': 'opportunity',
             'active': True,
-            'partner_id': self.admin_user.id,
+            'partner_id': self.sale_user.id,
             'campaign_id': campaign.id,
             'medium_id': medium.id,
             'source_id': source.id,
@@ -67,7 +87,7 @@ class TestSaleMarketing(common.TransactionCase):
 
     def _create_quotation(self, cr, uid):
         """Convert a Opportunity to Quotation."""
-        crm_make_sale = self.crm_sale_model.sudo(self.admin_user).create({
+        crm_make_sale = self.crm_sale_model.sudo(self.sale_user).create({
             'close': True,
             'partner_id': self.lead.partner_id.id,
         })

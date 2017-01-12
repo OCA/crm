@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
-# © 2015 Eficent Business and IT Consulting Services S.L.
-# - Jordi Ballester Alomar
-# © 2015 Serpent Consulting Services Pvt. Ltd. - Sudhir Arya
+# Copyright 2016 Eficent Business and IT Consulting Services S.L.
+# Copyright 2016 Serpent Consulting Services Pvt. Ltd.
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
 from openerp import api, models
 
 
-class CrmCampaign(models.Model):
+class CrmCampaign(models.TransientModel):
 
     _inherit = 'crm.make.sale'
 
