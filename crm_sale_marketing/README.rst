@@ -2,30 +2,22 @@
    :target: https://www.gnu.org/licenses/agpl.html
    :alt: License: AGPL-3
 
-================
-Sales Marketing
-================
+==================
+Crm Sale Marketing
+==================
 
-This module extends the functionality of sale_crm module which copies the marketing data  
-from lead to sale and allows one to keep track of sales generated from marketing source.
-
-Installation
-============
-
-No specific installation requirements.
-
-Configuration
-=============
-
-No configuration is required.
+This module extends the functionality of sale_crm module and copies the
+marketing data from lead/opportunity to the quotation, and allows one to keep
+track of sales generated from marketing source.
 
 Usage
 =====
 
 To use this module, you need to:
 
-1. Go to Lead, pass the marketing details and when the lead is converted to quotation 
-the module will automatically copy the marketing details from lead to quotation.
+* Go to Lead, enter the marketing details. When the lead/opportunity is
+converted to quotation the module will automatically copy the marketing
+details from opportunity to the quotation.
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
@@ -35,14 +27,9 @@ Bug Tracker
 ===========
 
 Bugs are tracked on `GitHub Issues
-<https://github.com/OCA/crm/issues>`_. In case of trouble, please
+<https://github.com/OCA/{project_repo}/issues>`_. In case of trouble, please
 check there if your issue has already been reported. If you spotted it first,
-help us smashing it by providing a detailed and welcomed `feedback
-<https://github.com/OCA/
-crm/issues/new?body=module:%20
-crm_sale_marketing%0Aversion:%20
-8.0%0A%0A**Steps%20to%20reproduce**%0A-%20..
-.%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+help us smash it by providing detailed and welcomed feedback.
 
 Credits
 =======
@@ -55,7 +42,7 @@ Images
 Contributors
 ------------
 
-* Eficent Business and IT Consulting Services S.L. <contact@eficent.com>
+* Jordi Ballester Alomar <jordi.ballester@eficent.com>
 * Serpent Consulting Services Pvt. Ltd. <support@serpentcs.com>
 
 Maintainer
