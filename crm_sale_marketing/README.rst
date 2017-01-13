@@ -10,16 +10,6 @@ This module extends the functionality of sale_crm module and copies the
 marketing data from lead/opportunity to the quotation, and allows one to keep
 track of sales generated from marketing source.
 
-Installation
-============
-
-No specific installation requirements.
-
-Configuration
-=============
-
-No configuration is required.
-
 Usage
 =====
 
