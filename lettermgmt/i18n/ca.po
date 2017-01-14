@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-02 14:15+0000\n"
-"PO-Revision-Date: 2016-11-25 14:57+0000\n"
+"POT-Creation-Date: 2017-01-13 09:09+0000\n"
+"PO-Revision-Date: 2017-01-13 09:22+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/oca/OCA-crm-8-0/language/ca/)\n"
 "MIME-Version: 1.0\n"
@@ -169,7 +169,7 @@ msgstr ""
 #: field:letter.folder,display_name:0 field:letter.reassignment,display_name:0
 #: field:letter.type,display_name:0 field:res.letter,display_name:0
 msgid "Display Name"
-msgstr ""
+msgstr "Veure el nom"
 
 #. module: lettermgmt
 #: selection:res.letter,state:0
@@ -252,7 +252,7 @@ msgstr ""
 #: field:letter.reassignment,__last_update:0 field:letter.type,__last_update:0
 #: field:res.letter,__last_update:0
 msgid "Last Modified on"
-msgstr ""
+msgstr "Darrera modificació el"
 
 #. module: lettermgmt
 #: field:letter.category,write_uid:0 field:letter.channel,write_uid:0
@@ -487,7 +487,7 @@ msgstr ""
 #. module: lettermgmt
 #: field:res.letter,recipient_partner_id:0
 msgid "Recipient"
-msgstr ""
+msgstr "Beneficiari"
 
 #. module: lettermgmt
 #: field:res.letter,extern_partner_ids:0
@@ -527,12 +527,12 @@ msgstr ""
 #. module: lettermgmt
 #: field:res.letter,sender_partner_id:0
 msgid "Sender"
-msgstr ""
+msgstr "Remitent"
 
 #. module: lettermgmt
 #: selection:res.letter,state:0
 msgid "Sent"
-msgstr ""
+msgstr "Enviat"
 
 #. module: lettermgmt
 #: help:res.letter,channel_id:0
@@ -557,12 +557,12 @@ msgstr ""
 #. module: lettermgmt
 #: field:res.letter,state:0
 msgid "State"
-msgstr ""
+msgstr "Estat"
 
 #. module: lettermgmt
 #: field:res.letter,name:0
 msgid "Subject"
-msgstr ""
+msgstr "Assumpte"
 
 #. module: lettermgmt
 #: help:res.letter,name:0
@@ -612,7 +612,7 @@ msgstr ""
 #. module: lettermgmt
 #: field:res.letter,type_id:0
 msgid "Type"
-msgstr ""
+msgstr "Tipus"
 
 #. module: lettermgmt
 #: help:res.letter,type_id:0
