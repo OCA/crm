@@ -12,4 +12,13 @@
     </field>
   </record>
 
+  <!--
+      Restrict view modifications introduced by sale_crm to users of sales_team.group_sale_salesman
+      so that we don't get access error when trying to see a lead,
+      as we don't have permissions to access the sale.order model
+  -->
+  <record id="sale_crm.crm_case_form_view_oppor" model="ir.ui.view">
+    <field name="groups_id" eval="[(6, 0, [ref('sales_team.group_sale_salesman')])]"/>
+  </record>
+
 </odoo>
