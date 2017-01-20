@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+  <record id="sales_team.menu_base_partner" model="ir.ui.menu">
+    <field name="groups_id" eval="[(4, ref('group_see_shared_leads'))]"/>
+    <field name="name">Sales</field>
+  </record>
+
+  <!-- Hide menus -->
+  <record id="sale.menu_product_template_action" model="ir.ui.menu">
+    <field name="name">Products</field>
+    <field name="groups_id" eval="[(4, ref('sales_team.group_sale_salesman'))]"/>
+  </record>
+
+  <record id="sales_team.menu_sales_team_act" model="ir.ui.menu">
+    <field name="name">Dashboard</field>
+    <field name="groups_id" eval="[(4, ref('sales_team.group_sale_salesman'))]"/>
+  </record>
+
+  <record id="crm_lead_form_view_remove_order_button" model="ir.ui.view">
+    <field name="name">lead form view: remove orders button for shared leads users</field>
+    <field name="model">crm.lead</field>
+    <field name="inherit_id" ref="sale_crm.crm_case_form_view_oppor"/>
+    <field name="arch" type="xml">
+      <!-- Remove order buttons so that we don't have to give ACL access to sale.order -->
+      <xpath expr="//div[@name='button_box']" position="replace">
+        <!-- need to redefine this field which was defined in the button box, used in a filter -->
+        <field name="active" invisible="1"/>
+      </xpath>
+    </field>
+  </record>
+
+</odoo>
