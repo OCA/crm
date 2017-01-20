@@ -4,7 +4,7 @@
 
 {
     'name': 'Share leads with followers',
-    'version': '10.0.1.1.0',
+    'version': '10.0.1.2.0',
     'license': 'AGPL-3',
     'category': 'Sales',
     'author': "MONK Software, Odoo Community Association",
@@ -15,6 +15,7 @@
         'security/crm_lead_followers_security.xml',
         'security/ir.model.access.csv',
         'views/sales_team.xml',
+        'views/crm.xml',
     ],
     'installable': True,
 }
