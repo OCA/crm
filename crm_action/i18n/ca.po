@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-13 09:08+0000\n"
-"PO-Revision-Date: 2017-01-13 09:22+0000\n"
+"POT-Creation-Date: 2017-01-14 02:20+0000\n"
+"PO-Revision-Date: 2017-01-17 19:17+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/oca/OCA-crm-8-0/language/ca/)\n"
 "MIME-Version: 1.0\n"
@@ -97,7 +97,7 @@ msgstr ""
 #. module: crm_action
 #: field:crm.action.type,active:0
 msgid "Active"
-msgstr ""
+msgstr "Actiu"
 
 #. module: crm_action
 #: view:crm.action:crm_action.view_action_form
@@ -118,7 +118,7 @@ msgstr ""
 #. module: crm_action
 #: field:crm.action,company_id:0
 msgid "Company"
-msgstr ""
+msgstr "Empresa"
 
 #. module: crm_action
 #: field:crm.action,create_uid:0 field:crm.action.type,create_uid:0
@@ -230,7 +230,7 @@ msgstr ""
 #. module: crm_action
 #: field:crm.action.type,name:0
 msgid "Name"
-msgstr ""
+msgstr "Nom"
 
 #. module: crm_action
 #: field:crm.lead,next_action_id:0

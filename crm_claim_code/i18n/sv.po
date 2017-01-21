@@ -10,17 +10,17 @@ msgstr ""
 "POT-Creation-Date: 2017-01-14 02:20+0000\n"
 "PO-Revision-Date: 2016-03-10 18:52+0000\n"
 "Last-Translator: <>\n"
-"Language-Team: French (http://www.transifex.com/oca/OCA-crm-8-0/language/fr/)\n"
+"Language-Team: Swedish (http://www.transifex.com/oca/OCA-crm-8-0/language/sv/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: fr\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: crm_claim_code
 #: model:ir.model,name:crm_claim_code.model_crm_claim
 msgid "Claim"
-msgstr "Réclamation"
+msgstr "Reklamation"
 
 #. module: crm_claim_code
 #: field:crm.claim,code:0
@@ -30,9 +30,9 @@ msgstr ""
 #. module: crm_claim_code
 #: sql_constraint:crm.claim:0
 msgid "The code must be unique!"
-msgstr "Le code doit être unique!"
+msgstr ""
 
 #. module: crm_claim_code
 #: view:crm.claim:crm_claim_code.view_crm_case_claims_filter_inh_claimseq
 msgid "['|', ('name', 'ilike', self), ('code', 'ilike', self)]"
-msgstr "['|', ('name', 'ilike', self), ('code', 'ilike', self)]"
+msgstr ""

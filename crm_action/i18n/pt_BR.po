@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-26 06:47+0000\n"
-"PO-Revision-Date: 2016-12-02 13:53+0000\n"
+"POT-Creation-Date: 2017-01-14 02:20+0000\n"
+"PO-Revision-Date: 2017-01-19 20:17+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/oca/OCA-crm-8-0/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -65,7 +65,7 @@ msgstr ""
 #. module: crm_action
 #: view:crm.action:crm_action.view_crm_action_filter
 msgid "Action Type"
-msgstr ""
+msgstr "Tipo de ação"
 
 #. module: crm_action
 #: model:ir.actions.act_window,name:crm_action.action_crm_action_type_view
@@ -236,7 +236,7 @@ msgstr "Nome"
 #. module: crm_action
 #: field:crm.lead,next_action_id:0
 msgid "Next Action"
-msgstr ""
+msgstr "Próxima ação"
 
 #. module: crm_action
 #: view:crm.action:crm_action.view_crm_action_filter

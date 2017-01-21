@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-02 14:15+0000\n"
-"PO-Revision-Date: 2016-11-25 14:55+0000\n"
+"POT-Creation-Date: 2017-01-14 02:20+0000\n"
+"PO-Revision-Date: 2017-01-19 20:17+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/oca/OCA-crm-8-0/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -158,7 +158,7 @@ msgstr "Criado em"
 #. module: lettermgmt
 #: help:res.letter,message_last_post:0
 msgid "Date of the last message posted on the record."
-msgstr ""
+msgstr "Data da última mensagem postada no registro"
 
 #. module: lettermgmt
 #: view:res.letter:lettermgmt.res_letter_form_view field:res.letter,note:0
@@ -195,7 +195,7 @@ msgstr ""
 #. module: lettermgmt
 #: field:res.letter,message_follower_ids:0
 msgid "Followers"
-msgstr ""
+msgstr "Seguidores"
 
 #. module: lettermgmt
 #: help:res.letter,message_summary:0
@@ -219,7 +219,7 @@ msgstr "IN"
 #. module: lettermgmt
 #: help:res.letter,message_unread:0
 msgid "If checked new messages require your attention."
-msgstr ""
+msgstr "Se marcado novas mensagens requerem sua atenção."
 
 #. module: lettermgmt
 #: model:ir.actions.act_window,name:lettermgmt.action_res_letter_in_tree_view
@@ -245,7 +245,7 @@ msgstr ""
 #. module: lettermgmt
 #: field:res.letter,message_last_post:0
 msgid "Last Message Date"
-msgstr ""
+msgstr "Última data de mensagem"
 
 #. module: lettermgmt
 #: field:letter.category,__last_update:0 field:letter.channel,__last_update:0
@@ -376,7 +376,7 @@ msgstr ""
 #. module: lettermgmt
 #: field:res.letter,message_ids:0
 msgid "Messages"
-msgstr ""
+msgstr "Mensagens"
 
 #. module: lettermgmt
 #: help:res.letter,message_ids:0
@@ -623,7 +623,7 @@ msgstr ""
 #. module: lettermgmt
 #: field:res.letter,message_unread:0
 msgid "Unread Messages"
-msgstr ""
+msgstr "Mensagens não lidas"
 
 #. module: lettermgmt
 #: model:res.groups,name:lettermgmt.group_letter_thread
