@@ -168,40 +168,13 @@ class CrmPhonecall(models.Model):
             phonecall_dict[call.id] = new_id
         return phonecall_dict
 
-    @api.multi
-    def _call_create_partner(self, phonecall):
-        partner = self.env['res.partner']
-        for call in self:
-            partner_id = partner.create({
-                'name': phonecall.name,
-                'user_id': phonecall.user_id.id,
-                'comment': phonecall.description,
-                'address': []
-            })
-        return partner_id
-
     @api.onchange('opportunity_id')
     def on_change_opportunity(self):
         if self.opportunity_id:
-            self.team_id = self. opportunity.team_id.id
-            self.partner_phone = self.opportunity.phone
-            self.partner_mobile = self.opportunity.mobile
-            self.partner_id = self.opportunity.partner_id.id
-
-    @api.model
-    def _call_set_partner(self, partner_id):
-        write_res = self.write({'partner_id': partner_id})
-        self._call_set_partner_send_note()
-        return write_res
-
-    @api.model
-    def _call_create_partner_address(self, phonecall, partner_id):
-        address = self.env['res.partner']
-        return address.create({
-            'parent_id': partner_id,
-            'name': phonecall.name,
-            'phone': phonecall.partner_phone,
-        })
+            self.team_id = self.opportunity_id.team_id.id
+            self.partner_phone = self.opportunity_id.phone
+            self.partner_mobile = self.opportunity_id.mobile
+            self.partner_id = self.opportunity_id.partner_id.id
 
     @api.multi
     def redirect_phonecall_view(self):
