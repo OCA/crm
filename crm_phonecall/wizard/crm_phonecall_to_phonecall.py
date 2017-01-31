@@ -56,7 +56,7 @@ class CrmPhonecall2phonecall(models.TransientModel):
             phonecalls.schedule_another_phonecall(
                 this.date,
                 this.name,
-                this.user_id.id or False,
+                this.user_id.id,
                 this.team_id.id or False,
                 this.tag_id.id or False,
                 action=this.action,
@@ -84,16 +84,10 @@ class CrmPhonecall2phonecall(models.TransientModel):
                 tag_id = data_obj.browse(res_id).res_id
             except ValueError:
                 pass
-            if 'name' in fields:
-                res.update({'name': phonecall.name})
-            if 'user_id' in fields:
-                res.update({'user_id': phonecall.user_id.id})
-            if 'date' in fields:
-                res.update({'date': False})
-            if 'team_id' in fields:
-                res.update({'team_id': phonecall.team_id.id})
             if 'tag_id' in fields:
                 res.update({'tag_id': tag_id})
-            if 'partner_id' in fields:
-                res.update({'partner_id': phonecall.partner_id.id})
+            for field in ('name', 'user_id.id', 'date', 'team_id.id',
+                          'partner_id.id'):
+                if field in fields:
+                    res[field] = getattr(phonecall, field)
         return res

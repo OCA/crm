@@ -6,7 +6,8 @@
     "name": "CRM Phone Calls",
     "version": "9.0.1.0.0",
     "category": "Customer Relationship Management",
-    "author": "Tecnativa, "
+    "author": "Odoo S.A., "
+              "Tecnativa, "
               "Odoo Community Association (OCA)",
     "website": "http://www.tecnativa.com",
     "license": "AGPL-3",

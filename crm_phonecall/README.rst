@@ -40,6 +40,7 @@ Credits
 Contributors
 ------------
 
+* Odoo S.A.
 * Vicent Cubells <vicent.cubells@tecnativa.com>
 
 Maintainer

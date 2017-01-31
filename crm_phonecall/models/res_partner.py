@@ -17,8 +17,6 @@ class ResPartner(models.Model):
     phonecall_count = fields.Integer(
         compute='_phonecall_count',
         string="Phonecalls",
-        copy=False,
-        default=0,
     )
 
     @api.multi
