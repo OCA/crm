@@ -1,18 +1,21 @@
 # -*- coding: utf-8 -*-
-# © 2016 Antiun Ingeniería S.L. - Jairo Llopis
+# Copyright 2016 Antiun Ingeniería S.L. - Jairo Llopis
+# Copyright 2017 Tecnativa - Vicent Cubells
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 {
     "name": "Restricted Summary for Phone Calls",
     "summary": "Allows to choose from a defined summary list",
-    "version": "8.0.1.0.0",
+    "version": "9.0.1.0.0",
     "category": "Customer Relationship Management",
-    "website": "http://www.antiun.com",
-    "author": "Antiun Ingeniería S.L., Odoo Community Association (OCA)",
+    "website": "http://www.tecnativa.com",
+    "author": "Tecnativa, "
+              "Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
+    "post_init_hook": "convert_names_to_many2one",
     "depends": [
-        "crm",
+        "crm_phonecall",
     ],
     "data": [
         "security/ir.model.access.csv",
