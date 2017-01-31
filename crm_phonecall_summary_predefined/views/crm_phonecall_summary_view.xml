@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- © 2016 Antiun Ingeniería S.L. - Jairo Llopis
+<!-- Copyright 2016 Antiun Ingeniería S.L. - Jairo Llopis
+     Copyright 2017 Tecnativa - Vicent Cubells
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
 
-<openerp>
-<data>
+<odoo>
 
     <record id="summary_form" model="ir.ui.view">
         <field name="name">CRM Phonecall Summary Form</field>
@@ -51,7 +51,6 @@
         id="summary_menu"
         action="summary_action"
         groups="base.group_sale_manager"
-        parent="crm.menu_crm_config_phonecall"/>
+        parent="crm_phonecall.menu_crm_config_phonecall"/>
 
-</data>
-</openerp>
+</odoo>
