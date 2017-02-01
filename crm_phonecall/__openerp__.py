@@ -27,4 +27,5 @@
         'report/crm_phonecall_report_view.xml',
     ],
     'installable': True,
+    "pre_init_hook": "rename_xmlids_hook",
 }
