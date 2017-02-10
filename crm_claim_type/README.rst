@@ -1,6 +1,8 @@
 .. image:: https://img.shields.io/badge/licence-AGPL--3-blue.svg
-    :alt: License: AGPL-3
+   :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
+   :alt: License: AGPL-3
 
+===============
 CRM Claim Types
 ===============
 
@@ -8,18 +10,11 @@ Includes a way to classify claims adding the concept of type and with this, it a
 
 This module includes Customer, Supplier and Other claim types as default data and its own stages relation, and also makes few stages common for different claim types
 
-Installation
-============
-
-To install this module, you just need to select it from availables modules
-
 Configuration
 =============
 
-This modules do not require special configurations.
-It contains a predefined set of claim types.
-
-If you want add your own types go to Sales > Configurations > Claim > Claim Types.
+This module requires to review the claim types and associated stages in
+Sales > Configurations > Claim > Claim Types.
 
 Usage
 =====
@@ -47,11 +42,17 @@ If you spotted it first, help us smashing it by providing a detailed and welcome
 Credits
 =======
 
+Images
+------
+
+* Odoo Community Association: `Icon <https://github.com/OCA/maintainer-tools/blob/master/template/module/static/description/icon.svg>`_.
+
 Contributors
 ------------
 
 * Yanina Aular <yanina.aular@vauxoo.com>
 * Osval Reyes <osval@vauxoo.com>
+* Jacques-Etienne Baudoux <je@bcim.be>
 
 Maintainer
 ----------
