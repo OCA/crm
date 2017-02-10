@@ -41,7 +41,7 @@ class CrmLead(models.Model):
         Erases too the lost reason if the lead is passed from lost to
         another stage.
         """
-        if 'stage_id' in vals:
+        if 'stage_id' in vals and not self._context.get('install_mode'):
             new_stage = self.env['crm.case.stage'].browse(vals['stage_id'])
             lost_stage = self.env.ref('crm.stage_lead7')
             for lead in self:
