@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-14 02:20+0000\n"
-"PO-Revision-Date: 2017-01-19 21:07+0000\n"
+"POT-Creation-Date: 2017-02-18 01:47+0000\n"
+"PO-Revision-Date: 2017-02-25 00:44+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: German (http://www.transifex.com/oca/OCA-crm-8-0/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 #. module: crm_claim_type
 #: model:crm.claim.stage,name:crm_claim_type.stage_claim10
 msgid "Accepted"
-msgstr ""
+msgstr "Akzeptiert"
 
 #. module: crm_claim_type
 #: field:crm.claim.type,active:0
@@ -139,7 +139,7 @@ msgstr "Bezeichnung"
 #. module: crm_claim_type
 #: model:crm.claim.type,name:crm_claim_type.crm_claim_type_other
 msgid "Other"
-msgstr ""
+msgstr "Andere"
 
 #. module: crm_claim_type
 #: view:crm.claim.stage:crm_claim_type.crm_stage_claim_type_search
@@ -149,4 +149,4 @@ msgstr ""
 #. module: crm_claim_type
 #: model:crm.claim.type,name:crm_claim_type.crm_claim_type_supplier
 msgid "Supplier"
-msgstr ""
+msgstr "Lieferant"

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-02 14:15+0000\n"
-"PO-Revision-Date: 2016-10-11 09:51+0000\n"
+"POT-Creation-Date: 2017-02-18 01:47+0000\n"
+"PO-Revision-Date: 2017-02-23 15:58+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Basque (http://www.transifex.com/oca/OCA-crm-8-0/language/eu/)\n"
 "MIME-Version: 1.0\n"
@@ -118,7 +118,7 @@ msgstr ""
 #. module: crm_action
 #: field:crm.action,company_id:0
 msgid "Company"
-msgstr ""
+msgstr "Enpresa"
 
 #. module: crm_action
 #: field:crm.action,create_uid:0 field:crm.action.type,create_uid:0
@@ -240,7 +240,7 @@ msgstr ""
 #. module: crm_action
 #: view:crm.action:crm_action.view_crm_action_filter
 msgid "Partner"
-msgstr ""
+msgstr "Kidea"
 
 #. module: crm_action
 #: field:crm.action.type,priority:0
@@ -287,7 +287,7 @@ msgstr ""
 #. module: crm_action
 #: view:crm.action:crm_action.view_crm_action_filter
 msgid "Week"
-msgstr ""
+msgstr "Astea"
 
 #. module: crm_action
 #: model:email.template,subject:crm_action.crm_action_reminder_email_template

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-24 01:15+0000\n"
-"PO-Revision-Date: 2016-12-27 08:26+0000\n"
+"POT-Creation-Date: 2017-02-04 01:28+0000\n"
+"PO-Revision-Date: 2017-02-23 15:58+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Basque (http://www.transifex.com/oca/OCA-crm-8-0/language/eu/)\n"
 "MIME-Version: 1.0\n"
@@ -118,7 +118,7 @@ msgstr ""
 #. module: lettermgmt
 #: field:letter.folder,code:0 field:letter.type,code:0
 msgid "Code"
-msgstr ""
+msgstr "Kodea"
 
 #. module: lettermgmt
 #: sql_constraint:letter.folder:0 sql_constraint:letter.type:0
@@ -138,7 +138,7 @@ msgstr ""
 #. module: lettermgmt
 #: model:ir.ui.menu,name:lettermgmt.letter_log_config_menu
 msgid "Configuration"
-msgstr ""
+msgstr "Konfigurazioa"
 
 #. module: lettermgmt
 #: field:letter.category,create_uid:0 field:letter.channel,create_uid:0
@@ -517,7 +517,7 @@ msgstr ""
 #. module: lettermgmt
 #: view:res.letter:lettermgmt.res_letter_form_view
 msgid "Send"
-msgstr ""
+msgstr "Bidali"
 
 #. module: lettermgmt
 #: model:ir.model,name:lettermgmt.model_letter_channel
