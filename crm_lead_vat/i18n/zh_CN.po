@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * crm_lead_website
+# * crm_lead_vat
 # 
 # Translators:
 msgid ""
@@ -17,12 +17,18 @@ msgstr ""
 "Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#. module: crm_lead_website
-#: model:ir.model,name:crm_lead_website.model_crm_lead
+#. module: crm_lead_vat
+#: model:ir.model,name:crm_lead_vat.model_crm_lead
 msgid "Lead/Opportunity"
 msgstr "线索/商机"
 
-#. module: crm_lead_website
-#: field:crm.lead,website:0
-msgid "Website"
-msgstr "网站"
+#. module: crm_lead_vat
+#: field:crm.lead,vat:0
+msgid "TIN"
+msgstr ""
+
+#. module: crm_lead_vat
+#: help:crm.lead,vat:0
+msgid ""
+"Tax Identification Number. The first 2 characters are the country code."
+msgstr ""

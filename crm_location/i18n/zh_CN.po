@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * crm_lead_website
+# * crm_location
 # 
 # Translators:
 msgid ""
@@ -17,12 +17,23 @@ msgstr ""
 "Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#. module: crm_lead_website
-#: model:ir.model,name:crm_lead_website.model_crm_lead
+#. module: crm_location
+#: view:crm.lead:crm_location.crm_case_form_view_leads
+#: view:crm.lead:crm_location.crm_case_form_view_oppor
+msgid "City completion"
+msgstr ""
+
+#. module: crm_location
+#: model:ir.model,name:crm_location.model_crm_lead
 msgid "Lead/Opportunity"
 msgstr "线索/商机"
 
-#. module: crm_lead_website
-#: field:crm.lead,website:0
-msgid "Website"
-msgstr "网站"
+#. module: crm_location
+#: field:crm.lead,location_id:0
+msgid "Location"
+msgstr ""
+
+#. module: crm_location
+#: help:crm.lead,location_id:0
+msgid "Use the city name or the zip code to search the location"
+msgstr ""

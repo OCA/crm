@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * crm_lead_website
+# * crm_lead_second_lastname
 # 
 # Translators:
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-02-25 01:51+0000\n"
-"PO-Revision-Date: 2016-03-10 18:53+0000\n"
+"PO-Revision-Date: 2016-03-13 11:38+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/oca/OCA-crm-8-0/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -17,12 +17,18 @@ msgstr ""
 "Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#. module: crm_lead_website
-#: model:ir.model,name:crm_lead_website.model_crm_lead
+#. module: crm_lead_second_lastname
+#: model:ir.model,name:crm_lead_second_lastname.model_crm_lead
 msgid "Lead/Opportunity"
 msgstr "线索/商机"
 
-#. module: crm_lead_website
-#: field:crm.lead,website:0
-msgid "Website"
-msgstr "网站"
+#. module: crm_lead_second_lastname
+#: field:crm.lead,contact_lastname2:0
+msgid "Second last name"
+msgstr ""
+
+#. module: crm_lead_second_lastname
+#: view:crm.lead:crm_lead_second_lastname.crm_case_form_view_leads
+#: view:crm.lead:crm_lead_second_lastname.crm_case_form_view_oppor
+msgid "Second lastname"
+msgstr ""
