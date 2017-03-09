@@ -22,6 +22,24 @@
             </field>
         </record>
 
+        <record id="crm_case_form_view_leads_reason" model="ir.ui.view">
+            <field name="name">Leads - add Reason</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_form_view_leads"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@string='Convert to Opportunity']" position="before">
+                    <button name="%(action_crm_lead_lost)d" string="Mark Lost" type="action" class="oe_highlight" groups="base.group_user"/>
+                </xpath>
+                <xpath expr="/form/sheet/div[@class='oe_title']/h1" position="after">
+                    <h2 attrs="{'invisible':[('lost_reason_id','=',False)]}">
+                        <label for="lost_reason_id" string="Lost reason:"/>
+                        <field name="lost_reason_id" class="oe_inline"
+                          options='{"no_open": True}' />
+                    </h2>
+                </xpath>
+            </field>
+        </record>
+
         <record model="ir.ui.view" id="view_crm_lead_lost_reason_form">
             <field name="name">Crm Lead Lost Reason</field>
             <field name="model">crm.lead.lost.reason</field>
