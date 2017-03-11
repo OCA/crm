@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-04 01:28+0000\n"
-"PO-Revision-Date: 2017-02-25 00:44+0000\n"
+"POT-Creation-Date: 2017-02-25 01:51+0000\n"
+"PO-Revision-Date: 2017-03-10 13:16+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: German (http://www.transifex.com/oca/OCA-crm-8-0/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -185,7 +185,7 @@ msgstr ""
 #. module: lettermgmt
 #: field:res.letter,folder_id:0
 msgid "Folder"
-msgstr ""
+msgstr "Ordner"
 
 #. module: lettermgmt
 #: help:res.letter,folder_id:0
@@ -195,7 +195,7 @@ msgstr "Ordner, der Brief enthält."
 #. module: lettermgmt
 #: field:res.letter,message_follower_ids:0
 msgid "Followers"
-msgstr ""
+msgstr "Follower"
 
 #. module: lettermgmt
 #: help:res.letter,message_summary:0
@@ -533,7 +533,7 @@ msgstr "Absender"
 #. module: lettermgmt
 #: selection:res.letter,state:0
 msgid "Sent"
-msgstr ""
+msgstr "Gesendet"
 
 #. module: lettermgmt
 #: help:res.letter,channel_id:0
@@ -563,7 +563,7 @@ msgstr "Status"
 #. module: lettermgmt
 #: field:res.letter,name:0
 msgid "Subject"
-msgstr ""
+msgstr "Thema"
 
 #. module: lettermgmt
 #: help:res.letter,name:0
@@ -573,7 +573,7 @@ msgstr "Thema des Briefs"
 #. module: lettermgmt
 #: field:res.letter,message_summary:0
 msgid "Summary"
-msgstr ""
+msgstr "Zusammenfassung"
 
 #. module: lettermgmt
 #: field:res.letter,category_ids:0
