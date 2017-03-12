@@ -8,7 +8,7 @@
     'summary': 'Claim types for CRM',
     'author': 'Odoo Community Association (OCA),'
               'Vauxoo',
-    'website': 'www.vauxoo.com',
+    'website': 'https://www.vauxoo.com/',
     'license': 'AGPL-3',
     'version': '9.0.1.0.0',
     'depends': [
