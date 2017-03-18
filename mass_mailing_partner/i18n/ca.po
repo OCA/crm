@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-13 09:09+0000\n"
-"PO-Revision-Date: 2017-01-13 09:22+0000\n"
+"POT-Creation-Date: 2017-03-12 11:42+0000\n"
+"PO-Revision-Date: 2017-03-17 09:39+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/oca/OCA-crm-8-0/language/ca/)\n"
 "MIME-Version: 1.0\n"
@@ -56,7 +56,7 @@ msgstr "Veure el nom"
 #. module: mass_mailing_partner
 #: model:ir.model,name:mass_mailing_partner.model_mail_mail_statistics
 msgid "Email Statistics"
-msgstr ""
+msgstr "Estadístiques de correu electrònic"
 
 #. module: mass_mailing_partner
 #: field:partner.mail.list.wizard,id:0
