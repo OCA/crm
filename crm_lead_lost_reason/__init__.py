@@ -19,5 +19,5 @@
 #
 #
 
-from . import wizard
-from . import model
+from . import wizards
+from . import models
