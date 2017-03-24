@@ -18,9 +18,9 @@
         </field>
     </record>
     <menuitem id="menu_crm_config_phonecall" name="Phone Calls"
-            parent="base.menu_crm_config_lead" sequence="45" groups="base.group_sale_salesman"/>
+            parent="base.menu_crm_config_lead" sequence="45"/>
     <menuitem action="crm_phonecall_categ_action" name="Categories"
-        id="menu_crm_case_phonecall-act" parent="menu_crm_config_phonecall" groups="base.group_no_one"/>
+        id="menu_crm_case_phonecall-act" parent="menu_crm_config_phonecall"/>
 
     <record model="ir.ui.view" id="crm_case_phone_tree_view">
         <field name="name">CRM - Phone Calls Tree</field>
