@@ -15,7 +15,6 @@ addon | version | summary
 [crm_claim_type](crm_claim_type/) | 9.0.1.0.0 (unported) | Claim types for CRM
 [crm_lead_address_street3](crm_lead_address_street3/) | 8.0.0.1.0 (unported) | Street3 in lead addresses
 [crm_lead_code](crm_lead_code/) | 8.0.1.0.0 (unported) | Sequential Code for Leads / Opportunities
-[crm_lead_lost_reason](crm_lead_lost_reason/) | 8.0.1.0.0 (unported) | Opportunity Lost Reason
 [crm_lead_sale_link](crm_lead_sale_link/) | 8.0.1.0.0 (unported) | CRM Lead Sale Link
 [crm_lead_stage_monitoring](crm_lead_stage_monitoring/) | 1.0.0 (unported) | CRM - Add last activity on stage field
 [crm_location](crm_location/) | 8.0.1.0.0 (unported) | CRM location
