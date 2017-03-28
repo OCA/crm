@@ -40,6 +40,7 @@ addon | version | summary
 [newsletter](newsletter/) | 8.0.2.0.0 | Send newsletters to customers, employees or other entities
 [partner_withdrawal](partner_withdrawal/) | 8.0.1.0.0 | Partner membership withdrawal
 
+
 Unported addons
 ---------------
 addon | version | summary
