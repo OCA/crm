@@ -22,6 +22,7 @@ addon | version | summary
 [crm_sale_marketing](crm_sale_marketing/) | 9.0.1.0.0 | Marketing Details of Sales
 [marketing_crm_partner](marketing_crm_partner/) | 9.0.1.0.0 | Copy tracking fields from leads to partners
 
+
 Unported addons
 ---------------
 addon | version | summary
