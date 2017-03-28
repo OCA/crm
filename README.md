@@ -6,6 +6,7 @@ CRM addons for Odoo
 ===================
 
 [//]: # (addons)
+
 Unported addons
 ---------------
 addon | version | summary
