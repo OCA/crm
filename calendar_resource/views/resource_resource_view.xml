@@ -17,6 +17,9 @@
                     </h1>
                 </div>
             </xpath>
+            <xpath expr="//field[@name='active']" position="after">
+                <field name="allow_double_book" />
+            </xpath>
             <xpath expr="//form/group" position="inside">
                 <field name="note" />
             </xpath>
