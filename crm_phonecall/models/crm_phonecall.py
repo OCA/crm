@@ -4,8 +4,8 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from datetime import datetime
-from openerp import api, fields, models, _
-from openerp.tools import DEFAULT_SERVER_DATETIME_FORMAT
+from odoo import api, fields, models, _
+from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT
 
 
 class CrmPhonecall(models.Model):
@@ -30,7 +30,7 @@ class CrmPhonecall(models.Model):
     team_id = fields.Many2one(
         comodel_name='crm.team',
         string='Sales Team',
-        select=True,
+        index=True,
         help='Sales team to which Case belongs to.'
     )
     user_id = fields.Many2one(
@@ -270,6 +270,5 @@ class CrmPhonecall(models.Model):
         opportunity_dict = {}
         for call in self:
             opportunity_dict = call.convert_opportunity()
-            return self.env['crm.lead']\
-                .redirect_opportunity_view(opportunity_dict[call.id])
+            return opportunity_dict[call.id].redirect_opportunity_view()
         return opportunity_dict

@@ -61,11 +61,11 @@
                     help="Phone calls which are in pending state"/>
                 <separator/>
                 <filter string="My Sales Team(s)" context="{'invisible_section': False}" domain="[('team_id.user_id','=',uid)]"
-                        help="Phone calls that are assigned to one of the sale teams I manage" groups="base.group_multi_salesteams"/>
+                        help="Phone calls that are assigned to one of the sale teams I manage" groups="sales_team.group_sale_manager"/>
                 <separator/>
                 <filter string="My Phone Calls" help="Phone Calls that are assigned to me" domain="[('user_id','=',uid)]" />
                 <field name="team_id" string="Sales Team" context="{'invisible_section': False}"
-                        groups="base.group_multi_salesteams"/>
+                        groups="sales_team.group_sale_manager"/>
                 <field name="user_id" string="Salesperson"/>
                 <group expand="0" string="Extended Filters...">
                     <field name="partner_id" filter_domain="[('partner_id','child_of',self)]"/>
@@ -75,7 +75,7 @@
                 </group>
                 <group expand="1" string="Group By">
                     <filter string="Salesperson" name="Salesperson" context="{'group_by':'user_id'}" />
-                    <filter string="Sales Team" context="{'group_by':'team_id'}" groups="base.group_multi_salesteams"/>
+                    <filter string="Sales Team" context="{'group_by':'team_id'}" groups="sales_team.group_sale_manager"/>
                     <filter string="Customer" context="{'group_by':'partner_id'}" />
                     <filter string="Status" context="{'group_by':'state'}" />
                     <separator/>
@@ -101,8 +101,8 @@
        <field name="domain">[]</field>
    </record>
     <menuitem name="Phone Calls Analysis"
-        groups="base.group_sale_salesman"
+        groups="sales_team.group_sale_salesman"
         action="crm_phonecall_report_action"
-        id="menu_report_crm_phonecalls_tree" parent="base.menu_sale_report" sequence="15"/>
+        id="menu_report_crm_phonecalls_tree" parent="sales_team.menu_sale_report" sequence="15"/>
 
 </odoo>

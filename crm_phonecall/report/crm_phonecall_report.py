@@ -3,8 +3,8 @@
 # Copyright 2017 Tecnativa - Vicent Cubells
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from openerp import tools
-from openerp import fields, models
+from odoo import tools
+from odoo import api, fields, models
 
 AVAILABLE_STATES = [
     ('draft', 'Draft'),
@@ -50,7 +50,7 @@ class CrmPhonecallReport(models.Model):
     create_date = fields.Datetime(
         string='Create Date',
         readonly=True,
-        select=True,
+        index=True,
     )
     delay_close = fields.Float(
         string='Delay to close',
@@ -84,12 +84,12 @@ class CrmPhonecallReport(models.Model):
     )
     opening_date = fields.Datetime(
         readonly=True,
-        select=True,
+        index=True,
     )
     date_closed = fields.Datetime(
         string='Close Date',
         readonly=True,
-        select=True)
+        index=True)
 
     def _select(self):
         select_str = """
@@ -121,10 +121,11 @@ class CrmPhonecallReport(models.Model):
         """
         return from_str
 
-    def init(self, cr):
+    @api.model_cr
+    def init(self):
 
-        tools.drop_view_if_exists(cr, self._table)
-        cr.execute("""
+        tools.drop_view_if_exists(self._cr, self._table)
+        self._cr.execute("""
             create or replace view %s as (
                 %s
                 %s

@@ -2,9 +2,9 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-==============
-Crm Phonecalls
-==============
+===============
+CRM phone calls
+===============
 
 * This module allows to manage phone calls in order to analyze them.
 
@@ -13,18 +13,18 @@ Usage
 
 To use this module, you need to:
 
-* Go to *Sales > Phone Calls > Logged Calls > Create*.
-* If your user has *Show Scheduled Calls Menu* permission, you will see
+#. Go to *Sales > Phone Calls > Logged Calls > Create*.
+#. If your user has *Show Scheduled Calls Menu* permission, you will see
    scheduled calls menu too.
-* In any moment you can schedule another call, schedule a meeting or convert
+#. In any moment you can schedule another call, schedule a meeting or convert
    call contact to opportunity.
-* Calls can be categorized and you can manage categories in *Sales >
+#. Calls can be categorized and you can manage categories in *Sales >
    Configuration > Leads & Opportunities > Phone Calls > Categories*.
-* Calls can be analyzed in *Sales > Reports > Phone Calls Analysis*.
+#. Calls can be analyzed in *Sales > Reports > Phone Calls Analysis*.
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
-   :target: https://runbot.odoo-community.org/runbot/134/9.0
+   :target: https://runbot.odoo-community.org/runbot/134/10.0
 
 Bug Tracker
 ===========
@@ -56,4 +56,4 @@ OCA, or the Odoo Community Association, is a nonprofit organization whose
 mission is to support the collaborative development of Odoo features and
 promote its widespread use.
 
-To contribute to this module, please visit http://odoo-community.org.
+To contribute to this module, please visit https://odoo-community.org.

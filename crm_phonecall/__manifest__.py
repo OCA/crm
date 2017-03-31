@@ -4,16 +4,13 @@
 
 {
     "name": "CRM Phone Calls",
-    "version": "9.0.1.0.0",
+    "version": "10.0.1.0.0",
     "category": "Customer Relationship Management",
     "author": "Odoo S.A., "
               "Tecnativa, "
               "Odoo Community Association (OCA)",
     "website": "http://www.tecnativa.com",
     "license": "AGPL-3",
-    "contributors": [
-        "Vicent Cubells <vicent.cubells@tecnativa.com>",
-    ],
     "depends": [
         'crm',
         'calendar',
@@ -27,5 +24,4 @@
         'report/crm_phonecall_report_view.xml',
     ],
     'installable': True,
-    "pre_init_hook": "rename_xmlids_hook",
 }

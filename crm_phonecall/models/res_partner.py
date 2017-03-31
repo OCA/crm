@@ -3,7 +3,7 @@
 # Copyright (C) 2017 Tecnativa - Vicent Cubells
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from openerp import api, fields, models
+from odoo import api, fields, models
 
 
 class ResPartner(models.Model):
@@ -15,12 +15,12 @@ class ResPartner(models.Model):
         string='Phonecalls',
     )
     phonecall_count = fields.Integer(
-        compute='_phonecall_count',
+        compute='_compute_phonecall_count',
         string="Phonecalls",
     )
 
     @api.multi
-    def _phonecall_count(self):
+    def _compute_phonecall_count(self):
         for partner in self:
             partner.phonecall_count = self.env[
                 'crm.phonecall'].search_count(
