@@ -136,7 +136,7 @@ class CrmPhonecall(models.Model):
     @api.multi
     def schedule_another_phonecall(self, schedule_time, call_summary,
                                    user_id=False, team_id=False,
-                                   tag_id=False, action='schedule'):
+                                   tag_ids=False, action='schedule'):
         """
         action :('schedule','Schedule a call'), ('log','Log a call')
         """
@@ -160,8 +160,8 @@ class CrmPhonecall(models.Model):
                 'priority': call.priority,
                 'opportunity_id': call.opportunity_id.id or False,
             }
-            if tag_id:
-                values.update({'tag_ids': [(6, 0, [tag_id])]})
+            if tag_ids:
+                values.update({'tag_ids': [(6, 0, [tag_ids])]})
             new_id = self.create(values)
             if action == 'log':
                 call.write({'state': 'done'})
@@ -175,6 +175,7 @@ class CrmPhonecall(models.Model):
             self.partner_phone = self.opportunity_id.phone
             self.partner_mobile = self.opportunity_id.mobile
             self.partner_id = self.opportunity_id.partner_id.id
+            self.tag_ids = self.opportunity_id.tag_ids.ids
 
     @api.multi
     def redirect_phonecall_view(self):
@@ -229,6 +230,7 @@ class CrmPhonecall(models.Model):
                 'type': 'opportunity',
                 'phone': call.partner_phone or False,
                 'email_from': default_contact and default_contact.email,
+                'tag_ids': [(6, 0, call.tag_ids.ids)],
             })
             vals = {
                 'partner_id': partner_id,
