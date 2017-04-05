@@ -7,6 +7,13 @@ CRM addons for Odoo
 
 [//]: # (addons)
 
+Available addons
+----------------
+addon | version | summary
+--- | --- | ---
+[crm_phonecall](crm_phonecall/) | 10.0.1.0.0 | CRM Phone Calls
+
+
 Unported addons
 ---------------
 addon | version | summary
