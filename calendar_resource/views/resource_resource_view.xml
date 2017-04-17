@@ -1,0 +1,29 @@
+<?xml version = "1.0" encoding="utf-8"?>
+
+<odoo>
+
+    <record id="resource_resource_form" model="ir.ui.view">
+        <field name="name">resource.resource.form</field>
+        <field name="model">resource.resource</field>
+        <field name="inherit_id" ref="resource.resource_resource_form" />
+        <field name="arch" type="xml">
+            <field name="name" position="replace" />
+            <xpath expr="//group[group[field[@name='user_id']]]" position="before">
+                <div class="oe_title">
+                    <h1>
+                        <field name="name"
+                               default_focus="1"
+                               placeholder="Name" />
+                    </h1>
+                </div>
+            </xpath>
+            <xpath expr="//field[@name='active']" position="after">
+                <field name="allow_double_book" />
+            </xpath>
+            <xpath expr="//form/group" position="inside">
+                <field name="note" />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
