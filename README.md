@@ -11,6 +11,7 @@ Available addons
 ----------------
 addon | version | summary
 --- | --- | ---
+[calendar_resource](calendar_resource/) | 10.0.1.0.0 | New features to facilitate resource management with meetings.
 [crm_phonecall](crm_phonecall/) | 10.0.1.0.0 | CRM Phone Calls
 
 
