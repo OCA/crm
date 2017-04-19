@@ -8,8 +8,6 @@ from openerp import SUPERUSER_ID
 
 
 def create_code_equal_to_id(cr):
-    cr.execute('ALTER TABLE crm_lead '
-               'ADD COLUMN code character varying;')
     cr.execute('UPDATE crm_lead '
                'SET code = id;')
 

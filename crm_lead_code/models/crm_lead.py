@@ -9,11 +9,10 @@ from openerp import api, fields, models
 class CrmLead(models.Model):
     _inherit = "crm.lead"
 
-    code = fields.Char(
-        string='Lead Number', required=True, default="/", readonly=True)
+    code = fields.Char(string='Lead Number', required=True, default="/", readonly=True)
 
     _sql_constraints = [
-        ('crm_lead_unique_code', 'UNIQUE (code)',
+        ('crm_lead_unique_code', 'UNIQUE(code)',
          'The code must be unique!'),
     ]
 
