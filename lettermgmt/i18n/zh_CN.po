@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-25 01:51+0000\n"
-"PO-Revision-Date: 2017-03-03 06:30+0000\n"
+"POT-Creation-Date: 2017-03-28 02:26+0000\n"
+"PO-Revision-Date: 2017-04-19 01:22+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/oca/OCA-crm-8-0/language/zh_CN/)\n"
 "MIME-Version: 1.0\n"
@@ -174,7 +174,7 @@ msgstr "显示名称"
 #. module: lettermgmt
 #: selection:res.letter,state:0
 msgid "Draft"
-msgstr ""
+msgstr "草稿"
 
 #. module: lettermgmt
 #: field:res.letter,expeditor_ref:0
@@ -201,7 +201,7 @@ msgstr "关注者"
 msgid ""
 "Holds the Chatter summary (number of messages, ...). This summary is "
 "directly in html format in order to be inserted in kanban views."
-msgstr ""
+msgstr "HTML格式的简介，包括了各种项目的总结信息（比如消息数，作业数……）"
 
 #. module: lettermgmt
 #: field:letter.category,id:0 field:letter.channel,id:0
@@ -239,7 +239,7 @@ msgstr ""
 #. module: lettermgmt
 #: field:res.letter,message_is_follower:0
 msgid "Is a Follower"
-msgstr ""
+msgstr "关注者"
 
 #. module: lettermgmt
 #: field:res.letter,message_last_post:0
