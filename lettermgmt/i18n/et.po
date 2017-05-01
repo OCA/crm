@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-02 14:15+0000\n"
-"PO-Revision-Date: 2016-11-25 14:57+0000\n"
+"POT-Creation-Date: 2017-03-28 02:26+0000\n"
+"PO-Revision-Date: 2017-04-25 11:10+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Estonian (http://www.transifex.com/oca/OCA-crm-8-0/language/et/)\n"
 "MIME-Version: 1.0\n"
@@ -174,7 +174,7 @@ msgstr "Näidatav nimi"
 #. module: lettermgmt
 #: selection:res.letter,state:0
 msgid "Draft"
-msgstr ""
+msgstr "Mustand"
 
 #. module: lettermgmt
 #: field:res.letter,expeditor_ref:0

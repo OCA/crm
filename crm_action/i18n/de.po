@@ -3,13 +3,14 @@
 # * crm_action
 # 
 # Translators:
+# Rudolf Schnapka <rs@techno-flex.de>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-04 01:51+0000\n"
-"PO-Revision-Date: 2017-03-10 13:16+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
+"POT-Creation-Date: 2017-03-28 02:25+0000\n"
+"PO-Revision-Date: 2017-04-19 11:44+0000\n"
+"Last-Translator: Rudolf Schnapka <rs@techno-flex.de>\n"
 "Language-Team: German (http://www.transifex.com/oca/OCA-crm-8-0/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -59,7 +60,7 @@ msgid ""
 "Automatic e-mail sent by Odoo. Do not reply.\n"
 "</p>\n"
 "</div>\n"
-msgstr ""
+msgstr "\n<div style=\"font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; \">\n\n<p>Sehr geehrte/r ${object.name},</p>\n\n<p>Hier ist eine Liste Ihrer CRM-Aktivitäten die heute für ${ctx.get('company').name} auszuführen sind:</p>\n\n<ul>\n% for action in ctx.get('crm_action_list'):\n<li style=\"margin: 0 0 15px 0;\">${action.lead_id and action.lead_id.name or 'Nicht an einen Lead gebunden'}\n<ul>\n% if action.partner_id:\n<li>Kunde: ${action.partner_id.name_get()[0][1]}</li>\n% endif\n% if not action.partner_id and action.lead_id.partner_name:\n<li>Kunde: ${action.lead_id.partner_name}${action.lead_id.contact_name and ', ' + action.lead_id.contact_name or ''}</li>\n% endif\n<li>Art: ${action.action_type_id.name}</li>\n<li>Details: ${action.details}</li>\n% if action.lead_id and action.lead_id.phone:\n<li>Telefon: <a href=\"tel:${action.lead_id.phone}\">${action.lead_id.phone}</a></li>\n% endif\n% if action.lead_id and action.lead_id.mobile:\n<li>Mobil: <a href=\"tel:${action.lead_id.mobile}\">${action.lead_id.mobile}</a></li>\n% endif\n% if action.lead_id and action.lead_id.email_from:\n<li>Email: <a href=\"mailto:${action.lead_id.email_from}\">${action.lead_id.email_from}</a></li>\n% endif\n\n</ul>\n</li>\n% endfor\n</ul>\n\n<p>\n-- <br/>\nAutomatische Email durch Odoo gesendet. Nicht beantworten.\n</p>\n</div>\n"
 
 #. module: crm_action
 #: view:crm.action:crm_action.view_crm_action_filter
@@ -70,7 +71,7 @@ msgstr "Maßnahmenart"
 #: model:ir.actions.act_window,name:crm_action.action_crm_action_type_view
 #: model:ir.ui.menu,name:crm_action.menu_crm_action_type_act
 msgid "Action Types"
-msgstr ""
+msgstr "Maßnahmenarten"
 
 #. module: crm_action
 #: view:crm.action:crm_action.view_action_form
@@ -87,12 +88,12 @@ msgstr "Aktionen"
 #. module: crm_action
 #: field:crm.lead,actions_count:0
 msgid "Actions count"
-msgstr ""
+msgstr "Maßnahmenanzahl"
 
 #. module: crm_action
 #: view:crm.action:crm_action.view_crm_action_filter
 msgid "Actions done by me"
-msgstr ""
+msgstr "Von mir durchgeführte Maßnahmen"
 
 #. module: crm_action
 #: field:crm.action.type,active:0
@@ -103,17 +104,17 @@ msgstr "Aktiv"
 #: view:crm.action:crm_action.view_action_form
 #: view:crm.action:crm_action.view_action_tree
 msgid "Back to Todo"
-msgstr ""
+msgstr "Zurück zu erledigen"
 
 #. module: crm_action
 #: model:ir.model,name:crm_action.model_crm_action
 msgid "CRM Action"
-msgstr ""
+msgstr "Maßnahme"
 
 #. module: crm_action
 #: model:ir.model,name:crm_action.model_crm_action_type
 msgid "CRM Action Type"
-msgstr ""
+msgstr "Maßnahmenart"
 
 #. module: crm_action
 #: field:crm.action,company_id:0
@@ -143,12 +144,12 @@ msgstr "Datum"
 #. module: crm_action
 #: model:crm.action.type,name:crm_action.demo
 msgid "Demo"
-msgstr ""
+msgstr "Demo"
 
 #. module: crm_action
 #: field:crm.action,details:0
 msgid "Details"
-msgstr ""
+msgstr "Details"
 
 #. module: crm_action
 #: field:crm.action.type,display_name:0
@@ -158,7 +159,7 @@ msgstr "Anzeigename"
 #. module: crm_action
 #: field:crm.action,display_name:0
 msgid "Display name"
-msgstr ""
+msgstr "Anzeigebezeichnung"
 
 #. module: crm_action
 #: view:crm.action:crm_action.view_crm_action_filter
@@ -169,7 +170,7 @@ msgstr "Erledigt"
 #. module: crm_action
 #: model:crm.action.type,name:crm_action.followup
 msgid "Followup"
-msgstr ""
+msgstr "Nachfassen"
 
 #. module: crm_action
 #: view:crm.action:crm_action.view_crm_action_filter
@@ -199,33 +200,33 @@ msgstr "Zuletzt aktualisiert am"
 #. module: crm_action
 #: field:crm.action,lead_id:0
 msgid "Lead"
-msgstr ""
+msgstr "Lead"
 
 #. module: crm_action
 #: model:ir.model,name:crm_action.model_crm_lead
 msgid "Lead/Opportunity"
-msgstr ""
+msgstr "Lead/Chance"
 
 #. module: crm_action
 #: view:crm.action:crm_action.view_action_form
 #: view:crm.action:crm_action.view_action_tree
 msgid "Mark as Done"
-msgstr ""
+msgstr "Erledigt kennzeichnen"
 
 #. module: crm_action
 #: view:crm.lead:crm_action.crm_case_form_view_oppor
 msgid "Mark next action as done"
-msgstr ""
+msgstr "Nächste Maßnahme als erledigt kennzeichnen"
 
 #. module: crm_action
 #: model:crm.action.type,name:crm_action.meeting
 msgid "Meeting"
-msgstr ""
+msgstr "Meeting"
 
 #. module: crm_action
 #: view:crm.action:crm_action.view_crm_action_filter
 msgid "My Actions"
-msgstr ""
+msgstr "Meine Maßnahmen"
 
 #. module: crm_action
 #: field:crm.action.type,name:0
@@ -245,17 +246,17 @@ msgstr "Partner"
 #. module: crm_action
 #: field:crm.action.type,priority:0
 msgid "Priority"
-msgstr ""
+msgstr "Priorität"
 
 #. module: crm_action
 #: view:crm.action.type:crm_action.view_crm_action_type_filter
 msgid "Search Action Types"
-msgstr ""
+msgstr "Suche in Maßnahmenarten"
 
 #. module: crm_action
 #: view:crm.action:crm_action.view_crm_action_filter
 msgid "Search Actions"
-msgstr ""
+msgstr "Suche in Maßnahmen"
 
 #. module: crm_action
 #: field:crm.action,state:0
@@ -266,12 +267,12 @@ msgstr "Status"
 #: view:crm.action:crm_action.view_crm_action_filter
 #: selection:crm.action,state:0
 msgid "Todo"
-msgstr ""
+msgstr "Zu erledigen"
 
 #. module: crm_action
 #: view:crm.action:crm_action.view_crm_action_filter
 msgid "Todo Today"
-msgstr ""
+msgstr "Heute erledigen"
 
 #. module: crm_action
 #: field:crm.action,action_type_id:0
@@ -292,4 +293,4 @@ msgstr "Woche"
 #. module: crm_action
 #: model:email.template,subject:crm_action.crm_action_reminder_email_template
 msgid "[${ctx.get('company').name}] Today's CRM actions"
-msgstr ""
+msgstr "[${ctx.get('company').name}] Heutige Maßnahmen"

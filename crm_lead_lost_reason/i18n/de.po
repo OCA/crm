@@ -3,13 +3,14 @@
 # * crm_lead_lost_reason
 # 
 # Translators:
+# Rudolf Schnapka <rs@techno-flex.de>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-18 01:47+0000\n"
-"PO-Revision-Date: 2017-02-25 00:44+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
+"POT-Creation-Date: 2017-03-28 02:25+0000\n"
+"PO-Revision-Date: 2017-04-19 11:44+0000\n"
+"Last-Translator: Rudolf Schnapka <rs@techno-flex.de>\n"
 "Language-Team: German (http://www.transifex.com/oca/OCA-crm-8-0/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,12 +21,12 @@ msgstr ""
 #. module: crm_lead_lost_reason
 #: model:ir.model,name:crm_lead_lost_reason.model_crm_lead_lost
 msgid " Ask a reason for the opportunity lost."
-msgstr ""
+msgstr "Erfrage Grund für vergebene Chance."
 
 #. module: crm_lead_lost_reason
 #: model:crm.lead.lost.reason,name:crm_lead_lost_reason.lost_reason_not_match
 msgid "Can not match the requirement"
-msgstr ""
+msgstr "Kann die Anforderung nicht erfüllen"
 
 #. module: crm_lead_lost_reason
 #: view:crm.lead.lost:crm_lead_lost_reason.view_crm_lead_lost
@@ -37,7 +38,7 @@ msgstr "Abbrechen"
 msgid ""
 "Choose the reason for the lost of the\n"
 "                    lead."
-msgstr ""
+msgstr "Wählen Sie einen Grund für den \nLeadverlust."
 
 #. module: crm_lead_lost_reason
 #: view:crm.lead.lost:crm_lead_lost_reason.view_crm_lead_lost
@@ -57,13 +58,13 @@ msgstr "Erstellt am:"
 #. module: crm_lead_lost_reason
 #: model:ir.model,name:crm_lead_lost_reason.model_crm_lead_lost_reason
 msgid "Crm Lead Lost Reason"
-msgstr ""
+msgstr "Grund für verlorenen Lead"
 
 #. module: crm_lead_lost_reason
 #: view:crm.lead.lost.reason:crm_lead_lost_reason.view_crm_lead_lost_reason_form
 #: view:crm.lead.lost.reason:crm_lead_lost_reason.view_crm_lead_lost_reason_tree
 msgid "Crm Lead Lost Reasons"
-msgstr ""
+msgstr "Gründe für verlorene Leads"
 
 #. module: crm_lead_lost_reason
 #: field:crm.lead.lost,display_name:0
@@ -95,48 +96,48 @@ msgstr "Zuletzt aktualisiert am"
 #. module: crm_lead_lost_reason
 #: model:ir.model,name:crm_lead_lost_reason.model_crm_lead
 msgid "Lead/Opportunity"
-msgstr ""
+msgstr "Lead/Chance"
 
 #. module: crm_lead_lost_reason
 #: model:ir.actions.act_window,name:crm_lead_lost_reason.action_crm_lead_lost_reason
 #: model:ir.ui.menu,name:crm_lead_lost_reason.menu_crm_lead_lost_reason
 msgid "Lost Reasons"
-msgstr ""
+msgstr "Verlustgründe"
 
 #. module: crm_lead_lost_reason
 #: view:crm.lead:crm_lead_lost_reason.crm_case_form_view_oppor_reason
 msgid "Lost reason:"
-msgstr ""
+msgstr "Verlustgrund:"
 
 #. module: crm_lead_lost_reason
 #: view:crm.lead:crm_lead_lost_reason.crm_case_form_view_oppor_reason
 msgid "Mark Lost"
-msgstr ""
+msgstr "Verloren kennzeichnen"
 
 #. module: crm_lead_lost_reason
 #: model:crm.lead.lost.reason,name:crm_lead_lost_reason.lost_reason_no_news
 msgid "No news from the prospect"
-msgstr ""
+msgstr "Keine Neuigkeiten vom Interessenten"
 
 #. module: crm_lead_lost_reason
 #: model:crm.lead.lost.reason,name:crm_lead_lost_reason.lost_reason_other_competitor
 msgid "Other competitor"
-msgstr ""
+msgstr "Anderer Mitbewerber"
 
 #. module: crm_lead_lost_reason
 #: model:crm.lead.lost.reason,name:crm_lead_lost_reason.lost_reason_other
 msgid "Other reason"
-msgstr ""
+msgstr "Anderer Grund"
 
 #. module: crm_lead_lost_reason
 #: model:crm.lead.lost.reason,name:crm_lead_lost_reason.lost_reason_price
 msgid "Price / No budget"
-msgstr ""
+msgstr "Preis / Ohne Budget"
 
 #. module: crm_lead_lost_reason
 #: model:crm.lead.lost.reason,name:crm_lead_lost_reason.lost_reason_cancelled
 msgid "Project cancelled"
-msgstr ""
+msgstr "Projekt abgebrochen"
 
 #. module: crm_lead_lost_reason
 #: field:crm.lead.lost,reason_id:0 field:crm.lead.lost.reason,name:0
@@ -146,18 +147,18 @@ msgstr "Grund"
 #. module: crm_lead_lost_reason
 #: field:crm.lead,lost_reason_id:0
 msgid "Reason for lost"
-msgstr ""
+msgstr "Grund für Verlust"
 
 #. module: crm_lead_lost_reason
 #: view:crm.lead.lost:crm_lead_lost_reason.view_crm_lead_lost
 #: model:ir.actions.act_window,name:crm_lead_lost_reason.action_crm_lead_lost
 msgid "Reason for the lost"
-msgstr ""
+msgstr "Grund für den Verlust"
 
 #. module: crm_lead_lost_reason
 #: view:crm.lead:crm_lead_lost_reason.crm_case_form_view_oppor_reason
 msgid "True"
-msgstr ""
+msgstr "Wahr"
 
 #. module: crm_lead_lost_reason
 #: view:crm.lead.lost:crm_lead_lost_reason.view_crm_lead_lost

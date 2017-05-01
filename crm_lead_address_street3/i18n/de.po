@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-18 01:47+0000\n"
+"POT-Creation-Date: 2017-03-28 02:25+0000\n"
 "PO-Revision-Date: 2016-03-10 18:53+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: German (http://www.transifex.com/oca/OCA-crm-8-0/language/de/)\n"
@@ -20,7 +20,7 @@ msgstr ""
 #. module: crm_lead_address_street3
 #: model:ir.model,name:crm_lead_address_street3.model_crm_lead
 msgid "Lead/Opportunity"
-msgstr ""
+msgstr "Lead/Chance"
 
 #. module: crm_lead_address_street3
 #: field:crm.lead,street3:0

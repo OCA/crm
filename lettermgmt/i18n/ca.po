@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-14 02:20+0000\n"
-"PO-Revision-Date: 2017-01-17 19:17+0000\n"
+"POT-Creation-Date: 2017-03-28 02:26+0000\n"
+"PO-Revision-Date: 2017-03-30 17:07+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Catalan (http://www.transifex.com/oca/OCA-crm-8-0/language/ca/)\n"
 "MIME-Version: 1.0\n"
@@ -103,7 +103,7 @@ msgstr "Cancel·la"
 #. module: lettermgmt
 #: selection:res.letter,state:0
 msgid "Cancelled"
-msgstr ""
+msgstr "Cancel·lat "
 
 #. module: lettermgmt
 #: field:res.letter,channel_id:0
@@ -128,7 +128,7 @@ msgstr ""
 #. module: lettermgmt
 #: field:letter.reassignment,comment:0
 msgid "Comment"
-msgstr ""
+msgstr "Comentari "
 
 #. module: lettermgmt
 #: help:letter.reassignment,comment:0
@@ -174,7 +174,7 @@ msgstr "Veure el nom"
 #. module: lettermgmt
 #: selection:res.letter,state:0
 msgid "Draft"
-msgstr ""
+msgstr "Esborrany"
 
 #. module: lettermgmt
 #: field:res.letter,expeditor_ref:0
@@ -184,7 +184,7 @@ msgstr ""
 #. module: lettermgmt
 #: field:res.letter,folder_id:0
 msgid "Folder"
-msgstr ""
+msgstr "Carpeta "
 
 #. module: lettermgmt
 #: help:res.letter,folder_id:0
@@ -194,7 +194,7 @@ msgstr ""
 #. module: lettermgmt
 #: field:res.letter,message_follower_ids:0
 msgid "Followers"
-msgstr ""
+msgstr "Seguidors"
 
 #. module: lettermgmt
 #: help:res.letter,message_summary:0
@@ -375,7 +375,7 @@ msgstr ""
 #. module: lettermgmt
 #: field:res.letter,message_ids:0
 msgid "Messages"
-msgstr ""
+msgstr "Missatges"
 
 #. module: lettermgmt
 #: help:res.letter,message_ids:0
