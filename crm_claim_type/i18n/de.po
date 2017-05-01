@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (9.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-18 01:48+0000\n"
+"POT-Creation-Date: 2017-03-28 02:27+0000\n"
 "PO-Revision-Date: 2016-05-04 09:31+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: German (http://www.transifex.com/oca/OCA-crm-9-0/language/de/)\n"
@@ -35,41 +35,41 @@ msgstr "Forderung"
 #. module: crm_claim_type
 #: model:ir.ui.view,arch_db:crm_claim_type.crm_stage_claim_type_search
 msgid "Claim Type"
-msgstr ""
+msgstr "Forderungsart"
 
 #. module: crm_claim_type
 #: model:ir.actions.act_window,name:crm_claim_type.crm_claim_type_act
 #: model:ir.ui.menu,name:crm_claim_type.menu_crm_claim_type_act
 msgid "Claim Types"
-msgstr ""
+msgstr "Forderungsarten"
 
 #. module: crm_claim_type
 #: model:ir.model.fields,help:crm_claim_type.field_crm_claim_claim_type
 #: model:ir.model.fields,help:crm_claim_type.field_crm_claim_stage_claim_type
 msgid "Claim classification"
-msgstr ""
+msgstr "Forderungsklassifizierung"
 
 #. module: crm_claim_type
 #: model:ir.model,name:crm_claim_type.model_crm_claim_stage
 msgid "Claim stages"
-msgstr ""
+msgstr "Forderungsstufen"
 
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_stage_claim_type
 #: model:ir.ui.view,arch_db:crm_claim_type.crm_claim_type_form
 msgid "Claim type"
-msgstr ""
+msgstr "Forderungsart"
 
 #. module: crm_claim_type
 #: model:ir.ui.view,arch_db:crm_claim_type.crm_claim_type_tree
 msgid "Claim types"
-msgstr ""
+msgstr "Forderungsarten"
 
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_stage_claim_common
 msgid "Common to All Claim Types"
-msgstr ""
+msgstr "Allen Forderungsarten gemein"
 
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type_create_uid
@@ -116,7 +116,7 @@ msgstr "ID"
 msgid ""
 "If you check this field, this stage will be proposed by default on each "
 "claim type."
-msgstr ""
+msgstr "Wenn Sie dieses Feld anwählen, wird diese Stufe per Vorgabe bei jeder Forderungsart vorgeschlagen."
 
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type___last_update
@@ -146,7 +146,7 @@ msgstr "Andere"
 #. module: crm_claim_type
 #: model:ir.ui.view,arch_db:crm_claim_type.crm_stage_claim_type_search
 msgid "Search Stages"
-msgstr ""
+msgstr "Suche in Stufen"
 
 #. module: crm_claim_type
 #: model:crm.claim.type,name:crm_claim_type.crm_claim_type_supplier
