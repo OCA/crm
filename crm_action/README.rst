@@ -7,7 +7,8 @@ CRM Action
 ==========
 
 This module was written to extend CRM features.
-It delivers new object named "Actions" to follow history around leads and opportunities.
+It delivers new object named "Actions" to follow history around leads and
+opportunities.
 
 Installation
 ============
@@ -17,9 +18,14 @@ Just install the module as usual (it only depends on the native *crm* module).
 Configuration
 =============
 
-Go to the menu *Sales > Configuration > Leads & Opportunities > Action Types* and create action types.
+Go to the menu *Sales > Configuration > Leads & Opportunities > Action Types*
+and create action types.
 
-If you want to have a daily email reminder of your CRM actions to do, go to the menu *Settings > Technical > Automation > Scheduled Actions* and activate the action *CRM Action email reminder* (it is inactive by default). You can customize the email template in the menu *Settings > Technical > Email > Templates* and select the email template named *CRM Action reminder*.
+If you want to have a daily email reminder of your CRM actions to do, go to
+the menu *Settings > Technical > Automation > Scheduled Actions* and activate
+the action *CRM Action email reminder* (it is inactive by default). You can
+customize the email template in the menu *Settings > Technical > Email >
+Templates* and select the email template named *CRM Action reminder*.
 
 Usage
 =====
@@ -30,11 +36,14 @@ To use this module, you need to :
 #. create a new action by using the *Actions* button,
 #. when the action is done, click on the button *Mark as done*.
 
-You can overview all actions for any lead or opportunity with the *Actions* menu entry. On the form view of an opportunity, you can see the next action to do and there is also a button to mark it as done (it will immediately display the new next action to do).
+You can overview all actions for any lead or opportunity with the *Actions*
+menu entry. On the form view of an opportunity, you can see the next action to
+do and there is also a button to mark it as done (it will immediately display
+the new next action to do).
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
-   :target: https://runbot.odoo-community.org/runbot/111/8.0
+   :target: https://runbot.odoo-community.org/runbot/111/9.0
 
 Known issues / Roadmap
 ======================
@@ -50,8 +59,6 @@ help us smashing it by providing a detailed and welcomed feedback.
 Credits
 =======
 
-Module developed and tested with Odoo version 8.0
-
 Contributors
 ------------
 
@@ -59,6 +66,7 @@ Contributors
 * Jordi RIERA <jordi.riera@savoirfairelinux.com>
 * Bruno JOLIVEAU <bruno.joliveau@savoirfairelinux.com>
 * Alexis de Lattre <alexis.delattre@akretion.com>
+* Vicent Cubells <vicent.cubells@tecnativa.com>
 
 Maintainer
 ----------

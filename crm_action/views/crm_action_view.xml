@@ -1,100 +1,99 @@
 <?xml version="1.0"?>
-<openerp>
-    <data>
-        <record id="view_action_form" model="ir.ui.view">
-            <field name="name">crm.action.form</field>
-            <field name="model">crm.action</field>
-            <field name="arch" type="xml">
-                <form string="Actions">
-                    <header>
-                        <button string="Mark as Done" name="button_confirm" type="object" states="draft" class="oe_highlight"/>
-                        <button string="Back to Todo" name="button_set_to_draft" type="object" states="done"/>
-                        <field name="state" widget="statusbar"/>
-                    </header>
-                    <sheet>
-                        <group>
-                            <field name="lead_id"/>
-                            <field name="partner_id"/>
-                            <field name="company_id" groups="base.group_multi_company"/>
-                            <field name="date"/>
-                            <field name="user_id"/>
-                            <field name="action_type_id"/>
-                            <field name="details" width="200"/>
-                        </group>
-                    </sheet>
-                </form>
-            </field>
-        </record>
+<odoo>
 
-        <record id="view_action_tree" model="ir.ui.view">
-            <field name="name">crm.action.tree</field>
-            <field name="model">crm.action</field>
-            <field name="arch" type="xml">
-                <tree editable="top" colors="red:date &lt; current_date and state=='draft';blue:date &gt;= current_date and state=='draft'">
-                    <field name="lead_id"/>
-                    <field name="partner_id"/>
-                    <field name="date"/>
-                    <field name="user_id"/>
-                    <field name="action_type_id"/>
-                    <field name="details"/>
-                    <button icon="STOCK_APPLY" name="button_confirm" type="object" string="Mark as Done" states="draft"/>
-                    <button icon="gtk-undo" name="button_set_to_draft" type="object" string="Back to Todo" states="done"/>
-                    <field name="state"/>
-                </tree>
-            </field>
-        </record>
-
-        <record id="view_crm_action_calendar" model="ir.ui.view">
-            <field name="name">crm.action.calendar</field>
-            <field name="model">crm.action</field>
-            <field name="arch" type="xml">
-                <calendar string="Actions" color="user_id" date_start="date">
-                    <field name="partner_id"/>
-                    <field name="details"/>
-                </calendar>
-            </field>
-        </record>
-
-        <record id="view_crm_action_filter" model="ir.ui.view">
-            <field name="name">CRM - Actions</field>
-            <field name="model">crm.action</field>
-            <field name="arch" type="xml">
-                <search string="Search Actions">
-                    <field name="lead_id"/>
-                    <field name="partner_id"/>
-                    <field name="date"/>
-                    <field name="user_id"/>
-                    <separator/>
-                    <filter string="Todo" name="draft_only"
-                            domain="[('state', '=', 'draft')]"/>
-                    <filter string="Done" name="done_only"
-                            domain="[('state', '=', 'done')]"/>
-                    <separator/>
-                    <filter string="Todo Today" name="todo_today"
-                        domain="[('state', '=', 'draft'), ('date', '&lt;=', context_today().strftime('%Y-%m-%d'))]"/>
-                    <separator/>
-                    <filter string="My Actions" name="user_me"
-                            domain="[('user_id', '=', uid)]"
-                            help="Actions done by me"/>
-                    <group string="Group By" name="groupby">
-                        <filter name="partner_groupby" string="Partner" context="{'group_by': 'partner_id'}"/>
-                        <filter name="user_groupby" string="User" context="{'group_by': 'user_id'}"/>
-                        <filter name="action_type_id_groupby" string="Action Type" context="{'group_by': 'action_type_id'}"/>
-                        <filter name="date_groupby" string="Week" context="{'group_by': 'date:week'}"/>
+    <record id="view_action_form" model="ir.ui.view">
+        <field name="name">crm.action.form</field>
+        <field name="model">crm.action</field>
+        <field name="arch" type="xml">
+            <form string="Actions">
+                <header>
+                    <button string="Mark as Done" name="button_confirm" type="object" states="draft" class="oe_highlight"/>
+                    <button string="Back to Todo" name="button_set_to_draft" type="object" states="done"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="lead_id"/>
+                        <field name="partner_id"/>
+                        <field name="company_id" groups="base.group_multi_company"/>
+                        <field name="date"/>
+                        <field name="user_id"/>
+                        <field name="action_type_id"/>
+                        <field name="details" width="200"/>
                     </group>
-                </search>
-            </field>
-        </record>
+                </sheet>
+            </form>
+        </field>
+    </record>
 
-        <record model="ir.actions.act_window" id="action_crm_action_view">
-            <field name="name">Actions</field>
-            <field name="res_model">crm.action</field>
-            <field name="view_mode">tree,form,calendar</field>
-            <field name="context">{'search_default_user_me': 1}</field>
-        </record>
+    <record id="view_action_tree" model="ir.ui.view">
+        <field name="name">crm.action.tree</field>
+        <field name="model">crm.action</field>
+        <field name="arch" type="xml">
+            <tree editable="top" colors="red:date &lt; current_date and state=='draft';blue:date &gt;= current_date and state=='draft'">
+                <field name="lead_id"/>
+                <field name="partner_id"/>
+                <field name="date"/>
+                <field name="user_id"/>
+                <field name="action_type_id"/>
+                <field name="details"/>
+                <button icon="STOCK_APPLY" name="button_confirm" type="object" string="Mark as Done" states="draft"/>
+                <button icon="gtk-undo" name="button_set_to_draft" type="object" string="Back to Todo" states="done"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
 
-        <menuitem name="Actions" id="menu_crm_action" parent="base.menu_sales" sequence="4"
-        action="action_crm_action_view"/>
+    <record id="view_crm_action_calendar" model="ir.ui.view">
+        <field name="name">crm.action.calendar</field>
+        <field name="model">crm.action</field>
+        <field name="arch" type="xml">
+            <calendar string="Actions" color="user_id" date_start="date">
+                <field name="partner_id"/>
+                <field name="details"/>
+            </calendar>
+        </field>
+    </record>
 
-    </data>
-</openerp>
+    <record id="view_crm_action_filter" model="ir.ui.view">
+        <field name="name">CRM - Actions</field>
+        <field name="model">crm.action</field>
+        <field name="arch" type="xml">
+            <search string="Search Actions">
+                <field name="lead_id"/>
+                <field name="partner_id"/>
+                <field name="date"/>
+                <field name="user_id"/>
+                <separator/>
+                <filter string="Todo" name="draft_only"
+                        domain="[('state', '=', 'draft')]"/>
+                <filter string="Done" name="done_only"
+                        domain="[('state', '=', 'done')]"/>
+                <separator/>
+                <filter string="Todo Today" name="todo_today"
+                    domain="[('state', '=', 'draft'), ('date', '&lt;=', context_today().strftime('%Y-%m-%d'))]"/>
+                <separator/>
+                <filter string="My Actions" name="user_me"
+                        domain="[('user_id', '=', uid)]"
+                        help="Actions done by me"/>
+                <group string="Group By" name="groupby">
+                    <filter name="partner_groupby" string="Partner" context="{'group_by': 'partner_id'}"/>
+                    <filter name="user_groupby" string="User" context="{'group_by': 'user_id'}"/>
+                    <filter name="action_type_id_groupby" string="Action Type" context="{'group_by': 'action_type_id'}"/>
+                    <filter name="date_groupby" string="Week" context="{'group_by': 'date:week'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_crm_action_view">
+        <field name="name">Actions</field>
+        <field name="res_model">crm.action</field>
+        <field name="view_mode">tree,form,calendar</field>
+        <field name="context">{'search_default_user_me': 1}</field>
+    </record>
+
+    <menuitem name="Actions" id="menu_crm_action" parent="base.menu_sales" sequence="4"
+    action="action_crm_action_view"/>
+
+</odoo>

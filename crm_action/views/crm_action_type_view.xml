@@ -1,55 +1,52 @@
 <?xml version="1.0"?>
-<openerp>
-    <data>
-
-        <!-- Even if we have an editable tree view, the form view is still
-        used when you create an action type from an action via the M2O widget -->
-        <record id="view_action_type_form" model="ir.ui.view">
-            <field name="name">crm.action.type.form</field>
-            <field name="model">crm.action.type</field>
-            <field name="arch" type="xml">
-                <form>
-                    <group name="main">
-                        <field name="name"/>
-                        <field name="priority"/>
-                        <field name="active"/>
-                    </group>
-                </form>
-            </field>
-        </record>
-
-        <record id="view_action_type_tree" model="ir.ui.view">
-            <field name="name">crm.action.type.tree</field>
-            <field name="model">crm.action.type</field>
-            <field name="arch" type="xml">
-                <tree editable="top">
+<odoo>
+    <!-- Even if we have an editable tree view, the form view is still
+    used when you create an action type from an action via the M2O widget -->
+    <record id="view_action_type_form" model="ir.ui.view">
+        <field name="name">crm.action.type.form</field>
+        <field name="model">crm.action.type</field>
+        <field name="arch" type="xml">
+            <form>
+                <group name="main">
                     <field name="name"/>
                     <field name="priority"/>
                     <field name="active"/>
-                </tree>
-            </field>
-        </record>
+                </group>
+            </form>
+        </field>
+    </record>
 
-        <record id="view_crm_action_type_filter" model="ir.ui.view">
-            <field name="name">CRM - Actions</field>
-            <field name="model">crm.action.type</field>
-            <field name="arch" type="xml">
-                <search string="Search Action Types">
-                    <field name="name"/>
-                </search>
-            </field>
-        </record>
+    <record id="view_action_type_tree" model="ir.ui.view">
+        <field name="name">crm.action.type.tree</field>
+        <field name="model">crm.action.type</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="name"/>
+                <field name="priority"/>
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
 
-        <record id="action_crm_action_type_view"  model="ir.actions.act_window">
-            <field name="name">Action Types</field>
-            <field name="res_model">crm.action.type</field>
-            <field name="view_mode">tree</field>
-        </record>
+    <record id="view_crm_action_type_filter" model="ir.ui.view">
+        <field name="name">CRM - Actions</field>
+        <field name="model">crm.action.type</field>
+        <field name="arch" type="xml">
+            <search string="Search Action Types">
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
 
-        <menuitem
-            action="action_crm_action_type_view" id="menu_crm_action_type_act"
-            name="Action Types" sequence="0"
-            parent="base.menu_crm_config_lead"/>
+    <record id="action_crm_action_type_view"  model="ir.actions.act_window">
+        <field name="name">Action Types</field>
+        <field name="res_model">crm.action.type</field>
+        <field name="view_mode">tree</field>
+    </record>
 
-    </data>
-</openerp>
+    <menuitem
+        action="action_crm_action_type_view" id="menu_crm_action_type_act"
+        name="Action Types" sequence="0"
+        parent="base.menu_crm_config_lead"/>
+
+</odoo>
