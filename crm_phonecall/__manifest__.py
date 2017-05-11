@@ -21,6 +21,7 @@
         'wizard/crm_phonecall_to_phonecall_view.xml',
         'views/crm_phonecall_view.xml',
         'views/res_partner_view.xml',
+        'views/crm_lead_view.xml',
         'report/crm_phonecall_report_view.xml',
     ],
     'installable': True,

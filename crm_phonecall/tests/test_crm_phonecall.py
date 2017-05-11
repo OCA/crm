@@ -77,6 +77,7 @@ class TestCrmPhoneCall(common.SavepointCase):
         self.phonecall1.on_change_opportunity()
         self.assertEqual(
             self.phonecall1.partner_phone, self.opportunity1.phone)
+        self.assertEqual(self.opportunity1.phonecall_count, 1)
 
     def test_convert2opportunity(self):
         result = self.phonecall1.action_button_convert2opportunity()
