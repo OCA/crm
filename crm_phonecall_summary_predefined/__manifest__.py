@@ -5,7 +5,7 @@
 {
     "name": "Restricted Summary for Phone Calls",
     "summary": "Allows to choose from a defined summary list",
-    "version": "9.0.1.0.0",
+    "version": "10.0.1.0.0",
     "category": "Customer Relationship Management",
     "website": "http://www.tecnativa.com",
     "author": "Tecnativa, "
@@ -16,6 +16,7 @@
     "post_init_hook": "convert_names_to_many2one",
     "depends": [
         "crm_phonecall",
+        "sales_team",
     ],
     "data": [
         "security/ir.model.access.csv",

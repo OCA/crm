@@ -4,10 +4,10 @@
 
 from psycopg2 import IntegrityError
 
-from openerp import api, SUPERUSER_ID
+from odoo import api, SUPERUSER_ID
 
 
-def convert_names_to_many2one(cr, registry):
+def convert_names_to_many2one(cr, registry):  # pragma: no cover
     """Convert old string names to new Many2one"""
     with api.Environment.manage():
         env = api.Environment(cr, SUPERUSER_ID, {})
