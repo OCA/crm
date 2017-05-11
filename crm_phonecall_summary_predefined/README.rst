@@ -16,8 +16,7 @@ Configuration
 To configure the possible summary options, activate the developer mode and go
 to:
 
-* Go to *Sales > Configuration > Sales & Opportunities > Phone Calls >
-Summaries*.
+* Go to *Sales > Configuration > Sales & Opportunities > Phone Calls > Summaries*.
 
 Usage
 =====
@@ -27,7 +26,7 @@ Usage
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
-   :target: https://runbot.odoo-community.org/runbot/111/9.0
+   :target: https://runbot.odoo-community.org/runbot/111/10.0
 
 Bug Tracker
 ===========
