@@ -187,7 +187,7 @@
         <field name="name">Phone Calls</field>
         <field name="res_model">crm.phonecall</field>
         <field name="view_type">form</field>
-        <field name="view_mode">tree,calendar</field>
+        <field name="view_mode">tree,form,calendar</field>
         <field name="view_id" ref="crm_case_phone_tree_view"/>
         <field name="context">{"search_default_user_id":uid}</field>
         <field name="search_view_id" ref="view_crm_case_phonecalls_filter"/>
@@ -270,7 +270,7 @@
         <field name="name">Scheduled Calls</field>
         <field name="res_model">crm.phonecall</field>
         <field name="view_type">form</field>
-        <field name="view_mode">tree,calendar</field>
+        <field name="view_mode">tree,form,calendar</field>
         <field name="view_id" ref="crm_case_phone_tree_view"/>
         <field name="domain">[('state','!=','done')]</field>
         <field name="context">{}</field>
