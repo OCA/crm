@@ -28,8 +28,6 @@ The Department field is available in the Opportunities form.
    :alt: Try me on Runbot
    :target: https://runbot.odoo-community.org/runbot/111/9.0
 
-.. repo_id is available in https://github.com/OCA/maintainer-tools/blob/master/tools/repos_with_ids.txt
-.. branch is "8.0" for example
 
 Known issues / Roadmap
 ======================
