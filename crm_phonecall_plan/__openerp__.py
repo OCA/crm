@@ -14,7 +14,7 @@
     'website': 'https://6it.fr',
     'license': 'AGPL-3',
     'data': [
-        'wizards/phonecall_plan_view.xml'
+        'wizards/crm_phonecall_plan_view.xml'
     ],
     'installable': True,
 }

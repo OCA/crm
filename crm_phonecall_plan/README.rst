@@ -3,7 +3,7 @@
       :alt: License: AGPL-3
 
 ==============
-Phonecall Plan
+CRM Phonecall Plan
 ==============
 
 This module adds a wizard to allow you to plan calls from the lead and partner views.
