@@ -1,4 +1,4 @@
-# -*- encoding: utf-8 -*-
+# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
@@ -26,17 +26,16 @@ from openerp import models, fields, api, _
 class CrmLead(models.Model):
     _inherit = 'crm.lead'
 
-    def count_actions(self):
+    def _compute_count_actions(self):
         self.actions_count = len(self.action_ids)
 
-    actions_count = fields.Integer(compute='count_actions')
+    actions_count = fields.Integer(compute='_compute_count_actions')
     action_ids = fields.One2many(
         'crm.action', 'lead_id', string='Actions')
 
     @api.multi
     def button_actions(self):
         self.ensure_one()
-
         res = {
             'name': _('Actions'),
             'type': 'ir.actions.act_window',
@@ -45,5 +44,4 @@ class CrmLead(models.Model):
             'view_mode': 'tree,form',
             'domain': [('lead_id', '=', self[0].id)],
         }
-
         return res

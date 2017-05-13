@@ -1,4 +1,4 @@
-# -*- encoding: utf-8 -*-
+# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
@@ -22,7 +22,7 @@
 
 {
     'name': 'CRM Action',
-    'version': '8.0.1.1.0',
+    'version': '9.0.1.1.0',
     'author': 'Savoir-faire Linux,Odoo Community Association (OCA)',
     'license': 'AGPL-3',
     'category': 'Others',
@@ -30,17 +30,18 @@
     'depends': [
         'sale_crm',
     ],
-    'external_dependencies': {
-        'python': [],
-    },
     'data': [
         'security/res_groups_data.xml',
         'security/ir.model.access.csv',
         'security/ir_rule_data.xml',
         'views/crm_lead_view.xml',
+        'views/crm_opportunity_view.xml',
         'views/crm_action_view.xml',
         'views/crm_action_type_view.xml',
     ],
-    'installable': False,
+    'test': [
+        'test/crm_actions.yml',
+    ],
+    'installable': True,
     'application': True,
 }

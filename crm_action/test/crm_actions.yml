@@ -1,0 +1,40 @@
+-
+  create CRM LEAD
+-
+  !record {model: res.partner, id: test_res_partner}:
+    name: "Atul Arvind"
+-
+  create CRM LEAD
+-
+  !record {model: crm.lead, id: test_crm_lead}:
+    name: "Odoo Customization Lead"
+    partner_id: test_res_partner
+-
+  create CRM ACTION TYPE
+-
+  !record {model: crm.action.type, id: test_crm_type}:
+    name: "Email"
+    priority: 10
+-
+  Creating CRM action 
+-
+  !record {model: crm.action, id: test_crm_action}:
+    lead_id: test_crm_lead
+    action_type: test_crm_type
+    state: 'draft'
+-
+  Calling methods for CRM action
+-
+  !python {model: crm.action} : |
+     action_rec = self.browse(cr, uid, ref('test_crm_action'))
+     action_rec.default_action_type()
+     action_rec.check_change()
+     action_rec.button_confirm()
+     action_rec.button_set_to_draft()
+-
+  Calling method for CRM lead
+-
+  !python {model: crm.lead} : |
+    lead_rec = self.browse(cr, uid, ref('test_crm_lead'))
+    lead_rec._compute_count_actions()
+    lead_rec.button_actions()
