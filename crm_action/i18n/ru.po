@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-28 02:25+0000\n"
-"PO-Revision-Date: 2017-04-25 10:40+0000\n"
+"POT-Creation-Date: 2017-05-01 16:58+0000\n"
+"PO-Revision-Date: 2017-05-11 14:11+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Russian (http://www.transifex.com/oca/OCA-crm-8-0/language/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -148,7 +148,7 @@ msgstr ""
 #. module: crm_action
 #: field:crm.action,details:0
 msgid "Details"
-msgstr ""
+msgstr "Данные"
 
 #. module: crm_action
 #: field:crm.action.type,display_name:0
@@ -164,7 +164,7 @@ msgstr ""
 #: view:crm.action:crm_action.view_crm_action_filter
 #: selection:crm.action,state:0
 msgid "Done"
-msgstr ""
+msgstr "Завершен"
 
 #. module: crm_action
 #: model:crm.action.type,name:crm_action.followup
