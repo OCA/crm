@@ -1,0 +1,296 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * crm_action
+# 
+# Translators:
+# Alan Luo <alanljj@qq.com>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: crm (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-02-25 01:50+0000\n"
+"PO-Revision-Date: 2017-03-03 07:13+0000\n"
+"Last-Translator: Alan Luo <alanljj@qq.com>\n"
+"Language-Team: Chinese (China) (http://www.transifex.com/oca/OCA-crm-8-0/language/zh_CN/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: crm_action
+#: model:email.template,body_html:crm_action.crm_action_reminder_email_template
+msgid ""
+"\n"
+"<div style=\"font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; \">\n"
+"\n"
+"<p>Dear ${object.name},</p>\n"
+"\n"
+"<p>Here is the list of your CRM actions to perform today for ${ctx.get('company').name}:</p>\n"
+"\n"
+"<ul>\n"
+"% for action in ctx.get('crm_action_list'):\n"
+"<li style=\"margin: 0 0 15px 0;\">${action.lead_id and action.lead_id.name or 'Not linked to a lead'}\n"
+"<ul>\n"
+"% if action.partner_id:\n"
+"<li>Customer: ${action.partner_id.name_get()[0][1]}</li>\n"
+"% endif\n"
+"% if not action.partner_id and action.lead_id.partner_name:\n"
+"<li>Customer: ${action.lead_id.partner_name}${action.lead_id.contact_name and ', ' + action.lead_id.contact_name or ''}</li>\n"
+"% endif\n"
+"<li>Type: ${action.action_type_id.name}</li>\n"
+"<li>Details: ${action.details}</li>\n"
+"% if action.lead_id and action.lead_id.phone:\n"
+"<li>Phone: <a href=\"tel:${action.lead_id.phone}\">${action.lead_id.phone}</a></li>\n"
+"% endif\n"
+"% if action.lead_id and action.lead_id.mobile:\n"
+"<li>Mobile: <a href=\"tel:${action.lead_id.mobile}\">${action.lead_id.mobile}</a></li>\n"
+"% endif\n"
+"% if action.lead_id and action.lead_id.email_from:\n"
+"<li>Email: <a href=\"mailto:${action.lead_id.email_from}\">${action.lead_id.email_from}</a></li>\n"
+"% endif\n"
+"\n"
+"</ul>\n"
+"</li>\n"
+"% endfor\n"
+"</ul>\n"
+"\n"
+"<p>\n"
+"-- <br/>\n"
+"Automatic e-mail sent by Odoo. Do not reply.\n"
+"</p>\n"
+"</div>\n"
+msgstr ""
+
+#. module: crm_action
+#: view:crm.action:crm_action.view_crm_action_filter
+msgid "Action Type"
+msgstr "行动类型"
+
+#. module: crm_action
+#: model:ir.actions.act_window,name:crm_action.action_crm_action_type_view
+#: model:ir.ui.menu,name:crm_action.menu_crm_action_type_act
+msgid "Action Types"
+msgstr "行动类型"
+
+#. module: crm_action
+#: view:crm.action:crm_action.view_action_form
+#: view:crm.action:crm_action.view_crm_action_calendar
+#: view:crm.lead:crm_action.crm_case_action_button_form_view
+#: view:crm.lead:crm_action.crm_case_form_view_oppor
+#: field:crm.lead,action_ids:0
+#: model:ir.actions.act_window,name:crm_action.action_crm_action_view
+#: model:ir.actions.act_window,name:crm_action.crm_action_simple_action
+#: model:ir.ui.menu,name:crm_action.menu_crm_action
+msgid "Actions"
+msgstr "行动"
+
+#. module: crm_action
+#: field:crm.lead,actions_count:0
+msgid "Actions count"
+msgstr "行动计划"
+
+#. module: crm_action
+#: view:crm.action:crm_action.view_crm_action_filter
+msgid "Actions done by me"
+msgstr "我完成的行动"
+
+#. module: crm_action
+#: field:crm.action.type,active:0
+msgid "Active"
+msgstr "有效"
+
+#. module: crm_action
+#: view:crm.action:crm_action.view_action_form
+#: view:crm.action:crm_action.view_action_tree
+msgid "Back to Todo"
+msgstr "重设待办"
+
+#. module: crm_action
+#: model:ir.model,name:crm_action.model_crm_action
+msgid "CRM Action"
+msgstr "CRM行动"
+
+#. module: crm_action
+#: model:ir.model,name:crm_action.model_crm_action_type
+msgid "CRM Action Type"
+msgstr "CRM行动类型"
+
+#. module: crm_action
+#: field:crm.action,company_id:0
+msgid "Company"
+msgstr "公司"
+
+#. module: crm_action
+#: field:crm.action,create_uid:0 field:crm.action.type,create_uid:0
+msgid "Created by"
+msgstr "创建者"
+
+#. module: crm_action
+#: field:crm.action,create_date:0 field:crm.action.type,create_date:0
+msgid "Created on"
+msgstr "创建时间"
+
+#. module: crm_action
+#: field:crm.action,partner_id:0
+msgid "Customer"
+msgstr "客户"
+
+#. module: crm_action
+#: field:crm.action,date:0
+msgid "Date"
+msgstr "日期"
+
+#. module: crm_action
+#: model:crm.action.type,name:crm_action.demo
+msgid "Demo"
+msgstr "演示"
+
+#. module: crm_action
+#: field:crm.action,details:0
+msgid "Details"
+msgstr "详细"
+
+#. module: crm_action
+#: field:crm.action.type,display_name:0
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: crm_action
+#: field:crm.action,display_name:0
+msgid "Display name"
+msgstr "显示名称"
+
+#. module: crm_action
+#: view:crm.action:crm_action.view_crm_action_filter
+#: selection:crm.action,state:0
+msgid "Done"
+msgstr "已完成"
+
+#. module: crm_action
+#: model:crm.action.type,name:crm_action.followup
+msgid "Followup"
+msgstr "跟踪"
+
+#. module: crm_action
+#: view:crm.action:crm_action.view_crm_action_filter
+msgid "Group By"
+msgstr "分组"
+
+#. module: crm_action
+#: field:crm.action,id:0 field:crm.action.type,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: crm_action
+#: field:crm.action,__last_update:0 field:crm.action.type,__last_update:0
+msgid "Last Modified on"
+msgstr "最后修改时间"
+
+#. module: crm_action
+#: field:crm.action,write_uid:0 field:crm.action.type,write_uid:0
+msgid "Last Updated by"
+msgstr "最后更新者"
+
+#. module: crm_action
+#: field:crm.action,write_date:0 field:crm.action.type,write_date:0
+msgid "Last Updated on"
+msgstr "上次更新日期"
+
+#. module: crm_action
+#: field:crm.action,lead_id:0
+msgid "Lead"
+msgstr "线索"
+
+#. module: crm_action
+#: model:ir.model,name:crm_action.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "线索/商机"
+
+#. module: crm_action
+#: view:crm.action:crm_action.view_action_form
+#: view:crm.action:crm_action.view_action_tree
+msgid "Mark as Done"
+msgstr "标记为完成"
+
+#. module: crm_action
+#: view:crm.lead:crm_action.crm_case_form_view_oppor
+msgid "Mark next action as done"
+msgstr "标记下一个行动为完成"
+
+#. module: crm_action
+#: model:crm.action.type,name:crm_action.meeting
+msgid "Meeting"
+msgstr "会议"
+
+#. module: crm_action
+#: view:crm.action:crm_action.view_crm_action_filter
+msgid "My Actions"
+msgstr "我的行动"
+
+#. module: crm_action
+#: field:crm.action.type,name:0
+msgid "Name"
+msgstr "名称"
+
+#. module: crm_action
+#: field:crm.lead,next_action_id:0
+msgid "Next Action"
+msgstr "下一行动"
+
+#. module: crm_action
+#: view:crm.action:crm_action.view_crm_action_filter
+msgid "Partner"
+msgstr "业务伙伴"
+
+#. module: crm_action
+#: field:crm.action.type,priority:0
+msgid "Priority"
+msgstr "优先级"
+
+#. module: crm_action
+#: view:crm.action.type:crm_action.view_crm_action_type_filter
+msgid "Search Action Types"
+msgstr "搜索行动类型"
+
+#. module: crm_action
+#: view:crm.action:crm_action.view_crm_action_filter
+msgid "Search Actions"
+msgstr "搜索行动"
+
+#. module: crm_action
+#: field:crm.action,state:0
+msgid "Status"
+msgstr "状态"
+
+#. module: crm_action
+#: view:crm.action:crm_action.view_crm_action_filter
+#: selection:crm.action,state:0
+msgid "Todo"
+msgstr "待办"
+
+#. module: crm_action
+#: view:crm.action:crm_action.view_crm_action_filter
+msgid "Todo Today"
+msgstr "今天待办"
+
+#. module: crm_action
+#: field:crm.action,action_type_id:0
+msgid "Type"
+msgstr "类型"
+
+#. module: crm_action
+#: view:crm.action:crm_action.view_crm_action_filter
+#: field:crm.action,user_id:0
+msgid "User"
+msgstr "用户"
+
+#. module: crm_action
+#: view:crm.action:crm_action.view_crm_action_filter
+msgid "Week"
+msgstr "本周"
+
+#. module: crm_action
+#: model:email.template,subject:crm_action.crm_action_reminder_email_template
+msgid "[${ctx.get('company').name}] Today's CRM actions"
+msgstr "[${ctx.get('company').name}] 今天的CRM行动"
