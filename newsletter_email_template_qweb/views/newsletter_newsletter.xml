@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="view_newsletter_newsletter_form" model="ir.ui.view">
+            <field name="model">newsletter.newsletter</field>
+            <field name="inherit_id" ref="newsletter.form_newsletter" />
+            <field name="arch" type="xml">
+                <field name="type_id" position="after">
+                    <field name="template_body_type" invisible="True" />
+                </field>
+                <field name="subject" position="after">
+                    <label string="" class="oe_edit_only" />
+                    <div attrs="{'invisible': [('template_body_type', '!=', 'qweb')]}" class="oe_edit_only">
+                        In any of the following fields, you can use <a href="https://www.odoo.com/documentation/8.0/reference/qweb.html" target="_new">QWeb expressions</a> on variables <em>object</em> and <em>newsletter</em>
+                    </div>
+                </field>
+            </field>
+        </record>
+    </data>
+</openerp>

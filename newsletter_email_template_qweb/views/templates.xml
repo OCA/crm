@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <template id="assets_backend" name="newsletter_email_template_qweb assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/newsletter_email_template_qweb/static/src/js/newsletter_email_template_qweb.js"></script>
+            </xpath>
+        </template>
+    </data>
+</openerp>
