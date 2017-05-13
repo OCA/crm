@@ -4,19 +4,13 @@
 # 
 # Translators:
 # OCA Transbot <transbot@odoo-community.org>, 2017
-# Jonathan Nemry (ACSONE) <jonathan.nemry@acsone.eu>, 2017
-# Fabien Bourgeois <fabien@yaltik.com>, 2017
-# Sébastien LANGE (SYLEAM) <sebastien.lange@syleam.fr>, 2017
-# dglucose <eric.lemesre@gmail.com>, 2017
-# Christophe CHAUVET <christophe.chauvet@gmail.com>, 2017
-# Hosni Hadj-Taher <inactive+hajhasni@transifex.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-28 02:27+0000\n"
-"PO-Revision-Date: 2017-03-28 02:27+0000\n"
-"Last-Translator: Hosni Hadj-Taher <inactive+hajhasni@transifex.com>, 2017\n"
+"POT-Creation-Date: 2017-05-12 16:08+0000\n"
+"PO-Revision-Date: 2017-05-12 16:08+0000\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
 "Language-Team: French (https://www.transifex.com/oca/teams/23907/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -85,6 +79,8 @@ msgid "Call summary"
 msgstr ""
 
 #. module: crm_phonecall
+#: model:ir.ui.view,arch_db:crm_phonecall.crm_case_form_view_leads
+#: model:ir.ui.view,arch_db:crm_phonecall.crm_case_form_view_oppor
 #: model:ir.ui.view,arch_db:crm_phonecall.view_partners_form_crm_calls
 msgid "Calls"
 msgstr ""
@@ -367,6 +363,7 @@ msgid "Last Updated on"
 msgstr "Mis à jour le"
 
 #. module: crm_phonecall
+#: model:ir.model,name:crm_phonecall.model_crm_lead
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_opportunity_id
 msgid "Lead/Opportunity"
 msgstr "Piste/Opportunité"
@@ -617,6 +614,8 @@ msgid "Phonecall To Phonecall"
 msgstr ""
 
 #. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_lead_phonecall_count
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_lead_phonecall_ids
 #: model:ir.model.fields,field_description:crm_phonecall.field_res_partner_phonecall_count
 #: model:ir.model.fields,field_description:crm_phonecall.field_res_partner_phonecall_ids
 #: model:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
