@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-14 02:20+0000\n"
-"PO-Revision-Date: 2017-01-17 12:11+0000\n"
+"POT-Creation-Date: 2017-05-01 16:59+0000\n"
+"PO-Revision-Date: 2017-05-11 14:14+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Finnish (http://www.transifex.com/oca/OCA-crm-8-0/language/fi/)\n"
 "MIME-Version: 1.0\n"
@@ -487,7 +487,7 @@ msgstr ""
 #. module: lettermgmt
 #: field:res.letter,recipient_partner_id:0
 msgid "Recipient"
-msgstr ""
+msgstr "Vastaanottaja"
 
 #. module: lettermgmt
 #: field:res.letter,extern_partner_ids:0
@@ -527,7 +527,7 @@ msgstr ""
 #. module: lettermgmt
 #: field:res.letter,sender_partner_id:0
 msgid "Sender"
-msgstr ""
+msgstr "Lähettäjä"
 
 #. module: lettermgmt
 #: selection:res.letter,state:0
@@ -562,7 +562,7 @@ msgstr "Tila"
 #. module: lettermgmt
 #: field:res.letter,name:0
 msgid "Subject"
-msgstr ""
+msgstr "Aihe"
 
 #. module: lettermgmt
 #: help:res.letter,name:0
@@ -612,7 +612,7 @@ msgstr ""
 #. module: lettermgmt
 #: field:res.letter,type_id:0
 msgid "Type"
-msgstr ""
+msgstr "Tyyppi"
 
 #. module: lettermgmt
 #: help:res.letter,type_id:0
