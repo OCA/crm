@@ -11,6 +11,7 @@ Available addons
 ----------------
 addon | version | summary
 --- | --- | ---
+[crm_action](crm_action/) | 9.0.1.0.0 | Adds action management in CRM
 [crm_claim_code](crm_claim_code/) | 9.0.1.0.0 | Sequential Code for Claims
 [crm_claim_type](crm_claim_type/) | 9.0.1.0.0 | Claim types for CRM
 [crm_deduplicate_acl](crm_deduplicate_acl/) | 9.0.1.1.0 | Contact deduplication with fine-grained permission control
@@ -28,7 +29,6 @@ Unported addons
 ---------------
 addon | version | summary
 --- | --- | ---
-[crm_action](crm_action/) | 8.0.1.1.0 (unported) | CRM Action
 [crm_lead_address_street3](crm_lead_address_street3/) | 8.0.0.1.0 (unported) | Street3 in lead addresses
 [crm_lead_code](crm_lead_code/) | 8.0.1.0.0 (unported) | Sequential Code for Leads / Opportunities
 [crm_lead_sale_link](crm_lead_sale_link/) | 8.0.1.0.0 (unported) | CRM Lead Sale Link
