@@ -93,7 +93,7 @@
         <field name="context">{'search_default_user_me': 1}</field>
     </record>
 
-    <menuitem name="Actions" id="menu_crm_action" parent="base.menu_sales" sequence="4"
+    <menuitem name="Actions" id="menu_crm_action" parent="sales_team.menu_sales" sequence="4"
     action="action_crm_action_view"/>
 
 </odoo>

@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 # Copyright 2015-2016 Savoir-faire Linux (<http://www.savoirfairelinux.com>)
 # Copyright 2017 Tecnativa - Vicent Cubells
+# Copyright 2017 Amaris - Quentin Theuret
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from openerp import fields, models
+from odoo import fields, models
 
 
 class CrmActionType(models.Model):
