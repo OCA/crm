@@ -67,6 +67,7 @@ Contributors
 * Bruno JOLIVEAU <bruno.joliveau@savoirfairelinux.com>
 * Alexis de Lattre <alexis.delattre@akretion.com>
 * Vicent Cubells <vicent.cubells@tecnativa.com>
+* Quentin Theuret <quentin.theuret@amaris.com>
 
 Maintainer
 ----------
