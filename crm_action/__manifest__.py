@@ -29,6 +29,7 @@
     'summary': 'CRM Action',
     'depends': [
         'sale_crm',
+        'sales_team',
     ],
     'external_dependencies': {
         'python': [],
@@ -41,6 +42,6 @@
         'views/crm_action_view.xml',
         'views/crm_action_type_view.xml',
     ],
-    'installable': False,
+    'installable': True,
     'application': True,
 }

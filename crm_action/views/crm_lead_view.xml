@@ -6,7 +6,7 @@
             <field name="model">crm.lead</field>
             <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
             <field name="arch" type="xml">
-                <div class="oe_right oe_button_box" position="inside">
+                <div class="oe_button_box" position="inside">
                     <button
                             class="oe_inline oe_stat_button"
                             type="object"
@@ -26,7 +26,7 @@
             <field name="model">crm.lead</field>
             <field name="inherit_id" ref="crm.crm_case_form_view_leads"/>
             <field name="arch" type="xml">
-                <div class="oe_right oe_button_box" position="inside">
+                <div class="oe_button_box" position="inside">
                     <button
                             class="oe_inline oe_stat_button"
                             type="object"

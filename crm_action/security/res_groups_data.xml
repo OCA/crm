@@ -14,7 +14,7 @@
             <field name="implied_ids" eval="[(4, ref('group_crm_action_user'))]"/>
         </record>
 
-        <record id="base.group_sale_salesman" model="res.groups">
+        <record id="sales_team.group_sale_salesman" model="res.groups">
             <field name="implied_ids" eval="[(4, ref('group_crm_action_user'))]"/>
         </record>
 
