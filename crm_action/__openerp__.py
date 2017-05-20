@@ -5,7 +5,7 @@
 
 {
     'name': 'CRM Action',
-    'version': '9.0.1.0.0',
+    'version': '9.0.1.0.1',
     'author': 'Savoir-faire Linux, '
               'Tecnativa, '
               'Odoo Community Association (OCA)',

@@ -17,7 +17,7 @@ class CrmAction(models.Model):
 
     def default_action_type(self):
         action_types = self.search_action_types()
-        return action_types and action_types[0].id or False
+        return action_types[:1]
 
     lead_id = fields.Many2one(
         comodel_name='crm.lead',
