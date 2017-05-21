@@ -11,7 +11,7 @@ Available addons
 ----------------
 addon | version | summary
 --- | --- | ---
-[crm_action](crm_action/) | 9.0.1.0.0 | Adds action management in CRM
+[crm_action](crm_action/) | 9.0.1.0.1 | Adds action management in CRM
 [crm_claim_code](crm_claim_code/) | 9.0.1.0.0 | Sequential Code for Claims
 [crm_claim_type](crm_claim_type/) | 9.0.1.0.0 | Claim types for CRM
 [crm_deduplicate_acl](crm_deduplicate_acl/) | 9.0.1.1.0 | Contact deduplication with fine-grained permission control
