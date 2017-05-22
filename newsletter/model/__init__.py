@@ -25,3 +25,4 @@ from . import (
     newsletter_type,
     email_template,
 )
+from . import email_template_preview

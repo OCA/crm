@@ -22,7 +22,10 @@
                         <field name="report_name" colspan="4" readonly="1" invisible="1" />
                     </sheet>
                     <footer>
-                        <button icon="gtk-ok" special="cancel" string="Close" colspan="1"/>
+                        <field name="newsletter_test_recipient" placeholder="you@mail.com" required="True" widget="email" style="display: inline-block" />
+                        <button type="object" name="newsletter_test_send" string="Send" class="oe_highlight" />
+                        or
+                        <button special="cancel" string="Close" class="oe_link"/>
                     </footer>
                 </form>
             </field>

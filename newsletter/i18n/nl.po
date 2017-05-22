@@ -37,6 +37,16 @@ msgstr ""
 
 #. module: newsletter
 #: view:email_template.preview:newsletter.email_template_preview_form
+msgid "or"
+msgstr "of"
+
+#. module: newsletter
+#: view:email_template.preview:newsletter.email_template_preview_form
+msgid "Send"
+msgstr "Verzenden"
+
+#. module: newsletter
+#: view:email_template.preview:newsletter.email_template_preview_form
 msgid "Close"
 msgstr "Sluiten"
 
