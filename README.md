@@ -11,7 +11,6 @@ Available addons
 ----------------
 addon | version | summary
 --- | --- | ---
-[crm_action](crm_action/) | 10.0.1.0.0 | CRM Action
 [calendar_resource](calendar_resource/) | 10.0.1.0.0 | New features to facilitate resource management with meetings.
 [crm_phonecall](crm_phonecall/) | 10.0.1.0.0 | CRM Phone Calls
 
@@ -20,6 +19,7 @@ Unported addons
 ---------------
 addon | version | summary
 --- | --- | ---
+[crm_action](crm_action/) | 9.0.1.0.0 (unported) | CRM Action
 [crm_claim_code](crm_claim_code/) | 9.0.1.0.0 (unported) | Sequential Code for Claims
 [crm_claim_type](crm_claim_type/) | 9.0.1.0.0 (unported) | Claim types for CRM
 [crm_lead_address_street3](crm_lead_address_street3/) | 8.0.0.1.0 (unported) | Street3 in lead addresses
