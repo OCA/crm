@@ -32,7 +32,7 @@ Unported addons
 ---------------
 addon | version | summary
 --- | --- | ---
-[crm_action](crm_action/) | 8.0.1.1.0 (unported) | CRM Action
+[crm_action](crm_action/) | 9.0.1.0.0 (unported) | CRM Action
 [crm_lead_address_street3](crm_lead_address_street3/) | 8.0.0.1.0 (unported) | Street3 in lead addresses
 [crm_lead_sale_link](crm_lead_sale_link/) | 8.0.1.0.0 (unported) | CRM Lead Sale Link
 [crm_lead_stage_monitoring](crm_lead_stage_monitoring/) | 1.0.0 (unported) | CRM - Add last activity on stage field
