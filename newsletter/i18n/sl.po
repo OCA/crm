@@ -3,13 +3,13 @@
 # * newsletter
 # 
 # Translators:
-# Matjaž Mozetič <m.mozetic@matmoz.si>, 2016
+# Matjaž Mozetič <m.mozetic@matmoz.si>, 2016-2017
 msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-07 11:40+0000\n"
-"PO-Revision-Date: 2016-05-09 08:50+0000\n"
+"POT-Creation-Date: 2017-05-22 15:09+0000\n"
+"PO-Revision-Date: 2017-05-25 10:04+0000\n"
 "Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>\n"
 "Language-Team: Slovenian (http://www.transifex.com/oca/OCA-crm-8-0/language/sl/)\n"
 "MIME-Version: 1.0\n"
@@ -78,6 +78,11 @@ msgstr "Urednik"
 #: view:email_template.preview:newsletter.email_template_preview_form
 msgid "Email Preview"
 msgstr "Predogled e-pošte"
+
+#. module: newsletter
+#: model:ir.model,name:newsletter.model_email_template_preview
+msgid "Email Template Preview"
+msgstr "Predogled predloge e-pošte"
 
 #. module: newsletter
 #: model:ir.model,name:newsletter.model_email_template
@@ -198,6 +203,7 @@ msgid "Recipients"
 msgstr "Prejemniki"
 
 #. module: newsletter
+#: view:email_template.preview:newsletter.email_template_preview_form
 #: view:newsletter.newsletter:newsletter.form_newsletter
 msgid "Send"
 msgstr "Pošlji"
@@ -239,6 +245,11 @@ msgid "Test newsletter"
 msgstr "Test e-novic"
 
 #. module: newsletter
+#: field:email_template.preview,newsletter_test_recipient:0
+msgid "Test recipient"
+msgstr "Testni prejemnik"
+
+#. module: newsletter
 #: selection:newsletter.newsletter,state:0
 msgid "Testing"
 msgstr "Testiranje"
@@ -275,3 +286,13 @@ msgstr "Tip"
 #, python-format
 msgid "You can't delete sent newsletters!"
 msgstr "Poslanih e-novic ne morete brisati!"
+
+#. module: newsletter
+#: view:email_template.preview:newsletter.email_template_preview_form
+msgid "or"
+msgstr "ali"
+
+#. module: newsletter
+#: view:email_template.preview:newsletter.email_template_preview_form
+msgid "you@mail.com"
+msgstr "you@mail.com"
