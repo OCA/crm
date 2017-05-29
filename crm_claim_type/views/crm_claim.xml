@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openerp>
     <data>
+        <record id="crm_case_claims_search_view" model="ir.ui.view">
+            <field name="name">CRM - Claims Search</field>
+            <field name="model">crm.claim</field>
+            <field name="inherit_id" ref="crm_claim.view_crm_case_claims_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@string='Type']" position="attributes">
+                    <attribute name="string">Category</attribute>
+                </xpath>
+                <xpath expr="//filter[@string='Partner']" position="before">
+                    <filter string="Type" context="{'group_by':'claim_type'}"/>
+                </xpath>
+            </field>
+        </record>
         <record id="crm_case_claims_form_view" model="ir.ui.view">
             <field name="name">CRM - Claims Form</field>
             <field name="model">crm.claim</field>
