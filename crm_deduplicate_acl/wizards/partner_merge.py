@@ -86,3 +86,4 @@ class BasePartnerMergeAutomaticWizard(models.TransientModel):
 
         # delete source partner, since they are merged
         src_partners.unlink()
+        
