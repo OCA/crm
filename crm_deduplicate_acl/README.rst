@@ -42,11 +42,11 @@ Usage
 To use this module, you need to:
 
 #. Ask your admin to give you the new rights.
-#. Go to *Sales > Tools > Deduplicate Contacts* as usual.
+#. Go to *CRM > Tools > Deduplicate Contacts* as usual.
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
-   :target: https://runbot.odoo-community.org/runbot/111/9.0
+   :target: https://runbot.odoo-community.org/runbot/111/10.0
 
 Known issues / Roadmap
 ======================
@@ -79,6 +79,7 @@ Contributors
 * Jairo Llopis <jairo.llopis@tecnativa.com>
 * Vicent Cubells <vicent.cubells@tecnativa.com>
 * Pedro M. Baeza <pedro.baeza@tecnativa.com>
+* Luis M. Ontalba <luis.martinez@tecnativa.com>
 
 Maintainer
 ----------
