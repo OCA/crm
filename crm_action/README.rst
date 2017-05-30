@@ -59,6 +59,7 @@ Contributors
 * Jordi RIERA <jordi.riera@savoirfairelinux.com>
 * Bruno JOLIVEAU <bruno.joliveau@savoirfairelinux.com>
 * Alexis de Lattre <alexis.delattre@akretion.com>
+* Kiko Peiro <francisco.peiro@factorlibre.com>
 
 Maintainer
 ----------
