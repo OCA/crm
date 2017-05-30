@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 # © 2015 Antiun Ingeniería, S.L.
+# Copyright 2017 David Vidal Tecnativa S.L.
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
-from openerp.tests.common import TransactionCase
+from odoo.tests.common import TransactionCase
 
 
 class LeadCase(TransactionCase):
@@ -25,5 +26,5 @@ class LeadCase(TransactionCase):
         """Lead gets website from partner when linked to it."""
         self.partner.website = self.test_field
         self.lead.partner_id = self.partner
-        result = self.lead.on_change_partner_id(self.partner.id)
-        self.assertEqual(result["value"]["website"], self.test_field)
+        result = self.lead._onchange_partner_id_values(self.partner.id)
+        self.assertEqual(result["website"], self.test_field)
