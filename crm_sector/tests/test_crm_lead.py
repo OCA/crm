@@ -2,8 +2,8 @@
 # © 2015 Antiun Ingenieria S.L. - Javier Iniesta
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
-from openerp.tests.common import TransactionCase
-from openerp.exceptions import ValidationError
+from odoo.tests.common import TransactionCase
+from odoo.exceptions import ValidationError
 
 
 class TestCrmLead(TransactionCase):
@@ -26,12 +26,11 @@ class TestCrmLead(TransactionCase):
             'name': 'test',
             'partner_name': 'test',
             'sector_id': sector_1.id,
-            'secondary_sector_ids': [(4, sector_2.id, 0), (4, sector_3.id, 0)]
+            'secondary_sector_ids': [(4, sector_2.id, 0), (4, sector_3.id, 0)],
         }
         lead = self.env['crm.lead'].create(lead_vals)
-        partner_id = self.env['crm.lead']._lead_create_contact(
-            lead, lead.partner_name, True)
-        partner = self.env['res.partner'].browse(partner_id)
-        self.assertEqual(partner.sector_id.id, lead.sector_id.id)
-        self.assertListEqual(partner.secondary_sector_ids.ids,
-                             lead.secondary_sector_ids.ids)
+        partner = lead._lead_create_contact(
+            lead.partner_name, True, False)
+        self.assertEqual(partner.sector_id, lead.sector_id)
+        self.assertEqual(
+            partner.secondary_sector_ids, lead.secondary_sector_ids)
