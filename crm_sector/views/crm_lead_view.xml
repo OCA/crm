@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- © 2015 Antiun Ingenieria S.L. - Javier Iniesta
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
-<openerp>
-<data>
+<odoo>
 
 <record model="ir.ui.view" id="crm_case_form_view_leads">
     <field name="name">Add sector field</field>
@@ -22,7 +21,7 @@
     <field name="model">crm.lead</field>
     <field name="inherit_id" ref="crm.crm_case_tree_view_leads"/>
     <field name="arch" type="xml">
-        <field name="section_id" position="after">
+        <field name="partner_id" position="after">
             <field name="sector_id"/>
         </field>
     </field>
@@ -33,10 +32,10 @@
     <field name="model">crm.lead</field>
     <field name="inherit_id" ref="crm.view_crm_case_leads_filter"/>
     <field name="arch" type="xml">
-        <field name="section_id" position="after">
+        <field name="country_id" position="after">
             <field name="sector_id"/>
         </field>
-        <filter string="Sales Team" position="after">
+        <filter name="unassigned" position="after">
             <filter string="Sector"
                     domain="[]"
                     context="{'group_by': 'sector_id'}"/>
@@ -62,7 +61,7 @@
     <field name="model">crm.lead</field>
     <field name="inherit_id" ref="crm.crm_case_tree_view_oppor"/>
     <field name="arch" type="xml">
-        <field name="section_id" position="after">
+        <field name="partner_id" position="after">
             <field name="sector_id"/>
         </field>
     </field>
@@ -73,10 +72,10 @@
     <field name="model">crm.lead</field>
     <field name="inherit_id" ref="crm.view_crm_case_opportunities_filter"/>
     <field name="arch" type="xml">
-        <field name="section_id" position="after">
+        <field name="partner_id" position="after">
             <field name="sector_id"/>
         </field>
-        <filter string="Sales Team" position="after">
+        <filter name="stage" position="after">
             <filter string="Sector"
                     domain="[]"
                     context="{'group_by': 'sector_id'}"/>
@@ -84,5 +83,4 @@
     </field>
 </record>
 
-</data>
-</openerp>
+</odoo>

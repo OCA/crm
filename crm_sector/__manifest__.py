@@ -5,10 +5,10 @@
 {
     "name": "CRM Sector",
     "summary": "Link leads/opportunities to sectors",
-    "version": "8.0.1.0.0",
+    "version": "10.0.1.0.0",
     "category": "Customer Relationship Management",
-    "website": "http://www.antiun.com",
-    "author": "Antiun Ingeniería, "
+    "website": "https://www.tecnativa.com",
+    "author": "Tecnativa, "
               "Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "application": False,
