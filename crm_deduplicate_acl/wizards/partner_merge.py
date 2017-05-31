@@ -32,8 +32,8 @@ class BasePartnerMergeAutomaticWizard(models.TransientModel):
         # check if the list of partners to merge contains child/parent relation
         child_ids = self.env['res.partner']
         for partner_id in partner_ids:
-            child_ids |= Partner.search([('id', 'child_of', [partner_id.id])])\
-                         - partner_id
+            child_ids |= Partner.search(
+                [('id', 'child_of', [partner_id.id])]) - partner_id
         if partner_ids & child_ids:
             raise UserError(_("You cannot merge a contact with one"
                               " of his parent."))
