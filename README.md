@@ -13,6 +13,7 @@ addon | version | summary
 --- | --- | ---
 [calendar_resource](calendar_resource/) | 10.0.1.0.0 | New features to facilitate resource management with meetings.
 [crm_phonecall](crm_phonecall/) | 10.0.1.0.0 | CRM Phone Calls
+[crm_phonecall_summary_predefined](crm_phonecall_summary_predefined/) | 10.0.1.0.0 | Allows to choose from a defined summary list
 
 
 Unported addons
