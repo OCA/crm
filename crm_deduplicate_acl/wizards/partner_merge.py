@@ -4,7 +4,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 from odoo import _, SUPERUSER_ID, models
-from odoo.exceptions import ValidationError, UserError
+from odoo.exceptions import UserError
 import logging
 
 
@@ -42,11 +42,10 @@ class BasePartnerMergeAutomaticWizard(models.TransientModel):
 
         if SUPERUSER_ID != self.env.uid and not user.has_group(
                 'crm_deduplicate_acl.group_unrestricted') and\
-                        len(set(partner.email for partner in partner_ids)) > 1:
+                len(set(partner.email for partner in partner_ids)) > 1:
             raise UserError(_("All contacts must have the same email."
                               " Only the Administrator can merge contacts"
                               " with different emails."))
-
 
         # remove dst_partner from partners to merge
         if dst_partner and dst_partner in partner_ids:
@@ -59,9 +58,9 @@ class BasePartnerMergeAutomaticWizard(models.TransientModel):
 
         # FIXME: is it still required to make and exception for
         #  account.move.line since accounting v9.0 ?
-        if SUPERUSER_ID != self.env.uid and not user.has_group(\
+        if SUPERUSER_ID != self.env.uid and not user.has_group(
                 'crm_deduplicate_acl.group_unrestricted') and\
-                        'account.move.line' in self.env and\
+                'account.move.line' in self.env and\
                 self.env[
                     'account.move.line'
                 ].sudo().search([('partner_id', 'in', [partner.id for
@@ -86,4 +85,3 @@ class BasePartnerMergeAutomaticWizard(models.TransientModel):
 
         # delete source partner, since they are merged
         src_partners.unlink()
-        
