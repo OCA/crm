@@ -37,10 +37,11 @@ Images
 Contributors
 ------------
 
-* Hardikgiri Goswami <hardikgiri.goswami@gmail.com>
 * Holger Brunn <hbrunn@therp.nl>
 * Sandy Carter <sandy.carter@savoirfairelinux.com>
 * Parthiv Patel, Tech Receptives (Original 6.0 Author)
+* Iván Todorovich <ivan.todorovich@gmail.com>
+* Hardikgiri Goswami <hardikgiri.goswami@gmail.com>
 
 Maintainer
 ----------
