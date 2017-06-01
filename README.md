@@ -38,6 +38,7 @@ addon | version | summary
 [marketing_crm_partner](marketing_crm_partner/) | 8.0.1.0.0 | Copy tracking fields from leads to partners
 [mass_mailing_partner](mass_mailing_partner/) | 8.0.2.1.0 | Link partners with mass-mailing
 [newsletter](newsletter/) | 8.0.2.0.0 | Send newsletters to customers, employees or other entities
+[newsletter_email_template_qweb](newsletter_email_template_qweb/) | 8.0.1.0.0 | Glue module for newsletter and email_template_qweb
 [partner_withdrawal](partner_withdrawal/) | 8.0.1.0.0 | Partner membership withdrawal
 
 
