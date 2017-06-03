@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-17 01:26+0000\n"
-"PO-Revision-Date: 2016-12-22 20:40+0000\n"
+"POT-Creation-Date: 2017-06-01 03:16+0000\n"
+"PO-Revision-Date: 2017-05-29 17:39+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Slovak (http://www.transifex.com/oca/OCA-crm-8-0/language/sk/)\n"
 "MIME-Version: 1.0\n"
@@ -26,6 +26,11 @@ msgstr "Prijatá"
 #: field:crm.claim.type,active:0
 msgid "Active"
 msgstr "Aktívne"
+
+#. module: crm_claim_type
+#: view:crm.claim:crm_claim_type.crm_case_claims_search_view
+msgid "Category"
+msgstr "Kategória"
 
 #. module: crm_claim_type
 #: model:ir.model,name:crm_claim_type.model_crm_claim
@@ -150,3 +155,8 @@ msgstr "Hľadaj Stupne"
 #: model:crm.claim.type,name:crm_claim_type.crm_claim_type_supplier
 msgid "Supplier"
 msgstr "Dodávateľ"
+
+#. module: crm_claim_type
+#: view:crm.claim:crm_claim_type.crm_case_claims_search_view
+msgid "Type"
+msgstr "Typ"

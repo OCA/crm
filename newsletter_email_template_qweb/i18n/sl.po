@@ -1,0 +1,64 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * newsletter_email_template_qweb
+# 
+# Translators:
+# Matjaž Mozetič <m.mozetic@matmoz.si>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-06-01 03:16+0000\n"
+"PO-Revision-Date: 2017-06-01 03:16+0000\n"
+"Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>, 2017\n"
+"Language-Team: Slovenian (https://www.transifex.com/oca/teams/23907/sl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: sl\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+
+#. module: newsletter_email_template_qweb
+#: field:newsletter.newsletter,template_body_type:0
+msgid "Body templating engine"
+msgstr "Motor za predloge vsebine sporočil"
+
+#. module: newsletter_email_template_qweb
+#: model:ir.model,name:newsletter_email_template_qweb.model_email_template
+msgid "Email Templates"
+msgstr "E-poštne predloge"
+
+#. module: newsletter_email_template_qweb
+#: view:newsletter.newsletter:newsletter_email_template_qweb.view_newsletter_newsletter_form
+msgid "In any of the following fields, you can use"
+msgstr "V vsakem od naslednjih polj lahko uporabite"
+
+#. module: newsletter_email_template_qweb
+#: model:ir.model,name:newsletter_email_template_qweb.model_newsletter_newsletter
+msgid "Newsletter"
+msgstr "Novice"
+
+#. module: newsletter_email_template_qweb
+#: view:newsletter.newsletter:newsletter_email_template_qweb.view_newsletter_newsletter_form
+msgid "QWeb expressions"
+msgstr "QWeb izrazi"
+
+#. module: newsletter_email_template_qweb
+#: view:newsletter.newsletter:newsletter_email_template_qweb.view_newsletter_newsletter_form
+msgid "and"
+msgstr "ali"
+
+#. module: newsletter_email_template_qweb
+#: view:newsletter.newsletter:newsletter_email_template_qweb.view_newsletter_newsletter_form
+msgid "newsletter"
+msgstr "e-novice"
+
+#. module: newsletter_email_template_qweb
+#: view:newsletter.newsletter:newsletter_email_template_qweb.view_newsletter_newsletter_form
+msgid "object"
+msgstr "object"
+
+#. module: newsletter_email_template_qweb
+#: view:newsletter.newsletter:newsletter_email_template_qweb.view_newsletter_newsletter_form
+msgid "on variables"
+msgstr "na spremenljivkah"
