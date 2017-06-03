@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-13 18:12+0000\n"
-"PO-Revision-Date: 2017-05-13 18:12+0000\n"
+"POT-Creation-Date: 2017-06-01 02:38+0000\n"
+"PO-Revision-Date: 2017-06-01 02:38+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/oca/teams/23907/es/)\n"
 "MIME-Version: 1.0\n"
@@ -230,7 +230,7 @@ msgstr "Descripción..."
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_display_name
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report_display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Nombre mostrado"
 
 #. module: crm_phonecall
 #: selection:crm.phonecall.report,state:0
@@ -307,19 +307,19 @@ msgstr "Última acción"
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall___last_update
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report___last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Última modificación el"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall_write_uid
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "Última actualización por"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall_write_date
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "Última actualización en"
 
 #. module: crm_phonecall
 #: model:ir.model,name:crm_phonecall.model_crm_lead
