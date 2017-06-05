@@ -16,6 +16,7 @@
                             <field name="email_to" readonly="1" invisible="1" />
                             <field name="email_cc" readonly="1" attrs="{'invisible': [('email_cc','=',False)]}"/>
                             <field name="reply_to" readonly="1" attrs="{'invisible': [('reply_to','=',False)]}"/>
+                            <field name="attachment_ids" widget="many2many_binary" readonly="1" attrs="{'invisible': [('attachment_ids', '=', [[6, False, []]])]}"/>
                             <field name="subject" readonly="1"/>
                         </group>
                         <field name="body_html" nolabel="1" colspan="4" height="350" width="350" readonly="1" widget="text_ckeditor4"/>

@@ -19,4 +19,9 @@ class EmailTemplatePreview(models.Model):
         mail_values.pop('email_cc', None)
         mail_values.pop('email_bcc', None)
         mail_values['auto_delete'] = not tools.config['test_enable']
+        mail_values['attachment_ids'] = [
+            (4, attachment_id)
+            if isinstance(attachment_id, int) else attachment_id
+            for attachment_id in mail_values.get('attachment_ids', [])
+        ]
         self.env['mail.mail'].create(mail_values).send()

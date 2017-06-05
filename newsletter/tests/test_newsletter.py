@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # © 2017 Therp BV <http://therp.nl>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+import base64
 from openerp.tests.common import TransactionCase
 
 
@@ -10,6 +11,12 @@ class TestNewsletter(TransactionCase):
             'type_id': self.env.ref('newsletter.newsletter_type_default').id,
             'subject': 'testnewsletter',
             'text_intro_html': 'hello world',
+        })
+        attachment = self.env['ir.attachment'].create({
+            'res_model': 'newsletter.newsletter',
+            'res_id': newsletter.id,
+            'name': 'testattachment',
+            'datas': base64.b64encode('hello world'),
         })
         action = newsletter.action_show_recipient_objects()
         self.assertEqual(
@@ -25,9 +32,11 @@ class TestNewsletter(TransactionCase):
                 self.env.ref('newsletter.model_newsletter_newsletter').id,
             })\
             .newsletter_test_send()
-        self.assertTrue(self.env['mail.mail'].search([
+        testmail = self.env['mail.mail'].search([
             ('email_to', '=', 'test@test.com'),
-        ]))
+        ])
+        self.assertTrue(testmail)
+        self.assertIn(attachment, testmail.attachment_ids)
         newsletter.action_send()
         self.assertTrue(self.env['ir.cron'].search([
             ('model', '=', 'newsletter.newsletter'),

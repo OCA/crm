@@ -63,6 +63,9 @@ but bad for bandwidth, so take care to chose reasonable image sizes.
 It is mandatory that you click on 'Preview' before you are allowed to finally
 send the newsletter. The sending process uses OpenERP's standard email queue.
 
+In case you have attached documents to some newsletter, they will be sent as
+attachments to all newsletter recipients.
+
 For further information, please visit:
 
  * https://www.odoo.com/forum/help-1

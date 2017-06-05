@@ -60,3 +60,27 @@ class email_template(Model):
                 })
 
         return result
+
+    def generate_email_batch(self, cr, uid, template_id, res_ids,
+                             context=None, fields=None):
+        result = super(email_template, self).generate_email_batch(
+            cr, uid, template_id, res_ids, context=context, fields=fields
+        )
+        template = self.browse(cr, uid, template_id, context=context)
+        if template.model == 'newsletter.newsletter':
+            for newsletter in self.pool[template.model].browse(
+                    cr, uid, res_ids, context=context
+            ):
+                attachment_ids = self.pool['ir.attachment'].search(
+                    cr, uid, [
+                        ('res_model', '=', template.model),
+                        ('res_id', '=', newsletter.id),
+                    ],
+                    context=context
+                )
+                if not attachment_ids:
+                    continue
+                result[newsletter.id].setdefault('attachment_ids', []).extend(
+                    attachment_ids
+                )
+        return result
