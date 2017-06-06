@@ -3,7 +3,7 @@
 # For copyright and license notices, see __openerp__.py file in root directory
 ##############################################################################
 
-import openerp.tests.common as common
+import odoo.tests.common as common
 
 
 class TestCrmLeadCode(common.TransactionCase):
