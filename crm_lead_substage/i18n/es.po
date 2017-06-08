@@ -1,0 +1,99 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* crm_lead_substage
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-01 13:38+0000\n"
+"PO-Revision-Date: 2016-02-01 13:38+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: crm_lead_substage
+#: model:ir.actions.act_window,help:crm_lead_substage.crm_case_substage_action
+msgid "<p class=\"oe_view_nocontent_create\">\n"
+"            Click to set a new substage in your lead/opportunity pipeline.\n"
+"          </p><p>\n"
+"            Substages will allow salespersons to easily refine the part or the\n"
+"            reason why a lead or opportunity is positioned in that stage.\n"
+"          </p>\n"
+"        "
+msgstr "<p class=\"oe_view_nocontent_create\">\n"
+"            Pulse para establecer una nueva subetapa en su operativa de iniciativas/oportunidades.\n"
+"          </p><p>\n"
+"            Las subetapas permitirán a los comerciales refinar fácilmente la parte o\n"
+"            la razón por la que una iniciativa u oportunidad está posicionada en esa etapa.\n"
+"          </p>\n"
+"        "
+
+#. module: crm_lead_substage
+#: model:ir.model,name:crm_lead_substage.model_crm_lead_report
+msgid "CRM Lead Analysis"
+msgstr "Análisis Iniciativas CRM"
+
+#. module: crm_lead_substage
+#: model:ir.model,name:crm_lead_substage.model_crm_opportunity_report
+msgid "CRM Opportunity Analysis"
+msgstr "Análisis de oportunidades CRM"
+
+#. module: crm_lead_substage
+#: field:crm.case.substage,create_uid:0
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: crm_lead_substage
+#: field:crm.case.substage,create_date:0
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: crm_lead_substage
+#: field:crm.case.substage,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: crm_lead_substage
+#: field:crm.case.substage,write_uid:0
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: crm_lead_substage
+#: field:crm.case.substage,write_date:0
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: crm_lead_substage
+#: model:ir.model,name:crm_lead_substage.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Iniciativa/Oportunidad"
+
+#. module: crm_lead_substage
+#: field:crm.case.substage,name:0
+msgid "Name"
+msgstr "Nombre"
+
+#. module: crm_lead_substage
+#: field:crm.case.substage,stage_id:0
+msgid "Stage"
+msgstr "Etap"
+
+#. module: crm_lead_substage
+#: field:crm.lead,substage_id:0
+#: view:crm.lead.report:crm_lead_substage.view_report_crm_lead_filter
+#: field:crm.lead.report,substage_id:0
+#: view:crm.opportunity.report:crm_lead_substage.view_report_crm_opportunity_filter
+#: field:crm.opportunity.report,substage_id:0
+msgid "Substage"
+msgstr "Subetapa"
+
+#. module: crm_lead_substage
+#: model:ir.actions.act_window,name:crm_lead_substage.crm_case_substage_action
+#: model:ir.ui.menu,name:crm_lead_substage.menu_crm_case_substage
+msgid "Substages"
+msgstr "Subetapas"
+
