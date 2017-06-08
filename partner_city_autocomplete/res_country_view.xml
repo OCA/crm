@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="base.be" model="res.country">
+            <field name="name">Belgium</field>
+            <field name="code">be</field>
+            <field name="address_format" eval="'%(street)s\n%(street2)s\n%(zip)s %(city2)s\n%(country_name)s'" />
+            <field name="currency_id" ref="base.EUR"/>
+        </record>
+        
+        <record id="view_country_form" model="ir.ui.view">
+            <field name="name">res.country.form</field>
+            <field name="model">res.country</field>
+            <field name="inherit_id" ref="base.view_country_form"/>
+            <field name="arch" type="xml">
+               <field name="code" position="after">
+                   <field name="pos_fis"/>
+               </field>
+            </field>
+        </record>
+
+        <record id="view_account_position_form" model="ir.ui.view">
+            <field name="name">account.fiscal.position.form</field>
+            <field name="model">account.fiscal.position</field>
+            <field name="inherit_id" ref="account.view_account_position_form"/>
+            <field name="arch" type="xml">
+                <separator string="Taxes Mapping" position="before">
+                    <field name="country" widget="many2many"/>
+                </separator>
+            </field>
+        </record>
+        
+        <record id="view_partner_form_inh" model="ir.ui.view">
+            <field name="name">res.partner.form</field>
+            <field name="model">res.partner</field>
+            <field name="priority" eval="0"/>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="/form/sheet/notebook/page/field[@name='child_ids']/form[@string='Contact']/sheet/group/div/div/field[@name='zip']" position="replace"/>
+                <xpath expr="/form/sheet/notebook/page/field[@name='child_ids']/form[@string='Contact']/sheet/group/div/div/field[@name='city']" position="replace">
+                       <field name="zip" placeholder="ZIP" style="width: 20%%" on_change="onchange_zip(zip)"/>
+                       <field name="city" placeholder="City" style="width: 40%%" invisible="True"/>
+                       <field name="city2" placeholder="City" style="width: 40%%" on_change="onchange_city(city2)" />
+                </xpath>
+                <field name="country_id" placeholder="Country" class="oe_no_button" options='{"no_open": True}' position="replace">
+                    <field name="country_id" on_change="onchange_country(country_id)" placeholder="Country" class="oe_no_button" options='{"no_open": True}'/>
+                </field>
+                <xpath expr="/form/sheet/group/group/div/div/field[@name='city']" position="replace"/>
+                <xpath expr="/form/sheet/group/group/div/div/field[@name='state_id']" position="replace"/>
+                <xpath expr="/form/sheet/group/group/div/div/field[@name='zip']" position="replace">
+                     <field name="zip" placeholder="ZIP" style="width: 20%%" on_change="onchange_zip(zip)"/>
+                    <field name="city" placeholder="City" style="width: 40%%" invisible="True"/>
+                    <field name="city2" placeholder="City" style="width: 40%%" on_change="onchange_city(city2)" />
+                    <field name="state_id" class="oe_no_button" placeholder="State" style="width: 37%%" options='{"no_open": True}' on_change="onchange_state(state_id)" />
+                </xpath>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="zip_city_tree_view">
+            <field name="name">zip.city.tree</field>
+            <field name="model">zip.city</field>
+            <field name="arch" type="xml">
+                <tree string="City">
+                    <field name="zip"/>
+                    <field name="name"/>
+                    <field name="country"/>
+                </tree>    
+            </field>
+        </record>
+        <record model="ir.ui.view" id="zip_city_form_view">
+            <field name="name">zip.city.form</field>
+            <field name="model">zip.city</field>
+            <field name="arch" type="xml">
+                <form string="City" version="7.0">
+                    <sheet>
+                        <group>
+                            <field name="zip"/>
+                            <field name="name"/>
+                            <field name="country"/> 
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="zip_city_filter_view">
+            <field name="name">zip.city.filter</field>
+            <field name="model">zip.city</field>
+            <field name="arch" type="xml">
+                <search string="City" >
+                    <field name="zip"/>
+                    <field name="name"/>
+                    <field name="country"/>
+                    <group expand="0" string="Group By">
+                        <filter string="zip" context="{'group_by': 'zip'}" />
+                        <filter string="city" context="{'group_by': 'name'}" />
+                        <filter string="country" context="{'group_by': 'country'}" />
+                    </group> 
+                </search>
+            </field>
+        </record>
+        
+        <record id="open_zip_city" model="ir.actions.act_window">
+            <field name="name">City</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">zip.city</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="zip_city_tree_view"/>
+            <field name="context">{}</field>
+        </record>
+        <menuitem action="open_zip_city" id="menu_zip_city" parent="base.menu_localisation" />
+        
+    </data>
+</openerp>

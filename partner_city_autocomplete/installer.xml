@@ -1,0 +1,78 @@
+<openerp>
+    <data>
+        <record id="view_cityzip" model="ir.ui.view">
+            <field name="name">Configure Country data</field>
+            <field name="model">city.import</field>
+            <field name="arch" type="xml">
+                <form string="Configure Country data" version="7.0">
+                    <group>
+                        <field name="file"/>
+                        <field name="country_id"/>
+                    </group>
+                    <newline/>
+                    <group>
+                    <label string="The file must be a csv file with delimiter ';'  without header and formated like this : "/>
+                    <newline/>
+                    <label string="column A : zip"/>
+                    <newline/>
+                    <label string="column B : city"/>
+                    <newline/>
+                    </group>
+                    <footer>
+                        <button name="make" string="Import" type="object" class="oe_highlight"  />
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel" />
+                   </footer>
+               </form>
+            </field>
+        </record>
+        
+        <record id="view_country_installer" model="ir.ui.view">
+            <field name="name">country.installer.form</field>
+            <field name="model">country.installer</field>
+            <field name="arch" type="xml">
+                <form string="Configure Country data" version="7.0">
+                    <footer>
+                          <button name="new_import" type="object" string="Other Country" />
+                          <button name="action_next" type="object" string="Continue" class="oe_highlight"/>
+                          or
+                          <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                    <sheet>
+	                    <p class="oe_grey">
+	                        Select the country you want to import informations of city and zip code or click on the button to select an other file.
+	                    </p>
+	                    <group>
+	                        <field name="be" />
+	                        <field name="fr" />
+	                        <field name="de" />
+	                        <field name="es" />
+	                        <field name="it" />
+	                        <field name="lu" />
+	                        <field name="nl" />
+	                        <field name="po" />
+	                        <field name="uk" />
+	                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_country_configuration_installer" model="ir.actions.act_window">
+            <field name="name">Configure Country data</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">country.installer</field>
+            <field name="view_id" ref="view_country_installer"/>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <record id="account_country_installer_todo" model="ir.actions.todo">
+            <field name="action_id" ref="action_country_configuration_installer"/>
+            <field name="sequence">5</field>
+            <field name="type">automatic</field>
+        </record>
+
+    </data>
+</openerp>

@@ -1,0 +1,4599 @@
+IT1;67100;L'Aquila;Italy
+IT2;66100;Tricalle;Italy
+IT3;65100;Pescara;Italy
+IT4;65121;Pescara;Italy
+IT5;65122;Pescara;Italy
+IT6;65123;Pescara;Italy
+IT7;65124;Pescara;Italy
+IT8;65125;Pescara Colli;Italy
+IT9;65126;Pescara;Italy
+IT10;65127;Pescara;Italy
+IT11;65128;Pescara;Italy
+IT12;65129;Pineta Di Pescara;Italy
+IT13;65131;Fontanelle;Italy
+IT14;65132;San Silvestro;Italy
+IT15;64100;Teramo;Italy
+IT16;75100;La Martella;Italy
+IT17;85100;Potenza;Italy
+IT18;87100;Casali;Italy
+IT19;88100;Catanzaro;Italy
+IT20;89100;Reggio Calabria;Italy
+IT21;89121;Regcal;Italy
+IT22;89122;Regcal;Italy
+IT23;89123;Regcal;Italy
+IT24;89124;Eremo;Italy
+IT25;89125;Regcal;Italy
+IT26;89126;Regcal;Italy
+IT27;89127;Regcal;Italy
+IT28;89128;Spirito Santo;Italy
+IT29;89129;Regcal;Italy
+IT30;89131;Regcal;Italy
+IT31;89132;Regcal;Italy
+IT32;89133;San Giorgio Extra;Italy
+IT33;89134;Croce Valanidi;Italy
+IT34;89135;Diminniti;Italy
+IT35;83100;Avellino;Italy
+IT36;82100;Perrillo;Italy
+IT37;81100;Staturano;Italy
+IT38;80100;Napoli;Italy
+IT39;80121;Napoli;Italy
+IT40;80122;Napoli;Italy
+IT41;80123;Napoli;Italy
+IT42;80124;Bagnoli;Italy
+IT43;80125;Agnano;Italy
+IT44;80126;Soccavo;Italy
+IT45;80127;Vomero;Italy
+IT46;80128;Napoli;Italy
+IT47;80129;Napoli;Italy
+IT48;80131;Cappella Cangiani;Italy
+IT49;80132;Napoli;Italy
+IT50;80133;Napoli;Italy
+IT51;80134;Napoli;Italy
+IT52;80135;Napoli;Italy
+IT53;80136;Napoli;Italy
+IT54;80137;Napoli;Italy
+IT55;80138;Napoli;Italy
+IT56;80139;Napoli;Italy
+IT57;80141;Napoli;Italy
+IT58;80142;Napoli;Italy
+IT59;80143;Napoli;Italy
+IT60;80144;San Pietro A Patierno;Italy
+IT61;80145;Marianella;Italy
+IT62;80146;San Giovanni A Teduccio;Italy
+IT63;80147;Barra;Italy
+IT64;84100;Salerno;Italy
+IT65;84121;Salerno;Italy
+IT66;84122;Salerno;Italy
+IT67;84123;Salerno;Italy
+IT68;84124;Salerno;Italy
+IT69;84125;Salerno;Italy
+IT70;84126;Salerno;Italy
+IT71;84127;Torrione Di Salerno;Italy
+IT72;84128;Pastena Di Salerno;Italy
+IT73;84129;Salerno;Italy
+IT74;84131;Fuorni;Italy
+IT75;84132;Salerno;Italy
+IT76;84133;Salerno;Italy
+IT77;84134;Giovi;Italy
+IT78;84135;Matierno;Italy
+IT79;40100;Bologna;Italy
+IT80;40121;Bologna;Italy
+IT81;40122;Bologna;Italy
+IT82;40123;Bologna;Italy
+IT83;40124;Bologna;Italy
+IT84;40125;Bologna;Italy
+IT85;40126;Bologna;Italy
+IT86;40127;San Donnino;Italy
+IT87;40128;Corticella;Italy
+IT88;40129;Bologna;Italy
+IT89;40131;Bologna;Italy
+IT90;40132;Bologna;Italy
+IT91;40133;Bologna;Italy
+IT92;40134;Bologna;Italy
+IT93;40135;Casaglia;Italy
+IT94;40136;Gaibola;Italy
+IT95;40137;Bologna;Italy
+IT96;40138;Roveri;Italy
+IT97;40139;Bologna;Italy
+IT98;40141;San Ruffillo;Italy
+IT99;47100;Ronco;Italy
+IT100;44100;Ferrara;Italy
+IT101;41100;Baggiovara;Italy
+IT102;29100;Sant'Antonio;Italy
+IT103;43100;Cortile San Martino;Italy
+IT104;43126;Parma;Italy
+IT105;48100;San Bartolo;Italy
+IT106;42100;Coviolo;Italy
+IT107;34170;Gorizia;Italy
+IT108;33170;Pordenone;Italy
+IT109;34100;Trieste;Italy
+IT110;34121;Trieste;Italy
+IT111;34122;Trieste;Italy
+IT112;34123;Trieste;Italy
+IT113;34124;Trieste;Italy
+IT114;34125;Trieste;Italy
+IT115;34126;Trieste;Italy
+IT116;34127;Trieste;Italy
+IT117;34128;Trieste;Italy
+IT118;34129;Trieste;Italy
+IT119;34131;Trieste;Italy
+IT120;34132;Trieste;Italy
+IT121;34133;Trieste;Italy
+IT122;34134;Trieste;Italy
+IT123;34135;Trieste;Italy
+IT124;34136;Cedas;Italy
+IT125;34137;Trieste;Italy
+IT126;34138;Trieste;Italy
+IT127;34139;Trieste;Italy
+IT128;34141;Trieste;Italy
+IT129;34142;Trieste;Italy
+IT130;34143;Trieste;Italy
+IT131;34144;Trieste;Italy
+IT132;34145;Trieste;Italy
+IT133;34146;Trieste;Italy
+IT134;34147;Aquilinia;Italy
+IT135;34148;Trieste;Italy
+IT136;34149;Cattinara;Italy
+IT137;34151;Trieste;Italy
+IT138;33100;Baldasseria;Italy
+IT139;16100;Genova;Italy
+IT140;16121;Genova;Italy
+IT141;16122;Genova;Italy
+IT142;16123;Genova;Italy
+IT143;16124;Genova;Italy
+IT144;16125;Genova;Italy
+IT145;16126;Genova;Italy
+IT146;16127;Genova;Italy
+IT147;16128;Genova;Italy
+IT148;16129;Genova;Italy
+IT149;16131;Genova;Italy
+IT150;16132;Genova;Italy
+IT151;16133;San Desiderio;Italy
+IT152;16134;Genova;Italy
+IT153;16135;Genova;Italy
+IT154;16136;Genova;Italy
+IT155;16137;Staglieno;Italy
+IT156;16138;Molassana;Italy
+IT157;16139;Genova;Italy
+IT158;16141;Sant'Eusebio;Italy
+IT159;16142;Genova;Italy
+IT160;16143;Genova;Italy
+IT161;16144;Genova;Italy
+IT162;16145;Genova;Italy
+IT163;16146;Genova;Italy
+IT164;16147;Sturla;Italy
+IT165;16148;Quarto Dei Mille;Italy
+IT166;16149;Sampierdarena;Italy
+IT167;16151;Campasso;Italy
+IT168;16152;Cornigliano Ligure;Italy
+IT169;16153;Borzoli;Italy
+IT170;16154;San Giovanni Battista;Italy
+IT171;16155;Genova;Italy
+IT172;16156;Genova;Italy
+IT173;16157;Palmaro Di Pra';Italy
+IT174;16158;Genova;Italy
+IT175;16159;Certosa Di Rivarolo Ligure;Italy
+IT176;16161;Fegino;Italy
+IT177;16162;Bolzaneto;Italy
+IT178;16163;San Quirico In Val Polcevera;Italy
+IT179;16164;Pontedecimo;Italy
+IT180;16165;Struppa;Italy
+IT181;16166;Quinto Al Mare;Italy
+IT182;16167;Nervi;Italy
+IT183;18100;Imperia;Italy
+IT184;19100;La Spezia;Italy
+IT185;19121;Laspezia;Italy
+IT186;19122;Laspezia;Italy
+IT187;19123;Pegazzano;Italy
+IT188;19124;Laspezia;Italy
+IT189;19125;Laspezia;Italy
+IT190;19126;Isola;Italy
+IT191;19131;Laspezia;Italy
+IT192;19132;Laspezia;Italy
+IT193;19133;Biassa;Italy
+IT194;19134;Marinasco;Italy
+IT195;19135;Laspezia;Italy
+IT196;19136;Laspezia;Italy
+IT197;19137;Laspezia;Italy
+IT198;19138;Laspezia;Italy
+IT199;19139;Laspezia;Italy
+IT200;17100;Zinola;Italy
+IT201;24100;Bergamo;Italy
+IT202;24121;Bergamo;Italy
+IT203;24122;Bergamo;Italy
+IT204;24123;Valtesse;Italy
+IT205;24124;Redona;Italy
+IT206;24125;Bergamo;Italy
+IT207;24126;Colognola Al Piano;Italy
+IT208;24127;Bergamo;Italy
+IT209;24128;Loreto;Italy
+IT210;24129;Longuelo;Italy
+IT211;25100;Brescia;Italy
+IT212;25121;Brescia;Italy
+IT213;25122;Brescia;Italy
+IT214;25123;Brescia;Italy
+IT215;25124;Brescia;Italy
+IT216;25125;Brescia;Italy
+IT217;25126;Brescia;Italy
+IT218;25127;Brescia;Italy
+IT219;25128;Brescia;Italy
+IT220;25129;Brescia;Italy
+IT221;25131;Fornaci;Italy
+IT222;25132;Mandolossa Di Brescia;Italy
+IT223;25133;Mompiano;Italy
+IT224;25134;San Polo;Italy
+IT225;25135;Sant'Eufemia Della Fonte;Italy
+IT226;25136;Stocchetta;Italy
+IT227;22100;Lora;Italy
+IT228;26100;Cava Tigozzi;Italy
+IT229;20100;Milano;Italy
+IT230;20121;Milano;Italy
+IT231;20122;Milano;Italy
+IT232;20123;Milano;Italy
+IT233;20124;Milano;Italy
+IT234;20125;Greco;Italy
+IT235;20126;Milano;Italy
+IT236;20127;Crescenzago;Italy
+IT237;20128;Milano;Italy
+IT238;20129;Milano;Italy
+IT239;20131;Milano;Italy
+IT240;20132;Milano;Italy
+IT241;20133;Milano;Italy
+IT242;20134;Lambrate;Italy
+IT243;20135;Milano;Italy
+IT244;20136;Milano;Italy
+IT245;20137;Milano;Italy
+IT246;20138;Milano;Italy
+IT247;20139;Chiaravalle Milanese;Italy
+IT248;20141;Milano;Italy
+IT249;20142;Gratosoglio;Italy
+IT250;20143;Barona;Italy
+IT251;20144;Milano;Italy
+IT252;20145;Milano;Italy
+IT253;20146;Milano;Italy
+IT254;20147;Milano;Italy
+IT255;20148;Milano;Italy
+IT256;20149;Milano;Italy
+IT257;20151;Musocco;Italy
+IT258;20152;Baggio;Italy
+IT259;20153;Trenno;Italy
+IT260;20154;Milano;Italy
+IT261;20155;Milano;Italy
+IT262;20156;Milano;Italy
+IT263;20157;Vialba;Italy
+IT264;20158;Milano;Italy
+IT265;20159;Milano;Italy
+IT266;20161;Affori;Italy
+IT267;20162;Milano;Italy
+IT268;46100;Mantova;Italy
+IT269;27100;Pavia;Italy
+IT270;23100;Albosaggia;Italy
+IT271;21100;Sant'Ambrogio Olona;Italy
+IT272;3100;Frosinone Stazione;Italy
+IT273;4100;Borgo Isonzo;Italy
+IT274;2100;Rieti;Italy
+IT275;100;Roma;Italy
+IT276;119;Ostia Antica;Italy
+IT277;120;Roma;Italy
+IT278;121;Lido Di Ostia Ponente;Italy
+IT279;122;Castel Porziano;Italy
+IT280;123;Roma;Italy
+IT281;124;Roma;Italy
+IT282;125;Roma;Italy
+IT283;126;Roma;Italy
+IT284;127;Vitinia;Italy
+IT285;128;Castel Romano;Italy
+IT286;131;Roma;Italy
+IT287;132;Borgata Finocchio;Italy
+IT288;133;Torre Angela;Italy
+IT289;134;Castel Di Leva;Italy
+IT290;135;Roma;Italy
+IT291;136;Roma;Italy
+IT292;137;Roma;Italy
+IT293;138;Marcigliana;Italy
+IT294;139;Roma;Italy
+IT295;141;Roma;Italy
+IT296;142;Roma;Italy
+IT297;143;Cecchignola;Italy
+IT298;144;Decima;Italy
+IT299;145;Roma;Italy
+IT300;146;Roma;Italy
+IT301;147;Roma;Italy
+IT302;148;Borgata Corviale;Italy
+IT303;149;Roma;Italy
+IT304;151;Roma;Italy
+IT305;152;Roma;Italy
+IT306;153;Roma;Italy
+IT307;154;Roma;Italy
+IT308;155;La Rustica;Italy
+IT309;156;Roma;Italy
+IT310;157;Roma;Italy
+IT311;158;Roma;Italy
+IT312;159;Roma;Italy
+IT313;161;Roma;Italy
+IT314;162;Roma;Italy
+IT315;163;Roma;Italy
+IT316;164;Roma;Italy
+IT317;165;Roma;Italy
+IT318;166;Borgata Casalotti;Italy
+IT319;167;Roma;Italy
+IT320;168;Roma;Italy
+IT321;169;Torre Spaccata;Italy
+IT322;171;Roma;Italy
+IT323;172;Roma;Italy
+IT324;173;Roma;Italy
+IT325;174;Roma;Italy
+IT326;175;Roma;Italy
+IT327;176;Roma;Italy
+IT328;177;Roma;Italy
+IT329;178;Capannelle;Italy
+IT330;179;Roma;Italy
+IT331;181;Roma;Italy
+IT332;182;Roma;Italy
+IT333;183;Roma;Italy
+IT334;184;Roma;Italy
+IT335;185;Roma;Italy
+IT336;186;Roma;Italy
+IT337;187;Roma;Italy
+IT338;188;Labaro;Italy
+IT339;189;Grottarossa;Italy
+IT340;191;Roma;Italy
+IT341;192;Roma;Italy
+IT342;193;Roma;Italy
+IT343;194;Roma;Italy
+IT344;195;Roma;Italy
+IT345;196;Roma;Italy
+IT346;197;Roma;Italy
+IT347;198;Roma;Italy
+IT348;199;Roma;Italy
+IT349;1100;Viterbo;Italy
+IT350;60100;Ancona;Italy
+IT351;60121;Ancona;Italy
+IT352;60122;Ancona;Italy
+IT353;60123;Ancona;Italy
+IT354;60124;Ancona;Italy
+IT355;60125;Ancona;Italy
+IT356;60126;Ancona;Italy
+IT357;60127;Pinocchio;Italy
+IT358;60128;Ancona;Italy
+IT359;60129;Pietralacroce;Italy
+IT360;60131;Ancona;Italy
+IT361;63100;Piagge Di Ascoli Piceno;Italy
+IT362;62100;Macerata;Italy
+IT363;61100;San Pietro In Calibano;Italy
+IT364;86100;Campobasso;Italy
+IT365;86170;Castelromano;Italy
+IT366;15100;Alessandria;Italy
+IT367;14100;Valgera;Italy
+IT368;12100;Cuneo;Italy
+IT369;28100;Agognate;Italy
+IT370;10100;Torino;Italy
+IT371;10121;Torino;Italy
+IT372;10122;Torino;Italy
+IT373;10123;Torino;Italy
+IT374;10124;Torino;Italy
+IT375;10125;Torino;Italy
+IT376;10126;Torino;Italy
+IT377;10127;Torino;Italy
+IT378;10128;Torino;Italy
+IT379;10129;Torino;Italy
+IT380;10131;Torino;Italy
+IT381;10132;Torino;Italy
+IT382;10133;Cavoretto;Italy
+IT383;10134;Torino;Italy
+IT384;10135;Torino;Italy
+IT385;10136;Torino;Italy
+IT386;10137;Torino;Italy
+IT387;10138;Torino;Italy
+IT388;10139;Torino;Italy
+IT389;10141;Torino;Italy
+IT390;10142;Torino;Italy
+IT391;10143;Torino;Italy
+IT392;10144;Torino;Italy
+IT393;10145;Torino;Italy
+IT394;10146;Torino;Italy
+IT395;10147;Torino;Italy
+IT396;10148;Torino;Italy
+IT397;10149;Torino;Italy
+IT398;10151;Torino;Italy
+IT399;10152;Torino;Italy
+IT400;10153;Torino;Italy
+IT401;10154;Torino;Italy
+IT402;10155;Torino;Italy
+IT403;10156;Falchera;Italy
+IT404;13100;Cappuccini;Italy
+IT405;70100;Bari;Italy
+IT406;70121;Bari;Italy
+IT407;70122;Bari;Italy
+IT408;70123;Fesca;Italy
+IT409;70124;Bari;Italy
+IT410;70125;Carrassi;Italy
+IT411;70126;Japigia;Italy
+IT412;70127;Santo Spirito;Italy
+IT413;70128;Palese;Italy
+IT414;70129;Loseto;Italy
+IT415;70131;Carbonara Di Bari;Italy
+IT416;72100;Brindisi;Italy
+IT417;71100;Foggia;Italy
+IT418;73100;San Cataldo;Italy
+IT419;74100;Taranto;Italy
+IT420;92100;Borgo La Loggia;Italy
+IT421;93100;Caltanissetta;Italy
+IT422;95100;Catania;Italy
+IT423;95121;San Teodoro;Italy
+IT424;95122;Acquicella;Italy
+IT425;95123;Catania;Italy
+IT426;95124;Catania;Italy
+IT427;95125;Canalicchio;Italy
+IT428;95126;Catania;Italy
+IT429;95127;Catania;Italy
+IT430;95128;Catania;Italy
+IT431;95129;Catania;Italy
+IT432;95131;Catania;Italy
+IT433;94100;Enna;Italy
+IT434;98100;Messina;Italy
+IT435;98121;Messina;Italy
+IT436;98122;Messina;Italy
+IT437;98123;Messina;Italy
+IT438;98124;Messina;Italy
+IT439;98125;Messina;Italy
+IT440;98126;Santa Lucia Sopra Contesse;Italy
+IT441;98127;Zafferia;Italy
+IT442;98128;Tremestieri;Italy
+IT443;98129;Messina;Italy
+IT444;98131;Mili Marina;Italy
+IT445;98132;Mili San Marco;Italy
+IT446;98133;Mili Superiore;Italy
+IT447;98134;Galati Marina;Italy
+IT448;98135;Santa Margherita;Italy
+IT449;98136;Santo Stefano Medio;Italy
+IT450;98137;Santo Stefano Di Briga;Italy
+IT451;98138;Pezzolo;Italy
+IT452;98139;San Placido Calonero';Italy
+IT453;98141;Messina;Italy
+IT454;98142;Messina;Italy
+IT455;98143;Altolia;Italy
+IT456;98144;San Filippo;Italy
+IT457;98145;Bordonaro;Italy
+IT458;98146;Messina;Italy
+IT459;98147;Villaggio Aldisio;Italy
+IT460;98148;Santo;Italy
+IT461;98149;Camaro Inferiore;Italy
+IT462;98151;Camaro;Italy
+IT463;98152;Scala Ritiro;Italy
+IT464;98153;Messina;Italy
+IT465;98154;Salice;Italy
+IT466;98155;Messina;Italy
+IT467;98156;Messina;Italy
+IT468;98157;Messina;Italy
+IT469;98158;Faro Superiore;Italy
+IT470;98159;Messina;Italy
+IT471;98161;Rodia;Italy
+IT472;98162;San Saba;Italy
+IT473;98163;Sparta';Italy
+IT474;98164;Torre Faro;Italy
+IT475;98165;Messina;Italy
+IT476;98166;Sant'Agata;Italy
+IT477;98167;Pace;Italy
+IT478;98168;Villaggio Paradiso;Italy
+IT479;90100;Palermo;Italy
+IT480;90121;Acqua Dei Corsari;Italy
+IT481;90122;Palermo;Italy
+IT482;90123;Palermo;Italy
+IT483;90124;Palermo;Italy
+IT484;90125;Palermo;Italy
+IT485;90126;Palermo;Italy
+IT486;90127;Palermo;Italy
+IT487;90128;Palermo;Italy
+IT488;90129;Palermo;Italy
+IT489;90131;Rocca Monreale;Italy
+IT490;90132;Palermo;Italy
+IT491;90133;Palermo;Italy
+IT492;90134;Palermo;Italy
+IT493;90135;Palermo;Italy
+IT494;90136;Palermo;Italy
+IT495;90137;Palermo;Italy
+IT496;90138;Palermo;Italy
+IT497;90139;Palermo;Italy
+IT498;90141;Palermo;Italy
+IT499;90142;Palermo;Italy
+IT500;90143;Palermo;Italy
+IT501;90144;Palermo;Italy
+IT502;90145;Palermo;Italy
+IT503;90146;San Lorenzo Colli;Italy
+IT504;90147;Palermo;Italy
+IT505;90148;Villagrazia;Italy
+IT506;90149;Palermo;Italy
+IT507;90151;Mondello;Italy
+IT508;97100;Ragusa;Italy
+IT509;96100;Siracusa;Italy
+IT510;91100;Fontanelle Casasanta;Italy
+IT511;9100;Cagliari;Italy
+IT512;9121;Cagliari;Italy
+IT513;9122;Cagliari;Italy
+IT514;9123;Cagliari;Italy
+IT515;9124;Cagliari;Italy
+IT516;9125;Cagliari;Italy
+IT517;9126;Lazzaretto;Italy
+IT518;9127;Cagliari;Italy
+IT519;9128;Cagliari;Italy
+IT520;9129;Cagliari;Italy
+IT521;9131;Cagliari;Italy
+IT522;9134;Pirri;Italy
+IT523;8100;Lollove;Italy
+IT524;9170;Oristano;Italy
+IT525;7100;Sassari;Italy
+IT526;52100;Arezzo;Italy
+IT527;50100;Firenze;Italy
+IT528;50121;Firenze;Italy
+IT529;50122;Firenze;Italy
+IT530;50123;Firenze;Italy
+IT531;50124;Galluzzo;Italy
+IT532;50125;San Felice A Ema;Italy
+IT533;50126;Pieve A Ripoli;Italy
+IT534;50127;Firenze;Italy
+IT535;50129;Firenze;Italy
+IT536;50131;Firenze;Italy
+IT537;50132;Firenze;Italy
+IT538;50133;Firenze;Italy
+IT539;50134;Firenze;Italy
+IT540;50135;Montalbano;Italy
+IT541;50136;Rovezzano;Italy
+IT542;50137;Firenze;Italy
+IT543;50139;Firenze;Italy
+IT544;50141;Rifredi;Italy
+IT545;50142;Mantignano;Italy
+IT546;50143;Firenze;Italy
+IT547;50144;Firenze;Italy
+IT548;50145;Brozzi;Italy
+IT549;58100;Grosseto;Italy
+IT550;57100;Livorno;Italy
+IT551;57121;Livorno;Italy
+IT552;57122;Livorno;Italy
+IT553;57123;Livorno;Italy
+IT554;57124;Salviano;Italy
+IT555;57125;Livorno;Italy
+IT556;57126;Livorno;Italy
+IT557;57127;Livorno;Italy
+IT558;57128;Ardenza;Italy
+IT559;55100;Lucca;Italy
+IT560;54100;Massa;Italy
+IT561;56100;Pisa;Italy
+IT562;56121;Coltano;Italy
+IT563;56122;Pisa;Italy
+IT564;56123;Pisa;Italy
+IT565;56124;Pisa;Italy
+IT566;56125;Pisa;Italy
+IT567;56126;Pisa;Italy
+IT568;56127;Pisa;Italy
+IT569;56128;Pisa;Italy
+IT570;59100;Mezzana;Italy
+IT571;51100;Pistoia;Italy
+IT572;53100;Siena;Italy
+IT573;39100;Bozen;Italy
+IT574;38100;Trento;Italy
+IT575;6100;Perugia;Italy
+IT576;6121;Perugia;Italy
+IT577;6122;Perugia;Italy
+IT578;6123;Perugia;Italy
+IT579;6124;Perugia Stazione;Italy
+IT580;6125;Perugia;Italy
+IT581;6126;Montecorneo;Italy
+IT582;6127;Ferro Di Cavallo;Italy
+IT583;6128;Ponte Della Pietra;Italy
+IT584;6129;Prepo;Italy
+IT585;6131;San Marco;Italy
+IT586;6132;San Sisto;Italy
+IT587;6134;Perugia;Italy
+IT588;5100;Valenza;Italy
+IT589;11100;Arpuilles;Italy
+IT590;32100;Fiammoi;Italy
+IT591;35100;Padova;Italy
+IT592;35121;Padova;Italy
+IT593;35122;Padova;Italy
+IT594;35123;Padova;Italy
+IT595;35124;Salboro;Italy
+IT596;35125;Guizza;Italy
+IT597;35126;Padova;Italy
+IT598;35127;Camin;Italy
+IT599;35128;Padova;Italy
+IT600;35129;Padova;Italy
+IT601;35131;Padova;Italy
+IT602;35132;Padova;Italy
+IT603;35133;Padova;Italy
+IT604;35134;Padova;Italy
+IT605;35135;Padova;Italy
+IT606;35136;Padova;Italy
+IT607;35137;Padova;Italy
+IT608;35138;Monta';Italy
+IT609;35139;Padova;Italy
+IT610;35141;Padova;Italy
+IT611;35142;Mandria;Italy
+IT612;35143;Brusegana;Italy
+IT613;45100;Cantonazzo;Italy
+IT614;31100;Fiera;Italy
+IT615;30100;Venezia;Italy
+IT616;30121;Venezia;Italy
+IT617;30122;Sant'Elena;Italy
+IT618;30123;Venezia;Italy
+IT619;30124;Venezia;Italy
+IT620;30125;Venezia;Italy
+IT621;30126;Lido Di Venezia;Italy
+IT622;30131;Venezia;Italy
+IT623;30132;Venezia;Italy
+IT624;30133;Giudecca;Italy
+IT625;30135;Venezia;Italy
+IT626;30141;Murano;Italy
+IT627;30142;Burano;Italy
+IT628;30170;Venezia Mestre;Italy
+IT629;30171;Mestre;Italy
+IT630;30172;Mestre;Italy
+IT631;30173;Villaggio San Marco;Italy
+IT632;30174;Zelarino;Italy
+IT633;30175;Ca' Emiliani;Italy
+IT634;36100;Polegge;Italy
+IT635;37100;Verona;Italy
+IT636;37121;Verona;Italy
+IT637;37122;Verona;Italy
+IT638;37123;Verona;Italy
+IT639;37124;Verona;Italy
+IT640;37125;Quinzano;Italy
+IT641;37126;Verona;Italy
+IT642;37127;Avesa;Italy
+IT643;37128;Verona;Italy
+IT644;37129;Verona;Italy
+IT645;37131;Verona;Italy
+IT646;37132;San Michele Extra;Italy
+IT647;37133;Verona;Italy
+IT648;37134;Verona;Italy
+IT649;37135;Verona;Italy
+IT650;37136;Verona;Italy
+IT651;37137;Verona;Italy
+IT652;37138;Verona;Italy
+IT653;37139;Chievo;Italy
+IT654;37142;Verona;Italy
+IT655;92010;Linosa;Italy
+IT656;92011;Cattolica Eraclea;Italy
+IT657;92012;Cianciana;Italy
+IT658;92013;Menfi;Italy
+IT659;92014;Porto Empedocle;Italy
+IT660;92015;Raffadali;Italy
+IT661;92016;Borgo Bonsignore;Italy
+IT662;92017;Sambuca Di Sicilia;Italy
+IT663;92018;Santa Margherita Di Belice;Italy
+IT664;92019;Sciacca;Italy
+IT665;92020;Castrofilippo;Italy
+IT666;92021;Caldare;Italy
+IT667;92022;Borgo Callea;Italy
+IT668;92023;Campobello Di Licata;Italy
+IT669;92024;Canicatti';Italy
+IT670;92025;Zolfare;Italy
+IT671;92026;Favara;Italy
+IT672;92027;Licata;Italy
+IT673;92028;Naro;Italy
+IT674;92029;Campobello Ravanusa Stazione;Italy
+IT675;15010;Visone;Italy
+IT676;15011;Acqui Terme;Italy
+IT677;15012;Bistagno;Italy
+IT678;15013;Borgoratto Alessandrino;Italy
+IT679;15014;Cantalupo;Italy
+IT680;15015;Malvicino;Italy
+IT681;15016;Cassine;Italy
+IT682;15017;Castelnuovo Bormida;Italy
+IT683;15018;Spigno Monferrato;Italy
+IT684;15019;Strevi;Italy
+IT685;15020;Villamiroglio;Italy
+IT686;15021;Alfiano Natta;Italy
+IT687;15022;Bergamasco;Italy
+IT688;15023;Felizzano;Italy
+IT689;15024;Abbazia;Italy
+IT690;15025;Morano Sul Po;Italy
+IT691;15026;Carentino;Italy
+IT692;15027;Pontestura;Italy
+IT693;15028;Piepasso;Italy
+IT694;15029;Solero;Italy
+IT695;15030;Coniolo;Italy
+IT696;15031;Balzola;Italy
+IT697;15032;Borgo San Martino;Italy
+IT698;15033;Terranova Monferrato;Italy
+IT699;15034;Cella Monte;Italy
+IT700;15035;Frassinello Monferrato;Italy
+IT701;15036;Giarole;Italy
+IT702;15038;Ottiglio;Italy
+IT703;15039;Ozzano Monferrato;Italy
+IT704;15040;Valmadonna;Italy
+IT705;15041;Franchini;Italy
+IT706;15042;Fiondi;Italy
+IT707;15043;Fubine;Italy
+IT708;15044;Quargnento;Italy
+IT709;15045;Sale;Italy
+IT710;15046;San Salvatore Monferrato;Italy
+IT711;15048;Villabella;Italy
+IT712;15049;Vignale Monferrato;Italy
+IT713;15050;Brignano Frascata;Italy
+IT714;15051;Castellania;Italy
+IT715;15052;Casalnoceto;Italy
+IT716;15053;Castelnuovo Scrivia;Italy
+IT717;15054;Caldirola;Italy
+IT718;15055;Pontecurone;Italy
+IT719;15056;Dernice;Italy
+IT720;15057;Passalacqua;Italy
+IT721;15058;Viguzzolo;Italy
+IT722;15059;Monleale;Italy
+IT723;15060;Cantalupo Ligure;Italy
+IT724;15061;Arquata Scrivia;Italy
+IT725;15062;Donna;Italy
+IT726;15063;Cassano Spinola;Italy
+IT727;15064;Fresonara;Italy
+IT728;15065;Frugarolo;Italy
+IT729;15066;Gavi;Italy
+IT730;15067;Merella;Italy
+IT731;15068;Pozzolo Formigaro;Italy
+IT732;15069;Serravalle Scrivia;Italy
+IT733;15070;Villa Botteri;Italy
+IT734;15071;Carpeneto;Italy
+IT735;15072;Portanova;Italy
+IT736;15073;Castellazzo Bormida;Italy
+IT737;15074;Molare;Italy
+IT738;15075;Mornese;Italy
+IT739;15076;Gnocchetto;Italy
+IT740;15077;Castelferro;Italy
+IT741;15078;Rocca Grimalda;Italy
+IT742;15079;Sezzadio;Italy
+IT743;60010;Barbara;Italy
+IT744;60011;Castiglioni D'Arcevia;Italy
+IT745;60013;Corinaldo;Italy
+IT746;60015;Falconara Marittima;Italy
+IT747;60018;Lungomare;Italy
+IT748;60019;Cesano Di Senigallia;Italy
+IT749;60020;Castel D'Emilio;Italy
+IT750;60021;Aspio Terme;Italy
+IT751;60022;Castelfidardo;Italy
+IT752;60024;Montoro;Italy
+IT753;60025;Villa Musone;Italy
+IT754;60026;Numana Lido;Italy
+IT755;60027;Casenuove;Italy
+IT756;60030;Moie;Italy
+IT757;60031;Castelplanio;Italy
+IT758;60033;Grancetta;Italy
+IT759;60034;Cupramontana;Italy
+IT760;60035;Jesi;Italy
+IT761;60036;Montecarotto;Italy
+IT762;60037;Le Cozze;Italy
+IT763;60038;San Paolo Di Jesi;Italy
+IT764;60039;Staffolo;Italy
+IT765;60040;Colleponi Di Genga;Italy
+IT766;60041;Monterosso;Italy
+IT767;60043;Cerreto D'Esi;Italy
+IT768;60044;Argignano;Italy
+IT769;60048;Serra San Quirico;Italy
+IT770;11010;Chesallet;Italy
+IT771;11011;Leverogne;Italy
+IT772;11012;Cogne;Italy
+IT773;11013;Dolonne;Italy
+IT774;11014;Saint Oyen;Italy
+IT775;11015;Derby;Italy
+IT776;11016;La Thuile;Italy
+IT777;11017;Morgex;Italy
+IT778;11018;Villeneuve;Italy
+IT779;11020;Arnad;Italy
+IT780;11021;Breuil;Italy
+IT781;11022;Extrepieraz;Italy
+IT782;11023;Chambave;Italy
+IT783;11024;Lassolaz;Italy
+IT784;11025;Gressoney Saint Jean;Italy
+IT785;11026;Pont Saint Martin;Italy
+IT786;11027;Moron;Italy
+IT787;11028;Valtournenche;Italy
+IT788;11029;Glair;Italy
+IT789;63020;Piane Di Falerone;Italy
+IT790;63031;Castel Di Lama Stazione;Italy
+IT791;63061;Massignano;Italy
+IT792;63062;Montefiore Dell'Aso;Italy
+IT793;63063;Carassai;Italy
+IT794;63064;Cupra Marittima;Italy
+IT795;63065;Ripatransone;Italy
+IT796;63066;Ischia;Italy
+IT797;63067;Cossignano;Italy
+IT798;63068;Porchia;Italy
+IT799;63069;Montedinove;Italy
+IT800;63071;Rotella;Italy
+IT801;63072;Ripaberarda;Italy
+IT802;63073;Offida;Italy
+IT803;63074;Porto D'Ascoli;Italy
+IT804;63075;Acquaviva Picena;Italy
+IT805;63076;Centobuchi;Italy
+IT806;63077;Monsampolo Del Tronto;Italy
+IT807;63078;Pagliare;Italy
+IT808;63079;Colli Del Tronto;Italy
+IT809;63081;San Silvestro;Italy
+IT810;63082;Villa Sant'Antonio;Italy
+IT811;63083;Appignano Del Tronto;Italy
+IT812;63084;Villa Pigna;Italy
+IT813;63085;Maltignano;Italy
+IT814;63086;Force;Italy
+IT815;63087;Croce Di Casale;Italy
+IT816;63088;Montemonaco;Italy
+IT817;63091;Venarotta;Italy
+IT818;63092;Palmiano;Italy
+IT819;63093;Agelli;Italy
+IT820;63094;Montegallo;Italy
+IT821;63095;San Martino Di Acquasanta;Italy
+IT822;63096;Arquata Del Tronto;Italy
+IT823;63900;Molini Di Tenna;Italy
+IT824;67010;Barete;Italy
+IT825;67012;San Giovanni;Italy
+IT826;67013;Ortolano;Italy
+IT827;67014;Capitignano;Italy
+IT828;67015;Marana Di Montereale;Italy
+IT829;67017;Marruci;Italy
+IT830;67019;Sella Di Corno;Italy
+IT831;67020;Caporciano;Italy
+IT832;67021;Picenze;Italy
+IT833;67022;Capestrano;Italy
+IT834;67023;Castel Del Monte;Italy
+IT835;67024;Castelvecchio Subequo;Italy
+IT836;67025;Ofena;Italy
+IT837;67026;Poggio Picenze;Italy
+IT838;67027;Raiano;Italy
+IT839;67028;San Demetrio Ne' Vestini;Italy
+IT840;67029;Secinaro;Italy
+IT841;67030;Cocullo;Italy
+IT842;67031;Castel Di Sangro;Italy
+IT843;67032;Pescasseroli;Italy
+IT844;67033;Pescocostanzo;Italy
+IT845;67034;Pettorano Sul Gizio;Italy
+IT846;67035;Bagnaturo;Italy
+IT847;67036;Rivisondoli;Italy
+IT848;67037;Pietransieri;Italy
+IT849;67038;Frattura;Italy
+IT850;67039;Arabona;Italy
+IT851;67040;San Martino D'Ocre;Italy
+IT852;67041;Aielli;Italy
+IT853;67043;Celano;Italy
+IT854;67044;Cerchio;Italy
+IT855;67045;Casamaina Di Lucoli;Italy
+IT856;67046;Santo Iona;Italy
+IT857;67047;Rocca Di Cambio;Italy
+IT858;67048;Rovere Di Rocca Di Mezzo;Italy
+IT859;67049;San Nicola Di Tornimparte;Italy
+IT860;67050;San Vincenzo Valle Roveto Superiore;Italy
+IT861;67051;Cese;Italy
+IT862;67052;Balsorano Nuovo;Italy
+IT863;67053;Corcumello;Italy
+IT864;67054;Civitella Roveto;Italy
+IT865;67055;Gioia Dei Marsi;Italy
+IT866;67056;Luco Dei Marsi;Italy
+IT867;67057;Venere;Italy
+IT868;67058;San Benedetto Dei Marsi;Italy
+IT869;67059;Trasacco;Italy
+IT870;67060;Verrecchie;Italy
+IT871;67061;Colli Di Montebove;Italy
+IT872;67062;Rosciolo;Italy
+IT873;67063;Oricola;Italy
+IT874;67064;Pereto;Italy
+IT875;67066;Rocca Di Botte;Italy
+IT876;67067;Santo Stefano Di Sante Marie;Italy
+IT877;67068;Cappelle;Italy
+IT878;67069;Tremonti;Italy
+IT879;52010;Moggiona;Italy
+IT880;52011;Banzena;Italy
+IT881;52014;Porrena;Italy
+IT882;52015;Pratovecchio;Italy
+IT883;52016;Castel Focognano;Italy
+IT884;52017;Stia;Italy
+IT885;52018;Castel San Niccolo';Italy
+IT886;52020;Cavi;Italy
+IT887;52021;Torre;Italy
+IT888;52022;Neri;Italy
+IT889;52024;San Giustino Valdarno;Italy
+IT890;52025;Montevarchi;Italy
+IT891;52026;Faella;Italy
+IT892;52027;San Giovanni Valdarno;Italy
+IT893;52028;Malva;Italy
+IT894;52029;Castiglion Fibocchi;Italy
+IT895;52030;Ca' Raffaello;Italy
+IT896;52031;Anghiari;Italy
+IT897;52032;Badia Tedalda;Italy
+IT898;52033;Caprese Michelangelo;Italy
+IT899;52035;Le Ville;Italy
+IT900;52036;Madonnuccia;Italy
+IT901;52037;Gricignano;Italy
+IT902;52038;Colcellalto;Italy
+IT903;52041;Badia Al Pino;Italy
+IT904;52043;Montecchio;Italy
+IT905;52044;Santa Caterina;Italy
+IT906;52045;Foiano Della Chiana;Italy
+IT907;52046;Lucignano;Italy
+IT908;52047;Marciano Della Chiana;Italy
+IT909;52048;Montagnano Alberoro;Italy
+IT910;14010;Cortazzone;Italy
+IT911;14011;Baldichieri D'Asti;Italy
+IT912;14012;Ferrere;Italy
+IT913;14013;Monale;Italy
+IT914;14014;Capriglio;Italy
+IT915;14015;San Damiano D'Asti;Italy
+IT916;14016;Tigliole;Italy
+IT917;14017;Valfenera;Italy
+IT918;14018;Villafranca D'Asti;Italy
+IT919;14019;Villanova D'Asti;Italy
+IT920;14020;Berzano Di San Pietro;Italy
+IT921;14021;Buttigliera D'Asti;Italy
+IT922;14022;Albugnano;Italy
+IT923;14023;Tonengo;Italy
+IT924;14024;Moncucco Torinese;Italy
+IT925;14025;Montechiaro D'Asti;Italy
+IT926;14026;Montiglio Monferrato;Italy
+IT927;14030;Accorneri;Italy
+IT928;14031;Calliano;Italy
+IT929;14032;Casorzo;Italy
+IT930;14033;Castell'Alfero Stazione;Italy
+IT931;14034;Monfallito;Italy
+IT932;14035;Grazzano Badoglio;Italy
+IT933;14036;Moncalvo;Italy
+IT934;14037;Portacomaro;Italy
+IT935;14039;Tonco;Italy
+IT936;14040;Mongardino;Italy
+IT937;14041;Agliano;Italy
+IT938;14042;Calamandrana;Italy
+IT939;14043;Castelnuovo Belbo;Italy
+IT940;14044;Castel Rocchero;Italy
+IT941;14045;Madonna;Italy
+IT942;14046;Mombaruzzo;Italy
+IT943;14047;Mombercelli;Italy
+IT944;14048;Montegrosso D'Asti;Italy
+IT945;14049;Vaglio Serra;Italy
+IT946;14050;Cassinasco;Italy
+IT947;14051;Loazzolo;Italy
+IT948;14052;Calosso;Italy
+IT949;14053;Sant'Antonio Di Canelli;Italy
+IT950;14054;Castagnole Delle Lanze;Italy
+IT951;14055;Costigliole D'Asti;Italy
+IT952;14057;Isola D'Asti;Italy
+IT953;14058;Sessame;Italy
+IT954;14059;San Giorgio Scarampi;Italy
+IT955;83010;San Felice;Italy
+IT956;83011;Altavilla Irpina;Italy
+IT957;83012;Cervinara;Italy
+IT958;83013;Santuario Di Montevergine;Italy
+IT959;83014;Ospedaletto D'Alpinolo;Italy
+IT960;83015;Ciardelli Inferiore;Italy
+IT961;83016;Cassano Caudino;Italy
+IT962;83017;Rotondi;Italy
+IT963;83018;San Martino Valle Caudina;Italy
+IT964;83020;Forino;Italy
+IT965;83021;Avella;Italy
+IT966;83022;Baiano;Italy
+IT967;83023;Migliano;Italy
+IT968;83024;Monteforte Irpino;Italy
+IT969;83025;Borgo Di Montoro Inferiore;Italy
+IT970;83026;San Pietro;Italy
+IT971;83027;Mugnano Del Cardinale;Italy
+IT972;83028;Ferrari Stazione Serino;Italy
+IT973;83029;Sant'Agata Irpina;Italy
+IT974;83030;Dentecane;Italy
+IT975;83031;Orneta;Italy
+IT976;83032;Morroni;Italy
+IT977;83034;Casalbore;Italy
+IT978;83035;Grottaminarda;Italy
+IT979;83036;Pianopantano;Italy
+IT980;83037;Montecalvo Irpino;Italy
+IT981;83038;Montemiletto;Italy
+IT982;83039;Pratola Serra;Italy
+IT983;83040;Pila Ai Piani;Italy
+IT984;83041;Aquilonia;Italy
+IT985;83042;Atripalda;Italy
+IT986;83043;Villaggio Laceno;Italy
+IT987;83044;Piano Regolatore;Italy
+IT988;83045;Calitri;Italy
+IT989;83046;Lacedonia;Italy
+IT990;83047;Lioni;Italy
+IT991;83048;Montella;Italy
+IT992;83049;Monteverde;Italy
+IT993;83050;Volturara Irpina;Italy
+IT994;83051;Ponteromito;Italy
+IT995;83052;Paternopoli;Italy
+IT996;83053;Sant'Andrea Di Conza;Italy
+IT997;83054;Sant'Angelo Dei Lombardi;Italy
+IT998;83055;Sturno;Italy
+IT999;83056;Teora;Italy
+IT1000;83057;Torella Dei Lombardi;Italy
+IT1001;83058;Molini;Italy
+IT1002;83059;Vallata;Italy
+IT1003;70010;Superga;Italy
+IT1004;70011;Alberobello;Italy
+IT1005;70013;Castellana Grotte;Italy
+IT1006;70014;Triggianello;Italy
+IT1007;70015;Noci;Italy
+IT1008;70016;Noicattaro;Italy
+IT1009;70017;San Pietro Piturno;Italy
+IT1010;70018;Rutigliano;Italy
+IT1011;70019;Triggiano;Italy
+IT1012;70020;Cassano Delle Murge;Italy
+IT1013;70021;Acquaviva Delle Fonti;Italy
+IT1014;70022;Parisi;Italy
+IT1015;70023;Gioia Del Colle;Italy
+IT1016;70024;La Murgetta;Italy
+IT1017;70025;Grumo Appula;Italy
+IT1018;70026;Modugno;Italy
+IT1019;70027;Palo Del Colle;Italy
+IT1020;70028;Sannicandro Di Bari;Italy
+IT1021;70029;Santeramo In Colle;Italy
+IT1022;70032;Mariotto;Italy
+IT1023;70033;Corato;Italy
+IT1024;70037;Ruvo Di Puglia;Italy
+IT1025;70038;Terlizzi;Italy
+IT1026;70042;Cozze;Italy
+IT1027;70043;Cozzana;Italy
+IT1028;70044;Polignano A Mare;Italy
+IT1029;70054;Giovinazzo;Italy
+IT1030;70056;Molfetta;Italy
+IT1031;24010;Colla;Italy
+IT1032;24011;Alme';Italy
+IT1033;24012;Laxolo;Italy
+IT1034;24013;Oltre Il Colle;Italy
+IT1035;24014;Piazza Brembana;Italy
+IT1036;24015;San Giovanni Bianco;Italy
+IT1037;24016;Santa Croce;Italy
+IT1038;24017;Cornalba;Italy
+IT1039;24018;Villa D'Alme';Italy
+IT1040;24019;Zogno;Italy
+IT1041;24020;Villassio;Italy
+IT1042;24021;Albino;Italy
+IT1043;24022;Nese;Italy
+IT1044;24023;Clusone;Italy
+IT1045;24024;Gandino;Italy
+IT1046;24025;Orezzo;Italy
+IT1047;24026;Cazzano Sant'Andrea;Italy
+IT1048;24027;Nembro;Italy
+IT1049;24028;Ponte Nossa;Italy
+IT1050;24029;Vertova;Italy
+IT1051;24030;Berbenno;Italy
+IT1052;24031;Almenno San Salvatore;Italy
+IT1053;24033;Calusco D'Adda;Italy
+IT1054;24034;Cisano Bergamasco;Italy
+IT1055;24035;Curno;Italy
+IT1056;24036;Ponte San Pietro;Italy
+IT1057;24037;Calchera;Italy
+IT1058;24038;Mazzoleni;Italy
+IT1059;24039;Sotto Il Monte Giovanni Xxiii;Italy
+IT1060;24040;Bonate Sotto;Italy
+IT1061;24041;Brembate;Italy
+IT1062;24042;San Gervasio D'Adda;Italy
+IT1063;24043;Masano;Italy
+IT1064;24044;Dalmine;Italy
+IT1065;24045;Badalasco;Italy
+IT1066;24046;Osio Sotto;Italy
+IT1067;24047;Castel Cerreto;Italy
+IT1068;24048;Treviolo;Italy
+IT1069;24049;Verdello;Italy
+IT1070;24050;Zanica;Italy
+IT1071;24051;Antegnate;Italy
+IT1072;24052;Azzano San Paolo;Italy
+IT1073;24053;Brignano Gera D'Adda;Italy
+IT1074;24054;Calcio;Italy
+IT1075;24055;Cologno Al Serio;Italy
+IT1076;24056;Fontanella;Italy
+IT1077;24057;Martinengo;Italy
+IT1078;24058;Sola;Italy
+IT1079;24059;Basella;Italy
+IT1080;24060;Celatica;Italy
+IT1081;24061;Albano Sant'Alessandro;Italy
+IT1082;24062;Costa Volpino;Italy
+IT1083;24063;Fonderia Di Lovere;Italy
+IT1084;24064;Grumello Del Monte;Italy
+IT1085;24065;Lovere;Italy
+IT1086;24066;Pedrengo;Italy
+IT1087;24067;Sarnico;Italy
+IT1088;24068;Cassinone;Italy
+IT1089;24069;Cenate Di Sotto;Italy
+IT1090;13811;Andorno Micca;Italy
+IT1091;13812;Balma Biellese;Italy
+IT1092;13814;Pollone;Italy
+IT1093;13815;Rosazza;Italy
+IT1094;13816;Miagliano;Italy
+IT1095;13817;Sordevolo;Italy
+IT1096;13818;Tollegno;Italy
+IT1097;13821;Callabiana;Italy
+IT1098;13822;Mosso;Italy
+IT1099;13823;Fontanella Ozino;Italy
+IT1100;13824;Veglio;Italy
+IT1101;13825;Crocemosso;Italy
+IT1102;13831;Mezzana Mortigliengo;Italy
+IT1103;13833;Portula;Italy
+IT1104;13834;Soprana;Italy
+IT1105;13835;Giardino;Italy
+IT1106;13836;Aglietti;Italy
+IT1107;13841;Bioglio;Italy
+IT1108;13843;Vaglio;Italy
+IT1109;13844;Piatto;Italy
+IT1110;13845;Ronco Biellese;Italy
+IT1111;13847;Vallanzengo;Italy
+IT1112;13848;Zumaglia;Italy
+IT1113;13851;Castelletto Cervo;Italy
+IT1114;13852;Cerreto Castello;Italy
+IT1115;13853;Castello;Italy
+IT1116;13854;Quaregna;Italy
+IT1117;13855;Valdengo;Italy
+IT1118;13856;Villaggi;Italy
+IT1119;13861;Ailoche;Italy
+IT1120;13862;Brusnengo;Italy
+IT1121;13863;Coggiola;Italy
+IT1122;13864;Caprile;Italy
+IT1123;13865;Curino;Italy
+IT1124;13866;Casapinta;Italy
+IT1125;13867;Pianceri Alto;Italy
+IT1126;13868;Sostegno;Italy
+IT1127;13871;Benna;Italy
+IT1128;13872;Borriana;Italy
+IT1129;13873;Massazza;Italy
+IT1130;13874;Mottalciata;Italy
+IT1131;13875;Ponderano;Italy
+IT1132;13876;Sandigliano;Italy
+IT1133;13877;Villanova Biellese;Italy
+IT1134;13878;Candelo;Italy
+IT1135;13881;Dorzano;Italy
+IT1136;13882;Vergnasco;Italy
+IT1137;13883;Roppolo;Italy
+IT1138;13884;Sala Biellese;Italy
+IT1139;13885;Vigellio;Italy
+IT1140;13886;Viverone;Italy
+IT1141;13887;Magnano;Italy
+IT1142;13888;Mongrando;Italy
+IT1143;13891;Camburzano;Italy
+IT1144;13893;Donato;Italy
+IT1145;13894;Gaglianico;Italy
+IT1146;13895;Muzzano;Italy
+IT1147;13896;Netro;Italy
+IT1148;13897;Occhieppo Inferiore;Italy
+IT1149;13898;Occhieppo Superiore;Italy
+IT1150;13899;Pralungo;Italy
+IT1151;13900;Cossila;Italy
+IT1152;32010;Chies D'Alpago;Italy
+IT1153;32012;Dozza Di Zoldo;Italy
+IT1154;32013;Fortogna;Italy
+IT1155;32014;Cadola;Italy
+IT1156;32015;Cornei;Italy
+IT1157;32016;Farra D'Alpago;Italy
+IT1158;32020;Lentiai;Italy
+IT1159;32021;Agordo;Italy
+IT1160;32022;Alleghe;Italy
+IT1161;32026;Mel;Italy
+IT1162;32027;Taibon Agordino;Italy
+IT1163;32028;Sant'Antonio Tortal;Italy
+IT1164;32030;Cesiomaggiore;Italy
+IT1165;32031;Fener;Italy
+IT1166;32032;Villapaiera;Italy
+IT1167;32033;Lamon;Italy
+IT1168;32034;Facen;Italy
+IT1169;32035;Formegan;Italy
+IT1170;32036;Bribano;Italy
+IT1171;32037;Mis;Italy
+IT1172;32040;Lozzo Di Cadore;Italy
+IT1173;32041;Misurina;Italy
+IT1174;32042;Calalzo Di Cadore;Italy
+IT1175;32043;Zuel;Italy
+IT1176;32044;Pieve Di Cadore;Italy
+IT1177;32045;Campolongo Di Cadore;Italy
+IT1178;32046;San Vito Di Cadore;Italy
+IT1179;32047;Sappada;Italy
+IT1180;82010;Perrillo;Italy
+IT1181;82011;Arpaia;Italy
+IT1182;82013;Bonea;Italy
+IT1183;82015;Durazzano;Italy
+IT1184;82016;Varoni;Italy
+IT1185;82017;Pannarano;Italy
+IT1186;82018;Cubante;Italy
+IT1187;82019;Faggiano;Italy
+IT1188;82020;Circello;Italy
+IT1189;82021;Apice Nuovo;Italy
+IT1190;82022;Castelfranco In Miscano;Italy
+IT1191;82023;Castelvetere In Val Fortore;Italy
+IT1192;82024;Colle Sannita;Italy
+IT1193;82025;Montefalcone Di Val Fortore;Italy
+IT1194;82026;Sassinoro;Italy
+IT1195;82027;Casalduni;Italy
+IT1196;82028;San Bartolomeo In Galdo;Italy
+IT1197;82029;San Marco Dei Cavoti;Italy
+IT1198;82030;Biancano;Italy
+IT1199;82031;Amorosi;Italy
+IT1200;82032;Cerreto Sannita;Italy
+IT1201;82033;Cusano Mutri;Italy
+IT1202;82034;San Lupo;Italy
+IT1203;82036;Solopaca;Italy
+IT1204;82037;Castelvenere;Italy
+IT1205;82038;Vitulano;Italy
+IT1206;40010;Bentivoglio;Italy
+IT1207;40011;Lavino Di Mezzo;Italy
+IT1208;40012;Longara;Italy
+IT1209;40013;Villa Salina;Italy
+IT1210;40014;Palata Pepoli;Italy
+IT1211;40015;Bosco;Italy
+IT1212;40016;San Giorgio Di Piano;Italy
+IT1213;40017;Decima;Italy
+IT1214;40018;Maccaretolo;Italy
+IT1215;40019;Sant'Agata Bolognese;Italy
+IT1216;40020;Casalfiumanese;Italy
+IT1217;40021;Borgo Tossignano;Italy
+IT1218;40022;Moraduccio;Italy
+IT1219;40023;Castel Guelfo Di Bologna;Italy
+IT1220;40024;San Martino In Pedriolo;Italy
+IT1221;40025;Carseggio;Italy
+IT1222;40026;Sesto Imolese;Italy
+IT1223;40027;Mordano;Italy
+IT1224;40030;Castel Di Casio;Italy
+IT1225;40032;Bargi;Italy
+IT1226;40033;Casalecchio Di Reno;Italy
+IT1227;40034;Rocca Di Roffeno;Italy
+IT1228;40035;Creda;Italy
+IT1229;40036;Rioveggio;Italy
+IT1230;40037;Fontana;Italy
+IT1231;40038;Susano;Italy
+IT1232;40041;Gaggio Montano;Italy
+IT1233;40042;Monteacuto Delle Alpi;Italy
+IT1234;40043;Lama Di Setta;Italy
+IT1235;40045;Casa Calistri;Italy
+IT1236;40046;Castelluccio;Italy
+IT1237;40048;Castel Dell'Alpi;Italy
+IT1238;40050;Monterenzio;Italy
+IT1239;40051;Altedo;Italy
+IT1240;40052;Boschi;Italy
+IT1241;40053;Bazzano;Italy
+IT1242;40054;Mezzolara;Italy
+IT1243;40055;Fiesso;Italy
+IT1244;40056;Calcara;Italy
+IT1245;40057;Fabbreria Di Cadriana;Italy
+IT1246;40059;Buda;Italy
+IT1247;40060;Gallo;Italy
+IT1248;40061;Minerbio;Italy
+IT1249;40062;Molinella;Italy
+IT1250;40063;Monghidoro;Italy
+IT1251;40064;Ozzano Dell'Emilia;Italy
+IT1252;40065;Pianoro;Italy
+IT1253;40066;Pieve Di Cento;Italy
+IT1254;40067;Rastignano;Italy
+IT1255;40068;Farneto;Italy
+IT1256;40069;Ponte Ronca;Italy
+IT1257;72010;Pezze Di Greco;Italy
+IT1258;72012;Carovigno;Italy
+IT1259;72013;Ceglie Messapica;Italy
+IT1260;72014;Caranna;Italy
+IT1261;72015;Selva;Italy
+IT1262;72016;Montalbano Di Fasano;Italy
+IT1263;72017;Ostuni;Italy
+IT1264;72018;San Michele Salentino;Italy
+IT1265;72019;San Vito Dei Normanni;Italy
+IT1266;72020;Cellino San Marco;Italy
+IT1267;72021;Francavilla Fontana;Italy
+IT1268;72022;Latiano;Italy
+IT1269;72023;Mesagne;Italy
+IT1270;72024;Oria;Italy
+IT1271;72025;San Donaci;Italy
+IT1272;72026;San Pancrazio Salentino;Italy
+IT1273;72027;San Pietro Vernotico;Italy
+IT1274;72028;Torre Santa Susanna;Italy
+IT1275;72029;Villa Castelli;Italy
+IT1276;25010;Remedello Di Sopra;Italy
+IT1277;25011;Calcinato;Italy
+IT1278;25012;Mezzane;Italy
+IT1279;25013;Carpenedolo;Italy
+IT1280;25014;Castenedolo;Italy
+IT1281;25015;Desenzano Del Garda;Italy
+IT1282;25016;Ghedi;Italy
+IT1283;25017;Sedena;Italy
+IT1284;25018;Novagli;Italy
+IT1285;25019;Colombare Di Sirmione;Italy
+IT1286;25020;Dello;Italy
+IT1287;25021;Bagnolo Mella;Italy
+IT1288;25022;Motella;Italy
+IT1289;25023;Gottolengo;Italy
+IT1290;25024;Porzano;Italy
+IT1291;25025;Manerbio;Italy
+IT1292;25026;Pontevico;Italy
+IT1293;25027;Quinzano D'Oglio;Italy
+IT1294;25028;Cadignano;Italy
+IT1295;25029;Verolavecchia;Italy
+IT1296;25030;Adro;Italy
+IT1297;25031;Capriolo;Italy
+IT1298;25032;Chiari;Italy
+IT1299;25033;Cologne;Italy
+IT1300;25034;Orzinuovi;Italy
+IT1301;25035;Ospitaletto;Italy
+IT1302;25036;Palazzolo Sull'Oglio;Italy
+IT1303;25037;Pontoglio;Italy
+IT1304;25038;Sant'Anna;Italy
+IT1305;25039;Travagliato;Italy
+IT1306;25040;Camignone;Italy
+IT1307;25041;Erbanno;Italy
+IT1308;25042;Borno;Italy
+IT1309;25043;Pescarzo;Italy
+IT1310;25044;Capo Di Ponte;Italy
+IT1311;25045;Castegnato;Italy
+IT1312;25046;Pedrocca;Italy
+IT1313;25047;Darfo Boario Terme;Italy
+IT1314;25048;Sonico;Italy
+IT1315;25049;Pilzone;Italy
+IT1316;25050;Gresine;Italy
+IT1317;25051;Cedegolo;Italy
+IT1318;25052;Annunciata;Italy
+IT1319;25053;Malegno;Italy
+IT1320;25054;Marone;Italy
+IT1321;25055;Pisogne;Italy
+IT1322;25056;Ponte Di Legno;Italy
+IT1323;25057;Sale Marasino;Italy
+IT1324;25058;Sulzano;Italy
+IT1325;25059;Vezza D'Oglio;Italy
+IT1326;25060;Marmentino;Italy
+IT1327;25061;Bovegno;Italy
+IT1328;25062;San Vigilio;Italy
+IT1329;25063;Magno;Italy
+IT1330;25064;Ronco;Italy
+IT1331;25065;Sant'Apollonio;Italy
+IT1332;25068;Zanano;Italy
+IT1333;25069;Cogozzo;Italy
+IT1334;25070;Sottocastello;Italy
+IT1335;25071;Agnosine;Italy
+IT1336;25072;Bagolino;Italy
+IT1337;25073;Bovezzo;Italy
+IT1338;25074;Idro;Italy
+IT1339;25075;Nave;Italy
+IT1340;25076;Odolo;Italy
+IT1341;25077;Roe' Volciano;Italy
+IT1342;25078;Forno D'Ono;Italy
+IT1343;25079;Degagna;Italy
+IT1344;25080;Chiesa;Italy
+IT1345;25081;Bedizzole;Italy
+IT1346;25082;San Gallo;Italy
+IT1347;25083;Fasano Del Garda;Italy
+IT1348;25084;Bogliaco;Italy
+IT1349;25085;Gavardo;Italy
+IT1350;25086;Rezzato;Italy
+IT1351;25087;Barbarano;Italy
+IT1352;25088;Maderno;Italy
+IT1353;25089;Bostone;Italy
+IT1354;76011;Bisceglie;Italy
+IT1355;76012;Loconia;Italy
+IT1356;76013;Minervino Murge;Italy
+IT1357;76014;Spinazzola;Italy
+IT1358;76015;Trinitapoli;Italy
+IT1359;76016;Margherita Di Savoia;Italy
+IT1360;76017;San Ferdinando Di Puglia;Italy
+IT1361;76121;Barletta;Italy
+IT1362;76123;Andria;Italy
+IT1363;76125;Trani;Italy
+IT1364;39010;Saltau;Italy
+IT1365;39011;Lana;Italy
+IT1366;39012;Sinigo;Italy
+IT1367;39013;Plan In Passiria;Italy
+IT1368;39014;Postal;Italy
+IT1369;39015;Walte;Italy
+IT1370;39016;St.Nikolau;Italy
+IT1371;39017;Scena;Italy
+IT1372;39018;Siebeneic;Italy
+IT1373;39019;Tirolo;Italy
+IT1374;39020;Unser Fra;Italy
+IT1375;39021;Tarres;Italy
+IT1376;39022;Lagundo;Italy
+IT1377;39023;Tschengel;Italy
+IT1378;39024;Laudes;Italy
+IT1379;39025;Stava;Italy
+IT1380;39026;Prato Allo Stelvio;Italy
+IT1381;39027;Curon Venosta;Italy
+IT1382;39028;Goefla;Italy
+IT1383;39029;Solda;Italy
+IT1384;39030;Niedervint;Italy
+IT1385;39031;Brunico;Italy
+IT1386;39032;Moehlen In Taufer;Italy
+IT1387;39033;Kolfusch;Italy
+IT1388;39034;Dobbiaco;Italy
+IT1389;39035;Taiste;Italy
+IT1390;39036;Pedrace;Italy
+IT1391;39037;Rio Di Pusteria;Italy
+IT1392;39038;San Candido;Italy
+IT1393;39039;Villabassa;Italy
+IT1394;39040;Aldino;Italy
+IT1395;39041;Brennero;Italy
+IT1396;39042;St.Andr;Italy
+IT1397;39043;Gudon;Italy
+IT1398;39044;Laghetti;Italy
+IT1399;39045;Fortezza;Italy
+IT1400;39046;Ortisei;Italy
+IT1401;39047;Santa Cristina Val Gardena;Italy
+IT1402;39048;Wolkenstei;Italy
+IT1403;39049;Stazione;Italy
+IT1404;39050;Valas;Italy
+IT1405;39051;Bronzolo;Italy
+IT1406;39052;Caldaro Sulla Strada Del Vino;Italy
+IT1407;39053;Bluma;Italy
+IT1408;39054;Collalbo;Italy
+IT1409;39055;Laives;Italy
+IT1410;39056;Carezza Al Lago;Italy
+IT1411;39057;Frangarto;Italy
+IT1412;39058;Villa;Italy
+IT1413;8030;Serri;Italy
+IT1414;8033;Isili;Italy
+IT1415;8035;Nurri;Italy
+IT1416;8043;Escalaplano;Italy
+IT1417;9010;Villa San Pietro;Italy
+IT1418;9012;La Maddalena;Italy
+IT1419;9018;Sarroch;Italy
+IT1420;9019;Teulada;Italy
+IT1421;9020;Ussana;Italy
+IT1422;9023;Monastir;Italy
+IT1423;9024;Nuraminis;Italy
+IT1424;9026;San Sperate;Italy
+IT1425;9028;Sestu;Italy
+IT1426;9030;Elmas;Italy
+IT1427;9032;Assemini;Italy
+IT1428;9033;Decimomannu;Italy
+IT1429;9034;Villasor;Italy
+IT1430;9040;Guasila;Italy
+IT1431;9041;Dolianova;Italy
+IT1432;9042;Monserrato;Italy
+IT1433;9043;Muravera;Italy
+IT1434;9044;Quartucciu;Italy
+IT1435;9045;Flumini Di Quartu Sant'Elena;Italy
+IT1436;9047;Selargius;Italy
+IT1437;9048;Sinnai;Italy
+IT1438;9049;Villasimius;Italy
+IT1439;86010;Ferrazzano;Italy
+IT1440;86011;Baranello;Italy
+IT1441;86012;Cercemaggiore;Italy
+IT1442;86013;Gambatesa;Italy
+IT1443;86014;Guardiaregia;Italy
+IT1444;86015;Jelsi;Italy
+IT1445;86016;Riccia;Italy
+IT1446;86017;Sepino;Italy
+IT1447;86018;Toro;Italy
+IT1448;86019;Vinchiaturo;Italy
+IT1449;86020;Colle D'Anchise;Italy
+IT1450;86021;Monteverde;Italy
+IT1451;86022;Limosano;Italy
+IT1452;86023;Montagano;Italy
+IT1453;86024;Petrella Tifernina;Italy
+IT1454;86025;Ripalimosani;Italy
+IT1455;86026;Salcito;Italy
+IT1456;86027;San Massimo;Italy
+IT1457;86028;Torella Del Sannio;Italy
+IT1458;86029;Trivento;Italy
+IT1459;86030;Acquaviva Collecroce;Italy
+IT1460;86031;Castelmauro;Italy
+IT1461;86032;Montecilfone;Italy
+IT1462;86033;Montefalcone Nel Sannio;Italy
+IT1463;86034;Guglionesi;Italy
+IT1464;86035;Larino;Italy
+IT1465;86036;Montenero Di Bisaccia;Italy
+IT1466;86037;Palata;Italy
+IT1467;86038;Collecalcioni;Italy
+IT1468;86039;Termoli;Italy
+IT1469;86040;Macchia Valfortore;Italy
+IT1470;86041;Bonefro;Italy
+IT1471;86042;Lido Di Campomarino;Italy
+IT1472;86043;Casacalenda;Italy
+IT1473;86044;Colletorto;Italy
+IT1474;86045;Portocannone;Italy
+IT1475;86046;San Martino In Pensilis;Italy
+IT1476;86047;Santa Croce Di Magliano;Italy
+IT1477;86048;Sant'Elia A Pianisi;Italy
+IT1478;86049;Ururi;Italy
+IT1479;81010;Gallo Matese;Italy
+IT1480;81011;Alife;Italy
+IT1481;81012;Marciano Freddo;Italy
+IT1482;81013;San Giovanni E Paolo;Italy
+IT1483;81014;Fontegreca;Italy
+IT1484;81016;Castello Del Matese;Italy
+IT1485;81017;Sant'Angelo D'Alife;Italy
+IT1486;81020;Castel Morrone;Italy
+IT1487;81021;Arienzo;Italy
+IT1488;81022;Casagiove;Italy
+IT1489;81023;Cervino;Italy
+IT1490;81024;Grotticella;Italy
+IT1491;81025;Cantone;Italy
+IT1492;81027;Polvica;Italy
+IT1493;81028;Santa Maria A Vico;Italy
+IT1494;81030;Lusciano;Italy
+IT1495;81031;Aversa;Italy
+IT1496;81032;Carinaro;Italy
+IT1497;81033;Casal Di Principe;Italy
+IT1498;81034;Mondragone;Italy
+IT1499;81035;Roccamonfina;Italy
+IT1500;81036;San Cipriano D'Aversa;Italy
+IT1501;81037;Lauro Di Sessa Aurunca;Italy
+IT1502;81038;Trentola Ducenta;Italy
+IT1503;81039;Bonifica Villa Literno;Italy
+IT1504;81040;Liberi;Italy
+IT1505;81041;Bellona;Italy
+IT1506;81042;Pozzillo;Italy
+IT1507;81043;Capua;Italy
+IT1508;81044;Conca Della Campania;Italy
+IT1509;81046;Grazzanise;Italy
+IT1510;81047;Caturano;Italy
+IT1511;81049;San Pietro Infine;Italy
+IT1512;81050;Camigliano;Italy
+IT1513;81051;Statigliano;Italy
+IT1514;81052;Pignataro Maggiore;Italy
+IT1515;81053;Riardo;Italy
+IT1516;81054;San Prisco;Italy
+IT1517;81055;Santa Maria Capua Vetere;Italy
+IT1518;81056;Sparanise;Italy
+IT1519;81057;Casi;Italy
+IT1520;81058;Patenora;Italy
+IT1521;81059;Montano;Italy
+IT1522;66010;San Rocco;Italy
+IT1523;66011;Colle Sant'Antonio;Italy
+IT1524;66012;Casalincontrada;Italy
+IT1525;66014;Villa Tucci;Italy
+IT1526;66015;Fara San Martino;Italy
+IT1527;66016;Villa San Vincenzo;Italy
+IT1528;66017;Palena;Italy
+IT1529;66018;Taranta Peligna;Italy
+IT1530;66019;Fallascoso;Italy
+IT1531;66020;Scerni;Italy
+IT1532;66021;Miracoli;Italy
+IT1533;66022;Fossacesia;Italy
+IT1534;66023;Francavilla Al Mare Rione Foro;Italy
+IT1535;66026;Ortona Porto;Italy
+IT1536;66030;Filetto;Italy
+IT1537;66031;Casalanguida;Italy
+IT1538;66032;Castel Frentano;Italy
+IT1539;66033;Castiglione Messer Marino;Italy
+IT1540;66034;Nasuti;Italy
+IT1541;66036;Orsogna;Italy
+IT1542;66037;Sant'Eusanio Del Sangro;Italy
+IT1543;66038;Marina Di San Vito;Italy
+IT1544;66040;Fallo;Italy
+IT1545;66041;Monte Marcone;Italy
+IT1546;66042;Bomba;Italy
+IT1547;66043;Selva Piana;Italy
+IT1548;66044;Piane D'Archi;Italy
+IT1549;66045;Schiavi Di Abruzzo;Italy
+IT1550;66046;Tornareccio;Italy
+IT1551;66047;Villa Santa Maria;Italy
+IT1552;66050;Olmi;Italy
+IT1553;66051;Cupello;Italy
+IT1554;66052;Gissi;Italy
+IT1555;66054;San Lorenzo Di Vasto;Italy
+IT1556;9011;Cussorgia;Italy
+IT1557;9013;Serbariu;Italy
+IT1558;9014;Carloforte;Italy
+IT1559;9015;Domusnovas;Italy
+IT1560;9016;Bindua;Italy
+IT1561;9017;Sant'Antioco;Italy
+IT1562;93010;Acquaviva Platani;Italy
+IT1563;93011;Butera;Italy
+IT1564;93012;Gela;Italy
+IT1565;93013;Mazzarino;Italy
+IT1566;93014;Polizzello;Italy
+IT1567;93015;Niscemi;Italy
+IT1568;93016;Riesi;Italy
+IT1569;93017;San Cataldo;Italy
+IT1570;93018;Santa Caterina Villarmosa;Italy
+IT1571;93019;Trabia Miniere;Italy
+IT1572;12010;Santa Croce Cervasca;Italy
+IT1573;12011;Aradolo La Bruna;Italy
+IT1574;12012;San Giacomo Di Boves;Italy
+IT1575;12013;Chiusa Di Pesio;Italy
+IT1576;12014;Demonte;Italy
+IT1577;12015;Limone Piemonte;Italy
+IT1578;12016;Peveragno;Italy
+IT1579;12017;Robilante;Italy
+IT1580;12018;Brignola;Italy
+IT1581;12019;Vernante;Italy
+IT1582;12020;Melle;Italy
+IT1583;12021;Acceglio;Italy
+IT1584;12022;Busca;Italy
+IT1585;12023;Caraglio;Italy
+IT1586;12024;Costigliole Saluzzo;Italy
+IT1587;12025;Montemale Di Cuneo;Italy
+IT1588;12026;Piasco;Italy
+IT1589;12027;Pradleves;Italy
+IT1590;12028;San Michele Prazzo;Italy
+IT1591;12029;Lottulo;Italy
+IT1592;12030;Oncino;Italy
+IT1593;12031;Bagnolo Piemonte;Italy
+IT1594;12032;Galleane;Italy
+IT1595;12033;Moretta;Italy
+IT1596;12034;Paesana;Italy
+IT1597;12035;Racconigi;Italy
+IT1598;12036;Staffarda;Italy
+IT1599;12037;Via Dei Romani;Italy
+IT1600;12038;Levaldigi;Italy
+IT1601;12039;Falicetto;Italy
+IT1602;12040;Ceresole Alba;Italy
+IT1603;12041;Isola;Italy
+IT1604;12042;Bandito;Italy
+IT1605;12043;Valpone;Italy
+IT1606;12044;Centallo;Italy
+IT1607;12045;Gerbo;Italy
+IT1608;12046;San Rocco Monta';Italy
+IT1609;12047;Crava;Italy
+IT1610;12048;Sommariva Del Bosco;Italy
+IT1611;12049;Trinita';Italy
+IT1612;12050;Neviglie;Italy
+IT1613;12051;Mussotto;Italy
+IT1614;12052;Neive;Italy
+IT1615;12053;Santuario Tinella;Italy
+IT1616;12054;Santa Libera;Italy
+IT1617;12055;San Rocco Cherasca;Italy
+IT1618;12056;Mango;Italy
+IT1619;12058;Valdivilla;Italy
+IT1620;12060;Bossolasco;Italy
+IT1621;12061;Carru';Italy
+IT1622;12062;Cherasco;Italy
+IT1623;12063;Dogliani;Italy
+IT1624;12064;Rivalta;Italy
+IT1625;12065;Perno;Italy
+IT1626;12066;Borgo;Italy
+IT1627;12068;Narzole;Italy
+IT1628;12069;Santa Vittoria D'Alba;Italy
+IT1629;12070;Montezemolo;Italy
+IT1630;12071;Bagnasco;Italy
+IT1631;12072;Camerana;Italy
+IT1632;12073;Ceva;Italy
+IT1633;12074;Cortemilia;Italy
+IT1634;12075;Garessio Borgo Piave;Italy
+IT1635;12076;Lesegno;Italy
+IT1636;12077;Prunetto;Italy
+IT1637;12078;Ponte Di Nava;Italy
+IT1638;12079;Saliceto;Italy
+IT1639;12080;Montaldo Di Mondovi';Italy
+IT1640;12081;Beinette;Italy
+IT1641;12082;Fontane;Italy
+IT1642;12083;Gosi Pianvignale;Italy
+IT1643;12084;Rifreddo Mondovi';Italy
+IT1644;12087;Serra;Italy
+IT1645;12088;Lurisia;Italy
+IT1646;12089;Villanova Mondovi';Italy
+IT1647;18025;Briga Alta;Italy
+IT1648;22010;Codogna;Italy
+IT1649;22011;Griante;Italy
+IT1650;22012;Cernobbio;Italy
+IT1651;22013;Vercana;Italy
+IT1652;22014;Dongo;Italy
+IT1653;22015;Gravedona;Italy
+IT1654;22016;Lenno;Italy
+IT1655;22017;Menaggio;Italy
+IT1656;22018;Porlezza;Italy
+IT1657;22019;Tremezzo;Italy
+IT1658;22020;Faloppio;Italy
+IT1659;22021;Bellagio;Italy
+IT1660;22022;Casasco D'Intelvi;Italy
+IT1661;22023;Castiglione D'Intelvi;Italy
+IT1662;22024;Scaria;Italy
+IT1663;22025;Lezzeno;Italy
+IT1664;22026;Maslianico;Italy
+IT1665;22027;Ronago;Italy
+IT1666;22028;Blessagno;Italy
+IT1667;22029;Uggiate Trevano;Italy
+IT1668;22030;Corneno;Italy
+IT1669;22031;Albavilla;Italy
+IT1670;22032;Albese Con Cassano;Italy
+IT1671;22033;Asso;Italy
+IT1672;22034;Brunate;Italy
+IT1673;22035;Canzo;Italy
+IT1674;22036;Erba;Italy
+IT1675;22037;Ponte Lambro;Italy
+IT1676;22038;Tavernerio;Italy
+IT1677;22039;Osigo;Italy
+IT1678;22040;Nobile;Italy
+IT1679;22044;Romano' Brianza;Italy
+IT1680;22045;Lambrugo;Italy
+IT1681;22046;Merone;Italy
+IT1682;22060;Carimate;Italy
+IT1683;22063;Mirabello Di Cantu';Italy
+IT1684;22066;Mariano Comense;Italy
+IT1685;22069;Rovellasca;Italy
+IT1686;22070;Puginate;Italy
+IT1687;22071;Caslino Al Piano;Italy
+IT1688;22072;Cermenate;Italy
+IT1689;22073;Molinetto;Italy
+IT1690;22074;Manera;Italy
+IT1691;22075;Lurate Caccivio;Italy
+IT1692;22076;Mozzate;Italy
+IT1693;22077;Olgiate Comasco;Italy
+IT1694;22078;Turate;Italy
+IT1695;22079;Villa Guardia;Italy
+IT1696;26010;Olmeneta;Italy
+IT1697;26011;Casalbuttano Ed Uniti;Italy
+IT1698;26012;Castelleone;Italy
+IT1699;26013;Sabbioni;Italy
+IT1700;26014;Casaletto Di Sopra;Italy
+IT1701;26015;Soresina;Italy
+IT1702;26016;Spino D'Adda;Italy
+IT1703;26017;Trescore Cremasco;Italy
+IT1704;26018;Trigolo;Italy
+IT1705;26019;Vailate;Italy
+IT1706;26020;Agnadello;Italy
+IT1707;26021;Annicco;Italy
+IT1708;26022;Castelverde;Italy
+IT1709;26023;Farfengo;Italy
+IT1710;26024;Paderno Ponchielli;Italy
+IT1711;26025;Pandino;Italy
+IT1712;26026;Roggione;Italy
+IT1713;26027;Rivolta D'Adda;Italy
+IT1714;26028;Casanova Del Morbasco;Italy
+IT1715;26029;Gallignano;Italy
+IT1716;26030;Casteldidone;Italy
+IT1717;26031;Isola Dovarese;Italy
+IT1718;26032;Ostiano;Italy
+IT1719;26033;Pieve Terzagni;Italy
+IT1720;26034;Drizzona;Italy
+IT1721;26035;Pieve San Giacomo;Italy
+IT1722;26036;Rivarolo Del Re Ed Uniti;Italy
+IT1723;26037;San Giovanni In Croce;Italy
+IT1724;26038;San Lorenzo De' Picenardi;Italy
+IT1725;26039;Ca' De' Stefani;Italy
+IT1726;26040;Castelponzone;Italy
+IT1727;26041;Casalbellotto;Italy
+IT1728;26042;Cingia De' Botti;Italy
+IT1729;26043;Persico Dosimo;Italy
+IT1730;26044;Levata;Italy
+IT1731;26045;Motta Baluffi;Italy
+IT1732;26046;San Daniele Po;Italy
+IT1733;26047;Scandolara Ripa D'Oglio;Italy
+IT1734;26048;San Salvatore;Italy
+IT1735;26049;Stagno Lombardo;Italy
+IT1736;87010;Santa Maria Le Grotte;Italy
+IT1737;87011;Doria;Italy
+IT1738;87012;Castrovillari;Italy
+IT1739;87013;Fagnano Castello;Italy
+IT1740;87014;Laino Borgo;Italy
+IT1741;87015;Laino Castello;Italy
+IT1742;87016;Morano Calabro;Italy
+IT1743;87017;Roggiano Gravina;Italy
+IT1744;87018;San Marco Argentano Stazione;Italy
+IT1745;87019;Spezzano Albanese Stazione;Italy
+IT1746;87020;Acquappesa Marina;Italy
+IT1747;87021;Belvedere Marittimo;Italy
+IT1748;87022;Cetraro;Italy
+IT1749;87023;Cirella;Italy
+IT1750;87024;Cariglio;Italy
+IT1751;87026;Mormanno;Italy
+IT1752;87027;Santuario San Francesco;Italy
+IT1753;87028;Praia A Mare;Italy
+IT1754;87029;Scalea;Italy
+IT1755;87030;Scornavacca;Italy
+IT1756;87031;Aiello Calabro;Italy
+IT1757;87032;Amantea;Italy
+IT1758;87033;Vadi;Italy
+IT1759;87034;Grimaldi;Italy
+IT1760;87035;Aria Di Lupi;Italy
+IT1761;87036;Castiglione Cosentino Stazione;Italy
+IT1762;87037;Bucita;Italy
+IT1763;87038;Pollella;Italy
+IT1764;87040;Tivolille;Italy
+IT1765;87041;Acri;Italy
+IT1766;87042;Altomonte;Italy
+IT1767;87043;Bisignano;Italy
+IT1768;87044;Cerisano;Italy
+IT1769;87045;Tessano;Italy
+IT1770;87046;Parantoro;Italy
+IT1771;87047;San Pietro In Guarano;Italy
+IT1772;87048;Santa Sofia D'Epiro;Italy
+IT1773;87050;Colosimi;Italy
+IT1774;87051;Camarda Di Aprigliano;Italy
+IT1775;87052;Croce Di Magara;Italy
+IT1776;87053;Celico;Italy
+IT1777;87054;Saliano;Italy
+IT1778;87055;Monte Oliveto;Italy
+IT1779;87056;Santo Stefano Di Rogliano;Italy
+IT1780;87057;Calvisi;Italy
+IT1781;87058;Spezzano Della Sila;Italy
+IT1782;87060;Mirto;Italy
+IT1783;87061;Campana;Italy
+IT1784;87062;Cariati;Italy
+IT1785;87064;Corigliano Scalo;Italy
+IT1786;87066;Longobucco;Italy
+IT1787;87067;Amica;Italy
+IT1788;87069;Macchia Albanese;Italy
+IT1789;87070;Borgata Marina;Italy
+IT1790;87071;Amendolara Marina;Italy
+IT1791;87072;Francavilla Marittima;Italy
+IT1792;87073;Oriolo;Italy
+IT1793;87074;Rocca Imperiale;Italy
+IT1794;87075;Trebisacce;Italy
+IT1795;87076;Villapiana;Italy
+IT1796;95010;Fornazzo;Italy
+IT1797;95011;Calatabiano;Italy
+IT1798;95012;Verzella;Italy
+IT1799;95013;Fiumefreddo Di Sicilia;Italy
+IT1800;95014;Carruba;Italy
+IT1801;95015;Linguaglossa;Italy
+IT1802;95016;Carrabba;Italy
+IT1803;95017;Piedimonte Etneo;Italy
+IT1804;95018;Torre Archirafi;Italy
+IT1805;95019;Pisano Etneo;Italy
+IT1806;95020;Aci Bonaccorsi;Italy
+IT1807;95021;Cannizzaro;Italy
+IT1808;95022;San Nicolo';Italy
+IT1809;95024;Santa Maria La Scala;Italy
+IT1810;95025;Santa Maria La Stella;Italy
+IT1811;95027;San Gregorio Di Catania;Italy
+IT1812;95028;Valverde;Italy
+IT1813;95029;Viagrande;Italy
+IT1814;95030;Gravina Di Catania;Italy
+IT1815;95031;Adrano;Italy
+IT1816;95032;Belpasso;Italy
+IT1817;95033;Biancavilla;Italy
+IT1818;95034;Bronte;Italy
+IT1819;95035;Maletto;Italy
+IT1820;95036;Randazzo;Italy
+IT1821;95037;Trappeto;Italy
+IT1822;95038;Santa Maria Di Licodia;Italy
+IT1823;95039;Trecastagni;Italy
+IT1824;95040;Licodia Eubea;Italy
+IT1825;95041;Granieri;Italy
+IT1826;95042;Grammichele;Italy
+IT1827;95043;Militello In Val Di Catania;Italy
+IT1828;95044;Borgo Lupo;Italy
+IT1829;95045;San Nullo;Italy
+IT1830;95046;Palagonia;Italy
+IT1831;95047;Paterno';Italy
+IT1832;95048;Scordia;Italy
+IT1833;95049;Vizzini;Italy
+IT1834;88020;Jacurso;Italy
+IT1835;88021;Borgia;Italy
+IT1836;88022;Acconia;Italy
+IT1837;88024;Girifalco;Italy
+IT1838;88025;San Pietro A Maida;Italy
+IT1839;88040;Castagna;Italy
+IT1840;88041;San Bernardo;Italy
+IT1841;88042;Falerna;Italy
+IT1842;88044;Marcellinara;Italy
+IT1843;88045;Cavora' Di Gimigliano;Italy
+IT1844;88046;Bella Di Lamezia Terme;Italy
+IT1845;88047;Nocera Terinese;Italy
+IT1846;88049;Soveria Mannelli;Italy
+IT1847;88050;Amaroni;Italy
+IT1848;88051;Cropani;Italy
+IT1849;88054;Sersale;Italy
+IT1850;88055;Albi;Italy
+IT1851;88056;Tiriolo;Italy
+IT1852;88060;Marina Di Guardavalle;Italy
+IT1853;88062;Cardinale;Italy
+IT1854;88064;Chiaravalle Centrale;Italy
+IT1855;88065;Guardavalle;Italy
+IT1856;88067;San Vito Sullo Ionio;Italy
+IT1857;88068;Soverato Marina;Italy
+IT1858;88069;Copanello;Italy
+IT1859;88070;Botricello;Italy
+IT1860;94010;Cerami;Italy
+IT1861;94011;Agira;Italy
+IT1862;94012;Barrafranca;Italy
+IT1863;94013;Leonforte;Italy
+IT1864;94014;San Giacomo;Italy
+IT1865;94015;Grottacalda;Italy
+IT1866;94016;Pietraperzia;Italy
+IT1867;94017;Regalbuto;Italy
+IT1868;94018;Troina;Italy
+IT1869;94019;Valguarnera Caropepe;Italy
+IT1870;47010;Galeata;Italy
+IT1871;47011;Castrocaro Terme E Terra Del Sole;Italy
+IT1872;47012;Nespoli;Italy
+IT1873;47013;San Ruffillo;Italy
+IT1874;47014;Teodorano;Italy
+IT1875;47015;Modigliana;Italy
+IT1876;47016;Fiumana;Italy
+IT1877;47017;Calbola;Italy
+IT1878;47018;Monte Guidi;Italy
+IT1879;47019;Tredozio;Italy
+IT1880;47020;Montiano;Italy
+IT1881;47021;Bagno Di Romagna;Italy
+IT1882;47023;Lizzano;Italy
+IT1883;47025;Monte Castello;Italy
+IT1884;47027;Ranchio;Italy
+IT1885;47028;Balze;Italy
+IT1886;47030;Montegelli;Italy
+IT1887;47032;Panighina;Italy
+IT1888;47034;Forlimpopoli;Italy
+IT1889;47035;Gambettola;Italy
+IT1890;47039;Savignano Sul Rubicone;Italy
+IT1891;47042;Bagnarola;Italy
+IT1892;47043;Gatteo;Italy
+IT1893;44010;Filo;Italy
+IT1894;44011;Argenta;Italy
+IT1895;44012;Ospitale;Italy
+IT1896;44014;Madonna Boschi;Italy
+IT1897;44015;Portomaggiore;Italy
+IT1898;44016;San Biagio;Italy
+IT1899;44019;Montesanto;Italy
+IT1900;44020;Ostellato;Italy
+IT1901;44021;Pontemaodino;Italy
+IT1902;44022;Comacchio;Italy
+IT1903;44023;Lagosanto;Italy
+IT1904;44025;Massa Fiscaglia;Italy
+IT1905;44026;Bosco;Italy
+IT1906;44027;Migliarino;Italy
+IT1907;44028;Poggio Renatico;Italy
+IT1908;44029;Porto Garibaldi;Italy
+IT1909;44030;Alberone Di Ro;Italy
+IT1910;44033;Berra;Italy
+IT1911;44034;Ambrogio;Italy
+IT1912;44035;Brazzolo;Italy
+IT1913;44037;Jolanda Di Savoia;Italy
+IT1914;44039;Tresigallo;Italy
+IT1915;44041;Casumaro;Italy
+IT1916;44042;Cento;Italy
+IT1917;44043;Mirabello;Italy
+IT1918;44045;Renazzo;Italy
+IT1919;44047;Sant'Agostino;Italy
+IT1920;44048;Traghetto;Italy
+IT1921;44049;Vigarano Pieve;Italy
+IT1922;71010;Difensola;Italy
+IT1923;71011;Apricena;Italy
+IT1924;71012;Rodi Garganico;Italy
+IT1925;71013;Matine;Italy
+IT1926;71014;Borgo Celano;Italy
+IT1927;71015;San Nicandro Garganico;Italy
+IT1928;71016;San Severo;Italy
+IT1929;71017;Petrulli;Italy
+IT1930;71018;San Menaio;Italy
+IT1931;71019;Vieste;Italy
+IT1932;71020;Panni;Italy
+IT1933;71021;Accadia;Italy
+IT1934;71022;Ascoli Satriano;Italy
+IT1935;71023;Bovino;Italy
+IT1936;71024;Candela;Italy
+IT1937;71025;Castelluccio Dei Sauri;Italy
+IT1938;71026;Deliceto;Italy
+IT1939;71027;Orsara Di Puglia;Italy
+IT1940;71028;Sant'Agata Di Puglia;Italy
+IT1941;71029;Borgo Giardinetto;Italy
+IT1942;71030;Macchia;Italy
+IT1943;71031;Alberona;Italy
+IT1944;71032;Berardinone;Italy
+IT1945;71033;Casalnuovo Monterotaro;Italy
+IT1946;71034;Castelnuovo Della Daunia;Italy
+IT1947;71035;Celenza Valfortore;Italy
+IT1948;71036;Palmori;Italy
+IT1949;71037;Monte Sant'Angelo;Italy
+IT1950;71038;Pietramontecorvino;Italy
+IT1951;71039;Roseto Valfortore;Italy
+IT1952;71040;Isole Tremiti;Italy
+IT1953;71041;Carapelle;Italy
+IT1954;71042;Moschella;Italy
+IT1955;71043;Manfredonia;Italy
+IT1956;71045;Orta Nova;Italy
+IT1957;71047;Stornara;Italy
+IT1958;71048;Stornarella;Italy
+IT1959;50010;Caldine;Italy
+IT1960;50012;Antella;Italy
+IT1961;50013;Il Rosi;Italy
+IT1962;50014;Fiesole;Italy
+IT1963;50018;Le Bagnese San Giusto;Italy
+IT1964;50019;Osmannoro;Italy
+IT1965;50020;Mercatale Val Di Pesa;Italy
+IT1966;50021;Barberino Val D'Elsa;Italy
+IT1967;50022;Panzano;Italy
+IT1968;50023;Bottai;Italy
+IT1969;50025;Lucardo;Italy
+IT1970;50026;San Casciano In Val Di Pesa;Italy
+IT1971;50027;Chiocchio;Italy
+IT1972;50028;Sambuca Val Di Pesa;Italy
+IT1973;50031;Montecarelli;Italy
+IT1974;50032;Panicaglia;Italy
+IT1975;50033;Coniale;Italy
+IT1976;50034;Lutirano;Italy
+IT1977;50035;Palazzuolo Sul Senio;Italy
+IT1978;50036;Pratolino;Italy
+IT1979;50037;San Piero A Sieve;Italy
+IT1980;50038;Sant'Agata Mugello;Italy
+IT1981;50039;Cistio;Italy
+IT1982;50041;Le Croci;Italy
+IT1983;50050;Gavena;Italy
+IT1984;50051;Castelnuovo D'Elsa;Italy
+IT1985;50052;Fiano;Italy
+IT1986;50053;Brusciana;Italy
+IT1987;50054;Fucecchio;Italy
+IT1988;50055;Brucianesi;Italy
+IT1989;50056;Sammontana;Italy
+IT1990;50058;San Mauro;Italy
+IT1991;50059;Orbignano;Italy
+IT1992;50060;Pelago;Italy
+IT1993;50061;Compiobbi;Italy
+IT1994;50062;Sandetole;Italy
+IT1995;50063;Figline Valdarno;Italy
+IT1996;50064;Incisa In Val D'Arno;Italy
+IT1997;50065;Santa Brigida;Italy
+IT1998;50066;Leccio;Italy
+IT1999;50067;Rignano Sull'Arno;Italy
+IT2000;50068;Rufina;Italy
+IT2001;63811;Castellano;Italy
+IT2002;63812;Montegranaro;Italy
+IT2003;63813;Monte Urano;Italy
+IT2004;63814;Torre San Patrizio;Italy
+IT2005;63815;Monte San Pietrangeli;Italy
+IT2006;63816;Francavilla D'Ete;Italy
+IT2007;63821;Porto Sant'Elpidio;Italy
+IT2008;63822;Porto San Giorgio;Italy
+IT2009;63823;Lapedona;Italy
+IT2010;63824;Marina Di Altidona;Italy
+IT2011;63825;Rubbianello;Italy
+IT2012;63826;Moresco;Italy
+IT2013;63827;Pedaso;Italy
+IT2014;63828;Campofilone;Italy
+IT2015;63831;Contrada Tenna;Italy
+IT2016;63832;Magliano Di Tenna;Italy
+IT2017;63833;Montegiorgio;Italy
+IT2018;63834;Massa Fermana;Italy
+IT2019;63835;Montappone;Italy
+IT2020;63836;Monte Vidon Corrado;Italy
+IT2021;63837;Piane;Italy
+IT2022;63838;Belmonte Piceno;Italy
+IT2023;63839;Curetta;Italy
+IT2024;63841;Monteleone Di Fermo;Italy
+IT2025;63842;Monsampietro Morico;Italy
+IT2026;63843;Montottone;Italy
+IT2027;63844;Grottazzolina;Italy
+IT2028;63845;Capparuccia;Italy
+IT2029;63846;Monte Giberto;Italy
+IT2030;63847;Monte Vidon Combatte;Italy
+IT2031;63848;Moregnano;Italy
+IT2032;63851;Ortezzano;Italy
+IT2033;63852;Monte Rinaldo;Italy
+IT2034;63853;Montelparo;Italy
+IT2035;63854;Santa Vittoria In Matenano;Italy
+IT2036;63855;Montefalcone Appennino;Italy
+IT2037;63856;Smerillo;Italy
+IT2038;63857;Amandola;Italy
+IT2039;63858;Montefortino;Italy
+IT2040;3010;Madonna Delle Grazie;Italy
+IT2041;3011;Collelavena;Italy
+IT2042;3012;Osteria Della Fontana;Italy
+IT2043;3013;Ferentino;Italy
+IT2044;3014;Fiuggi;Italy
+IT2045;3016;Campocatino;Italy
+IT2046;3017;Cerquotti Madonna Del Piano;Italy
+IT2047;3018;Paliano;Italy
+IT2048;3019;Supino;Italy
+IT2049;3020;Pastena;Italy
+IT2050;3021;Amaseno;Italy
+IT2051;3022;Brecciaro;Italy
+IT2052;3023;Ceccano;Italy
+IT2053;3024;Ceprano;Italy
+IT2054;3025;Anitrella;Italy
+IT2055;3026;Pofi;Italy
+IT2056;3027;Ripi;Italy
+IT2057;3028;San Giovanni Incarico;Italy
+IT2058;3029;Castelmassimo;Italy
+IT2059;3030;Pescosolido;Italy
+IT2060;3031;Aquino;Italy
+IT2061;3032;Isoletta;Italy
+IT2062;3033;Arpino;Italy
+IT2063;3034;Casalvieri;Italy
+IT2064;3035;Fontana Liri;Italy
+IT2065;3036;Isola Del Liri;Italy
+IT2066;3037;Sant'Oliva Di Pontecorvo;Italy
+IT2067;3038;Caprile;Italy
+IT2068;3039;Carnello;Italy
+IT2069;3040;Acquafondata;Italy
+IT2070;3041;Alvito;Italy
+IT2071;3042;Casino Pica;Italy
+IT2072;3043;Montecassino;Italy
+IT2073;3044;Cervaro;Italy
+IT2074;3045;Esperia;Italy
+IT2075;3046;San Donato Val Di Comino;Italy
+IT2076;3047;San Giorgio A Liri;Italy
+IT2077;3048;Sant'Apollinare;Italy
+IT2078;3049;Olivella;Italy
+IT2079;16010;Acquasanta;Italy
+IT2080;16011;Arenzano;Italy
+IT2081;16012;Camarza;Italy
+IT2082;16013;Campo Ligure;Italy
+IT2083;16014;Isoverde;Italy
+IT2084;16015;Orero;Italy
+IT2085;16016;Sciarborasca;Italy
+IT2086;16017;Isola Del Cantone;Italy
+IT2087;16018;Giovi;Italy
+IT2088;16019;Borgo Fornari;Italy
+IT2089;16020;Fascia;Italy
+IT2090;16021;Bargagli;Italy
+IT2091;16022;Davagna;Italy
+IT2092;16023;Casoni;Italy
+IT2093;16024;Lumarzo;Italy
+IT2094;16025;Rondanina;Italy
+IT2095;16026;Montoggio;Italy
+IT2096;16027;Propata;Italy
+IT2097;16028;Casanova;Italy
+IT2098;16029;Laccio;Italy
+IT2099;16030;Moneglia;Italy
+IT2100;16031;Bogliasco;Italy
+IT2101;16032;Camogli;Italy
+IT2102;16033;Cavi;Italy
+IT2103;16034;Portofino;Italy
+IT2104;16035;San Michele Di Pagana;Italy
+IT2105;16036;Recco;Italy
+IT2106;16038;Paraggi;Italy
+IT2107;16039;Santa Vittoria Di Libiola;Italy
+IT2108;16040;Pian Dei Ratti;Italy
+IT2109;16041;Borzonasca;Italy
+IT2110;16042;Graveglia;Italy
+IT2111;16043;Chiavari;Italy
+IT2112;16044;Monleone;Italy
+IT2113;16045;Lorsica;Italy
+IT2114;16046;Borgonovo;Italy
+IT2115;16047;Gattorna;Italy
+IT2116;16048;Rezzoaglio;Italy
+IT2117;16049;Santo Stefano D'Aveto;Italy
+IT2118;34070;Giasbana;Italy
+IT2119;34071;Cormons;Italy
+IT2120;34072;Farra D'Isonzo;Italy
+IT2121;34073;Rotta Primero;Italy
+IT2122;34074;Monfalcone;Italy
+IT2123;34075;Begliano;Italy
+IT2124;34076;Fratta;Italy
+IT2125;34077;Ronchi Dei Legionari;Italy
+IT2126;34078;Sagrado;Italy
+IT2127;34079;Bistrigna;Italy
+IT2128;58010;Albinia;Italy
+IT2129;58011;Chiarone;Italy
+IT2130;58012;Giglio Campese;Italy
+IT2131;58014;Poggio Capanne;Italy
+IT2132;58015;Orbetello Stazione;Italy
+IT2133;58017;Pitigliano;Italy
+IT2134;58018;Porto Ercole;Italy
+IT2135;58019;Monte Argentario;Italy
+IT2136;58020;Grilli;Italy
+IT2137;58022;Follonica;Italy
+IT2138;58023;Gavorrano;Italy
+IT2139;58024;Niccioleta;Italy
+IT2140;58025;Monterotondo Marittimo;Italy
+IT2141;58026;Boccheggiano;Italy
+IT2142;58027;Montemassi;Italy
+IT2143;58031;Bagnoli;Italy
+IT2144;58033;Montenero;Italy
+IT2145;58034;Selvena;Italy
+IT2146;58036;Sticciano Scalo;Italy
+IT2147;58037;Marroneto;Italy
+IT2148;58038;Seggiano;Italy
+IT2149;58040;Tatti;Italy
+IT2150;58042;Montorsaio;Italy
+IT2151;58043;Castiglione Della Pescaia;Italy
+IT2152;58044;Cinigiano;Italy
+IT2153;58045;Civitella Marittima;Italy
+IT2154;58051;Pereta;Italy
+IT2155;58053;Cana;Italy
+IT2156;58054;Murci;Italy
+IT2157;58055;Semproniano;Italy
+IT2158;18010;Agaggio Inferiore;Italy
+IT2159;18011;Castellaro;Italy
+IT2160;18012;Piani Di Borghetto;Italy
+IT2161;18013;Diano Marina;Italy
+IT2162;18014;Ospedaletti;Italy
+IT2163;18015;Pompeiana;Italy
+IT2164;18016;San Bartolomeo Al Mare;Italy
+IT2165;18017;Civezza;Italy
+IT2166;18018;Arma Di Taggia;Italy
+IT2167;18019;Vallecrosia;Italy
+IT2168;18020;Dolcedo;Italy
+IT2169;18021;Borgomaro;Italy
+IT2170;18022;Cesio;Italy
+IT2171;18023;Cosio Di Arroscia;Italy
+IT2172;18024;Pornassio;Italy
+IT2173;18026;Calderara;Italy
+IT2174;18027;Chiusavecchia;Italy
+IT2175;18030;Airole;Italy
+IT2176;18031;Bajardo;Italy
+IT2177;18032;Perinaldo;Italy
+IT2178;18033;Camporosso;Italy
+IT2179;18034;Ceriana;Italy
+IT2180;18035;Apricale;Italy
+IT2181;18036;San Biagio Della Cima;Italy
+IT2182;18037;Pigna;Italy
+IT2183;18038;Coldirodi;Italy
+IT2184;18039;Latte;Italy
+IT2185;86070;Fornelli;Italy
+IT2186;86071;Castel San Vincenzo;Italy
+IT2187;86072;Cerro Al Volturno;Italy
+IT2188;86073;Colli A Volturno;Italy
+IT2189;86074;Cerasuolo;Italy
+IT2190;86075;Sant'Eusanio;Italy
+IT2191;86077;Santa Maria Oliveto;Italy
+IT2192;86078;Pianura;Italy
+IT2193;86079;Ceppagna;Italy
+IT2194;86080;Acquaviva D'Isernia;Italy
+IT2195;86081;Villa Canale;Italy
+IT2196;86082;Capracotta;Italy
+IT2197;86083;Castiglione;Italy
+IT2198;86084;Forli' Del Sannio;Italy
+IT2199;86085;Pietrabbondante;Italy
+IT2200;86086;Poggio Sannita;Italy
+IT2201;86087;Rionero Sannitico;Italy
+IT2202;86088;San Pietro Avellana;Italy
+IT2203;86089;Cerreto;Italy
+IT2204;86090;Pesche;Italy
+IT2205;86091;Bagnoli Del Trigno;Italy
+IT2206;86092;Roccamandolfi;Italy
+IT2207;86093;Carpinone;Italy
+IT2208;86094;Civitanova Del Sannio;Italy
+IT2209;86095;San Pietro In Valle;Italy
+IT2210;86096;Incoronata;Italy
+IT2211;86097;Pescolanciano;Italy
+IT2212;88811;Ciro' Marina;Italy
+IT2213;88812;Torretta;Italy
+IT2214;88813;Ciro';Italy
+IT2215;88814;Torre Melissa;Italy
+IT2216;88815;Marina Di Strongoli;Italy
+IT2217;88816;Strongoli;Italy
+IT2218;88817;Carfizzi;Italy
+IT2219;88818;Pallagorio;Italy
+IT2220;88819;Verzino;Italy
+IT2221;88821;Corazzo;Italy
+IT2222;88822;Casabona;Italy
+IT2223;88823;Perticaro;Italy
+IT2224;88824;Belvedere Di Spinello;Italy
+IT2225;88825;Savelli;Italy
+IT2226;88831;Scandale;Italy
+IT2227;88832;Altilia;Italy
+IT2228;88833;Cerenzia;Italy
+IT2229;88834;Castelsilano;Italy
+IT2230;88835;Roccabernarda;Italy
+IT2231;88836;Cotronei;Italy
+IT2232;88837;Camellino;Italy
+IT2233;88838;Mesoraca;Italy
+IT2234;88841;Sant'Anna;Italy
+IT2235;88842;San Leonardo Di Cutro;Italy
+IT2236;88900;Crotone;Italy
+IT2237;23801;Calolziocorte;Italy
+IT2238;23802;Carenno;Italy
+IT2239;23804;Monte Marenzo;Italy
+IT2240;23805;Erve;Italy
+IT2241;23806;Valcava;Italy
+IT2242;23807;Merate;Italy
+IT2243;23808;Vercurago;Italy
+IT2244;23811;Morterone;Italy
+IT2245;23813;Cortenova;Italy
+IT2246;23814;Cremeno;Italy
+IT2247;23815;Introbio;Italy
+IT2248;23816;Barzio;Italy
+IT2249;23817;Moggio;Italy
+IT2250;23818;Pasturo;Italy
+IT2251;23819;Primaluna;Italy
+IT2252;23821;Abbadia Lariana;Italy
+IT2253;23822;Bellano;Italy
+IT2254;23823;Colico;Italy
+IT2255;23824;Dorio;Italy
+IT2256;23825;Esino Lario;Italy
+IT2257;23826;Mandello Del Lario;Italy
+IT2258;23827;Lierna;Italy
+IT2259;23828;Perledo;Italy
+IT2260;23829;Varenna;Italy
+IT2261;23831;Casargo;Italy
+IT2262;23832;Margno;Italy
+IT2263;23833;Pagnona;Italy
+IT2264;23834;Premana;Italy
+IT2265;23835;Introzzo;Italy
+IT2266;23836;Tremenico;Italy
+IT2267;23837;Parlasco;Italy
+IT2268;23838;Vendrogno;Italy
+IT2269;23841;Annone Di Brianza;Italy
+IT2270;23842;Bosisio Parini;Italy
+IT2271;23843;Dolzago;Italy
+IT2272;23844;Sirone;Italy
+IT2273;23845;Costa Masnaga;Italy
+IT2274;23846;Garbagnate Monastero;Italy
+IT2275;23847;Molteno;Italy
+IT2276;23848;Ello;Italy
+IT2277;23849;Casletto;Italy
+IT2278;23851;Galbiate;Italy
+IT2279;23852;Garlate;Italy
+IT2280;23854;Olginate;Italy
+IT2281;23855;Pescate;Italy
+IT2282;23857;Valgreghentino;Italy
+IT2283;23861;Cesana Brianza;Italy
+IT2284;23862;Civate;Italy
+IT2285;23864;Malgrate;Italy
+IT2286;23865;Oliveto Lario;Italy
+IT2287;23867;Suello;Italy
+IT2288;23868;Caserta;Italy
+IT2289;23870;Cernusco Lombardone;Italy
+IT2290;23871;Lomagna;Italy
+IT2291;23873;Missaglia;Italy
+IT2292;23874;Quattro Strade;Italy
+IT2293;23875;Osnago;Italy
+IT2294;23876;Monticello Brianza;Italy
+IT2295;23877;Paderno D'Adda;Italy
+IT2296;23878;Verderio Superiore;Italy
+IT2297;23879;Verderio Inferiore;Italy
+IT2298;23880;Galgiana;Italy
+IT2299;23881;Airuno;Italy
+IT2300;23883;Brivio;Italy
+IT2301;23884;Castello Di Brianza;Italy
+IT2302;23885;Calco;Italy
+IT2303;23886;Colle Brianza;Italy
+IT2304;23887;Olgiate Molgora;Italy
+IT2305;23888;Perego;Italy
+IT2306;23889;Santa Maria Hoe';Italy
+IT2307;23890;Barzago;Italy
+IT2308;23891;Barzano';Italy
+IT2309;23892;Bulciago;Italy
+IT2310;23893;Cassago Brianza;Italy
+IT2311;23894;Cremella;Italy
+IT2312;23895;Tabiago;Italy
+IT2313;23896;Bevera Di Sirtori;Italy
+IT2314;23897;Vigano';Italy
+IT2315;23898;Imbersago;Italy
+IT2316;23899;Robbiate;Italy
+IT2317;23900;Lecco;Italy
+IT2318;73010;Arnesano;Italy
+IT2319;73011;Alezio;Italy
+IT2320;73012;Campi Salentina;Italy
+IT2321;73013;Collemeto;Italy
+IT2322;73014;Gallipoli;Italy
+IT2323;73015;Salice Salentino;Italy
+IT2324;73016;San Cesario Di Lecce;Italy
+IT2325;73017;Chiesanuova;Italy
+IT2326;73018;Squinzano;Italy
+IT2327;73019;Trepuzzi;Italy
+IT2328;73020;Palmariggi;Italy
+IT2329;73021;Calimera;Italy
+IT2330;73022;Corigliano D'Otranto;Italy
+IT2331;73023;Lizzanello;Italy
+IT2332;73024;Morigino;Italy
+IT2333;73025;Martano;Italy
+IT2334;73026;Rocca Vecchia;Italy
+IT2335;73027;Cocumola;Italy
+IT2336;73028;Otranto;Italy
+IT2337;73029;Vanze;Italy
+IT2338;73030;Castiglione;Italy
+IT2339;73031;Alessano;Italy
+IT2340;73032;Andrano;Italy
+IT2341;73033;Corsano;Italy
+IT2342;73034;San Dana;Italy
+IT2343;73035;Miggiano;Italy
+IT2344;73036;Muro Leccese;Italy
+IT2345;73037;Poggiardo;Italy
+IT2346;73038;Spongano;Italy
+IT2347;73039;Depressa;Italy
+IT2348;73040;Acquarica Del Capo;Italy
+IT2349;73041;Carmiano;Italy
+IT2350;73042;Casarano;Italy
+IT2351;73043;Copertino;Italy
+IT2352;73044;Galatone;Italy
+IT2353;73045;Leverano;Italy
+IT2354;73046;Matino;Italy
+IT2355;73047;Monteroni Di Lecce;Italy
+IT2356;73048;Nardo';Italy
+IT2357;73049;Ruffano;Italy
+IT2358;73050;Boncore;Italy
+IT2359;73051;Novoli;Italy
+IT2360;73052;Parabita;Italy
+IT2361;73053;Patu';Italy
+IT2362;73054;Presicce;Italy
+IT2363;73055;Racale;Italy
+IT2364;73056;Taurisano;Italy
+IT2365;73057;Taviano;Italy
+IT2366;73058;Tuglie;Italy
+IT2367;73059;Gemini;Italy
+IT2368;57014;Collesalvetti;Italy
+IT2369;57016;Castelnuovo Misericordia;Italy
+IT2370;57017;Guasticce;Italy
+IT2371;57020;La California;Italy
+IT2372;57021;Campiglia Marittima;Italy
+IT2373;57022;Marina Di Castagneto Carducci;Italy
+IT2374;57023;Cecina Marina;Italy
+IT2375;57025;Vignale Riotorto;Italy
+IT2376;57027;San Vincenzo;Italy
+IT2377;57028;Montioni;Italy
+IT2378;57030;Marciana;Italy
+IT2379;57031;Capoliveri;Italy
+IT2380;57032;Capraia Isola;Italy
+IT2381;57033;Marciana Marina;Italy
+IT2382;57034;Cavoli;Italy
+IT2383;57036;Porto Azzurro;Italy
+IT2384;57037;Magazzini;Italy
+IT2385;57038;Cavo;Italy
+IT2386;57039;Rio Nell'Elba;Italy
+IT2387;26811;Boffalora D'Adda;Italy
+IT2388;26812;Casoni;Italy
+IT2389;26813;Graffignana;Italy
+IT2390;26814;Livraga;Italy
+IT2391;26815;Massalengo;Italy
+IT2392;26816;Ossago Lodigiano;Italy
+IT2393;26817;San Martino In Strada;Italy
+IT2394;26818;Bargano;Italy
+IT2395;26821;Bertonico;Italy
+IT2396;26822;Brembio;Italy
+IT2397;26823;Castiglione D'Adda;Italy
+IT2398;26824;Cavenago D'Adda;Italy
+IT2399;26825;Basiasco;Italy
+IT2400;26826;Secugnago;Italy
+IT2401;26827;Terranova Dei Passerini;Italy
+IT2402;26828;Melegnanello;Italy
+IT2403;26831;Casalmaiocco;Italy
+IT2404;26832;Cervignano D'Adda;Italy
+IT2405;26833;Comazzo;Italy
+IT2406;26834;Cadilana;Italy
+IT2407;26835;Crespiatica;Italy
+IT2408;26836;Montanaso Lombardo;Italy
+IT2409;26837;Cassino D'Alberi;Italy
+IT2410;26838;Villavesco;Italy
+IT2411;26839;Zelo Buon Persico;Italy
+IT2412;26841;Casalpusterlengo;Italy
+IT2413;26842;Cornovecchio;Italy
+IT2414;26843;Maccastorna;Italy
+IT2415;26844;Cavacurta;Italy
+IT2416;26845;Codogno;Italy
+IT2417;26846;Corno Giovine;Italy
+IT2418;26847;Maleo;Italy
+IT2419;26848;San Fiorano;Italy
+IT2420;26849;Santo Stefano Lodigiano;Italy
+IT2421;26851;Borgo San Giovanni;Italy
+IT2422;26852;Mairano;Italy
+IT2423;26853;Caselle Lurani;Italy
+IT2424;26854;Pieve Fissiraga;Italy
+IT2425;26855;Lodi Vecchio;Italy
+IT2426;26856;Senna Lodigiana;Italy
+IT2427;26857;Salerano Sul Lambro;Italy
+IT2428;26858;Sordio;Italy
+IT2429;26859;Valera Fratta;Italy
+IT2430;26861;Fombio;Italy
+IT2431;26862;Guardamiglio;Italy
+IT2432;26863;Orio Litta;Italy
+IT2433;26864;Ospedaletto Lodigiano;Italy
+IT2434;26865;San Rocco Al Porto;Italy
+IT2435;26866;Castiraga Vidardo;Italy
+IT2436;26867;Somaglia;Italy
+IT2437;26900;Lodi;Italy
+IT2438;4010;Pisterzo;Italy
+IT2439;4011;Campo Di Carne;Italy
+IT2440;4012;Cisterna Di Latina;Italy
+IT2441;4013;Sermoneta Scalo;Italy
+IT2442;4014;Borgo Pasubio;Italy
+IT2443;4015;Fossanova;Italy
+IT2444;4016;Baia D'Argento;Italy
+IT2445;4017;Borgo Montenero;Italy
+IT2446;4018;Colli Di Suso;Italy
+IT2447;4019;La Fiora;Italy
+IT2448;4020;Grunuovo Di Santi Cosma E Damiano;Italy
+IT2449;4021;Castelforte;Italy
+IT2450;4022;Fondi;Italy
+IT2451;4023;Acquatraversa Di Formia;Italy
+IT2452;4024;Gaeta;Italy
+IT2453;4025;Valle Bernardo;Italy
+IT2454;4026;Santa Maria Infante;Italy
+IT2455;4027;Ponza;Italy
+IT2456;4028;Marina Di Minturno;Italy
+IT2457;4029;Sperlonga;Italy
+IT2458;55010;Gragnano;Italy
+IT2459;55011;Marginone;Italy
+IT2460;55012;Pieve San Paolo;Italy
+IT2461;55013;Lammari;Italy
+IT2462;55014;Marlia;Italy
+IT2463;55015;San Salvatore Di Montecarlo;Italy
+IT2464;55016;Porcari;Italy
+IT2465;55018;Segromigno In Piano;Italy
+IT2466;55019;Botticino;Italy
+IT2467;55020;Fornovolasco;Italy
+IT2468;55022;Bagni Di Lucca Ponte;Italy
+IT2469;55023;Diecimo;Italy
+IT2470;55025;Calavorno;Italy
+IT2471;55027;Trassilico;Italy
+IT2472;55030;Careggine;Italy
+IT2473;55031;Filicaia;Italy
+IT2474;55032;Castelnuovo Di Garfagnana;Italy
+IT2475;55033;Valbona;Italy
+IT2476;55034;Minucciano;Italy
+IT2477;55035;Piazza Al Serchio;Italy
+IT2478;55036;Pieve Fosciana;Italy
+IT2479;55038;San Romano In Garfagnana;Italy
+IT2480;55040;Piano Di Mommio;Italy
+IT2481;55041;Montebello;Italy
+IT2482;55042;Forte Dei Marmi;Italy
+IT2483;55045;Strettoia;Italy
+IT2484;55047;Ponterosso;Italy
+IT2485;55049;Torre Del Lago Puccini;Italy
+IT2486;55051;Fornaci Di Barga;Italy
+IT2487;55054;Massarosa;Italy
+IT2488;55060;Massa Macinaia;Italy
+IT2489;55061;Carraia;Italy
+IT2490;55062;Colle Di Compito;Italy
+IT2491;55064;Piegaio Basso;Italy
+IT2492;20811;Villaggio Snia;Italy
+IT2493;20812;Villaggio Del Sole;Italy
+IT2494;20813;Bovisio-Masciago;Italy
+IT2495;20814;Valera;Italy
+IT2496;20815;Cogliate;Italy
+IT2497;20816;Dal Pozzo;Italy
+IT2498;20821;Meda;Italy
+IT2499;20822;Seveso;Italy
+IT2500;20823;Camnago;Italy
+IT2501;20824;Lazzate;Italy
+IT2502;20825;Barlassina;Italy
+IT2503;20826;Misinto;Italy
+IT2504;20831;Seregno;Italy
+IT2505;20832;Desio;Italy
+IT2506;20833;Paina;Italy
+IT2507;20834;Nova Milanese;Italy
+IT2508;20835;Muggio';Italy
+IT2509;20836;Capriano;Italy
+IT2510;20837;Veduggio Con Colzano;Italy
+IT2511;20838;Renate;Italy
+IT2512;20841;Agliate;Italy
+IT2513;20842;Villa Raverio;Italy
+IT2514;20843;Verano Brianza;Italy
+IT2515;20844;Canonica;Italy
+IT2516;20845;Sovico;Italy
+IT2517;20846;Macherio;Italy
+IT2518;20847;Albiate;Italy
+IT2519;20851;Santa Margherita;Italy
+IT2520;20852;Villasanta;Italy
+IT2521;20853;Biassono;Italy
+IT2522;20854;Vedano Al Lambro;Italy
+IT2523;20855;Peregallo;Italy
+IT2524;20856;Correzzana;Italy
+IT2525;20857;Camparada;Italy
+IT2526;20861;San Damiano;Italy
+IT2527;20862;Arcore;Italy
+IT2528;20863;Concorezzo;Italy
+IT2529;20864;Omate;Italy
+IT2530;20865;Usmate Velate;Italy
+IT2531;20866;Carnate;Italy
+IT2532;20867;Caponago;Italy
+IT2533;20871;Velasca;Italy
+IT2534;20872;Porto D'Adda;Italy
+IT2535;20873;Cavenago Di Brianza;Italy
+IT2536;20874;Busnago;Italy
+IT2537;20875;Burago Di Molgora;Italy
+IT2538;20876;Ornago;Italy
+IT2539;20877;Roncello;Italy
+IT2540;20881;Bernareggio;Italy
+IT2541;20882;Bellusco;Italy
+IT2542;20883;Mezzago;Italy
+IT2543;20884;Sulbiate;Italy
+IT2544;20885;Ronco Briantino;Italy
+IT2545;20886;Aicurzio;Italy
+IT2546;20900;San Fruttuoso;Italy
+IT2547;62010;Montecosaro Stazione;Italy
+IT2548;62011;Cingoli;Italy
+IT2549;62012;Civitanova Marche;Italy
+IT2550;62014;San Claudio;Italy
+IT2551;62015;Villa San Filippo;Italy
+IT2552;62017;Porto Recanati;Italy
+IT2553;62018;Porto Potenza Picena;Italy
+IT2554;62019;Recanati;Italy
+IT2555;62020;Monte San Martino;Italy
+IT2556;62021;Poggio San Vicino;Italy
+IT2557;62022;Gagliole;Italy
+IT2558;62024;Esanatoglia;Italy
+IT2559;62025;Seppio;Italy
+IT2560;62026;San Ginesio;Italy
+IT2561;62027;Cesolo;Italy
+IT2562;62028;Sarnano;Italy
+IT2563;62029;Tolentino;Italy
+IT2564;62032;Polverina;Italy
+IT2565;62034;Muccia;Italy
+IT2566;62035;Bolognola;Italy
+IT2567;62036;Pie' Casavecchia;Italy
+IT2568;62038;Cesi Di Macerata;Italy
+IT2569;62039;Fematre;Italy
+IT2570;98020;Mandanici;Italy
+IT2571;98021;Ali' Terme;Italy
+IT2572;98022;Fiumedinisi;Italy
+IT2573;98023;Furci Siculo;Italy
+IT2574;98025;Itala Marina;Italy
+IT2575;98026;Nizza Di Sicilia;Italy
+IT2576;98027;Sciglio;Italy
+IT2577;98028;Barracca;Italy
+IT2578;98029;Guidomandri Superiore;Italy
+IT2579;98030;Motta Camastra;Italy
+IT2580;98031;Capizzi;Italy
+IT2581;98032;Misitano Inferiore;Italy
+IT2582;98033;Cesaro';Italy
+IT2583;98034;Francavilla Di Sicilia;Italy
+IT2584;98035;Pallio;Italy
+IT2585;98036;Graniti;Italy
+IT2586;98037;Letojanni;Italy
+IT2587;98038;Rina;Italy
+IT2588;98039;Mazzeo;Italy
+IT2589;98040;Gualtieri Sicamino';Italy
+IT2590;98041;Pellegrino;Italy
+IT2591;98042;Pace Del Mela;Italy
+IT2592;98043;Sant'Andrea;Italy
+IT2593;98044;Olivarella;Italy
+IT2594;98045;San Pier Niceto;Italy
+IT2595;98046;Santa Lucia Del Mela;Italy
+IT2596;98047;Cavaliere;Italy
+IT2597;98048;San Martino Spadafora;Italy
+IT2598;98049;Divieto;Italy
+IT2599;98050;Acquacalda;Italy
+IT2600;98051;Caldera';Italy
+IT2601;98053;Castroreale;Italy
+IT2602;98054;Furnari;Italy
+IT2603;98055;Pianoconte;Italy
+IT2604;98056;Mazzarra' Sant'Andrea;Italy
+IT2605;98057;San Pietro Di Milazzo;Italy
+IT2606;98058;Novara Di Sicilia;Italy
+IT2607;98059;Milici;Italy
+IT2608;98060;Falcone;Italy
+IT2609;98061;Brolo;Italy
+IT2610;98062;Ficarra;Italy
+IT2611;98063;San Giorgio;Italy
+IT2612;98064;Librizzi;Italy
+IT2613;98065;Braidi;Italy
+IT2614;98066;Marina Di Patti;Italy
+IT2615;98067;Fondachello Di Raccuja;Italy
+IT2616;98068;Fiumara;Italy
+IT2617;98069;Sinagra;Italy
+IT2618;98070;Alcara Li Fusi;Italy
+IT2619;98071;Capo D'Orlando;Italy
+IT2620;98072;Marina Di Caronia;Italy
+IT2621;98073;Mistretta;Italy
+IT2622;98074;Cresta;Italy
+IT2623;98075;San Fratello;Italy
+IT2624;98076;Sant'Agata Di Militello;Italy
+IT2625;98077;Santo Stefano Di Camastra;Italy
+IT2626;98078;Moira;Italy
+IT2627;98079;Castel Di Tusa;Italy
+IT2628;20010;Pogliano Milanese;Italy
+IT2629;20011;Corbetta;Italy
+IT2630;20012;Cuggiono;Italy
+IT2631;20013;Ponte Nuovo;Italy
+IT2632;20014;Sant'Ilario Milanese;Italy
+IT2633;20015;Villastanza;Italy
+IT2634;20016;Pero;Italy
+IT2635;20017;Rho;Italy
+IT2636;20018;Sedriano;Italy
+IT2637;20019;Vighignolo;Italy
+IT2638;20020;Dairago;Italy
+IT2639;20021;Cassina Nuova;Italy
+IT2640;20022;Castano Primo;Italy
+IT2641;20023;Cerro Maggiore;Italy
+IT2642;20024;Garbagnate Milanese;Italy
+IT2643;20025;Legnano;Italy
+IT2644;20026;Novate Milanese;Italy
+IT2645;20027;Rescalda;Italy
+IT2646;20028;San Vittore Olona;Italy
+IT2647;20029;Turbigo;Italy
+IT2648;20030;Palazzolo Milanese;Italy
+IT2649;20032;Ospitaletto;Italy
+IT2650;20037;Paderno Dugnano;Italy
+IT2651;20040;Velate Milanese;Italy
+IT2652;20056;Grezzago;Italy
+IT2653;20060;Bussero;Italy
+IT2654;20061;Carugate;Italy
+IT2655;20062;Groppello D'Adda;Italy
+IT2656;20063;Cernusco Sul Naviglio;Italy
+IT2657;20064;Gorgonzola;Italy
+IT2658;20065;Inzago;Italy
+IT2659;20066;Melzo;Italy
+IT2660;20067;Tribiano;Italy
+IT2661;20068;Bettola;Italy
+IT2662;20069;Vaprio D'Adda;Italy
+IT2663;20070;Cerro Al Lambro;Italy
+IT2664;20077;Melegnano;Italy
+IT2665;20078;San Colombano Al Lambro;Italy
+IT2666;20080;Moirago;Italy
+IT2667;20081;Abbiategrasso;Italy
+IT2668;20082;Santa Corinna;Italy
+IT2669;20083;Gaggiano;Italy
+IT2670;20084;Lacchiarella;Italy
+IT2671;20085;Locate Di Triulzi;Italy
+IT2672;20086;Motta Visconti;Italy
+IT2673;20087;Castellazzo De' Barzi;Italy
+IT2674;20088;Gudo Visconti;Italy
+IT2675;20089;Quinto De Stampi;Italy
+IT2676;20090;Pantigliate;Italy
+IT2677;20091;Bresso;Italy
+IT2678;20092;Cinisello Balsamo;Italy
+IT2679;20093;San Maurizio Al Lambro;Italy
+IT2680;20094;Corsico;Italy
+IT2681;20095;Milanino;Italy
+IT2682;20096;Seggiano;Italy
+IT2683;20097;Sorigherio;Italy
+IT2684;20098;Borgo Lombardo;Italy
+IT2685;20099;Sesto San Giovanni;Italy
+IT2686;46010;Levata;Italy
+IT2687;46011;Mosio;Italy
+IT2688;46012;Bozzolo;Italy
+IT2689;46013;Canneto Sull'Oglio;Italy
+IT2690;46014;Ospitaletto Mantovano;Italy
+IT2691;46017;Cividale Mantovano;Italy
+IT2692;46018;Ponteterra;Italy
+IT2693;46019;Cicognara;Italy
+IT2694;46020;Polesine;Italy
+IT2695;46022;Felonica;Italy
+IT2696;46023;Bondeno Di Gonzaga;Italy
+IT2697;46024;Bondanello;Italy
+IT2698;46025;Poggio Rusco;Italy
+IT2699;46026;Nuvolato;Italy
+IT2700;46027;Portiolo;Italy
+IT2701;46028;Moglia Di Sermide;Italy
+IT2702;46029;Brusatasso;Italy
+IT2703;46030;Pomponesco;Italy
+IT2704;46031;Bagnolo San Vito;Italy
+IT2705;46032;Castelbelforte;Italy
+IT2706;46033;Castel D'Ario;Italy
+IT2707;46035;Correggioli;Italy
+IT2708;46036;Revere;Italy
+IT2709;46037;Governolo;Italy
+IT2710;46039;Villimpenta;Italy
+IT2711;46040;Piubega;Italy
+IT2712;46041;Castelnuovo;Italy
+IT2713;46042;Castel Goffredo;Italy
+IT2714;46043;Castiglione Delle Stiviere;Italy
+IT2715;46044;Solarolo;Italy
+IT2716;46045;Pozzolo;Italy
+IT2717;46046;Medole;Italy
+IT2718;46047;Soave;Italy
+IT2719;46048;Pellaloco;Italy
+IT2720;46049;Volta Mantovana;Italy
+IT2721;41010;Limidi;Italy
+IT2722;41011;Campogalliano;Italy
+IT2723;41012;Cortile;Italy
+IT2724;41013;Manzolino;Italy
+IT2725;41014;Levizzano Rangone;Italy
+IT2726;41015;Nonantola;Italy
+IT2727;41016;Novi Di Modena;Italy
+IT2728;41017;Stuffione;Italy
+IT2729;41018;San Cesario Sul Panaro;Italy
+IT2730;41019;Appalto;Italy
+IT2731;41020;Groppo;Italy
+IT2732;41021;Fanano;Italy
+IT2733;41022;Dogana Nuova;Italy
+IT2734;41023;Cadignano;Italy
+IT2735;41025;Acquaria;Italy
+IT2736;41026;Camatta;Italy
+IT2737;41027;Sant'Anna Pelago;Italy
+IT2738;41028;Montagnana;Italy
+IT2739;41029;Castellaro;Italy
+IT2740;41030;Gorghetto;Italy
+IT2741;41031;Camposanto;Italy
+IT2742;41032;Cavezzo;Italy
+IT2743;41033;San Giovanni;Italy
+IT2744;41034;Reno Finalese;Italy
+IT2745;41035;Massa Finalese;Italy
+IT2746;41036;Camurana;Italy
+IT2747;41037;Mortizzuolo;Italy
+IT2748;41038;Dogaro;Italy
+IT2749;41039;San Possidonio;Italy
+IT2750;41040;Polinago;Italy
+IT2751;41042;Ubersetto;Italy
+IT2752;41043;Formigine;Italy
+IT2753;41044;Riccovolto;Italy
+IT2754;41045;Montefiorino;Italy
+IT2755;41046;Boccassuolo;Italy
+IT2756;41048;Montebaranzone;Italy
+IT2757;41049;Sassuolo;Italy
+IT2758;41051;Montale;Italy
+IT2759;41052;Pieve Trebbio;Italy
+IT2760;41053;Pozza;Italy
+IT2761;41054;Villa Bianca;Italy
+IT2762;41055;Castelluccio;Italy
+IT2763;41056;Formica;Italy
+IT2764;41057;San Vito;Italy
+IT2765;41058;Vignola;Italy
+IT2766;41059;Montealbano;Italy
+IT2767;54010;Podenzana;Italy
+IT2768;54011;Caprigliola;Italy
+IT2769;54012;Tresana;Italy
+IT2770;54013;Gragnola;Italy
+IT2771;54014;Codiponte;Italy
+IT2772;54015;Comano;Italy
+IT2773;54016;Monti;Italy
+IT2774;54021;Corlaga;Italy
+IT2775;54023;Filattiera;Italy
+IT2776;54026;Groppoli;Italy
+IT2777;54027;Guinadi;Italy
+IT2778;54028;Filetto;Italy
+IT2779;54029;Chiesa Di Rossano;Italy
+IT2780;54033;Fossone;Italy
+IT2781;54035;Fosdinovo;Italy
+IT2782;54038;Cerreto;Italy
+IT2783;75010;Garaguso;Italy
+IT2784;75011;Accettura;Italy
+IT2785;75012;Serra Marina;Italy
+IT2786;75013;Macchia;Italy
+IT2787;75014;Grassano;Italy
+IT2788;75015;Pisticci;Italy
+IT2789;75016;Pomarico;Italy
+IT2790;75017;Salandra;Italy
+IT2791;75018;Stigliano;Italy
+IT2792;75019;Calle;Italy
+IT2793;75020;Nova Siri;Italy
+IT2794;75021;Colobraro;Italy
+IT2795;75022;Taccone;Italy
+IT2796;75023;Montalbano Jonico;Italy
+IT2797;75024;Montescaglioso;Italy
+IT2798;75025;Policoro;Italy
+IT2799;75026;Rotondella;Italy
+IT2800;75027;San Giorgio Lucano;Italy
+IT2801;75028;Caprarico;Italy
+IT2802;75029;Valsinni;Italy
+IT2803;80010;Quarto;Italy
+IT2804;80011;Acerra;Italy
+IT2805;80012;Calvizzano;Italy
+IT2806;80013;Licignano Di Napoli;Italy
+IT2807;80014;Lago Patria;Italy
+IT2808;80016;Torre Piscitelli;Italy
+IT2809;80017;Melito Di Napoli;Italy
+IT2810;80018;Mugnano Di Napoli;Italy
+IT2811;80019;Qualiano;Italy
+IT2812;80020;Casavatore;Italy
+IT2813;80021;Afragola;Italy
+IT2814;80022;Arzano;Italy
+IT2815;80023;Pascarola;Italy
+IT2816;80024;Carditello;Italy
+IT2817;80025;Casandrino;Italy
+IT2818;80026;Arpino;Italy
+IT2819;80027;Frattamaggiore;Italy
+IT2820;80028;Grumo Nevano;Italy
+IT2821;80029;Sant'Antimo;Italy
+IT2822;80030;Gargani;Italy
+IT2823;80031;Brusciano;Italy
+IT2824;80032;Casamarciano;Italy
+IT2825;80033;Cicciano;Italy
+IT2826;80034;Selva;Italy
+IT2827;80035;Pollastri;Italy
+IT2828;80036;Castello;Italy
+IT2829;80038;Pomigliano D'Arco;Italy
+IT2830;80039;Saviano;Italy
+IT2831;80040;Massa Di Somma;Italy
+IT2832;80041;Boscoreale;Italy
+IT2833;80042;Boscotrecase;Italy
+IT2834;80044;Ottaviano;Italy
+IT2835;80045;Messigno;Italy
+IT2836;80046;San Giorgio A Cremano;Italy
+IT2837;80047;Casilli;Italy
+IT2838;80048;Madonna Dell'Arco;Italy
+IT2839;80049;Somma Vesuviana;Italy
+IT2840;80050;Lettere;Italy
+IT2841;80051;Agerola;Italy
+IT2842;80053;Castellammare Di Stabia;Italy
+IT2843;80054;Gragnano;Italy
+IT2844;80055;Portici;Italy
+IT2845;80056;Ercolano;Italy
+IT2846;80057;Sant'Antonio Abate;Italy
+IT2847;80058;Torre Annunziata;Italy
+IT2848;80059;Leopardi;Italy
+IT2849;80060;Moiano;Italy
+IT2850;80061;Monticchio Di Massa Lubrense;Italy
+IT2851;80062;Meta;Italy
+IT2852;80063;Piano Di Sorrento;Italy
+IT2853;80065;Sant'Agnello;Italy
+IT2854;80066;Fornacella;Italy
+IT2855;80067;Capo Di Sorrento;Italy
+IT2856;80069;Vico Equense;Italy
+IT2857;80070;Monte Di Procida;Italy
+IT2858;80071;Anacapri;Italy
+IT2859;80073;Marina Grande Di Capri;Italy
+IT2860;80074;Casamicciola Terme;Italy
+IT2861;80075;Forio;Italy
+IT2862;80076;Lacco Ameno;Italy
+IT2863;80077;Sant'Antuono D'Ischia;Italy
+IT2864;80078;Arco Felice;Italy
+IT2865;80079;Procida;Italy
+IT2866;28010;Agrate Conturbia;Italy
+IT2867;28011;Sovazza;Italy
+IT2868;28012;Cressa;Italy
+IT2869;28013;Gattico;Italy
+IT2870;28014;Maggiora;Italy
+IT2871;28015;Momo;Italy
+IT2872;28016;Isola San Giulio;Italy
+IT2873;28017;San Maurizio D'Opaglio;Italy
+IT2874;28019;Baraggia;Italy
+IT2875;28021;Borgomanero;Italy
+IT2876;28024;Gozzano;Italy
+IT2877;28028;Pratolungo;Italy
+IT2878;28040;Borgo Ticino;Italy
+IT2879;28041;Arona;Italy
+IT2880;28043;Bellinzago Novarese;Italy
+IT2881;28045;Invorio;Italy
+IT2882;28046;Ghevio;Italy
+IT2883;28047;Fornaci;Italy
+IT2884;28050;Pombia;Italy
+IT2885;28053;Castelletto Sopra Ticino;Italy
+IT2886;28060;Granozzo Con Monticello;Italy
+IT2887;28061;Biandrate;Italy
+IT2888;28062;Cameri Aeronautica;Italy
+IT2889;28064;Landiona;Italy
+IT2890;28065;Cerano;Italy
+IT2891;28066;Galliate;Italy
+IT2892;28068;Romentino;Italy
+IT2893;28069;Trecate;Italy
+IT2894;28070;Nibbiola;Italy
+IT2895;28071;Borgolavezzaro;Italy
+IT2896;28072;San Bernardino;Italy
+IT2897;28073;Fara Novarese;Italy
+IT2898;28074;Ghemme;Italy
+IT2899;28075;Grignasco;Italy
+IT2900;28076;Pogno;Italy
+IT2901;28077;Prato Sesia;Italy
+IT2902;28078;Romagnano Sesia;Italy
+IT2903;28079;Vespolate;Italy
+IT2904;8010;Birori;Italy
+IT2905;8011;Bolotana;Italy
+IT2906;8012;Mulargia;Italy
+IT2907;8015;Macomer;Italy
+IT2908;8016;Borore;Italy
+IT2909;8017;Silanus;Italy
+IT2910;8018;Sindia;Italy
+IT2911;8020;Orune;Italy
+IT2912;8021;Bitti;Italy
+IT2913;8022;Dorgali;Italy
+IT2914;8023;Fonni;Italy
+IT2915;8024;Mamoiada;Italy
+IT2916;8025;Su Cologone;Italy
+IT2917;8026;Orani;Italy
+IT2918;8027;Orgosolo;Italy
+IT2919;8028;Cala Liberotto;Italy
+IT2920;8029;Siniscola;Italy
+IT2921;8031;Gidilau;Italy
+IT2922;8032;Desulo;Italy
+IT2923;8036;Ortueri;Italy
+IT2924;8038;Sorgono;Italy
+IT2925;8039;Tonara;Italy
+IT2926;8037;Seui;Italy
+IT2927;8040;Ilbono;Italy
+IT2928;8042;Bari Sardo;Italy
+IT2929;8044;Jerzu;Italy
+IT2930;8045;Lanusei;Italy
+IT2931;8046;Perdasdefogu;Italy
+IT2932;8047;Tertenia;Italy
+IT2933;8048;Arbatax;Italy
+IT2934;8049;Villagrande Strisaili;Italy
+IT2935;8013;Bosa Marina;Italy
+IT2936;8019;Modolo;Italy
+IT2937;8034;Traidodini;Italy
+IT2938;9070;Putzu Idu;Italy
+IT2939;9071;Abbasanta;Italy
+IT2940;9072;Cabras;Italy
+IT2941;9073;Cuglieri;Italy
+IT2942;9074;Ghilarza;Italy
+IT2943;9075;San Leonardo;Italy
+IT2944;9076;Sedilo;Italy
+IT2945;9077;Solarussa;Italy
+IT2946;9078;Scano Di Montiferro;Italy
+IT2947;9079;Tresnuraghes;Italy
+IT2948;9080;Nureci;Italy
+IT2949;9081;Ardauli;Italy
+IT2950;9082;Busachi;Italy
+IT2951;9083;Fordongianus;Italy
+IT2952;9084;Villanova Truschedu;Italy
+IT2953;9085;Ruinas;Italy
+IT2954;9086;Samugheo;Italy
+IT2955;9088;Ollastra;Italy
+IT2956;9090;Palmas Arborea;Italy
+IT2957;9091;Ales;Italy
+IT2958;9092;Arborea;Italy
+IT2959;9093;Gonnostramatza;Italy
+IT2960;9094;Sant'Anna;Italy
+IT2961;9095;Mogoro;Italy
+IT2962;9096;Santa Giusta;Italy
+IT2963;9097;San Nicolo' D'Arcidano;Italy
+IT2964;9098;Tanca Marchese;Italy
+IT2965;9099;Uras;Italy
+IT2966;7020;Bassacutena;Italy
+IT2967;7021;Arzachena;Italy
+IT2968;7022;Berchidda;Italy
+IT2969;7023;Calangianus;Italy
+IT2970;7024;Isola Di Caprera;Italy
+IT2971;7025;Luras;Italy
+IT2972;7026;San Pantaleo;Italy
+IT2973;7027;Oschiri;Italy
+IT2974;7028;San Pasquale;Italy
+IT2975;7029;Nuchis;Italy
+IT2976;7030;Badesi;Italy
+IT2977;7038;Lu Colbu;Italy
+IT2978;90010;Campofelice Di Roccella;Italy
+IT2979;90011;Bagheria;Italy
+IT2980;90012;Sambuchi;Italy
+IT2981;90013;Castelbuono;Italy
+IT2982;90014;Casteldaccia;Italy
+IT2983;90015;Gibilmanna;Italy
+IT2984;90016;Collesano;Italy
+IT2985;90017;Santa Flavia;Italy
+IT2986;90018;Termini Imerese;Italy
+IT2987;90019;San Nicolo' L'Arena;Italy
+IT2988;90020;Regalgioffoli;Italy
+IT2989;90021;Alia;Italy
+IT2990;90022;Caltavuturo;Italy
+IT2991;90023;Ciminna;Italy
+IT2992;90024;Gangi;Italy
+IT2993;90025;Lercara Friddi;Italy
+IT2994;90026;Raffo;Italy
+IT2995;90027;Petralia Sottana;Italy
+IT2996;90028;Polizzi Generosa;Italy
+IT2997;90029;Valledolmo;Italy
+IT2998;90030;Godrano;Italy
+IT2999;90031;Belmonte Mezzagno;Italy
+IT3000;90032;Bisacquino;Italy
+IT3001;90033;Chiusa Sclafani;Italy
+IT3002;90034;Corleone;Italy
+IT3003;90035;Marineo;Italy
+IT3004;90036;Portella Di Mare;Italy
+IT3005;90037;Piana Degli Albanesi;Italy
+IT3006;90038;Prizzi;Italy
+IT3007;90039;Villabate;Italy
+IT3008;90040;Isola Delle Femmine;Italy
+IT3009;90041;Balestrate;Italy
+IT3010;90042;Borgetto;Italy
+IT3011;90043;Camporeale;Italy
+IT3012;90044;Villagrazia Di Carini;Italy
+IT3013;90045;Cinisi;Italy
+IT3014;90046;Malpasso;Italy
+IT3015;90047;Partinico;Italy
+IT3016;90048;San Giuseppe Jato;Italy
+IT3017;90049;Citta' Del Mare;Italy
+IT3018;29010;Agazzano;Italy
+IT3019;29011;Castelnovo Val Tidone;Italy
+IT3020;29012;Caorso;Italy
+IT3021;29013;Rezzano;Italy
+IT3022;29014;Vigolo Marchese;Italy
+IT3023;29015;Creta;Italy
+IT3024;29016;Cortemaggiore;Italy
+IT3025;29017;San Protaso;Italy
+IT3026;29018;Lugagnano Val D'Arda;Italy
+IT3027;29019;San Damiano;Italy
+IT3028;29020;Quadrelli;Italy
+IT3029;29021;Bramaiano;Italy
+IT3030;29022;Mezzano Scotti;Italy
+IT3031;29023;Farini;Italy
+IT3032;29024;Torrio Casetta;Italy
+IT3033;29025;Groppovisdomo;Italy
+IT3034;29026;Orezzoli;Italy
+IT3035;29027;San Polo;Italy
+IT3036;29028;Biana;Italy
+IT3037;29029;Niviano Castello;Italy
+IT3038;35010;Cadoneghe;Italy
+IT3039;35011;Campodarsego;Italy
+IT3040;35012;Camposampiero;Italy
+IT3041;35013;Laghi;Italy
+IT3042;35014;Fontaniva;Italy
+IT3043;35015;Galliera Veneta;Italy
+IT3044;35016;Tremignon;Italy
+IT3045;35017;Torreselle;Italy
+IT3046;35018;San Martino Di Lupari;Italy
+IT3047;35019;Onara;Italy
+IT3048;35020;Albignasego;Italy
+IT3049;35021;Agna;Italy
+IT3050;35022;Anguillara Veneta;Italy
+IT3051;35023;Le Casette;Italy
+IT3052;35024;Bovolenta;Italy
+IT3053;35025;Cartura;Italy
+IT3054;35026;Conselve;Italy
+IT3055;35027;Oltre Brenta;Italy
+IT3056;35028;Arzerello;Italy
+IT3057;35029;Pontelongo;Italy
+IT3058;35030;Rubano;Italy
+IT3059;35031;Abano Terme;Italy
+IT3060;35032;Arqua' Petrarca;Italy
+IT3061;35034;Lozzo Atestino;Italy
+IT3062;35035;Mestrino;Italy
+IT3063;35036;Montegrotto Terme;Italy
+IT3064;35037;Treponti;Italy
+IT3065;35038;Torreglia;Italy
+IT3066;35040;Masi;Italy
+IT3067;35041;Battaglia Terme;Italy
+IT3068;35042;Deserto;Italy
+IT3069;35043;San Cosma;Italy
+IT3070;35044;Montagnana;Italy
+IT3071;35045;Ospedaletto Euganeo;Italy
+IT3072;35046;Saletto;Italy
+IT3073;35047;Solesino;Italy
+IT3074;35048;Pisana;Italy
+IT3075;65010;Civitaquana;Italy
+IT3076;65011;Catignano;Italy
+IT3077;65012;Cepagatti;Italy
+IT3078;65013;Citta' Sant'Angelo;Italy
+IT3079;65014;Loreto Aprutino;Italy
+IT3080;65015;Villa Carmine;Italy
+IT3081;65017;Roccafinadamo;Italy
+IT3082;65019;Castellana;Italy
+IT3083;65020;San Valentino In Abruzzo Citeriore;Italy
+IT3084;65022;Bussi Sul Tirino;Italy
+IT3085;65023;San Tommaso;Italy
+IT3086;65024;Manoppello Scalo;Italy
+IT3087;65025;Serramonacesca;Italy
+IT3088;65026;Popoli;Italy
+IT3089;65027;Scafa;Italy
+IT3090;65028;Tocco Da Casauria;Italy
+IT3091;65029;Torre De' Passeri;Italy
+IT3092;6010;Muccignano;Italy
+IT3093;6012;Piosina;Italy
+IT3094;6014;Montone;Italy
+IT3095;6016;Selci;Italy
+IT3096;6018;Lugnano;Italy
+IT3097;6019;Niccone;Italy
+IT3098;6020;Branca;Italy
+IT3099;6021;Costacciaro;Italy
+IT3100;6022;Fossato Di Vico Stazione;Italy
+IT3101;6023;San Pellegrino;Italy
+IT3102;6024;Casamorcia;Italy
+IT3103;6025;Nocera Umbra;Italy
+IT3104;6026;Pietralunga;Italy
+IT3105;6027;Scheggia;Italy
+IT3106;6028;Sigillo;Italy
+IT3107;6029;Casa Castalda;Italy
+IT3108;6030;Orsano E Cammoro;Italy
+IT3109;6031;Bevagna;Italy
+IT3110;6033;Cannara;Italy
+IT3111;6034;Rasiglia;Italy
+IT3112;6035;Pozzo;Italy
+IT3113;6036;Montefalco;Italy
+IT3114;6038;Capitan Loreto;Italy
+IT3115;6039;Matigge;Italy
+IT3116;6040;Piedipaterno Sul Nera;Italy
+IT3117;6041;Borgo Cerreto;Italy
+IT3118;6042;Campello Sul Clitunno;Italy
+IT3119;6043;Maltignano Di Cascia;Italy
+IT3120;6044;Castel Ritaldi;Italy
+IT3121;6045;Monteleone Di Spoleto;Italy
+IT3122;6046;Castelluccio;Italy
+IT3123;6047;Abeto;Italy
+IT3124;6049;Sant'Angelo In Mercole;Italy
+IT3125;6050;Collazzone;Italy
+IT3126;6051;Casalina;Italy
+IT3127;6053;Sant'Angelo Di Celle;Italy
+IT3128;6054;Fratta Todina;Italy
+IT3129;6055;San Valentino;Italy
+IT3130;6056;Villa San Faustino;Italy
+IT3131;6057;Monte Castello Di Vibio;Italy
+IT3132;6059;Canonica;Italy
+IT3133;6060;Villastrada Umbra;Italy
+IT3134;6061;Castiglione Del Lago;Italy
+IT3135;6062;Ponticelli Citta' Della Pieve;Italy
+IT3136;6063;Villa;Italy
+IT3137;6064;Panicale;Italy
+IT3138;6065;Castel Rigone;Italy
+IT3139;6066;Castiglion Fosco;Italy
+IT3140;6068;Tavernelle;Italy
+IT3141;6069;Isola Maggiore;Italy
+IT3142;6070;Ellera;Italy
+IT3143;6072;Castiglione Della Valle;Italy
+IT3144;6073;Mantignana;Italy
+IT3145;6081;Assisi Santuario;Italy
+IT3146;6083;Ospedalicchio Di Bastia Umbra;Italy
+IT3147;6084;Bettona;Italy
+IT3148;6089;Torgiano;Italy
+IT3149;56010;Vicopisano;Italy
+IT3150;56011;Gabella;Italy
+IT3151;56012;Fornacette;Italy
+IT3152;56017;Agnano;Italy
+IT3153;56019;Vecchiano;Italy
+IT3154;56020;San Romano;Italy
+IT3155;56021;Cascina;Italy
+IT3156;56022;Castelfranco Di Sotto;Italy
+IT3157;56023;Ripoli;Italy
+IT3158;56024;Corazzano;Italy
+IT3159;56025;Treggiaia;Italy
+IT3160;56028;San Miniato Basso;Italy
+IT3161;56029;Staffoli;Italy
+IT3162;56030;Morrona;Italy
+IT3163;56031;Quattro Strade;Italy
+IT3164;56032;La Croce;Italy
+IT3165;56033;San Pietro Belvedere;Italy
+IT3166;56034;Rivalto;Italy
+IT3167;56035;Usigliano;Italy
+IT3168;56036;Alica;Italy
+IT3169;56037;Ghizzano;Italy
+IT3170;56038;Giardino;Italy
+IT3171;56040;Canneto Di Monteverdi;Italy
+IT3172;56041;Sasso Pisano;Italy
+IT3173;56043;Fauglia;Italy
+IT3174;56044;Lustignano;Italy
+IT3175;56045;San Dalmazio;Italy
+IT3176;56046;Riparbella;Italy
+IT3177;56048;Saline Di Volterra;Italy
+IT3178;33070;Maron;Italy
+IT3179;33072;Casarsa Della Delizia;Italy
+IT3180;33074;Ceolini;Italy
+IT3181;33075;Mussons;Italy
+IT3182;33076;Barco;Italy
+IT3183;33077;Sacile;Italy
+IT3184;33078;Gleris;Italy
+IT3185;33079;Ramuscello;Italy
+IT3186;33080;Roraipiccolo;Italy
+IT3187;33081;Castello;Italy
+IT3188;33082;Corva;Italy
+IT3189;33083;Chions;Italy
+IT3190;33084;Cordenons;Italy
+IT3191;33085;Campagna;Italy
+IT3192;33086;San Leonardo;Italy
+IT3193;33087;Cecchini;Italy
+IT3194;33090;Anduins;Italy
+IT3195;33092;Fanna;Italy
+IT3196;33094;Valeriano;Italy
+IT3197;33095;San Giorgio Della Richinvelda;Italy
+IT3198;33097;Barbeano;Italy
+IT3199;33098;Arzene;Italy
+IT3200;33099;Vivaro;Italy
+IT3201;59011;Bacchereto;Italy
+IT3202;59013;Fornacelle;Italy
+IT3203;59015;Carmignano;Italy
+IT3204;59016;Poggetto;Italy
+IT3205;59021;Vaiano;Italy
+IT3206;59024;Mercatale;Italy
+IT3207;59025;Luicciana;Italy
+IT3208;59026;Montepiano;Italy
+IT3209;43010;Bianconese;Italy
+IT3210;43011;Busseto;Italy
+IT3211;43012;Parola;Italy
+IT3212;43013;Pastorello;Italy
+IT3213;43014;Medesano;Italy
+IT3214;43015;Cella Di Costamezzana;Italy
+IT3215;43017;San Secondo Parmense;Italy
+IT3216;43018;Gramignazzo;Italy
+IT3217;43019;Soragna;Italy
+IT3218;43020;Beduzzo;Italy
+IT3219;43021;Corniglio;Italy
+IT3220;43022;Monticelli Terme Di Montechiarugolo;Italy
+IT3221;43024;Sasso Di Neviano;Italy
+IT3222;43025;Palanzano;Italy
+IT3223;43028;Musiara Inferiore;Italy
+IT3224;43029;Mamiano;Italy
+IT3225;43030;Marzolara;Italy
+IT3226;43032;Pione;Italy
+IT3227;43035;Felino;Italy
+IT3228;43036;Cogolonchio;Italy
+IT3229;43037;Lesignano De' Bagni;Italy
+IT3230;43038;San Vitale;Italy
+IT3231;43039;Congelasio;Italy
+IT3232;43040;Felegara;Italy
+IT3233;43041;Bedonia;Italy
+IT3234;43042;Ghiare Di Berceto;Italy
+IT3235;43043;Porcigatone;Italy
+IT3236;43044;Ozzano Taro;Italy
+IT3237;43045;Sivizzano;Italy
+IT3238;43047;Mariano;Italy
+IT3239;43048;Varano Marchesi;Italy
+IT3240;43049;Pessola;Italy
+IT3241;43050;Mormorola;Italy
+IT3242;43051;Albareto;Italy
+IT3243;43052;Colorno;Italy
+IT3244;43053;Cereseto;Italy
+IT3245;43055;Mezzani;Italy
+IT3246;43056;Torrile;Italy
+IT3247;43058;Chiozzola;Italy
+IT3248;43059;Santa Maria Del Taro;Italy
+IT3249;51010;Massa E Cozzile;Italy
+IT3250;51011;Borgo A Buggiano;Italy
+IT3251;51012;Collodi;Italy
+IT3252;51013;Chiesina Uzzanese;Italy
+IT3253;51015;Pozzarello;Italy
+IT3254;51016;Montecatini Val Di Nievole;Italy
+IT3255;51017;Castelvecchio;Italy
+IT3256;51018;Pieve A Nievole;Italy
+IT3257;51019;Anchione;Italy
+IT3258;51020;Castello;Italy
+IT3259;51021;Abetone;Italy
+IT3260;51024;Pianosinatico;Italy
+IT3261;51028;Bardalone;Italy
+IT3262;51030;Momigno;Italy
+IT3263;51031;San Michele;Italy
+IT3264;51034;Casalguidi;Italy
+IT3265;51035;Mastromarco;Italy
+IT3266;51036;Castelmartini;Italy
+IT3267;51037;Fognano Di Montale;Italy
+IT3268;51039;Catena;Italy
+IT3269;61010;Montegrimano;Italy
+IT3270;61011;Gabicce Mare;Italy
+IT3271;61012;Fanano;Italy
+IT3272;61013;Sassofeltrio;Italy
+IT3273;61014;Villagrande;Italy
+IT3274;61020;Auditore;Italy
+IT3275;61021;Frontino;Italy
+IT3276;61022;Colbordolo;Italy
+IT3277;61023;Pietrarubbia;Italy
+IT3278;61024;Mombaroccio;Italy
+IT3279;61025;Osteria Nuova;Italy
+IT3280;61026;Monastero;Italy
+IT3281;61028;Mercatale;Italy
+IT3282;61029;Gadana;Italy
+IT3283;61030;Saltara;Italy
+IT3284;61032;Bellocchi;Italy
+IT3285;61033;Fermignano;Italy
+IT3286;61034;Calmazzo;Italy
+IT3287;61037;Centocroci;Italy
+IT3288;61038;Orciano Di Pesaro;Italy
+IT3289;61039;San Costanzo;Italy
+IT3290;61040;Monte Porzio;Italy
+IT3291;61041;Acqualagna;Italy
+IT3292;61042;Apecchio;Italy
+IT3293;61043;Pianello;Italy
+IT3294;61044;Pontericcioli;Italy
+IT3295;61045;Bellisio Solfare;Italy
+IT3296;61046;Piobbico;Italy
+IT3297;61047;San Lorenzo In Campo;Italy
+IT3298;61048;Sant'Angelo In Vado;Italy
+IT3299;61049;Muraglione;Italy
+IT3300;27010;Albuzzano;Italy
+IT3301;27011;Belgioioso;Italy
+IT3302;27012;Certosa Di Pavia;Italy
+IT3303;27013;Chignolo Po;Italy
+IT3304;27014;Genzone;Italy
+IT3305;27015;Landriano;Italy
+IT3306;27016;Sant'Alessio Con Vialone;Italy
+IT3307;27017;Zerbo;Italy
+IT3308;27018;Vidigulfo;Italy
+IT3309;27019;Villanterio;Italy
+IT3310;27020;Albonese;Italy
+IT3311;27021;Bereguardo;Italy
+IT3312;27022;Casorate Primo;Italy
+IT3313;27023;Cassolnovo;Italy
+IT3314;27024;Cilavegna;Italy
+IT3315;27025;Gambolo';Italy
+IT3316;27026;San Biagio;Italy
+IT3317;27027;Gropello Cairoli;Italy
+IT3318;27028;Bivio Cava Manara;Italy
+IT3319;27029;Vigevano;Italy
+IT3320;27030;Sairano;Italy
+IT3321;27031;Candia Lomellina;Italy
+IT3322;27032;Ferrera Erbognone;Italy
+IT3323;27033;Garbana;Italy
+IT3324;27034;Galliavola;Italy
+IT3325;27035;Villa Biscossi;Italy
+IT3326;27036;Mortara;Italy
+IT3327;27037;Pieve Del Cairo;Italy
+IT3328;27038;Robbio;Italy
+IT3329;27039;Balossa Bigli;Italy
+IT3330;27040;Rovescala;Italy
+IT3331;27041;Casanova Lonati;Italy
+IT3332;27042;Robecco Pavese;Italy
+IT3333;27043;San Cipriano Po;Italy
+IT3334;27044;Canneto Pavese;Italy
+IT3335;27045;Casteggio;Italy
+IT3336;27046;Santa Giuletta;Italy
+IT3337;27047;Montecalvo Versiggia;Italy
+IT3338;27048;Sommo;Italy
+IT3339;27049;Stradella;Italy
+IT3340;27050;Redavalle;Italy
+IT3341;27051;Tre Re;Italy
+IT3342;27052;Salice Terme;Italy
+IT3343;27053;Verretto;Italy
+IT3344;27054;Montebello Della Battaglia;Italy
+IT3345;27055;Rivanazzano;Italy
+IT3346;27057;Varzi;Italy
+IT3347;27058;Voghera;Italy
+IT3348;27059;Zavattarello;Italy
+IT3349;85010;Calvello;Italy
+IT3350;85011;Acerenza;Italy
+IT3351;85012;Corleto Perticara;Italy
+IT3352;85013;Genzano Di Lucania;Italy
+IT3353;85014;Laurenzana;Italy
+IT3354;85015;Oppido Lucano;Italy
+IT3355;85016;Pietragalla;Italy
+IT3356;85017;Tolve;Italy
+IT3357;85018;Trivigno;Italy
+IT3358;85020;Pescopagano;Italy
+IT3359;85021;San Cataldo;Italy
+IT3360;85022;Barile;Italy
+IT3361;85023;Forenza;Italy
+IT3362;85024;Lavello;Italy
+IT3363;85025;Leonessa Di Melfi;Italy
+IT3364;85026;Palazzo San Gervasio;Italy
+IT3365;85027;Rapolla;Italy
+IT3366;85028;Monticchio;Italy
+IT3367;85029;Venosa;Italy
+IT3368;85030;San Chirico Raparo;Italy
+IT3369;85031;Castelsaraceno;Italy
+IT3370;85032;Chiaromonte;Italy
+IT3371;85033;Episcopia;Italy
+IT3372;85034;Fardella;Italy
+IT3373;85035;Noepoli;Italy
+IT3374;85036;Roccanova;Italy
+IT3375;85037;Sant'Arcangelo;Italy
+IT3376;85038;Senise;Italy
+IT3377;85039;Spinoso;Italy
+IT3378;85040;San Costantino;Italy
+IT3379;85042;Lagonegro;Italy
+IT3380;85043;Mileo;Italy
+IT3381;85044;Cogliandrino;Italy
+IT3382;85046;Acquafredda;Italy
+IT3383;85047;Moliterno;Italy
+IT3384;85048;Rotonda;Italy
+IT3385;85049;Trecchina;Italy
+IT3386;85050;Baragiano Scalo;Italy
+IT3387;85051;Bella;Italy
+IT3388;85052;Galaino;Italy
+IT3389;85053;Montemurro;Italy
+IT3390;85054;Capo Di Giano;Italy
+IT3391;85055;Picerno;Italy
+IT3392;85056;Ruoti;Italy
+IT3393;85057;Tramutola;Italy
+IT3394;85058;Vietri Di Potenza;Italy
+IT3395;85059;Viggiano;Italy
+IT3396;48010;Fusignano;Italy
+IT3397;48011;Alfonsine;Italy
+IT3398;48012;Abbatesse;Italy
+IT3399;48013;San Cassiano;Italy
+IT3400;48014;Castel Bolognese;Italy
+IT3401;48015;Pisignano;Italy
+IT3402;48017;Conselice;Italy
+IT3403;48018;Celle;Italy
+IT3404;48020;Sant'Alberto;Italy
+IT3405;48022;San Bernardino;Italy
+IT3406;48024;Massa Lombarda;Italy
+IT3407;48025;Riolo Terme;Italy
+IT3408;48026;Russi;Italy
+IT3409;48027;Gaiano;Italy
+IT3410;89010;Scido;Italy
+IT3411;89011;Porelli Di Bagnara;Italy
+IT3412;89012;Delianuova;Italy
+IT3413;89013;Marina Di Gioia Tauro;Italy
+IT3414;89014;Zurgonadio;Italy
+IT3415;89015;Trodio;Italy
+IT3416;89016;Rizziconi;Italy
+IT3417;89017;San Giorgio Morgeto;Italy
+IT3418;89018;Acciarello;Italy
+IT3419;89020;Maropati;Italy
+IT3420;89021;Cinquefrondi;Italy
+IT3421;89022;Cittanova;Italy
+IT3422;89023;Bellantone;Italy
+IT3423;89024;Polistena;Italy
+IT3424;89025;Bosco;Italy
+IT3425;89026;San Ferdinando;Italy
+IT3426;89027;Sant'Eufemia D'Aspromonte;Italy
+IT3427;89028;Barritteri;Italy
+IT3428;89029;Amato Di Taurianova;Italy
+IT3429;89030;Condofuri Marina;Italy
+IT3430;89031;Bombile;Italy
+IT3431;89032;Pardesca;Italy
+IT3432;89033;Bova;Italy
+IT3433;89034;Bosco Sant'Ippolito;Italy
+IT3434;89035;Bova Marina;Italy
+IT3435;89036;Galati;Italy
+IT3436;89037;Marina D'Ardore;Italy
+IT3437;89038;Pietrapennata;Italy
+IT3438;89039;Plati';Italy
+IT3439;89040;Stignano;Italy
+IT3440;89041;Caulonia;Italy
+IT3441;89042;Gioiosa Ionica;Italy
+IT3442;89043;Croce Ferrata;Italy
+IT3443;89044;Moschetta Di Locri;Italy
+IT3444;89045;Mammola;Italy
+IT3445;89046;Marina Di Gioiosa Ionica;Italy
+IT3446;89047;Roccella Ionica;Italy
+IT3447;89048;Siderno Marina;Italy
+IT3448;89049;Stilo;Italy
+IT3449;89050;Acquacalda;Italy
+IT3450;89052;Campo Calabro;Italy
+IT3451;89054;Galatro;Italy
+IT3452;89056;Lubrichi;Italy
+IT3453;89057;Gambarie;Italy
+IT3454;89058;Melia;Italy
+IT3455;89060;San Fantino;Italy
+IT3456;89062;Lazzaro;Italy
+IT3457;89063;Anna';Italy
+IT3458;89064;Masella;Italy
+IT3459;89065;Motta San Giovanni;Italy
+IT3460;89069;San Lorenzo;Italy
+IT3461;42010;San Cassiano;Italy
+IT3462;42011;Bagnolo In Piano;Italy
+IT3463;42012;Campagnola Emilia;Italy
+IT3464;42013;Salvaterra;Italy
+IT3465;42014;Roteglia;Italy
+IT3466;42015;Correggio;Italy
+IT3467;42016;San Girolamo;Italy
+IT3468;42017;Vezzola;Italy
+IT3469;42018;San Martino In Rio;Italy
+IT3470;42019;Fellegara;Italy
+IT3471;42020;Albinea;Italy
+IT3472;42021;Barco;Italy
+IT3473;42022;Boretto;Italy
+IT3474;42023;Argine;Italy
+IT3475;42024;Meletole;Italy
+IT3476;42025;Cavriago;Italy
+IT3477;42026;Ciano D'Enza;Italy
+IT3478;42027;Montecchio Emilia;Italy
+IT3479;42028;Poviglio;Italy
+IT3480;42030;Villa Minozzo;Italy
+IT3481;42031;Casino Levizzano;Italy
+IT3482;42032;Busana;Italy
+IT3483;42033;Pantano;Italy
+IT3484;42034;Paullo Di Casina;Italy
+IT3485;42035;Croce;Italy
+IT3486;42037;Collagna;Italy
+IT3487;42039;Cinquecerri;Italy
+IT3488;42040;Caprara;Italy
+IT3489;42041;Lentigione;Italy
+IT3490;42042;Fabbrico;Italy
+IT3491;42043;Taneto;Italy
+IT3492;42044;Santa Vittoria Di Gualtieri;Italy
+IT3493;42045;Casoni;Italy
+IT3494;42046;Brugneto;Italy
+IT3495;42047;Rolo;Italy
+IT3496;42048;Rubiera;Italy
+IT3497;42049;Sant'Ilario D'Enza;Italy
+IT3498;97010;Bellocozzo;Italy
+IT3499;97011;Acate;Italy
+IT3500;97012;Chiaramonte Gulfi;Italy
+IT3501;97013;Pedalino;Italy
+IT3502;97014;Ispica;Italy
+IT3503;97015;Cava D'Ispica;Italy
+IT3504;97016;Pozzallo;Italy
+IT3505;97017;Santa Croce Camerina;Italy
+IT3506;97018;Cava D'Aliga;Italy
+IT3507;97019;Scoglitti;Italy
+IT3508;2010;Colli Sul Velino;Italy
+IT3509;2011;Accumoli;Italy
+IT3510;2012;Santi Lorenzo E Flaviano;Italy
+IT3511;2013;Antrodoco;Italy
+IT3512;2014;San Liberato;Italy
+IT3513;2015;Grotti;Italy
+IT3514;2016;Albaneto;Italy
+IT3515;2018;Poggio Bustone;Italy
+IT3516;2019;Sigillo Di Posta;Italy
+IT3517;2020;Ascrea;Italy
+IT3518;2021;Borgorose;Italy
+IT3519;2022;Collalto Sabino;Italy
+IT3520;2023;Santa Lucia Di Fiamignano;Italy
+IT3521;2024;Pescorocchiano;Italy
+IT3522;2025;Capradosso;Italy
+IT3523;2026;Rocca Sinibalda;Italy
+IT3524;2028;Collemaggiore;Italy
+IT3525;2030;Villetta Sant'Antonio;Italy
+IT3526;2031;Castelnuovo Di Farfa;Italy
+IT3527;2032;Coltodino;Italy
+IT3528;2033;Monteleone Sabino;Italy
+IT3529;2034;Bocchignano;Italy
+IT3530;2035;Orvinio;Italy
+IT3531;2037;Cerdomare;Italy
+IT3532;2038;Scandriglia;Italy
+IT3533;2039;Toffia;Italy
+IT3534;2040;Montebuono;Italy
+IT3535;2041;Casperia;Italy
+IT3536;2042;Collevecchio;Italy
+IT3537;2043;San Filippo Di Contigliano;Italy
+IT3538;2044;Gavignano Sabino;Italy
+IT3539;2045;Limiti Di Greccio;Italy
+IT3540;2046;Magliano Sabina;Italy
+IT3541;2047;Castel San Pietro;Italy
+IT3542;2048;Stimigliano Scalo;Italy
+IT3543;2049;Torri In Sabina;Italy
+IT3544;10;Casape;Italy
+IT3545;11;Bagni Di Tivol;Italy
+IT3546;12;Albuccione;Italy
+IT3547;13;Castelchiodato;Italy
+IT3548;15;Monterotondo;Italy
+IT3549;17;Acquaviva;Italy
+IT3550;18;Cretone;Italy
+IT3551;19;Arci;Italy
+IT3552;20;Agosta;Italy
+IT3553;21;Affile;Italy
+IT3554;22;Anticoli Corrado;Italy
+IT3555;23;Arsoli;Italy
+IT3556;24;Castel Madama;Italy
+IT3557;25;Gerano;Italy
+IT3558;26;Civitella;Italy
+IT3559;27;Roviano;Italy
+IT3560;28;Subiaco;Italy
+IT3561;29;Vicovaro;Italy
+IT3562;30;Genazzano;Italy
+IT3563;31;Artena;Italy
+IT3564;32;Carpineto Romano;Italy
+IT3565;33;San Bartolomeo;Italy
+IT3566;34;Colleferro Scalo;Italy
+IT3567;35;Olevano Romano;Italy
+IT3568;36;Carchitti;Italy
+IT3569;37;Segni;Italy
+IT3570;38;Valmontone;Italy
+IT3571;39;Valle Martella;Italy
+IT3572;40;Molara;Italy
+IT3573;41;Cecchina Stazione;Italy
+IT3574;42;Lido Dei Pini;Italy
+IT3575;43;Ciampino;Italy
+IT3576;44;Frascati;Italy
+IT3577;45;Landi;Italy
+IT3578;46;Grottaferrata;Italy
+IT3579;47;Marino;Italy
+IT3580;48;Nettuno;Italy
+IT3581;49;Velletri;Italy
+IT3582;50;Passo Oscuro;Italy
+IT3583;51;La Bianca;Italy
+IT3584;52;Marina Di Cerveteri;Italy
+IT3585;53;Civitavecchia;Italy
+IT3586;54;Fregene;Italy
+IT3587;55;Ladispoli;Italy
+IT3588;57;Pantano Di Grano;Italy
+IT3589;58;Santa Marinella;Italy
+IT3590;59;Santa Severa Nord;Italy
+IT3591;60;Ponte Storto;Italy
+IT3592;61;Anguillara Sabazia;Italy
+IT3593;62;Rinascente;Italy
+IT3594;63;Campagnano Di Roma;Italy
+IT3595;65;Feronia;Italy
+IT3596;66;Manziana;Italy
+IT3597;67;Morlupo;Italy
+IT3598;68;Rignano Flaminio;Italy
+IT3599;69;Vicarello;Italy
+IT3600;47814;Igea Marina;Italy
+IT3601;47822;Santa Giustina Di Santarcangelo;Italy
+IT3602;47824;Poggio Berni;Italy
+IT3603;47825;Torriana;Italy
+IT3604;47826;Villa Verucchio;Italy
+IT3605;47832;San Clemente;Italy
+IT3606;47833;Morciano Di Romagna;Italy
+IT3607;47834;Serbadone;Italy
+IT3608;47835;Santa Maria Del Monte;Italy
+IT3609;47836;Mondaino;Italy
+IT3610;47837;Montegridolfo;Italy
+IT3611;47838;Riccione;Italy
+IT3612;47841;Cattolica;Italy
+IT3613;47842;San Giovanni In Marignano;Italy
+IT3614;47843;Scacciano;Italy
+IT3615;47853;Ospedaletto;Italy
+IT3616;47854;Monte Colombo;Italy
+IT3617;47855;Gemmano;Italy
+IT3618;47861;Casteldelci;Italy
+IT3619;47862;Maiolo;Italy
+IT3620;47863;Ponte Molino Baffoni;Italy
+IT3621;47864;Ponte Messa;Italy
+IT3622;47865;Montemaggio;Italy
+IT3623;47866;Sant'Agata Feltria;Italy
+IT3624;47867;Talamello;Italy
+IT3625;47900;San Fortunato;Italy
+IT3626;45010;Ceregnano;Italy
+IT3627;45011;Ca' Emo;Italy
+IT3628;45012;San Basilio;Italy
+IT3629;45014;Villaregia;Italy
+IT3630;45015;Corbola;Italy
+IT3631;45017;Loreo;Italy
+IT3632;45018;Boccasette;Italy
+IT3633;45019;Mazzorno Destro;Italy
+IT3634;45020;Pincara;Italy
+IT3635;45021;Colombano;Italy
+IT3636;45022;Bagnolo Di Po;Italy
+IT3637;45023;Costa Di Rovigo;Italy
+IT3638;45024;Fiesso Umbertiano;Italy
+IT3639;45025;Fratta Polesine;Italy
+IT3640;45026;Ramodipalo Rasa;Italy
+IT3641;45027;Trecenta;Italy
+IT3642;45030;Occhiobello;Italy
+IT3643;45031;Arqua' Polesine;Italy
+IT3644;45032;Bergantino;Italy
+IT3645;45033;Bosaro;Italy
+IT3646;45034;Paviole;Italy
+IT3647;45035;Castelmassa;Italy
+IT3648;45036;Ficarolo;Italy
+IT3649;45037;Santo Stefano;Italy
+IT3650;45038;Raccano;Italy
+IT3651;45039;Stienta;Italy
+IT3652;84010;Cetara;Italy
+IT3653;84011;Vettica Pastena;Italy
+IT3654;84012;Angri;Italy
+IT3655;84013;Marini;Italy
+IT3656;84014;Nocera Inferiore;Italy
+IT3657;84015;Materdomini Di Nocera;Italy
+IT3658;84016;Pagani;Italy
+IT3659;84017;Positano;Italy
+IT3660;84018;San Pietro Di Scafati;Italy
+IT3661;84019;Molina;Italy
+IT3662;84020;Bivio Palomonte;Italy
+IT3663;84021;Tufariello;Italy
+IT3664;84022;Puglietta;Italy
+IT3665;84023;Persano;Italy
+IT3666;84024;Bagni Di Contursi;Italy
+IT3667;84025;Santa Cecilia Di Eboli;Italy
+IT3668;84026;Postiglione;Italy
+IT3669;84027;Sant'Angelo A Fasanella;Italy
+IT3670;84028;Borgo San Lazzaro;Italy
+IT3671;84029;Sicignano Degli Alburni Stazione;Italy
+IT3672;84030;Monte San Giacomo;Italy
+IT3673;84031;Auletta;Italy
+IT3674;84032;Buonabitacolo;Italy
+IT3675;84033;Montesano Sulla Marcellana;Italy
+IT3676;84034;Padula Scalo;Italy
+IT3677;84035;Polla;Italy
+IT3678;84036;Trinita';Italy
+IT3679;84037;Sant'Arsenio;Italy
+IT3680;84038;Caiazzano;Italy
+IT3681;84039;Prato Perillo;Italy
+IT3682;84040;Acquavella;Italy
+IT3683;84042;Acerno;Italy
+IT3684;84043;Agropoli;Italy
+IT3685;84044;Matinella;Italy
+IT3686;84045;Carillia;Italy
+IT3687;84046;Marina Di Ascea;Italy
+IT3688;84047;Gromola;Italy
+IT3689;84048;San Marco;Italy
+IT3690;84049;Castel San Lorenzo;Italy
+IT3691;84050;Lustra;Italy
+IT3692;84051;Centola;Italy
+IT3693;84052;Massascusa;Italy
+IT3694;84053;Cicerale;Italy
+IT3695;84055;Felitto;Italy
+IT3696;84056;Cardile;Italy
+IT3697;84057;Villa Littorio;Italy
+IT3698;84059;Marina Di Camerota;Italy
+IT3699;84060;Fornelli;Italy
+IT3700;84061;Eredita;Italy
+IT3701;84062;Monticelli;Italy
+IT3702;84065;Piaggine;Italy
+IT3703;84066;Caprioli;Italy
+IT3704;84067;Policastro Bussentino;Italy
+IT3705;84068;Galdo;Italy
+IT3706;84069;Acquaviva;Italy
+IT3707;84070;Scario;Italy
+IT3708;84073;Sapri;Italy
+IT3709;84074;San Mango;Italy
+IT3710;84075;Stio;Italy
+IT3711;84076;Copersito;Italy
+IT3712;84077;Torre Orsaia;Italy
+IT3713;84078;Pattano;Italy
+IT3714;84079;Vibonati;Italy
+IT3715;84080;Coperchia;Italy
+IT3716;84081;Fusara;Italy
+IT3717;84082;Manzi;Italy
+IT3718;84083;Lanzara;Italy
+IT3719;84084;Fisciano;Italy
+IT3720;84085;Ciorani;Italy
+IT3721;84086;Roccapiemonte;Italy
+IT3722;84087;Lavorate;Italy
+IT3723;84088;Siano;Italy
+IT3724;84090;San Mango Piemonte;Italy
+IT3725;84091;Sant'Anna;Italy
+IT3726;84092;Bivio;Italy
+IT3727;84095;Giffoni Valle Piana;Italy
+IT3728;84096;Montecorvino Rovella;Italy
+IT3729;84098;Sant'Antonio;Italy
+IT3730;84099;Campigliano;Italy
+IT3731;53011;Castellina In Chianti;Italy
+IT3732;53012;Frosini;Italy
+IT3733;53013;Gaiole In Chianti;Italy
+IT3734;53014;Ponte D'Arbia;Italy
+IT3735;53015;Scalvaia;Italy
+IT3736;53016;Murlo;Italy
+IT3737;53017;Lucarelli;Italy
+IT3738;53018;San Rocco A Pilli;Italy
+IT3739;53019;Quercegrossa;Italy
+IT3740;53020;Castelmuzio;Italy
+IT3741;53021;Abbadia San Salvatore;Italy
+IT3742;53022;Buonconvento;Italy
+IT3743;53023;Gallina;Italy
+IT3744;53024;Montalcino;Italy
+IT3745;53025;Piancastagnaio;Italy
+IT3746;53026;Pienza;Italy
+IT3747;53027;Bagno Vignoni;Italy
+IT3748;53030;Radicondoli;Italy
+IT3749;53031;Pievescola;Italy
+IT3750;53034;Campiglia;Italy
+IT3751;53035;Uopini;Italy
+IT3752;53036;Poggibonsi;Italy
+IT3753;53037;San Gimignano;Italy
+IT3754;53040;Rapolano Terme;Italy
+IT3755;53041;Monte Oliveto Maggiore;Italy
+IT3756;53042;Chianciano Terme;Italy
+IT3757;53043;Montallese;Italy
+IT3758;53045;Abbadia;Italy
+IT3759;53047;Sarteano;Italy
+IT3760;53048;Guazzino;Italy
+IT3761;53049;Torrita Di Siena;Italy
+IT3762;23010;Cino;Italy
+IT3763;23011;Ardenno;Italy
+IT3764;23012;Castione Andevenno;Italy
+IT3765;23013;Cosio Valtellino;Italy
+IT3766;23014;Andalo Valtellino;Italy
+IT3767;23015;Nuova Olonio;Italy
+IT3768;23016;Cercino;Italy
+IT3769;23017;Campovico;Italy
+IT3770;23018;Talamona;Italy
+IT3771;23019;Traona;Italy
+IT3772;23020;San Giacomo Filippo;Italy
+IT3773;23021;Campodolcino;Italy
+IT3774;23022;Bette;Italy
+IT3775;23023;Primolo;Italy
+IT3776;23024;Pianazzo;Italy
+IT3777;23025;Campo;Italy
+IT3778;23026;Arigna;Italy
+IT3779;23027;San Pietro Samolaco;Italy
+IT3780;23029;Dogana Di Villa Chiavenna;Italy
+IT3781;23030;San Nicolo' Di Valfurva;Italy
+IT3782;23031;Aprica;Italy
+IT3783;23032;Passo Stelvio;Italy
+IT3784;23033;Grosio;Italy
+IT3785;23034;Grosotto;Italy
+IT3786;23035;Le Prese;Italy
+IT3787;23036;Tresenda;Italy
+IT3788;23037;Tirano;Italy
+IT3789;23038;Bagni Nuovi;Italy
+IT3790;19010;Maissana;Italy
+IT3791;19011;Bonassola;Italy
+IT3792;19012;Carro;Italy
+IT3793;19013;Deiva Marina;Italy
+IT3794;19014;Framura;Italy
+IT3795;19015;Levanto;Italy
+IT3796;19016;Monterosso Al Mare;Italy
+IT3797;19017;Manarola;Italy
+IT3798;19018;Vernazza;Italy
+IT3799;19020;Carrodano;Italy
+IT3800;19021;Romito Magra;Italy
+IT3801;19025;Fezzano;Italy
+IT3802;19028;Varese Ligure;Italy
+IT3803;19030;Bocca Di Magra;Italy
+IT3804;19031;Ameglia;Italy
+IT3805;19032;Serra;Italy
+IT3806;19033;Castelnuovo Magra;Italy
+IT3807;19034;Serravalle;Italy
+IT3808;19037;Santo Stefano Di Magra;Italy
+IT3809;19038;Santa Caterina;Italy
+IT3810;96010;Canicattini Bagni;Italy
+IT3811;96011;Augusta;Italy
+IT3812;96012;Avola;Italy
+IT3813;96013;Pedagaggi;Italy
+IT3814;96014;Floridia;Italy
+IT3815;96015;Francofonte;Italy
+IT3816;96016;Lentini;Italy
+IT3817;96017;San Paolo Di Noto;Italy
+IT3818;96018;Marzamemi;Italy
+IT3819;96019;Rosolini;Italy
+IT3820;7010;Romana;Italy
+IT3821;7011;Bono;Italy
+IT3822;7012;Rebeccu;Italy
+IT3823;7013;Mores;Italy
+IT3824;7014;Vigne;Italy
+IT3825;7015;Padria;Italy
+IT3826;7016;Pattada;Italy
+IT3827;7017;Ploaghe;Italy
+IT3828;7018;Pozzomaggiore;Italy
+IT3829;7019;Villanova Monteleone;Italy
+IT3830;7031;Lu Bagnu;Italy
+IT3831;7032;Nulvi;Italy
+IT3832;7033;Santa Vittoria;Italy
+IT3833;7034;Perfugas;Italy
+IT3834;7035;Sedini;Italy
+IT3835;7036;Sennori;Italy
+IT3836;7037;Platamona;Italy
+IT3837;7039;La Muddizza;Italy
+IT3838;7040;Palmadula;Italy
+IT3839;7041;Fertilia;Italy
+IT3840;7043;Bonnanaro;Italy
+IT3841;7044;Ittiri;Italy
+IT3842;7045;Ossi;Italy
+IT3843;7046;Asinara Lazzaretto;Italy
+IT3844;7047;Thiesi;Italy
+IT3845;7048;Torralba;Italy
+IT3846;7049;Usini;Italy
+IT3847;17010;Osiglia;Italy
+IT3848;17011;Albisola Capo;Italy
+IT3849;17012;Albissola Marina;Italy
+IT3850;17013;Valle Di Murialdo;Italy
+IT3851;17014;Cairo Montenotte;Italy
+IT3852;17015;Celle Ligure;Italy
+IT3853;17017;Roccavignale;Italy
+IT3854;17019;Varazze;Italy
+IT3855;17020;Magliolo;Italy
+IT3856;17021;Moglio;Italy
+IT3857;17022;Borgio;Italy
+IT3858;17023;Ceriale;Italy
+IT3859;17024;Orco Feglino;Italy
+IT3860;17025;Loano;Italy
+IT3861;17026;Noli;Italy
+IT3862;17027;Giustenice;Italy
+IT3863;17028;Bergeggi;Italy
+IT3864;17030;Nasino;Italy
+IT3865;17031;Albenga;Italy
+IT3866;17032;Vendone;Italy
+IT3867;17033;Garlenda;Italy
+IT3868;17034;Castelvecchio Di Rocca Barbena;Italy
+IT3869;17035;Cisano Sul Neva;Italy
+IT3870;17037;Ortovero;Italy
+IT3871;17038;Villanova D'Albenga;Italy
+IT3872;17039;Zuccarello;Italy
+IT3873;17040;Mioglia;Italy
+IT3874;17041;Altare;Italy
+IT3875;17042;Giovo;Italy
+IT3876;17043;Carcare;Italy
+IT3877;17044;San Martino Stella;Italy
+IT3878;17045;Mallare;Italy
+IT3879;17046;Palo;Italy
+IT3880;17047;Quiliano;Italy
+IT3881;17048;San Pietro D'Olba;Italy
+IT3882;17051;Marina Di Andora;Italy
+IT3883;17052;Borghetto Santo Spirito;Italy
+IT3884;17053;Laigueglia;Italy
+IT3885;17054;Boissano;Italy
+IT3886;17055;Toirano;Italy
+IT3887;17056;Cengio;Italy
+IT3888;17057;Calizzano;Italy
+IT3889;17058;Piana Crixia;Italy
+IT3890;74010;Statte;Italy
+IT3891;74011;Castellaneta;Italy
+IT3892;74012;Crispiano;Italy
+IT3893;74013;Ginosa;Italy
+IT3894;74014;Laterza;Italy
+IT3895;74015;Carpari;Italy
+IT3896;74016;Massafra;Italy
+IT3897;74017;Mottola;Italy
+IT3898;74018;Palagianello;Italy
+IT3899;74019;Conca D'Oro;Italy
+IT3900;74020;Avetrana;Italy
+IT3901;74021;Carosino;Italy
+IT3902;74022;Fragagnano;Italy
+IT3903;74023;Grottaglie;Italy
+IT3904;74024;Uggiano Montefusco;Italy
+IT3905;74025;Marina Di Ginosa;Italy
+IT3906;74026;Monti D'Arena;Italy
+IT3907;74027;San Giorgio Ionico;Italy
+IT3908;74028;Sava;Italy
+IT3909;64010;Colonnella;Italy
+IT3910;64011;Alba Adriatica;Italy
+IT3911;64012;Piancarani;Italy
+IT3912;64013;Corropoli;Italy
+IT3913;64014;Villa Rosa Di Martinsicuro;Italy
+IT3914;64015;Nereto;Italy
+IT3915;64016;Sant'Egidio Alla Vibrata;Italy
+IT3916;64018;Tortoreto;Italy
+IT3917;64020;Ripattoni;Italy
+IT3918;64021;Giulianova;Italy
+IT3919;64023;Notaresco Stazione;Italy
+IT3920;64024;Pianura Vomano;Italy
+IT3921;64025;Scerne Di Pineto;Italy
+IT3922;64026;Roseto Degli Abruzzi;Italy
+IT3923;64027;Poggio Morello;Italy
+IT3924;64028;Silvi;Italy
+IT3925;64030;Montefino;Italy
+IT3926;64031;Arsita;Italy
+IT3927;64032;Fontanelle;Italy
+IT3928;64033;Bisenti;Italy
+IT3929;64034;Appignano;Italy
+IT3930;64035;Villa San Romualdo;Italy
+IT3931;64036;Scorrano;Italy
+IT3932;64037;Montegualtieri;Italy
+IT3933;64039;Val Vomano;Italy
+IT3934;64040;Cortino;Italy
+IT3935;64041;Colledoro;Italy
+IT3936;64042;Villa Petto;Italy
+IT3937;64043;Nerito;Italy
+IT3938;64044;Fano Adriano;Italy
+IT3939;64045;Fano A Corno;Italy
+IT3940;64046;Montorio Al Vomano;Italy
+IT3941;64047;Pietracamela;Italy
+IT3942;64049;Chiarino;Italy
+IT3943;38010;Romeno;Italy
+IT3944;38011;Amblar;Italy
+IT3945;38012;Dermulo;Italy
+IT3946;38013;Malosco;Italy
+IT3947;38015;Lavis;Italy
+IT3948;38016;Mezzocorona;Italy
+IT3949;38017;Mezzolombardo;Italy
+IT3950;38018;Molveno;Italy
+IT3951;38019;Tuenno;Italy
+IT3952;38020;Mocenigo;Italy
+IT3953;38021;Brez;Italy
+IT3954;38022;Bozzana;Italy
+IT3955;38023;Mechel;Italy
+IT3956;38024;Peio;Italy
+IT3957;38025;Dimaro;Italy
+IT3958;38026;Cusiano;Italy
+IT3959;38027;Terzolas;Italy
+IT3960;38028;Cagno';Italy
+IT3961;38029;Vermiglio;Italy
+IT3962;38030;Lisignago;Italy
+IT3963;38031;Campitello Di Fassa;Italy
+IT3964;38032;Penia;Italy
+IT3965;38033;Masi Di Cavalese;Italy
+IT3966;38034;Cembra;Italy
+IT3967;38035;Forno;Italy
+IT3968;38036;Pozza Di Fassa;Italy
+IT3969;38037;Bellamonte;Italy
+IT3970;38038;Tesero;Italy
+IT3971;38039;Costalunga;Italy
+IT3972;38040;Centa San Nicolo';Italy
+IT3973;38041;Albiano;Italy
+IT3974;38042;Baselga Di Pine';Italy
+IT3975;38043;Brusago;Italy
+IT3976;38045;Seregnano;Italy
+IT3977;38046;Lavarone;Italy
+IT3978;38047;Quaras;Italy
+IT3979;38048;Sover;Italy
+IT3980;38049;Bosentino;Italy
+IT3981;38050;Novaledo;Italy
+IT3982;38051;Borgo;Italy
+IT3983;38052;Caldonazzo;Italy
+IT3984;38053;Castello Tesino;Italy
+IT3985;38054;Fiera Di Primiero;Italy
+IT3986;38055;Grigno;Italy
+IT3987;38056;Levico Terme;Italy
+IT3988;38057;Falesina;Italy
+IT3989;38059;Agnedo;Italy
+IT3990;38060;Aldeno;Italy
+IT3991;38061;Pilcante;Italy
+IT3992;38062;San Giorgio;Italy
+IT3993;38063;Sabbionara;Italy
+IT3994;38064;San Sebastiano;Italy
+IT3995;38065;Pannone;Italy
+IT3996;38066;Riva Del Garda;Italy
+IT3997;38067;Biacesa Di Ledro;Italy
+IT3998;38068;Marco;Italy
+IT3999;38069;Nago Torbole;Italy
+IT4000;38070;Vezzano;Italy
+IT4001;38071;Bleggio Superiore;Italy
+IT4002;38072;Calavino;Italy
+IT4003;38073;Cavedine;Italy
+IT4004;38074;Pietramurata;Italy
+IT4005;38075;Ballino;Italy
+IT4006;38076;Castel Madruzzo;Italy
+IT4007;38077;Bagni Di Comano;Italy
+IT4008;38078;Moline Di Banale;Italy
+IT4009;38079;Bolbeno;Italy
+IT4010;38080;Iavre';Italy
+IT4011;38081;Breguzzo;Italy
+IT4012;38082;Castel Condino;Italy
+IT4013;38083;Condino;Italy
+IT4014;38085;Prezzo;Italy
+IT4015;38086;Sant'Antonio Di Mavignola;Italy
+IT4016;38087;Lardaro;Italy
+IT4017;38088;Spiazzo Rendena;Italy
+IT4018;38089;Darzo;Italy
+IT4019;10010;Albiano D'Ivrea;Italy
+IT4020;10011;Aglie';Italy
+IT4021;10012;Bollengo;Italy
+IT4022;10013;Borgofranco D'Ivrea;Italy
+IT4023;10014;Vallo;Italy
+IT4024;10015;Ivrea;Italy
+IT4025;10016;Montalto Dora;Italy
+IT4026;10017;Montanaro;Italy
+IT4027;10018;Pavone Canavese;Italy
+IT4028;10019;Cerone;Italy
+IT4029;10020;San Sebastiano Da Po;Italy
+IT4030;10022;San Michele E Grato;Italy
+IT4031;10023;Pessione;Italy
+IT4032;10024;Revigliasco Torinese;Italy
+IT4033;10025;Pino Torinese;Italy
+IT4034;10026;Santena;Italy
+IT4035;10028;Trofarello;Italy
+IT4036;10029;Villastellone;Italy
+IT4037;10030;Rondissone;Italy
+IT4038;10031;Borgomasino;Italy
+IT4039;10032;Brandizzo;Italy
+IT4040;10034;Torassi;Italy
+IT4041;10035;Mazze';Italy
+IT4042;10036;Olimpia;Italy
+IT4043;10037;Torrazza Piemonte;Italy
+IT4044;10038;Casabianca;Italy
+IT4045;10040;Almese;Italy
+IT4046;10041;Ceretto Di Carignano;Italy
+IT4047;10042;Nichelino;Italy
+IT4048;10043;Orbassano;Italy
+IT4049;10044;Pianezza;Italy
+IT4050;10045;Garola;Italy
+IT4051;10046;Avatanei;Italy
+IT4052;10048;Vinovo;Italy
+IT4053;10050;Chiomonte;Italy
+IT4054;10051;Drubiaglio;Italy
+IT4055;10052;Bardonecchia;Italy
+IT4056;10053;Foresto;Italy
+IT4057;10054;Solomiac;Italy
+IT4058;10055;Condove;Italy
+IT4059;10056;Oulx;Italy
+IT4060;10057;Sant'Ambrogio Di Torino;Italy
+IT4061;10058;Colle Sestriere;Italy
+IT4062;10059;Mompantero;Italy
+IT4063;10060;San Pietro Val Lemina;Italy
+IT4064;10061;Cavour;Italy
+IT4065;10062;Luserna;Italy
+IT4066;10063;Pomaretto;Italy
+IT4067;10064;Baudenasca;Italy
+IT4068;10065;Pramollo;Italy
+IT4069;10066;Torre Pellice;Italy
+IT4070;10067;Vigone;Italy
+IT4071;10068;Villafranca Piemonte;Italy
+IT4072;10069;Villar Perosa;Italy
+IT4073;10070;Levone;Italy
+IT4074;10071;Borgaro Torinese;Italy
+IT4075;10072;Mappano;Italy
+IT4076;10073;Devesi;Italy
+IT4077;10074;Lanzo Torinese;Italy
+IT4078;10075;Mathi;Italy
+IT4079;10076;San Giovanni;Italy
+IT4080;10077;Ceretta Di San Maurizio Canavese;Italy
+IT4081;10078;Altessano;Italy
+IT4082;10080;San Ponso;Italy
+IT4083;10081;Campo Canavese;Italy
+IT4084;10082;Priacco;Italy
+IT4085;10083;Favria;Italy
+IT4086;10084;Forno Canavese;Italy
+IT4087;10085;Pont Canavese;Italy
+IT4088;10086;Argentera;Italy
+IT4089;10087;Valperga;Italy
+IT4090;10088;Volpiano;Italy
+IT4091;10090;San Giorgio Canavese;Italy
+IT4092;10091;Alpignano;Italy
+IT4093;10092;Beinasco;Italy
+IT4094;10093;Leumann;Italy
+IT4095;10094;Giaveno;Italy
+IT4096;10095;Grugliasco;Italy
+IT4097;10098;Bruere;Italy
+IT4098;10099;San Mauro Torinese;Italy
+IT4099;91010;Ummari;Italy
+IT4100;91011;Alcamo;Italy
+IT4101;91012;Battaglia;Italy
+IT4102;91013;Sasi;Italy
+IT4103;91014;Scopello;Italy
+IT4104;91015;Purgatorio;Italy
+IT4105;91016;Casa Santa;Italy
+IT4106;91017;Pantelleria;Italy
+IT4107;91018;San Ciro;Italy
+IT4108;91019;Bonagia;Italy
+IT4109;91020;Poggioreale;Italy
+IT4110;91021;Campobello Di Mazara;Italy
+IT4111;91022;Marinella Di Selinunte;Italy
+IT4112;91023;Favignana;Italy
+IT4113;91024;Villaggio Madonna Delle Grazie;Italy
+IT4114;91025;Ciavolo;Italy
+IT4115;91026;Mazara Del Vallo;Italy
+IT4116;91027;Dattilo;Italy
+IT4117;91028;Partanna;Italy
+IT4118;91029;Santa Ninfa;Italy
+IT4119;5010;Collelungo;Italy
+IT4120;5011;Allerona Stazione;Italy
+IT4121;5012;Attigliano;Italy
+IT4122;5013;Castel Giorgio;Italy
+IT4123;5014;Pianlungo;Italy
+IT4124;5015;Fabro Scalo;Italy
+IT4125;5016;Sala;Italy
+IT4126;5017;Santa Maria;Italy
+IT4127;5018;Ciconia;Italy
+IT4128;5020;Morre;Italy
+IT4129;5021;Acquasparta;Italy
+IT4130;5022;Amelia;Italy
+IT4131;5023;Acqualoreto;Italy
+IT4132;5024;Giove;Italy
+IT4133;5025;Guardea;Italy
+IT4134;5026;Castel Dell'Aquila;Italy
+IT4135;5028;Penna In Teverina;Italy
+IT4136;5029;San Gemini;Italy
+IT4137;5030;Otricoli;Italy
+IT4138;5031;Buonacquisto;Italy
+IT4139;5032;Santa Maria Della Neve;Italy
+IT4140;5034;Ferentillo;Italy
+IT4141;5035;Vigne;Italy
+IT4142;5039;Stroncone;Italy
+IT4143;34010;Sgonico;Italy
+IT4144;34011;San Pelagio;Italy
+IT4145;34012;Basovizza;Italy
+IT4146;34014;Santa Croce;Italy
+IT4147;34015;Aquilinia;Italy
+IT4148;34016;Monrupino;Italy
+IT4149;34017;Prosecco;Italy
+IT4150;34018;Bagnoli Della Rosandra;Italy
+IT4151;31010;Santa Maria Del Piave;Italy
+IT4152;31011;Villa D'Asolo;Italy
+IT4153;31012;Anzano;Italy
+IT4154;31013;Roverbasso;Italy
+IT4155;31014;San Martino Di Colle Umberto;Italy
+IT4156;31015;Scomigo;Italy
+IT4157;31016;Villa Di Villa;Italy
+IT4158;31017;Paderno Del Grappa;Italy
+IT4159;31018;Campomolino;Italy
+IT4160;31020;Tarzo;Italy
+IT4161;31021;Bonisiolo;Italy
+IT4162;31022;Sambughe;Italy
+IT4163;31023;Castelminio;Italy
+IT4164;31024;Roncadelle;Italy
+IT4165;31025;Santa Lucia Di Piave;Italy
+IT4166;31026;Sarmede;Italy
+IT4167;31027;Lovadina;Italy
+IT4168;31028;Visna';Italy
+IT4169;31029;San Giacomo Di Veglia;Italy
+IT4170;31030;Pero;Italy
+IT4171;31031;Caerano Di San Marco;Italy
+IT4172;31032;Lughignano;Italy
+IT4173;31033;Salvarosa;Italy
+IT4174;31034;Cavaso Del Tomba;Italy
+IT4175;31035;Crocetta Del Montello;Italy
+IT4176;31036;Pezzan;Italy
+IT4177;31037;Ramon Campagna;Italy
+IT4178;31038;Porcellengo;Italy
+IT4179;31039;Spineda;Italy
+IT4180;31040;Covolo;Italy
+IT4181;31041;Cornuda;Italy
+IT4182;31042;Fagare';Italy
+IT4183;31043;Lutrano;Italy
+IT4184;31044;Biadene;Italy
+IT4185;31045;Motta Di Livenza;Italy
+IT4186;31046;Piavon;Italy
+IT4187;31047;Levada;Italy
+IT4188;31048;Spercenigo;Italy
+IT4189;31049;San Vito Di Valdobbiadene;Italy
+IT4190;31050;Cavasagra Di Vedelago;Italy
+IT4191;31051;Pedeguarda;Italy
+IT4192;31052;Candelu';Italy
+IT4193;31053;Pieve Di Soligo;Italy
+IT4194;31054;Possagno;Italy
+IT4195;31055;Quinto Di Treviso;Italy
+IT4196;31056;Biancade;Italy
+IT4197;31057;Silea;Italy
+IT4198;31058;Susegana;Italy
+IT4199;31059;Sant'Alberto;Italy
+IT4200;33010;Adegliacco;Italy
+IT4201;33011;Artegna;Italy
+IT4202;33013;Gemona Del Friuli;Italy
+IT4203;33015;Moggio Di Sotto;Italy
+IT4204;33016;Pontebba;Italy
+IT4205;33017;Bulfons;Italy
+IT4206;33018;Fusine In Valromana;Italy
+IT4207;33019;Leonacco;Italy
+IT4208;33020;Amaro;Italy
+IT4209;33021;Ampezzo;Italy
+IT4210;33022;Piano D'Arta;Italy
+IT4211;33023;Comeglians;Italy
+IT4212;33024;Forni Di Sopra;Italy
+IT4213;33025;Ovaro;Italy
+IT4214;33026;Cleulis;Italy
+IT4215;33027;Salino;Italy
+IT4216;33028;Caneva Di Tolmezzo;Italy
+IT4217;33029;Lauco;Italy
+IT4218;33030;Forgaria Nel Friuli;Italy
+IT4219;33031;Variano;Italy
+IT4220;33032;Pozzecco;Italy
+IT4221;33033;Rivolto;Italy
+IT4222;33034;Madrisio;Italy
+IT4223;33035;Torreano Di Martignacco;Italy
+IT4224;33036;Tomba;Italy
+IT4225;33037;Colloredo Di Prato;Italy
+IT4226;33038;Villanova Di San Daniele;Italy
+IT4227;33039;San Lorenzo;Italy
+IT4228;33040;Prepotto;Italy
+IT4229;33041;Aiello Del Friuli;Italy
+IT4230;33042;Buttrio;Italy
+IT4231;33043;Purgessimo;Italy
+IT4232;33044;Manzano;Italy
+IT4233;33045;Nimis;Italy
+IT4234;33046;Pulfero;Italy
+IT4235;33047;Ziracco;Italy
+IT4236;33048;Villanova Dello Iudrio;Italy
+IT4237;33049;San Pietro Al Natisone;Italy
+IT4238;33050;Casale Della Madonna;Italy
+IT4239;33051;Belvedere;Italy
+IT4240;33052;Strassoldo;Italy
+IT4241;33053;Latisana;Italy
+IT4242;33054;Lignano Pineta;Italy
+IT4243;33055;Muzzana Del Turgnano;Italy
+IT4244;33056;Palazzolo Dello Stella;Italy
+IT4245;33057;Sottoselva;Italy
+IT4246;33058;San Giorgio Di Nogaro;Italy
+IT4247;33059;Villa Vicentina;Italy
+IT4248;21010;Agra;Italy
+IT4249;21011;Casorate Sempione;Italy
+IT4250;21012;Cassano Magnago;Italy
+IT4251;21013;Gallarate;Italy
+IT4252;21014;Laveno Mombello;Italy
+IT4253;21015;Tornavento;Italy
+IT4254;21016;Creva;Italy
+IT4255;21017;Samarate;Italy
+IT4256;21018;Lisanza;Italy
+IT4257;21019;Coarezza;Italy
+IT4258;21020;Ranco;Italy
+IT4259;21021;Angera;Italy
+IT4260;21022;Azzate;Italy
+IT4261;21023;Besozzo;Italy
+IT4262;21024;Biandronno;Italy
+IT4263;21025;Comerio;Italy
+IT4264;21026;Gavirate;Italy
+IT4265;21027;Barza;Italy
+IT4266;21028;Travedona Monate;Italy
+IT4267;21029;Cuirone;Italy
+IT4268;21030;Marchirolo;Italy
+IT4269;21031;Viconago;Italy
+IT4270;21032;Caravate;Italy
+IT4271;21033;Cittiglio;Italy
+IT4272;21034;Trevisago;Italy
+IT4273;21035;Cunardo;Italy
+IT4274;21036;Gemonio;Italy
+IT4275;21037;Lavena Ponte Tresa;Italy
+IT4276;21038;Leggiuno;Italy
+IT4277;21039;Valganna;Italy
+IT4278;21040;Santo Stefano;Italy
+IT4279;21041;Albizzate;Italy
+IT4280;21042;Caronno Pertusella;Italy
+IT4281;21043;Gornate Superiore;Italy
+IT4282;21044;Cavaria Con Premezzo;Italy
+IT4283;21045;Gazzada;Italy
+IT4284;21046;Malnate;Italy
+IT4285;21047;Saronno;Italy
+IT4286;21048;Monte;Italy
+IT4287;21049;Abbiate Guazzone;Italy
+IT4288;21050;Marnate;Italy
+IT4289;21051;Arcisate;Italy
+IT4290;21052;Sacconago;Italy
+IT4291;21053;Castellanza;Italy
+IT4292;21054;Fagnano Olona;Italy
+IT4293;21055;Gorla Minore;Italy
+IT4294;21056;Induno Olona;Italy
+IT4295;21057;Cascina Buon Gesu';Italy
+IT4296;21058;Solbiate Olona;Italy
+IT4297;21059;Baraggia;Italy
+IT4298;28801;Cossogno;Italy
+IT4299;28802;Albo;Italy
+IT4300;28803;Cuzzago;Italy
+IT4301;28804;Bieno;Italy
+IT4302;28805;Vogogna;Italy
+IT4303;28811;Arizzano;Italy
+IT4304;28812;Aurano;Italy
+IT4305;28813;Bee;Italy
+IT4306;28814;Cambiasca;Italy
+IT4307;28815;Caprezzo;Italy
+IT4308;28816;Intragna;Italy
+IT4309;28817;Miazzina;Italy
+IT4310;28818;Premeno;Italy
+IT4311;28819;Vignone;Italy
+IT4312;28821;Cannero Riviera;Italy
+IT4313;28822;Cannobio;Italy
+IT4314;28823;Ghiffa;Italy
+IT4315;28824;Oggebbio;Italy
+IT4316;28825;Cavaglio Spoccia;Italy
+IT4317;28826;Trarego Viggiona;Italy
+IT4318;28827;Falmenta;Italy
+IT4319;28828;Gurro;Italy
+IT4320;28831;Feriolo;Italy
+IT4321;28832;Belgirate;Italy
+IT4322;28833;Brovello Carpugnino;Italy
+IT4323;28836;Gignese;Italy
+IT4324;28838;Magognino;Italy
+IT4325;28841;Viganella;Italy
+IT4326;28842;Fonti;Italy
+IT4327;28843;Montescheno;Italy
+IT4328;28844;Villadossola;Italy
+IT4329;28845;Domodossola;Italy
+IT4330;28851;Beura Cardezza;Italy
+IT4331;28852;Vocogno;Italy
+IT4332;28853;Druogno;Italy
+IT4333;28854;Zornasco;Italy
+IT4334;28855;Masera;Italy
+IT4335;28856;Villette;Italy
+IT4336;28857;Santa Maria Maggiore;Italy
+IT4337;28858;Toceno;Italy
+IT4338;28859;Trontano;Italy
+IT4339;28861;Baceno;Italy
+IT4340;28862;Crodo;Italy
+IT4341;28863;Formazza;Italy
+IT4342;28864;Roldo;Italy
+IT4343;28865;Preglia;Italy
+IT4344;28866;Premia;Italy
+IT4345;28868;Iselle;Italy
+IT4346;28871;Bannio Anzino;Italy
+IT4347;28873;Castiglione D'Ossola;Italy
+IT4348;28875;Ceppo Morelli;Italy
+IT4349;28876;Macugnaga;Italy
+IT4350;28877;Ornavasso;Italy
+IT4351;28879;San Carlo;Italy
+IT4352;28881;Ramate;Italy
+IT4353;28883;Gravellona Toce;Italy
+IT4354;28884;Pallanzeno;Italy
+IT4355;28885;Piedimulera;Italy
+IT4356;28886;Pieve Vergonte;Italy
+IT4357;28887;Bagnella;Italy
+IT4358;28891;Cesara;Italy
+IT4359;28893;Loreglia;Italy
+IT4360;28894;Madonna Del Sasso;Italy
+IT4361;28895;Forno Di Omegna;Italy
+IT4362;28896;Quarna Sotto;Italy
+IT4363;28897;Valstrona;Italy
+IT4364;28898;Quarna Sopra;Italy
+IT4365;28899;Arola;Italy
+IT4366;28922;Verbania;Italy
+IT4367;13010;Motta De' Conti;Italy
+IT4368;13011;Isolella;Italy
+IT4369;13012;Prarolo;Italy
+IT4370;13017;Quarona;Italy
+IT4371;13018;Valduggia;Italy
+IT4372;13019;Morca;Italy
+IT4373;13020;Piode;Italy
+IT4374;13021;Alagna Valsesia;Italy
+IT4375;13022;Fervento;Italy
+IT4376;13023;Campertogno;Italy
+IT4377;13024;Cellio;Italy
+IT4378;13025;Fobello;Italy
+IT4379;13026;Rima San Giuseppe;Italy
+IT4380;13027;Scopa;Italy
+IT4381;13028;Scopello;Italy
+IT4382;13030;Formigliana;Italy
+IT4383;13031;Arborio;Italy
+IT4384;13032;Asigliano Vercellese;Italy
+IT4385;13033;Costanzana;Italy
+IT4386;13034;Lignana;Italy
+IT4387;13035;Lenta;Italy
+IT4388;13036;Ronsecco;Italy
+IT4389;13037;Vintebbio;Italy
+IT4390;13038;Tricerro;Italy
+IT4391;13039;Trino;Italy
+IT4392;13040;Sant'Antonino;Italy
+IT4393;13041;Bianze';Italy
+IT4394;13043;Cigliano;Italy
+IT4395;13044;San Silvestro;Italy
+IT4396;13045;Lozzolo;Italy
+IT4397;13046;Lamporo;Italy
+IT4398;13047;Olcenengo;Italy
+IT4399;13048;Santhia';Italy
+IT4400;13049;Tronzano Vercellese;Italy
+IT4401;13060;Roasio;Italy
+IT4402;30010;Campagna Lupia;Italy
+IT4403;30013;Treporti;Italy
+IT4404;30014;Rottanova;Italy
+IT4405;30015;Sant'Anna Di Chioggia;Italy
+IT4406;30016;Iesolo;Italy
+IT4407;30020;Ponte Crepaldo;Italy
+IT4408;30021;Caorle;Italy
+IT4409;30022;Ceggia;Italy
+IT4410;30023;Sindacale;Italy
+IT4411;30024;Musile Di Piave;Italy
+IT4412;30025;Fossalta Di Portogruaro;Italy
+IT4413;30026;Portogruaro;Italy
+IT4414;30027;Calvecchia;Italy
+IT4415;30028;Cesarolo;Italy
+IT4416;30029;Santo Stino Di Livenza;Italy
+IT4417;30030;Maerne;Italy
+IT4418;30031;Dolo;Italy
+IT4419;30032;Fiesso D'Artico;Italy
+IT4420;30033;Cappelletta;Italy
+IT4421;30034;Borbiago;Italy
+IT4422;30035;Vetrego;Italy
+IT4423;30036;Sant'Angelo;Italy
+IT4424;30037;Scorze';Italy
+IT4425;30038;Orgnano;Italy
+IT4426;30039;Paluello;Italy
+IT4427;36010;Seghe;Italy
+IT4428;36011;Castana;Italy
+IT4429;36012;Sasso;Italy
+IT4430;36013;Piovene Rocchette;Italy
+IT4431;36014;Santorso;Italy
+IT4432;36015;Sant'Ulderico Di Tretto;Italy
+IT4433;36016;Thiene;Italy
+IT4434;36020;Carpane';Italy
+IT4435;36021;Ponte Di Barbarano;Italy
+IT4436;36022;San Giuseppe;Italy
+IT4437;36023;Bugano;Italy
+IT4438;36024;Mossano;Italy
+IT4439;36025;Noventa Vicentina;Italy
+IT4440;36026;Cagnano;Italy
+IT4441;36027;Rosa';Italy
+IT4442;36028;Rossano Veneto;Italy
+IT4443;36030;Valli Del Pasubio;Italy
+IT4444;36031;Dueville;Italy
+IT4445;36032;Gallio;Italy
+IT4446;36033;Castelnovo;Italy
+IT4447;36034;Malo;Italy
+IT4448;36035;Marano Vicentino;Italy
+IT4449;36036;Torrebelvicino;Italy
+IT4450;36040;Brendola;Italy
+IT4451;36042;Breganze;Italy
+IT4452;36043;Camisano Vicentino;Italy
+IT4453;36045;Almisano;Italy
+IT4454;36046;Lusiana;Italy
+IT4455;36047;Montegalda;Italy
+IT4456;36050;Villaggio Montegrappa;Italy
+IT4457;36051;Creazzo;Italy
+IT4458;36052;Enego;Italy
+IT4459;36053;Gambellara;Italy
+IT4460;36054;Montebello Vicentino;Italy
+IT4461;36055;Nove;Italy
+IT4462;36056;Tezze Sul Brenta;Italy
+IT4463;36057;Pianezze Del Lago;Italy
+IT4464;36060;Romano D'Ezzelino;Italy
+IT4465;36061;Valrovina;Italy
+IT4466;36062;Fontanelle;Italy
+IT4467;36063;Marostica;Italy
+IT4468;36064;Mason Vicentino;Italy
+IT4469;36065;Mussolente;Italy
+IT4470;36066;Sandrigo;Italy
+IT4471;36070;San Pietro Vecchio;Italy
+IT4472;36071;Pugnello;Italy
+IT4473;36072;Chiampo;Italy
+IT4474;36073;Cornedo Vicentino;Italy
+IT4475;36075;Sant'Urbano;Italy
+IT4476;36076;Rovegliana;Italy
+IT4477;36077;Valmarana;Italy
+IT4478;36078;San Quirico;Italy
+IT4479;37010;Torri Del Benaco;Italy
+IT4480;37011;Cisano;Italy
+IT4481;37012;San Vito Al Mantico;Italy
+IT4482;37013;Pesina;Italy
+IT4483;37014;Sandra';Italy
+IT4484;37015;Gargagnago;Italy
+IT4485;37016;Garda;Italy
+IT4486;37017;Cola';Italy
+IT4487;37018;Cassone;Italy
+IT4488;37019;San Benedetto Di Lugana;Italy
+IT4489;37020;Volargne;Italy
+IT4490;37021;Lughezzano;Italy
+IT4491;37022;Fumane;Italy
+IT4492;37023;Grezzana;Italy
+IT4493;37024;Arbizzano;Italy
+IT4494;37026;Pescantina;Italy
+IT4495;37028;Rovere' Veronese;Italy
+IT4496;37029;Corrubbio;Italy
+IT4497;37030;Vestenanova;Italy
+IT4498;37031;Cellore;Italy
+IT4499;37032;Costalunga;Italy
+IT4500;37035;San Giovanni Ilarione;Italy
+IT4501;37036;Ferrazze;Italy
+IT4502;37038;Castelletto;Italy
+IT4503;37039;Cogollo;Italy
+IT4504;37040;Gazzolo;Italy
+IT4505;37041;Coriano Veronese;Italy
+IT4506;37042;Caldiero;Italy
+IT4507;37043;Mena';Italy
+IT4508;37044;Sule';Italy
+IT4509;37045;Terranegra;Italy
+IT4510;37046;Minerbe;Italy
+IT4511;37047;Villabella;Italy
+IT4512;37049;Carpi Di Villa Bartolomea;Italy
+IT4513;37050;San Pietro Di Morubio;Italy
+IT4514;37051;Villafontana;Italy
+IT4515;37052;Casaleone;Italy
+IT4516;37053;Asparetto;Italy
+IT4517;37054;Nogara;Italy
+IT4518;37055;Tombazosana;Italy
+IT4519;37056;Salizzole;Italy
+IT4520;37057;San Giovanni Lupatoto;Italy
+IT4521;37058;Sanguinetto;Italy
+IT4522;37059;Zevio;Italy
+IT4523;37060;Mozzecane;Italy
+IT4524;37062;Alpo;Italy
+IT4525;37063;Tarmassia;Italy
+IT4526;37064;Povegliano Veronese;Italy
+IT4527;37066;Custoza;Italy
+IT4528;37067;Salionze;Italy
+IT4529;37068;Isolalta;Italy
+IT4530;37069;Quaderni;Italy
+IT4531;9021;Barumini;Italy
+IT4532;9022;Lunamatrona;Italy
+IT4533;9025;Sanluri Stato;Italy
+IT4534;9027;Serrenti;Italy
+IT4535;9029;Tuili;Italy
+IT4536;9031;Arbus;Italy
+IT4537;9035;Gonnosfanadiga;Italy
+IT4538;9036;Guspini;Italy
+IT4539;9037;San Gavino Monreale;Italy
+IT4540;9038;Serramanna;Italy
+IT4541;9039;Villacidro;Italy
+IT4542;1010;Tessennano;Italy
+IT4543;1011;Musignano;Italy
+IT4544;1012;Vico Matrino;Italy
+IT4545;1014;Montalto Di Castro;Italy
+IT4546;1015;Sutri;Italy
+IT4547;1016;Tarquinia;Italy
+IT4548;1017;Tuscania;Italy
+IT4549;1018;Valentano;Italy
+IT4550;1019;La Botte;Italy
+IT4551;1020;Graffignano;Italy
+IT4552;1021;Trevinano;Italy
+IT4553;1022;Civita;Italy
+IT4554;1023;Bolsena;Italy
+IT4555;1024;Sermugnano;Italy
+IT4556;1025;Grotte Di Castro;Italy
+IT4557;1026;Magugnano;Italy
+IT4558;1027;Zepponami;Italy
+IT4559;1028;Orte Stazione;Italy
+IT4560;1030;Faleria;Italy
+IT4561;1032;Caprarola;Italy
+IT4562;1033;Borghetto Di Civita Castellana Stazione;Italy
+IT4563;1034;Regolelli;Italy
+IT4564;1035;Scalo Teverina;Italy
+IT4565;1036;Nepi;Italy
+IT4566;1037;Lago Di Vico;Italy
+IT4567;1038;Chia;Italy
+IT4568;1039;Vignanello;Italy
+IT4569;89812;Pizzo;Italy
+IT4570;89813;Trecroci;Italy
+IT4571;89814;Montesoro;Italy
+IT4572;89815;Francavilla Angitola;Italy
+IT4573;89816;Pannaconi;Italy
+IT4574;89817;Potenzoni;Italy
+IT4575;89818;Capistrano;Italy
+IT4576;89819;Monterosso Calabro;Italy
+IT4577;89821;Vallelonga;Italy
+IT4578;89822;Brognaturo;Italy
+IT4579;89823;Fabrizia;Italy
+IT4580;89824;Nardodipace;Italy
+IT4581;89831;Ciano;Italy
+IT4582;89832;Dasa';Italy
+IT4583;89833;Dinami;Italy
+IT4584;89834;Vazzano;Italy
+IT4585;89841;Filandari;Italy
+IT4586;89842;Calimera Calabra;Italy
+IT4587;89843;Filogaso;Italy
+IT4588;89844;Badia;Italy
+IT4589;89851;Francica;Italy
+IT4590;89852;San Giovanni;Italy
+IT4591;89853;San Gregorio D'Ippona;Italy
+IT4592;89861;Tropea;Italy
+IT4593;89862;Gasponi;Italy
+IT4594;89863;Joppolo;Italy
+IT4595;89864;Spilinga;Italy
+IT4596;89866;Barbalaconi;Italy
+IT4597;89867;Zungri;Italy
+IT4598;89868;San Giovanni Di Zambrone;Italy
+IT4599;89900;Piscopio;Italy
