@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
-<data>
+<odoo>
 
 <record id="crm_case_form_view_leads" model="ir.ui.view">
     <field name="name">Add city completion helper field</field>
@@ -30,5 +29,4 @@
     </field>
 </record>
 
-</data>
-</openerp>
+</odoo>
