@@ -4,11 +4,6 @@
 
     <!-- Sequences for Inbound Letter -->
 
-    <record id="seq_type_letter_in" model="ir.sequence.type">
-      <field name="name">Inbound Letter</field>
-      <field name="code">in.letter</field>
-    </record>
-
     <record id="seq_in_letter" model="ir.sequence">
       <field name="name">Inbound Letter</field>
       <field name="code">in.letter</field>
@@ -17,11 +12,6 @@
     </record>
 
     <!-- Sequences for Outbound Letter -->
-
-    <record id="seq_type_letter_out" model="ir.sequence.type">
-      <field name="name">Outbound Letter</field>
-      <field name="code">out.letter</field>
-    </record>
 
     <record id="seq_out_letter" model="ir.sequence">
       <field name="name">Outbound Letter</field>

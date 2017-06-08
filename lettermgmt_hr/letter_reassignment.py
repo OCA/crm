@@ -27,8 +27,9 @@ class letter_reassignment(orm.Model):
     """A line to forward a letter with a comment"""
     _inherit = 'letter.reassignment'
     _columns = {
-        'department_id': fields.many2one('hr.department', string='Department',
-                                         help='Department of user to whom letter is reassigned.'),
+        'department_id': fields.many2one(
+            'hr.department', string='Department',
+            help='Department of user to whom letter is reassigned.'),
     }
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

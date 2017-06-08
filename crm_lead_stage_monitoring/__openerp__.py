@@ -19,21 +19,24 @@
 #
 ##############################################################################
 
-{'name': 'CRM - Add last activity on stage field',
- 'version': '1.0.0',
- 'category': 'other',
- 'description': """This module allow the sale manager to have a quick review of recent stage change on his lead/opportunities.
-Each time a lead/opportunity switches from a stage to on other, the Current stage date is updated.
-You can make "group by" and search on the Current stage date field 
-""",
- 'author': "Camptocamp,Odoo Community Association (OCA)",
- 'website': 'http://www.camptocamp.com',
- 'depends': ['crm'],
- 'data': [
-          'crm_view.xml'
-          ],
- 'demo_xml': [],
- 'test': [],
- 'installable': False,
- 'active': False,
- }
+{
+    'name': 'CRM - Add last activity on stage field',
+    'version': '1.0.0',
+    'category': 'other',
+    'description': """This module allow the sale manager to have a quick review
+    of recent stage change on his lead/opportunities.
+    Each time a lead/opportunity switches from a stage to
+    on other, the Current stage date is updated.
+    You can make "group by" and search on the Current stage date field
+    """,
+    'author': "Camptocamp,Odoo Community Association (OCA)",
+    'website': 'http://www.camptocamp.com',
+    'depends': ['crm'],
+    'data': [
+        'crm_view.xml'
+    ],
+    'demo_xml': [],
+    'test': [],
+    'installable': False,
+    'active': False,
+}
