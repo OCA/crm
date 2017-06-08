@@ -47,16 +47,13 @@ class CRMPhonecall(models.Model):
             except IntegrityError:
                 s.summary_id = summary.search([("name", "=", s.name)])
 
-
-class CRMPhonecallSummary(models.Model):
-    _name = "crm.phonecall.summary"
-    _sql_constraints = [
-        ("name_unique", "UNIQUE (name)", "Name must be unique"),
-    ]
-
-    name = fields.Char()
-    phonecall_ids = fields.One2many(
-        "crm.phonecall",
-        "summary_id",
-        "Phonecalls",
-        help="Phonecalls with this summary.")
+    @api.model
+    def _prepare_another_phonecall_vals(
+            self, call, schedule_time, call_summary, user_id=False,
+            section_id=False, categ_id=False):
+        res = super(CRMPhonecall, self)._prepare_another_phonecall_vals(
+            call, schedule_time, call_summary, user_id=user_id,
+            section_id=section_id, categ_id=categ_id)
+        res['summary_id'] = self.env.context.get(
+            'summary_id', res.get('summary_id', False))
+        return res
