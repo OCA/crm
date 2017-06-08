@@ -20,12 +20,12 @@ class CrmLead(models.Model):
     @api.model
     def create(self, vals):
         if vals.get('code', '/') == '/':
-            vals['code'] = self.env['ir.sequence'].get('crm.lead')
+            vals['code'] = self.env['ir.sequence'].next_by_code('crm.lead')
         return super(CrmLead, self).create(vals)
 
-    @api.one
+    @api.multi
     def copy(self, default=None):
         if default is None:
             default = {}
-        default['code'] = self.env['ir.sequence'].get('crm.lead')
+        default['code'] = self.env['ir.sequence'].next_by_code('crm.lead')
         return super(CrmLead, self).copy(default)

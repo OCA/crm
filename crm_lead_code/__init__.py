@@ -19,7 +19,8 @@ def assign_old_sequences(cr, registry):
     sequence_obj = registry['ir.sequence']
     lead_ids = lead_obj.search(cr, SUPERUSER_ID, [], order="id")
     for lead_id in lead_ids:
-        cr.execute('UPDATE crm_lead '
-                   'SET code = \'%s\' '
-                   'WHERE id = %d;' %
-                   (sequence_obj.get(cr, SUPERUSER_ID, 'crm.lead'), lead_id))
+        code = sequence_obj.next_by_code(cr, SUPERUSER_ID, 'crm.lead')
+        cr.execute(''' UPDATE crm_lead
+                   SET code = %(code)s
+                   WHERE id = %(lead_id)s;''',
+                   {'code': code, 'lead_id': lead_id})
