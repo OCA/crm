@@ -1,34 +1,15 @@
 # -*- coding: utf-8 -*-
-# Python source code encoding : https://www.python.org/dev/peps/pep-0263/
-##############################################################################
-#
-#    OpenERP, Open Source Management Solution
-#    This module copyright :
-#        (c) 2015 Antiun Ingenieria, SL (Madrid, Spain, http://www.antiun.com)
-#                 Endika Iglesias <endikaig@antiun.com>
-#
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as
-#    published by the Free Software Foundation, either version 3 of the
-#    License, or (at your option) any later version.
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
-#
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#
-##############################################################################
+# Copyright 2015 Antiun Ingenieria - Endika Iglesias <endikaig@antiun.com>
+# Copyright 2017 Tecnativa - Luis Martínez
+# License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0.html
 
-from openerp import models, fields, api
+from odoo import api, fields, models
 
 
 class CrmLead(models.Model):
     _inherit = 'crm.lead'
 
-    @api.one
+    @api.multi
     @api.onchange('location_id')
     def on_change_city(self):
         if self.location_id:
@@ -44,12 +25,7 @@ class CrmLead(models.Model):
         help='Use the city name or the zip code to search the location',
     )
 
-    @api.multi
-    def on_change_partner_id(self, partner_id):
-        res = super(CrmLead, self).on_change_partner_id(partner_id)
-        if 'value' not in res:
-            res['value'] = {}
-        if partner_id:
-            partner = self.env['res.partner'].browse(partner_id)
-            res['value']['location_id'] = partner.zip_id.id
-        return {'value': res['value']}
+    @api.onchange('partner_id')
+    def onchange_partner_id_crm_location(self):
+        if self.partner_id:
+            self.location_id = self.partner_id.zip_id.id
