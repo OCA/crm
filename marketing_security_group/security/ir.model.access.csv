@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_mass_mailing_user,mail.mass_mailing.user,mass_mailing.model_mail_mass_mailing,marketing.group_marketing_user,1,1,1,1
+access_mass_mailing_test_user,mail.mass_mailing.test.user,mass_mailing.model_mail_mass_mailing_test,marketing.group_marketing_user,1,1,1,1

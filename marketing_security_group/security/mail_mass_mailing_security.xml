@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data noupdate="1">
+
+<record id="mass_mailing_marketing_user_access" model="ir.rule">
+    <field name="name">Allows marketing user to delete only his not sent mail.mass_mailing objects</field>
+    <field name="model_id" ref="mass_mailing.model_mail_mass_mailing"/>
+    <field name="domain_force">[('create_uid', '=', user.id), ('state', 'in', ('draft', 'test'))]</field>
+    <field name="groups" eval="[(4, ref('marketing.group_marketing_user'))]"/>
+    <field eval="0" name="perm_read"/>
+    <field eval="0" name="perm_write"/>
+    <field eval="0" name="perm_create"/>
+    <field eval="1" name="perm_unlink"/>
+</record>
+
+<record id="mass_mailing_marketing_manager_access" model="ir.rule">
+    <field name="name">Allows marketing manager to delete all not sent mail.mass_mailing objects</field>
+    <field name="model_id" ref="mass_mailing.model_mail_mass_mailing"/>
+    <field name="domain_force">[('state', 'in', ('draft', 'test'))]</field>
+    <field name="groups" eval="[(4, ref('marketing.group_marketing_manager'))]"/>
+    <field eval="0" name="perm_read"/>
+    <field eval="0" name="perm_write"/>
+    <field eval="0" name="perm_create"/>
+    <field eval="1" name="perm_unlink"/>
+</record>
+
+</data>
+</openerp>
