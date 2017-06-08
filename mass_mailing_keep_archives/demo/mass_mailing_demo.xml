@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <!-- Create mailing lists -->
+        <record id="mass_mail_list" model="mail.mass_mailing.list">
+            <field name="name">Imported Contacts</field>
+        </record>
+
+        <!-- Create Contacts -->
+        <record id="mass_mail_contact_10" model="mail.mass_mailing.contact">
+            <field name="name">Josefina Lopez</field>
+            <field name="email">jj@example.com</field>
+            <field name="list_id" ref="mass_mailing_keep_archives.mass_mail_list"/>
+        </record>
+        <record id="mass_mail_contact_11" model="mail.mass_mailing.contact">
+            <field name="name">Jonh Lernna</field>
+            <field name="email">jl@example.com</field>
+            <field name="list_id" ref="mass_mailing_keep_archives.mass_mail_list"/>
+        </record>
+        <record id="mass_mail_contact_12" model="mail.mass_mailing.contact">
+            <field name="name">Casie Carnet</field>
+            <field name="email">cc@example.com</field>
+            <field name="list_id" ref="mass_mailing_keep_archives.mass_mail_list"/>
+            <field name="opt_out" eval="True"/>
+        </record>
+
+
+        <record id="mass_mail" model="mail.mass_mailing">
+            <field name="name">Newsletter Example</field>
+            <field name="state">done</field>
+            <field name="mailing_model">res.partner</field>
+            <field name="mailing_domain">[('customer', '=', True)]</field>
+            <field name="reply_to_mode">email</field>
+            <field name="keep_archives">True</field>
+            <field name="reply_to"><![CDATA[Info <info@yourcompany.example.com>]]></field>
+        </record>
+
+        <record id="mass_mail_email_1" model="mail.mail.statistics">
+            <field name="mass_mailing_id" eval="ref('mass_mail')"/>
+            <field name="message_id">11111111@OpenERP.com</field>
+            <field name="sent" eval="(DateTime.today() - relativedelta(days=7)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="opened" eval="(DateTime.today() - relativedelta(days=4)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="replied" eval="(DateTime.today() - relativedelta(days=3)).strftime('%Y-%m-%d %H:%M:%S')"/>
+        </record>
+        <record id="mass_mail_email_2" model="mail.mail.statistics">
+            <field name="mass_mailing_id" eval="ref('mass_mail')"/>
+            <field name="message_id">1554532@OpenERP.com</field>
+            <field name="sent" eval="(DateTime.today() - relativedelta(days=5)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="opened" eval="(DateTime.today() - relativedelta(days=2)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="replied" eval="(DateTime.today() - relativedelta(days=0)).strftime('%Y-%m-%d %H:%M:%S')"/>
+        </record>
+        <record id="mass_mail_email_3" model="mail.mail.statistics">
+            <field name="mass_mailing_id" eval="ref('mass_mail')"/>
+            <field name="message_id">1235454@OpenERP.com</field>
+            <field name="sent" eval="(DateTime.today() - relativedelta(days=5)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="opened" eval="(DateTime.today() - relativedelta(days=1)).strftime('%Y-%m-%d %H:%M:%S')"/>
+        </record>
+       
+
+    </data>
+</openerp>
