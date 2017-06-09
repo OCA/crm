@@ -16,6 +16,7 @@ addon | version | summary
 [crm_lead_website](crm_lead_website/) | 10.0.1.0.0 | Add Website field to leads
 [crm_phonecall](crm_phonecall/) | 10.0.1.0.0 | CRM Phone Calls
 [crm_phonecall_summary_predefined](crm_phonecall_summary_predefined/) | 10.0.1.0.0 | Allows to choose from a defined summary list
+[crm_sector](crm_sector/) | 10.0.1.0.0 | Link leads/opportunities to sectors
 
 
 Unported addons
