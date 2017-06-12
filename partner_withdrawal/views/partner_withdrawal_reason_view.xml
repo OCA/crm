@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
-<data>
+
+<odoo>
 
 <record id="partner_withdrawal_reason_tree" model="ir.ui.view">
     <field name="name">Partner Membership Withdrawal Reason tree</field>
@@ -21,9 +21,8 @@
 
 <menuitem action="partner_withdrawal_reason_action"
           id="partner_withdrawal_reason_menu"
-          name="Partner Membership Withdrawal Reasons"
-          parent="base.menu_config_address_book"
+          name="Membership Withdrawal Reasons"
+          parent="sales_team.menu_config_address_book"
           sequence="40"/>
 
-</data>
-</openerp>
+</odoo>
