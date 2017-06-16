@@ -22,9 +22,10 @@ class Lead(models.Model):
     def on_change_partner_id(self, partner_id):
         """Recover VAT from partner if available."""
         result = super(Lead, self).on_change_partner_id(partner_id)
-
-        if result.get("value"):
-            if self.partner_id and self.partner_id.vat:
-                result["value"]["vat"] = self.partner_id.vat
-
+        if not partner_id:
+            return result
+        partner = self.env['res.partner'].browse(partner_id)
+        if partner.vat:
+            value = result.setdefault('value', {})
+            value['vat'] = partner.vat
         return result
