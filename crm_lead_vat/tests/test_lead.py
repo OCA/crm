@@ -24,6 +24,8 @@ class LeadCase(TransactionCase):
     def test_onchange_partner_id(self):
         """Lead gets VAT from partner when linked to it."""
         self.partner.vat = self.test_field
+        result = self.lead.on_change_partner_id(self.lead.partner_id.id)
+        self.assertNotIn("vat", result["value"])
         self.lead.partner_id = self.partner
-        result = self.lead.on_change_partner_id(self.partner.id)
+        result = self.lead.on_change_partner_id(self.lead.partner_id.id)
         self.assertEqual(result["value"]["vat"], self.test_field)
