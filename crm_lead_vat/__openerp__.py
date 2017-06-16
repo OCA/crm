@@ -4,7 +4,7 @@
 {
     "name": "VAT in leads",
     "summary": "Add VAT field to leads",
-    "version": "8.0.1.1.0",
+    "version": "8.0.1.1.1",
     "category": "Customer Relationship Management",
     "website": "http://www.antiun.com",
     "author": "Antiun Ingeniería S.L., Odoo Community Association (OCA)",
