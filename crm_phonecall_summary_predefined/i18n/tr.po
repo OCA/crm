@@ -3,13 +3,14 @@
 # * crm_phonecall_summary_predefined
 # 
 # Translators:
+# Ediz Duman <neps1192@gmail.com>, 2017
 # OCA Transbot <transbot@odoo-community.org>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-09 08:00+0000\n"
-"PO-Revision-Date: 2017-06-09 08:00+0000\n"
+"POT-Creation-Date: 2017-06-10 03:36+0000\n"
+"PO-Revision-Date: 2017-06-10 03:36+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
 "Language-Team: Turkish (https://www.transifex.com/oca/teams/23907/tr/)\n"
 "MIME-Version: 1.0\n"
@@ -31,7 +32,7 @@ msgstr "Oluşturuldu"
 #. module: crm_phonecall_summary_predefined
 #: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary_display_name
 msgid "Display Name"
-msgstr "Görünen İsim"
+msgstr "Ad Görünümü"
 
 #. module: crm_phonecall_summary_predefined
 #: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary_id_2695
@@ -41,17 +42,17 @@ msgstr "ID"
 #. module: crm_phonecall_summary_predefined
 #: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary___last_update
 msgid "Last Modified on"
-msgstr "Son değişiklik"
+msgstr "Son Değişiklik"
 
 #. module: crm_phonecall_summary_predefined
 #: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary_write_uid
 msgid "Last Updated by"
-msgstr "Son güncelleyen"
+msgstr "Son Güncelleyen"
 
 #. module: crm_phonecall_summary_predefined
 #: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary_write_date
 msgid "Last Updated on"
-msgstr "Son güncelleme"
+msgstr "Son Güncelleme"
 
 #. module: crm_phonecall_summary_predefined
 #: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary_name
@@ -61,17 +62,17 @@ msgstr "Adı"
 #. module: crm_phonecall_summary_predefined
 #: sql_constraint:crm.phonecall.summary:0
 msgid "Name must be unique"
-msgstr ""
+msgstr "Ad benzersiz olmalı"
 
 #. module: crm_phonecall_summary_predefined
 #: model:ir.model,name:crm_phonecall_summary_predefined.model_crm_phonecall
 msgid "Phonecall"
-msgstr ""
+msgstr "Telefon çağrısı"
 
 #. module: crm_phonecall_summary_predefined
 #: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary_phonecall_ids
 msgid "Phonecalls"
-msgstr ""
+msgstr "Telefon çağrıları"
 
 #. module: crm_phonecall_summary_predefined
 #: model:ir.model.fields,help:crm_phonecall_summary_predefined.field_crm_phonecall_summary_phonecall_ids
@@ -82,12 +83,12 @@ msgstr ""
 #: model:ir.actions.act_window,name:crm_phonecall_summary_predefined.summary_action
 #: model:ir.ui.menu,name:crm_phonecall_summary_predefined.summary_menu
 msgid "Summaries"
-msgstr ""
+msgstr "Özetler"
 
 #. module: crm_phonecall_summary_predefined
 #: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary_id
 msgid "Summary"
-msgstr ""
+msgstr "Özet"
 
 #. module: crm_phonecall_summary_predefined
 #: model:ir.model,name:crm_phonecall_summary_predefined.model_crm_phonecall_summary
