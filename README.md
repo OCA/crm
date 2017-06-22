@@ -26,7 +26,7 @@ addon | version | summary
 [crm_lead_sale_link](crm_lead_sale_link/) | 8.0.1.0.0 | CRM Lead Sale Link
 [crm_lead_second_lastname](crm_lead_second_lastname/) | 8.0.1.0.0 | Specify second lastname directly in the lead/opportunity
 [crm_lead_supplier](crm_lead_supplier/) | 8.0.1.1.0 | Add fields to know if leads are suppliers too
-[crm_lead_vat](crm_lead_vat/) | 8.0.1.1.0 | Add VAT field to leads
+[crm_lead_vat](crm_lead_vat/) | 8.0.1.1.1 | Add VAT field to leads
 [crm_lead_website](crm_lead_website/) | 8.0.1.0.0 | Add Website field to leads
 [crm_location](crm_location/) | 8.0.1.0.0 | CRM location
 [crm_phonecall_category](crm_phonecall_category/) | 8.0.1.0.0 | Show the already-existing field in tree and search views
