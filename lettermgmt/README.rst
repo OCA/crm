@@ -9,13 +9,26 @@ Using this module you can track Incoming / Outgoing letters, parcels,
 registered documents or any other paper documents that are important for your
 company to keep track of.
 
+Configuration
+=============
+
+For configuring Folder, Channel, Category and Type, go to "Letter Management" -> "Configuration".
+
 Usage
 =====
+To use this module for :
+
+* Outbound Letters : you need to go "Letter Management" -> "Outbound Letters".
+* Inbound Letters : you need to go "Letter Management" -> "Inbound Letters".
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
    :target: https://runbot.odoo-community.org/runbot/111/9.0
 
+Icon
+----
+
+http://commons.wikimedia.org/wiki/File:Kontact_Oxygen.svg
 
 Bug Tracker
 ===========
