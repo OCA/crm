@@ -7,7 +7,7 @@
 {
     "name": "Sales Marketing",
     "summary": "Marketing Details of Sales",
-    "version": "9.0.1.0.0",
+    "version": "10.0.1.0.0",
     "author": "Eficent Business and IT Consulting Services S.L., "
               "Serpent Consulting Services Pvt. Ltd.,"
               "Odoo Community Association (OCA)",
