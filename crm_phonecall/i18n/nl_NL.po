@@ -3,15 +3,15 @@
 # * crm_phonecall
 # 
 # Translators:
-# Mario Gielissen <mario@openworx.nl>, 2017
 # OCA Transbot <transbot@odoo-community.org>, 2017
+# Peter Hageman <hageman.p@gmail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-28 02:27+0000\n"
-"PO-Revision-Date: 2017-03-28 02:27+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
+"POT-Creation-Date: 2017-06-10 03:44+0000\n"
+"PO-Revision-Date: 2017-06-10 03:44+0000\n"
+"Last-Translator: Peter Hageman <hageman.p@gmail.com>, 2017\n"
 "Language-Team: Dutch (Netherlands) (https://www.transifex.com/oca/teams/23907/nl_NL/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -80,6 +80,8 @@ msgid "Call summary"
 msgstr ""
 
 #. module: crm_phonecall
+#: model:ir.ui.view,arch_db:crm_phonecall.crm_case_form_view_leads
+#: model:ir.ui.view,arch_db:crm_phonecall.crm_case_form_view_oppor
 #: model:ir.ui.view,arch_db:crm_phonecall.view_partners_form_crm_calls
 msgid "Calls"
 msgstr ""
@@ -237,7 +239,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_display_name
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report_display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Weergavenaam"
 
 #. module: crm_phonecall
 #: selection:crm.phonecall.report,state:0
@@ -308,7 +310,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_id
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report_id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall_message_unread
@@ -347,7 +349,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall___last_update
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report___last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Laatst gewijzigd op"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall_write_uid
@@ -362,6 +364,7 @@ msgid "Last Updated on"
 msgstr ""
 
 #. module: crm_phonecall
+#: model:ir.model,name:crm_phonecall.model_crm_lead
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_opportunity_id
 msgid "Lead/Opportunity"
 msgstr ""
@@ -612,6 +615,8 @@ msgid "Phonecall To Phonecall"
 msgstr ""
 
 #. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_lead_phonecall_count
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_lead_phonecall_ids
 #: model:ir.model.fields,field_description:crm_phonecall.field_res_partner_phonecall_count
 #: model:ir.model.fields,field_description:crm_phonecall.field_res_partner_phonecall_ids
 #: model:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
