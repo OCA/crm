@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-24 01:14+0000\n"
-"PO-Revision-Date: 2016-12-27 08:21+0000\n"
+"POT-Creation-Date: 2017-06-24 01:43+0000\n"
+"PO-Revision-Date: 2017-06-30 08:53+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Dutch (Netherlands) (http://www.transifex.com/oca/OCA-crm-8-0/language/nl_NL/)\n"
 "MIME-Version: 1.0\n"
@@ -25,6 +25,11 @@ msgstr ""
 #. module: crm_claim_type
 #: field:crm.claim.type,active:0
 msgid "Active"
+msgstr ""
+
+#. module: crm_claim_type
+#: view:crm.claim:crm_claim_type.crm_case_claims_search_view
+msgid "Category"
 msgstr ""
 
 #. module: crm_claim_type
@@ -92,7 +97,7 @@ msgstr ""
 #. module: crm_claim_type
 #: field:crm.claim.type,display_name:0
 msgid "Display Name"
-msgstr ""
+msgstr "Weergavenaam"
 
 #. module: crm_claim_type
 #: model:crm.claim.stage,name:crm_claim_type.stage_claim11
@@ -107,7 +112,7 @@ msgstr ""
 #. module: crm_claim_type
 #: field:crm.claim.type,id:0
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: crm_claim_type
 #: help:crm.claim.stage,claim_common:0
@@ -119,7 +124,7 @@ msgstr ""
 #. module: crm_claim_type
 #: field:crm.claim.type,__last_update:0
 msgid "Last Modified on"
-msgstr ""
+msgstr "Laatst gewijzigd op"
 
 #. module: crm_claim_type
 #: field:crm.claim.type,write_uid:0
@@ -149,4 +154,9 @@ msgstr ""
 #. module: crm_claim_type
 #: model:crm.claim.type,name:crm_claim_type.crm_claim_type_supplier
 msgid "Supplier"
+msgstr ""
+
+#. module: crm_claim_type
+#: view:crm.claim:crm_claim_type.crm_case_claims_search_view
+msgid "Type"
 msgstr ""
