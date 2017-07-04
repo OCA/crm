@@ -8,6 +8,7 @@
     'version': '10.0.1.0.0',
     'author': 'Savoir-faire Linux, '
               'Tecnativa, '
+              'Amaris, '
               'Odoo Community Association (OCA)',
     'license': 'AGPL-3',
     'category': 'CRM',

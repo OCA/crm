@@ -108,10 +108,9 @@ class CrmAction(models.Model):
         user_company_actions = {}
         # key = (user, company)
         # value = list of crm.action records
-        if actions:
-            for action in actions:
-                user_company_actions.setdefault(
-                    (action.user_id, action.company_id), []).append(action)
+        for action in actions:
+            user_company_actions.setdefault(
+                (action.user_id, action.company_id), []).append(action)
         mail_template = self.env.ref(
             'crm_action.crm_action_reminder_email_template')
         for (user, company), action_list in user_company_actions.iteritems():
