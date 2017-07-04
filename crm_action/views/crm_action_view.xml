@@ -37,8 +37,8 @@
                 <field name="user_id"/>
                 <field name="action_type_id"/>
                 <field name="details"/>
-                <button icon="STOCK_APPLY" name="button_confirm" type="object" string="Mark as Done" states="draft"/>
-                <button icon="gtk-undo" name="button_set_to_draft" type="object" string="Back to Todo" states="done"/>
+                <button icon="fa-check" name="button_confirm" type="object" string="Mark as Done" states="draft"/>
+                <button icon="fa-undo" name="button_set_to_draft" type="object" string="Back to Todo" states="done"/>
                 <field name="state"/>
             </tree>
         </field>
