@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2016 Antiun Ingeniería S.L. - Jairo Llopis
+     Copyright 2017 Tecnativa - Vicent Cubells
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+
+<odoo>
+
+    <record id="crm_case_inbound_phone_tree_view" model="ir.ui.view">
+        <field name="name">Replace name by summary_id</field>
+        <field name="model">crm.phonecall</field>
+        <field name="inherit_id" ref="crm_phonecall.crm_case_inbound_phone_tree_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="summary_id"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="crm_case_phone_form_view" model="ir.ui.view">
+        <field name="name">Replace name by summary_id</field>
+        <field name="model">crm.phonecall</field>
+        <field name="inherit_id" ref="crm_phonecall.crm_case_phone_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="summary_id"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="crm_case_phone_calendar_view" model="ir.ui.view">
+        <field name="name">Replace name by summary_id</field>
+        <field name="model">crm.phonecall</field>
+        <field name="inherit_id" ref="crm_phonecall.crm_case_phone_calendar_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="summary_id"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
