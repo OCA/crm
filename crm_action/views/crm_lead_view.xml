@@ -23,7 +23,7 @@
                 </button>
             </div>
             <field name="title_action" position="after">
-                <button name="next_action_done" type="object" help="Mark next action as done" icon="STOCK_APPLY" class="oe_inline" attrs="{'invisible': [('next_action_id', '=', False)]}"/>
+                <button name="next_action_done" type="object" help="Mark next action as done" icon="fa-check" class="oe_inline" attrs="{'invisible': [('next_action_id', '=', False)]}"/>
                 <field name="next_action_id" invisible="1" class="oe_inline"/>
             </field>
         </field>

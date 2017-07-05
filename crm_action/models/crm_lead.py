@@ -10,11 +10,11 @@ from odoo import api, fields, models
 class CrmLead(models.Model):
     _inherit = 'crm.lead'
 
-    def compute_count_actions(self):
+    def _compute_count_actions(self):
         self.actions_count = len(self.action_ids)
 
     actions_count = fields.Integer(
-        compute='compute_count_actions',
+        compute='_compute_count_actions',
     )
     action_ids = fields.One2many(
         comodel_name='crm.action',
@@ -36,14 +36,14 @@ class CrmLead(models.Model):
     next_action_id = fields.Many2one(
         comodel_name='crm.action',
         string='Next Action',
-        compute='compute_next_action',
+        compute='_compute_next_action',
         readonly=True, store=True,
     )
 
     @api.multi
     @api.depends(
         'action_ids.date', 'action_ids.display_name', 'action_ids.state')
-    def compute_next_action(self):
+    def _compute_next_action(self):
         for lead in self:
             actions = self.env['crm.action'].search(
                 [('lead_id', '=', lead.id), ('state', '=', 'draft')],
