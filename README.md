@@ -18,6 +18,7 @@ addon | version | summary
 [crm_location](crm_location/) | 10.0.1.0.0 | CRM location
 [crm_phonecall](crm_phonecall/) | 10.0.1.0.0 | CRM Phone Calls
 [crm_phonecall_summary_predefined](crm_phonecall_summary_predefined/) | 10.0.1.0.0 | Allows to choose from a defined summary list
+[crm_sale_marketing](crm_sale_marketing/) | 10.0.1.0.0 | Marketing Details of Sales
 [crm_sector](crm_sector/) | 10.0.1.0.0 | Link leads/opportunities to sectors
 
 
@@ -32,7 +33,6 @@ addon | version | summary
 [crm_lead_code](crm_lead_code/) | 8.0.1.0.0 (unported) | Sequential Code for Leads / Opportunities
 [crm_lead_sale_link](crm_lead_sale_link/) | 8.0.1.0.0 (unported) | CRM Lead Sale Link
 [crm_lead_stage_monitoring](crm_lead_stage_monitoring/) | 1.0.0 (unported) | CRM - Add last activity on stage field
-[crm_sale_marketing](crm_sale_marketing/) | 9.0.1.0.0 (unported) | Marketing Details of Sales
 [crm_track_next_action](crm_track_next_action/) | 8.0.1.0.0 (unported) | CRM Track Next Action
 [lettermgmt](lettermgmt/) | 8.0.1.2.0 (unported) | Track letters, parcels, registered documents
 [lettermgmt_hr](lettermgmt_hr/) | 0.1 (unported) | Human Resources bindings for Letter Management
