@@ -40,7 +40,7 @@
             <field name="categ_id"/>
         </xpath>
         <xpath expr="//group[@string='Group By']">
-            <filter string="Category" context="{'group_by': 'category'}"/>
+            <filter string="Category" context="{'group_by': 'categ_id'}"/>
         </xpath>
     </field>
 </record>
