@@ -7,7 +7,7 @@
         <field name="model">resource.resource</field>
         <field name="inherit_id" ref="resource.resource_resource_form" />
         <field name="arch" type="xml">
-            <field name="name" position="replace" />
+            <field name="name" position="replace" priority="10" />
             <xpath expr="//group[group[field[@name='user_id']]]" position="before">
                 <div class="oe_title">
                     <h1>
@@ -22,6 +22,12 @@
             </xpath>
             <xpath expr="//form/group" position="inside">
                 <field name="note" />
+            </xpath>
+            <xpath expr="//field[@name='time_efficiency']" position="after">
+                <field name="allowed_event_types"
+                       widget="many2many_tags"
+                       placeholder="Select Resources"
+                       class="oe_inline" />
             </xpath>
         </field>
     </record>
