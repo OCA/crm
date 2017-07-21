@@ -1,0 +1,21 @@
+---Fields in module 'crm_helpdesk'---
+crm_helpdesk / crm.helpdesk             / categ_id (many2one)           : DEL relation: crm.case.categ
+crm_helpdesk / crm.helpdesk             / channel_id (many2one)         : relation is now 'utm.medium' ('crm.tracking.medium')
+crm_helpdesk / crm.helpdesk             / contact_name (char)           : NEW 
+crm_helpdesk / crm.helpdesk             / date_open (datetime)          : NEW 
+crm_helpdesk / crm.helpdesk             / lost_reason (many2one)        : NEW relation: crm.lost.reason
+crm_helpdesk / crm.helpdesk             / message_follower_ids (many2many): not a function anymore
+crm_helpdesk / crm.helpdesk             / message_follower_ids (many2many): relation is now 'mail.followers' ('res.partner')
+crm_helpdesk / crm.helpdesk             / message_follower_ids (many2many): type is now 'one2many' ('many2many')
+crm_helpdesk / crm.helpdesk             / planned_cost (float)          : DEL 
+crm_helpdesk / crm.helpdesk             / ref (reference)               : DEL 
+crm_helpdesk / crm.helpdesk             / ref2 (reference)              : DEL 
+crm_helpdesk / crm.helpdesk             / section_id (many2one)         : DEL relation: crm.case.section
+crm_helpdesk / crm.helpdesk             / tag_ids (many2one)            : NEW relation: crm.lead.tag
+crm_helpdesk / crm.helpdesk             / team_id (many2one)            : NEW relation: crm.team
+---XML records in module 'crm_helpdesk'---
+DEL ir.actions.act_window: crm_helpdesk.crm_helpdesk_categ_action
+DEL ir.ui.menu: base.menu_aftersale
+DEL ir.ui.menu: base.menu_base_partner
+DEL ir.ui.menu: crm_helpdesk.menu_config_helpdesk
+DEL ir.ui.menu: crm_helpdesk.menu_crm_case_helpdesk-act
