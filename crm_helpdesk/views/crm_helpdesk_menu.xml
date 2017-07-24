@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
-    <data noupdate="1">
+<odoo noupdate="1">
 
         <!-- Help Desk (menu) -->
         <record model="ir.actions.act_window" id="crm_case_helpdesk_act111">
@@ -46,8 +45,8 @@
         </record>
 
         <menuitem name="Helpdesk and Support" id="menu_help_support_main"
-            groups="base.group_sale_salesman"
-            parent="base.menu_sales" action="crm_case_helpdesk_act111"/>
-    </data>
-</openerp>
+            groups="sales_team.group_sale_salesman"
+            parent="sales_team.menu_sales" action="crm_case_helpdesk_act111"/>
+
+</odoo>
 

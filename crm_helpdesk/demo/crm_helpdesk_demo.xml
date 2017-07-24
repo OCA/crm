@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
-<openerp>
-    <data noupdate="1">
+<odoo noupdate="1">
         <record id="crm_helpdesk_1" model="crm.helpdesk">
             <field eval="1" name="active"/>
             <field name="user_id" ref="base.user_root"/>
@@ -48,5 +47,4 @@
             <field name="name">How to create a new module</field>
             <field eval="&quot;How can I create new module in Odoo?&quot;" name="description"/>
         </record>
-    </data>
-</openerp>
+</odoo>

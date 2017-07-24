@@ -5,7 +5,7 @@
 {
     'name': 'CRM Helpdesk',
     'category': 'Customer Relationship Management',
-    'version': '9.0.1.0.0',
+    'version': '10.0.1.0.0',
     'summary': "Helpdesk Management",
     'author': 'OpenERP SA, '
               'Odoo Community Association (OCA)',

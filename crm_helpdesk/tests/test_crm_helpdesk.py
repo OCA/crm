@@ -2,9 +2,9 @@
 # © 2017 Eficent Business and IT Consulting Services S.L. (www.eficent.com)
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
-from openerp.tests.common import TransactionCase
-from openerp.modules.module import get_module_resource
-from openerp.loglevels import ustr
+from odoo.tests.common import TransactionCase
+from odoo.modules.module import get_module_resource
+from odoo.loglevels import ustr
 
 
 class TestCrmHelpdesk(TransactionCase):
@@ -18,7 +18,7 @@ class TestCrmHelpdesk(TransactionCase):
             'login': "hdu",
             'email': "helpdeskuser@yourcompany.com",
             'groups_id': [(6, 0, [
-                self.env.ref('base.group_sale_salesman').id,
+                self.env.ref('sales_team.group_sale_salesman').id,
                 self.env.ref('base.group_partner_manager').id])]
         })
 
