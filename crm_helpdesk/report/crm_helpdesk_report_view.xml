@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
-    <data>
+<odoo>
 <!-- Helpdesk report after Sales Services Graph View -->
         <record id="view_report_crm_helpdesk_graph" model="ir.ui.view">
             <field name="name">crm.helpdesk.report.graph</field>
@@ -30,7 +29,7 @@
                     <filter string="My Sales Team(s)"
                             context="{'invisible_team': False}"
                             domain="[('team_id.user_id','=',uid)]"
-                            help="My Sales Team(s)"  groups="base.group_sale_salesman"/>
+                            help="My Sales Team(s)"  groups="sales_team.group_sale_salesman"/>
                     <separator/>
                     <filter string="My Company"
                             context="{'invisible_team': False}"
@@ -38,7 +37,7 @@
                     <field name="user_id" string="Salesperson"/>
                     <field name="team_id" string="Sales Team"
                            context="{'invisible_team': False}"
-                           groups="base.group_sale_salesman"/>
+                           groups="sales_team.group_sale_salesman"/>
                     <field name="company_id" groups="base.group_multi_company"/>
                     <field name="partner_id" filter_domain="[('partner_id','child_of',self)]"/>
                     <group expand="0" string="Extended Filters..." groups="base.group_no_one">
@@ -51,7 +50,7 @@
                         <filter string="Salesperson" context="{'group_by':'user_id'}"/>
                         <filter string="Sales Team"
                                 context="{'group_by':'team_id'}"
-                                groups="base.group_sale_salesman"/>
+                                groups="sales_team.group_sale_salesman"/>
                         <filter string="Partner" context="{'group_by':'partner_id'}" />
                         <filter string="Status" context="{'group_by':'state'}" />
                         <filter string="Company" groups="base.group_multi_company" context="{'group_by':'company_id'}" />
@@ -82,6 +81,5 @@
         </record>
 
         <menuitem name="Helpdesk Analysis" action="action_report_crm_helpdesk"
-            id="menu_report_crm_helpdesks_tree" parent="base.menu_sale_report" sequence="20"/>
-    </data>
-</openerp>
+            id="menu_report_crm_helpdesks_tree" parent="sales_team.menu_sale_report" sequence="20"/>
+</odoo>

@@ -3,8 +3,8 @@
 # Copyright 2017 Eficent Business and IT Consulting Services S.L.
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
-from openerp import api, fields, models, _
-from openerp.tools.mail import html2plaintext
+from odoo import api, fields, models, _
+from odoo.tools.mail import html2plaintext
 
 
 class CrmHelpdesk(models.Model):
@@ -53,8 +53,7 @@ class CrmHelpdesk(models.Model):
                                 string='Priority', index=True, default='1')
     probability = fields.Float('Probability (%)')
     tag_ids = fields.Many2one(
-        'crm.lead.tag', string='Tags',
-        domain="['|',('team_id','=',False),('team_id','=', team_id)]")
+        'crm.lead.tag', string='Tags')
     duration = fields.Float('Duration', states={'done': [('readonly', True)]})
     lost_reason = fields.Many2one('crm.lost.reason', 'Lost Reason',
                                   index=True, track_visibility='onchange')

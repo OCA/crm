@@ -3,8 +3,8 @@
 # Copyright 2017 Eficent Business and IT Consulting Services S.L.
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
-from openerp import fields, models
-from openerp.tools.sql import drop_view_if_exists
+from odoo import api, fields, models
+from odoo.tools.sql import drop_view_if_exists
 
 
 AVAILABLE_STATES = [
@@ -47,13 +47,14 @@ class CrmHelpdeskReport(models.Model):
                                   readonly=True, group_operator="avg")
     email = fields.Integer('# Emails', size=128, readonly=True)
 
-    def init(self, cr):
+    @api.model_cr
+    def init(self):
         """
             Display Deadline, Responsible user, Partner, Department
         """
 
-        drop_view_if_exists(cr, 'crm_helpdesk_report')
-        cr.execute("""
+        drop_view_if_exists(self._cr, 'crm_helpdesk_report')
+        self._cr.execute("""
             create or replace view crm_helpdesk_report as (
                 select
                     min(c.id) as id,
