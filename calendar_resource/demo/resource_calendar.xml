@@ -5,7 +5,7 @@
 <odoo>
 
     <record id="resource_calendar_1" model="resource.calendar">
-        <field name="name">Calendar Resource Demo Calendar</field>
+        <field name="name">Resource Demo Calendar</field>
     </record>
 
 </odoo>

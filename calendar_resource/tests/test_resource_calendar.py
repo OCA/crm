@@ -108,3 +108,13 @@ class TestResourceCalendar(Setup):
                 end,
             )
         )
+
+    def test_clean_datetime_intervals(self):
+        """ Test overlaps correctly removed """
+        res = self.Calendar._clean_datetime_intervals(self.intervals)
+        exp = self.cleaned_intervals
+        self.assertEquals(
+            res,
+            exp,
+            'Intervals are not equal.\nRes:\n%s\nExpect:\n%s' % (res, exp),
+        )

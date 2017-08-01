@@ -18,7 +18,7 @@ class ResourceCalendarAttendance(models.Model):
             if record.date_to < record.date_from:
                 raise ValidationError(_(
                     'End Date cannot be earlier '
-                    'than Starting Date.'
+                    'than Starting Date.',
                 ))
 
     @api.multi
@@ -30,5 +30,5 @@ class ResourceCalendarAttendance(models.Model):
                     'Work to cannot be earlier or the same '
                     'as Work from. If it is a night '
                     'shift, separate the hours into their '
-                    'own working time entries by weekday.'
+                    'own working time entries by weekday.',
                 ))

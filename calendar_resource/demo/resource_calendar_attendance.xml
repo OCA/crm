@@ -48,7 +48,7 @@
         <field name="name">Interval 6</field>
         <field name="dayofweek">2</field>
         <field name="hour_from" eval="0" />
-        <field name="hour_to" eval="12" />
+        <field name="hour_to" eval="16" />
         <field name="calendar_id" ref="resource_calendar_1" />
     </record>
 

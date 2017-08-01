@@ -45,6 +45,35 @@ class Setup(TransactionCase):
         ]
         self.intervals = self._intervals_to_dt(self.intervals)
 
+        # self.intervals are the same weekdays as the demo
+        # attendances tied to demo data id: resource_calendar_1
+
+        # 2017-03-06: Monday
+        # 2017-03-07: Tuesday
+        # 2017-03-08: Wednesday
+        # 2017-03-09: Thursday
+        # 2017-03-10: Friday
+        # 2017-03-11: Saturday
+        # 2017-03-12: Sunday
+
+        # Overlaps removed and days rounded up
+        self.cleaned_intervals = [
+            ('2017-03-07 00:00:00', '2017-03-08 16:00:00'),
+            ('2017-03-09 09:00:00', '2017-03-10 00:00:00'),
+        ]
+        self.cleaned_intervals = self._intervals_to_dt(
+            self.cleaned_intervals,
+        )
+
+        self.unavailable_intervals = [
+            ('2017-03-06 00:00:00', '2017-03-07 00:00:00'),
+            ('2017-03-08 16:00:00', '2017-03-09 09:00:00'),
+            ('2017-03-10 00:00:00', '2017-03-13 00:00:00'),
+        ]
+        self.unavailable_intervals = self._intervals_to_dt(
+            self.unavailable_intervals,
+        )
+
     def _intervals_to_dt(self, intervals):
         """ Converts all intervals from string values to datetime.
 
@@ -63,14 +92,47 @@ class Setup(TransactionCase):
 
     def _get_datetime_interval(self, start_weekday, start_time,
                                end_weekday, end_time):
-        """ Use this method to ensure events are always in the future """
+        """ Use this method to ensure events are always in the future
+
+        Note that the event start and stop dates will always be the same
+        days of the week as your start_weekday and end_weekday values.
+
+        Args:
+
+            start_weekday (int): Day of the week the event should start.
+
+            start_time (str): Time of day for start_weekday in format:
+                '00:00:00' or '%H:%M:%S'.
+
+            end_weekday (int): Day of the week the event should end on.
+
+            end_time (str): Time of day for end_weekday in format:
+                '00:00:00' or '%H:%M:%S'.
+
+        Example:
+
+            .. code-block python
+
+            start_stop = self._get_datetime_interval(
+                1, '00:00:00',
+                2, '16:00:00',
+            )
+
+        Returns:
+
+            tuple: A tuple with index 0 as the start_datetime, and index
+            1 as the end_datetime.
+
+        """
         start_date = fields.Date.from_string(
             fields.Datetime.now()
         )
+
         # 35 = 5 weeks * 7 days per week
         # done to avoid demo resource leaves
-        # that may be within 7 days of event
+        # that may be in the same month
         start_date += timedelta(days=35)
+
         time_format = '%H:%M:%S'
         start_time = datetime.strptime(start_time, time_format).time()
         end_time = datetime.strptime(end_time, time_format).time()
