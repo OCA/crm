@@ -25,6 +25,7 @@ class TestCalendarEvent(Setup):
             self._create_event({
                 'start': start_stop[0],
                 'stop': start_stop[1],
+                'allday': True,
             })
             self.assertTrue(True)
         except ValidationError:
@@ -45,6 +46,7 @@ class TestCalendarEvent(Setup):
             self._create_event({
                 'start': start_stop[0],
                 'stop': start_stop[1],
+                'allday': True,
             })
             self.assertTrue(True)
         except ValidationError:
@@ -64,6 +66,7 @@ class TestCalendarEvent(Setup):
             self._create_event({
                 'start': start_stop[0],
                 'stop': start_stop[1],
+                'allday': True,
             })
 
     def test_overlap_right_outside_date(self):
@@ -77,6 +80,7 @@ class TestCalendarEvent(Setup):
             self._create_event({
                 'start': start_stop[0],
                 'stop': start_stop[1],
+                'allday': True,
             })
 
     def test_match_left_outside_date(self):
@@ -90,6 +94,7 @@ class TestCalendarEvent(Setup):
             self._create_event({
                 'start': start_stop[0],
                 'stop': start_stop[1],
+                'allday': True,
             })
             self.assertTrue(True)
         except ValidationError:
@@ -110,6 +115,7 @@ class TestCalendarEvent(Setup):
             self._create_event({
                 'start': start_stop[0],
                 'stop': start_stop[1],
+                'allday': True,
             })
             self.assertTrue(True)
         except ValidationError:
@@ -130,6 +136,7 @@ class TestCalendarEvent(Setup):
             self._create_event({
                 'start': start_stop[0],
                 'stop': start_stop[1],
+                'allday': True,
             })
 
     def test_match_both_inside_date(self):
@@ -143,6 +150,7 @@ class TestCalendarEvent(Setup):
             self._create_event({
                 'start': start_stop[0],
                 'stop': start_stop[1],
+                'allday': True,
             })
 
     def test_overlap_both_outside_date(self):
@@ -156,6 +164,7 @@ class TestCalendarEvent(Setup):
             self._create_event({
                 'start': start_stop[0],
                 'stop': start_stop[1],
+                'allday': True,
             })
 
     def test_overlap_left_outside_time(self):
@@ -169,6 +178,7 @@ class TestCalendarEvent(Setup):
             self._create_event({
                 'start': start_stop[0],
                 'stop': start_stop[1],
+                'allday': True,
             })
 
     def test_overlap_right_outside_time(self):
@@ -182,6 +192,7 @@ class TestCalendarEvent(Setup):
             self._create_event({
                 'start': start_stop[0],
                 'stop': start_stop[1],
+                'allday': True,
             })
 
     def test_match_left_outside_time(self):
@@ -195,6 +206,7 @@ class TestCalendarEvent(Setup):
             self._create_event({
                 'start': start_stop[0],
                 'stop': start_stop[1],
+                'allday': True,
             })
             self.assertTrue(True)
         except ValidationError:
@@ -215,6 +227,7 @@ class TestCalendarEvent(Setup):
             self._create_event({
                 'start': start_stop[0],
                 'stop': start_stop[1],
+                'allday': True,
             })
             self.assertTrue(True)
         except ValidationError:
@@ -283,6 +296,23 @@ class TestCalendarEvent(Setup):
                 'eligible categ added.'
             )
 
+    def test_event_in_past_true(self):
+        """ Test returns true if event in past """
+        event = self._create_event({
+            'start': '2016-06-01 00:00:00',
+            'stop': '2016-06-02 00:00:00',
+        })
+        self.assertTrue(
+            event._event_in_past()
+        )
+
+    def test_event_in_past_false(self):
+        """ Test returns false if event in future """
+        event = self._create_event()
+        self.assertFalse(
+            event._event_in_past()
+        )
+
     def test_check_resource_leaves_datetime_in_past(self):
         """ Test no validationerror if event in the past """
         self.leave_1.write({
@@ -292,7 +322,8 @@ class TestCalendarEvent(Setup):
         try:
             self._create_event({
                 'start': '2015-04-10 12:00:00',
-                'stop': '2015-05-12 12:00:00'
+                'stop': '2015-05-12 12:00:00',
+                'allday': True,
             })
             self.assertTrue(True)
         except ValidationError:
@@ -340,7 +371,7 @@ class TestCalendarEvent(Setup):
             })
 
     @patch(MOCK_FORMATS)
-    def test_format_datetime_interval_list(self, datetime_format):
+    def test_format_datetime_intervals_to_str(self, datetime_format):
         """ Test returns correct string """
         datetime_format.return_value = ('%Y-%m-%d', '%H:%M:%S')
         intervals = [
@@ -364,29 +395,177 @@ class TestCalendarEvent(Setup):
             'stop': intervals[1][1],
         })
         intervals[1] = self.Event._get_display_time(**args)
-        exp = '\n%s\n\n%s\n' % (intervals[0], intervals[1])
 
-        res = self.Event._format_datetime_interval_list(intervals_dt)
+        exp = '%s\n\n%s' % (intervals[0], intervals[1])
+        res = self.Event._format_datetime_intervals_to_str(intervals_dt)
+
         self.assertEquals(
             exp, res,
         )
 
-    def test_event_in_past_true(self):
-        """ Test returns true if event in past """
-        event = self._create_event({
-            'start': '2016-06-01 00:00:00',
-            'stop': '2016-06-02 00:00:00',
-        })
-        self.assertTrue(
-            event._event_in_past()
-        )
+    def test_check_resource_ids_working_times_past(self):
+        """ Test no validationerror if event in past """
+        self.resource_1.calendar_id = self.calendar_1
+        try:
+            self._create_event({
+                'start': '2017-03-06 00:00:00',
+                'stop': '2017-03-12 00:00:00',
+                'allday': False,
+            })
+            self.assertTrue(True)
+        except ValidationError:
+            self.fail(
+                'Should not fail if event in past'
+            )
 
-    def test_event_in_past_false(self):
-        """ Test returns false if event in future """
-        event = self._create_event()
-        self.assertFalse(
-            event._event_in_past()
+    def test_check_resource_ids_working_times_overlap_left(self):
+        """ Test ValidationError if event overlapping unavailable times """
+        self.resource_1.calendar_id = self.calendar_1
+        start_stop = self._get_datetime_interval(
+            0, '23:00:00',
+            2, '20:00:00',
         )
+        with self.assertRaises(ValidationError):
+            self._create_event({
+                'start': start_stop[0],
+                'stop': start_stop[1],
+                'allday': False,
+            })
+
+    def test_check_resource_ids_working_times_match_left(self):
+        """ Test no Error if event stop is unavailable time start """
+        self.resource_1.calendar_id = self.calendar_1
+        start_stop = self._get_datetime_interval(
+            1, '00:00:00',
+            2, '16:00:00',
+        )
+        try:
+            self._create_event({
+                'start': start_stop[0],
+                'stop': start_stop[1],
+                'allday': False,
+            })
+            self.assertTrue(True)
+        except ValidationError:
+            self.fail(
+                'Should not raise Error if event stop matches '
+                'unavailable time start'
+            )
+
+    def test_check_resource_ids_working_times_inside_left(self):
+        """ Test no Error if event within working times """
+        self.resource_1.calendar_id = self.calendar_1
+        start_stop = self._get_datetime_interval(
+            1, '00:00:00',
+            2, '10:00:00',
+        )
+        try:
+            self._create_event({
+                'start': start_stop[0],
+                'stop': start_stop[1],
+                'allday': False,
+            })
+            self.assertTrue(True)
+        except ValidationError:
+            self.fail(
+                'Should not raise Error if event witin working times'
+            )
+
+    def test_check_resource_ids_working_times_overlap_right(self):
+        """ Test ValidationError if event overlapping unavailable times """
+        self.resource_1.calendar_id = self.calendar_1
+        start_stop = self._get_datetime_interval(
+            3, '00:00:00',
+            5, '20:00:00',
+        )
+        with self.assertRaises(ValidationError):
+            self._create_event({
+                'start': start_stop[0],
+                'stop': start_stop[1],
+                'allday': False,
+            })
+
+    def test_check_resource_ids_working_times_match_right(self):
+        """ Test no Error if event stop is unavailable time start """
+        self.resource_1.calendar_id = self.calendar_1
+        start_stop = self._get_datetime_interval(
+            3, '09:00:00',
+            4, '00:00:00',
+        )
+        try:
+            self._create_event({
+                'start': start_stop[0],
+                'stop': start_stop[1],
+                'allday': False,
+            })
+            self.assertTrue(True)
+        except ValidationError:
+            self.fail(
+                'Should not raise Error if event stop matches '
+                'unavailable time start'
+            )
+
+    def test_check_resource_ids_working_times_right_whole_day(self):
+        """ Test ValidationError if event on non-working day """
+        self.resource_1.calendar_id = self.calendar_1
+        start_stop = self._get_datetime_interval(
+            5, '09:00:00',
+            6, '00:00:00',
+        )
+        with self.assertRaises(ValidationError):
+            self._create_event({
+                'start': start_stop[0],
+                'stop': start_stop[1],
+                'allday': False,
+            })
+
+    def test_check_resource_ids_working_times_right_whole_day_allday(self):
+        """ Test ValidationError if allday event on non-working day """
+        self.resource_1.calendar_id = self.calendar_1
+        start_stop = self._get_datetime_interval(
+            5, '00:00:00',
+            6, '00:00:00',
+        )
+        with self.assertRaises(ValidationError):
+            self._create_event({
+                'start': start_stop[0],
+                'stop': start_stop[1],
+                'allday': True,
+            })
+
+    def test_check_resource_ids_working_times_right_week_allday(self):
+        """ Test ValidationError if allday event all week """
+        self.resource_1.calendar_id = self.calendar_1
+        start_stop = self._get_datetime_interval(
+            0, '00:00:00',
+            6, '23:59:59',
+        )
+        with self.assertRaises(ValidationError):
+            self._create_event({
+                'start': start_stop[0],
+                'stop': start_stop[1],
+                'allday': True,
+            })
+
+    def test_check_resource_ids_working_times_allday_overlap_outside(self):
+        """ Test no Error if allday event is on day with 1+ working time """
+        self.resource_1.calendar_id = self.calendar_1
+        start_stop = self._get_datetime_interval(
+            2, '00:00:00',
+            4, '00:00:00',
+        )
+        try:
+            self._create_event({
+                'start': start_stop[0],
+                'stop': start_stop[1],
+                'allday': True,
+            })
+            self.assertTrue(True)
+        except ValidationError:
+            self.fail(
+                'Should not raise Error if event is allday '
+                'and there is at least 1 working interval that day '
+            )
 
     def test_get_event_date_list(self):
         event = self._create_event({
@@ -401,160 +580,3 @@ class TestCalendarEvent(Setup):
             exp,
             event._get_event_date_list()
         )
-
-    def test_check_resource_ids_working_times_past(self):
-        """ Test no validationerror if event in past """
-        self.resource_1.calendar_id = self.calendar_1
-        try:
-            self._create_event({
-                'start': '2017-03-06 00:00:00',
-                'stop': '2017-03-12 00:00:00',
-            })
-            self.assertTrue(True)
-        except ValidationError:
-            self.fail(
-                'Should not fail if event in past'
-            )
-
-    def test_check_resource_ids_working_times_overlap_left(self):
-        """ Test ValidationError if event overlapping unavailable times """
-        self.resource_1.calendar_id = self.calendar_1
-        start_stop = self._get_datetime_interval(
-            0, '23:00:00',
-            2, '20:00:00'
-        )
-        with self.assertRaises(ValidationError):
-            self._create_event({
-                'start': start_stop[0],
-                'stop': start_stop[1],
-            })
-
-    def test_check_resource_ids_working_times_match_left(self):
-        """ Test no Error if event stop is unavailable time start """
-        self.resource_1.calendar_id = self.calendar_1
-        start_stop = self._get_datetime_interval(
-            1, '00:00:00',
-            2, '16:00:00'
-        )
-        try:
-            self._create_event({
-                'start': start_stop[0],
-                'stop': start_stop[1],
-            })
-            self.assertTrue(True)
-        except ValidationError:
-            self.fail(
-                'Should not raise Error if event stop matches '
-                'unavailable time start'
-            )
-
-    def test_check_resource_ids_working_times_inside_left(self):
-        """ Test no Error if event within working times """
-        self.resource_1.calendar_id = self.calendar_1
-        start_stop = self._get_datetime_interval(
-            1, '00:00:00',
-            2, '10:00:00'
-        )
-        try:
-            self._create_event({
-                'start': start_stop[0],
-                'stop': start_stop[1],
-            })
-            self.assertTrue(True)
-        except ValidationError:
-            self.fail(
-                'Should not raise Error if event witin working times'
-            )
-
-    def test_check_resource_ids_working_times_overlap_right(self):
-        """ Test ValidationError if event overlapping unavailable times """
-        self.resource_1.calendar_id = self.calendar_1
-        start_stop = self._get_datetime_interval(
-            3, '00:00:00',
-            5, '20:00:00'
-        )
-        with self.assertRaises(ValidationError):
-            self._create_event({
-                'start': start_stop[0],
-                'stop': start_stop[1],
-            })
-
-    def test_check_resource_ids_working_times_match_right(self):
-        """ Test no Error if event stop is unavailable time start """
-        self.resource_1.calendar_id = self.calendar_1
-        start_stop = self._get_datetime_interval(
-            3, '09:00:00',
-            4, '00:00:00'
-        )
-        try:
-            self._create_event({
-                'start': start_stop[0],
-                'stop': start_stop[1],
-            })
-            self.assertTrue(True)
-        except ValidationError:
-            self.fail(
-                'Should not raise Error if event stop matches '
-                'unavailable time start'
-            )
-
-    def test_check_resource_ids_working_times_right_whole_day(self):
-        """ Test ValidationError if event on non-working day """
-        self.resource_1.calendar_id = self.calendar_1
-        start_stop = self._get_datetime_interval(
-            5, '00:00:00',
-            6, '00:00:00'
-        )
-        with self.assertRaises(ValidationError):
-            self._create_event({
-                'start': start_stop[0],
-                'stop': start_stop[1],
-            })
-
-    def test_check_resource_ids_working_times_right_whole_day_allday(self):
-        """ Test ValidationError if allday event on non-working day """
-        self.resource_1.calendar_id = self.calendar_1
-        start_stop = self._get_datetime_interval(
-            5, '00:00:00',
-            6, '00:00:00'
-        )
-        with self.assertRaises(ValidationError):
-            self._create_event({
-                'start': start_stop[0],
-                'stop': start_stop[1],
-                'allday': True,
-            })
-
-    def test_check_resource_ids_working_times_right_week_allday(self):
-        """ Test ValidationError if allday event all week """
-        self.resource_1.calendar_id = self.calendar_1
-        start_stop = self._get_datetime_interval(
-            0, '00:00:00',
-            6, '23:59:59'
-        )
-        with self.assertRaises(ValidationError):
-            self._create_event({
-                'start': start_stop[0],
-                'stop': start_stop[1],
-                'allday': True,
-            })
-
-    def test_check_resource_ids_working_times_allday_overlap_outside(self):
-        """ Test no Error if allday event is on day with 1+ working time """
-        self.resource_1.calendar_id = self.calendar_1
-        start_stop = self._get_datetime_interval(
-            2, '00:00:00',
-            4, '00:00:00'
-        )
-        try:
-            self._create_event({
-                'start': start_stop[0],
-                'stop': start_stop[1],
-                'allday': True,
-            })
-            self.assertTrue(True)
-        except ValidationError:
-            self.fail(
-                'Should not raise Error if event is allday '
-                'and there is at least 1 working interval that day '
-            )

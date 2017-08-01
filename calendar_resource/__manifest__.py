@@ -9,7 +9,7 @@
     "version": "10.0.1.1.0",
     "category": "CRM",
     "website": "http://www.savoirfairelinux.com",
-    "author": "Savoir-faire Linux, Laslabs, Odoo Community Association (OCA)",
+    "author": "Savoir-faire Linux, LasLabs, Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "application": False,
     "installable": True,

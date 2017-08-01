@@ -14,13 +14,21 @@ class ResourceCalendar(models.Model):
     @api.model
     def _get_conflicting_unavailable_intervals(self, intervals,
                                                start_datetime, end_datetime):
-        """ Finds all unavailable datetime gaps in intervals argument that
-            overlap start_datetime and end_datetime args.
+        """ Finds unavailable dt intervals within start_ and end_datetime args
 
         Args:
+
             intervals (list): List of tuples containing the AVAILABLE working
                 datetimes between the start_datetime and end_datetime values.
-                Each tuple contains a start and stop datetime value.
+                Each tuple contains a start and stop datetime value. Format
+                is like so:
+
+                [(start_datetime_1, end_datetime_1),
+                 (start_datetime_2, end_datetime_2)]
+
+                The start_datetime and end_datetime values are the start and
+                end datetimes of a single available working datetime interval
+                (e.g. 2017-03-03 10:00:00 to 2017-03-03 11:00:00)
 
                 The working datetime tuples to be supplied to this method can
                 be retrieved like so. Refer to its use in the
@@ -36,9 +44,13 @@ class ResourceCalendar(models.Model):
                             resource_id=resource.id,
                         )
 
-            start_datetime, end_datetime (datetime): Datetime values
-                of which any unavailable intervals will be checked against
-                for overlaps.
+            start_datetime (datetime): Starting point for finding unavailable
+                times. An example might be the start datetime of a calendar
+                event.
+
+            end_datetime (datetime): Point of which to stop looking for
+                unavailable times. An example might be the end or stop
+                datetime of a calendar event.
 
         Returns:
             list: List containing any intervals of which the start
@@ -63,29 +75,42 @@ class ResourceCalendar(models.Model):
 
     @api.model
     def _get_unavailable_intervals(self, intervals, start_date, end_date):
-        """ Finds any gaps between intervals, the beginning of start_date,
-            and the end of end_date.
+        """ Finds any gaps between intervals within start_date and end_date
+
+        Args:
+
+            intervals (list): List of tuples containing the AVAILABLE working
+                datetimes between the start_date and end_date. Same format as
+                specified in _get_conflicting_unavailable_intervals.
+
+            start_date (date): Starting date with which to look for gaps
+                in intervals. An example might be the starting date of
+                a calendar event.
+
+            end_date (date): Ending date with which to look for gaps
+                in intervals. An example might be the end or stop date
+                of a calendar event.`
 
         """
         start_datetime = datetime.combine(
-            start_date, time(00, 00, 00)
+            start_date, time(00, 00, 00),
         )
         end_datetime = datetime.combine(
-            end_date, time(23, 59, 59)
+            end_date, time(23, 59, 59),
         )
 
-        intervals = self._remove_datetime_interval_overlaps(intervals)
+        intervals = self._clean_datetime_intervals(intervals)
 
         unavailable_intervals = []
 
         if intervals[0][0] > start_datetime:
             unavailable_intervals.append(
-                (start_datetime, intervals[0][0])
+                (start_datetime, intervals[0][0]),
             )
 
         if intervals[-1][1] < end_datetime:
             unavailable_intervals.append(
-                (intervals[-1][1], end_datetime)
+                (intervals[-1][1], end_datetime),
             )
 
         if len(intervals) < 2:
@@ -99,7 +124,7 @@ class ResourceCalendar(models.Model):
             previous_pair = intervals[index - 1]
             if previous_pair[1] < dt_interval[0]:
                 unavailable_intervals.append(
-                    (previous_pair[1], dt_interval[0])
+                    (previous_pair[1], dt_interval[0]),
                 )
 
         return self._check_round_up_times_to_next_day(
@@ -107,36 +132,36 @@ class ResourceCalendar(models.Model):
         )
 
     @api.model
-    def _remove_datetime_interval_overlaps(self, intervals):
+    def _clean_datetime_intervals(self, intervals):
+        """ Cleans intervals for further analysis.
 
+        Any overlaps in the intervals are fixed and runs
+        _check_round_up_times_to_next_day on all the intervals.
+
+        """
         intervals = self._check_round_up_times_to_next_day(
             sorted(intervals, key=lambda s: s[0])
         )
 
         remove_index = None
 
-        for index, datetime_range in enumerate(intervals):
+        for index, datetime_interval in enumerate(intervals):
 
             if index - 1 < 0:
                 continue
 
-            prev_range_start = intervals[index - 1][0]
-            prev_range_stop = intervals[index - 1][1]
+            prev_interval_start = intervals[index - 1][0]
+            prev_interval_stop = intervals[index - 1][1]
 
-            range_start = datetime_range[0]
-            range_stop = datetime_range[1]
+            interval_start = datetime_interval[0]
+            interval_stop = datetime_interval[1]
 
-            if range_stop <= prev_range_stop:
+            if interval_stop <= prev_interval_stop:
                 remove_index = index
                 break
 
-            conditions = (
-                range_start < prev_range_stop,
-                range_start == prev_range_start,
-            )
-
-            if any(conditions):
-                intervals[index - 1] = (prev_range_start, range_stop)
+            if interval_start <= prev_interval_stop:
+                intervals[index - 1] = (prev_interval_start, interval_stop)
                 remove_index = index
                 break
 
@@ -144,13 +169,22 @@ class ResourceCalendar(models.Model):
             return intervals
 
         del intervals[remove_index]
-        return self._remove_datetime_interval_overlaps(intervals)
+        return self._clean_datetime_intervals(intervals)
 
     @api.model
     def _check_round_up_times_to_next_day(self, intervals):
-        for index, datetime_range in enumerate(intervals):
+        """ Rounds up eligible datetimes to the next day.
 
-            next_day = datetime_range[1] + timedelta(days=1)
+        Any datetimes within 60 seconds of the beginning
+        of the next day will be rounded up to the next day.
+
+        The logic applies only to the 2nd item (or index 1)
+        in each interval tuple.
+
+        """
+        for index, datetime_interval in enumerate(intervals):
+
+            next_day = datetime_interval[1] + timedelta(days=1)
 
             next_day = next_day.replace(
                 hour=0,
@@ -159,7 +193,7 @@ class ResourceCalendar(models.Model):
                 microsecond=0,
             )
 
-            if (next_day - datetime_range[1]).total_seconds() <= 60:
-                intervals[index] = (datetime_range[0], next_day)
+            if (next_day - datetime_interval[1]).total_seconds() <= 60:
+                intervals[index] = (datetime_interval[0], next_day)
 
         return intervals

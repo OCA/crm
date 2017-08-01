@@ -19,16 +19,14 @@ class CalendarEvent(models.Model):
     )
 
     @api.model
-    def _format_datetime_interval_list(self, intervals):
-        """ Converts intervals to string values for front-end
-            display purposes, taking into account language,
-            timezone, as well as date and time formats.
+    def _format_datetime_intervals_to_str(self, intervals):
+        """ Converts intervals to string values.
 
         Example:
 
             .. code-block python
 
-            self._format_datetime_interval_list(
+            self._format_datetime_intervals_to_str(
                 intervals=[
                     (
                         datetime(2017, 6, 28, 17, 0, 0),
@@ -50,10 +48,16 @@ class CalendarEvent(models.Model):
             \n06/29/2017 at 12:00:00 To\n
             06/29/2017 at 13:00:00 (UTC)\n
 
+        Returns:
+
+            (str): string formatted for front-end
+            display purposes, taking into account language, timezone, as
+            well as date and time formats.
+
         """
-        datetimes = ''
+        datetimes = []
         for interval in intervals:
-            if not isinstance(interval[0], str):
+            if not isinstance(interval[0], basestring):
                 interval = (
                     fields.Datetime.to_string(interval[0]),
                     fields.Datetime.to_string(interval[1]),
@@ -64,38 +68,20 @@ class CalendarEvent(models.Model):
                 'zallday': False,
                 'zduration': 24,
             }
-            datetimes += '\n%s\n' % self._get_display_time(**args)
-        return datetimes
+            datetimes.append(self._get_display_time(**args))
+        return '\n\n'.join(datetimes)
 
     @api.multi
     def _event_in_past(self):
         self.ensure_one()
         stop_datetime = fields.Datetime.from_string(self.stop)
-        now_datetime = fields.Datetime.from_string(fields.Datetime.now())
+        now_datetime = datetime.now()
         return stop_datetime < now_datetime
-
-    @api.multi
-    def _get_event_date_list(self):
-        self.ensure_one()
-        start = fields.Date.from_string(self.start)
-        stop = fields.Datetime.from_string(self.stop)
-
-        if stop.time() == time(0, 0):
-            stop -= timedelta(days=1)
-
-        stop = stop.date()
-        date = start
-        dates = []
-        while date <= stop:
-            dates.append(date)
-            date += timedelta(days=1)
-
-        return dates
 
     @api.multi
     @api.constrains('resource_ids', 'start', 'stop')
     def _check_resource_ids_double_book(self):
-        """ Check Double Booking """
+
         for record in self:
 
             if record._event_in_past():
@@ -118,7 +104,7 @@ class CalendarEvent(models.Model):
                 raise ValidationError(
                     _(
                         'The resource, %s, cannot be double-booked '
-                        'with any overlapping meetings or events.'
+                        'with any overlapping meetings or events.',
                     )
                     % resource.name,
                 )
@@ -133,7 +119,7 @@ class CalendarEvent(models.Model):
                 continue
 
             if not record.categ_ids:
-                return
+                continue
 
             for resource in record.resource_ids:
                 categs = record.categ_ids.filtered(
@@ -143,7 +129,7 @@ class CalendarEvent(models.Model):
                     raise ValidationError(
                         _(
                             "The resource, '%s', is not allowed in the "
-                            "following event types: \n%s"
+                            "following event types: \n%s",
                         )
                         % (
                             resource.name,
@@ -162,8 +148,13 @@ class CalendarEvent(models.Model):
             if record._event_in_past():
                 continue
 
-            for resource in record.resource_ids.filtered(
-                    lambda s: s.calendar_id and s.calendar_id.leave_ids):
+            for resource in record.resource_ids:
+
+                if not resource.calendar_id:
+                    continue
+
+                if not resource.calendar_id.leave_ids:
+                    continue
 
                 conflict_leaves = resource.calendar_id.leave_ids.filtered(
                     lambda s: s.date_from < record.stop and
@@ -178,13 +169,31 @@ class CalendarEvent(models.Model):
                     _(
                         "The resource, '%s', is on leave during "
                         "the following times which are conflicting with "
-                        "this event.\n%s"
+                        "this event.\n%s",
                     )
                     % (
                         resource.name,
-                        self._format_datetime_interval_list(datetimes),
+                        self._format_datetime_intervals_to_str(datetimes),
                     )
                 )
+
+    @api.multi
+    def _get_event_date_list(self):
+        self.ensure_one()
+        start = fields.Date.from_string(self.start)
+        stop = fields.Datetime.from_string(self.stop)
+
+        if stop.time() == time(0, 0):
+            stop -= timedelta(days=1)
+
+        stop = stop.date()
+        date = start
+        dates = []
+        while date <= stop:
+            dates.append(date)
+            date += timedelta(days=1)
+
+        return dates
 
     @api.multi
     @api.constrains('resource_ids', 'start', 'stop')
@@ -197,6 +206,7 @@ class CalendarEvent(models.Model):
 
             event_start = fields.Datetime.from_string(record.start)
             event_stop = fields.Datetime.from_string(record.stop)
+
             event_days = record._get_event_date_list()
 
             for resource in record.resource_ids.filtered(
@@ -219,7 +229,7 @@ class CalendarEvent(models.Model):
 
                     if not intervals and record.allday:
                         conflict_intervals.append(
-                            (datetime_start, datetime_end)
+                            (datetime_start, datetime_end),
                         )
                     else:
                         available_intervals += intervals
@@ -227,7 +237,7 @@ class CalendarEvent(models.Model):
                 if not record.allday:
                     conflict_intervals = self.env['resource.calendar'].\
                         _get_conflicting_unavailable_intervals(
-                            available_intervals, event_start, event_stop
+                            available_intervals, event_start, event_stop,
                         )
 
                 if not conflict_intervals:
@@ -235,20 +245,20 @@ class CalendarEvent(models.Model):
 
                 if record.allday:
                     conflict_intervals = self.env['resource.calendar'].\
-                        _remove_datetime_interval_overlaps(
-                            conflict_intervals
+                        _clean_datetime_intervals(
+                            conflict_intervals,
                         )
 
                 raise ValidationError(
                     _(
                         'The resource, %s, is not available during '
                         'the following dates and times which are '
-                        'conflicting with the event:\n%s'
+                        'conflicting with the event:\n\n%s',
                     )
                     % (
                         resource.name,
-                        self._format_datetime_interval_list(
-                            conflict_intervals
+                        self._format_datetime_intervals_to_str(
+                            conflict_intervals,
                         ),
                     )
                 )
