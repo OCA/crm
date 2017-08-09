@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_crm_claim_monkey_patcher,access_crm_claim_monkey_patcher,model_crm_claim_monkey_patcher,,1,0,0,0
