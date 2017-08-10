@@ -8,7 +8,7 @@
     "summary": "New features to facilitate resource management with meetings.",
     "version": "10.0.1.1.0",
     "category": "CRM",
-    "website": "http://www.savoirfairelinux.com",
+    "website": "https://github.com/OCA/crm",
     "author": "Savoir-faire Linux, LasLabs, Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "application": False,

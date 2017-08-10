@@ -3,7 +3,9 @@
 # Copryight 2017 Laslabs Inc.
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
+from os import linesep
 from datetime import datetime, time, timedelta
+from dateutil.rrule import rrule, DAILY
 
 from odoo import _, api, fields, models
 from odoo.exceptions import ValidationError
@@ -69,7 +71,7 @@ class CalendarEvent(models.Model):
                 'zduration': 24,
             }
             datetimes.append(self._get_display_time(**args))
-        return '\n\n'.join(datetimes)
+        return (2 * linesep).join(datetimes)
 
     @api.multi
     def _event_in_past(self):
@@ -179,21 +181,22 @@ class CalendarEvent(models.Model):
 
     @api.multi
     def _get_event_date_list(self):
+        """ Builds a list of datetimes of the days of the event
+
+        Each datetime in the list is the beginning of a
+        separate day.
+
+        """
         self.ensure_one()
-        start = fields.Date.from_string(self.start)
-        stop = fields.Datetime.from_string(self.stop)
+        start_date = fields.Date.from_string(self.start)
+        stop_datetime = fields.Datetime.from_string(self.stop)
 
-        if stop.time() == time(0, 0):
-            stop -= timedelta(days=1)
+        if stop_datetime.time() == time(0, 0):
+            stop_datetime -= timedelta(days=1)
 
-        stop = stop.date()
-        date = start
-        dates = []
-        while date <= stop:
-            dates.append(date)
-            date += timedelta(days=1)
-
-        return dates
+        return list(
+            rrule(DAILY, dtstart=start_date, until=stop_datetime.date())
+        )
 
     @api.multi
     @api.constrains('resource_ids', 'start', 'stop')
@@ -234,8 +237,10 @@ class CalendarEvent(models.Model):
                     else:
                         available_intervals += intervals
 
+                ResourceCalendar = self.env['resource.calendar']
+
                 if not record.allday:
-                    conflict_intervals = self.env['resource.calendar'].\
+                    conflict_intervals = ResourceCalendar.\
                         _get_conflicting_unavailable_intervals(
                             available_intervals, event_start, event_stop,
                         )
@@ -244,7 +249,7 @@ class CalendarEvent(models.Model):
                     continue
 
                 if record.allday:
-                    conflict_intervals = self.env['resource.calendar'].\
+                    conflict_intervals = ResourceCalendar.\
                         _clean_datetime_intervals(
                             conflict_intervals,
                         )
@@ -253,10 +258,11 @@ class CalendarEvent(models.Model):
                     _(
                         'The resource, %s, is not available during '
                         'the following dates and times which are '
-                        'conflicting with the event:\n\n%s',
+                        'conflicting with the event:%s%s',
                     )
                     % (
                         resource.name,
+                        2 * linesep,
                         self._format_datetime_intervals_to_str(
                             conflict_intervals,
                         ),
