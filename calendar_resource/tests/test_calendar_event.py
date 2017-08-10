@@ -573,8 +573,8 @@ class TestCalendarEvent(Setup):
             'stop': '2016-06-03 00:00:00',
         })
         exp = [
-            fields.Date.from_string('2016-06-01'),
-            fields.Date.from_string('2016-06-02'),
+            fields.Datetime.from_string('2016-06-01 00:00:00'),
+            fields.Datetime.from_string('2016-06-02 00:00:00'),
         ]
         self.assertEquals(
             exp,
