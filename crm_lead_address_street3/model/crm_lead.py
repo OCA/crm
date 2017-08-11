@@ -21,7 +21,7 @@
 from odoo import models, fields, api
 
 
-class crm_lead(models.Model):
+class CrmLead(models.Model):
     """Add third field in lead address"""
 
     _inherit = "crm.lead"
