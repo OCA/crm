@@ -29,7 +29,7 @@ class CrmLead(models.Model):
     @api.multi
     def _lead_create_contact(self, name, is_company, parent_id=False):
 
-        partner = super(crm_lead, self)._lead_create_contact(
+        partner = super(CrmLead, self)._lead_create_contact(
             name, is_company, parent_id=parent_id,
         )
 
@@ -41,7 +41,7 @@ class CrmLead(models.Model):
 
     def _onchange_partner_id_values(self, partner_id):
 
-        res = super(crm_lead, self)._onchange_partner_id_values(partner_id)
+        res = super(CrmLead, self)._onchange_partner_id_values(partner_id)
 
         if partner_id:
             partner = self.env['res.partner'].browse(partner_id)
