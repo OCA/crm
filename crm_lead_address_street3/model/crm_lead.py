@@ -18,7 +18,7 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-from openerp import models, fields, api
+from odoo import models, fields, api
 
 
 class crm_lead(models.Model):
@@ -26,26 +26,36 @@ class crm_lead(models.Model):
 
     _inherit = "crm.lead"
 
-    @api.v7
-    def _lead_create_contact(self, cr, uid, lead, name, is_company,
-                             parent_id=False, context=None):
-        partner_obj = self.pool['res.partner']
-        partner = super(crm_lead, self)._lead_create_contact(
-            cr, uid, lead, name, is_company, parent_id=parent_id,
-            context=context)
-        partner_obj.write(cr, uid, [partner], {'street3': lead.street3},
-                          context=context)
+    @api.multi
+    def _lead_create_contact(self, name, is_company, parent_id=False):
+
+        context = self.env.context.copy()
+
+        partner = (
+            super(crm_lead, self.with_context(context))._lead_create_contact(
+                name, is_company, parent_id=parent_id,
+            )
+        )
+
+        partner.with_context(context).write({'street3': self.street3})
+
         return partner
 
     street3 = fields.Char('Street 3')
 
-    @api.v7
-    def on_change_partner_id(self, cr, uid, ids, partner_id, context=None):
-        res = super(crm_lead, self).on_change_partner_id(cr, uid, ids,
-                                                         partner_id,
-                                                         context=context)
+    def _onchange_partner_id_values(self, partner_id):
+
+        context = self.env.context.copy()
+
+        res = (
+            super(crm_lead, self.with_context(context)).
+            _onchange_partner_id_values(partner_id)
+        )
+
         if partner_id:
-            partner = self.pool['res.partner'].browse(cr, uid, partner_id,
-                                                      context=context)
-            res['value'].update({'street3': partner.street3})
+            partner = self.env['res.partner'].with_context(context).browse(
+                partner_id
+            )
+            res.update({'street3': partner.street3})
+
         return res
