@@ -29,15 +29,11 @@ class crm_lead(models.Model):
     @api.multi
     def _lead_create_contact(self, name, is_company, parent_id=False):
 
-        context = self.env.context.copy()
-
-        partner = (
-            super(crm_lead, self.with_context(context))._lead_create_contact(
-                name, is_company, parent_id=parent_id,
-            )
+        partner = super(crm_lead, self)._lead_create_contact(
+            name, is_company, parent_id=parent_id,
         )
 
-        partner.with_context(context).write({'street3': self.street3})
+        partner.write({'street3': self.street3})
 
         return partner
 
@@ -45,17 +41,10 @@ class crm_lead(models.Model):
 
     def _onchange_partner_id_values(self, partner_id):
 
-        context = self.env.context.copy()
-
-        res = (
-            super(crm_lead, self.with_context(context)).
-            _onchange_partner_id_values(partner_id)
-        )
+        res = super(crm_lead, self)._onchange_partner_id_values(partner_id)
 
         if partner_id:
-            partner = self.env['res.partner'].with_context(context).browse(
-                partner_id
-            )
+            partner = self.env['res.partner'].browse(partner_id)
             res.update({'street3': partner.street3})
 
         return res
