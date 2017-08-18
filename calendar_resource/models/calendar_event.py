@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # Copyright 2013 Savoir-faire Linux
-# Copryight 2017 Laslabs Inc.
+# Copyright 2017 Laslabs Inc.
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 from os import linesep
@@ -230,7 +230,7 @@ class CalendarEvent(models.Model):
                             resource_id=resource.id,
                         )
 
-                    if not intervals and record.allday:
+                    if not intervals:
                         conflict_intervals.append(
                             (datetime_start, datetime_end),
                         )
@@ -239,7 +239,7 @@ class CalendarEvent(models.Model):
 
                 ResourceCalendar = self.env['resource.calendar']
 
-                if not record.allday:
+                if available_intervals and not record.allday:
                     conflict_intervals = ResourceCalendar.\
                         _get_conflicting_unavailable_intervals(
                             available_intervals, event_start, event_stop,
@@ -248,11 +248,10 @@ class CalendarEvent(models.Model):
                 if not conflict_intervals:
                     continue
 
-                if record.allday:
-                    conflict_intervals = ResourceCalendar.\
-                        _clean_datetime_intervals(
-                            conflict_intervals,
-                        )
+                conflict_intervals = ResourceCalendar.\
+                    _clean_datetime_intervals(
+                        conflict_intervals,
+                    )
 
                 raise ValidationError(
                     _(

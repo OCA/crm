@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # Copyright 2013 Savoir-faire Linux
-# Copryight 2017 Laslabs Inc.
+# Copyright 2017 Laslabs Inc.
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 from odoo import _, api, models
@@ -15,7 +15,11 @@ class ResourceCalendarAttendance(models.Model):
     @api.constrains('date_from', 'date_to')
     def _check_date_from_date_to(self):
         for record in self:
-            if record.date_to < record.date_from:
+            conditions = (
+                record.date_to and record.date_from,
+                record.date_to < record.date_from,
+            )
+            if all(conditions):
                 raise ValidationError(_(
                     'End Date cannot be earlier '
                     'than Starting Date.',
