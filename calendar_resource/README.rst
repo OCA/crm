@@ -10,10 +10,9 @@ This module adds new features to facilitate resource management with meetings:
 
 * To attach resources to a meeting, go to `Calendar` => Click on a meeting => `Edit` =>
   `Edit` => add any related resources.
-* To edit or add a resource, go to `Settings` => `Resource` => `Resources`. Developer mode
-  has to be enabled for this menu to show.
+* To edit or add a resource, go to `Calendar` => `Resources` => `Resources`.
 * This module can also prevent resources from being double-booked. Go to a resource
-  and disable `Allow Double Booking` (this is enabled by default). As a note, the same
+  and disable or enable `Allow Double Booking` (this is disabled by default). As a note, the same
   resource in a meeting that ends at 5pm and in a meeting that starts at 5pm on the same day
   would not not be considered double-booked.
 * You can restrict resources to certain calendar types. In the Resources form view, edit the
@@ -26,10 +25,10 @@ This module adds new features to facilitate resource management with meetings:
   for a particular resource, then an error will be raised. However, if there is at least
   1 working time interval for that resource on the Saturday, regardless of how long or
   short that working time is, the day will be considered covered by that working time.
-  If the event is not allday, any time the resource is not available during the event,
+  If the event is not `allday`, any time the resource is not available during the event,
   regardless of the time of day, will cause an error to be raised.
 * To stop leaves and working time validations on a resource when adding to an event,
-  set the resource's `Working Time` field to blank in Settings.
+  set the resource's `Working Time` field to blank in the resource form view.
 
 Usage
 =====

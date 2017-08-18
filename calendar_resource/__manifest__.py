@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # Copyright 2010-2014 Savoir-faire Linux
-# Copryight 2017 Laslabs Inc.
+# Copyright 2017 Laslabs Inc.
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 {
@@ -18,8 +18,11 @@
         "calendar",
     ],
     "data": [
+        "security/resource_security.xml",
+        "security/ir.model.access.csv",
         "views/calendar_event_view.xml",
         "views/resource_resource_view.xml",
+        "views/calendar_menu.xml",
     ],
     "demo": [
         "demo/resource_resource_demo.xml",
