@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_resource_resource_manager,resource.resource.manager,resource.model_resource_resource,calendar_resource.group_resource_manager,1,1,1,1
+access_resource_calendar_manager,resource.calendar.manager,resource.model_resource_calendar,calendar_resource.group_resource_manager,1,1,1,1
+access_resource_calendar_attendance_manager,resource.calendar.attendance.manager,resource.model_resource_calendar_attendance,calendar_resource.group_resource_manager,1,1,1,1
+access_resource_calendar_leaves_manager,resource.calendar.leaves.manager,resource.model_resource_calendar_leaves,calendar_resource.group_resource_manager,1,1,1,1
+access_resource_calendar_user,resource.calendar.user,resource.model_resource_calendar,base.group_user,1,0,0,0
+access_resource_calendar_attendance_user,resource.calendar.attendance.user,resource.model_resource_calendar_attendance,base.group_user,1,0,0,0

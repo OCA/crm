@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 LasLabs Inc.
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+
+    <record id="resource.resource_analyst" model="resource.resource">
+        <field name="allowed_event_types"
+               eval="[(6, 0, [ref('calendar.categ_meet1'),
+                              ref('calendar.categ_meet2'),
+                              ref('calendar.categ_meet3'),
+                              ref('calendar.categ_meet4'),
+                              ref('calendar.categ_meet5')])]"
+                              />
+    </record>
+
+    <record id="resource.resource_designer" model="resource.resource">
+        <field name="allowed_event_types"
+               eval="[(6, 0, [ref('calendar.categ_meet1'),
+                              ref('calendar.categ_meet2'),
+                              ref('calendar.categ_meet3'),
+                              ref('calendar.categ_meet4')])]"
+                              />
+    </record>
+
+    <record id="resource.resource_developer" model="resource.resource">
+        <field name="allowed_event_types"
+               eval="[(6, 0, [ref('calendar.categ_meet1'),
+                              ref('calendar.categ_meet2'),
+                              ref('calendar.categ_meet3'),
+                              ref('calendar.categ_meet4')])]"
+                              />
+    </record>
+
+</odoo>
