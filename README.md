@@ -11,7 +11,7 @@ Available addons
 ----------------
 addon | version | summary
 --- | --- | ---
-[calendar_resource](calendar_resource/) | 10.0.1.0.0 | New features to facilitate resource management with meetings.
+[calendar_resource](calendar_resource/) | 10.0.1.1.0 | New features to facilitate resource management with meetings.
 [crm_deduplicate_acl](crm_deduplicate_acl/) | 10.0.1.0.0 | Contact deduplication with fine-grained permission control
 [crm_deduplicate_filter](crm_deduplicate_filter/) | 10.0.1.0.0 | Exclude records from the deduplication
 [crm_lead_website](crm_lead_website/) | 10.0.1.0.0 | Add Website field to leads
