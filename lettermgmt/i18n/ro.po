@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-28 02:26+0000\n"
-"PO-Revision-Date: 2017-04-25 10:43+0000\n"
+"POT-Creation-Date: 2017-08-05 01:29+0000\n"
+"PO-Revision-Date: 2017-08-11 11:57+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Romanian (http://www.transifex.com/oca/OCA-crm-8-0/language/ro/)\n"
 "MIME-Version: 1.0\n"
@@ -392,7 +392,7 @@ msgstr ""
 #: field:letter.folder,name:0 field:letter.reassignment,name:0
 #: field:letter.type,name:0
 msgid "Name"
-msgstr ""
+msgstr "Nume"
 
 #. module: lettermgmt
 #: field:res.letter,number:0
@@ -557,7 +557,7 @@ msgstr ""
 #. module: lettermgmt
 #: field:res.letter,state:0
 msgid "State"
-msgstr ""
+msgstr "Județ"
 
 #. module: lettermgmt
 #: field:res.letter,name:0

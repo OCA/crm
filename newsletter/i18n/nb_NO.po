@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-28 02:26+0000\n"
-"PO-Revision-Date: 2017-04-25 10:44+0000\n"
+"POT-Creation-Date: 2017-08-05 01:29+0000\n"
+"PO-Revision-Date: 2017-08-11 12:01+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Norwegian Bokmål (Norway) (http://www.transifex.com/oca/OCA-crm-8-0/language/nb_NO/)\n"
 "MIME-Version: 1.0\n"
@@ -76,6 +76,11 @@ msgstr ""
 #. module: newsletter
 #: view:email_template.preview:newsletter.email_template_preview_form
 msgid "Email Preview"
+msgstr ""
+
+#. module: newsletter
+#: model:ir.model,name:newsletter.model_email_template_preview
+msgid "Email Template Preview"
 msgstr ""
 
 #. module: newsletter
@@ -197,6 +202,7 @@ msgid "Recipients"
 msgstr ""
 
 #. module: newsletter
+#: view:email_template.preview:newsletter.email_template_preview_form
 #: view:newsletter.newsletter:newsletter.form_newsletter
 msgid "Send"
 msgstr ""
@@ -225,7 +231,7 @@ msgstr ""
 #. module: newsletter
 #: field:newsletter.newsletter,state:0
 msgid "State"
-msgstr ""
+msgstr "Stat"
 
 #. module: newsletter
 #: field:newsletter.newsletter,subject:0
@@ -235,6 +241,11 @@ msgstr ""
 #. module: newsletter
 #: view:newsletter.newsletter:newsletter.form_newsletter
 msgid "Test newsletter"
+msgstr ""
+
+#. module: newsletter
+#: field:email_template.preview,newsletter_test_recipient:0
+msgid "Test recipient"
 msgstr ""
 
 #. module: newsletter
@@ -273,4 +284,14 @@ msgstr ""
 #: code:addons/newsletter/model/newsletter_newsletter.py:137
 #, python-format
 msgid "You can't delete sent newsletters!"
+msgstr ""
+
+#. module: newsletter
+#: view:email_template.preview:newsletter.email_template_preview_form
+msgid "or"
+msgstr ""
+
+#. module: newsletter
+#: view:email_template.preview:newsletter.email_template_preview_form
+msgid "you@mail.com"
 msgstr ""

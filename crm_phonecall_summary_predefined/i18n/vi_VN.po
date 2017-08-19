@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-24 01:15+0000\n"
-"PO-Revision-Date: 2016-12-27 08:24+0000\n"
+"POT-Creation-Date: 2017-08-05 01:29+0000\n"
+"PO-Revision-Date: 2017-08-11 11:56+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Vietnamese (Viet Nam) (http://www.transifex.com/oca/OCA-crm-8-0/language/vi_VN/)\n"
 "MIME-Version: 1.0\n"
@@ -55,7 +55,7 @@ msgstr "Cập nhật lần cuối vào"
 #. module: crm_phonecall_summary_predefined
 #: field:crm.phonecall.summary,name:0
 msgid "Name"
-msgstr ""
+msgstr "Tên"
 
 #. module: crm_phonecall_summary_predefined
 #: sql_constraint:crm.phonecall.summary:0
