@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-28 02:26+0000\n"
-"PO-Revision-Date: 2017-04-25 10:44+0000\n"
+"POT-Creation-Date: 2017-08-05 01:29+0000\n"
+"PO-Revision-Date: 2017-08-11 11:54+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Norwegian Bokmål (http://www.transifex.com/oca/OCA-crm-8-0/language/nb/)\n"
 "MIME-Version: 1.0\n"
@@ -557,7 +557,7 @@ msgstr ""
 #. module: lettermgmt
 #: field:res.letter,state:0
 msgid "State"
-msgstr ""
+msgstr "Status"
 
 #. module: lettermgmt
 #: field:res.letter,name:0
