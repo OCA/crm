@@ -12,19 +12,19 @@ class CrmTeam(models.Model):
     _inherit = "crm.team"
 
     forecast_period = fields.Selection([
-                ('monthly', _('Monthly')),
-                ('annual', _('Annual')),
-            ],
-            string='Forecast period',
-            default='monthly')
+        ('monthly', _('Monthly')),
+        ('annual', _('Annual')),
+        ],
+        string='Forecast period',
+        default='monthly')
     annual_invoiced = fields.Integer(
-            compute="_compute_annual_invoiced",
-            readonly=True,
-            string='Invoiced this year',
-            help="Invoice revenue for the current year. This is the amount "
-                    "the sales team has invoiced this month. "
-                    "It is used to compute the progression ratio "
-                    "of the current and target revenue on the kanban view.")
+        compute="_compute_annual_invoiced",
+        readonly=True,
+        string='Invoiced this year',
+        help="Invoice revenue for the current year. This is the amount "
+                "the sales team has invoiced this month. "
+                "It is used to compute the progression ratio "
+                "of the current and target revenue on the kanban view.")
 
     @api.multi
     def _compute_annual_invoiced(self):
