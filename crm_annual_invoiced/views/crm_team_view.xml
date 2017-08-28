@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2017 QubiQ (http://www.qubiq.es)
+                        Xavier Jiménez <xavier.jimenez@qubiq.es>
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+
+    <record id="annual_crm_team_salesteams_view_form" model="ir.ui.view">
+        <field name="name">annual.crm.team.form</field>
+        <field name="model">crm.team</field>
+        <field name="inherit_id" ref="sale.crm_team_salesteams_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='invoiced']" position="replace">
+                <field name="invoiced" attrs="{'invisible': [('forecast_period','=','annual')]}"/>
+                <field name="annual_invoiced" attrs="{'invisible': [('forecast_period','=','monthly')]}"/>
+                <field name="forecast_period"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="annual_crm_team_salesteams_view_kanban" model="ir.ui.view">
+        <field name="name">annual.crm.team.kanban</field>
+        <field name="model">crm.team</field>
+        <field name="inherit_id" ref="sale.crm_team_salesteams_view_kanban"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='invoiced']" position="after">
+                <field name="forecast_period"/>
+                <field name="annual_invoiced"/>
+            </xpath>
+
+            <xpath expr="//div[@t-if='record.invoiced_target.raw_value']" position="replace">
+                <t t-if="record.forecast_period.raw_value == 'monthly'">
+                    <div t-if="record.invoiced_target.raw_value" class="col-xs-12 o_kanban_primary_bottom" groups="sales_team.group_sale_manager">
+                        <field name="invoiced" widget="progress" title="Invoicing" options="{'current_value': 'invoiced', 'max_value': 'invoiced_target', 'editable': true, 'edit_max_value': true, 'on_change': 'update_invoiced_target'}"/>
+                    </div>
+                </t>
+
+                <t t-if="record.forecast_period.raw_value == 'annual'">
+                    <div t-if="record.invoiced_target.raw_value" class="col-xs-12 o_kanban_primary_bottom" groups="sales_team.group_sale_manager">
+                        <field name="annual_invoiced" widget="progress" title="Invoicing" options="{'current_value': 'annual_invoiced', 'max_value': 'invoiced_target', 'editable': true, 'edit_max_value': true, 'on_change': 'update_invoiced_target'}"/>
+                    </div>
+                </t>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
