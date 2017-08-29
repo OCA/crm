@@ -29,7 +29,7 @@
     'website': 'http://www.camptocamp.com',
     'data': ['view/crm_lead_view.xml'],
     'demo': [],
-    'test': ['test/test_street3.yml'],
+    'test': [],
     'installable': True,
     'auto_install': False,
     'license': 'AGPL-3',
