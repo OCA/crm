@@ -1,56 +1,36 @@
-import logging
+# -*- coding: utf-8 -*-
+# Copyright <2017> <Romain Deheele>
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-import odoo
-
-from .util.odoo_tests import TestBase
-from .util.singleton import Singleton
-
-log = logging.getLogger('Test')
+from odoo.tests.common import TransactionCase
 
 
-class TestMemory(object):
-    """Keep records in memory across tests."""
-    __metaclass__ = Singleton
-
-
-@odoo.tests.common.at_install(False)
-@odoo.tests.common.post_install(True)
-class Test(TestBase):
+class Test(TransactionCase):
 
     def setUp(self):
+
         super(Test, self).setUp()
-        self.memory = TestMemory()
 
-    def test_0001_create_lead(self):
+        # In order to test that the street3 is well passed to the future
+        # partner, I create a new lead.
+        self.lead = self.env['crm.lead'].create({
+            'name': 'Jester Smurf',
+            'contact_name': 'Jester Smurf',
+            'street': 'Sarsaparilla Street',
+            'street2': 'Cursed Country',
+            'street3': 'Third Mushroom',
+            'city': 'Schtroumpf les Bains',
+            'type': 'lead',
+        })
 
-        log.info("""
-            - In order to test that the street3 is well passed to the future
-            partner, I create a new lead.
-        """)
+    def test_transform_lead(self):
 
-        lead, = self.createAndTest(
-            'crm.lead',
-            [
-                {
-                    'name': 'Jester Smurf',
-                    'contact_name': 'Jester Smurf',
-                    'street': 'Sarsaparilla Street',
-                    'street2': 'Cursed Country',
-                    'street3': 'Third Mushroom',
-                    'city': 'Schtroumpf les Bains',
-                    'type': 'lead',
-                }
-            ],
-        )
-
-        log.info("""
-            - When I transform the lead in an opportunity,
-        """)
+        # When I transform the lead in an opportunity,
 
         context = {
             'active_model': 'crm.lead',
-            'active_id': lead.id,
-            'active_ids': [lead.id],
+            'active_id': self.lead.id,
+            'active_ids': [self.lead.id],
         }
 
         wizard = (
@@ -63,10 +43,7 @@ class Test(TestBase):
 
         wizard.action_apply()
 
-        log.info("""
-            - then the partner on the opportunity should have the adequate
-            street3.
-        """)
+        # then the partner on the opportunity should have the adequate street3.
 
-        self.assertEqual(lead.type, 'opportunity')
-        self.assertEqual(lead.partner_id.street3, 'Third Mushroom')
+        self.assertEqual(self.lead.type, 'opportunity')
+        self.assertEqual(self.lead.partner_id.street3, 'Third Mushroom')
