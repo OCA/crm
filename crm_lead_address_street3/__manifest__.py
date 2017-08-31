@@ -28,8 +28,6 @@
     'depends': ['partner_address_street3', 'crm'],
     'website': 'http://www.camptocamp.com',
     'data': ['view/crm_lead_view.xml'],
-    'demo': [],
-    'test': [],
     'installable': True,
     'auto_install': False,
     'license': 'AGPL-3',
