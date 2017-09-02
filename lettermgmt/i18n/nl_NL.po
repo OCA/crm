@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-24 01:43+0000\n"
-"PO-Revision-Date: 2017-06-30 08:53+0000\n"
+"POT-Creation-Date: 2017-08-19 01:46+0000\n"
+"PO-Revision-Date: 2017-08-29 08:01+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Dutch (Netherlands) (http://www.transifex.com/oca/OCA-crm-8-0/language/nl_NL/)\n"
 "MIME-Version: 1.0\n"
@@ -98,7 +98,7 @@ msgstr ""
 #. module: lettermgmt
 #: view:res.letter:lettermgmt.res_letter_form_view
 msgid "Cancel"
-msgstr ""
+msgstr "Verwijderen"
 
 #. module: lettermgmt
 #: selection:res.letter,state:0
@@ -145,14 +145,14 @@ msgstr ""
 #: field:letter.folder,create_uid:0 field:letter.reassignment,create_uid:0
 #: field:letter.type,create_uid:0 field:res.letter,create_uid:0
 msgid "Created by"
-msgstr ""
+msgstr "Aangemaakt door"
 
 #. module: lettermgmt
 #: field:letter.category,create_date:0 field:letter.channel,create_date:0
 #: field:letter.folder,create_date:0 field:letter.reassignment,create_date:0
 #: field:letter.type,create_date:0 field:res.letter,create_date:0
 msgid "Created on"
-msgstr ""
+msgstr "Aangemaakt op"
 
 #. module: lettermgmt
 #: help:res.letter,message_last_post:0
@@ -259,14 +259,14 @@ msgstr "Laatst gewijzigd op"
 #: field:letter.folder,write_uid:0 field:letter.reassignment,write_uid:0
 #: field:letter.type,write_uid:0 field:res.letter,write_uid:0
 msgid "Last Updated by"
-msgstr ""
+msgstr "Laatst bijgewerkt door"
 
 #. module: lettermgmt
 #: field:letter.category,write_date:0 field:letter.channel,write_date:0
 #: field:letter.folder,write_date:0 field:letter.reassignment,write_date:0
 #: field:letter.type,write_date:0 field:res.letter,write_date:0
 msgid "Last Updated on"
-msgstr ""
+msgstr "Laatst bijgewerkt op"
 
 #. module: lettermgmt
 #: field:letter.reassignment,letter_id:0
