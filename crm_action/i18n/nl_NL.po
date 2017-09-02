@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-24 01:43+0000\n"
-"PO-Revision-Date: 2017-06-30 08:53+0000\n"
+"POT-Creation-Date: 2017-08-19 01:46+0000\n"
+"PO-Revision-Date: 2017-08-29 08:01+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Dutch (Netherlands) (http://www.transifex.com/oca/OCA-crm-8-0/language/nl_NL/)\n"
 "MIME-Version: 1.0\n"
@@ -123,12 +123,12 @@ msgstr ""
 #. module: crm_action
 #: field:crm.action,create_uid:0 field:crm.action.type,create_uid:0
 msgid "Created by"
-msgstr ""
+msgstr "Aangemaakt door"
 
 #. module: crm_action
 #: field:crm.action,create_date:0 field:crm.action.type,create_date:0
 msgid "Created on"
-msgstr ""
+msgstr "Aangemaakt op"
 
 #. module: crm_action
 #: field:crm.action,partner_id:0
@@ -189,12 +189,12 @@ msgstr "Laatst gewijzigd op"
 #. module: crm_action
 #: field:crm.action,write_uid:0 field:crm.action.type,write_uid:0
 msgid "Last Updated by"
-msgstr ""
+msgstr "Laatst bijgewerkt door"
 
 #. module: crm_action
 #: field:crm.action,write_date:0 field:crm.action.type,write_date:0
 msgid "Last Updated on"
-msgstr ""
+msgstr "Laatst bijgewerkt op"
 
 #. module: crm_action
 #: field:crm.action,lead_id:0

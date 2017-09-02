@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-22 15:09+0000\n"
-"PO-Revision-Date: 2017-05-22 15:12+0000\n"
+"POT-Creation-Date: 2017-08-19 01:46+0000\n"
+"PO-Revision-Date: 2017-08-21 07:24+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Mongolian (http://www.transifex.com/oca/OCA-crm-8-0/language/mn/)\n"
 "MIME-Version: 1.0\n"
@@ -38,7 +38,7 @@ msgstr ""
 #. module: newsletter
 #: view:email_template.preview:newsletter.email_template_preview_form
 msgid "Close"
-msgstr ""
+msgstr "Хаах"
 
 #. module: newsletter
 #: field:newsletter.newsletter,create_uid:0
