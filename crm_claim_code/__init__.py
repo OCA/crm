@@ -1,11 +1,9 @@
 # -*- coding: utf-8 -*-
-##############################################################################
-# For copyright and license notices, see __openerp__.py file in root directory
-##############################################################################
+# License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
 from . import models
-from openerp.api import Environment
-from openerp import SUPERUSER_ID
+from odoo.api import Environment
+from odoo import SUPERUSER_ID
 
 
 new_field_code_added = False
