@@ -1,16 +1,22 @@
 # -*- coding: utf-8 -*-
-##############################################################################
-# For copyright and license notices, see __openerp__.py file in root directory
-##############################################################################
+# Copyright 2015 Tecnativa - Pedro M. Baeza <pedro.baeza@tecnativa.com>
+# Copyright 2015 AvanzOsc (http://www.avanzosc.es)
+# Copyright 2017 Tecnativa - Vicent Cubells <vicent.cubells@tecnativa.com>
+# License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
-from openerp import models, fields, api
+from odoo import api, fields, models
 
 
 class CrmClaim(models.Model):
     _inherit = "crm.claim"
 
     code = fields.Char(
-        string='Claim Number', required=True, default="/", readonly=True)
+        string='Claim Number',
+        required=True,
+        default="/",
+        readonly=True,
+        copy=False,
+    )
 
     _sql_constraints = [
         ('crm_claim_unique_code', 'UNIQUE (code)',
@@ -18,17 +24,7 @@ class CrmClaim(models.Model):
     ]
 
     @api.model
-    def create(self, vals):
-        if vals.get('code', '/') == '/':
-            vals['code'] = self.env['ir.sequence'].next_by_code('crm.claim')
-        return super(CrmClaim, self).create(vals)
-
-    @api.multi
-    def copy(self, default=None):
-        self.ensure_one()
-        if default is None:
-            default = {}
-        if 'code' not in default:
-            default['code'] = self.env['ir.sequence'].next_by_code('crm.claim')
-
-        return super(CrmClaim, self).copy(default)
+    def create(self, values):
+        if values.get('code', '/') == '/':
+            values['code'] = self.env['ir.sequence'].next_by_code('crm.claim')
+        return super(CrmClaim, self).create(values)

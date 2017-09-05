@@ -1,19 +1,22 @@
-# -*- encoding: utf-8 -*-
-##############################################################################
-# For copyright and license notices, see __openerp__.py file in root directory
-##############################################################################
+# -*- coding: utf-8 -*-
+# Copyright 2015 Tecnativa - Pedro M. Baeza <pedro.baeza@tecnativa.com>
+# Copyright 2015 AvanzOsc (http://www.avanzosc.es)
+# Copyright 2017 Tecnativa - Vicent Cubells <vicent.cubells@tecnativa.com>
+# License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
-import openerp.tests.common as common
+from odoo.tests import common
 
 
-class TestCrmClaimCode(common.TransactionCase):
-
-    def setUp(self):
-        super(TestCrmClaimCode, self).setUp()
-        self.crm_claim_model = self.env['crm.claim']
-        self.ir_sequence_model = self.env['ir.sequence']
-        self.crm_sequence = self.env.ref('crm_claim_code.sequence_claim')
-        self.crm_claim = self.env.ref('crm_claim.crm_claim_1')
+class TestCrmClaimCode(common.SavepointCase):
+    @classmethod
+    def setUpClass(cls):
+        super(TestCrmClaimCode, cls).setUpClass()
+        cls.crm_claim_model = cls.env['crm.claim']
+        cls.ir_sequence_model = cls.env['ir.sequence']
+        cls.crm_sequence = cls.env.ref('crm_claim_code.sequence_claim')
+        cls.crm_claim = cls.env['crm.claim'].create({
+            'name': 'Test Claim',
+        })
 
     def test_old_claim_code_assign(self):
         crm_claims = self.crm_claim_model.search([])

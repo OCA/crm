@@ -1,20 +1,33 @@
 .. image:: https://img.shields.io/badge/licence-AGPL--3-blue.svg
-    :alt: License: AGPL-3
+   :target: http://www.gnu.org/licenses/agpl
+   :alt: License: AGPL-3
 
+==========================
 Sequential code for claims
 ==========================
 
 * This module adds a sequential code for claims.
 
+Usage
+=====
+
+To use this module, you need to:
+
+* Go to menu **CRM > After Sale > Services > Claims** and create a new claim.
+* Enter claim subject and Save it. You must see a new number for this claim.
+
+
+.. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
+   :alt: Try me on Runbot
+   :target: https://runbot.odoo-community.org/runbot/111/10.0
 
 Bug Tracker
 ===========
 
-Bugs are tracked on `GitHub Issues <https://github.com/OCA/crm/issues>`_.
-In case of trouble, please check there if your issue has already been reported.
-If you spotted it first, help us smashing it by providing a detailed and welcomed feedback
-`here <https://github.com/OCA/crm/issues/new?body=module:%20crm_claim_code%0Aversion:%208.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
-
+Bugs are tracked on `GitHub Issues <https://github.com/OCA/crm/issues>`_. In
+case of trouble, please check there if your issue has already been reported.
+If you spotted it first, help us smash it by providing detailed and welcomed
+feedback.
 
 Credits
 =======
@@ -27,6 +40,7 @@ Contributors
 * Iker Coranti <ikercoranti@avanzosc.com>
 * Oihane Crucelaegui <oihanecrucelaegi@avanzosc.es>
 * Alfredo de la Fuente <alfredodelafuente@avanzosc.es>
+* Vicent Cubells <vicent.cubells@tecnativa.com>
 
 Maintainer
 ----------
@@ -41,4 +55,4 @@ OCA, or the Odoo Community Association, is a nonprofit organization whose
 mission is to support the collaborative development of Odoo features and
 promote its widespread use.
 
-To contribute to this module, please visit http://odoo-community.org.
+To contribute to this module, please visit https://odoo-community.org.
