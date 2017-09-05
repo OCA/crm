@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <menuitem id="menu_aftersale" name="After Sale"
+              groups="sales_team.group_sale_salesman"
+              parent="sales_team.menu_base_partner" sequence="5" />
+    <menuitem id="menu_services" name="Services"
+              groups="sales_team.group_sale_salesman"
+              parent="menu_aftersale" sequence="2" />
+
+    <menuitem name="Claims" id="menu_crm_case_claims"
+              parent="menu_services" action="crm_claim_category_claim0" sequence="1"/>
+
+    <menuitem id="menu_claim_stage_view" name="Stages" action="crm_claim_stage_act" parent="menu_config_claim" sequence="20"/>
+
+</odoo>
