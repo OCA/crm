@@ -141,7 +141,7 @@ class CrmClaim(models.Model):
             - team_id: if set, stages must belong to this team or
               be a default case
         """
-        if domain is None:
+        if domain is None:  # pragma: no cover
             domain = []
         # collect all team_ids
         team_ids = []

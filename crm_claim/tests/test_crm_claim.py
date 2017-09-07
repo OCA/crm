@@ -30,6 +30,7 @@ class TestCrmClaim(common.SavepointCase):
         self.assertEqual(self.claim.partner_phone, self.partner.phone)
         self.assertEqual(self.partner.claim_count, 1)
         new_claim = self.claim.copy()
+        self.assertEqual(new_claim.stage_id.id, 1)
         self.assertIn('copy', new_claim.name)
         self.assertTrue(new_claim.stage_id.id)
         self.assertEqual(self.partner.claim_count, 2)

@@ -3,13 +3,7 @@
 # Copyright 2017 Vicent Cubells <vicent.cubells@tecnativa.com>
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
-from odoo import fields, models, tools
-
-AVAILABLE_PRIORITIES = [
-    ('0', 'Low'),
-    ('1', 'Normal'),
-    ('2', 'High'),
-]
+from odoo import api, fields, models, tools
 
 
 class CrmClaimReport(models.Model):
@@ -71,7 +65,11 @@ class CrmClaimReport(models.Model):
         readonly=True,
     )
     priority = fields.Selection(
-        selection=AVAILABLE_PRIORITIES,
+        selection=[
+            ('0', 'Low'),
+            ('1', 'Normal'),
+            ('2', 'High'),
+        ],
         string='Priority',
     )
     type_action = fields.Selection(
@@ -106,49 +104,67 @@ class CrmClaimReport(models.Model):
         readonly=True,
     )
 
-    def init(self):
+    def _select(self):
+        select_str = """
+            SELECT
+            min(c.id) AS id,
+            c.date AS claim_date,
+            c.date_closed AS date_closed,
+            c.date_deadline AS date_deadline,
+            c.user_id,
+            c.stage_id,
+            c.team_id,
+            c.partner_id,
+            c.company_id,
+            c.categ_id,
+            c.name AS subject,
+            count(*) AS nbr_claims,
+            c.priority AS priority,
+            c.type_action AS type_action,
+            c.create_date AS create_date,
+            avg(extract(
+                'epoch' FROM (
+                    c.date_closed-c.create_date)))/(3600*24)
+                    AS delay_close,
+            (
+                SELECT count(id)
+                FROM mail_message
+                WHERE model='crm.claim'
+                AND res_id=c.id) AS email,
+            extract(
+                'epoch' FROM (
+                    c.date_deadline - c.date_closed))/(3600*24)
+                    AS delay_expected
+        """
+        return select_str
 
+    def _from(self):
+        from_str = """
+            crm_claim c
+        """
+        return from_str
+
+    def _group_by(self):
+        group_by_str = """
+            GROUP BY c.date, c.user_id, c.team_id, c.stage_id, c.categ_id,
+                c.partner_id, c.company_id, c.create_date, c.priority,
+                c.type_action, c.date_deadline, c.date_closed, c.id
+        """
+        return group_by_str
+
+    @api.model_cr
+    def init(self):
         """ Display Number of cases And Team Name
         @param cr: the current row, from the database cursor,
          """
 
-        tools.drop_view_if_exists(self._cr, 'crm_claim_report')
-        self._cr.execute("""
-            create or replace view crm_claim_report as (
-                select
-                    min(c.id) as id,
-                    c.date as claim_date,
-                    c.date_closed as date_closed,
-                    c.date_deadline as date_deadline,
-                    c.user_id,
-                    c.stage_id,
-                    c.team_id,
-                    c.partner_id,
-                    c.company_id,
-                    c.categ_id,
-                    c.name as subject,
-                    count(*) as nbr_claims,
-                    c.priority as priority,
-                    c.type_action as type_action,
-                    c.create_date as create_date,
-                    avg(extract(
-                        'epoch' from (
-                            c.date_closed-c.create_date)))/(3600*24)
-                            as delay_close,
-                    (
-                        SELECT count(id)
-                        FROM mail_message
-                        WHERE model='crm.claim'
-                        AND res_id=c.id) AS email,
-                    extract(
-                        'epoch' from (
-                            c.date_deadline - c.date_closed))/(3600*24)
-                            as delay_expected
+        tools.drop_view_if_exists(self.env.cr, self._table)
+        self.env.cr.execute("""
+            CREATE OR REPLACE VIEW %s AS (
+                %s
                 from
-                    crm_claim c
-                group by c.date,\
-                        c.user_id,c.team_id, c.stage_id,\
-                        c.categ_id,c.partner_id,c.company_id,c.create_date,
-                        c.priority,c.type_action,c.date_deadline,c.date_closed,
-                        c.id
-            )""")
+                %s
+                %s
+            )""" % (
+            self._table, self._select(), self._from(), self._group_by(),
+        ))
