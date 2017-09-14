@@ -6,7 +6,7 @@
         <field name="model">crm.claim.stage</field>
         <field name="arch" type="xml">
             <tree string="Claim Stages">
-                <field name="sequence"/>
+                <field name="sequence" widget="handle"/>
                 <field name="name"/>
             </tree>
         </field>
