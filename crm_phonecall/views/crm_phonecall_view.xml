@@ -100,6 +100,11 @@
                         <field name="priority" widget="priority"/>
                         <field name="opportunity_id" context="{'opportunity_id': opportunity_id}"/>
                     </group>
+                    <group string="Tracking" groups="base.group_multi_company,base.group_no_one" name="categorization">
+                        <field name="campaign_id"/>
+                        <field name="source_id"/>
+                        <field name="medium_id"/>
+                    </group>
                     <field name="description" placeholder="Description..."/>
                 </sheet>
                 <div class="oe_chatter">
