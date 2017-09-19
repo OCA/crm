@@ -19,4 +19,4 @@ XMLID_RENAMES = [
 def migrate(cr, version):
     # This is not decorated with @openupgrade.migrate as the module is being
     # installed and thus, the migration script should be run unconditionally
-    openupgrade.rename_xmlids(env.cr, XMLID_RENAMES)
+    openupgrade.rename_xmlids(cr, XMLID_RENAMES)
