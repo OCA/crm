@@ -11,6 +11,15 @@ class TestCrmPhoneCall(common.SavepointCase):
         super(TestCrmPhoneCall, cls).setUpClass()
         cls.company = cls.env.ref('base.main_company')
         partner_obj = cls.env['res.partner']
+        cls.campaign1 = cls.env['utm.campaign'].create({
+            "name": "campaign 1",
+        })
+        cls.source1 = cls.env['utm.source'].create({
+            "name": "source 1",
+        })
+        cls.medium1 = cls.env['utm.medium'].create({
+            "name": "medium 1",
+        })
         cls.partner1 = partner_obj.create({
             'name': 'Partner1',
             'phone': '123 456 789',
@@ -25,6 +34,9 @@ class TestCrmPhoneCall(common.SavepointCase):
         cls.phonecall1 = cls.env['crm.phonecall'].create({
             'name': 'Call #1 for test',
             'partner_id': cls.partner1.id,
+            'campaign_id': cls.campaign1.id,
+            'source_id': cls.source1.id,
+            'medium_id': cls.medium1.id,
         })
         cls.opportunity1 = cls.env['crm.lead'].create({
             'name': 'Opportunity #1',
@@ -53,24 +65,28 @@ class TestCrmPhoneCall(common.SavepointCase):
         self.assertEqual(self.phonecall1.duration, 0.0)
 
     def test_schedule_another_phonecall(self):
-        self.phonecall2 = self.phonecall1.schedule_another_phonecall(
+        phonecall2 = self.phonecall1.schedule_another_phonecall(
             schedule_time=False,
             call_summary='Test schedule method',
             action='schedule',
             tag_ids=self.tag.id,
         )[self.phonecall1.id]
-        self.assertEqual(self.phonecall2.id, self.phonecall1.id + 1)
+        self.assertNotEqual(phonecall2.id, self.phonecall1.id)
         self.assertEqual(self.phonecall1.state, 'open')
-        self.phonecall3 = self.phonecall1.schedule_another_phonecall(
+        phonecall3 = self.phonecall1.schedule_another_phonecall(
             schedule_time='2017-12-31 00:00:00',
             call_summary='Test schedule method2',
             action='log',
         )[self.phonecall1.id]
-        self.assertEqual(self.phonecall3.id, self.phonecall1.id + 2)
+        self.assertNotEqual(phonecall3.id, self.phonecall1.id)
+        self.assertNotEqual(phonecall3.id, phonecall2.id)
         self.assertEqual(self.phonecall1.state, 'done')
-
-        result = self.phonecall2.redirect_phonecall_view()
-        self.assertEqual(result['res_id'], self.phonecall2.id)
+        result = phonecall2.redirect_phonecall_view()
+        self.assertEqual(result['res_id'], phonecall2.id)
+        for phonecall in (self.phonecall1, phonecall2, phonecall3):
+            self.assertEqual(phonecall.campaign_id, self.campaign1)
+            self.assertEqual(phonecall.source_id, self.source1)
+            self.assertEqual(phonecall.medium_id, self.medium1)
 
     def test_on_change_opportunity(self):
         self.phonecall1.opportunity_id = self.opportunity1
@@ -82,6 +98,10 @@ class TestCrmPhoneCall(common.SavepointCase):
     def test_convert2opportunity(self):
         result = self.phonecall1.action_button_convert2opportunity()
         self.assertEqual(result['res_model'], 'crm.lead')
+        lead = self.env["crm.lead"].browse(result["res_id"])
+        self.assertEqual(lead.campaign_id, self.campaign1)
+        self.assertEqual(lead.source_id, self.source1)
+        self.assertEqual(lead.medium_id, self.medium1)
 
     def test_make_meeting(self):
         result = self.phonecall1.action_make_meeting()

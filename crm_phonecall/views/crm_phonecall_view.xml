@@ -100,6 +100,11 @@
                         <field name="priority" widget="priority"/>
                         <field name="opportunity_id" context="{'opportunity_id': opportunity_id}"/>
                     </group>
+                    <group string="Tracking" groups="base.group_no_one" name="categorization">
+                        <field name="campaign_id"/>
+                        <field name="source_id"/>
+                        <field name="medium_id"/>
+                    </group>
                     <field name="description" placeholder="Description..."/>
                 </sheet>
                 <div class="oe_chatter">
@@ -125,6 +130,9 @@
                 <field name="state" invisible="1"/>
                 <field name="create_date" invisible="1"/>
                 <field name="opportunity_id" invisible="1"/>
+                <field name="campaign_id" groups="base.group_no_one"/>
+                <field name="source_id" groups="base.group_no_one"/>
+                <field name="medium_id" groups="base.group_no_one"/>
                 <button string="Schedule Other Call"
                         icon="fa-phone"
                         name="%(phonecall_to_phonecall_act)d"
