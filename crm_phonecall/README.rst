@@ -42,6 +42,7 @@ Contributors
 
 * Odoo S.A.
 * Vicent Cubells <vicent.cubells@tecnativa.com>
+* Jairo Llopis <jairo.llopis@tecnativa.com>
 
 Maintainer
 ----------
