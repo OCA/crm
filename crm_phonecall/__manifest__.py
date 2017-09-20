@@ -4,12 +4,12 @@
 
 {
     "name": "CRM Phone Calls",
-    "version": "10.0.1.0.0",
+    "version": "10.0.1.1.0",
     "category": "Customer Relationship Management",
     "author": "Odoo S.A., "
               "Tecnativa, "
               "Odoo Community Association (OCA)",
-    "website": "http://www.tecnativa.com",
+    "website": "https://www.tecnativa.com",
     "license": "AGPL-3",
     "depends": [
         'crm',

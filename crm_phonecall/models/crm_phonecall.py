@@ -13,7 +13,7 @@ class CrmPhonecall(models.Model):
     _name = "crm.phonecall"
     _description = "Phonecall"
     _order = "id desc"
-    _inherit = ['mail.thread']
+    _inherit = ['mail.thread', 'utm.mixin']
 
     date_action_last = fields.Datetime(
         string='Last Action',
@@ -159,6 +159,9 @@ class CrmPhonecall(models.Model):
                 'partner_mobile': call.partner_mobile,
                 'priority': call.priority,
                 'opportunity_id': call.opportunity_id.id or False,
+                'campaign_id': call.campaign_id.id,
+                'source_id': call.source_id.id,
+                'medium_id': call.medium_id.id,
             }
             if tag_ids:
                 values.update({'tag_ids': [(6, 0, [tag_ids])]})
@@ -230,6 +233,9 @@ class CrmPhonecall(models.Model):
                 'type': 'opportunity',
                 'phone': call.partner_phone or False,
                 'email_from': default_contact and default_contact.email,
+                'campaign_id': call.campaign_id.id,
+                'source_id': call.source_id.id,
+                'medium_id': call.medium_id.id,
                 'tag_ids': [(6, 0, call.tag_ids.ids)],
             })
             vals = {
