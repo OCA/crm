@@ -19,7 +19,7 @@ addon | version | summary
 [crm_deduplicate_by_website](crm_deduplicate_by_website/) | 9.0.1.0.0 | Deduplicate Contacts by Website
 [crm_deduplicate_filter](crm_deduplicate_filter/) | 9.0.1.0.0 | Exclude records from the deduplication
 [crm_lead_website](crm_lead_website/) | 9.0.1.0.0 | Add Website field to leads
-[crm_phonecall](crm_phonecall/) | 9.0.1.0.0 | CRM Phone Calls
+[crm_phonecall](crm_phonecall/) | 9.0.1.1.0 | CRM Phone Calls
 [crm_phonecall_summary_predefined](crm_phonecall_summary_predefined/) | 9.0.1.0.0 | Allows to choose from a defined summary list
 [crm_sale_marketing](crm_sale_marketing/) | 9.0.1.0.0 | Marketing Details of Sales
 [marketing_crm_partner](marketing_crm_partner/) | 9.0.1.0.0 | Copy tracking fields from leads to partners
