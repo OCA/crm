@@ -1,20 +1,20 @@
 # -*- coding: utf-8 -*-
-# © 2016 Tecnativa S.L. - Jairo Llopis
-# © 2016 Tecnativa S.L. - Vicent Cubells
+# Copyright 2016 Tecnativa S.L. - Jairo Llopis
+# Copyright 2016 Tecnativa S.L. - Vicent Cubells
+# Copyright 2017 Tecnativa S.L. - David Vidal
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 {
     "name": "Tracking Fields in Partners",
     "summary": "Copy tracking fields from leads to partners",
-    "version": "9.0.1.0.0",
+    "version": "10.0.1.0.0",
     "category": "Customer Relationship Management",
-    "website": "http://www.tecnativa.com",
+    "website": "https://www.github.com/oca/crm",
     "author": "Tecnativa, "
               "Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
     "depends": [
-        "marketing",
         "crm",
     ],
     "data": [
