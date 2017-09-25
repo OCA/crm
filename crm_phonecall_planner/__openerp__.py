@@ -13,6 +13,7 @@
     "installable": True,
     "depends": [
         "crm_phonecall",
+        "partner_phonecall_schedule",
     ],
     "data": [
         "wizards/crm_phonecall_planner_view.xml",

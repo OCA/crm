@@ -84,9 +84,10 @@ class CrmPhonecallPlan(models.TransientModel):
 
     @api.constrains("start", "end")
     def _constrains_plan_dates(self):
-        if self.start > self.end:
-            raise ValidationError(
-                _("Starting date must be less than ending date"))
+        for one in self:
+            if one.start > one.end:
+                raise ValidationError(
+                    _("Starting date must be less than ending date"))
 
     @api.multi
     def action_accept(self):
@@ -187,26 +188,24 @@ class CrmPhonecallPlan(models.TransientModel):
 
     @api.multi
     def _schedule_call(self, partner, when):
-        call = self.env["crm.phonecall"]
-        if partner:
-            _logger.debug(
-                "Planning a call for %s at %s",
-                partner.display_name,
-                fields.Datetime.to_string(when),
-            )
-            call = call.create({
-                "campaign_id": self.campaign_id.id,
-                "date": when,
-                "duration": self.duration,
-                "medium_id": self.medium_id.id,
-                "partner_mobile": partner.mobile,
-                "name": self.name,
-                "partner_id": partner.id,
-                "partner_phone": partner.phone,
-                "source_id": self.source_id.id,
-                "tag_ids": [(6, 0, self.tag_ids.ids)],
-                "team_id": self.team_id.id,
-                "user_id": self.user_id.id,
-            })
-            self.planned_calls |= call
-        return call
+        if not partner:
+            return
+        _logger.debug(
+            "Planning a call for %s at %s",
+            partner.display_name,
+            fields.Datetime.to_string(when),
+        )
+        self.planned_calls |= self.env["crm.phonecall"].create({
+            "campaign_id": self.campaign_id.id,
+            "date": when,
+            "duration": self.duration,
+            "medium_id": self.medium_id.id,
+            "partner_mobile": partner.mobile,
+            "name": self.name,
+            "partner_id": partner.id,
+            "partner_phone": partner.phone,
+            "source_id": self.source_id.id,
+            "tag_ids": [(6, 0, self.tag_ids.ids)],
+            "team_id": self.team_id.id,
+            "user_id": self.user_id.id,
+        })

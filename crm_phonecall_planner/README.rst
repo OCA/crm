@@ -9,8 +9,8 @@ Phonecall planner
 Use this module to plan a phone calls schedule for your partners, assuming you
 have specified the ideal time to call them.
 
-Usage
-=====
+Configuration
+=============
 
 To use this module, you need to specify your partners' preferred phone call
 schedule:
@@ -18,6 +18,9 @@ schedule:
 #. Go to any partner's form > *Phone Calls*.
 #. Set the preferred phone calling schedule for the partner.
 #. Repeat above steps for all of your partners.
+
+Usage
+=====
 
 Now, to actually generate the phone call planning:
 
@@ -93,16 +96,10 @@ Images
 Contributors
 ------------
 
-* Jairo Llopis <jairo.llopis@tecnativa.com>
+* `Tecnativa <https://www.tecnativa.com>`_:
+  * Jairo Llopis <jairo.llopis@tecnativa.com>
 
 Do not contact contributors directly about support or help with technical issues.
-
-Funders
--------
-
-The development of this module has been financially supported by:
-
-* `Tecnativa <https://www.tecnativa.com>`_
 
 Maintainer
 ----------

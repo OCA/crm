@@ -5,10 +5,10 @@
 from openerp.tests.common import SavepointCase
 
 
-class SomethingCase(SavepointCase):
+class PlannerCase(SavepointCase):
     @classmethod
     def setUpClass(cls):
-        super(SomethingCase, cls).setUpClass()
+        super(PlannerCase, cls).setUpClass()
         cls.mondays = cls.env["resource.calendar"].create({
             "name": "mondays",
             "attendance_ids": [
