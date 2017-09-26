@@ -1,12 +1,12 @@
-# -*- encoding: utf-8 -*-
+# -*- coding: utf-8 -*-
 ##############################################################################
-# For copyright and license notices, see __openerp__.py file in root directory
+# For copyright and license notices, see __manifest__.py file in root directory
 ##############################################################################
 
-import openerp.tests.common as common
+from odoo.tests.common import TransactionCase
 
 
-class TestCrmLeadCode(common.TransactionCase):
+class TestCrmLeadCode(TransactionCase):
 
     def setUp(self):
         super(TestCrmLeadCode, self).setUp()
@@ -35,11 +35,6 @@ class TestCrmLeadCode(common.TransactionCase):
         self.assertEqual(crm_lead_copy.code, code)
 
     def _get_next_code(self):
-        d = self.ir_sequence_model._interpolation_dict()
-        prefix = self.ir_sequence_model._interpolate(
-            self.crm_sequence.prefix, d)
-        suffix = self.ir_sequence_model._interpolate(
-            self.crm_sequence.suffix, d)
-        code = (prefix + ('%%0%sd' % self.crm_sequence.padding %
-                          self.crm_sequence.number_next_actual) + suffix)
-        return code
+        return self.crm_sequence.get_next_char(
+            self.crm_sequence.number_next_actual
+        )
