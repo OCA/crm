@@ -76,6 +76,10 @@ such **criteria combination** if last call was done before the minimum
    :alt: Try me on Runbot
    :target: https://runbot.odoo-community.org/runbot/111/9.0
 
+Known issues / Roadmap
+======================
+
+* Incompatible with ``crm_phonecall_summary_predefined`` addon.
 
 Bug Tracker
 ===========
