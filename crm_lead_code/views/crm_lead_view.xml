@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<openerp>
-    <data>
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
         <record model="ir.ui.view" id="crm_lead_code_form_view">
             <field name="name">crm.lead.code.form</field>
             <field name="model">crm.lead</field>
             <field name="inherit_id" ref="crm.crm_case_form_view_leads" />
             <field name="arch" type="xml">
                 <field name="name" position="before">
-                    <field name="code" />
+                    <field name="code" class="oe_inline" />
+                    <label string="  " class="oe_inline" />
                 </field>
             </field>
         </record>
@@ -33,14 +33,15 @@
                 </field>
             </field>
         </record>
-        
+
         <record model="ir.ui.view" id="crm_lead_oppor_code_form_view">
             <field name="name">crm.lead.oppor.code.form</field>
             <field name="model">crm.lead</field>
             <field name="inherit_id" ref="crm.crm_case_form_view_oppor" />
             <field name="arch" type="xml">
                 <field name="name" position="before">
-                    <field name="code" />
+                    <field name="code" class="oe_inline" />
+                    <label string="  " class="oe_inline" />
                 </field>
             </field>
         </record>
@@ -49,6 +50,17 @@
             <field name="name">crm.lead.oppor.code.tree</field>
             <field name="model">crm.lead</field>
             <field name="inherit_id" ref="crm.crm_case_tree_view_oppor" />
+            <field name="arch" type="xml">
+                <field name="name" position="before">
+                    <field name="code" />
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="crm_lead_code_kanban_view">
+            <field name="name">crm.lead.code.kanban</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_kanban_view_leads" />
             <field name="arch" type="xml">
                 <field name="name" position="before">
                     <field name="code" />
@@ -66,6 +78,4 @@
                 </field>
             </field>
         </record>
-
-    </data>
-</openerp>
+</odoo>

@@ -1,4 +1,4 @@
-# -*- encoding: utf-8 -*-
+# -*- coding: utf-8 -*-
 ##############################################################################
 #
 # Copyright (c)
@@ -22,7 +22,7 @@
 
 {
     "name": "Sequential Code for Leads / Opportunities",
-    "version": "8.0.1.0.0",
+    "version": "10.0.1.0.0",
     "category": "Customer Relationship Management",
     "author": "OdooMRP team, "
               "AvanzOSC, "
@@ -42,7 +42,7 @@
         "views/crm_lead_view.xml",
         "data/lead_sequence.xml",
     ],
-    'installable': False,
+    'installable': True,
     "pre_init_hook": "create_code_equal_to_id",
     "post_init_hook": "assign_old_sequences",
 }
