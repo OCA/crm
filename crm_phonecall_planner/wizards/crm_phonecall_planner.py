@@ -125,7 +125,7 @@ class CrmPhonecallPlan(models.TransientModel):
             order="date",
         )
         # Get partners to plan
-        partner_domain = safe_eval(self.res_partner_domain) + [
+        partner_domain = safe_eval(self.res_partner_domain or "[]") + [
             ("phonecall_calendar_ids", "!=", False),
         ]
         forbidden_partners = existing_calls.mapped("partner_id")
