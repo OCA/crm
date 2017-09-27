@@ -7,6 +7,7 @@ from datetime import timedelta
 from openerp import fields
 from openerp.exceptions import ValidationError
 from openerp.tests.common import SavepointCase
+from openerp.tools import float_compare
 
 
 class PlannerCase(SavepointCase):
@@ -80,7 +81,7 @@ class PlannerCase(SavepointCase):
         wizard = self.wizard.create({
             "name": "Test defaults!",
         })
-        self.assertEqual(wizard.duration, 7 / 60)
+        self.assertEqual(0, float_compare(wizard.duration, 7 / 60, 6))
         self.assertLessEqual(wizard.start, fields.Datetime.now())
         start = fields.Datetime.from_string(wizard.start)
         end = fields.Datetime.from_string(wizard.end)
