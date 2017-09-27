@@ -2,6 +2,10 @@
 # Copyright 2017 Jairo Llopis <jairo.llopis@tecnativa.com>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
+from __future__ import division
+from datetime import timedelta
+from openerp import fields
+from openerp.exceptions import ValidationError
 from openerp.tests.common import SavepointCase
 
 
@@ -69,6 +73,25 @@ class PlannerCase(SavepointCase):
                 "end": "2017-10-20 16:00:00",
                 "duration": 1,
                 "res_partner_domain": str([("id", "in", cls.partners.ids)]),
+            })
+
+    def test_defaults(self):
+        """The planner provides the expected default values."""
+        wizard = self.wizard.create({
+            "name": "Test defaults!",
+        })
+        self.assertEqual(wizard.duration, 7 / 60)
+        self.assertLessEqual(wizard.start, fields.Datetime.now())
+        start = fields.Datetime.from_string(wizard.start)
+        end = fields.Datetime.from_string(wizard.end)
+        self.assertEqual(end, start + timedelta(days=30, hours=8))
+
+    def test_start_before_end(self):
+        """A wizard with start date bigger than end date is not allowed."""
+        with self.assertRaises(ValidationError):
+            self.wizard.write({
+                "start": self.wizard.end,
+                "end": self.wizard.start,
             })
 
     def test_plan_no_repeat(self):

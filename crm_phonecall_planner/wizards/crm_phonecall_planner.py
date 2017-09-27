@@ -188,8 +188,6 @@ class CrmPhonecallPlan(models.TransientModel):
 
     @api.multi
     def _schedule_call(self, partner, when):
-        if not partner:
-            return
         _logger.debug(
             "Planning a call for %s at %s",
             partner.display_name,
