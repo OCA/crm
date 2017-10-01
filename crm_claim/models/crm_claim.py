@@ -157,7 +157,7 @@ class CrmClaim(models.Model):
         search_domain += list(domain)
         # perform search, return the first found
         return self.env['crm.claim.stage'].search(search_domain, order=order,
-                                                  limit=1)
+                                                  limit=1).id
 
     @api.onchange('partner_id')
     def onchange_partner_id(self):
