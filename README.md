@@ -12,12 +12,13 @@ Available addons
 addon | version | summary
 --- | --- | ---
 [calendar_resource](calendar_resource/) | 10.0.1.1.0 | New features to facilitate resource management with meetings.
+[crm_claim](crm_claim/) | 10.0.1.0.0 | Track your customers/vendors claims and grievances.
 [crm_deduplicate_acl](crm_deduplicate_acl/) | 10.0.1.0.0 | Contact deduplication with fine-grained permission control
 [crm_deduplicate_filter](crm_deduplicate_filter/) | 10.0.1.0.0 | Exclude records from the deduplication
 [crm_lead_code](crm_lead_code/) | 10.0.1.0.0 | Sequential Code for Leads / Opportunities
 [crm_lead_website](crm_lead_website/) | 10.0.1.0.0 | Add Website field to leads
 [crm_location](crm_location/) | 10.0.1.0.0 | CRM location
-[crm_phonecall](crm_phonecall/) | 10.0.1.0.0 | CRM Phone Calls
+[crm_phonecall](crm_phonecall/) | 10.0.1.1.0 | CRM Phone Calls
 [crm_phonecall_summary_predefined](crm_phonecall_summary_predefined/) | 10.0.1.0.0 | Allows to choose from a defined summary list
 [crm_sale_marketing](crm_sale_marketing/) | 10.0.1.0.0 | Marketing Details of Sales
 [crm_sector](crm_sector/) | 10.0.1.0.0 | Link leads/opportunities to sectors
