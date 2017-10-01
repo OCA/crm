@@ -7,7 +7,7 @@ from odoo import api, fields, models, tools
 
 
 class CrmClaimReport(models.Model):
-    """ CRM Claim Report"""
+    """ CRM Claim Report """
 
     _name = "crm.claim.report"
     _auto = False

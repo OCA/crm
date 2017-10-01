@@ -9,8 +9,7 @@ from odoo.tools import html2plaintext
 
 
 class CrmClaim(models.Model):
-    """ Crm claim
-    """
+    """ Crm claim """
     _name = "crm.claim"
     _description = "Claim"
     _order = "priority,date desc"
@@ -158,7 +157,7 @@ class CrmClaim(models.Model):
         search_domain += list(domain)
         # perform search, return the first found
         return self.env['crm.claim.stage'].search(search_domain, order=order,
-                                                  limit=1).id
+                                                  limit=1)
 
     @api.onchange('partner_id')
     def onchange_partner_id(self):
