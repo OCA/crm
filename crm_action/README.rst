@@ -40,7 +40,7 @@ Contributors
 * David DUFRESNE <david.dufresne@savoirfairelinux.com>
 * Jordi RIERA <jordi.riera@savoirfairelinux.com>
 * Bruno JOLIVEAU <bruno.joliveau@savoirfairelinux.com>
-
+* Martin Schmid <m.schmid@equitania.de>
 
 Maintainer
 ----------

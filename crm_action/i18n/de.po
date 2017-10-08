@@ -1,0 +1,214 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* crm_action
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-09-29 15:49+0000\n"
+"PO-Revision-Date: 2017-09-29 15:49+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: crm_action
+#: model:ir.actions.act_window,name:crm_action.action_crm_action_type_view
+#: model:ir.ui.menu,name:crm_action.menu_crm_action_type_act
+msgid "Action Types"
+msgstr "Aktionstypen"
+
+#. module: crm_action
+#: code:addons/crm_action/models/crm_lead.py:41
+#: model:ir.actions.act_window,name:crm_action.action_crm_action_view
+#: model:ir.model.fields,field_description:crm_action.field_crm_lead_action_ids
+#: model:ir.ui.menu,name:crm_action.menu_crm_action
+#: model:ir.ui.view,arch_db:crm_action.crm_case_action_button_form_view
+#: model:ir.ui.view,arch_db:crm_action.crm_case_form_view_oppor
+#: model:ir.ui.view,arch_db:crm_action.view_action_form
+#, python-format
+msgid "Actions"
+msgstr "Aktionen"
+
+#. module: crm_action
+#: model:ir.model.fields,field_description:crm_action.field_crm_lead_actions_count
+msgid "Actions count"
+msgstr "Actions count"
+
+#. module: crm_action
+#: model:ir.ui.view,arch_db:crm_action.view_crm_action_filter
+msgid "Actions done by me"
+msgstr "Aktionen von mir"
+
+#. module: crm_action
+#: model:ir.model.fields,field_description:crm_action.field_crm_action_type_is_active
+#: model:ir.ui.view,arch_db:crm_action.view_crm_action_type_filter
+msgid "Active"
+msgstr "Aktiv"
+
+#. module: crm_action
+#: model:ir.model,name:crm_action.model_crm_action
+msgid "CRM Action"
+msgstr "CRM Action"
+
+#. module: crm_action
+#: model:res.groups,name:crm_action.group_crm_action_manager
+msgid "CRM Action Manager"
+msgstr "CRM-Aktion-Manager"
+
+#. module: crm_action
+#: model:ir.model,name:crm_action.model_crm_action_type
+msgid "CRM Action Type"
+msgstr "CRM-Aktionsart"
+
+#. module: crm_action
+#: model:res.groups,name:crm_action.group_crm_action_user
+msgid "CRM Action User"
+msgstr "CRM-Aktion-Benutzer"
+
+#. module: crm_action
+#: model:ir.ui.view,arch_db:crm_action.view_action_form
+msgid "Confirm"
+msgstr "Bestätigen"
+
+#. module: crm_action
+#: model:ir.model.fields,field_description:crm_action.field_crm_action_create_uid
+#: model:ir.model.fields,field_description:crm_action.field_crm_action_type_create_uid
+msgid "Created by"
+msgstr "Erstellt von"
+
+#. module: crm_action
+#: model:ir.model.fields,field_description:crm_action.field_crm_action_create_date
+#: model:ir.model.fields,field_description:crm_action.field_crm_action_type_create_date
+msgid "Created on"
+msgstr "Angelegt am"
+
+#. module: crm_action
+#: model:ir.model.fields,field_description:crm_action.field_crm_action_partner_id
+msgid "Customer"
+msgstr "Kunde"
+
+#. module: crm_action
+#: model:ir.module.category,name:crm_action.module_category_customer_relationship_management
+msgid "Customer Relationship Management"
+msgstr "Customer Relationship Management"
+
+#. module: crm_action
+#: model:ir.model.fields,field_description:crm_action.field_crm_action_date
+msgid "Date"
+msgstr "Datum"
+
+#. module: crm_action
+#: model:ir.model.fields,field_description:crm_action.field_crm_action_details
+msgid "Details"
+msgstr "Details"
+
+#. module: crm_action
+#: model:ir.model.fields,field_description:crm_action.field_crm_action_display_name
+#: model:ir.model.fields,field_description:crm_action.field_crm_action_type_display_name
+msgid "Display Name"
+msgstr "Anzeigename"
+
+#. module: crm_action
+#: selection:crm.action,state:0
+#: model:ir.ui.view,arch_db:crm_action.view_crm_action_filter
+msgid "Done"
+msgstr "Erledigt"
+
+#. module: crm_action
+#: selection:crm.action,state:0
+#: model:ir.ui.view,arch_db:crm_action.view_crm_action_filter
+msgid "Draft"
+msgstr "Entwurf"
+
+#. module: crm_action
+#: model:ir.model.fields,field_description:crm_action.field_crm_action_id
+#: model:ir.model.fields,field_description:crm_action.field_crm_action_type_id
+msgid "ID"
+msgstr "ID"
+
+#. module: crm_action
+#: model:ir.model.fields,field_description:crm_action.field_crm_action___last_update
+#: model:ir.model.fields,field_description:crm_action.field_crm_action_type___last_update
+msgid "Last Modified on"
+msgstr "Zuletzt geändert am"
+
+#. module: crm_action
+#: model:ir.model.fields,field_description:crm_action.field_crm_action_type_write_uid
+#: model:ir.model.fields,field_description:crm_action.field_crm_action_write_uid
+msgid "Last Updated by"
+msgstr "Zuletzt aktualisiert durch"
+
+#. module: crm_action
+#: model:ir.model.fields,field_description:crm_action.field_crm_action_type_write_date
+#: model:ir.model.fields,field_description:crm_action.field_crm_action_write_date
+msgid "Last Updated on"
+msgstr "Zuletzt aktualisiert am"
+
+#. module: crm_action
+#: model:ir.model.fields,field_description:crm_action.field_crm_action_lead_id
+msgid "Lead"
+msgstr "Interessent"
+
+#. module: crm_action
+#: model:ir.model,name:crm_action.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Interessent / Chance"
+
+#. module: crm_action
+#: model:ir.module.category,description:crm_action.module_category_customer_relationship_management
+msgid "Manage relations with prospects and customers using leads, opportunities, requests or issues."
+msgstr ""
+"Verwalten Sie Ihre Beziehungen zu Interessenten und Kunden. Nutzen Sie dabei \r\n"
+"Leads = Interessenten, Vorverhandlungen, \r\n"
+"Opportunities = Chancen, Gelegenheiten, \r\n"
+"Requests = Anfragen oder \r\n"
+"Issues = Problembearbeitungen."
+
+#. module: crm_action
+#: model:ir.ui.view,arch_db:crm_action.view_crm_action_filter
+msgid "My Actions"
+msgstr "Meine Aktionen"
+
+#. module: crm_action
+#: model:ir.model.fields,field_description:crm_action.field_crm_action_type_name
+msgid "Name"
+msgstr "Name"
+
+#. module: crm_action
+#: model:ir.model.fields,field_description:crm_action.field_crm_action_type_priority
+msgid "Priority"
+msgstr "Priorität"
+
+#. module: crm_action
+#: model:ir.ui.view,arch_db:crm_action.view_crm_action_type_filter
+msgid "Search Action Types"
+msgstr "Suche Aktionstypen"
+
+#. module: crm_action
+#: model:ir.ui.view,arch_db:crm_action.view_crm_action_filter
+msgid "Search Actions"
+msgstr "Suchaktionen"
+
+#. module: crm_action
+#: model:ir.ui.view,arch_db:crm_action.view_action_form
+msgid "Set To Draft"
+msgstr "Auf Entwurf setzen"
+
+#. module: crm_action
+#: model:ir.model.fields,field_description:crm_action.field_crm_action_state
+msgid "Status"
+msgstr "Status"
+
+#. module: crm_action
+#: model:ir.model.fields,field_description:crm_action.field_crm_action_action_type
+msgid "Type"
+msgstr "Typ"
+
+#. module: crm_action
+#: model:ir.model.fields,field_description:crm_action.field_crm_action_user_id
+msgid "User"
+msgstr "Benutzer"
