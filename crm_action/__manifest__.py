@@ -7,7 +7,6 @@
     'version': '10.0.1.2.0',
     'author': 'Savoir-faire Linux, Equitania Software GmbH, Odoo Community Association (OCA)',
     'license': 'AGPL-3',
-    'category': 'Others',    'license': 'AGPL-3',
     'depends': ['base_setup', 'crm', 'sales_team'],
     'category': 'Others',
     'summary': 'CRM Action',
