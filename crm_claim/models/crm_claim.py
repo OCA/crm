@@ -9,7 +9,8 @@ from odoo.tools import html2plaintext
 
 
 class CrmClaim(models.Model):
-    """ Crm claim """
+    """ Crm claim
+    """
     _name = "crm.claim"
     _description = "Claim"
     _order = "priority,date desc"
