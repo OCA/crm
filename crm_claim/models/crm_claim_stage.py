@@ -14,7 +14,6 @@ class CrmClaimStage(models.Model):
     """
     _name = "crm.claim.stage"
     _description = "Claim stages"
-    _rec_name = 'name'
     _order = "sequence"
 
     name = fields.Char(
