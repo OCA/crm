@@ -22,6 +22,9 @@
                     <field name="case_default"/>
                     <field name="sequence"/>
                 </group>
+                <group>
+                    <field name="team_ids"/>
+                </group>
             </form>
         </field>
     </record>
