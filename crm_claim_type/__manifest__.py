@@ -7,10 +7,11 @@
     'category': 'Customer Relationship Management',
     'summary': 'Claim types for CRM',
     'author': 'Odoo Community Association (OCA),'
-              'Vauxoo',
-    'website': 'www.vauxoo.com',
+              'Vauxoo,'
+              'Ursa Information Systems',
+    'website': 'https://github.com/OCA/crm/tree/10.0/crm_claim_type',
     'license': 'AGPL-3',
-    'version': '9.0.1.0.0',
+    'version': '10.0.1.0.0',
     'depends': [
         'crm_claim',
     ],
@@ -26,6 +27,6 @@
         'demo/crm_claim.xml',
         'demo/crm_claim_stage.xml',
     ],
-    'installable': False,
+    'installable': True,
     'auto_install': False,
 }
