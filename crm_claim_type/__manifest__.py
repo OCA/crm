@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 # © 2015 Vauxoo: Yanina Aular <yani@vauxoo.com>, Osval Reyes <osval@vauxoo.com>
-# © 2017 Bhavesh Odedra <bodedra@ursainfosystems.com>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 {
@@ -10,7 +9,7 @@
     'author': 'Odoo Community Association (OCA),'
               'Vauxoo,'
               'Ursa Information Systems',
-    'website': 'www.vauxoo.com, http://ursainfosystems.com',
+    'website': 'https://github.com/OCA/crm/tree/10.0/crm_claim_type',
     'license': 'AGPL-3',
     'version': '10.0.1.0.0',
     'depends': [
