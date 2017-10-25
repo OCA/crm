@@ -12,6 +12,13 @@ opportunity), and propagate them through the workflow.
 Usage
 =====
 
+- Create a new Lead (or edit an existing one):
+- Set a contact name or a company name.
+- Set its address substate and region nuts.
+- Save it an convert to opportunity.
+- In the dialog, choose **Create a new customer** and click create.
+- If you browse the new customer, the NUTS values should have been propagated.
+
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
    :target: https://runbot.odoo-community.org/runbot/134/10.0
