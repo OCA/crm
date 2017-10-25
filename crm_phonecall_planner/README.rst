@@ -64,13 +64,17 @@ Note about *Repetition* section
 
 If you choose not to repeat calls, the planner will try to schedule one single
 phone call for each **criteria combination** (*Partner + Campaign + Source +
-Medium*) under the specified *Times* conditions.
+Medium*) under the specified conditions in the *Times* section (see note above).
 
-If you choose instead to repeat calls after some amount of days, the planner
-will try to schedule before all the partners that you never called under
-current **criteria combination**, but if none is found it will repeat calls for
-such **criteria combination** if last call was done before the minimum
-*Days gap* you specified.
+If you choose instead to repeat calls after some amount of days (*Days gap*),
+the planner will:
+
+#. Try to find a partner that matches the **criteria combination** and has never
+   been called; then schedule a call for him.
+#. If all matching partners have already been called, then search for matching
+   partners that have not been called in the specified *Days gap*; then schedule a
+   call for the one with least total scheduled calls.
+#. If there is still no match, then schedule nothing and continue.
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
