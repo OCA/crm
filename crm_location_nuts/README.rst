@@ -14,7 +14,7 @@ Usage
 
 - Create a new Lead (or edit an existing one):
 - Set a contact name or a company name.
-- Set its address substate and region nuts.
+- Set NUTS values as desired.
 - Save it an convert to opportunity.
 - In the dialog, choose **Create a new customer** and click create.
 - If you browse the new customer, the NUTS values should have been propagated.
@@ -22,6 +22,12 @@ Usage
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
    :target: https://runbot.odoo-community.org/runbot/134/10.0
+
+Known issues / Roadmap
+======================
+
+- It would be cleaner an more reusable to put the repeated methods and fields
+  into an abstract model.
 
 Bug Tracker
 ===========
