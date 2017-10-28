@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-24 01:15+0000\n"
-"PO-Revision-Date: 2016-12-27 08:25+0000\n"
+"POT-Creation-Date: 2017-09-08 23:32+0000\n"
+"PO-Revision-Date: 2017-10-16 18:32+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Slovak (http://www.transifex.com/oca/OCA-crm-8-0/language/sk/)\n"
 "MIME-Version: 1.0\n"
@@ -103,7 +103,7 @@ msgstr "Zrušiť"
 #. module: lettermgmt
 #: selection:res.letter,state:0
 msgid "Cancelled"
-msgstr ""
+msgstr "Zrušené"
 
 #. module: lettermgmt
 #: field:res.letter,channel_id:0
@@ -557,7 +557,7 @@ msgstr ""
 #. module: lettermgmt
 #: field:res.letter,state:0
 msgid "State"
-msgstr ""
+msgstr "Stav"
 
 #. module: lettermgmt
 #: field:res.letter,name:0
