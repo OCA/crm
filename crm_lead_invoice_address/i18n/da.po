@@ -10,12 +10,12 @@ msgstr ""
 "POT-Creation-Date: 2017-09-08 23:31+0000\n"
 "PO-Revision-Date: 2016-03-10 18:53+0000\n"
 "Last-Translator: <>\n"
-"Language-Team: Slovak (http://www.transifex.com/oca/OCA-crm-8-0/language/sk/)\n"
+"Language-Team: Danish (http://www.transifex.com/oca/OCA-crm-8-0/language/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: sk\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"Language: da\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: crm_lead_invoice_address
 #: view:crm.lead:crm_lead_invoice_address.form_view
@@ -74,7 +74,7 @@ msgstr ""
 #. module: crm_lead_invoice_address
 #: model:ir.model,name:crm_lead_invoice_address.model_crm_lead
 msgid "Lead/Opportunity"
-msgstr "Iniciatíva/Príležitosť"
+msgstr ""
 
 #. module: crm_lead_invoice_address
 #: code:addons/crm_lead_invoice_address/exceptions.py:15
@@ -86,7 +86,7 @@ msgstr ""
 #: view:crm.lead:crm_lead_invoice_address.form_view
 #: view:crm.lead:crm_lead_invoice_address.opportunity_form_view
 msgid "State"
-msgstr "Stav"
+msgstr "Delstat"
 
 #. module: crm_lead_invoice_address
 #: view:crm.lead:crm_lead_invoice_address.form_view
