@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-21 00:44+0000\n"
-"PO-Revision-Date: 2017-05-21 00:44+0000\n"
+"POT-Creation-Date: 2017-09-21 00:47+0000\n"
+"PO-Revision-Date: 2017-09-21 00:47+0000\n"
 "Last-Translator: Rudolf Schnapka <rs@techno-flex.de>, 2017\n"
 "Language-Team: German (https://www.transifex.com/oca/teams/23907/de/)\n"
 "MIME-Version: 1.0\n"
@@ -90,6 +90,11 @@ msgstr "Telefonate"
 #: model:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
 msgid "Calls Date by Month"
 msgstr "Telefonate nach Monat"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_campaign_id
+msgid "Campaign"
+msgstr "Kampagne"
 
 #. module: crm_phonecall
 #: selection:crm.phonecall,state:0 selection:crm.phonecall.report,state:0
@@ -396,6 +401,11 @@ msgid "Low"
 msgstr "Niedrig"
 
 #. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_medium_id
+msgid "Medium"
+msgstr "Mittel"
+
+#. module: crm_phonecall
 #: model:ir.ui.view,arch_db:crm_phonecall.crm_case_inbound_phone_tree_view
 #: model:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_tree_view
 msgid "Meeting"
@@ -543,7 +553,7 @@ msgid "Phone"
 msgstr "Telefon"
 
 #. module: crm_phonecall
-#: code:addons/crm_phonecall/models/crm_phonecall.py:192
+#: code:addons/crm_phonecall/models/crm_phonecall.py:195
 #: model:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
 #, python-format
 msgid "Phone Call"
@@ -711,6 +721,11 @@ msgid "Show Scheduled Calls Menu"
 msgstr "Zeige Menü Terminierte Anrufe"
 
 #. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_source_id
+msgid "Source"
+msgstr "Herkunft"
+
+#. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report_state
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_state
 #: model:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
@@ -749,6 +764,29 @@ msgid "These people will receive email."
 msgstr "Diese Personen erhalten eine Email."
 
 #. module: crm_phonecall
+#: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall_campaign_id
+msgid ""
+"This is a name that helps you keep track of your different campaign efforts "
+"Ex: Fall_Drive, Christmas_Special"
+msgstr ""
+"Dies ist eine Bezeichnung, die Ihnen hilft die verschiedenen Kampagnen zu "
+"beobachten. Z.B. Herbsoffensive, Weihnachtsspecial."
+
+#. module: crm_phonecall
+#: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall_medium_id
+msgid "This is the method of delivery. Ex: Postcard, Email, or Banner Ad"
+msgstr "Dies ist der Lieferweg, z. B. Postkarte, Email oder Plakatwerbung"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall_source_id
+msgid ""
+"This is the source of the link Ex: Search Engine, another domain, or name of"
+" email list"
+msgstr ""
+"Dies ist der Ursprung der Verbindung, z. B. Suchmaschine, andere Domain oder"
+" Name aus Email-Liste"
+
+#. module: crm_phonecall
 #: model:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
 msgid "To Do"
 msgstr "Zu erledigen"
@@ -758,6 +796,11 @@ msgstr "Zu erledigen"
 #: model:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
 msgid "Todo"
 msgstr "Zu erledigen"
+
+#. module: crm_phonecall
+#: model:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
+msgid "Tracking"
+msgstr ""
 
 #. module: crm_phonecall
 #: model:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
