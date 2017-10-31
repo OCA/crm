@@ -79,6 +79,7 @@
     </record>
 
     <menuitem name="Claims" id="menu_report_crm_claim_tree"
-              action="action_report_crm_claim" parent="sales_team.menu_sale_report" sequence="15"/>
+              action="action_report_crm_claim" parent="crm.crm_menu_report"
+              sequence="15"/>
 
 </odoo>
