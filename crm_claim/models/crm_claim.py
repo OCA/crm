@@ -169,6 +169,11 @@ class CrmClaim(models.Model):
             self.email_from = self.partner_id.email
             self.partner_phone = self.partner_id.phone
 
+    @api.onchange('categ_id')
+    def onchange_categ_id(self):
+        if self.stage_id:
+            self.team_id = self.categ_id.team_id
+
     @api.model
     def create(self, values):
         ctx = self.env.context.copy()

@@ -1,19 +1,23 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* crm_claim
-#
+# * crm_claim
+# 
+# Translators:
+# OCA Transbot <transbot@odoo-community.org>, 2017
+# Pedro M. Baeza <pedro.baeza@gmail.com>, 2017
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.0\n"
+"Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-05 11:05+0000\n"
-"PO-Revision-Date: 2017-09-05 11:05+0000\n"
-"Last-Translator: <>\n"
-"Language-Team: \n"
+"POT-Creation-Date: 2017-12-14 05:48+0000\n"
+"PO-Revision-Date: 2017-12-14 05:48+0000\n"
+"Last-Translator: Pedro M. Baeza <pedro.baeza@gmail.com>, 2017\n"
+"Language-Team: Spanish (https://www.transifex.com/oca/teams/23907/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: \n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_res_partner_claim_count
@@ -32,7 +36,7 @@ msgid "# of Claims"
 msgstr "Nº de reclamaciones"
 
 #. module: crm_claim
-#: code:addons/crm_claim/models/crm_claim.py:181
+#: code:addons/crm_claim/models/crm_claim.py:189
 #, python-format
 msgid "%s (copy)"
 msgstr "%s (copia)"
@@ -211,32 +215,35 @@ msgid "Company"
 msgstr "Compañía"
 
 #. module: crm_claim
+#: model:ir.model,name:crm_claim.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: crm_claim
 #: model:utm.campaign,name:crm_claim.claim_source1
 msgid "Corrective"
 msgstr "Correctivo"
 
 #. module: crm_claim
-#: selection:crm.claim,type_action:0
-#: selection:crm.claim.report,type_action:0
+#: selection:crm.claim,type_action:0 selection:crm.claim.report,type_action:0
 msgid "Corrective Action"
 msgstr "Acción correctiva"
-
-#. module: crm_claim
-#: model:ir.actions.act_window,help:crm_claim.crm_claim_categ_action
-msgid ""
-"Create claim categories to better manage and classify your\n"
-"                claims. Some example of claims can be: preventive action,\n"
-"                corrective action."
-msgstr ""
-"Cree categorías de reclamaciones para gestionar mejor y clasificar sus\n"
-"reclamaciones. Algunos ejemplos de reclamaciones pueden ser: acción "
-"preventiva,\n"
-"acción correctiva."
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report_create_date
 msgid "Create Date"
 msgstr "Fecha creación"
+
+#. module: crm_claim
+#: model:ir.actions.act_window,help:crm_claim.crm_claim_categ_action
+msgid ""
+"Create claim categories to better manage and classify your\n"
+"            claims. Some example of claims can be: preventive action,\n"
+"            corrective action."
+msgstr ""
+"Cree categorías de reclamaciones para gestionar y clasificar mejor sus "
+"reclamaciones. Algunos ejemplos de reclamaciones pueden ser: acción "
+"preventiva, acción correctiva."
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category_create_uid
@@ -337,8 +344,7 @@ msgstr ""
 "sistema ordenándolas con criterios específicos."
 
 #. module: crm_claim
-#: selection:crm.claim,priority:0
-#: selection:crm.claim.report,priority:0
+#: selection:crm.claim,priority:0 selection:crm.claim.report,priority:0
 msgid "High"
 msgstr "Alta"
 
@@ -346,7 +352,7 @@ msgstr "Alta"
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category_id
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_id
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report_id
-#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage_id_2806
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage_id_2581
 msgid "ID"
 msgstr "ID (identificación)"
 
@@ -395,8 +401,7 @@ msgstr ""
 "limitadas al equipo de venta seleccionado."
 
 #. module: crm_claim
-#: selection:crm.claim,priority:0
-#: selection:crm.claim.report,priority:0
+#: selection:crm.claim,priority:0 selection:crm.claim.report,priority:0
 msgid "Low"
 msgstr "Baja"
 
@@ -436,22 +441,20 @@ msgid "Next Action Date"
 msgstr "Fecha  de la próxima acción"
 
 #. module: crm_claim
-#: code:addons/crm_claim/models/crm_claim.py:198
+#: code:addons/crm_claim/models/crm_claim.py:206
 #, python-format
 msgid "No Subject"
 msgstr "Sin asunto"
 
 #. module: crm_claim
-#: selection:crm.claim,priority:0
-#: selection:crm.claim.report,priority:0
+#: selection:crm.claim,priority:0 selection:crm.claim.report,priority:0
 msgid "Normal"
 msgstr "Normal"
 
 #. module: crm_claim
 #: model:ir.model.fields,help:crm_claim.field_crm_claim_report_delay_close
-msgid "Number of Actions"
-msgstr "Número de acciones"
-
+msgid "Number of Days to close the case"
+msgstr "Nº de días para cerrar el caso"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report_delay_expected
@@ -459,7 +462,6 @@ msgid "Overpassed Deadline"
 msgstr "Fecha límite excedida"
 
 #. module: crm_claim
-#: model:ir.model,name:crm_claim.model_res_partner
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_partner_id
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report_partner_id
 #: model:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
@@ -484,8 +486,7 @@ msgid "Preventive"
 msgstr "Preventivo"
 
 #. module: crm_claim
-#: selection:crm.claim,type_action:0
-#: selection:crm.claim.report,type_action:0
+#: selection:crm.claim,type_action:0 selection:crm.claim.report,type_action:0
 msgid "Preventive Action"
 msgstr "Acción preventiva"
 
@@ -504,10 +505,10 @@ msgid ""
 "automatically be linked to an email address using the mail gateway module."
 msgstr ""
 "Registre y rastree las reclamaciones de sus clientes. Las reclamaciones "
-"pueden estar ligadas a una orden de ventas o a un lote. Puede enviar correos "
-"electrónicos con archivos adjuntos y mantener el historial completo de una "
-"reclamación (correos enviados, tipo de intervención, etc.) Las reclamaciones "
-"pueden enlazarse automáticamente a una dirección de correo electrónico "
+"pueden estar ligadas a una orden de ventas o a un lote. Puede enviar correos"
+" electrónicos con archivos adjuntos y mantener el historial completo de una "
+"reclamación (correos enviados, tipo de intervención, etc.) Las reclamaciones"
+" pueden enlazarse automáticamente a una dirección de correo electrónico "
 "usando el módulo de puerta de enlace de correo electrónico."
 
 #. module: crm_claim
@@ -593,11 +594,6 @@ msgid "Sequence"
 msgstr "Secuencia"
 
 #. module: crm_claim
-#: model:ir.ui.menu,name:crm_claim.menu_services
-msgid "Services"
-msgstr "Servicios"
-
-#. module: crm_claim
 #: model:crm.claim.stage,name:crm_claim.stage_claim2
 msgid "Settled"
 msgstr "Arreglado"
@@ -638,8 +634,8 @@ msgid ""
 "addresses with a comma"
 msgstr ""
 "Estas direcciones de correo serán añadidas al campo CC para todos los "
-"correos entrantes y salientes de este registro antes de ser enviados. Separe "
-"las diferentes direcciones de correo con una coma."
+"correos entrantes y salientes de este registro antes de ser enviados. Separe"
+" las diferentes direcciones de correo con una coma."
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_user_fault
@@ -691,11 +687,9 @@ msgstr "Carga de trabajo"
 #: model:ir.actions.act_window,help:crm_claim.crm_claim_stage_act
 msgid ""
 "You can create claim stages to categorize the status of every\n"
-"                claim entered in the system. The stages define all the "
-"steps\n"
-"                required for the resolution of a claim."
+"            claim entered in the system. The stages define all the steps\n"
+"            required for the resolution of a claim."
 msgstr ""
-"Puede crear etapas de reclamaciones para categorizar el estado de cada\n"
-"reclamación registrada en el sistema. Las etapas definen todos los pasos\n"
+"Puede crear etapas de reclamaciones para categorizar el estado de cada "
+"reclamación introducida en el sistema. Las etapas definen todos los pasos "
 "requeridos para la resolución de la reclamación."
-
