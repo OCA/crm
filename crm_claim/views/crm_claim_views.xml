@@ -34,9 +34,7 @@
                         <field name="date"/>
                     </group>
                     <group colspan="4" col="4"  groups="base.group_user">
-                        <field name="user_id" context="{'default_groups_ref': ['base.group_user', 'base.group_partner_manager', 'base.group_sale_salesman_all_leads']}"/>
                         <field name="priority" widget="priority"/>
-                        <field name="team_id"/>
                         <field name="date_deadline"/>
                     </group>
                     <group colspan="4" col="4">
@@ -50,8 +48,10 @@
                                 </group>
                                 <group colspan="2" col="2" groups="base.group_user">
                                     <separator colspan="2" string="Responsibilities"/>
+                                    <field name="user_id" context="{'default_groups_ref': ['base.group_user', 'base.group_partner_manager', 'base.group_sale_salesman_all_leads']}"/>
                                     <field name="user_fault"/>
                                     <field name="categ_id" options="{'no_create': True, 'no_open': True}"/>
+                                    <field name="team_id"/>
                                     <field name="model_ref_id" widget="reference"/>
                                 </group>
                                 <separator colspan="4" string="Claim/Action Description" groups="base.group_user"/>
