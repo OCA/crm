@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-22 15:09+0000\n"
-"PO-Revision-Date: 2017-05-22 15:12+0000\n"
+"POT-Creation-Date: 2017-10-28 03:12+0000\n"
+"PO-Revision-Date: 2017-11-03 12:15+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Indonesian (http://www.transifex.com/oca/OCA-crm-8-0/language/id/)\n"
 "MIME-Version: 1.0\n"
@@ -66,7 +66,7 @@ msgstr ""
 #. module: newsletter
 #: selection:newsletter.newsletter,state:0
 msgid "Draft"
-msgstr ""
+msgstr "Draf"
 
 #. module: newsletter
 #: model:res.groups,name:newsletter.group_newsletter_editor
@@ -199,18 +199,18 @@ msgstr ""
 #: code:addons/newsletter/model/newsletter_type.py:49
 #, python-format
 msgid "Recipients"
-msgstr ""
+msgstr "Penerima"
 
 #. module: newsletter
 #: view:email_template.preview:newsletter.email_template_preview_form
 #: view:newsletter.newsletter:newsletter.form_newsletter
 msgid "Send"
-msgstr ""
+msgstr "Kirim"
 
 #. module: newsletter
 #: model:res.groups,name:newsletter.group_newsletter_sender
 msgid "Sender"
-msgstr ""
+msgstr "Pengirim"
 
 #. module: newsletter
 #: selection:newsletter.newsletter,state:0
@@ -220,7 +220,7 @@ msgstr ""
 #. module: newsletter
 #: selection:newsletter.newsletter,state:0
 msgid "Sent"
-msgstr ""
+msgstr "Kirim"
 
 #. module: newsletter
 #: view:newsletter.newsletter:newsletter.form_newsletter
@@ -231,12 +231,12 @@ msgstr ""
 #. module: newsletter
 #: field:newsletter.newsletter,state:0
 msgid "State"
-msgstr ""
+msgstr "Bagian"
 
 #. module: newsletter
 #: field:newsletter.newsletter,subject:0
 msgid "Subject"
-msgstr ""
+msgstr "Perihal"
 
 #. module: newsletter
 #: view:newsletter.newsletter:newsletter.form_newsletter
