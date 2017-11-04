@@ -4,13 +4,14 @@
 # 
 # Translators:
 # OCA Transbot <transbot@odoo-community.org>, 2017
+# Wahyu Setiawan <wahyusetiaaa@gmail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-21 00:47+0000\n"
-"PO-Revision-Date: 2017-09-21 00:47+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
+"POT-Creation-Date: 2017-10-28 03:15+0000\n"
+"PO-Revision-Date: 2017-10-28 03:15+0000\n"
+"Last-Translator: Wahyu Setiawan <wahyusetiaaa@gmail.com>, 2017\n"
 "Language-Team: Indonesian (https://www.transifex.com/oca/teams/23907/id/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -98,7 +99,7 @@ msgstr ""
 #. module: crm_phonecall
 #: selection:crm.phonecall,state:0 selection:crm.phonecall.report,state:0
 msgid "Cancelled"
-msgstr ""
+msgstr "Dibatalkan"
 
 #. module: crm_phonecall
 #: model:ir.ui.menu,name:crm_phonecall.menu_crm_case_phonecall-act
@@ -248,7 +249,7 @@ msgstr "Nama Tampilan"
 #. module: crm_phonecall
 #: selection:crm.phonecall.report,state:0
 msgid "Draft"
-msgstr ""
+msgstr "Draf"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_duration
@@ -533,7 +534,7 @@ msgstr ""
 #. module: crm_phonecall
 #: selection:crm.phonecall,state:0 selection:crm.phonecall.report,state:0
 msgid "Pending"
-msgstr ""
+msgstr "Ditunda"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall_phone
@@ -802,7 +803,7 @@ msgstr ""
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report_user_id
 msgid "User"
-msgstr ""
+msgstr "Pengguna"
 
 #. module: crm_phonecall
 #: model:ir.actions.act_window,help:crm_phonecall.crm_case_categ_phone_outgoing0
