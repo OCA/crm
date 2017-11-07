@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-01 02:38+0000\n"
-"PO-Revision-Date: 2017-06-01 02:38+0000\n"
+"POT-Creation-Date: 2017-12-04 15:47+0000\n"
+"PO-Revision-Date: 2017-12-04 15:47+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/oca/teams/23907/es/)\n"
 "MIME-Version: 1.0\n"
@@ -286,7 +286,7 @@ msgstr "Alta"
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_id
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report_id
 msgid "ID"
-msgstr "Identificador"
+msgstr "ID"
 
 #. module: crm_phonecall
 #: model:ir.actions.act_window,help:crm_phonecall.crm_case_categ_phone_incoming0
@@ -477,7 +477,7 @@ msgid "Phone"
 msgstr "Teléfono"
 
 #. module: crm_phonecall
-#: code:addons/crm_phonecall/models/crm_phonecall.py:193
+#: code:addons/crm_phonecall/models/crm_phonecall.py:200
 #: model:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
 #, python-format
 msgid "Phone Call"
@@ -691,6 +691,11 @@ msgstr "Por hacer"
 #: model:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
 msgid "Todo"
 msgstr "Por hacer"
+
+#. module: crm_phonecall
+#: model:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
+msgid "Tracking"
+msgstr ""
 
 #. module: crm_phonecall
 #: model:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter

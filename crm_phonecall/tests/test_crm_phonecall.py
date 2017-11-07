@@ -117,3 +117,4 @@ class TestCrmPhoneCall(common.SavepointCase):
         search_view = model_data.get_object_reference(
             'crm_phonecall', 'view_crm_case_phonecalls_filter')
         self.assertEqual(result['search_view_id'], search_view[1])
+        self.assertNotEqual(result['res_id'], self.phonecall1.id)

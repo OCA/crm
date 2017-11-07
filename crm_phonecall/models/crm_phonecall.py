@@ -136,7 +136,8 @@ class CrmPhonecall(models.Model):
     @api.multi
     def schedule_another_phonecall(self, schedule_time, call_summary,
                                    user_id=False, team_id=False,
-                                   tag_ids=False, action='schedule'):
+                                   tag_ids=False, action='schedule',
+                                   return_recordset=False):
         """
         action :('schedule','Schedule a call'), ('log','Log a call')
         """
@@ -169,7 +170,10 @@ class CrmPhonecall(models.Model):
             if action == 'log':
                 call.write({'state': 'done'})
             phonecall_dict[call.id] = new_id
-        return phonecall_dict
+        if return_recordset:
+            return reduce(lambda x, y: x + y,  phonecall_dict.values())
+        else:
+            return phonecall_dict
 
     @api.onchange('opportunity_id')
     def on_change_opportunity(self):
