@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-28 03:12+0000\n"
-"PO-Revision-Date: 2017-11-03 12:17+0000\n"
+"POT-Creation-Date: 2017-11-11 02:29+0000\n"
+"PO-Revision-Date: 2017-11-17 09:09+0000\n"
 "Last-Translator: Wahyu Setiawan <wahyusetiaaa@gmail.com>\n"
 "Language-Team: Indonesian (http://www.transifex.com/oca/OCA-crm-8-0/language/id/)\n"
 "MIME-Version: 1.0\n"
@@ -84,12 +84,12 @@ msgstr "<p class=\"oe_view_nocontent_create\">\n            Klik Untuk membuat j
 #. module: lettermgmt
 #: view:res.letter:lettermgmt.res_letter_form_view
 msgid "Additional Information"
-msgstr "informasi tambahan"
+msgstr "Informasi tambahan"
 
 #. module: lettermgmt
 #: help:res.letter,number:0
 msgid "Auto Generated Number of letter."
-msgstr "Otomatis generate Nomer Surat"
+msgstr "Otomatis generate Nomer Surat."
 
 #. module: lettermgmt
 #: view:res.letter:lettermgmt.res_letter_form_view
@@ -114,7 +114,7 @@ msgstr "Saluran"
 #. module: lettermgmt
 #: help:res.letter,category_ids:0
 msgid "Classification of Document."
-msgstr "Klasifikasi dari Dokumen"
+msgstr "Klasifikasi dari Dokumen."
 
 #. module: lettermgmt
 #: field:letter.folder,code:0 field:letter.type,code:0
@@ -124,7 +124,7 @@ msgstr "Kode"
 #. module: lettermgmt
 #: sql_constraint:letter.folder:0 sql_constraint:letter.type:0
 msgid "Code must be unique !"
-msgstr "Kode harus unik"
+msgstr "Kode harus unik !"
 
 #. module: lettermgmt
 #: field:letter.reassignment,comment:0
@@ -180,7 +180,7 @@ msgstr "Draf"
 #. module: lettermgmt
 #: field:res.letter,expeditor_ref:0
 msgid "Expeditor Reference"
-msgstr "Referensi ekspeditor"
+msgstr "Acuan Pengiriman"
 
 #. module: lettermgmt
 #: field:res.letter,folder_id:0
@@ -260,14 +260,14 @@ msgstr "Terakhir Dimodifikasi pada"
 #: field:letter.folder,write_uid:0 field:letter.reassignment,write_uid:0
 #: field:letter.type,write_uid:0 field:res.letter,write_uid:0
 msgid "Last Updated by"
-msgstr "Diperbaharui oleh"
+msgstr "Terakhir Diperbaharui oleh"
 
 #. module: lettermgmt
 #: field:letter.category,write_date:0 field:letter.channel,write_date:0
 #: field:letter.folder,write_date:0 field:letter.reassignment,write_date:0
 #: field:letter.type,write_date:0 field:res.letter,write_date:0
 msgid "Last Updated on"
-msgstr "Diperbaharui pada"
+msgstr "Terakhir Diperbaharui pada"
 
 #. module: lettermgmt
 #: field:letter.reassignment,letter_id:0
@@ -408,7 +408,7 @@ msgstr "KELUAR"
 #. module: lettermgmt
 #: field:res.letter,orig_ref:0
 msgid "Original Reference"
-msgstr "Referensi Asli"
+msgstr "Acuan Original"
 
 #. module: lettermgmt
 #: model:ir.actions.act_window,name:lettermgmt.action_res_letter_out_tree_view
