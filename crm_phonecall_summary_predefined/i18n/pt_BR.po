@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-09-17 09:43+0000\n"
-"PO-Revision-Date: 2016-10-04 09:43+0000\n"
+"POT-Creation-Date: 2017-11-25 03:17+0000\n"
+"PO-Revision-Date: 2017-11-30 01:10+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/oca/OCA-crm-8-0/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -65,7 +65,7 @@ msgstr ""
 #. module: crm_phonecall_summary_predefined
 #: model:ir.model,name:crm_phonecall_summary_predefined.model_crm_phonecall
 msgid "Phonecall"
-msgstr ""
+msgstr "Ligaçãotelefônica"
 
 #. module: crm_phonecall_summary_predefined
 #: view:crm.phonecall.summary:crm_phonecall_summary_predefined.summary_form

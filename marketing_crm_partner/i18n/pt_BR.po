@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-25 01:51+0000\n"
+"POT-Creation-Date: 2017-11-25 03:17+0000\n"
 "PO-Revision-Date: 2016-04-04 00:30+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/oca/OCA-crm-8-0/language/pt_BR/)\n"
@@ -21,7 +21,7 @@ msgstr ""
 #: view:res.partner:marketing_crm_partner.view_res_partner_filter
 #: field:res.partner,campaign_id:0
 msgid "Campaign"
-msgstr ""
+msgstr "Campanha"
 
 #. module: marketing_crm_partner
 #: field:res.partner,medium_id:0
@@ -36,7 +36,7 @@ msgstr "Prospector/Oportunidade"
 #. module: marketing_crm_partner
 #: view:res.partner:marketing_crm_partner.view_partner_form
 msgid "Marketing"
-msgstr ""
+msgstr "Marketing"
 
 #. module: marketing_crm_partner
 #: view:res.partner:marketing_crm_partner.view_res_partner_filter
@@ -59,16 +59,16 @@ msgstr ""
 msgid ""
 "This is a name that helps you keep track of your different campaign efforts "
 "Ex: Fall_Drive, Christmas_Special"
-msgstr ""
+msgstr "Este é um nome que o ajuda a rastrear seus diferentes esforços de campanha Ex: Fall_Drive, Christmas_Special"
 
 #. module: marketing_crm_partner
 #: help:res.partner,medium_id:0
 msgid "This is the method of delivery. Ex: Postcard, Email, or Banner Ad"
-msgstr ""
+msgstr "Este é o método de entrega. Ex: Cartão Postal, Email ou Banner"
 
 #. module: marketing_crm_partner
 #: help:res.partner,source_id:0
 msgid ""
 "This is the source of the link Ex: Search Engine, another domain, or name of"
 " email list"
-msgstr ""
+msgstr "Esta é a fonte do link Ex: Mecanismo de Pesquisa, outro domínio ou nome da lista de e-mail"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-14 02:20+0000\n"
+"POT-Creation-Date: 2017-11-25 03:17+0000\n"
 "PO-Revision-Date: 2016-03-10 18:52+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/oca/OCA-crm-8-0/language/pt_BR/)\n"
@@ -25,12 +25,12 @@ msgstr "Reclamação"
 #. module: crm_claim_code
 #: field:crm.claim,code:0
 msgid "Claim Number"
-msgstr ""
+msgstr "Número da Reclamação"
 
 #. module: crm_claim_code
 #: sql_constraint:crm.claim:0
 msgid "The code must be unique!"
-msgstr ""
+msgstr "O código deve ser único!"
 
 #. module: crm_claim_code
 #: view:crm.claim:crm_claim_code.view_crm_case_claims_filter_inh_claimseq

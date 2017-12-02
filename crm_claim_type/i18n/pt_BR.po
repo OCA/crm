@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-01 03:16+0000\n"
-"PO-Revision-Date: 2017-05-30 10:13+0000\n"
+"POT-Creation-Date: 2017-11-25 03:17+0000\n"
+"PO-Revision-Date: 2017-11-30 00:40+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/oca/OCA-crm-8-0/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -40,18 +40,18 @@ msgstr "Reclamação"
 #. module: crm_claim_type
 #: view:crm.claim.stage:crm_claim_type.crm_stage_claim_type_search
 msgid "Claim Type"
-msgstr ""
+msgstr "Tipo de Reclamação"
 
 #. module: crm_claim_type
 #: model:ir.actions.act_window,name:crm_claim_type.crm_claim_type_act
 #: model:ir.ui.menu,name:crm_claim_type.menu_crm_claim_type_act
 msgid "Claim Types"
-msgstr ""
+msgstr "Tipos de Reclamação"
 
 #. module: crm_claim_type
 #: help:crm.claim,claim_type:0 help:crm.claim.stage,claim_type:0
 msgid "Claim classification"
-msgstr ""
+msgstr "Classificação de Reclamação"
 
 #. module: crm_claim_type
 #: model:ir.model,name:crm_claim_type.model_crm_claim_stage
@@ -62,17 +62,17 @@ msgstr "Estágios de solicitação"
 #: field:crm.claim,claim_type:0 field:crm.claim.stage,claim_type:0
 #: view:crm.claim.type:crm_claim_type.crm_claim_type_form
 msgid "Claim type"
-msgstr ""
+msgstr "Tipo de Reclamação"
 
 #. module: crm_claim_type
 #: view:crm.claim.type:crm_claim_type.crm_claim_type_tree
 msgid "Claim types"
-msgstr ""
+msgstr "Tipos de Reclamação"
 
 #. module: crm_claim_type
 #: field:crm.claim.stage,claim_common:0
 msgid "Common to All Claim Types"
-msgstr ""
+msgstr "Comum para Todos os Tipos de Reclamação"
 
 #. module: crm_claim_type
 #: field:crm.claim.type,create_uid:0
@@ -119,7 +119,7 @@ msgstr "ID"
 msgid ""
 "If you check this field, this stage will be proposed by default on each "
 "claim type."
-msgstr ""
+msgstr "Se você verificar este campo, esta etapa será proposta por padrão em cada tipo de reclamação."
 
 #. module: crm_claim_type
 #: field:crm.claim.type,__last_update:0
@@ -144,12 +144,12 @@ msgstr "Nome"
 #. module: crm_claim_type
 #: model:crm.claim.type,name:crm_claim_type.crm_claim_type_other
 msgid "Other"
-msgstr ""
+msgstr "Outro"
 
 #. module: crm_claim_type
 #: view:crm.claim.stage:crm_claim_type.crm_stage_claim_type_search
 msgid "Search Stages"
-msgstr ""
+msgstr "Etapas de Pesquisa"
 
 #. module: crm_claim_type
 #: model:crm.claim.type,name:crm_claim_type.crm_claim_type_supplier

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-14 02:20+0000\n"
-"PO-Revision-Date: 2017-01-19 20:17+0000\n"
+"POT-Creation-Date: 2017-11-25 03:17+0000\n"
+"PO-Revision-Date: 2017-11-30 00:35+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/oca/OCA-crm-8-0/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -104,7 +104,7 @@ msgstr "Ativo"
 #: view:crm.action:crm_action.view_action_form
 #: view:crm.action:crm_action.view_action_tree
 msgid "Back to Todo"
-msgstr ""
+msgstr "Voltar para A Fazer"
 
 #. module: crm_action
 #: model:ir.model,name:crm_action.model_crm_action
@@ -159,7 +159,7 @@ msgstr "Nome para Mostrar"
 #. module: crm_action
 #: field:crm.action,display_name:0
 msgid "Display name"
-msgstr ""
+msgstr "Mostrar nome"
 
 #. module: crm_action
 #: view:crm.action:crm_action.view_crm_action_filter
@@ -170,7 +170,7 @@ msgstr "Concluído"
 #. module: crm_action
 #: model:crm.action.type,name:crm_action.followup
 msgid "Followup"
-msgstr ""
+msgstr "Acompanhamento"
 
 #. module: crm_action
 #: view:crm.action:crm_action.view_crm_action_filter
@@ -211,17 +211,17 @@ msgstr "Prospector/Oportunidade"
 #: view:crm.action:crm_action.view_action_form
 #: view:crm.action:crm_action.view_action_tree
 msgid "Mark as Done"
-msgstr ""
+msgstr "Marque como concluído"
 
 #. module: crm_action
 #: view:crm.lead:crm_action.crm_case_form_view_oppor
 msgid "Mark next action as done"
-msgstr ""
+msgstr "Marque próxima ação como concluída"
 
 #. module: crm_action
 #: model:crm.action.type,name:crm_action.meeting
 msgid "Meeting"
-msgstr ""
+msgstr "Reunião"
 
 #. module: crm_action
 #: view:crm.action:crm_action.view_crm_action_filter
@@ -267,12 +267,12 @@ msgstr "Status"
 #: view:crm.action:crm_action.view_crm_action_filter
 #: selection:crm.action,state:0
 msgid "Todo"
-msgstr ""
+msgstr "A Fazer"
 
 #. module: crm_action
 #: view:crm.action:crm_action.view_crm_action_filter
 msgid "Todo Today"
-msgstr ""
+msgstr "A Fazer Hoje"
 
 #. module: crm_action
 #: field:crm.action,action_type_id:0
