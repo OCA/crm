@@ -3,13 +3,14 @@
 # * crm_claim_type
 # 
 # Translators:
+# Armando Vulcano Junior <vulcano@uol.com.br>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: crm (9.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-04 01:55+0000\n"
-"PO-Revision-Date: 2016-05-04 09:31+0000\n"
-"Last-Translator: <>\n"
+"POT-Creation-Date: 2017-11-25 03:19+0000\n"
+"PO-Revision-Date: 2017-11-30 00:41+0000\n"
+"Last-Translator: Armando Vulcano Junior <vulcano@uol.com.br>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/oca/OCA-crm-9-0/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -35,19 +36,19 @@ msgstr "Reclamação"
 #. module: crm_claim_type
 #: model:ir.ui.view,arch_db:crm_claim_type.crm_stage_claim_type_search
 msgid "Claim Type"
-msgstr ""
+msgstr "Tipo de Reclamação"
 
 #. module: crm_claim_type
 #: model:ir.actions.act_window,name:crm_claim_type.crm_claim_type_act
 #: model:ir.ui.menu,name:crm_claim_type.menu_crm_claim_type_act
 msgid "Claim Types"
-msgstr ""
+msgstr "Tipos de Reclamação"
 
 #. module: crm_claim_type
 #: model:ir.model.fields,help:crm_claim_type.field_crm_claim_claim_type
 #: model:ir.model.fields,help:crm_claim_type.field_crm_claim_stage_claim_type
 msgid "Claim classification"
-msgstr ""
+msgstr "Classificação de Reclamação"
 
 #. module: crm_claim_type
 #: model:ir.model,name:crm_claim_type.model_crm_claim_stage
@@ -59,17 +60,17 @@ msgstr "Estágios de solicitação"
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_stage_claim_type
 #: model:ir.ui.view,arch_db:crm_claim_type.crm_claim_type_form
 msgid "Claim type"
-msgstr ""
+msgstr "Tipo de Reclamação"
 
 #. module: crm_claim_type
 #: model:ir.ui.view,arch_db:crm_claim_type.crm_claim_type_tree
 msgid "Claim types"
-msgstr ""
+msgstr "Tipos de Reclamação"
 
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_stage_claim_common
 msgid "Common to All Claim Types"
-msgstr ""
+msgstr "Comum para Todos os Tipos de Reclamação"
 
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type_create_uid
@@ -116,7 +117,7 @@ msgstr "Identificação"
 msgid ""
 "If you check this field, this stage will be proposed by default on each "
 "claim type."
-msgstr ""
+msgstr "Se você verificar este campo, esta etapa será proposta por padrão em cada tipo de reclamação."
 
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type___last_update
@@ -141,12 +142,12 @@ msgstr "Nome"
 #. module: crm_claim_type
 #: model:crm.claim.type,name:crm_claim_type.crm_claim_type_other
 msgid "Other"
-msgstr ""
+msgstr "Outro"
 
 #. module: crm_claim_type
 #: model:ir.ui.view,arch_db:crm_claim_type.crm_stage_claim_type_search
 msgid "Search Stages"
-msgstr ""
+msgstr "Etapas de Pesquisa"
 
 #. module: crm_claim_type
 #: model:crm.claim.type,name:crm_claim_type.crm_claim_type_supplier
@@ -156,4 +157,4 @@ msgstr "Fornecedor"
 #. module: crm_claim_type
 #: model:ir.model,name:crm_claim_type.model_crm_claim_type
 msgid "crm.claim.type"
-msgstr ""
+msgstr "crm.tipo.reclamação"

@@ -4,13 +4,14 @@
 # 
 # Translators:
 # OCA Transbot <transbot@odoo-community.org>, 2017
+# Armando Vulcano Junior <vulcano@uol.com.br>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-14 02:43+0000\n"
-"PO-Revision-Date: 2017-05-14 02:43+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
+"POT-Creation-Date: 2017-11-25 03:19+0000\n"
+"PO-Revision-Date: 2017-11-25 03:19+0000\n"
+"Last-Translator: Armando Vulcano Junior <vulcano@uol.com.br>, 2017\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/oca/teams/23907/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -104,7 +105,7 @@ msgstr "Ativo"
 #: model:ir.ui.view,arch_db:crm_action.view_action_form
 #: model:ir.ui.view,arch_db:crm_action.view_action_tree
 msgid "Back to Todo"
-msgstr ""
+msgstr "Voltar para A Fazer"
 
 #. module: crm_action
 #: model:ir.model,name:crm_action.model_crm_action
@@ -161,7 +162,7 @@ msgstr "Nome para Mostrar"
 #. module: crm_action
 #: model:ir.model.fields,field_description:crm_action.field_crm_action_display_name
 msgid "Display name"
-msgstr ""
+msgstr "Mostrar nome"
 
 #. module: crm_action
 #: selection:crm.action,state:0
@@ -172,7 +173,7 @@ msgstr "Concluído"
 #. module: crm_action
 #: model:crm.action.type,name:crm_action.followup
 msgid "Followup"
-msgstr ""
+msgstr "Acompanhamento"
 
 #. module: crm_action
 #: model:ir.ui.view,arch_db:crm_action.view_crm_action_filter
@@ -217,17 +218,17 @@ msgstr "Prospector/Oportunidade"
 #: model:ir.ui.view,arch_db:crm_action.view_action_form
 #: model:ir.ui.view,arch_db:crm_action.view_action_tree
 msgid "Mark as Done"
-msgstr ""
+msgstr "Marque como concluído"
 
 #. module: crm_action
 #: model:ir.ui.view,arch_db:crm_action.crm_case_form_view_oppor
 msgid "Mark next action as done"
-msgstr ""
+msgstr "Marque próxima ação como concluída"
 
 #. module: crm_action
 #: model:crm.action.type,name:crm_action.meeting
 msgid "Meeting"
-msgstr ""
+msgstr "Reunião"
 
 #. module: crm_action
 #: model:ir.ui.view,arch_db:crm_action.view_crm_action_filter
@@ -273,12 +274,12 @@ msgstr "Status"
 #: selection:crm.action,state:0
 #: model:ir.ui.view,arch_db:crm_action.view_crm_action_filter
 msgid "Todo"
-msgstr ""
+msgstr "A Fazer"
 
 #. module: crm_action
 #: model:ir.ui.view,arch_db:crm_action.view_crm_action_filter
 msgid "Todo Today"
-msgstr ""
+msgstr "A Fazer Hoje"
 
 #. module: crm_action
 #: model:ir.model.fields,field_description:crm_action.field_crm_action_action_type_id
