@@ -3,7 +3,6 @@
 # Copyright 2017 Vicent Cubells <vicent.cubells@tecnativa.com>
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
-import odoo
 from odoo import _, api, fields, models
 from odoo.tools import html2plaintext
 from odoo.addons.base.res.res_request import referenceable_models
