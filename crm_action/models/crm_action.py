@@ -63,7 +63,7 @@ class CrmAction(models.Model):
         default="draft",
     )
     display_name = fields.Char(
-        compute='_compute_display_name',
+        compute='_compute_display_name_field',
         readonly=True,
         store=True,
     )
@@ -88,7 +88,7 @@ class CrmAction(models.Model):
 
     @api.multi
     @api.depends('action_type_id.name', 'details')
-    def _compute_display_name(self):
+    def _compute_display_name_field(self):
         for action in self:
             if action.details:
                 action.display_name = u'[%s] %s' % (
