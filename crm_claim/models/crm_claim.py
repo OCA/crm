@@ -3,9 +3,9 @@
 # Copyright 2017 Vicent Cubells <vicent.cubells@tecnativa.com>
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
-import odoo
 from odoo import _, api, fields, models
 from odoo.tools import html2plaintext
+from odoo.addons.base.res.res_request import referenceable_models
 
 
 class CrmClaim(models.Model):
@@ -62,7 +62,7 @@ class CrmClaim(models.Model):
         detault=fields.Datetime.now,
     )
     model_ref_id = fields.Reference(
-        selection=odoo.addons.base.res.res_request.referenceable_models,
+        selection=referenceable_models,
         string='Reference',
         oldname='ref',
     )
