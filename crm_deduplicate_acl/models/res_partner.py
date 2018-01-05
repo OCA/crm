@@ -14,4 +14,4 @@ class ResPartner(models.Model):
             obj = self.sudo(self.env.context['message_post_user'])
         else:
             obj = self
-        super(ResPartner, obj).message_post(**kwargs)
+        return super(ResPartner, obj).message_post(**kwargs)
