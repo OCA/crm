@@ -1,0 +1,96 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * crm_phonecall_summary_predefined
+# 
+# Translators:
+# Carlos Hormigo, 2018
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0c\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-02 03:33+0000\n"
+"PO-Revision-Date: 2017-12-02 03:33+0000\n"
+"Last-Translator: Carlos Hormigo, 2018\n"
+"Language-Team: Catalan (Spain) (https://www.transifex.com/oca/teams/23907/ca_ES/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: ca_ES\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: crm_phonecall_summary_predefined
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary_create_uid
+msgid "Created by"
+msgstr "Creat per"
+
+#. module: crm_phonecall_summary_predefined
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary_create_date
+msgid "Created on"
+msgstr "Creat a"
+
+#. module: crm_phonecall_summary_predefined
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary_display_name
+msgid "Display Name"
+msgstr "Nom visible"
+
+#. module: crm_phonecall_summary_predefined
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary_id_4580
+msgid "ID"
+msgstr ""
+
+#. module: crm_phonecall_summary_predefined
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary___last_update
+msgid "Last Modified on"
+msgstr "Darrera modificació en"
+
+#. module: crm_phonecall_summary_predefined
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary_write_uid
+msgid "Last Updated by"
+msgstr "Darrera actualització per"
+
+#. module: crm_phonecall_summary_predefined
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary_write_date
+msgid "Last Updated on"
+msgstr "Darrera actualització el"
+
+#. module: crm_phonecall_summary_predefined
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary_name
+msgid "Name"
+msgstr "Nom"
+
+#. module: crm_phonecall_summary_predefined
+#: sql_constraint:crm.phonecall.summary:0
+msgid "Name must be unique"
+msgstr ""
+
+#. module: crm_phonecall_summary_predefined
+#: model:ir.model,name:crm_phonecall_summary_predefined.model_crm_phonecall
+msgid "Phonecall"
+msgstr ""
+
+#. module: crm_phonecall_summary_predefined
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary_phonecall_ids
+#: model:ir.ui.view,arch_db:crm_phonecall_summary_predefined.summary_form
+msgid "Phonecalls"
+msgstr ""
+
+#. module: crm_phonecall_summary_predefined
+#: model:ir.model.fields,help:crm_phonecall_summary_predefined.field_crm_phonecall_summary_phonecall_ids
+msgid "Phonecalls with this summary."
+msgstr ""
+
+#. module: crm_phonecall_summary_predefined
+#: model:ir.actions.act_window,name:crm_phonecall_summary_predefined.summary_action
+#: model:ir.ui.menu,name:crm_phonecall_summary_predefined.summary_menu
+msgid "Summaries"
+msgstr ""
+
+#. module: crm_phonecall_summary_predefined
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary_id
+msgid "Summary"
+msgstr ""
+
+#. module: crm_phonecall_summary_predefined
+#: model:ir.model,name:crm_phonecall_summary_predefined.model_crm_phonecall_summary
+msgid "crm.phonecall.summary"
+msgstr ""
