@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-02 14:15+0000\n"
-"PO-Revision-Date: 2016-11-22 16:25+0000\n"
+"POT-Creation-Date: 2017-12-02 03:30+0000\n"
+"PO-Revision-Date: 2018-02-02 14:11+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
 "Language-Team: Catalan (Spain) (http://www.transifex.com/oca/OCA-crm-8-0/language/ca_ES/)\n"
 "MIME-Version: 1.0\n"
@@ -118,7 +118,7 @@ msgstr ""
 #. module: lettermgmt
 #: field:letter.folder,code:0 field:letter.type,code:0
 msgid "Code"
-msgstr ""
+msgstr "Codi"
 
 #. module: lettermgmt
 #: sql_constraint:letter.folder:0 sql_constraint:letter.type:0
@@ -145,14 +145,14 @@ msgstr ""
 #: field:letter.folder,create_uid:0 field:letter.reassignment,create_uid:0
 #: field:letter.type,create_uid:0 field:res.letter,create_uid:0
 msgid "Created by"
-msgstr ""
+msgstr "Creat per"
 
 #. module: lettermgmt
 #: field:letter.category,create_date:0 field:letter.channel,create_date:0
 #: field:letter.folder,create_date:0 field:letter.reassignment,create_date:0
 #: field:letter.type,create_date:0 field:res.letter,create_date:0
 msgid "Created on"
-msgstr ""
+msgstr "Creat a"
 
 #. module: lettermgmt
 #: help:res.letter,message_last_post:0
@@ -169,7 +169,7 @@ msgstr ""
 #: field:letter.folder,display_name:0 field:letter.reassignment,display_name:0
 #: field:letter.type,display_name:0 field:res.letter,display_name:0
 msgid "Display Name"
-msgstr ""
+msgstr "Nom visible"
 
 #. module: lettermgmt
 #: selection:res.letter,state:0
@@ -252,21 +252,21 @@ msgstr ""
 #: field:letter.reassignment,__last_update:0 field:letter.type,__last_update:0
 #: field:res.letter,__last_update:0
 msgid "Last Modified on"
-msgstr ""
+msgstr "Darrera modificació en"
 
 #. module: lettermgmt
 #: field:letter.category,write_uid:0 field:letter.channel,write_uid:0
 #: field:letter.folder,write_uid:0 field:letter.reassignment,write_uid:0
 #: field:letter.type,write_uid:0 field:res.letter,write_uid:0
 msgid "Last Updated by"
-msgstr ""
+msgstr "Darrera actualització per"
 
 #. module: lettermgmt
 #: field:letter.category,write_date:0 field:letter.channel,write_date:0
 #: field:letter.folder,write_date:0 field:letter.reassignment,write_date:0
 #: field:letter.type,write_date:0 field:res.letter,write_date:0
 msgid "Last Updated on"
-msgstr ""
+msgstr "Darrera actualització el"
 
 #. module: lettermgmt
 #: field:letter.reassignment,letter_id:0
@@ -392,7 +392,7 @@ msgstr ""
 #: field:letter.folder,name:0 field:letter.reassignment,name:0
 #: field:letter.type,name:0
 msgid "Name"
-msgstr ""
+msgstr "Nom"
 
 #. module: lettermgmt
 #: field:res.letter,number:0
@@ -612,7 +612,7 @@ msgstr ""
 #. module: lettermgmt
 #: field:res.letter,type_id:0
 msgid "Type"
-msgstr ""
+msgstr "Tipus"
 
 #. module: lettermgmt
 #: help:res.letter,type_id:0
