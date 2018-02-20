@@ -19,7 +19,7 @@ To use this module, you need to:
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
-   :target: https://runbot.odoo-community.org/runbot/111/10.0
+   :target: https://runbot.odoo-community.org/runbot/111/11.0
 
 Bug Tracker
 ===========
@@ -41,6 +41,7 @@ Contributors
 * Oihane Crucelaegui <oihanecrucelaegi@avanzosc.es>
 * Alfredo de la Fuente <alfredodelafuente@avanzosc.es>
 * Vicent Cubells <vicent.cubells@tecnativa.com>
+* Pragya Chhabra <pragya.chhabra@linserv.se>
 
 Maintainer
 ----------
