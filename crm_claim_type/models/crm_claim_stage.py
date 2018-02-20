@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # © 2017 URSA Information Systems
 # © 2015 Vauxoo
 # © 2013 Camptocamp
