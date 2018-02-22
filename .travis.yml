@@ -12,6 +12,9 @@ addons:
       - expect-dev  # provides unbuffer utility
       - python-lxml  # because pip installation is slow
 
+before_script:
+  - psql -U postgres -c "CREATE EXTENSION fuzzystrmatch;"
+
 env:
   global:
   - VERSION="8.0" TESTS="0" LINT_CHECK="0" TRANSIFEX="0"
