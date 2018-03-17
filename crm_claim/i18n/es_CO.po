@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-27 03:30+0000\n"
-"PO-Revision-Date: 2018-01-27 03:30+0000\n"
+"POT-Creation-Date: 2018-03-03 03:39+0000\n"
+"PO-Revision-Date: 2018-03-03 03:39+0000\n"
 "Last-Translator: JOSE ALEJANDRO ECHEVERRI VALENCIA <josealejandroeche@gmail.com>, 2018\n"
 "Language-Team: Spanish (Colombia) (https://www.transifex.com/oca/teams/23907/es_CO/)\n"
 "MIME-Version: 1.0\n"
@@ -106,7 +106,7 @@ msgstr "Categorías de Reclamación"
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_date
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report_claim_date
 msgid "Claim Date"
-msgstr ""
+msgstr "Fecha de Reclamación"
 
 #. module: crm_claim
 #: model:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
@@ -643,7 +643,7 @@ msgstr ""
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report_user_id
 msgid "User"
-msgstr ""
+msgstr "Usuario"
 
 #. module: crm_claim
 #: model:crm.claim.category,name:crm_claim.categ_claim2
