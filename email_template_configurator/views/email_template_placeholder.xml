@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2018 ACSONE SA/NV
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<openerp>
+<data>
+
+    <record model="ir.ui.view" id="email_template_placeholder_form_view">
+        <field name="name">email.template.placeholder.form (in email_template_configurator)</field>
+        <field name="model">email.template.placeholder</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="active"/>
+                    </group>
+                    <group>
+                        <field name="model_id"/>
+                        <field name="placeholder"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="email_template_placeholder_search_view">
+        <field name="name">email.template.placeholder.search (in email_template_configurator)</field>
+        <field name="model">email.template.placeholder</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="model_id"/>
+                <group expand="0" string="Group by...">
+                    <filter string="Model" domain="[]" context="{'group_by':'model_id'}" icon="terp-accessories-archiver"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="email_template_placeholder_tree_view">
+        <field name="name">email.template.placeholder.tree (in email_template_configurator)</field>
+        <field name="model">email.template.placeholder</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="model_id"/>
+                <field name="placeholder"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="email_template_placeholder_act_window">
+        <field name="name">Template Placeholders</field>
+        <field name="res_model">email.template.placeholder</field>
+        <field name="view_mode">tree,form</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+    </record>
+
+    <record model="ir.ui.menu" id="email_template_placeholder_menu">
+        <field name="name">Template Placeholders</field>
+        <field name="parent_id" ref="base.menu_email"/>
+        <field name="action" ref="email_template_placeholder_act_window"/>
+    </record>
+
+</data>
+</openerp>

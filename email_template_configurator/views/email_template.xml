@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2018 ACSONE SA/NV
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<openerp>
+<data>
+
+    <record model="ir.ui.view" id="email_template_form_view">
+        <field name="name">email.template.form (in email_template_configurator)</field>
+        <field name="model">email.template</field>
+        <field name="inherit_id" ref="email_template.email_template_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[.//field[@name='model_object_field']]" position="attributes">
+                <attribute name="groups">email_template_configurator.group_email_template_placeholders_manager</attribute>
+            </xpath>
+            <xpath expr="//page[.//field[@name='model_object_field']]" position="after">
+                <page name="configured_placeholders" string="Configured Placeholders">
+                    <group>
+                        <field name="placeholder_id"
+                               domain="[('model_id','=',model_id)]"
+                               options="{'no_quick_create':True,'no_create_edit':True}"/>
+                        <field name="placeholder_value"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</data>
+</openerp>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2018 ACSONE SA/NV
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<openerp>
+<data>
+
+    <record id="group_email_template_placeholders_manager" model="res.groups">
+        <field name="name">Template Placeholders Manager</field>
+    </record>
+
+    <record model="ir.model.access" id="email_template_placeholder_access_user">
+        <field name="name">email.template.placeholder access user</field>
+        <field name="model_id" ref="model_email_template_placeholder"/>
+        <field name="group_id" ref="base.group_user"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_create" eval="0"/>
+        <field name="perm_write" eval="0"/>
+        <field name="perm_unlink" eval="0"/>
+    </record>
+
+    <record model="ir.model.access" id="email_template_placeholder_access_manager">
+        <field name="name">email.template.placeholder access manager</field>
+        <field name="model_id" ref="model_email_template_placeholder"/>
+        <field name="group_id" ref="group_email_template_placeholders_manager"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+</data>
+</openerp>
