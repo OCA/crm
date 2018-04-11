@@ -5,7 +5,7 @@
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
 <odoo>
     <menuitem id='root_menu' name='Tools'
-              parent='sales_team.menu_base_partner' sequence="25"/>
+              parent="crm.crm_menu_root" sequence="3"/>
     <menuitem id='partner_merge_automatic_menu'
               action='crm.action_partner_deduplicate'
               groups='group_automatically'

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # Copyright 2016 Tecnativa - Jairo Llopis
 # Copyright 2016 Tecnativa - Vicent Cubells
 # Copyright 2017 Tecnativa - Pedro M. Baeza
