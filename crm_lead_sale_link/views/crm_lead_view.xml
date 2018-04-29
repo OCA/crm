@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
-<openerp>
+<odoo>
     <data>
         <record id="crm_case_form_view_oppor" model="ir.ui.view" >
             <field name="name">CRM - Leads Form</field>
             <field name="model">crm.lead</field>
             <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
             <field name="arch" type="xml">
-                <div class="oe_right oe_button_box" position="inside">
+                <div class="oe_button_box" position="inside">
                     <div name="quotation_link_buttons">
                         <button
                                 class="oe_inline oe_stat_button"
@@ -33,4 +33,4 @@
             </field>
         </record>
     </data>
-</openerp>
+</odoo>

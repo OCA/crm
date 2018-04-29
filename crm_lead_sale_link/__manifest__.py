@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 ##############################################################################
 #
-#    OpenERP, Open Source Management Solution
+#    Odoo, Open Source Management Solution
 #    This module copyright (C) 2015 Savoir-faire Linux
 #    (<http://www.savoirfairelinux.com>).
 #
@@ -22,7 +22,7 @@
 
 {
     'name': 'CRM Lead Sale Link',
-    'version': '8.0.1.0.0',
+    'version': '10.0.0.1.0',
     'author': "Savoir-faire Linux,Odoo Community Association (OCA)",
     'license': 'AGPL-3',
     'category': 'Others',
@@ -36,6 +36,6 @@
     'data': [
         'views/crm_lead_view.xml',
     ],
-    'installable': False,
+    'installable': True,
     'application': True,
 }
