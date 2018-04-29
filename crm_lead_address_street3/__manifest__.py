@@ -20,7 +20,7 @@
 ##############################################################################
 {
     'name': 'Street3 in lead addresses',
-    'version': '8.0.0.1.0',
+    'version': '10.0.0.1.0',
     'author': "Camptocamp,Odoo Community Association (OCA)",
     'maintainer': 'Camptocamp',
     'category': 'Customer Relationship Management',
@@ -30,7 +30,7 @@
     'data': ['view/crm_lead_view.xml'],
     'demo': [],
     'test': ['test/test_street3.yml'],
-    'installable': False,
+    'installable': True,
     'auto_install': False,
     'license': 'AGPL-3',
     'application': False,

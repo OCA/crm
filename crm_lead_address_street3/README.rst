@@ -16,6 +16,7 @@ Contributors
 ------------
 
 * Romain Deheele (<romain.deheele@camptocamp.com>)
+* Abdulrhman Mohammed (<obeidgad@gmail.com> <a.abdeldaiem@dvit.me>)
 
 Maintainer
 ----------
