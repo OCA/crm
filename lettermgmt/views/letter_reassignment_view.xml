@@ -1,47 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- © 2018 Abdulrhman Mohammed <obeidgad@gmail.com - a.abdeldaiem@dvit.me>
+     © 2016 Iván Todorovich <ivan.todorovich@gmail.com>
+     © 2015 Holger Brunn <hbrunn@therp.nl>
+     © 2009 Sandy Carter <sandy.carter@savoirfairelinux.com>
+     © 2009 Parthiv Patel, Tech Receptives
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
 
-<openerp>
-  <data>
+<odoo>
+    <data>
 
-    <!-- Views -->
+        <!-- Views -->
 
-    <record model="ir.ui.view" id="letter_reassignment_tree_view">
-      <field name="name">Letter Reassignment Tree</field>
-      <field name="model">letter.reassignment</field>
-      <field name="arch" type="xml">
-        <tree string="Reassignment">
-          <field name="name"/>
-          <field name="comment"/>
-        </tree>
-      </field>
-    </record>
+        <record model="ir.ui.view" id="letter_reassignment_tree_view">
+            <field name="name">Letter Reassignment Tree</field>
+            <field name="model">letter.reassignment</field>
+            <field name="arch" type="xml">
+                <tree string="Reassignment">
+                    <field name="name"/>
+                    <field name="comment"/>
+                </tree>
+            </field>
+        </record>
 
-    <record model="ir.ui.view" id="letter_reassignment_form_view">
-      <field name="name">Letter Reassignment Form</field>
-      <field name="model">letter.reassignment</field>
-      <field name="arch" type="xml">
-        <form string="Reassignment">
-            <group>
-                <field name="name"/>
-                <field name="comment"/>
-            </group>
-        </form>
-      </field>
-    </record>
+        <record model="ir.ui.view" id="letter_reassignment_form_view">
+            <field name="name">Letter Reassignment Form</field>
+            <field name="model">letter.reassignment</field>
+            <field name="arch" type="xml">
+                <form string="Reassignment">
+                    <group>
+                        <field name="name"/>
+                        <field name="comment"/>
+                    </group>
+                </form>
+            </field>
+        </record>
 
-    <!-- Actions -->
+        <!-- Actions -->
 
-    <record model="ir.actions.act_window" id="action_letter_reassignment_tree_view">
-      <field name="name">Letter Reassignment</field>
-      <field name="type">ir.actions.act_window</field>
-      <field name="res_model">letter.reassignment</field>
-      <field name="view_type">form</field>
-      <field name="view_mode">tree,form</field>
-      <field name="view_id" ref="letter_reassignment_tree_view"/>
-    </record>
+        <record model="ir.actions.act_window" id="action_letter_reassignment_tree_view">
+            <field name="name">Letter Reassignment</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">letter.reassignment</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="letter_reassignment_tree_view"/>
+        </record>
 
-    <!-- Menus -->
+        <!-- Menus -->
 
 
-  </data>
-</openerp>
+    </data>
+</odoo>

@@ -2,8 +2,8 @@
 "access_res_letter","res_letter_user","model_res_letter","base.group_user",1,1,1,1
 "access_letter_type_user","letter_type_user","model_letter_type","base.group_user",1,0,0,0
 "access_letter_type_system","letter_type_system","model_letter_type","base.group_system",1,1,1,1
-"access_letter_class_user","letter_class_user","model_letter_class","base.group_user",1,0,0,0
-"access_letter_class_system","letter_class_system","model_letter_class","base.group_system",1,1,1,1
+"access_letter_category_user","letter_category_user","model_letter_category","base.group_user",1,0,0,0
+"access_letter_category_system","letter_category_system","model_letter_category","base.group_system",1,1,1,1
 "access_letter_channel_user","letter_channel_user","model_letter_channel","base.group_user",1,0,0,0
 "access_letter_channel_system","letter_channel_system","model_letter_channel","base.group_system",1,1,1,1
 "access_letter_folder_user","letter_folder_user","model_letter_folder","base.group_user",1,0,0,0

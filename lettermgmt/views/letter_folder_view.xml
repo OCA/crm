@@ -1,52 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- © 2018 Abdulrhman Mohammed <obeidgad@gmail.com - a.abdeldaiem@dvit.me>
+     © 2016 Iván Todorovich <ivan.todorovich@gmail.com>
+     © 2015 Holger Brunn <hbrunn@therp.nl>
+     © 2009 Sandy Carter <sandy.carter@savoirfairelinux.com>
+     © 2009 Parthiv Patel, Tech Receptives
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
 
-<openerp>
-  <data>
+<odoo>
+    <data>
 
-    <!-- Views -->
+        <!-- Views -->
 
-    <record model="ir.ui.view" id="letter_folder_tree_view">
-      <field name="name">Letter Folder Tree</field>
-      <field name="model">letter.folder</field>
-      <field name="arch" type="xml">
-        <tree string="Letter Folder">
-          <field name="code"/>
-          <field name="name"/>
-        </tree>
-      </field>
-    </record>
+        <record model="ir.ui.view" id="letter_folder_tree_view">
+            <field name="name">Letter Folder Tree</field>
+            <field name="model">letter.folder</field>
+            <field name="arch" type="xml">
+                <tree string="Letter Folder">
+                    <field name="code"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
 
-    <record model="ir.ui.view" id="letter_folder_form_view">
-      <field name="name">Letter Folder Form</field>
-      <field name="model">letter.folder</field>
-      <field name="arch" type="xml">
-        <form string="Letter Folder">
-            <group>
-                <field name="code"/>
-                <field name="name"/>
-            </group>
-        </form>
-      </field>
-    </record>
+        <record model="ir.ui.view" id="letter_folder_form_view">
+            <field name="name">Letter Folder Form</field>
+            <field name="model">letter.folder</field>
+            <field name="arch" type="xml">
+                <form string="Letter Folder">
+                    <group>
+                        <field name="code"/>
+                        <field name="name"/>
+                    </group>
+                </form>
+            </field>
+        </record>
 
-    <!-- Actions -->
+        <!-- Actions -->
 
-    <record model="ir.actions.act_window" id="action_letter_folder_tree_view">
-      <field name="name">Letter Folders</field>
-      <field name="type">ir.actions.act_window</field>
-      <field name="res_model">letter.folder</field>
-      <field name="view_type">form</field>
-      <field name="view_mode">tree,form</field>
-      <field name="view_id" ref="letter_folder_tree_view"/>
-    </record>
+        <record model="ir.actions.act_window" id="action_letter_folder_tree_view">
+            <field name="name">Letter Folders</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">letter.folder</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="letter_folder_tree_view"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to create a letter folder.
+                    Use folders to group a series of letters.
+                </p>
+            </field>
+        </record>
 
-    <!-- Menus -->
+        <!-- Menus -->
 
-    <menuitem id="letter_folder_menu"
-              name="Letter Folders"
-              parent="letter_log_config_menu"
-              sequence="1"
-              action="action_letter_folder_tree_view"/>
+        <menuitem id="letter_folder_menu"
+                  name="Letter Folders"
+                  parent="letter_log_config_menu"
+                  sequence="1"
+                  action="action_letter_folder_tree_view"/>
 
-  </data>
-</openerp>
+    </data>
+</odoo>

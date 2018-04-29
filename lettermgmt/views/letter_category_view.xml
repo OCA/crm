@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- © 2018 Abdulrhman Mohammed <obeidgad@gmail.com - a.abdeldaiem@dvit.me>
+     © 2016 Iván Todorovich <ivan.todorovich@gmail.com>
+     © 2015 Holger Brunn <hbrunn@therp.nl>
+     © 2009 Sandy Carter <sandy.carter@savoirfairelinux.com>
+     © 2009 Parthiv Patel, Tech Receptives
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+    <data>
+
+        <!-- Views -->
+
+        <record model="ir.ui.view" id="letter_category_tree_view">
+            <field name="model">letter.category</field>
+            <field name="arch" type="xml">
+                <tree string="Letter Category">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="letter_category_form_view">
+            <field name="model">letter.category</field>
+            <field name="arch" type="xml">
+                <form string="Letter Category">
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <!-- Actions -->
+
+        <record model="ir.actions.act_window" id="action_letter_category_tree_view">
+            <field name="name">Letter Category</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">letter.category</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="letter_category_tree_view"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to create a letter category.
+                </p>
+                <p>
+                    Use categories to classify letters.
+                    Eg: Classified, Confidential, Personal...
+                </p>
+            </field>
+        </record>
+
+        <!-- Menus -->
+
+        <menuitem id="letter_category_menu"
+                  name="Letter Category"
+                  parent="letter_log_config_menu"
+                  action="action_letter_category_tree_view"/>
+
+    </data>
+</odoo>
