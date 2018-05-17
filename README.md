@@ -15,7 +15,7 @@ addon | version | summary
 [crm_claim](crm_claim/) | 10.0.1.0.0 | Track your customers/vendors claims and grievances.
 [crm_claim_code](crm_claim_code/) | 10.0.1.0.0 | Sequential Code for Claims
 [crm_claim_type](crm_claim_type/) | 10.0.1.0.0 | Claim types for CRM
-[crm_deduplicate_acl](crm_deduplicate_acl/) | 10.0.1.1.0 | Contact deduplication with fine-grained permission control
+[crm_deduplicate_acl](crm_deduplicate_acl/) | 10.0.1.1.1 | Contact deduplication with fine-grained permission control
 [crm_deduplicate_filter](crm_deduplicate_filter/) | 10.0.1.0.0 | Exclude records from the deduplication
 [crm_lead_code](crm_lead_code/) | 10.0.1.0.0 | Sequential Code for Leads / Opportunities
 [crm_lead_website](crm_lead_website/) | 10.0.1.0.0 | Add Website field to leads
