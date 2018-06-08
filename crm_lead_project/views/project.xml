@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="edit_project_inherit" model="ir.ui.view">
+        <field name="name">project.project.form.inherit</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <field name="lead_id" invisible="1" />
+                <button name="action_open_opportunity_form" string="Opportunity"
+                        type="object" class="oe_stat_button"
+                        icon="fa-star"
+                        attrs="{'invisible': [('lead_id', '=', False)]}" />
+            </xpath>
+        </field>
+    </record>
+</odoo>
