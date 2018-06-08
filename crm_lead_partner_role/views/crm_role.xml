@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="crm_role_tree" model="ir.ui.view">
+        <field name="name">crm.role.tree</field>
+        <field name="model">crm.role</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+    <record id="crm_role_action" model="ir.actions.act_window">
+        <field name="name">Roles</field>
+        <field name="res_model">crm.role</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="crm_lead_partner_role.crm_role_tree" />
+    </record>
+    <menuitem action="crm_lead_partner_role.crm_role_action" id="menu_action_crm_role" parent="crm.menu_crm_config_lead" sequence="10" />
+</odoo>
