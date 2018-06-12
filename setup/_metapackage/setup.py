@@ -10,6 +10,7 @@ setuptools.setup(
     install_requires=[
         'odoo11-addon-crm_claim',
         'odoo11-addon-crm_deduplicate_acl',
+        'odoo11-addon-crm_deduplicate_filter',
     ],
     classifiers=[
         'Programming Language :: Python',
