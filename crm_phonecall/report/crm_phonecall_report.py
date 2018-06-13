@@ -2,6 +2,7 @@
 # Copyright 2004-2010 Tiny SPRL (<http://tiny.be>)
 # Copyright 2017 Tecnativa - Vicent Cubells
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+from psycopg2.extensions import AsIs
 
 from odoo import tools
 from odoo import api, fields, models
@@ -125,8 +126,11 @@ class CrmPhonecallReport(models.Model):
     def init(self):
 
         tools.drop_view_if_exists(self._cr, self._table)
-        self._cr.execute("""
+        self._cr.execute(
+            """
             create or replace view %s as (
                 %s
                 %s
-            )""" % (self._table, self._select(), self._from()))
+            )""", (
+                AsIs(self._table), AsIs(self._select()), AsIs(self._from()))
+            )
