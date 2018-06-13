@@ -15,12 +15,12 @@ class CrmLead(models.Model):
         string='Phonecalls',
     )
     phonecall_count = fields.Integer(
-        compute='_phonecall_count',
+        compute='_compute_phonecall_count',
         string="Phonecalls",
     )
 
     @api.multi
-    def _phonecall_count(self):
+    def _compute_phonecall_count(self):
         for lead in self:
             lead.phonecall_count = self.env[
                 'crm.phonecall'].search_count(
