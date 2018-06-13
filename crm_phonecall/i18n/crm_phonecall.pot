@@ -1,23 +1,17 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * crm_phonecall
+#	* crm_phonecall
 #
-# Translators:
-# OCA Transbot <transbot@odoo-community.org>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-01 02:38+0000\n"
-"PO-Revision-Date: 2017-06-01 02:38+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
-"Language-Team: Spanish (Paraguay) (https://www.transifex.com/oca/teams/23907/"
-"es_PY/)\n"
-"Language: es_PY\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: \n"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report_nbr_cases
@@ -87,7 +81,8 @@ msgid "Calls Date by Month"
 msgstr ""
 
 #. module: crm_phonecall
-#: selection:crm.phonecall,state:0 selection:crm.phonecall.report,state:0
+#: selection:crm.phonecall,state:0
+#: selection:crm.phonecall.report,state:0
 msgid "Cancelled"
 msgstr ""
 
@@ -156,8 +151,7 @@ msgstr ""
 
 #. module: crm_phonecall
 #: model:ir.actions.act_window,help:crm_phonecall.crm_phonecall_categ_action
-msgid ""
-"Create specific phone call categories to better define the type of\n"
+msgid "Create specific phone call categories to better define the type of\n"
 "            calls tracked in the system."
 msgstr ""
 
@@ -165,12 +159,12 @@ msgstr ""
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall_create_uid
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_create_uid
 msgid "Created by"
-msgstr "Creado por"
+msgstr ""
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall_create_date
 msgid "Created on"
-msgstr "Creado en"
+msgstr ""
 
 #. module: crm_phonecall
 #: model:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
@@ -269,7 +263,8 @@ msgid "Group By"
 msgstr ""
 
 #. module: crm_phonecall
-#: selection:crm.phonecall,state:0 selection:crm.phonecall.report,state:0
+#: selection:crm.phonecall,state:0
+#: selection:crm.phonecall.report,state:0
 #: model:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
 msgid "Held"
 msgstr ""
@@ -285,12 +280,11 @@ msgstr ""
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_id
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report_id
 msgid "ID"
-msgstr "ID"
+msgstr ""
 
 #. module: crm_phonecall
 #: model:ir.actions.act_window,help:crm_phonecall.crm_case_categ_phone_incoming0
-msgid ""
-"In order to follow up on the call, you can trigger a request for\n"
+msgid "In order to follow up on the call, you can trigger a request for\n"
 "            another call, a meeting or an opportunity."
 msgstr ""
 
@@ -310,13 +304,13 @@ msgstr ""
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall_write_uid
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_write_uid
 msgid "Last Updated by"
-msgstr "Ultima actualización por"
+msgstr ""
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall_write_date
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_write_date
 msgid "Last Updated on"
-msgstr "Ultima actualización en"
+msgstr ""
 
 #. module: crm_phonecall
 #: model:ir.model,name:crm_phonecall.model_crm_lead
@@ -425,17 +419,14 @@ msgstr ""
 
 #. module: crm_phonecall
 #: model:ir.actions.act_window,help:crm_phonecall.crm_case_categ_phone_outgoing0
-msgid ""
-"Odoo allows you to easily define all the calls to be done\n"
+msgid "Odoo allows you to easily define all the calls to be done\n"
 "            by your sales team and follow up based on their summary."
 msgstr ""
 
 #. module: crm_phonecall
 #: model:ir.actions.act_window,help:crm_phonecall.crm_case_categ_phone_incoming0
-msgid ""
-"Odoo allows you to log inbound calls on the fly to track the\n"
-"            history of the communication with a customer or to inform "
-"another\n"
+msgid "Odoo allows you to log inbound calls on the fly to track the\n"
+"            history of the communication with a customer or to inform another\n"
 "            team member."
 msgstr ""
 
@@ -458,7 +449,8 @@ msgid "Partner"
 msgstr ""
 
 #. module: crm_phonecall
-#: selection:crm.phonecall,state:0 selection:crm.phonecall.report,state:0
+#: selection:crm.phonecall,state:0
+#: selection:crm.phonecall.report,state:0
 msgid "Pending"
 msgstr ""
 
@@ -658,8 +650,7 @@ msgstr ""
 
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall_state
-msgid ""
-"The status is set to Confirmed, when a case is created.\n"
+msgid "The status is set to Confirmed, when a case is created.\n"
 "When the call is over, the status is set to Held.\n"
 "If the callis not applicable anymore, the status can be set to Cancelled."
 msgstr ""
@@ -697,7 +688,7 @@ msgstr ""
 
 #. module: crm_phonecall
 #: model:ir.actions.act_window,help:crm_phonecall.crm_case_categ_phone_outgoing0
-msgid ""
-"You can use the import feature to massively import a new list of\n"
+msgid "You can use the import feature to massively import a new list of\n"
 "            prospects to qualify."
 msgstr ""
+
