@@ -15,12 +15,13 @@ class CrmLead(models.Model):
         comodel_name='res.partner.sector', string="Secondary Sectors",
         domain="[('id', '!=', sector_id)]")
 
-    @api.one
     @api.constrains('sector_id', 'secondary_sector_ids')
     def _check_sectors(self):
-        if self.sector_id in self.secondary_sector_ids:
-            raise exceptions.UserError(_('The secondary sectors must be '
-                                       'different from the main sector.'))
+        for lead in self:
+            if lead.sector_id in lead.secondary_sector_ids:
+                raise exceptions.UserError(_(
+                    'The secondary sectors must be different from the main '
+                    'sector.'))
 
     @api.multi
     def _lead_create_contact(self, name, is_company,

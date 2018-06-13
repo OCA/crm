@@ -2,6 +2,7 @@
 # Copyright 2015-2017 Odoo S.A.
 # Copyright 2017 Vicent Cubells <vicent.cubells@tecnativa.com>
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
+from psycopg2.extensions import AsIs
 
 from odoo import api, fields, models, tools
 
@@ -159,12 +160,14 @@ class CrmClaimReport(models.Model):
          """
 
         tools.drop_view_if_exists(self.env.cr, self._table)
-        self.env.cr.execute("""
+        self.env.cr.execute(
+            """
             CREATE OR REPLACE VIEW %s AS (
                 %s
                 from
                 %s
                 %s
-            )""" % (
-            self._table, self._select(), self._from(), self._group_by(),
-        ))
+            )""", (
+                AsIs(self._table), AsIs(self._select()), AsIs(self._from()),
+                AsIs(self._group_by()),
+            ))
