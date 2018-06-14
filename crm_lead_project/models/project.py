@@ -37,3 +37,10 @@ class ProjectProject(models.Model):
             root.set('create', 'false')
             res['arch'] = etree.tostring(root)
         return res
+
+
+class ProjectTask(models.Model):
+
+    _inherit = 'project.task'
+
+    crm_project = fields.Boolean(related='project_id.crm_project')

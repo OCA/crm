@@ -17,6 +17,7 @@
     ],
     "data": [
         "views/crm_lead.xml",
+        "views/crm_project.xml",
         "views/project.xml",
         "wizard/crm_lead_to_opportunity.xml",
     ],
