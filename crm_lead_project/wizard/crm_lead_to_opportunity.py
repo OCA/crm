@@ -24,6 +24,18 @@ class Lead2OpportunityPartner(models.TransientModel):
         }
 
     @api.multi
+    def create_projects(self, leads):
+        for lead in leads:
+            project_obj = self.env['project.project']
+            project_values = self._prepare_project_values(leads)
+            if project_obj.check_access_rights(
+                    'create', raise_exception=False):
+                project = project_obj.create(project_values)
+            else:
+                project = project_obj.sudo().create(project_values)
+            lead.write({'project_id': project.id})
+
+    @api.multi
     def action_apply(self):
         self.ensure_one()
 
@@ -41,14 +53,7 @@ class Lead2OpportunityPartner(models.TransientModel):
         values.update({'lead_ids': leads.ids, 'user_ids': [self.user_id.id]})
         self._convert_opportunity(values)
         # Create the project
-        for lead in leads:
-            project_obj = self.env['project.project']
-            project_values = self._prepare_project_values(leads)
-            if project_obj.check_access_rights('create'):
-                project = project_obj.create(project_values)
-            else:
-                project = project_obj.sudo().create(project_values)
-            lead.write({'project_id': project.id})
+        self.create_projects(leads)
         return leads.redirect_opportunity_view()
 
 

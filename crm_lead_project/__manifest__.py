@@ -16,6 +16,7 @@
         "project",
     ],
     "data": [
+        "wizard/crm_opportunity_create_project.xml",
         "views/crm_lead.xml",
         "views/crm_project.xml",
         "views/project.xml",

@@ -12,6 +12,10 @@
                         icon="fa-puzzle-piece"
                         attrs="{'invisible': [('project_id', '=', False)]}" />
             </xpath>
+            <xpath expr="//header" position="inside">
+                <button name="%(crm_lead_project.crm_opportunity_create_project_action)d" string="Create project" type="action" class="btn-link"
+                            attrs="{'invisible': [('project_id', '!=', False)]}"/>
+            </xpath>
         </field>
     </record>
 </odoo>

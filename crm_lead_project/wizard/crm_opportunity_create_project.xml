@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_crm_opportunity_create_project" model="ir.ui.view">
+        <field name="name">crm.opportunity.create.project.form</field>
+        <field name="model">crm.opportunity.create.project</field>
+        <field name="arch" type="xml">
+            <form string="Create project">
+                <group name="project_action" string="Project">
+                    <field name="use_tasks" />
+                </group>
+                <footer>
+                    <button name="action_create_project" string="Create Project" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-default" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="crm_opportunity_create_project_action" model="ir.actions.act_window">
+        <field name="name">Create project</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">crm.opportunity.create.project</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_crm_opportunity_create_project"/>
+        <field name="target">new</field>
+    </record>
+</odoo>
