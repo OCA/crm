@@ -4,10 +4,8 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 8.0\n"
+"Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-27 15:46+0000\n"
-"PO-Revision-Date: 2015-07-27 15:46+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,7 +14,7 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: crm_lead_code
-#: field:crm.lead,code:0
+#: model:ir.model.fields,field_description:crm_lead_code.field_crm_lead_code
 msgid "Lead Number"
 msgstr ""
 
@@ -26,7 +24,9 @@ msgid "Lead/Opportunity"
 msgstr ""
 
 #. module: crm_lead_code
+#: code:addons/crm_lead_code/models/crm_lead.py:17
 #: sql_constraint:crm.lead:0
+#, python-format
 msgid "The code must be unique!"
 msgstr ""
 
