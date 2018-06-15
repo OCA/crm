@@ -27,7 +27,7 @@ class Lead2OpportunityPartner(models.TransientModel):
     def create_projects(self, leads):
         for lead in leads:
             project_obj = self.env['project.project']
-            project_values = self._prepare_project_values(leads)
+            project_values = self._prepare_project_values(lead)
             if project_obj.check_access_rights(
                     'create', raise_exception=False):
                 project = project_obj.create(project_values)
