@@ -9,7 +9,7 @@ class CrmLead(models.Model):
 
     _inherit = 'crm.lead'
 
-    project_id = fields.Many2one('project.project')
+    project_id = fields.Many2one('project.project', readonly=True)
 
     @api.multi
     def action_open_project_form(self):

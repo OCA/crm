@@ -9,8 +9,8 @@ class ProjectProject(models.Model):
 
     _inherit = 'project.project'
 
-    crm_project = fields.Boolean()
-    lead_id = fields.Many2one('crm.lead')
+    crm_project = fields.Boolean(readonly=True)
+    lead_id = fields.Many2one('crm.lead', readonly=True)
 
     @api.multi
     def action_open_opportunity_form(self):
@@ -37,10 +37,3 @@ class ProjectProject(models.Model):
             root.set('create', 'false')
             res['arch'] = etree.tostring(root)
         return res
-
-
-class ProjectTask(models.Model):
-
-    _inherit = 'project.task'
-
-    crm_project = fields.Boolean(related='project_id.crm_project')

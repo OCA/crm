@@ -6,7 +6,7 @@
         <field name="res_model">project.task</field>
         <field name="view_type">form</field>
         <field name="view_mode">kanban,tree,form,calendar,pivot,graph</field>
-        <field name="domain">[('crm_project', '=', True)]</field>
+        <field name="domain">[('project_id.crm_project', '=', True)]</field>
     </record>
 
     <record id="crm_project_projects_action" model="ir.actions.act_window">
