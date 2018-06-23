@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * crm_deduplicate_acl
-# 
+#
 # Translators:
 # OCA Transbot <transbot@odoo-community.org>, 2016
 # Rudolf Schnapka <rs@techno-flex.de>, 2017
@@ -13,10 +13,10 @@ msgstr ""
 "PO-Revision-Date: 2017-03-28 02:27+0000\n"
 "Last-Translator: Rudolf Schnapka <rs@techno-flex.de>, 2017\n"
 "Language-Team: German (https://www.transifex.com/oca/teams/23907/de/)\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: crm_deduplicate_acl
@@ -34,6 +34,11 @@ msgstr "Deduplizieren der Kontakte"
 #: model:res.groups,name:crm_deduplicate_acl.group_manually
 msgid "Manually"
 msgstr "Manuell"
+
+#. module: crm_deduplicate_acl
+#: model:ir.model,name:crm_deduplicate_acl.model_res_partner
+msgid "Partner"
+msgstr ""
 
 #. module: crm_deduplicate_acl
 #: model:ir.ui.menu,name:crm_deduplicate_acl.root_menu
