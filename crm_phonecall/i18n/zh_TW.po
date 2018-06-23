@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * crm_phonecall
-# 
+#
 # Translators:
 # OCA Transbot <transbot@odoo-community.org>, 2017
 msgid ""
@@ -11,11 +11,12 @@ msgstr ""
 "POT-Creation-Date: 2017-03-28 02:27+0000\n"
 "PO-Revision-Date: 2017-03-28 02:27+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
-"Language-Team: Chinese (Taiwan) (https://www.transifex.com/oca/teams/23907/zh_TW/)\n"
+"Language-Team: Chinese (Taiwan) (https://www.transifex.com/oca/teams/23907/"
+"zh_TW/)\n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: zh_TW\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. module: crm_phonecall
@@ -79,6 +80,8 @@ msgid "Call summary"
 msgstr ""
 
 #. module: crm_phonecall
+#: model:ir.ui.view,arch_db:crm_phonecall.crm_case_form_view_leads
+#: model:ir.ui.view,arch_db:crm_phonecall.crm_case_form_view_oppor
 #: model:ir.ui.view,arch_db:crm_phonecall.view_partners_form_crm_calls
 msgid "Calls"
 msgstr ""
@@ -86,6 +89,11 @@ msgstr ""
 #. module: crm_phonecall
 #: model:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
 msgid "Calls Date by Month"
+msgstr ""
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_campaign_id
+msgid "Campaign"
 msgstr ""
 
 #. module: crm_phonecall
@@ -361,6 +369,7 @@ msgid "Last Updated on"
 msgstr "最後更新於"
 
 #. module: crm_phonecall
+#: model:ir.model,name:crm_phonecall.model_crm_lead
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_opportunity_id
 msgid "Lead/Opportunity"
 msgstr ""
@@ -385,6 +394,11 @@ msgstr ""
 #: selection:crm.phonecall,priority:0
 #: selection:crm.phonecall.report,priority:0
 msgid "Low"
+msgstr ""
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_medium_id
+msgid "Medium"
 msgstr ""
 
 #. module: crm_phonecall
@@ -495,7 +509,8 @@ msgstr ""
 #: model:ir.actions.act_window,help:crm_phonecall.crm_case_categ_phone_incoming0
 msgid ""
 "Odoo allows you to log inbound calls on the fly to track the\n"
-"            history of the communication with a customer or to inform another\n"
+"            history of the communication with a customer or to inform "
+"another\n"
 "            team member."
 msgstr ""
 
@@ -530,7 +545,7 @@ msgid "Phone"
 msgstr ""
 
 #. module: crm_phonecall
-#: code:addons/crm_phonecall/models/crm_phonecall.py:192
+#: code:addons/crm_phonecall/models/crm_phonecall.py:195
 #: model:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
 #, python-format
 msgid "Phone Call"
@@ -611,6 +626,8 @@ msgid "Phonecall To Phonecall"
 msgstr ""
 
 #. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_lead_phonecall_count
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_lead_phonecall_ids
 #: model:ir.model.fields,field_description:crm_phonecall.field_res_partner_phonecall_count
 #: model:ir.model.fields,field_description:crm_phonecall.field_res_partner_phonecall_ids
 #: model:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
@@ -695,6 +712,11 @@ msgid "Show Scheduled Calls Menu"
 msgstr ""
 
 #. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_source_id
+msgid "Source"
+msgstr ""
+
+#. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report_state
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_state
 #: model:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
@@ -730,6 +752,25 @@ msgid "These people will receive email."
 msgstr ""
 
 #. module: crm_phonecall
+#: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall_campaign_id
+msgid ""
+"This is a name that helps you keep track of your different campaign efforts "
+"Ex: Fall_Drive, Christmas_Special"
+msgstr ""
+
+#. module: crm_phonecall
+#: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall_medium_id
+msgid "This is the method of delivery. Ex: Postcard, Email, or Banner Ad"
+msgstr ""
+
+#. module: crm_phonecall
+#: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall_source_id
+msgid ""
+"This is the source of the link Ex: Search Engine, another domain, or name of "
+"email list"
+msgstr ""
+
+#. module: crm_phonecall
 #: model:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
 msgid "To Do"
 msgstr ""
@@ -738,6 +779,11 @@ msgstr ""
 #: selection:crm.phonecall.report,state:0
 #: model:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
 msgid "Todo"
+msgstr ""
+
+#. module: crm_phonecall
+#: model:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
+msgid "Tracking"
 msgstr ""
 
 #. module: crm_phonecall
