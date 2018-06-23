@@ -1,28 +1,21 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * crm_phonecall_planner
+#	* crm_phonecall_planner
 #
-# Translators:
-# OCA Transbot <transbot@odoo-community.org>, 2018
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-13 03:59+0000\n"
-"PO-Revision-Date: 2018-03-13 03:59+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2018\n"
-"Language-Team: Danish (https://www.transifex.com/oca/teams/23907/da/)\n"
-"Language: da\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: \n"
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner_repeat_calls
-msgid ""
-"Allow repeated calls for the same partner, campaign, medium and source "
-"combination?"
+msgid "Allow repeated calls for the same partner, campaign, medium and source combination?"
 msgstr ""
 
 #. module: crm_phonecall_planner
@@ -48,17 +41,17 @@ msgstr ""
 #. module: crm_phonecall_planner
 #: model:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
 msgid "Cancel"
-msgstr "Annuller"
+msgstr ""
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_create_uid
 msgid "Created by"
-msgstr "Oprettet af"
+msgstr ""
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_create_date
 msgid "Created on"
-msgstr "Oprettet den"
+msgstr ""
 
 #. module: crm_phonecall_planner
 #: model:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
@@ -73,7 +66,7 @@ msgstr ""
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_display_name
 msgid "Display Name"
-msgstr "Vist navn"
+msgstr ""
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_end
@@ -93,22 +86,22 @@ msgstr ""
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_id
 msgid "ID"
-msgstr "Id"
+msgstr ""
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner___last_update
 msgid "Last Modified on"
-msgstr "Sidst ændret den"
+msgstr ""
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_write_uid
 msgid "Last Updated by"
-msgstr "Sidst opdateret af"
+msgstr ""
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_write_date
 msgid "Last Updated on"
-msgstr "Sidst opdateret den"
+msgstr ""
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner_duration
@@ -118,7 +111,7 @@ msgstr ""
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_medium_id
 msgid "Medium"
-msgstr "Medium"
+msgstr ""
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_res_partner_domain
@@ -163,16 +156,12 @@ msgstr ""
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner_start
-msgid ""
-"Schedule calls from this moment. The time you select will be used as the "
-"plan starting time for each day in the range."
+msgid "Schedule calls from this moment. The time you select will be used as the plan starting time for each day in the range."
 msgstr ""
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner_end
-msgid ""
-"Schedule calls until this moment. The time you select will be used as the "
-"plan ending time for each day in the range."
+msgid "Schedule calls until this moment. The time you select will be used as the plan ending time for each day in the range."
 msgstr ""
 
 #. module: crm_phonecall_planner
@@ -204,13 +193,11 @@ msgstr ""
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_tag_ids
 msgid "Tags"
-msgstr "Tags"
+msgstr ""
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner_campaign_id
-msgid ""
-"This is a name that helps you keep track of your different campaign efforts "
-"Ex: Fall_Drive, Christmas_Special"
+msgid "This is a name that helps you keep track of your different campaign efforts Ex: Fall_Drive, Christmas_Special"
 msgstr ""
 
 #. module: crm_phonecall_planner
@@ -220,12 +207,11 @@ msgstr ""
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner_source_id
-msgid ""
-"This is the source of the link Ex: Search Engine, another domain, or name of "
-"email list"
+msgid "This is the source of the link Ex: Search Engine, another domain, or name of email list"
 msgstr ""
 
 #. module: crm_phonecall_planner
 #: model:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
 msgid "Times"
 msgstr ""
+
