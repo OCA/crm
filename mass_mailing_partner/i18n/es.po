@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * mass_mailing_partner
-# 
+#
 # Translators:
 # Pedro M. Baeza <pedro.baeza@gmail.com>, 2016
 msgid ""
@@ -11,11 +11,12 @@ msgstr ""
 "POT-Creation-Date: 2016-11-02 14:15+0000\n"
 "PO-Revision-Date: 2016-11-25 14:55+0000\n"
 "Last-Translator: Pedro M. Baeza <pedro.baeza@gmail.com>\n"
-"Language-Team: Spanish (http://www.transifex.com/oca/OCA-crm-8-0/language/es/)\n"
+"Language-Team: Spanish (http://www.transifex.com/oca/OCA-crm-8-0/language/"
+"es/)\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: mass_mailing_partner
@@ -156,7 +157,9 @@ msgstr "IDS de empresas"
 msgid ""
 "This partner '%s' is subscribed to one or more mailing lists. Email must be "
 "assigned."
-msgstr "Esta empresa '%s' está suscrita a una o más listas de correo. El email debe estar asignado."
+msgstr ""
+"Esta empresa '%s' está suscrita a una o más listas de correo. El email debe "
+"estar asignado."
 
 #. module: mass_mailing_partner
 #: view:partner.mail.list.wizard:mass_mailing_partner.partner_mail_list_wizard_form

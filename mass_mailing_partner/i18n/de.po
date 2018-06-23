@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * mass_mailing_partner
-# 
+#
 # Translators:
 # Rudolf Schnapka <rs@techno-flex.de>, 2017
 msgid ""
@@ -11,11 +11,12 @@ msgstr ""
 "POT-Creation-Date: 2017-03-28 02:26+0000\n"
 "PO-Revision-Date: 2017-04-19 11:44+0000\n"
 "Last-Translator: Rudolf Schnapka <rs@techno-flex.de>\n"
-"Language-Team: German (http://www.transifex.com/oca/OCA-crm-8-0/language/de/)\n"
+"Language-Team: German (http://www.transifex.com/oca/OCA-crm-8-0/language/"
+"de/)\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: mass_mailing_partner
@@ -156,7 +157,9 @@ msgstr "Partner IDs"
 msgid ""
 "This partner '%s' is subscribed to one or more mailing lists. Email must be "
 "assigned."
-msgstr "Dieser Partner '%s' ist in mehreren Mailverteilern eingetragen. Eine Email-Anschrift muss eingepflegt sein."
+msgstr ""
+"Dieser Partner '%s' ist in mehreren Mailverteilern eingetragen. Eine Email-"
+"Anschrift muss eingepflegt sein."
 
 #. module: mass_mailing_partner
 #: view:partner.mail.list.wizard:mass_mailing_partner.partner_mail_list_wizard_form
