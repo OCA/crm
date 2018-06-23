@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * newsletter
-# 
+#
 # Translators:
 msgid ""
 msgstr ""
@@ -10,12 +10,14 @@ msgstr ""
 "POT-Creation-Date: 2016-12-24 01:15+0000\n"
 "PO-Revision-Date: 2016-12-27 08:25+0000\n"
 "Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
-"Language-Team: Serbian (http://www.transifex.com/oca/OCA-crm-8-0/language/sr/)\n"
+"Language-Team: Serbian (http://www.transifex.com/oca/OCA-crm-8-0/language/"
+"sr/)\n"
+"Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: sr\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. module: newsletter
 #: model:email.template,subject:newsletter.email_template_newsletter_default
@@ -76,6 +78,11 @@ msgstr ""
 #. module: newsletter
 #: view:email_template.preview:newsletter.email_template_preview_form
 msgid "Email Preview"
+msgstr ""
+
+#. module: newsletter
+#: model:ir.model,name:newsletter.model_email_template_preview
+msgid "Email Template Preview"
 msgstr ""
 
 #. module: newsletter
@@ -197,6 +204,7 @@ msgid "Recipients"
 msgstr ""
 
 #. module: newsletter
+#: view:email_template.preview:newsletter.email_template_preview_form
 #: view:newsletter.newsletter:newsletter.form_newsletter
 msgid "Send"
 msgstr ""
@@ -238,6 +246,11 @@ msgid "Test newsletter"
 msgstr ""
 
 #. module: newsletter
+#: field:email_template.preview,newsletter_test_recipient:0
+msgid "Test recipient"
+msgstr ""
+
+#. module: newsletter
 #: selection:newsletter.newsletter,state:0
 msgid "Testing"
 msgstr ""
@@ -273,4 +286,14 @@ msgstr "Tip"
 #: code:addons/newsletter/model/newsletter_newsletter.py:137
 #, python-format
 msgid "You can't delete sent newsletters!"
+msgstr ""
+
+#. module: newsletter
+#: view:email_template.preview:newsletter.email_template_preview_form
+msgid "or"
+msgstr ""
+
+#. module: newsletter
+#: view:email_template.preview:newsletter.email_template_preview_form
+msgid "you@mail.com"
 msgstr ""
