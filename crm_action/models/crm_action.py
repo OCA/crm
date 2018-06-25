@@ -1,34 +1,16 @@
-# -*- encoding: utf-8 -*-
-##############################################################################
-#
-#    OpenERP, Open Source Management Solution
-#    This module copyright (C) 2015 Savoir-faire Linux
-#    (<http://www.savoirfairelinux.com>).
-#
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as
-#    published by the Free Software Foundation, either version 3 of the
-#    License, or (at your option) any later version.
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
-#
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#
-##############################################################################
+# -*- coding: utf-8 -*-
+# Copyright Savoir-faire Linux, Equitania Software GmbH, Odoo Community Association (OCA)
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
-from openerp import models, fields, api
+from odoo import models, fields, api, _
 
 
 class CrmAction(models.Model):
     _name = 'crm.action'
     _description = 'CRM Action'
+    _order = 'date desc'
 
-    lead_id = fields.Many2one(
-        'crm.lead', string='Lead', ondelete='cascade')
+    lead_id = fields.Many2one('crm.lead', string='Lead', ondelete='cascade')
 
     @api.onchange('lead_id')
     def check_change(self):
@@ -36,29 +18,18 @@ class CrmAction(models.Model):
         if lead and lead.partner_id:
             self.partner_id = lead.partner_id.id
 
-    partner_id = fields.Many2one(
-        'res.partner', string='Customer')
-
-    date = fields.Date(
-        'Date', required=True,
-        default=fields.Date.context_today)
-
-    user_id = fields.Many2one(
-        'res.users', string='User', required=True,
-        default=lambda self: self.env.user)
+    partner_id = fields.Many2one('res.partner', string='Customer')
+    date = fields.Date('Date', required=True, default=fields.Date.context_today)
+    user_id = fields.Many2one('res.users', string='User', required=True, default=lambda self: self.env.user)
 
     def search_action_types(self):
-        return self.env['crm.action.type'].search(
-            [('is_active', '=', True)], order='priority')
+        return self.env['crm.action.type'].search([('is_active', '=', True)], order='priority')
 
     def default_action_type(self):
         action_types = self.search_action_types()
         return action_types and action_types[0].id or False
 
-    action_type = fields.Many2one(
-        'crm.action.type', string='Type', required=True,
-        default=default_action_type)
-
+    action_type = fields.Many2one('crm.action.type', string='Type', required=True, default=default_action_type)
     details = fields.Text('Details')
 
     state = fields.Selection(
