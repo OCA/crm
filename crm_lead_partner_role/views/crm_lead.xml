@@ -9,7 +9,7 @@
                 <page name="related_people" string="Related people">
                     <field name="partner_role_ids" widget="one2many_list" context="{'default_crm_lead_id': active_id}" >
                         <tree editable="bottom">
-                            <field name="partner_id" />
+                            <field name="role_partner_id" />
                             <field name="role_id" />
                         </tree>
                     </field>
@@ -26,7 +26,7 @@
                 <page name="related_people" string="Related people">
                     <field name="partner_role_ids" widget="one2many_list" context="{'default_crm_lead_id': active_id}">
                         <tree editable="bottom">
-                            <field name="partner_id" />
+                            <field name="role_partner_id" />
                             <field name="role_id" />
                         </tree>
                     </field>
