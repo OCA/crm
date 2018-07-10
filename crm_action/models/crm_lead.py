@@ -1,49 +1,60 @@
-# -*- encoding: utf-8 -*-
-##############################################################################
-#
-#    OpenERP, Open Source Management Solution
-#    This module copyright (C) 2015 Savoir-faire Linux
-#    (<http://www.savoirfairelinux.com>).
-#
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as
-#    published by the Free Software Foundation, either version 3 of the
-#    License, or (at your option) any later version.
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
-#
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#
-##############################################################################
+# -*- coding: utf-8 -*-
+# Copyright 2015-2016 Savoir-faire Linux (<http://www.savoirfairelinux.com>)
+# Copyright 2017 Tecnativa - Vicent Cubells
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from openerp import models, fields, api, _
+from odoo import api, fields, models
 
 
 class CrmLead(models.Model):
     _inherit = 'crm.lead'
 
-    def count_actions(self):
+    def compute_count_actions(self):
         self.actions_count = len(self.action_ids)
 
-    actions_count = fields.Integer(compute='count_actions')
+    actions_count = fields.Integer(
+        compute='compute_count_actions',
+    )
     action_ids = fields.One2many(
-        'crm.action', 'lead_id', string='Actions')
+        comodel_name='crm.action',
+        inverse_name='lead_id',
+        string='Actions',
+    )
+    # replace native fields "date_action" (Next Action Date)
+    # and "title_action" (Next Action) by related fields
+    date_action = fields.Date(
+        related='next_action_id.date',
+        readonly=True,
+        store=True,
+    )
+    title_action = fields.Char(
+        related='next_action_id.display_name',
+        readonly=True,
+        store=True,
+    )
+    next_action_id = fields.Many2one(
+        comodel_name='crm.action',
+        string='Next Action',
+        compute='compute_next_action',
+        readonly=True, store=True,
+    )
 
     @api.multi
-    def button_actions(self):
+    @api.depends(
+        'action_ids.date', 'action_ids.display_name', 'action_ids.state')
+    def compute_next_action(self):
+        for lead in self:
+            actions = self.env['crm.action'].search(
+                [('lead_id', '=', lead.id), ('state', '=', 'draft')],
+                order='date', limit=1)
+            if actions:
+                lead.next_action_id = actions[0]
+            else:
+                lead.next_action_id = False
+
+    @api.multi
+    def next_action_done(self):
         self.ensure_one()
-
-        res = {
-            'name': _('Actions'),
-            'type': 'ir.actions.act_window',
-            'res_model': 'crm.action',
-            'view_type': 'form',
-            'view_mode': 'tree,form',
-            'domain': [('lead_id', '=', self[0].id)],
-        }
-
-        return res
+        if self.next_action_id:
+            self.next_action_id.button_confirm()
+        return True
