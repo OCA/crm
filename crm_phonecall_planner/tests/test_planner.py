@@ -1,13 +1,12 @@
-# -*- coding: utf-8 -*-
 # Copyright 2017 Jairo Llopis <jairo.llopis@tecnativa.com>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from __future__ import division
 from datetime import timedelta
-from openerp import fields
-from openerp.exceptions import ValidationError
-from openerp.tests.common import SavepointCase
-from openerp.tools import float_compare
+from odoo import fields
+from odoo.exceptions import ValidationError
+from odoo.tests.common import SavepointCase
+from odoo.tools import float_compare
 
 
 class PlannerCase(SavepointCase):

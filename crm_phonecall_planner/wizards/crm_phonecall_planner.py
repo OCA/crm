@@ -1,13 +1,12 @@
-# -*- coding: utf-8 -*-
 # Copyright 2017 Jairo Llopis <jairo.llopis@tecnativa.com>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from __future__ import division
 from datetime import datetime, timedelta
 from logging import getLogger
-from openerp import _, api, fields, models
-from openerp.exceptions import ValidationError
-from openerp.tools import safe_eval
+from odoo import _, api, fields, models
+from odoo.exceptions import ValidationError
+from odoo.tools import safe_eval
 
 _logger = getLogger(__name__)
 
