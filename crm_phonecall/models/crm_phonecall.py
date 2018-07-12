@@ -1,11 +1,11 @@
-# -*- coding: utf-8 -*-
-# Copyright (C) 2004-today OpenERP SA (<http://www.openerp.com>)
-# Copyright (C) 2017 Tecnativa - Vicent Cubells
+# Copyright 2004-2016 Odoo SA (<http://www.odoo.com>)
+# Copyright 2017 Tecnativa - Vicent Cubells
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from datetime import datetime
 from odoo import api, fields, models, _
 from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT
+from functools import reduce
 
 
 class CrmPhonecall(models.Model):
