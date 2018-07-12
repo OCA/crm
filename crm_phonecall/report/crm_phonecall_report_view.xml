@@ -103,6 +103,6 @@
     <menuitem name="Phone Calls Analysis"
         groups="sales_team.group_sale_salesman"
         action="crm_phonecall_report_action"
-        id="menu_report_crm_phonecalls_tree" parent="sales_team.menu_sale_report" sequence="15"/>
+        id="menu_report_crm_phonecalls_tree" parent="crm.crm_menu_report" sequence="15"/>
 
 </odoo>
