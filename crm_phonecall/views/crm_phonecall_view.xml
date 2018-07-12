@@ -224,7 +224,7 @@
 
     <menuitem name="Phone Calls" id="menu_crm_case_phone"
               groups="sales_team.group_sale_salesman"
-              parent="sales_team.menu_base_partner" sequence="6" />
+              parent="crm.crm_menu_root" sequence="6" />
 
     <record model="ir.actions.act_window" id="crm_case_categ_phone_incoming0">
         <field name="name">Logged Calls</field>
