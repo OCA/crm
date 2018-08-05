@@ -22,7 +22,7 @@
     <field name="model">crm.lead</field>
     <field name="inherit_id" ref="crm.crm_case_tree_view_leads"/>
     <field name="arch" type="xml">
-        <field name="section_id" position="after">
+        <field name="phone" position="after">
             <field name="sector_id"/>
         </field>
     </field>
@@ -33,10 +33,10 @@
     <field name="model">crm.lead</field>
     <field name="inherit_id" ref="crm.view_crm_case_leads_filter"/>
     <field name="arch" type="xml">
-        <field name="section_id" position="after">
+        <field name="user_id" position="after">
             <field name="sector_id"/>
         </field>
-        <filter string="Sales Team" position="after">
+        <filter name="groupby_team" position="after">
             <filter string="Sector"
                     domain="[]"
                     context="{'group_by': 'sector_id'}"/>
@@ -62,7 +62,7 @@
     <field name="model">crm.lead</field>
     <field name="inherit_id" ref="crm.crm_case_tree_view_oppor"/>
     <field name="arch" type="xml">
-        <field name="section_id" position="after">
+        <field name="probability" position="after">
             <field name="sector_id"/>
         </field>
     </field>
@@ -73,14 +73,15 @@
     <field name="model">crm.lead</field>
     <field name="inherit_id" ref="crm.view_crm_case_opportunities_filter"/>
     <field name="arch" type="xml">
-        <field name="section_id" position="after">
+        <field name="stage_id" position="after">
             <field name="sector_id"/>
         </field>
-        <filter string="Sales Team" position="after">
+        <xpath expr="//group" position="inside">
             <filter string="Sector"
                     domain="[]"
                     context="{'group_by': 'sector_id'}"/>
-        </filter>
+        </xpath>
+
     </field>
 </record>
 

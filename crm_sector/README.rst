@@ -12,7 +12,7 @@ This module adds the concept of economic sector for leads and opportunities.
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
-   :target: https://runbot.odoo-community.org/runbot/111/8.0
+   :target: https://runbot.odoo-community.org/runbot/111/9.0
 
 
 Bug Tracker
@@ -38,6 +38,7 @@ Contributors
 * Rafael Blasco <rafabn@antiun.com>
 * Antonio Espinosa <antonioea@antiun.com>
 * Javier Iniesta <javieria@antiun.com>
+* Jordi Ballester <jordi.ballester@eficent.com> (migrated to 9.0)
 
 Maintainer
 ----------
