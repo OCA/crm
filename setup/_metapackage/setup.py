@@ -20,6 +20,7 @@ setuptools.setup(
         'odoo9-addon-crm_phonecall_planner',
         'odoo9-addon-crm_phonecall_summary_predefined',
         'odoo9-addon-crm_sale_marketing',
+        'odoo9-addon-crm_sector',
         'odoo9-addon-marketing_crm_partner',
     ],
     classifiers=[
