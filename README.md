@@ -23,6 +23,7 @@ addon | version | summary
 [crm_phonecall_planner](crm_phonecall_planner/) | 9.0.1.0.0 | Schedule phone calls according to some criteria
 [crm_phonecall_summary_predefined](crm_phonecall_summary_predefined/) | 9.0.1.0.0 | Allows to choose from a defined summary list
 [crm_sale_marketing](crm_sale_marketing/) | 9.0.1.0.0 | Marketing Details of Sales
+[crm_sector](crm_sector/) | 9.0.1.0.0 | Link leads/opportunities to sectors
 [marketing_crm_partner](marketing_crm_partner/) | 9.0.1.0.0 | Copy tracking fields from leads to partners
 
 
