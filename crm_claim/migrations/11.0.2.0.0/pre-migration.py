@@ -11,6 +11,10 @@ def migrate(cr, version):
     activity_type = env.ref('mail.mail_activity_data_todo')
     crm_claim_model = env.ref('crm_claim.model_crm_claim')
     cr.execute("""
+        INSERT INTO
+         mail_activity
+           (res_model, res_model_id, res_id, res_name, user_id,
+            date_deadline, summary, activity_type_id)
         SELECT
           %s,
           %s,
@@ -27,12 +31,3 @@ def migrate(cr, version):
         OR
           action_next IS NOT Null;
     """, (crm_claim_model.model, crm_claim_model.id, activity_type.id))
-    for vals in cr.fetchall():
-        cr.execute("""
-            INSERT INTO
-              mail_activity
-                (res_model, res_model_id, res_id, res_name, user_id,
-                 date_deadline, summary, activity_type_id)
-            VALUES
-              (%s, %s, %s, %s, %s, %s, %s, %s)
-        """, vals)
