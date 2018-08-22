@@ -2,9 +2,7 @@
 <!-- © 2016 Antiun Ingeniería S.L. - Jairo Llopis
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
 
-<openerp>
-<data>
-
+<odoo>
     <record id="crm_case_form_view_leads" model="ir.ui.view">
         <field name="name">Add firstname and lastname</field>
         <field name="model">crm.lead</field>
@@ -38,6 +36,4 @@
             </xpath>
         </field>
     </record>
-
-</data>
-</openerp>
+</odoo>
