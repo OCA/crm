@@ -5,7 +5,7 @@
 
 {
     'name': 'Claims Management',
-    'version': '11.0.1.0.0',
+    'version': '11.0.2.0.0',
     'category': 'Customer Relationship Management',
     'author': 'Odoo S.A., '
               'Tecnativa, '
@@ -14,6 +14,7 @@
     'summary': "Track your customers/vendors claims and grievances.",
     'depends': [
         'crm',
+        'mail',
     ],
     'data': [
         'views/crm_claim_views.xml',
