@@ -2,21 +2,21 @@
 # © 2016 Antiun Ingeniería S.L. - Jairo Llopis
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
-from openerp.tests.common import TransactionCase
+from odoo.tests.common import TransactionCase
 
 
 class FirstnameCase(TransactionCase):
     def setUp(self):
         super(FirstnameCase, self).setUp()
         self.lead = self.env["crm.lead"].create({
-            "name": u"Léad",
-            "partner_name": u"Pärtner",
-            "contact_name": u"Firçt name",
-            "contact_lastname": u"Laçt name",
+            "name": "Léad",
+            "partner_name": "Pärtner",
+            "contact_name": "Firçt name",
+            "contact_lastname": "Laçt name",
         })
         self.partner = self.env["res.partner"].create({
-            "firstname": u"Firçt name",
-            "lastname": u"Laçt name",
+            "firstname": "Firçt name",
+            "lastname": "Laçt name",
         })
 
     def test_create_contact(self):
@@ -38,7 +38,7 @@ class FirstnameCase(TransactionCase):
         """When changing partner, fields get correctly updated."""
         with self.env.do_in_onchange():
             self.lead.partner_id = self.partner
-            value = self.lead.on_change_partner_id(self.partner.id)["value"]
+            value = self.lead._onchange_partner_id_values(self.partner.id)
             self.assertEqual(
                 self.partner.firstname, value["contact_name"])
             self.assertEqual(
