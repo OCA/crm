@@ -14,7 +14,7 @@ class CrmClaim(models.Model):
     _name = "crm.claim"
     _description = "Claim"
     _order = "priority,date desc"
-    _inherit = ['mail.thread']
+    _inherit = ['mail.thread', 'mail.activity.mixin']
 
     @api.model
     def _get_default_stage_id(self):
@@ -32,12 +32,6 @@ class CrmClaim(models.Model):
     )
     active = fields.Boolean(
         default=True,
-    )
-    action_next = fields.Char(
-        string='Next Action',
-    )
-    date_action_next = fields.Datetime(
-        string='Next Action Date',
     )
     description = fields.Text()
     resolution = fields.Text()

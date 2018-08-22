@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * crm_claim
-# 
+#
 # Translators:
 # Alberte Moço, 2018
 msgid ""
@@ -12,10 +12,10 @@ msgstr ""
 "PO-Revision-Date: 2017-12-16 03:19+0000\n"
 "Last-Translator: Alberte Moço, 2018\n"
 "Language-Team: Galician (https://www.transifex.com/oca/teams/23907/gl/)\n"
+"Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: gl\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: crm_claim
@@ -35,7 +35,7 @@ msgid "# of Claims"
 msgstr ""
 
 #. module: crm_claim
-#: code:addons/crm_claim/models/crm_claim.py:189
+#: code:addons/crm_claim/models/crm_claim.py:183
 #, python-format
 msgid "%s (copy)"
 msgstr ""
@@ -344,7 +344,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category_id
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_id
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report_id
-#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage_id_2581
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage_id_2585
 msgid "ID"
 msgstr ""
 
@@ -419,17 +419,7 @@ msgid "New"
 msgstr ""
 
 #. module: crm_claim
-#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_action_next
-msgid "Next Action"
-msgstr "Seguinte acción"
-
-#. module: crm_claim
-#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_date_action_next
-msgid "Next Action Date"
-msgstr ""
-
-#. module: crm_claim
-#: code:addons/crm_claim/models/crm_claim.py:206
+#: code:addons/crm_claim/models/crm_claim.py:200
 #, python-format
 msgid "No Subject"
 msgstr ""
@@ -667,3 +657,6 @@ msgid ""
 "            claim entered in the system. The stages define all the steps\n"
 "            required for the resolution of a claim."
 msgstr ""
+
+#~ msgid "Next Action"
+#~ msgstr "Seguinte acción"
