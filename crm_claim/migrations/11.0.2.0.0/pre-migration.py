@@ -21,7 +21,7 @@ def migrate(cr, version):
           id,
           name,
           user_id,
-          date_action_next,
+          COALESCE(date_action_next, now()),
           action_next,
           %s
         FROM
