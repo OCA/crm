@@ -4,9 +4,9 @@
 {
     "name": "Firstname and Lastname in Leads",
     "summary": "Specify split names for contacts in leads",
-    "version": "8.0.1.0.0",
+    "version": "11.0.1.0.0",
     "category": "Customer Relationship Management",
-    "website": "http://www.antiun.com",
+    "website": "http://www.github.com/OCA/crm",
     "author": "Antiun Ingeniería S.L., Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "application": False,
