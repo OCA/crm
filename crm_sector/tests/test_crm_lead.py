@@ -1,5 +1,4 @@
-# -*- coding: utf-8 -*-
-# © 2015 Antiun Ingenieria S.L. - Javier Iniesta
+# Copyright 2015 Antiun Ingenieria S.L. - Javier Iniesta
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 from odoo.tests.common import TransactionCase
@@ -29,8 +28,9 @@ class TestCrmLead(TransactionCase):
             'secondary_sector_ids': [(4, sector_2.id, 0), (4, sector_3.id, 0)],
         }
         lead = self.env['crm.lead'].create(lead_vals)
-        partner = lead._lead_create_contact(
-            lead.partner_name, True, False)
+        partner = self.env['res.partner'].create(
+            lead._create_lead_partner_data(
+                lead.partner_name, True, False))
         self.assertEqual(partner.sector_id, lead.sector_id)
         self.assertEqual(
             partner.secondary_sector_ids, lead.secondary_sector_ids)

@@ -1,5 +1,4 @@
-# -*- coding: utf-8 -*-
-# © 2015 Antiun Ingenieria S.L. - Javier Iniesta
+# Copyright 2015 Antiun Ingenieria S.L. - Javier Iniesta
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 from odoo import _, api, exceptions, fields, models
@@ -24,14 +23,13 @@ class CrmLead(models.Model):
                     'sector.'))
 
     @api.multi
-    def _lead_create_contact(self, name, is_company,
-                             parent_id=False):
+    def _create_lead_partner_data(self, name, is_company, parent_id=False):
         """Propagate sector to created partner.
         """
-        partner = super(CrmLead, self)._lead_create_contact(
+        values = super(CrmLead, self)._create_lead_partner_data(
             name, is_company, parent_id)
-        partner.write({
+        values.update({
             'sector_id': self.sector_id.id,
             'secondary_sector_ids': [(6, 0, self.secondary_sector_ids.ids)],
         })
-        return partner
+        return values
