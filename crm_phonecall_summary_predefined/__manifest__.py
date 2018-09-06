@@ -1,11 +1,10 @@
-# -*- coding: utf-8 -*-
 # Copyright 2016 Antiun Ingeniería S.L. - Jairo Llopis
 # Copyright 2017 Tecnativa - Vicent Cubells
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 {
     "name": "Restricted Summary for Phone Calls",
     "summary": "Allows to choose from a defined summary list",
-    "version": "10.0.1.0.0",
+    "version": "11.0.1.0.0",
     "category": "Customer Relationship Management",
     "website": "http://www.tecnativa.com",
     "author": "Tecnativa, "
