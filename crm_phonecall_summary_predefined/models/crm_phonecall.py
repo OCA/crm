@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # Copyright 2016 Antiun Ingeniería S.L. - Jairo Llopis
 # Copyright 2017 Tecnativa - Vicent Cubells
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
@@ -7,6 +6,8 @@ from odoo import fields, models
 
 
 class CRMPhonecall(models.Model):
+    """Added number and summary in the phonecall."""
+
     _inherit = "crm.phonecall"
 
     name = fields.Char(
@@ -24,7 +25,10 @@ class CRMPhonecall(models.Model):
 
 
 class CRMPhonecallSummary(models.Model):
+    """Added phonecall summary feature."""
+
     _name = "crm.phonecall.summary"
+    _description = "Crm Phonecall Summary"
     _sql_constraints = [
         ("name_unique", "UNIQUE (name)", "Name must be unique"),
     ]
