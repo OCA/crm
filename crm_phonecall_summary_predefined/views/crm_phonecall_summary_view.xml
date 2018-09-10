@@ -5,7 +5,7 @@
 
 <odoo>
 
-    <record id="summary_form" model="ir.ui.view">
+    <record id="crm_phonecall_summary_view_form" model="ir.ui.view">
         <field name="name">CRM Phonecall Summary Form</field>
         <field name="model">crm.phonecall.summary</field>
         <field name="arch" type="xml">
@@ -22,7 +22,7 @@
         </field>
     </record>
 
-    <record id="summary_tree" model="ir.ui.view">
+    <record id="crm_phonecall_summary_view_tree" model="ir.ui.view">
         <field name="name">CRM Phonecall Summary Tree</field>
         <field name="model">crm.phonecall.summary</field>
         <field name="arch" type="xml">
@@ -32,7 +32,7 @@
         </field>
     </record>
 
-    <record id="summary_search" model="ir.ui.view">
+    <record id="crm_phonecall_summary_view_search" model="ir.ui.view">
         <field name="name">CRM Phonecall Summary Search</field>
         <field name="model">crm.phonecall.summary</field>
         <field name="arch" type="xml">
@@ -44,12 +44,12 @@
 
     <act_window
         name="Summaries"
-        id="summary_action"
+        id="crm_phonecall_summary_action"
         res_model="crm.phonecall.summary"/>
 
     <menuitem
-        id="summary_menu"
-        action="summary_action"
+        id="crm_phonecall_summary_menu"
+        action="crm_phonecall_summary_action"
         groups="sales_team.group_sale_manager"
         parent="crm_phonecall.menu_crm_config_phonecall"/>
 
