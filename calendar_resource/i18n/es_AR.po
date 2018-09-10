@@ -1,0 +1,177 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * calendar_resource
+#
+# Translators:
+# OCA Transbot <transbot@odoo-community.org>, 2017
+# Anael M <anaelwendel@live.com.ar>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-14 05:51+0000\n"
+"PO-Revision-Date: 2017-12-14 05:51+0000\n"
+"Last-Translator: Anael M <anaelwendel@live.com.ar>, 2017\n"
+"Language-Team: Spanish (Argentina) (https://www.transifex.com/oca/"
+"teams/23907/es_AR/)\n"
+"Language: es_AR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: calendar_resource
+#: model:ir.model.fields,field_description:calendar_resource.field_resource_resource_allow_double_book
+msgid "Allow Double Booking"
+msgstr "Permitir doble reserva"
+
+#. module: calendar_resource
+#: model:ir.model.fields,field_description:calendar_resource.field_calendar_event_type_allowed_resource_ids
+msgid "Allowed Resources"
+msgstr "Recursos permitidos"
+
+#. module: calendar_resource
+#: model:ir.model.fields,field_description:calendar_resource.field_resource_resource_event_ids
+msgid "Calendar Events"
+msgstr "Eventos de calendario"
+
+#. module: calendar_resource
+#: model:ir.ui.menu,name:calendar_resource.calendar_menu
+msgid "Calendars"
+msgstr "Calendarios"
+
+#. module: calendar_resource
+#: model:ir.model.fields,help:calendar_resource.field_resource_resource_allow_double_book
+msgid ""
+"Check if this resource can be booked in more than one meeting or event at "
+"the same time."
+msgstr ""
+"Comprobar si este recurso puede ser reservado en más de una reunión o evento "
+"al mismo tiempo."
+
+#. module: calendar_resource
+#: code:addons/calendar_resource/models/resource_calendar_attendance.py:23
+#, python-format
+msgid "End Date cannot be earlier than Starting Date."
+msgstr "La fecha de finalización no puede ser anterior a la fecha de comienzo."
+
+#. module: calendar_resource
+#: model:ir.model,name:calendar_resource.model_calendar_event
+msgid "Event"
+msgstr "Evento"
+
+#. module: calendar_resource
+#: model:ir.ui.menu,name:calendar_resource.calendar_event_menu
+msgid "Event Calendar"
+msgstr "Calendario de eventos"
+
+#. module: calendar_resource
+#: model:ir.model.fields,field_description:calendar_resource.field_resource_resource_allowed_event_types
+msgid "Event Types"
+msgstr "Tipos de eventos"
+
+#. module: calendar_resource
+#: model:ir.model.fields,help:calendar_resource.field_resource_resource_allowed_event_types
+msgid "Event types this resource is allowed at."
+msgstr "Tipos de eventos a los que se les permite este recurso."
+
+#. module: calendar_resource
+#: model:ir.module.category,description:calendar_resource.ir_module_category_resource
+msgid "Helps you manage your resources"
+msgstr "Te ayuda a administrar tus recursos."
+
+#. module: calendar_resource
+#: model:ir.model,name:calendar_resource.model_calendar_event_type
+msgid "Meeting Type"
+msgstr "Tipo de reunión"
+
+#. module: calendar_resource
+#: model:ir.ui.view,arch_db:calendar_resource.resource_resource_form
+msgid "Name"
+msgstr "Nombre"
+
+#. module: calendar_resource
+#: model:ir.model,name:calendar_resource.model_resource_calendar
+msgid "Resource Calendar"
+msgstr "Calendario de recursos"
+
+#. module: calendar_resource
+#: model:ir.model,name:calendar_resource.model_resource_resource
+msgid "Resource Detail"
+msgstr "Detalle del recurso"
+
+#. module: calendar_resource
+#: model:res.groups,name:calendar_resource.group_resource_manager
+msgid "Resource Manager"
+msgstr "Administrador de recursos"
+
+#. module: calendar_resource
+#: model:ir.model.fields,field_description:calendar_resource.field_resource_resource_note
+msgid "Resource Notes"
+msgstr "Notas de recursos"
+
+#. module: calendar_resource
+#: model:ir.model.fields,field_description:calendar_resource.field_calendar_event_resource_ids
+#: model:ir.module.category,name:calendar_resource.ir_module_category_resource
+msgid "Resources"
+msgstr "Recursos"
+
+#. module: calendar_resource
+#: model:ir.model.fields,help:calendar_resource.field_calendar_event_type_allowed_resource_ids
+msgid "Resources allowed in meetings of this type"
+msgstr "Recursos permitidos en reuniones de este tipo"
+
+#. module: calendar_resource
+#: model:ir.ui.view,arch_db:calendar_resource.resource_resource_form
+#: model:ir.ui.view,arch_db:calendar_resource.view_calendar_event_form
+msgid "Select Resources"
+msgstr "Seleccionar recursos"
+
+#. module: calendar_resource
+#: code:addons/calendar_resource/models/calendar_event.py:107
+#, python-format
+msgid ""
+"The resource, %s, cannot be double-booked with any overlapping meetings or "
+"events."
+msgstr ""
+
+#. module: calendar_resource
+#: code:addons/calendar_resource/models/calendar_event.py:257
+#, python-format
+msgid ""
+"The resource, %s, is not available during the following dates and times "
+"which are conflicting with the event:%s%s"
+msgstr ""
+
+#. module: calendar_resource
+#: code:addons/calendar_resource/models/calendar_event.py:132
+#, python-format
+msgid ""
+"The resource, '%s', is not allowed in the following event types: \n"
+"%s"
+msgstr ""
+
+#. module: calendar_resource
+#: code:addons/calendar_resource/models/calendar_event.py:171
+#, python-format
+msgid ""
+"The resource, '%s', is on leave during the following times which are "
+"conflicting with this event.\n"
+"%s"
+msgstr ""
+
+#. module: calendar_resource
+#: model:ir.model,name:calendar_resource.model_resource_calendar_attendance
+msgid "Work Detail"
+msgstr "Detalle del trabajo"
+
+#. module: calendar_resource
+#: code:addons/calendar_resource/models/resource_calendar_attendance.py:33
+#, python-format
+msgid ""
+"Work to cannot be earlier or the same as Work from. If it is a night shift, "
+"separate the hours into their own working time entries by weekday."
+msgstr ""
+"\"Trabajar para\" no puede ser anterior o igual a \"Trabajar desde\". Si es "
+"un turno de noche, separe las horas en sus entradas de tiempo de trabajo por "
+"día de la semana."
