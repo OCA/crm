@@ -1,5 +1,4 @@
-# -*- coding: utf-8 -*-
-# Copyright 2013 Savoir-faire Linux
+# Copyright 2018 Savoir-faire Linux
 # Copyright 2017 Laslabs Inc.
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 

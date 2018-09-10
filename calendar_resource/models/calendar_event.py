@@ -1,6 +1,5 @@
-# -*- coding: utf-8 -*-
-# Copyright 2013 Savoir-faire Linux
 # Copyright 2017 Laslabs Inc.
+# Copyright 2018 Savoir-faire Linux
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 from os import linesep
@@ -59,7 +58,7 @@ class CalendarEvent(models.Model):
         """
         datetimes = []
         for interval in intervals:
-            if not isinstance(interval[0], basestring):
+            if not isinstance(interval[0], str):
                 interval = (
                     fields.Datetime.to_string(interval[0]),
                     fields.Datetime.to_string(interval[1]),

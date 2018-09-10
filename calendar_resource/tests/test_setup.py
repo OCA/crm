@@ -1,5 +1,5 @@
-# -*- coding: utf-8 -*-
 # Copyright 2017 Laslabs Inc.
+# Copyright 2018 Savoir-faire Linux
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 from mock import patch
@@ -24,7 +24,7 @@ class TestSetup(Setup):
             4, '13:00:00',
         )
         exp = ('2017-08-03 12:00:00', '2017-08-04 13:00:00')
-        self.assertEquals(
+        self.assertEqual(
             res,
             exp,
         )
@@ -38,7 +38,7 @@ class TestSetup(Setup):
             1, '13:00:00',
         )
         exp = ('2016-06-06 12:00:00', '2016-06-07 13:00:00')
-        self.assertEquals(
+        self.assertEqual(
             res,
             exp,
         )
@@ -52,7 +52,7 @@ class TestSetup(Setup):
             0, '13:00:00',
         )
         exp = ('2016-06-06 12:00:00', '2016-06-06 13:00:00')
-        self.assertEquals(
+        self.assertEqual(
             res,
             exp,
         )
@@ -65,6 +65,6 @@ class TestSetup(Setup):
             fields.Datetime.from_string(interval[0][1]),
         )]
         res = self._intervals_to_dt(interval)
-        self.assertEquals(
+        self.assertEqual(
             exp, res
         )
