@@ -1,5 +1,5 @@
-# -*- coding: utf-8 -*-
 # Copyright 2017 Laslabs Inc.
+# Copyright 2018 Savoir-faire Linux
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 from odoo import fields
@@ -19,7 +19,7 @@ class TestResourceCalendar(Setup):
             ('2017-03-10 00:00:00', '2017-03-13 00:00:00'),
         ]
         exp = self._intervals_to_dt(exp)
-        self.assertEquals(
+        self.assertEqual(
             exp,
             self.Calendar._get_unavailable_intervals(
                 self.intervals,
@@ -36,7 +36,7 @@ class TestResourceCalendar(Setup):
             ('2017-03-08 16:00:00', '2017-03-09 09:00:00'),
         ]
         exp = self._intervals_to_dt(exp)
-        self.assertEquals(
+        self.assertEqual(
             exp,
             self.Calendar._get_conflicting_unavailable_intervals(
                 self.intervals,
@@ -53,7 +53,7 @@ class TestResourceCalendar(Setup):
             ('2017-03-08 16:00:00', '2017-03-09 09:00:00'),
         ]
         exp = self._intervals_to_dt(exp)
-        self.assertEquals(
+        self.assertEqual(
             exp,
             self.Calendar._get_conflicting_unavailable_intervals(
                 self.intervals,
@@ -70,7 +70,7 @@ class TestResourceCalendar(Setup):
             ('2017-03-06 00:00:00', '2017-03-07 00:00:00'),
         ]
         exp = self._intervals_to_dt(exp)
-        self.assertEquals(
+        self.assertEqual(
             exp,
             self.Calendar._get_conflicting_unavailable_intervals(
                 self.intervals,
@@ -88,7 +88,7 @@ class TestResourceCalendar(Setup):
             ('2017-03-10 00:00:00', '2017-03-11 00:00:00'),
         ]
         exp = self._intervals_to_dt(exp)
-        self.assertEquals(
+        self.assertEqual(
             exp,
             self.Calendar._get_unavailable_intervals(
                 self.intervals,
@@ -113,7 +113,7 @@ class TestResourceCalendar(Setup):
         """ Test overlaps correctly removed """
         res = self.Calendar._clean_datetime_intervals(self.intervals)
         exp = self.cleaned_intervals
-        self.assertEquals(
+        self.assertEqual(
             res,
             exp,
             'Intervals are not equal.\nRes:\n%s\nExpect:\n%s' % (res, exp),

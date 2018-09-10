@@ -16,7 +16,7 @@
         <field name="name">Interval 2</field>
         <field name="dayofweek">1</field>
         <field name="hour_from" eval="20" />
-        <field name="hour_to" eval="23.9997" />
+        <field name="hour_to" eval="23.99" />
         <field name="calendar_id" ref="resource_calendar_1" />
     </record>
 
@@ -40,7 +40,7 @@
         <field name="name">Interval 5</field>
         <field name="dayofweek">3</field>
         <field name="hour_from" eval="9" />
-        <field name="hour_to" eval="23.984" />
+        <field name="hour_to" eval="23.99" />
         <field name="calendar_id" ref="resource_calendar_1" />
     </record>
 

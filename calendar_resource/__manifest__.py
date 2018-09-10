@@ -1,12 +1,11 @@
-# -*- coding: utf-8 -*-
-# Copyright 2010-2014 Savoir-faire Linux
 # Copyright 2017 Laslabs Inc.
+# Copyright 2018 Savoir-faire Linux
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 {
     "name": "Calendar Resources",
     "summary": "New features to facilitate resource management with meetings.",
-    "version": "10.0.1.1.0",
+    "version": "11.0.1.0.0",
     "category": "CRM",
     "website": "https://github.com/OCA/crm",
     "author": "Savoir-faire Linux, LasLabs, Odoo Community Association (OCA)",

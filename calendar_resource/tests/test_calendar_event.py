@@ -1,5 +1,5 @@
-# -*- coding: utf-8 -*-
 # Copyright 2017 Laslabs Inc.
+# Copyright 2018 Savoir-faire Linux
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 from mock import patch
@@ -242,8 +242,8 @@ class TestCalendarEvent(Setup):
         existing_event = self._create_event()
         with self.assertRaises(ValidationError):
             existing_event.write({
-                'resource_ids': [(4, [self.resource_2.id])],
-                'categ_ids': [(4, [self.event_type_5.id])],
+                'resource_ids': [(4, self.resource_2.id)],
+                'categ_ids': [(4, self.event_type_5.id)],
             })
 
     def test_check_resource_ids_categ_ids_no_error(self):
@@ -251,7 +251,7 @@ class TestCalendarEvent(Setup):
         existing_event = self._create_event()
         try:
             existing_event.write({
-                'resource_ids': [(4, [self.resource_2.id])],
+                'resource_ids': [(4, self.resource_2.id)],
             })
             self.assertTrue(True)
         except ValidationError:
@@ -269,7 +269,7 @@ class TestCalendarEvent(Setup):
         })
         try:
             existing_event.write({
-                'resource_ids': [(4, [self.resource_2.id])],
+                'resource_ids': [(4, self.resource_2.id)],
             })
             self.assertTrue(True)
         except ValidationError:
@@ -287,7 +287,7 @@ class TestCalendarEvent(Setup):
         })
         try:
             existing_event.write({
-                'categ_ids': [(4, [self.event_type_4.id])],
+                'categ_ids': [(4, self.event_type_4.id)],
             })
             self.assertTrue(True)
         except ValidationError:
@@ -360,9 +360,13 @@ class TestCalendarEvent(Setup):
             1, '12:00:00',
             3, '12:00:00'
         )
+        self.resource_1.calendar_id = self.calendar_1
         self.leave_1.write({
             'date_from': start_stop[0],
             'date_to': start_stop[1],
+        })
+        self.calendar_1.write({
+            'leave_ids': [(6, 0, [self.leave_1.id])],
         })
         with self.assertRaises(ValidationError):
             self._create_event({
@@ -399,7 +403,7 @@ class TestCalendarEvent(Setup):
         exp = '%s\n\n%s' % (intervals[0], intervals[1])
         res = self.Event._format_datetime_intervals_to_str(intervals_dt)
 
-        self.assertEquals(
+        self.assertEqual(
             exp, res,
         )
 
@@ -468,7 +472,7 @@ class TestCalendarEvent(Setup):
             self.assertTrue(True)
         except ValidationError:
             self.fail(
-                'Should not raise Error if event witin working times'
+                'Should not raise Error if event within working times'
             )
 
     def test_check_resource_ids_working_times_overlap_right(self):
@@ -576,7 +580,7 @@ class TestCalendarEvent(Setup):
             fields.Datetime.from_string('2016-06-01 00:00:00'),
             fields.Datetime.from_string('2016-06-02 00:00:00'),
         ]
-        self.assertEquals(
+        self.assertEqual(
             exp,
             event._get_event_date_list()
         )

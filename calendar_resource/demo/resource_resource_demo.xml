@@ -5,6 +5,7 @@
 <odoo>
 
     <record id="resource.resource_analyst" model="resource.resource">
+        <field name="name">Analyst </field>
         <field name="allowed_event_types"
                eval="[(6, 0, [ref('calendar.categ_meet1'),
                               ref('calendar.categ_meet2'),
@@ -15,6 +16,7 @@
     </record>
 
     <record id="resource.resource_designer" model="resource.resource">
+        <field name="name">Resource </field>
         <field name="allowed_event_types"
                eval="[(6, 0, [ref('calendar.categ_meet1'),
                               ref('calendar.categ_meet2'),
@@ -24,6 +26,7 @@
     </record>
 
     <record id="resource.resource_developer" model="resource.resource">
+        <field name="name">Developer </field>
         <field name="allowed_event_types"
                eval="[(6, 0, [ref('calendar.categ_meet1'),
                               ref('calendar.categ_meet2'),
@@ -32,4 +35,24 @@
                               />
     </record>
 
+    <record id="resource.timesheet_group1" model="resource.calendar">
+            <field name="name">40 Hours/Week</field>
+    </record>
+
+    <record id="resource.resource_analyst_leaves_demoleave1" model="resource.calendar.leaves">
+            <field name="name">2 Hours On Leave</field>
+            <field name="resource_id" ref="resource.resource_analyst"/>
+            <field name="date_from" eval="time.strftime('%Y-%m-%d 08:00:00')"/>
+            <field name="date_to" eval="time.strftime('%Y-%m-%d 11:00:00')"/>
+            <field name="calendar_id" ref="resource.timesheet_group1"/>
+    </record>
+
+     <record model="resource.calendar.attendance" id="resource.calendar_attendance_mon1">
+            <field name="name">Monday morning</field>
+            <field name="dayofweek">0</field>
+            <field name="hour_from">08</field>
+            <field name="hour_to">12</field>
+            <field name="calendar_id" ref="resource.timesheet_group1"/>
+    </record>
+    
 </odoo>

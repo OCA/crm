@@ -1,5 +1,4 @@
-# -*- coding: utf-8 -*-
-# Copyright 2013 Savoir-faire Linux
+# Copyright 2018 Savoir-faire Linux
 # Copyright 2017 Laslabs Inc.
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
@@ -30,3 +29,9 @@ class ResourceResource(models.Model):
         comodel_name='calendar.event.type',
         help='Event types this resource is allowed at.',
     )
+    calendar_id = fields.Many2one(
+        "resource.calendar", string='Working Time',
+        default=lambda self: self.env['res.company'].
+        _company_default_get().resource_calendar_id,
+        required=False,
+        help="Define the schedule of resource")

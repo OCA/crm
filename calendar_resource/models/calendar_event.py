@@ -1,6 +1,5 @@
-# -*- coding: utf-8 -*-
-# Copyright 2013 Savoir-faire Linux
 # Copyright 2017 Laslabs Inc.
+# Copyright 2018 Savoir-faire Linux
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 from os import linesep
@@ -59,7 +58,7 @@ class CalendarEvent(models.Model):
         """
         datetimes = []
         for interval in intervals:
-            if not isinstance(interval[0], basestring):
+            if not isinstance(interval[0], str):
                 interval = (
                     fields.Datetime.to_string(interval[0]),
                     fields.Datetime.to_string(interval[1]),
@@ -101,7 +100,6 @@ class CalendarEvent(models.Model):
                 ('start', '<', record.stop),
                 ('stop', '>', record.start),
             ])
-
             for resource in overlaps.mapped(lambda s: s.resource_ids):
                 raise ValidationError(
                     _(
@@ -224,9 +222,10 @@ class CalendarEvent(models.Model):
                     datetime_end = datetime.combine(day, time(23, 59, 59))
 
                     intervals = \
-                        resource.calendar_id.get_working_intervals_of_day(
-                            start_dt=datetime_start,
-                            end_dt=datetime_end,
+                        resource.calendar_id._get_day_work_intervals(
+                            day_date=day,
+                            start_time=time(00, 00, 00),
+                            end_time=time(23, 59, 59),
                             resource_id=resource.id,
                         )
 
