@@ -13,6 +13,7 @@ setuptools.setup(
         'odoo11-addon-crm_deduplicate_filter',
         'odoo11-addon-crm_lead_firstname',
         'odoo11-addon-crm_phonecall',
+        'odoo11-addon-crm_phonecall_summary_predefined',
         'odoo11-addon-crm_sale_marketing',
     ],
     classifiers=[
