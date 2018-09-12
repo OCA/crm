@@ -27,9 +27,6 @@ Unported addons
 addon | version | summary
 --- | --- | ---
 [crm_action](crm_action/) | 8.0.1.1.0 (unported) | CRM Action
-[crm_claim_code](crm_claim_code/) | 9.0.1.0.0 (unported) | Sequential Code for Claims
-[crm_claim_type](crm_claim_type/) | 9.0.1.0.0 (unported) | Claim types for CRM
-[crm_lead_code](crm_lead_code/) | 8.0.1.0.0 (unported) | Sequential Code for Leads / Opportunities
 [crm_lead_sale_link](crm_lead_sale_link/) | 8.0.1.0.0 (unported) | CRM Lead Sale Link
 [crm_lead_stage_monitoring](crm_lead_stage_monitoring/) | 1.0.0 (unported) | CRM - Add last activity on stage field
 [crm_track_next_action](crm_track_next_action/) | 8.0.1.0.0 (unported) | CRM Track Next Action
