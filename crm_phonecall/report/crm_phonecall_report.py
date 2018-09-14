@@ -124,6 +124,7 @@ class CrmPhonecallReport(models.Model):
     def init(self, cr):
 
         tools.drop_view_if_exists(cr, self._table)
+        # pylint: disable=sql-injection
         cr.execute("""
             create or replace view %s as (
                 %s
