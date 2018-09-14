@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # Copyright 2004-2010 Tiny SPRL (<http://tiny.be>)
 # Copyright 2017 Eficent Business and IT Consulting Services S.L.
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
@@ -13,7 +12,7 @@ class CrmHelpdesk(models.Model):
     _name = "crm.helpdesk"
     _description = "Helpdesk"
     _order = "id desc"
-    _inherit = ['mail.thread']
+    _inherit = ['mail.thread', 'mail.activity.mixin']
 
     name = fields.Char('Name', required=True, index=True,)
     active = fields.Boolean('Active', required=False, default=True)

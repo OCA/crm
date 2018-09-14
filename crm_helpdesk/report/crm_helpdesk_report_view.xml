@@ -5,7 +5,7 @@
             <field name="name">crm.helpdesk.report.graph</field>
             <field name="model">crm.helpdesk.report</field>
             <field name="arch" type="xml">
-                <graph orientation="horizontal" string="Helpdesk" type="pivot" stacked="True">
+                <graph orientation="horizontal" string="Helpdesk" type="bar" stacked="True">
                     <field name="state" type="row"/>
                     <field name="team_id" type="col"/>
                     <field name="date" interval="month" type="col"/>
@@ -81,5 +81,5 @@
         </record>
 
         <menuitem name="Helpdesk Analysis" action="action_report_crm_helpdesk"
-            id="menu_report_crm_helpdesks_tree" parent="sales_team.menu_sale_report" sequence="20"/>
+            id="menu_report_crm_helpdesks_tree" parent="crm.crm_menu_report" sequence="20"/>
 </odoo>

@@ -46,7 +46,6 @@
 
         <menuitem name="Helpdesk and Support" id="menu_help_support_main"
             groups="sales_team.group_sale_salesman"
-            parent="sales_team.menu_sales" action="crm_case_helpdesk_act111"/>
+            parent="crm.crm_menu_pipeline" action="crm_case_helpdesk_act111"/>
 
 </odoo>
-
