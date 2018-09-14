@@ -169,6 +169,7 @@ class CrmPhonecallPlan(models.TransientModel):
                 partners -= winner
                 continue
             # Get a partner with no calls, or with the oldest one
+            # pylint: disable=sql-injection
             self.env.cr.execute(
                 oldest_call_to_partner.format(
                     ",".join(["%s"] * len(available_partners)),
