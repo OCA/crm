@@ -1,18 +1,16 @@
-# -*- coding: utf-8 -*-
-# Copyright 2015 Tecnativa - Pedro M. Baeza <pedro.baeza@tecnativa.com>
+# Copyright 2015-2018 Tecnativa - Pedro M. Baeza
 # Copyright 2015 AvanzOsc (http://www.avanzosc.es)
 # Copyright 2017 Tecnativa - Vicent Cubells <vicent.cubells@tecnativa.com>
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
 {
     "name": "Sequential Code for Claims",
-    "version": "10.0.1.0.0",
+    "version": "11.0.1.0.0",
     "category": "Customer Relationship Management",
-    "author": "OdooMRP team, "
-              "AvanzOSC, "
+    "author": "AvanzOSC, "
               "Tecnativa, "
               "Odoo Community Association (OCA)",
-    "website": "http://www.avanzosc.es",
+    "website": "https://github.com/OCA/crm",
     "license": "AGPL-3",
     "depends": [
         "crm_claim",
