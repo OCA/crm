@@ -42,11 +42,6 @@ msgid "Call duration"
 msgstr ""
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_campaign_id
-msgid "Campaign"
-msgstr ""
-
-#. module: crm_phonecall_planner
 #: model:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
 msgid "Cancel"
 msgstr "取消"
@@ -68,7 +63,7 @@ msgstr ""
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_days_gap
-msgid "Days gap"
+msgid "Days Gap"
 msgstr ""
 
 #. module: crm_phonecall_planner
@@ -117,11 +112,6 @@ msgid "Leave this free time between phone calls."
 msgstr ""
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_medium_id
-msgid "Medium"
-msgstr "普通"
-
-#. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_res_partner_domain
 msgid "Partners filter"
 msgstr ""
@@ -133,7 +123,7 @@ msgstr ""
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_planned_calls
-msgid "Planned calls"
+msgid "Planned Calls"
 msgstr ""
 
 #. module: crm_phonecall_planner
@@ -144,7 +134,7 @@ msgstr ""
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_repeat_calls
-msgid "Repeat calls"
+msgid "Repeat Calls"
 msgstr ""
 
 #. module: crm_phonecall_planner
@@ -187,17 +177,12 @@ msgid "Scheduling"
 msgstr ""
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_source_id
-msgid "Source"
-msgstr ""
-
-#. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_start
 msgid "Start"
 msgstr ""
 
 #. module: crm_phonecall_planner
-#: code:addons/crm_phonecall_planner/wizards/crm_phonecall_planner.py:90
+#: code:addons/crm_phonecall_planner/wizards/crm_phonecall_planner.py:89
 #, python-format
 msgid "Starting date must be less than ending date"
 msgstr ""
@@ -208,25 +193,9 @@ msgid "Tags"
 msgstr "标签"
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner_campaign_id
-msgid ""
-"This is a name that helps you keep track of your different campaign efforts "
-"Ex: Fall_Drive, Christmas_Special"
-msgstr ""
-
-#. module: crm_phonecall_planner
-#: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner_medium_id
-msgid "This is the method of delivery. Ex: Postcard, Email, or Banner Ad"
-msgstr ""
-
-#. module: crm_phonecall_planner
-#: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner_source_id
-msgid ""
-"This is the source of the link Ex: Search Engine, another domain, or name of "
-"email list"
-msgstr ""
-
-#. module: crm_phonecall_planner
 #: model:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
 msgid "Times"
 msgstr ""
+
+#~ msgid "Medium"
+#~ msgstr "普通"
