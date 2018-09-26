@@ -125,7 +125,7 @@ class CrmPhonecall(models.Model):
 
     @api.multi
     def compute_duration(self):
-        for phonecall in self:
+        for phonecall in self.filtered('date'):
             if phonecall.duration <= 0:
                 duration = datetime.now() - datetime.strptime(
                     phonecall.date, DEFAULT_SERVER_DATETIME_FORMAT)
