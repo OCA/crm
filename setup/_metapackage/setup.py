@@ -9,7 +9,9 @@ setuptools.setup(
     version=version,
     install_requires=[
         'odoo11-addon-crm_claim',
+        'odoo11-addon-crm_claim_code',
         'odoo11-addon-crm_deduplicate_acl',
+        'odoo11-addon-crm_deduplicate_by_ref',
         'odoo11-addon-crm_deduplicate_filter',
         'odoo11-addon-crm_lead_firstname',
         'odoo11-addon-crm_phonecall',
