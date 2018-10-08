@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # Copyright 2014-2018 Therp BV <https://therp.nl>.
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 {
     'name': 'Publication',
     'version': '10.0.1.0.0',
@@ -18,7 +18,6 @@
         'views/product_template.xml',
         'views/distribution_list.xml',
         'views/res_partner.xml',
-        'views/publication_edition.xml',
         'views/menu.xml',
         'security/ir.model.access.csv',
     ],

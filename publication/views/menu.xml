@@ -37,21 +37,4 @@
         sequence="76"
         />
 
-    <record
-        id="action_publication_edition"
-        model="ir.actions.act_window"
-        >
-        <field name="view_mode">tree,form</field>
-        <field name="res_model">publication.edition</field>
-        <field name="name">Publication Editons</field>
-    </record>
-
-    <menuitem
-        id="menu_publication_edition"
-        action="action_publication_edition"
-        name="Publication Editons"
-        parent="partner_noncommercial.menu_partner"
-        sequence="78"
-        />
-
 </odoo>

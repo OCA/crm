@@ -1,3 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_distribution_list_manager,CRUD access for distribution.list,model_distribution_list,base.group_user,1,1,1,1
-access_publication_edition_manager,CRUD access for publication.edition,model_publication_edition,base.group_user,1,1,1,1
