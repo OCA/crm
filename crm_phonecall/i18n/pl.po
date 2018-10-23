@@ -9,151 +9,153 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-06-01 02:38+0000\n"
-"PO-Revision-Date: 2017-06-01 02:38+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
+"PO-Revision-Date: 2018-10-24 12:18+0000\n"
+"Last-Translator: Piotr Cierkosz <piotr.w.cierkosz@icloud.com>\n"
 "Language-Team: Polish (https://www.transifex.com/oca/teams/23907/pl/)\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n"
-"%100<12 || n%100>=14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n"
-"%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<"
+"12 || n%100>=14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) "
+"|| (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+"X-Generator: Weblate 3.2.1\n"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report_nbr_cases
 msgid "# of Cases"
-msgstr ""
+msgstr "# Spraw"
 
 #. module: crm_phonecall
 #: model:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
+#, fuzzy
 msgid "<b> min(s)</b>"
-msgstr ""
+msgstr "<b> min(s)</b>"
 
 #. module: crm_phonecall
 #: model:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
 msgid "<span>Convert<br/>To Opportunity</span>"
-msgstr ""
+msgstr "<span>Przekształć<br/>W Możliwość</span>"
 
 #. module: crm_phonecall
 #: model:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
 msgid "<span>Schedule<br/>A Meeting</span>"
-msgstr ""
+msgstr "<span>Zaplanuj<br/>Spotkanie</span>"
 
 #. module: crm_phonecall
 #: model:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
 msgid "<span>Schedule<br/>Other Call</span>"
-msgstr ""
+msgstr "<span>Zaplanuj<br/>Inne połączenie</span>"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall_action
 msgid "Action"
-msgstr ""
+msgstr "Akcja"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_active
 msgid "Active"
-msgstr ""
+msgstr "Aktywne"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall_user_id
 msgid "Assign To"
-msgstr ""
+msgstr "Przypisz do"
 
 #. module: crm_phonecall
 #: model:ir.filters,name:crm_phonecall.filter_crm_phonecall_sales_team
 msgid "By Sales Team"
-msgstr ""
+msgstr "Przez Grupy Sprzedażowe"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_name
 msgid "Call Summary"
-msgstr ""
+msgstr "Podsumowanie Połączenia"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall_name
 msgid "Call summary"
-msgstr ""
+msgstr "Podsumowanie Połączenia"
 
 #. module: crm_phonecall
 #: model:ir.ui.view,arch_db:crm_phonecall.crm_case_form_view_leads
 #: model:ir.ui.view,arch_db:crm_phonecall.crm_case_form_view_oppor
 #: model:ir.ui.view,arch_db:crm_phonecall.view_partners_form_crm_calls
 msgid "Calls"
-msgstr ""
+msgstr "Połączenia"
 
 #. module: crm_phonecall
 #: model:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
 msgid "Calls Date by Month"
-msgstr ""
+msgstr "Daty połączeń według miesiąca"
 
 #. module: crm_phonecall
 #: selection:crm.phonecall,state:0 selection:crm.phonecall.report,state:0
 msgid "Cancelled"
-msgstr ""
+msgstr "Anulowane"
 
 #. module: crm_phonecall
 #: model:ir.ui.menu,name:crm_phonecall.menu_crm_case_phonecall-act
 msgid "Categories"
-msgstr ""
+msgstr "Kategorie"
 
 #. module: crm_phonecall
 #: model:ir.actions.act_window,help:crm_phonecall.crm_phonecall_categ_action
 msgid "Click to add a new category."
-msgstr ""
+msgstr "Kliknij aby dodać nową kategorię."
 
 #. module: crm_phonecall
 #: model:ir.actions.act_window,help:crm_phonecall.crm_case_categ_phone_incoming0
 msgid "Click to log the summary of a phone call."
-msgstr ""
+msgstr "Kliknij aby zapisać podsumowanie połączenia."
 
 #. module: crm_phonecall
 #: model:ir.actions.act_window,help:crm_phonecall.crm_case_categ_phone_outgoing0
 msgid "Click to schedule a call"
-msgstr ""
+msgstr "Kliknj aby zaplanować połączenie"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report_date_closed
 msgid "Close Date"
-msgstr ""
+msgstr "Data Zamknięcia"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_date_closed
 msgid "Closed"
-msgstr ""
+msgstr "Zakończone"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_company_id
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report_company_id
 msgid "Company"
-msgstr ""
+msgstr "Firma"
 
 #. module: crm_phonecall
 #: selection:crm.phonecall,state:0
 msgid "Confirmed"
-msgstr ""
+msgstr "Potwierdzone"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall_contact_name
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_partner_id
 msgid "Contact"
-msgstr ""
+msgstr "Kontakt"
 
 #. module: crm_phonecall
 #: model:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
 msgid "Convert To Opportunity"
-msgstr ""
+msgstr "Zamień na Możliwość"
 
 #. module: crm_phonecall
 #: model:ir.ui.view,arch_db:crm_phonecall.crm_case_inbound_phone_tree_view
 #: model:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_tree_view
 msgid "Convert to Opportunity"
-msgstr ""
+msgstr "Zamień na Możliwość"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report_create_date
 msgid "Create Date"
-msgstr ""
+msgstr "Data utworzenia"
 
 #. module: crm_phonecall
 #: model:ir.actions.act_window,help:crm_phonecall.crm_phonecall_categ_action
