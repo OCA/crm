@@ -6,6 +6,8 @@ from odoo import api, fields, models
 
 
 class CrmLead(models.Model):
+    """Added the phonecall related details in the lead."""
+
     _inherit = "crm.lead"
 
     phonecall_ids = fields.One2many(
@@ -15,11 +17,11 @@ class CrmLead(models.Model):
     )
     phonecall_count = fields.Integer(
         compute='_compute_phonecall_count',
-        string="Phonecalls",
     )
 
     @api.multi
     def _compute_phonecall_count(self):
+        """Calculate number of phonecalls."""
         for lead in self:
             lead.phonecall_count = self.env[
                 'crm.phonecall'].search_count(

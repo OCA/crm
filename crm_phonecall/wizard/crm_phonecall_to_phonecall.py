@@ -2,12 +2,14 @@
 # Copyright 2017 Tecnativa - Vicent Cubells
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo import api, fields, models
-
 import time
+
+from odoo import api, fields, models
 
 
 class CrmPhonecall2phonecall(models.TransientModel):
+    """Added the details of the crm phonecall2phonecall."""
+
     _name = 'crm.phonecall2phonecall'
     _description = 'Phonecall To Phonecall'
 
@@ -52,6 +54,7 @@ class CrmPhonecall2phonecall(models.TransientModel):
 
     @api.multi
     def action_schedule(self):
+        """Schedule a phonecall."""
         phonecall_obj = self.env['crm.phonecall']
         phonecalls = phonecall_obj.browse(self._context.get('active_ids', []))
         new_phonecalls = phonecalls.schedule_another_phonecall(
@@ -67,10 +70,7 @@ class CrmPhonecall2phonecall(models.TransientModel):
 
     @api.model
     def default_get(self, fields):
-        """
-        This function gets default values
-
-        """
+        """Function gets default values."""
         res = super(CrmPhonecall2phonecall, self).default_get(fields)
         res.update({
             'action': 'schedule',
