@@ -6,6 +6,8 @@ from odoo import fields, models
 
 
 class CalendarEvent(models.Model):
+    """Enhance the calendar event to add phonecall data."""
+
     _inherit = "calendar.event"
 
     phonecall_id = fields.Many2one(
