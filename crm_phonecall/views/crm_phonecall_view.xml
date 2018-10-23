@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
     <record id="crm_phonecall_categ_action" model="ir.actions.act_window">
@@ -19,10 +19,11 @@
     </record>
     <menuitem id="menu_crm_config_phonecall" name="Phone Calls"
               parent="crm.menu_crm_config_lead" sequence="45"/>
-    <menuitem action="crm_phonecall_categ_action" name="Categories"
-              id="menu_crm_case_phonecall-act" parent="menu_crm_config_phonecall"/>
+    <menuitem id="menu_crm_case_phonecall-act"
+              action="crm_phonecall_categ_action" name="Categories"
+              parent="menu_crm_config_phonecall"/>
 
-    <record model="ir.ui.view" id="crm_case_phone_tree_view">
+    <record id="crm_case_phone_tree_view" model="ir.ui.view">
         <field name="name">CRM - Phone Calls Tree</field>
         <field name="model">crm.phonecall</field>
         <field name="arch" type="xml">
@@ -51,7 +52,7 @@
         </field>
     </record>
 
-    <record model="ir.ui.view" id="crm_case_phone_form_view">
+    <record id="crm_case_phone_form_view" model="ir.ui.view">
         <field name="name">CRM - Phone Call Form</field>
         <field name="model">crm.phonecall</field>
         <field name="arch" type="xml">
@@ -84,7 +85,6 @@
                         </div>
                         <h2><field name="partner_phone"/></h2>
                     </div>
-
                     <group col="4">
                         <field name="date"/>
                         <field name="user_id" context="{'default_groups_ref': ['base.group_user', 'base.group_partner_manager', 'sales_team.group_sale_salesman_all_leads']}"/>
@@ -115,7 +115,7 @@
         </field>
     </record>
 
-    <record model="ir.ui.view" id="crm_case_inbound_phone_tree_view">
+    <record id="crm_case_inbound_phone_tree_view" model="ir.ui.view">
         <field name="name">CRM - Logged Phone Calls Tree</field>
         <field name="model">crm.phonecall</field>
         <field name="arch" type="xml">
@@ -149,7 +149,7 @@
         </field>
     </record>
 
-    <record model="ir.ui.view" id="crm_case_phone_calendar_view">
+    <record id="crm_case_phone_calendar_view" model="ir.ui.view">
         <field name="name">CRM - Phone Calls Calendar</field>
         <field name="model">crm.phonecall</field>
         <field name="priority" eval="2"/>
@@ -169,9 +169,12 @@
                 <field name="name" string="Phonecalls"/>
                 <field name="date"/>
                 <field name="state"/>
-                <filter string="My Phonecalls" domain="[('user_id', '=', uid)]"/>
-                <filter string="My Team" domain="[('team_id.user_id', '=', uid)]"/>
-                <filter string="Unassigned" domain="[('user_id','=',False)]"/>
+                <filter string="My Phonecalls" name="my_phonecalls"
+                        domain="[('user_id', '=', uid)]"/>
+                <filter string="My Team" name="my_team"
+                        domain="[('team_id.user_id', '=', uid)]"/>
+                <filter string="Unassigned" name="unassigned"
+                        domain="[('user_id','=',False)]"/>
                 <separator/>
                 <filter string="To Do" name="current" domain="[('state','in',('open','pending'))]"/>
                 <separator/>
@@ -182,16 +185,20 @@
                 <field name="opportunity_id"/>
                 <field name="team_id" string="Sales Team" groups="sales_team.group_sale_manager"/>
                 <group expand="0" string="Group By">
-                    <filter string="Partner" domain="[]" context="{'group_by':'partner_id'}"/>
-                    <filter string="Responsible" domain="[]" context="{'group_by':'user_id'}"/>
-                    <filter string="Creation" help="Creation Date" domain="[]" context="{'group_by':'create_date'}"/>
-                    <filter string="Month" domain="[]" context="{'group_by':'date'}" help="Calls Date by Month"/>
+                    <filter string="Partner" name="partner"
+                            context="{'group_by':'partner_id'}"/>
+                    <filter string="Responsible" name="responsible"
+                            context="{'group_by':'user_id'}"/>
+                    <filter string="Creation" name="creation"
+                            help="Creation Date" context="{'group_by':'create_date'}"/>
+                    <filter string="Month" name="month"
+                            context="{'group_by':'date'}" help="Calls Date by Month"/>
                 </group>
             </search>
         </field>
     </record>
 
-    <record model="ir.actions.act_window" id="crm_case_categ_phone0">
+    <record id="crm_case_categ_phone0" model="ir.actions.act_window">
         <field name="name">Phone Calls</field>
         <field name="res_model">crm.phonecall</field>
         <field name="view_type">form</field>
@@ -201,32 +208,32 @@
         <field name="search_view_id" ref="view_crm_case_phonecalls_filter"/>
     </record>
 
-    <record model="ir.actions.act_window.view" id="action_crm_tag_tree_phone0">
+    <record id="action_crm_tag_tree_phone0" model="ir.actions.act_window.view">
         <field name="sequence" eval="1"/>
         <field name="view_mode">tree</field>
         <field name="view_id" ref="crm_case_phone_tree_view"/>
         <field name="act_window_id" ref="crm_case_categ_phone0"/>
     </record>
 
-    <record model="ir.actions.act_window.view" id="action_crm_tag_calendar_phone0">
+    <record id="action_crm_tag_calendar_phone0" model="ir.actions.act_window.view">
         <field name="sequence" eval="2"/>
         <field name="view_mode">calendar</field>
         <field name="view_id" ref="crm_case_phone_calendar_view"/>
         <field name="act_window_id" ref="crm_case_categ_phone0"/>
     </record>
 
-    <record model="ir.actions.act_window.view" id="action_crm_tag_form_phone0">
+    <record id="action_crm_tag_form_phone0" model="ir.actions.act_window.view">
         <field name="sequence" eval="3"/>
         <field name="view_mode">form</field>
         <field name="view_id" ref="crm_case_phone_form_view"/>
         <field name="act_window_id" ref="crm_case_categ_phone0"/>
     </record>
 
-    <menuitem name="Phone Calls" id="menu_crm_case_phone"
+    <menuitem id="menu_crm_case_phone" name="Phone Calls"
               groups="sales_team.group_sale_salesman"
-              parent="crm.crm_menu_root" sequence="6" />
+              parent="crm.crm_menu_root" sequence="6"/>
 
-    <record model="ir.actions.act_window" id="crm_case_categ_phone_incoming0">
+    <record id="crm_case_categ_phone_incoming0" model="ir.actions.act_window">
         <field name="name">Logged Calls</field>
         <field name="res_model">crm.phonecall</field>
         <field name="view_type">form</field>
@@ -249,21 +256,21 @@
         </field>
     </record>
 
-    <record model="ir.actions.act_window.view" id="action_crm_tag_tree_phone_incoming0">
+    <record id="action_crm_tag_tree_phone_incoming0" model="ir.actions.act_window.view">
         <field name="sequence" eval="1"/>
         <field name="view_mode">tree</field>
         <field name="view_id" ref="crm_case_inbound_phone_tree_view"/>
         <field name="act_window_id" ref="crm_case_categ_phone_incoming0"/>
     </record>
 
-    <record model="ir.actions.act_window.view" id="action_crm_tag_calendar_phone_incoming0">
+    <record id="action_crm_tag_calendar_phone_incoming0" model="ir.actions.act_window.view">
         <field name="sequence" eval="2"/>
         <field name="view_mode">calendar</field>
         <field name="view_id" ref="crm_case_phone_calendar_view"/>
         <field name="act_window_id" ref="crm_case_categ_phone_incoming0"/>
     </record>
 
-    <record model="ir.actions.act_window.view" id="action_crm_tag_form_phone_incoming0">
+    <record id="action_crm_tag_form_phone_incoming0" model="ir.actions.act_window.view">
         <field name="sequence" eval="3"/>
         <field name="view_mode">form</field>
         <field name="view_id" ref="crm_case_phone_form_view"/>
@@ -272,16 +279,15 @@
 
     <menuitem name="Logged Calls" id="menu_crm_case_phone_inbound"
               parent="menu_crm_case_phone"
-              action="crm_case_categ_phone_incoming0" />
+              action="crm_case_categ_phone_incoming0"/>
 
-    <record model="ir.actions.act_window" id="crm_case_categ_phone_outgoing0">
+    <record id="crm_case_categ_phone_outgoing0" model="ir.actions.act_window">
         <field name="name">Scheduled Calls</field>
         <field name="res_model">crm.phonecall</field>
         <field name="view_type">form</field>
         <field name="view_mode">tree,form,calendar</field>
         <field name="view_id" ref="crm_case_phone_tree_view"/>
         <field name="domain">[('state','!=','done')]</field>
-        <field name="context">{}</field>
         <field name="search_view_id" ref="view_crm_case_phonecalls_filter"/>
         <field name="help" type="html">
             <p class="oe_view_nocontent_create">
@@ -296,28 +302,29 @@
         </field>
     </record>
 
-    <record model="ir.actions.act_window.view" id="action_crm_tag_tree_phone_outgoing0">
+    <record id="action_crm_tag_tree_phone_outgoing0" model="ir.actions.act_window.view">
         <field name="sequence" eval="1"/>
         <field name="view_mode">tree</field>
         <field name="view_id" ref="crm_case_phone_tree_view"/>
         <field name="act_window_id" ref="crm_case_categ_phone_outgoing0"/>
     </record>
 
-    <record model="ir.actions.act_window.view" id="action_crm_tag_calendar_phone_outgoing0">
+    <record id="action_crm_tag_calendar_phone_outgoing0" model="ir.actions.act_window.view">
         <field name="sequence" eval="2"/>
         <field name="view_mode">calendar</field>
         <field name="view_id" ref="crm_case_phone_calendar_view"/>
         <field name="act_window_id" ref="crm_case_categ_phone_outgoing0"/>
     </record>
 
-    <record model="ir.actions.act_window.view" id="action_crm_tag_form_phone_outgoing0">
+    <record id="action_crm_tag_form_phone_outgoing0" model="ir.actions.act_window.view">
         <field name="sequence" eval="3"/>
         <field name="view_mode">form</field>
         <field name="view_id" ref="crm_case_phone_form_view"/>
         <field name="act_window_id" ref="crm_case_categ_phone_outgoing0"/>
     </record>
 
-    <menuitem name="Scheduled Calls" id="menu_crm_case_phone_outbound"
+    <menuitem id="menu_crm_case_phone_outbound"
+              name="Scheduled Calls"
               parent="menu_crm_case_phone"
               groups="crm_phonecall.group_scheduled_calls"
               action="crm_case_categ_phone_outgoing0"/>

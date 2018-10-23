@@ -1,7 +1,7 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <record model="ir.ui.view" id="crm_case_form_view_leads">
+    <record id="crm_case_form_view_leads_inherit" model="ir.ui.view">
         <field name="name">CRM - Leads Form</field>
         <field name="model">crm.lead</field>
         <field name="inherit_id" ref="crm.crm_case_form_view_leads"/>
@@ -16,7 +16,7 @@
             </xpath>
         </field>
     </record>
-    <record model="ir.ui.view" id="crm_case_form_view_oppor">
+    <record id="crm_case_form_view_oppor_inherit" model="ir.ui.view">
         <field name="name">Opportunities</field>
         <field name="model">crm.lead</field>
         <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>

@@ -2,14 +2,14 @@
 # Copyright 2017 Tecnativa - Vicent Cubells
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from datetime import datetime
-from odoo import api, fields, models, _
-from odoo.tools import DEFAULT_SERVER_DATETIME_FORMAT
 from functools import reduce
+
+from odoo import api, fields, models, _
 
 
 class CrmPhonecall(models.Model):
-    """ Model for CRM phonecalls """
+    """Model for CRM phonecalls."""
+
     _name = "crm.phonecall"
     _description = "Phonecall"
     _order = "id desc"
@@ -107,28 +107,29 @@ class CrmPhonecall(models.Model):
 
     @api.onchange('partner_id')
     def on_change_partner_id(self):
+        """Contact number details should be change based on partner."""
         if self.partner_id:
             self.partner_phone = self.partner_id.phone
             self.partner_mobile = self.partner_id.mobile
 
     @api.multi
     def write(self, values):
-        """ Override to add case management: open/close dates """
+        """Override to add case management: open/close dates."""
         if values.get('state'):
             if values.get('state') == 'done':
-                values['date_closed'] = fields.datetime.now()
+                values['date_closed'] = fields.Datetime.now()
                 self.compute_duration()
             elif values.get('state') == 'open':
-                values['date_open'] = fields.datetime.now()
+                values['date_open'] = fields.Datetime.now()
                 values['duration'] = 0.0
         return super(CrmPhonecall, self).write(values)
 
     @api.multi
     def compute_duration(self):
+        """Calculate duration based on phonecall date."""
         for phonecall in self.filtered('date'):
-            if phonecall.duration <= 0:
-                duration = datetime.now() - datetime.strptime(
-                    phonecall.date, DEFAULT_SERVER_DATETIME_FORMAT)
+            if phonecall.duration <= 0 and phonecall.date:
+                duration = fields.Datetime.now() - phonecall.date
                 values = {'duration': duration.seconds / 60.0}
                 phonecall.write(values)
         return True
@@ -138,9 +139,7 @@ class CrmPhonecall(models.Model):
                                    user_id=False, team_id=False,
                                    tag_ids=False, action='schedule',
                                    return_recordset=False):
-        """
-        action :('schedule','Schedule a call'), ('log','Log a call')
-        """
+        """Action :('schedule','Schedule a call'), ('log','Log a call')."""
         phonecall_dict = {}
         for call in self:
             if not team_id:
@@ -165,18 +164,19 @@ class CrmPhonecall(models.Model):
                 'medium_id': call.medium_id.id,
             }
             if tag_ids:
-                values.update({'tag_ids': [(6, 0, [tag_ids])]})
+                values.update({'tag_ids': [(6, 0, tag_ids)]})
             new_id = self.create(values)
             if action == 'log':
                 call.write({'state': 'done'})
             phonecall_dict[call.id] = new_id
         if return_recordset:
-            return reduce(lambda x, y: x + y,  phonecall_dict.values())
+            return reduce(lambda x, y: x + y, phonecall_dict.values())
         else:
             return phonecall_dict
 
     @api.onchange('opportunity_id')
     def on_change_opportunity(self):
+        """Based on opportunity, changed contact, tags, partner, team."""
         if self.opportunity_id:
             self.team_id = self.opportunity_id.team_id.id
             self.partner_phone = self.opportunity_id.phone
@@ -186,6 +186,7 @@ class CrmPhonecall(models.Model):
 
     @api.multi
     def redirect_phonecall_view(self):
+        """Redirect on the phonecall related view."""
         model_data = self.env['ir.model.data']
         # Select the view
         tree_view = model_data.get_object_reference(
@@ -214,6 +215,7 @@ class CrmPhonecall(models.Model):
     @api.multi
     def convert_opportunity(self, opportunity_summary=False, partner_id=False,
                             planned_revenue=0.0, probability=0.0):
+        """Convert lead to opportunity."""
         partner = self.env['res.partner']
         opportunity = self.env['crm.lead']
         opportunity_dict = {}
@@ -253,10 +255,7 @@ class CrmPhonecall(models.Model):
 
     @api.multi
     def action_make_meeting(self):
-        """
-        Open meeting's calendar view to schedule a meeting on current
-        phonecall.
-        """
+        """Open meeting's calendar view to schedule a meeting on phonecall."""
         partner_ids = [
             self.env['res.users'].browse(self.env.uid).partner_id.id]
         res = {}
@@ -276,9 +275,7 @@ class CrmPhonecall(models.Model):
 
     @api.multi
     def action_button_convert2opportunity(self):
-        """
-        Convert a phonecall into an opp and then redirect to the opp view.
-        """
+        """Convert a phonecall into an opp and redirect to the opp view."""
         opportunity_dict = {}
         for call in self:
             opportunity_dict = call.convert_opportunity()

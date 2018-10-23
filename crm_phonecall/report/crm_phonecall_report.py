@@ -16,6 +16,8 @@ AVAILABLE_STATES = [
 
 
 class CrmPhonecallReport(models.Model):
+    """Generate BI report based on phonecall."""
+
     _name = "crm.phonecall.report"
     _description = "Phone calls by user"
     _auto = False
@@ -123,7 +125,7 @@ class CrmPhonecallReport(models.Model):
 
     @api.model_cr
     def init(self):
-
+        """Initialize the report."""
         tools.drop_view_if_exists(self._cr, self._table)
         self._cr.execute(
             """
@@ -132,4 +134,4 @@ class CrmPhonecallReport(models.Model):
                 %s
             )""", (
                 AsIs(self._table), AsIs(self._select()), AsIs(self._from()))
-            )
+        )
