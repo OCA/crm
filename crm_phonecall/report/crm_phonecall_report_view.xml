@@ -31,14 +31,14 @@
         <field name="model_id">crm.phonecall.report</field>
         <field name="domain">[('state','=','done')]</field>
         <field name="user_id" eval="False"/>
-        <field name="context">{'group_by': ['team_id'], 'col_group_by': [], 'measures': ['nbr_cases', 'duration']}</field>
+        <field name="context">{'group_by': ['team_id'], 'measures': ['nbr_cases', 'duration']}</field>
     </record>
     <record id="filter_crm_phonecall_delay_to_close" model="ir.filters">
         <field name="name">Delay To Close</field>
         <field name="model_id">crm.phonecall.report</field>
         <field name="domain">[('state','=','done')]</field>
         <field name="user_id" eval="False"/>
-        <field name="context">{'group_by': ['team_id'], 'col_group_by': [], 'measures': ['delay_close']}</field>
+        <field name="context">{'group_by': ['team_id'], 'measures': ['delay_close']}</field>
     </record>
     <record id="filter_crm_phonecall_phone_call_to_do" model="ir.filters">
         <field name="name">Phone Calls To Do</field>
@@ -57,13 +57,15 @@
                     help="Phone calls which are in draft and open state"/>
                 <filter string="Held" name="held" domain="[('state','=','done')]"
                     help="Phone calls which are in closed state"/>
-                <filter string="Not Held" domain="[('state','=','pending')]"
+                <filter string="Not Held" name="not_held" domain="[('state','=','pending')]"
                     help="Phone calls which are in pending state"/>
                 <separator/>
-                <filter string="My Sales Team(s)" context="{'invisible_section': False}" domain="[('team_id.user_id','=',uid)]"
+                <filter string="My Sales Team(s)" name="my_sales_team"
+                        context="{'invisible_section': False}" domain="[('team_id.user_id','=',uid)]"
                         help="Phone calls that are assigned to one of the sale teams I manage" groups="sales_team.group_sale_manager"/>
                 <separator/>
-                <filter string="My Phone Calls" help="Phone Calls that are assigned to me" domain="[('user_id','=',uid)]" />
+                <filter string="My Phone Calls" name="my_phone_calls"
+                        help="Phone Calls that are assigned to me" domain="[('user_id','=',uid)]"/>
                 <field name="team_id" string="Sales Team" context="{'invisible_section': False}"
                         groups="sales_team.group_sale_manager"/>
                 <field name="user_id" string="Salesperson"/>
@@ -74,35 +76,35 @@
                     <field name="date_closed"/>
                 </group>
                 <group expand="1" string="Group By">
-                    <filter string="Salesperson" name="Salesperson" context="{'group_by':'user_id'}" />
-                    <filter string="Sales Team" context="{'group_by':'team_id'}" groups="sales_team.group_sale_manager"/>
-                    <filter string="Customer" context="{'group_by':'partner_id'}" />
-                    <filter string="Status" context="{'group_by':'state'}" />
+                    <filter string="Salesperson" name="Salesperson" context="{'group_by':'user_id'}"/>
+                    <filter string="Sales Team" name="sales_team" context="{'group_by':'team_id'}" groups="sales_team.group_sale_manager"/>
+                    <filter string="Customer" name="customer" context="{'group_by':'partner_id'}"/>
+                    <filter string="Status" name="status" context="{'group_by':'state'}"/>
                     <separator/>
-                    <filter string="Creation Month" context="{'group_by':'create_date:month'}" help="Month of call"/>
+                    <filter string="Creation Month" name="creation_month"
+                            context="{'group_by':'create_date:month'}" help="Month of call"/>
                 </group>
             </search>
         </field>
     </record>
     <record id="crm_phonecall_report_action" model="ir.actions.act_window">
-       <field name="name">Phone Calls Analysis</field>
-       <field name="res_model">crm.phonecall.report</field>
-       <field name="view_type">form</field>
-       <field name="view_mode">pivot,graph</field>
-       <field name="context">{}</field>
-       <field name="domain">[]</field>
-   </record>
+        <field name="name">Phone Calls Analysis</field>
+        <field name="res_model">crm.phonecall.report</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">pivot,graph</field>
+    </record>
     <record id="crm_phonecall_report_action_team" model="ir.actions.act_window">
-       <field name="name">Phone Calls Analysis</field>
-       <field name="res_model">crm.phonecall.report</field>
-       <field name="view_type">form</field>
-       <field name="view_mode">pivot,graph</field>
-       <field name="context">{'search_default_team_id': active_id}</field>
-       <field name="domain">[]</field>
-   </record>
-    <menuitem name="Phone Calls Analysis"
+        <field name="name">Phone Calls Analysis</field>
+        <field name="res_model">crm.phonecall.report</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">pivot,graph</field>
+        <field name="context">{'search_default_team_id': active_id}</field>
+    </record>
+
+    <menuitem id="menu_report_crm_phonecalls_tree"
+        name="Phone Calls Analysis"
         groups="sales_team.group_sale_salesman"
         action="crm_phonecall_report_action"
-        id="menu_report_crm_phonecalls_tree" parent="crm.crm_menu_report" sequence="15"/>
+        parent="crm.crm_menu_report" sequence="15"/>
 
 </odoo>
