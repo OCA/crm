@@ -5,8 +5,11 @@ from odoo.tests import common
 
 
 class TestCrmPhoneCall(common.SavepointCase):
+    """Unit test case of the Crm Phonecall module."""
+
     @classmethod
     def setUpClass(cls):
+        """Created required data."""
         super(TestCrmPhoneCall, cls).setUpClass()
         cls.company = cls.env.ref('base.main_company')
         partner_obj = cls.env['res.partner']
@@ -52,6 +55,7 @@ class TestCrmPhoneCall(common.SavepointCase):
         cls.tag = cls.env.ref('crm.categ_oppor1')
 
     def test_on_change_partner(self):
+        """Partner change method test."""
         self.phonecall1.partner_id = self.partner2
         self.phonecall1.on_change_partner_id()
         self.assertEqual(self.phonecall1.partner_phone, self.partner2.phone)
@@ -64,11 +68,12 @@ class TestCrmPhoneCall(common.SavepointCase):
         self.assertEqual(self.phonecall1.duration, 0.0)
 
     def test_schedule_another_phonecall(self):
+        """Schedule another phonecall."""
         phonecall2 = self.phonecall1.schedule_another_phonecall(
             schedule_time=False,
             call_summary='Test schedule method',
             action='schedule',
-            tag_ids=self.tag.id,
+            tag_ids=self.tag.ids,
         )[self.phonecall1.id]
         self.assertNotEqual(phonecall2.id, self.phonecall1.id)
         self.assertEqual(self.phonecall1.state, 'open')
@@ -88,6 +93,7 @@ class TestCrmPhoneCall(common.SavepointCase):
             self.assertEqual(phonecall.medium_id, self.medium1)
 
     def test_on_change_opportunity(self):
+        """Change the opportunity."""
         self.phonecall1.opportunity_id = self.opportunity1
         self.phonecall1.on_change_opportunity()
         self.assertEqual(
@@ -95,6 +101,7 @@ class TestCrmPhoneCall(common.SavepointCase):
         self.assertEqual(self.opportunity1.phonecall_count, 1)
 
     def test_convert2opportunity(self):
+        """Convert lead to opportunity test."""
         result = self.phonecall1.action_button_convert2opportunity()
         self.assertEqual(result['res_model'], 'crm.lead')
         lead = self.env["crm.lead"].browse(result["res_id"])
@@ -103,11 +110,13 @@ class TestCrmPhoneCall(common.SavepointCase):
         self.assertEqual(lead.medium_id, self.medium1)
 
     def test_make_meeting(self):
+        """Make a meeting test."""
         result = self.phonecall1.action_make_meeting()
         self.assertEqual(
             result['context']['default_phonecall_id'], self.phonecall1.id)
 
     def test_wizard(self):
+        """Schedule a call from wizard."""
         model_data = self.env['ir.model.data']
         wizard = self.env['crm.phonecall2phonecall'].with_context(
             active_ids=self.phonecall1.ids, active_id=self.phonecall1.id,
