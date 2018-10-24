@@ -19,31 +19,38 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#. module: crm_sector
-#: model:ir.model,name:crm_sector.model_crm_lead
+#. module: crm_industry
+#: model:ir.ui.view,arch_db:crm_industry.crm_case_form_view_leads
+#: model:ir.ui.view,arch_db:crm_industry.crm_case_form_view_oppor
+#: model:ir.ui.view,arch_db:crm_industry.view_crm_case_leads_filter
+#: model:ir.ui.view,arch_db:crm_industry.view_crm_case_opportunities_filter
+msgid "Industry"
+msgstr ""
+
+#. module: crm_industry
+#: model:ir.model,name:crm_industry.model_crm_lead
 msgid "Lead/Opportunity"
 msgstr "Aday/Fırsat"
 
-#. module: crm_sector
-#: model:ir.model.fields,field_description:crm_sector.field_crm_lead_sector_id
-msgid "Main Sector"
-msgstr "Ana Sektör"
+#. module: crm_industry
+#: model:ir.model.fields,field_description:crm_industry.field_crm_lead_industry_id
+msgid "Main Industry"
+msgstr ""
 
-#. module: crm_sector
-#: model:ir.model.fields,field_description:crm_sector.field_crm_lead_secondary_sector_ids
-msgid "Secondary Sectors"
+#. module: crm_industry
+#: model:ir.model.fields,field_description:crm_industry.field_crm_lead_secondary_industry_ids
+#, fuzzy
+msgid "Secondary Industries"
 msgstr "İkincil Sektörler"
 
-#. module: crm_sector
-#: model:ir.ui.view,arch_db:crm_sector.crm_case_form_view_leads
-#: model:ir.ui.view,arch_db:crm_sector.crm_case_form_view_oppor
-#: model:ir.ui.view,arch_db:crm_sector.view_crm_case_leads_filter
-#: model:ir.ui.view,arch_db:crm_sector.view_crm_case_opportunities_filter
-msgid "Sector"
-msgstr "Sektör"
-
-#. module: crm_sector
-#: code:addons/crm_sector/models/crm_lead.py:22
+#. module: crm_industry
+#: code:addons/crm_industry/models/crm_lead.py:21
 #, python-format
-msgid "The secondary sectors must be different from the main sector."
+msgid "The secondary industries must be different from the main industry."
 msgstr ""
+
+#~ msgid "Main Sector"
+#~ msgstr "Ana Sektör"
+
+#~ msgid "Sector"
+#~ msgstr "Sektör"
