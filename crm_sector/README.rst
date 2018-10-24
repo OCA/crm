@@ -2,11 +2,11 @@
    :target: https://www.gnu.org/licenses/agpl
    :alt: License: AGPL-3
 
-==========
-CRM Sector
-==========
+============
+CRM Industry
+============
 
-This module adds the concept of economic sector for leads and opportunities.
+This module adds industries for leads and opportunities.
 
 Usage
 =====
@@ -39,6 +39,7 @@ Contributors
 * Antonio Espinosa <antonio.espinosa@tecnativa.com>
 * Javier Iniesta <javieria@antiun.com>
 * Luis M. Ontalba <luis.martinez@tecnativa.com>
+* Miquel Raïch <miquel.raich@eficent.com>
 
 Do not contact contributors directly about support or help with technical issues.
 
