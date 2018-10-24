@@ -1,0 +1,18 @@
+---Fields in module 'crm_industry'---
+crm_industry / crm.lead                 / industry_id (many2one)        : NEW relation: res.partner.industry
+crm_industry / crm.lead                 / secondary_industry_ids (many2many): NEW relation: res.partner.industry
+crm_sector   / crm.lead                 / secondary_sector_ids (many2many): DEL relation: res.partner.sector
+crm_sector   / crm.lead                 / sector_id (many2one)          : DEL relation: res.partner.sector
+---XML records in module 'crm_industry'---
+NEW ir.ui.view: crm_industry.crm_case_form_view_leads
+NEW ir.ui.view: crm_industry.crm_case_form_view_oppor
+NEW ir.ui.view: crm_industry.crm_case_tree_view_leads
+NEW ir.ui.view: crm_industry.crm_case_tree_view_oppor
+NEW ir.ui.view: crm_industry.view_crm_case_leads_filter
+NEW ir.ui.view: crm_industry.view_crm_case_opportunities_filter
+DEL ir.ui.view: crm_sector.crm_case_form_view_leads
+DEL ir.ui.view: crm_sector.crm_case_form_view_oppor
+DEL ir.ui.view: crm_sector.crm_case_tree_view_leads
+DEL ir.ui.view: crm_sector.crm_case_tree_view_oppor
+DEL ir.ui.view: crm_sector.view_crm_case_leads_filter
+DEL ir.ui.view: crm_sector.view_crm_case_opportunities_filter
