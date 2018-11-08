@@ -7,7 +7,7 @@
       <field name="inherit_id" ref="crm.crm_case_form_view_leads"/>
       <field name="arch" type="xml">
         <field name="street2" position="after">
-          <field name="street3" placeholder="Street3..." class="o_address_street"/>
+          <field name="street3"/>
         </field>
       </field>
     </record>
@@ -18,7 +18,7 @@
       <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
       <field name="arch" type="xml">
         <field name="street2" position="after">
-          <field name="street3" placeholder="Street3..." class="o_address_street"/>
+          <field name="street3"/>
         </field>
       </field>
     </record>
