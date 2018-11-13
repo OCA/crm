@@ -18,6 +18,7 @@ setuptools.setup(
         'odoo10-addon-crm_lead_website',
         'odoo10-addon-crm_location',
         'odoo10-addon-crm_location_nuts',
+        'odoo10-addon-crm_meeting_commercial_partner',
         'odoo10-addon-crm_phonecall',
         'odoo10-addon-crm_phonecall_summary_predefined',
         'odoo10-addon-crm_sale_marketing',
