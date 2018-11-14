@@ -1,4 +1,3 @@
-# -*- encoding: utf-8 -*-
 # Author: Jordi Ballester Alomar
 # Copyright 2018 Eficent Business and IT Consulting Services, S.L.
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
@@ -13,7 +12,7 @@ class ResPartner(models.Model):
 
     @api.multi
     def _compute_meeting_count(self):
-        super(ResPartner, self)._compute_meeting_count()
+        super()._compute_meeting_count()
         for partner in self:
             partners = partner + partner.child_ids
             meetings = self.env['calendar.event'].search(
