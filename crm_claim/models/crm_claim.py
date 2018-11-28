@@ -1,16 +1,24 @@
-# -*- coding: utf-8 -*-
 # Copyright 2015-2017 Odoo S.A.
-# Copyright 2017 Vicent Cubells <vicent.cubells@tecnativa.com>
+# Copyright 2017 Tecnativa - Vicent Cubells
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
-import odoo
 from odoo import _, api, fields, models
 from odoo.tools import html2plaintext
 
+APPLICABLE_MODELS = [
+    'account.invoice',
+    'event.registration',
+    'hr.applicant',
+    'res.partner',
+    'product.product',
+    'purchase.order',
+    'purchase.order.line',
+    'sale.order',
+    'sale.order.line',
+]
+
 
 class CrmClaim(models.Model):
-    """ Crm claim
-    """
     _name = "crm.claim"
     _description = "Claim"
     _order = "priority,date desc"
@@ -25,6 +33,13 @@ class CrmClaim(models.Model):
     @api.model
     def _get_default_team(self):
         return self.env['crm.team']._get_default_team_id()
+
+    @api.model
+    def _selection_model(self):
+        return [
+            (x, _(self.env[x]._description)) for x in APPLICABLE_MODELS
+            if x in self.env
+        ]
 
     name = fields.Char(
         string='Claim Subject',
@@ -56,7 +71,7 @@ class CrmClaim(models.Model):
         default=fields.Datetime.now,
     )
     model_ref_id = fields.Reference(
-        selection=odoo.addons.base.res.res_request.referenceable_models,
+        selection='_selection_model',
         string='Reference',
         oldname='ref',
     )
