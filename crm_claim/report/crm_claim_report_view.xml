@@ -37,9 +37,9 @@
         <field name="model">crm.claim.report</field>
         <field name="arch" type="xml">
             <search string="Search">
-                <filter string="My Sales Team(s)" context="{'invisible_team': False}" domain="[('team_id.user_id','=',uid)]" help="My Sales Team(s)"/>
+                <filter string="My Sales Team(s)" name="My Sales Team(s)" context="{'invisible_team': False}" domain="[('team_id.user_id','=',uid)]" help="My Sales Team(s)"/>
                 <separator/>
-                <filter string="My Company" domain="[('company_id.user_ids','=',uid)]" help="My Company" groups="base.group_multi_company"/>
+                <filter string="My Company" name="My Company" domain="[('company_id.user_ids','=',uid)]" help="My Company" groups="base.group_multi_company"/>
                 <separator/>
                 <field name="company_id" groups="base.group_multi_company"/>
                 <field name="user_id" string="Salesperson"/>
@@ -57,11 +57,11 @@
                 <group  expand="1" string="Group By">
                     <filter string="Salesperson" name="Salesperson" context="{'group_by':'user_id'}" />
                     <filter string="Partner" name="partner" context="{'group_by':'partner_id'}" />
-                    <filter string="Stage" context="{'group_by':'stage_id'}" />
-                    <filter string="Category" context="{'group_by':'categ_id'}" />
-                    <filter string="Company" context="{'group_by':'company_id'}" groups="base.group_multi_company"/>
+                    <filter string="Stage" name="Stage" context="{'group_by':'stage_id'}" />
+                    <filter string="Category" name="Category" context="{'group_by':'categ_id'}" />
+                    <filter string="Company" name="Company" context="{'group_by':'company_id'}" groups="base.group_multi_company"/>
                     <separator/>
-                    <filter string="Creation Month" context="{'group_by':'claim_date:month'}" help="Month of claim"/>
+                    <filter string="Creation Month" name="Creation Month" context="{'group_by':'claim_date:month'}" help="Month of claim"/>
                 </group>
             </search>
         </field>
