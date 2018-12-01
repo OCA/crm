@@ -165,7 +165,7 @@ class CrmPhonecall(models.Model):
                 'medium_id': call.medium_id.id,
             }
             if tag_ids:
-                values.update({'tag_ids': [(6, 0, [tag_ids])]})
+                values.update({'tag_ids': [(6, 0, tag_ids)]})
             new_id = self.create(values)
             if action == 'log':
                 call.write({'state': 'done'})

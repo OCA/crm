@@ -68,7 +68,7 @@ class TestCrmPhoneCall(common.SavepointCase):
             schedule_time=False,
             call_summary='Test schedule method',
             action='schedule',
-            tag_ids=self.tag.id,
+            tag_ids=self.tag.ids,
         )[self.phonecall1.id]
         self.assertNotEqual(phonecall2.id, self.phonecall1.id)
         self.assertEqual(self.phonecall1.state, 'open')
