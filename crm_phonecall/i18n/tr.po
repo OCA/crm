@@ -133,6 +133,7 @@ msgid "Confirmed"
 msgstr "Onaylanan"
 
 #. module: crm_phonecall
+#: model:ir.model,name:crm_phonecall.model_res_partner
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall_contact_name
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_partner_id
 msgid "Contact"
@@ -275,8 +276,7 @@ msgid "Held"
 msgstr ""
 
 #. module: crm_phonecall
-#: selection:crm.phonecall,priority:0
-#: selection:crm.phonecall.report,priority:0
+#: selection:crm.phonecall,priority:0 selection:crm.phonecall.report,priority:0
 msgid "High"
 msgstr "Yüksek"
 
@@ -341,8 +341,7 @@ msgid "Logged Calls"
 msgstr ""
 
 #. module: crm_phonecall
-#: selection:crm.phonecall,priority:0
-#: selection:crm.phonecall.report,priority:0
+#: selection:crm.phonecall,priority:0 selection:crm.phonecall.report,priority:0
 msgid "Low"
 msgstr "Düşük"
 
@@ -398,8 +397,7 @@ msgid "Next Action"
 msgstr "Sonraki Eylem"
 
 #. module: crm_phonecall
-#: selection:crm.phonecall,priority:0
-#: selection:crm.phonecall.report,priority:0
+#: selection:crm.phonecall,priority:0 selection:crm.phonecall.report,priority:0
 msgid "Normal"
 msgstr "Normal"
 
@@ -446,11 +444,11 @@ msgstr ""
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report_opening_date
-msgid "Opening date"
-msgstr ""
+#, fuzzy
+msgid "Opening Date"
+msgstr "Oluşturulma Tarihi"
 
 #. module: crm_phonecall
-#: model:ir.model,name:crm_phonecall.model_res_partner
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall_partner_id
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report_partner_id
 #: model:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter

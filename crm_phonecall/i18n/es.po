@@ -132,6 +132,7 @@ msgid "Confirmed"
 msgstr "Confirmado"
 
 #. module: crm_phonecall
+#: model:ir.model,name:crm_phonecall.model_res_partner
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall_contact_name
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_partner_id
 msgid "Contact"
@@ -276,8 +277,7 @@ msgid "Held"
 msgstr "Realizada"
 
 #. module: crm_phonecall
-#: selection:crm.phonecall,priority:0
-#: selection:crm.phonecall.report,priority:0
+#: selection:crm.phonecall,priority:0 selection:crm.phonecall.report,priority:0
 msgid "High"
 msgstr "Alta"
 
@@ -344,8 +344,7 @@ msgid "Logged Calls"
 msgstr "Llamadas registradas"
 
 #. module: crm_phonecall
-#: selection:crm.phonecall,priority:0
-#: selection:crm.phonecall.report,priority:0
+#: selection:crm.phonecall,priority:0 selection:crm.phonecall.report,priority:0
 msgid "Low"
 msgstr "Bajo"
 
@@ -401,8 +400,7 @@ msgid "Next Action"
 msgstr "Siguiente acción"
 
 #. module: crm_phonecall
-#: selection:crm.phonecall,priority:0
-#: selection:crm.phonecall.report,priority:0
+#: selection:crm.phonecall,priority:0 selection:crm.phonecall.report,priority:0
 msgid "Normal"
 msgstr "Normal"
 
@@ -454,11 +452,11 @@ msgstr "Abierto"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report_opening_date
-msgid "Opening date"
+#, fuzzy
+msgid "Opening Date"
 msgstr "Fecha de apertura"
 
 #. module: crm_phonecall
-#: model:ir.model,name:crm_phonecall.model_res_partner
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall_partner_id
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report_partner_id
 #: model:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
