@@ -20,25 +20,25 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: crm_lead_firstname
-#: view:crm.lead:crm_lead_firstname.crm_case_form_view_leads
-#: view:crm.lead:crm_lead_firstname.crm_case_form_view_oppor
+#: model:ir.ui.view,arch_db:crm_lead_firstname.crm_case_form_view_leads
+#: model:ir.ui.view,arch_db:crm_lead_firstname.crm_case_form_view_oppor
 msgid "Contact Name"
 msgstr "Ansprechpartner"
 
 #. module: crm_lead_firstname
-#: view:crm.lead:crm_lead_firstname.crm_case_form_view_leads
-#: view:crm.lead:crm_lead_firstname.crm_case_form_view_oppor
+#: model:ir.ui.view,arch_db:crm_lead_firstname.crm_case_form_view_leads
+#: model:ir.ui.view,arch_db:crm_lead_firstname.crm_case_form_view_oppor
 msgid "Firstname"
 msgstr "Vorname"
 
 #. module: crm_lead_firstname
-#: field:crm.lead,contact_lastname:0
+#: model:ir.model.fields,field_description:crm_lead_firstname.field_crm_lead_contact_lastname
 msgid "Last name"
 msgstr "Nachname"
 
 #. module: crm_lead_firstname
-#: view:crm.lead:crm_lead_firstname.crm_case_form_view_leads
-#: view:crm.lead:crm_lead_firstname.crm_case_form_view_oppor
+#: model:ir.ui.view,arch_db:crm_lead_firstname.crm_case_form_view_leads
+#: model:ir.ui.view,arch_db:crm_lead_firstname.crm_case_form_view_oppor
 msgid "Lastname"
 msgstr "Nachname"
 
