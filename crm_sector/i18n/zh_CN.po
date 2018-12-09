@@ -24,31 +24,25 @@ msgid "Lead/Opportunity"
 msgstr "线索/商机"
 
 #. module: crm_sector
-#: field:crm.lead,sector_id:0
+#: model:ir.model.fields,field_description:crm_sector.field_crm_lead_sector_id
 msgid "Main Sector"
 msgstr ""
 
 #. module: crm_sector
-#: view:crm.lead:crm_sector.view_crm_case_leads_filter
-#: view:crm.lead:crm_sector.view_crm_case_opportunities_filter
-msgid "Sales Team"
-msgstr ""
-
-#. module: crm_sector
-#: field:crm.lead,secondary_sector_ids:0
+#: model:ir.model.fields,field_description:crm_sector.field_crm_lead_secondary_sector_ids
 msgid "Secondary Sectors"
 msgstr ""
 
 #. module: crm_sector
-#: view:crm.lead:crm_sector.crm_case_form_view_leads
-#: view:crm.lead:crm_sector.crm_case_form_view_oppor
-#: view:crm.lead:crm_sector.view_crm_case_leads_filter
-#: view:crm.lead:crm_sector.view_crm_case_opportunities_filter
+#: model:ir.ui.view,arch_db:crm_sector.crm_case_form_view_leads
+#: model:ir.ui.view,arch_db:crm_sector.crm_case_form_view_oppor
+#: model:ir.ui.view,arch_db:crm_sector.view_crm_case_leads_filter
+#: model:ir.ui.view,arch_db:crm_sector.view_crm_case_opportunities_filter
 msgid "Sector"
 msgstr ""
 
 #. module: crm_sector
-#: code:addons/crm_sector/models/crm_lead.py:22
+#: code:addons/crm_sector/models/crm_lead.py:24
 #, python-format
 msgid "The secondary sectors must be different from the main sector."
 msgstr ""
