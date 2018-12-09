@@ -34,7 +34,7 @@ msgid "Display Name"
 msgstr "표시 이름"
 
 #. module: crm_phonecall_summary_predefined
-#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary_id_4816
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary_id_4819
 msgid "ID"
 msgstr "ID"
 
