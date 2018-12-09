@@ -339,7 +339,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category_id
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_id
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report_id
-#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage_id_4660
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage_id_4663
 msgid "ID"
 msgstr "ID"
 
