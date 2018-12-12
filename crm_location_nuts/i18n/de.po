@@ -9,14 +9,15 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-14 05:51+0000\n"
-"PO-Revision-Date: 2017-12-14 05:51+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
+"PO-Revision-Date: 2018-12-13 12:58+0000\n"
+"Last-Translator: Maria Sparenberg <maria.sparenberg@gmx.net>\n"
 "Language-Team: German (https://www.transifex.com/oca/teams/23907/de/)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.3\n"
 
 #. module: crm_location_nuts
 #: model:ir.model,name:crm_location_nuts.model_crm_lead
@@ -30,7 +31,7 @@ msgstr "Lead/Chance"
 #: model:ir.ui.view,arch_db:crm_location_nuts.view_crm_case_leads_filter
 #: model:ir.ui.view,arch_db:crm_location_nuts.view_crm_case_opportunities_filter
 msgid "NUTS L1"
-msgstr ""
+msgstr "NUTS L1"
 
 #. module: crm_location_nuts
 #: model:ir.model.fields,field_description:crm_location_nuts.field_crm_lead_nuts2_id
@@ -39,7 +40,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:crm_location_nuts.view_crm_case_leads_filter
 #: model:ir.ui.view,arch_db:crm_location_nuts.view_crm_case_opportunities_filter
 msgid "NUTS L2"
-msgstr ""
+msgstr "NUTS L2"
 
 #. module: crm_location_nuts
 #: model:ir.model.fields,field_description:crm_location_nuts.field_crm_lead_nuts3_id
@@ -48,7 +49,7 @@ msgstr ""
 #: model:ir.ui.view,arch_db:crm_location_nuts.view_crm_case_leads_filter
 #: model:ir.ui.view,arch_db:crm_location_nuts.view_crm_case_opportunities_filter
 msgid "NUTS L3"
-msgstr ""
+msgstr "NUTS L3"
 
 #. module: crm_location_nuts
 #: model:ir.model.fields,field_description:crm_location_nuts.field_crm_lead_nuts4_id
@@ -57,4 +58,4 @@ msgstr ""
 #: model:ir.ui.view,arch_db:crm_location_nuts.view_crm_case_leads_filter
 #: model:ir.ui.view,arch_db:crm_location_nuts.view_crm_case_opportunities_filter
 msgid "NUTS L4"
-msgstr ""
+msgstr "NUTS L4"
