@@ -42,17 +42,21 @@ class DistributionList(models.Model):
     @api.depends('product_id', 'partner_id')
     def _compute_name_address(self):
         """Create subscription name from publication and partner."""
+        partner_model = self.env['res.partner']
         for this in self:
             if not this.product_id or not this.partner_id:
                 this.name = False
-                this.display_address = False
+                this.contact_address = False
                 continue
             this.name = ' - '.join(
                 [this.product_id.name, this.partner_id.name])
             if this.product_id.distribution_type == 'email':
-                this.display_address = this.partner_id.email
+                this.contact_address = this.partner_id.email
             else:
-                this.display_address = this.partner_id.contact_address
+                delivery_id = this.partner_id.address_get(
+                    ['delivery'])['delivery']
+                this.contact_address = partner_model.browse(
+                    delivery_id).contact_address
 
     @api.multi
     @api.depends('product_id', 'contract_partner_id', 'copies')
@@ -97,7 +101,7 @@ class DistributionList(models.Model):
     name = fields.Char(
         compute='_compute_name_address',
         string='Name')
-    display_address = fields.Char(
+    contact_address = fields.Char(
         compute='_compute_name_address',
         string='Receiving address')
     contract_count = fields.Integer(

@@ -27,6 +27,12 @@ class TestPublication(common.SavepointCase):
         cls.partner_corneel = partner_model.create({
             'name': 'Corneel',
             'city': 'Dordrecht'})
+        cls.partner_corneel_delivery = partner_model.create({
+            'name': 'Corneels store',
+            'parent_id': cls.partner_corneel.id,
+            'type': 'delivery',
+            'street': 'Wijnstraat 35',
+            'city': 'Dordrecht'})
         # Make sure a sale journal is present for tests
         sequence_model = cls.env['ir.sequence']
         contract_sequence = sequence_model.create({
@@ -56,7 +62,7 @@ class TestPublication(common.SavepointCase):
             'name': 'Test newsletter',
             'type': 'consu',
             'publication': True,
-            'distribution_type': 'email',
+            'distribution_type': 'print',
             'publishing_frequency_type': 'weekly',
             'uom_id': cls.uom_unit.id,
             'uom_po_id': cls.uom_unit.id})
@@ -153,3 +159,5 @@ class TestPublication(common.SavepointCase):
                 'contract_partner_id': partner_jan.id,
                 'partner_id': partner_jan.id,
                 'copies': 30})
+        # Delivery for Corneel should be to his store.
+        self.assertIn('Wijnstraat', subscription02.contact_address)

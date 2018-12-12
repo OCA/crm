@@ -41,7 +41,7 @@
                 <field name="product_id" />
                 <field name="partner_id" />
                 <field name="contract_partner_id" />
-                <field name="display_address" />
+                <field name="contact_address" />
                 <field name="copies" />
             </tree>
         </field>
@@ -88,7 +88,7 @@
                             name="copies"
                             attrs="{'invisible': [('distribution_type','=','email')]}"
                             />
-                        <field name="display_address" />
+                        <field name="contact_address" />
                     </group>
                 </group>
             </form>
