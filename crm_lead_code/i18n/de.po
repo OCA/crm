@@ -9,19 +9,20 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-04 15:47+0000\n"
-"PO-Revision-Date: 2017-12-04 15:47+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
+"PO-Revision-Date: 2018-12-13 12:58+0000\n"
+"Last-Translator: Maria Sparenberg <maria.sparenberg@gmx.net>\n"
 "Language-Team: German (https://www.transifex.com/oca/teams/23907/de/)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.3\n"
 
 #. module: crm_lead_code
 #: model:ir.model.fields,field_description:crm_lead_code.field_crm_lead_code
 msgid "Lead Number"
-msgstr ""
+msgstr "Lead-Nummer"
 
 #. module: crm_lead_code
 #: model:ir.model,name:crm_lead_code.model_crm_lead
@@ -32,4 +33,4 @@ msgstr "Lead/Chance"
 #: code:addons/crm_lead_code/models/crm_lead.py:17 sql_constraint:crm.lead:0
 #, python-format
 msgid "The code must be unique!"
-msgstr ""
+msgstr "Der Schlüssel muss eindeutig sein!"
