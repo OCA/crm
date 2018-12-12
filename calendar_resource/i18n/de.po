@@ -9,34 +9,35 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-06-01 02:38+0000\n"
-"PO-Revision-Date: 2017-06-01 02:38+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
+"PO-Revision-Date: 2018-12-13 12:58+0000\n"
+"Last-Translator: Maria Sparenberg <maria.sparenberg@gmx.net>\n"
 "Language-Team: German (https://www.transifex.com/oca/teams/23907/de/)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.3\n"
 
 #. module: calendar_resource
 #: model:ir.model.fields,field_description:calendar_resource.field_resource_resource_allow_double_book
 msgid "Allow Double Booking"
-msgstr ""
+msgstr "Doppelbuchung erlauben"
 
 #. module: calendar_resource
 #: model:ir.model.fields,field_description:calendar_resource.field_calendar_event_type_allowed_resource_ids
 msgid "Allowed Resources"
-msgstr ""
+msgstr "Erlaubte Ressourcen"
 
 #. module: calendar_resource
 #: model:ir.model.fields,field_description:calendar_resource.field_resource_resource_event_ids
 msgid "Calendar Events"
-msgstr ""
+msgstr "Kalenderereignisse"
 
 #. module: calendar_resource
 #: model:ir.ui.menu,name:calendar_resource.calendar_menu
 msgid "Calendars"
-msgstr ""
+msgstr "Kalender"
 
 #. module: calendar_resource
 #: model:ir.model.fields,help:calendar_resource.field_resource_resource_allow_double_book
@@ -44,42 +45,44 @@ msgid ""
 "Check if this resource can be booked in more than one meeting or event at "
 "the same time."
 msgstr ""
+"Wenn der Haken gesetzt ist, kann diese Ressource in mehr als einem Meeting "
+"oder Ereignis zur selben Zeit gebucht werden."
 
 #. module: calendar_resource
 #: code:addons/calendar_resource/models/resource_calendar_attendance.py:23
 #, python-format
 msgid "End Date cannot be earlier than Starting Date."
-msgstr ""
+msgstr "Das Enddatum darf nicht vor dem Startdatum liegen."
 
 #. module: calendar_resource
 #: model:ir.model,name:calendar_resource.model_calendar_event
 msgid "Event"
-msgstr ""
+msgstr "Ereignis"
 
 #. module: calendar_resource
 #: model:ir.ui.menu,name:calendar_resource.calendar_event_menu
 msgid "Event Calendar"
-msgstr ""
+msgstr "Ereigniskalender"
 
 #. module: calendar_resource
 #: model:ir.model.fields,field_description:calendar_resource.field_resource_resource_allowed_event_types
 msgid "Event Types"
-msgstr ""
+msgstr "Ereignistypen"
 
 #. module: calendar_resource
 #: model:ir.model.fields,help:calendar_resource.field_resource_resource_allowed_event_types
 msgid "Event types this resource is allowed at."
-msgstr ""
+msgstr "Dies sind die Ereignistypen, die für diese Ressource erlaubt sind."
 
 #. module: calendar_resource
 #: model:ir.module.category,description:calendar_resource.ir_module_category_resource
 msgid "Helps you manage your resources"
-msgstr ""
+msgstr "Dies dient der Ressourcenverwaltung"
 
 #. module: calendar_resource
 #: model:ir.model,name:calendar_resource.model_calendar_event_type
 msgid "Meeting Type"
-msgstr ""
+msgstr "Meeting-Typ"
 
 #. module: calendar_resource
 #: model:ir.ui.view,arch_db:calendar_resource.resource_resource_form
@@ -89,39 +92,39 @@ msgstr "Bezeichnung"
 #. module: calendar_resource
 #: model:ir.model,name:calendar_resource.model_resource_calendar
 msgid "Resource Calendar"
-msgstr ""
+msgstr "Ressourcenkalender"
 
 #. module: calendar_resource
 #: model:ir.model,name:calendar_resource.model_resource_resource
 msgid "Resource Detail"
-msgstr ""
+msgstr "Ressourcen-Details"
 
 #. module: calendar_resource
 #: model:res.groups,name:calendar_resource.group_resource_manager
 msgid "Resource Manager"
-msgstr ""
+msgstr "Ressourcenverwalter"
 
 #. module: calendar_resource
 #: model:ir.model.fields,field_description:calendar_resource.field_resource_resource_note
 msgid "Resource Notes"
-msgstr ""
+msgstr "Ressourcenhinweise"
 
 #. module: calendar_resource
 #: model:ir.model.fields,field_description:calendar_resource.field_calendar_event_resource_ids
 #: model:ir.module.category,name:calendar_resource.ir_module_category_resource
 msgid "Resources"
-msgstr ""
+msgstr "Ressourcen"
 
 #. module: calendar_resource
 #: model:ir.model.fields,help:calendar_resource.field_calendar_event_type_allowed_resource_ids
 msgid "Resources allowed in meetings of this type"
-msgstr ""
+msgstr "Dies sind die Ressourcen,  die für diesen Ereignistypen erlaubt sind"
 
 #. module: calendar_resource
 #: model:ir.ui.view,arch_db:calendar_resource.resource_resource_form
 #: model:ir.ui.view,arch_db:calendar_resource.view_calendar_event_form
 msgid "Select Resources"
-msgstr ""
+msgstr "Ressourcen wählen"
 
 #. module: calendar_resource
 #: code:addons/calendar_resource/models/calendar_event.py:107
@@ -130,6 +133,8 @@ msgid ""
 "The resource, %s, cannot be double-booked with any overlapping meetings or "
 "events."
 msgstr ""
+"Die Ressource %s darf nicht mit überlappenden Meetings oder Ereignissen "
+"doppelgebucht werden."
 
 #. module: calendar_resource
 #: code:addons/calendar_resource/models/calendar_event.py:257
@@ -138,6 +143,8 @@ msgid ""
 "The resource, %s, is not available during the following dates and times "
 "which are conflicting with the event:%s%s"
 msgstr ""
+"Die Ressource %s ist während dieser Tage/Zeiten nicht verfügbar, da es mit "
+"dem folgenden Ereignis in Konflikt steht: %s%s"
 
 #. module: calendar_resource
 #: code:addons/calendar_resource/models/calendar_event.py:132
@@ -146,6 +153,8 @@ msgid ""
 "The resource, '%s', is not allowed in the following event types: \n"
 "%s"
 msgstr ""
+"Die Ressource %s' ist für folgende Ereignistypen nicht zulässig:\n"
+"%s"
 
 #. module: calendar_resource
 #: code:addons/calendar_resource/models/calendar_event.py:171
@@ -155,11 +164,14 @@ msgid ""
 "conflicting with this event.\n"
 "%s"
 msgstr ""
+"Die Ressource '%s' ist an diesen Tagen/Zeiten nicht anwesend. Es besteht ein "
+"Konflikt mit diesem Ereignis:\n"
+"%s"
 
 #. module: calendar_resource
 #: model:ir.model,name:calendar_resource.model_resource_calendar_attendance
 msgid "Work Detail"
-msgstr ""
+msgstr "Arbeitsdetail"
 
 #. module: calendar_resource
 #: code:addons/calendar_resource/models/resource_calendar_attendance.py:33
@@ -168,3 +180,6 @@ msgid ""
 "Work to cannot be earlier or the same as Work from. If it is a night shift, "
 "separate the hours into their own working time entries by weekday."
 msgstr ""
+"Das Arbeitszeitende darf nicht vor dem Arbeitszeitbeginn liegen. Handelt es "
+"sich um eine Nachtschicht, müssen die Zeiten als separate Einträge der "
+"entsprechenden Wochentage eingetragen werden."
