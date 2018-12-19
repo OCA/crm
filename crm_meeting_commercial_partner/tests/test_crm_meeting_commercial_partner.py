@@ -39,6 +39,13 @@ class TestCrmMeetingCommercialPartner(common.TransactionCase):
             'allday': True,
             'start': fields.Datetime.now(),
             'stop': fields.Datetime.now(),
+            'partner_ids': [(6, 0, self.partner_contact_1.ids)],
+        })
+        self.calendar_event_model.create({
+            'name': 'Meeting with contact 1',
+            'allday': True,
+            'start': fields.Datetime.now(),
+            'stop': fields.Datetime.now(),
             'partner_ids': [(6, 0, self.partner_contact_2.ids)],
         })
         self.calendar_event_model.create({
@@ -48,11 +55,12 @@ class TestCrmMeetingCommercialPartner(common.TransactionCase):
             'stop': fields.Datetime.now(),
             'partner_ids': [(6, 0, self.partner_company.ids)],
         })
-        self.assertEqual(self.partner_company.meeting_count, 3)
+        self.assertEqual(self.partner_company.meeting_count, 4)
+        self.assertEqual(self.partner_contact_1.meeting_count, 2)
         action = self.partner_company.with_context(
             partner_name=self.partner_company.name).schedule_meeting()
         partners = self.partner_company + self.partner_contact_1 + \
             self.partner_contact_2
-        self.assertEquals(
-            sorted(action['context']['search_default_partner_ids']),
-            sorted(partners.ids))
+        res = self.calendar_event_model.search(
+            action['domain']).mapped('partner_ids').ids
+        self.assertEquals(sorted(res), sorted(partners.ids))
