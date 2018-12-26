@@ -1,20 +1,23 @@
-# -*- coding: utf-8 -*-
 # © 2016 Antiun Ingeniería S.L. - Jairo Llopis
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
-from odoo.tests.common import TransactionCase
+from odoo.tests.common import SavepointCase
 
 
-class FirstnameCase(TransactionCase):
-    def setUp(self):
-        super(FirstnameCase, self).setUp()
-        self.lead = self.env["crm.lead"].create({
+class FirstNameCase(SavepointCase):
+
+    @classmethod
+    def setUpClass(cls):
+        super(FirstNameCase, cls).setUpClass()
+        cls.lead_model = cls.env["crm.lead"]
+        cls.partner_model = cls.env["res.partner"]
+        cls.lead = cls.lead_model.create({
             "name": "Léad",
             "partner_name": "Pärtner",
             "contact_name": "Firçt name",
             "contact_lastname": "Laçt name",
         })
-        self.partner = self.env["res.partner"].create({
+        cls.partner = cls.partner_model.create({
             "firstname": "Firçt name",
             "lastname": "Laçt name",
         })
@@ -22,7 +25,7 @@ class FirstnameCase(TransactionCase):
     def test_create_contact(self):
         """Contact correctly created."""
         partner_id = self.lead.handle_partner_assignation()[self.lead.id]
-        partner = self.env["res.partner"].browse(partner_id)
+        partner = self.partner_model.browse(partner_id)
         self.assertEqual(self.lead.contact_name, partner.firstname)
         self.assertEqual(self.lead.contact_lastname, partner.lastname)
 
