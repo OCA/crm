@@ -7,7 +7,7 @@
             <field name="arch" type="xml">
                 <field name="name" position="before">
                     <field name="code" class="oe_inline" />
-                    <label string="  " class="oe_inline" />
+                    <label for="code" string="  " class="oe_inline" />
                 </field>
             </field>
         </record>
@@ -41,7 +41,7 @@
             <field name="arch" type="xml">
                 <field name="name" position="before">
                     <field name="code" class="oe_inline" />
-                    <label string="  " class="oe_inline" />
+                    <label for="code" string="  " class="oe_inline" />
                 </field>
             </field>
         </record>
