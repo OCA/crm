@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 ##############################################################################
 # For copyright and license notices, see __manifest__.py file in root directory
 ##############################################################################
@@ -17,11 +16,12 @@ class CrmLead(models.Model):
          _('The code must be unique!')),
     ]
 
-    @api.model
-    def create(self, vals):
-        if vals.get('code', '/') == '/':
-            vals['code'] = self.env['ir.sequence'].next_by_code('crm.lead')
-        return super(CrmLead, self).create(vals)
+    @api.model_create_multi
+    def create(self, vals_list):
+        for vals in vals_list:
+            if vals.get('code', '/') == '/':
+                vals['code'] = self.env['ir.sequence'].next_by_code('crm.lead')
+        return super(CrmLead, self).create(vals_list)
 
     @api.multi
     def copy(self, default=None):
