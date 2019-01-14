@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: crm_lead_code
-#: model:ir.model.fields,field_description:crm_lead_code.field_crm_lead_code
+#: model:ir.model.fields,field_description:crm_lead_code.field_crm_lead__code
 msgid "Lead Number"
 msgstr ""
 
@@ -29,7 +29,7 @@ msgid "Lead/Opportunity"
 msgstr "Lead/Opportunit??"
 
 #. module: crm_lead_code
-#: code:addons/crm_lead_code/models/crm_lead.py:17 sql_constraint:crm.lead:0
+#: code:addons/crm_lead_code/models/crm_lead.py:16 sql_constraint:crm.lead:0
 #, python-format
 msgid "The code must be unique!"
 msgstr ""
