@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 ##############################################################################
 #
 # Copyright (c)
@@ -22,11 +21,10 @@
 
 {
     "name": "Sequential Code for Leads / Opportunities",
-    "version": "10.0.1.0.0",
+    "version": "12.0.1.0.0",
     "category": "Customer Relationship Management",
-    "author": "OdooMRP team, "
+    "author": "Tecnativa, "
               "AvanzOSC, "
-              "Serv. Tecnol. Avanzados - Pedro M. Baeza, "
               "Odoo Community Association (OCA)",
     "website": "http://www.odoomrp.com",
     "license": "AGPL-3",
@@ -34,6 +32,7 @@
         "Oihane Crucelaegui <oihanecrucelaegi@avanzosc.es>",
         "Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>",
         "Ana Juaristi <ajuaristo@gmail.com>",
+        "Mathias Markl <mathias.markl@mukit.at>",
     ],
     "depends": [
         "crm",
