@@ -8,6 +8,7 @@ setuptools.setup(
     description="Meta package for oca-crm Odoo addons",
     version=version,
     install_requires=[
+        'odoo12-addon-crm_lead_product',
         'odoo12-addon-crm_phonecall',
     ],
     classifiers=[
