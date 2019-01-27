@@ -639,6 +639,7 @@ msgstr ""
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_lead__phonecall_count
 #: model:ir.model.fields,field_description:crm_phonecall.field_res_partner__phonecall_count
+#: model:ir.model.fields,field_description:crm_phonecall.field_res_users__phonecall_count
 #, fuzzy
 msgid "Phonecall Count"
 msgstr "Chiamata telefonica"
@@ -651,6 +652,7 @@ msgstr ""
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_lead__phonecall_ids
 #: model:ir.model.fields,field_description:crm_phonecall.field_res_partner__phonecall_ids
+#: model:ir.model.fields,field_description:crm_phonecall.field_res_users__phonecall_ids
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
 msgid "Phonecalls"
 msgstr "Chiamate telefoniche"
