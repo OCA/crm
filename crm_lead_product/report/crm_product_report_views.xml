@@ -70,11 +70,7 @@
                         domain="[('probability', '=', 0), ('active', '=', False)]"/>
                 <field name="team_id" context="{'invisible_team': False}"/>
                 <field name="user_id" string="Salesperson"/>
-                <separator/>
-                <filter string="Creation Date" name="filter_create_date" date="create_date"/>
-                <filter string="Expected Closing" name="filter_date_deadline" date="date_deadline"/>
-                <filter string="Date Closed" name="date_closed_filter" date="date_closed"/>
-                <group expand="0" string="Extended Filters">
+                <group expand="0" string="Extended Filters...">
                     <field name="partner_id" filter_domain="[('partner_id','child_of',self)]"/>
                     <field name="stage_id" widget="selection" domain="['|', ('team_id', '=', False), ('team_id', '=', 'team_id')]"/>
                     <field name="campaign_id" widget="selection"/>
@@ -95,6 +91,7 @@
                     <filter string="Conversion Date" context="{'group_by':'date_conversion:month'}" name="conversion_date" help="Conversion Date from Lead to Opportunity"/>
                     <filter string="Expected Closing" context="{'group_by':'date_deadline:month'}" name="date_deadline"/>
                     <filter string="Closed Date" context="{'group_by':'date_closed'}" name="date_closed_groupby"/>
+                    <separator/>
                     <filter string="Lost Reason" name="lostreason" context="{'group_by':'lost_reason'}"/>
                 </group>
             </search>
