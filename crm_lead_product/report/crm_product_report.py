@@ -12,8 +12,10 @@ class ActivityReport(models.Model):
     _name = "crm.product.report"
     _auto = False
     _description = "CRM Pipeline by Product Analysis"
-    _rec_name = 'id'
+    _rec_name = 'name'
 
+    name = fields.Char('Name', readonly=True)
+    lead_id = fields.Many2one('crm.lead', 'Lead', readonly=True)
     active = fields.Boolean('Active', readonly=True)
     campaign_id = fields.Many2one('utm.campaign', 'Campaing', readonly=True)
     country_id = fields.Many2one('res.country', 'Country', readonly=True)
@@ -21,11 +23,10 @@ class ActivityReport(models.Model):
     create_date = fields.Datetime('Create Date', readonly=True)
     date_closed = fields.Datetime('Closed Date', readonly=True)
     date_conversion = fields.Datetime('Conversion Date', readonly=True)
-    date_deadline = fields.Datetime('Deadline Date', readonly=True)
+    date_deadline = fields.Date('Deadline Date', readonly=True)
     date_open = fields.Datetime('Open Date', readonly=True)
     lost_reason = fields.Many2one('crm.lost.reason', 'Lost Reason',
                                   readonly=True)
-    name = fields.Char('Lead Name', readonly=True)
     partner_id = fields.Many2one('res.partner', 'Partner/Customer',
                                  readonly=True)
     partner_name = fields.Char('Contact Name', readonly=True)
@@ -62,7 +63,6 @@ class ActivityReport(models.Model):
                 l.date_deadline,
                 l.date_open,
                 l.lost_reason,
-                l.name,
                 l.partner_id,
                 l.partner_name,
                 l.probability,
@@ -70,6 +70,7 @@ class ActivityReport(models.Model):
                 l.stage_id,
                 l.team_id,
                 l.user_id,
+                ll.name as name,
                 ll.category_id,
                 ll.expected_revenue,
                 ll.planned_revenue,
