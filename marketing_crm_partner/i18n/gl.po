@@ -8,41 +8,42 @@ msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-12-24 01:15+0000\n"
-"PO-Revision-Date: 2016-04-04 00:30+0000\n"
-"Last-Translator: <>\n"
+"PO-Revision-Date: 2019-02-06 15:50+0000\n"
+"Last-Translator: Marta Vázquez Rodríguez <vazrodmar@gmail.com>\n"
 "Language-Team: Galician (http://www.transifex.com/oca/OCA-crm-8-0/language/"
 "gl/)\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.4\n"
 
 #. module: marketing_crm_partner
 #: view:res.partner:marketing_crm_partner.view_res_partner_filter
 #: field:res.partner,campaign_id:0
 msgid "Campaign"
-msgstr ""
+msgstr "Campaña"
 
 #. module: marketing_crm_partner
 #: field:res.partner,medium_id:0
 msgid "Channel"
-msgstr ""
+msgstr "Canal"
 
 #. module: marketing_crm_partner
 #: model:ir.model,name:marketing_crm_partner.model_crm_lead
 msgid "Lead/Opportunity"
-msgstr ""
+msgstr "Iniciativa/Oportunidade"
 
 #. module: marketing_crm_partner
 #: view:res.partner:marketing_crm_partner.view_partner_form
 msgid "Marketing"
-msgstr ""
+msgstr "Marketing"
 
 #. module: marketing_crm_partner
 #: view:res.partner:marketing_crm_partner.view_res_partner_filter
 msgid "Medium"
-msgstr ""
+msgstr "Medio"
 
 #. module: marketing_crm_partner
 #: model:ir.model,name:marketing_crm_partner.model_res_partner
@@ -53,7 +54,7 @@ msgstr "Empresa"
 #: view:res.partner:marketing_crm_partner.view_res_partner_filter
 #: field:res.partner,source_id:0
 msgid "Source"
-msgstr ""
+msgstr "Orixe"
 
 #. module: marketing_crm_partner
 #: help:res.partner,campaign_id:0
@@ -61,11 +62,15 @@ msgid ""
 "This is a name that helps you keep track of your different campaign efforts "
 "Ex: Fall_Drive, Christmas_Special"
 msgstr ""
+"Este é un nome que facilita a procura dos diferentes esforzos de campañas. "
+"Por exemplo: campaña de Nadal, rebaixas de outono"
 
 #. module: marketing_crm_partner
 #: help:res.partner,medium_id:0
 msgid "This is the method of delivery. Ex: Postcard, Email, or Banner Ad"
 msgstr ""
+"Este é o método de entrega. Por exemplo: carta postal, correo electrónico ou "
+"publicidade web"
 
 #. module: marketing_crm_partner
 #: help:res.partner,source_id:0
@@ -73,3 +78,5 @@ msgid ""
 "This is the source of the link Ex: Search Engine, another domain, or name of "
 "email list"
 msgstr ""
+"Esta é a fonte da ligazón. Por exemplo: motor de procura, outro dominio ou o "
+"nome dunhas listas de correos"
