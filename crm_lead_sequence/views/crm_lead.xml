@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2019 ACSONE SA/NV
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+
+    <record model="ir.ui.view" id="crm_lead_form_view">
+        <field name="name">crm.lead.form (in crm_lead_sequence)</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="before">
+                <field name="ref"/>
+                <span attrs="{'invisible': [('ref', '=', False)]}"> : </span>
+            </xpath>
+        </field>
+    </record>
+
+
+    <record model="ir.ui.view" id="crm_lead_tree_view">
+        <field name="name">crm.lead.tree (in crm_lead_sequence)</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_tree_view_oppor"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="before">
+                <field name="ref"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="crm_lead_kanban_view">
+        <field name="name">crm.lead.kanban (in crm_lead_sequence)</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_kanban_view_leads"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="before">
+                <field name="ref"/>
+                <span attrs="{'invisible': [('ref', '=', False)]}"> : </span>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
