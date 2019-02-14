@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Copyright 2014-2018 Therp BV <https://therp.nl>.
+# Copyright 2014-2019 Therp BV <https://therp.nl>.
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 {
     'name': 'Publication',
@@ -11,7 +11,7 @@
     'summary': 'Maintain electronic or print publications for your relations.',
     'depends': [
         'partner_noncommercial',
-        'contract_line_extended',
+        'contract',
         'web_m2x_options',
     ],
     'data': [

@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # Copyright 2014-2018 Therp BV <https://therp.nl>.
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+# pylint: disable=invalid-name
 from odoo import _, api, fields, models
 from odoo.exceptions import ValidationError
 
@@ -105,13 +106,13 @@ class DistributionList(models.Model):
         compute='_compute_name_address',
         string='Receiving address')
     contract_count = fields.Integer(
-        string="Number to distribute",
+        string="Quantity to distribute",
         compute='_compute_counts')
     assigned_count = fields.Integer(
-        string="Number already assigned",
+        string="Quantity already assigned",
         compute='_compute_counts')
     available_count = fields.Integer(
-        string="Number still available",
+        string="Quantity still available",
         compute='_compute_counts')
 
     @api.onchange('product_id', 'contract_partner_id')
@@ -125,7 +126,7 @@ class DistributionList(models.Model):
             self.partner_id = self.contract_partner_id
         if self.contract_partner_id and not self.product_id:
             raise ValidationError(_(
-                "You must select a publication, before selecting"
+                "You must select a publication before selecting"
                 " the contract partner."))
         if not self.product_id:
             return

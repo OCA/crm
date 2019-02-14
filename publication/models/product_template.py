@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-# Copyright 2014-2017 Therp BV <https://therp.nl>.
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+# Copyright 2014-2019 Therp BV <https://therp.nl>.
+# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 from odoo import fields, models
 
 
@@ -24,6 +24,6 @@ class ProductTemplate(models.Model):
         string='Publishing frequency',
         help="At what intervals publication is published")
     publishing_frequency_interval = fields.Integer(
-        string='Publish Every',
+        string='Published Every',
         default=1,
-        help="Publish every (Days/Week/Month/Quarter/Year)")
+        help="Published every (Days/Week/Month/Quarter/Year)")

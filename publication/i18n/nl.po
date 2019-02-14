@@ -129,7 +129,7 @@ msgstr "Naam"
 
 #. module: publication
 #: model:ir.model.fields,field_description:publication.field_distribution_list_assigned_count
-msgid "Number already assigned"
+msgid "Quantity already assigned"
 msgstr "Aantal al toegekend"
 
 #. module: publication
@@ -139,12 +139,12 @@ msgstr "Aantal exemplaren"
 
 #. module: publication
 #: model:ir.model.fields,field_description:publication.field_distribution_list_available_count
-msgid "Number still available"
+msgid "Quantity still available"
 msgstr "Aantal nog beschikbaar"
 
 #. module: publication
 #: model:ir.model.fields,field_description:publication.field_distribution_list_contract_count
-msgid "Number to distribute"
+msgid "Quantity to distribute"
 msgstr "Aantal exemplaren"
 
 #. module: publication
@@ -197,13 +197,13 @@ msgstr "Publicaties te ontvangen"
 #. module: publication
 #: model:ir.model.fields,field_description:publication.field_product_product_publishing_frequency_interval
 #: model:ir.model.fields,field_description:publication.field_product_template_publishing_frequency_interval
-msgid "Publish Every"
+msgid "Published Every"
 msgstr "Verschijnt iedere"
 
 #. module: publication
 #: model:ir.model.fields,help:publication.field_product_product_publishing_frequency_interval
 #: model:ir.model.fields,help:publication.field_product_template_publishing_frequency_interval
-msgid "Publish every (Days/Week/Month/Quarter/Year)"
+msgid "Published every (Days/Week/Month/Quarter/Year)"
 msgstr "Herhaal elke (dagen/weken/maanden/jaren)"
 
 #. module: publication
@@ -278,110 +278,3 @@ msgstr ""
 #: model:ir.model,name:publication.model_distribution_list
 msgid "distribution.list"
 msgstr ""
-
-#. module: publication
-#: model:ir.ui.view,arch_db:publication.view_partner_form
-msgid "Subscription contract lines"
-msgstr "Contractregels voor abonnementen"
-
-#. module: publication
-#: model:ir.ui.view,arch_db:publication.view_partner_form
-msgid "Publications to receive"
-msgstr "Te ontvangen publicaties"
-
-#~ msgid "Can be send by email"
-#~ msgstr "Kan per email worden verspreid"
-
-#~ msgid "Can be send in print"
-#~ msgstr "Kan in druk worden verspreid"
-
-#~ msgid "Code"
-#~ msgstr "Code"
-
-#~ msgid "Contract"
-#~ msgstr "Contract"
-
-#~ msgid "Email"
-#~ msgstr "Email"
-
-#~ msgid "Email distribution for this publication not allowed"
-#~ msgstr "Deze publicatie kan niet per email worden verzonden"
-
-#~ msgid "End date before start date"
-#~ msgstr "Einddatum na startdatum"
-
-#~ msgid "Invoice automatically repeat at specified interval"
-#~ msgstr "Automatisch facturen aanmaken per opgegeven periode"
-
-#~ msgid "No email distribution for this publication"
-#~ msgstr "Deze publicatie kan niet per mail worden verzonden"
-
-#~ msgid "No print distribution for this publication"
-#~ msgstr "Deze publicatie kan niet in druk worden verzonden"
-
-#~ msgid "No record for publication_id %d"
-#~ msgstr "Geen record voor publication_id %d"
-
-#~ msgid "Print & Email"
-#~ msgstr "Drukwerk & email"
-
-#~ msgid "Print distribution for this publication not allowed"
-#~ msgstr "Verspreiding in druk voor deze publicatie niet mogelijk"
-
-#~ msgid "Publication info"
-#~ msgstr "Informatie over publicatie"
-
-#~ msgid "Receive by email"
-#~ msgstr "Ontvang per email"
-
-#~ msgid "Recurrency"
-#~ msgstr "Herhaling"
-
-#~ msgid "Repeat Every"
-#~ msgstr "Herhaal elke"
-
-#~ msgid "Select at least one type of distribution"
-#~ msgstr "Kies ten minste één vorm van verspreiding"
-
-#~ msgid "Select either email, or print or both distribution methods"
-#~ msgstr "Kies of email, of drukwerk, of beide methoden van verspreiding"
-
-#~ msgid "Subscription"
-#~ msgstr "Abonnement"
-
-#~ msgid "Subscription can not end after publication"
-#~ msgstr "Abonnement kan niet langer doorlopen dan de publicatie"
-
-#~ msgid "Subscription can not start before publication"
-#~ msgstr "Abonnement kan niet beginnen voor eerste publicatie"
-
-#~ msgid ""
-#~ "The publication's end date needs to be after the publication's start date"
-#~ msgstr "De einddatum van de publicatie moet liggen na de begindatum"
-
-#~ msgid ""
-#~ "The subscriptions end date needs to be equal or before the publication's "
-#~ "end date"
-#~ msgstr ""
-#~ "De einddatum van het abonnement moet liggen op of na de einddatum van de "
-#~ "publicatie"
-
-#~ msgid ""
-#~ "The subscriptions start date needs to be equal or after the publication's "
-#~ "start date"
-#~ msgstr ""
-#~ "De startdatum van het abonnement moet liggen op of voor de startdatum van "
-#~ "de publicatie"
-
-#~ msgid ""
-#~ "The subscriptions's end date needs to be after the subscriptions's start "
-#~ "date"
-#~ msgstr ""
-#~ "De einddatum van het abonnement moet liggen na de startdatum van het "
-#~ "abonnement"
-
-#~ msgid "publication.partner"
-#~ msgstr "publication.partner"
-
-#~ msgid "publication.subscription"
-#~ msgstr "publication.subscription"

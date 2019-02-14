@@ -10,6 +10,7 @@ msgstr ""
 "PO-Revision-Date: 2017-12-01 10:39+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -126,7 +127,7 @@ msgstr ""
 
 #. module: publication
 #: model:ir.model.fields,field_description:publication.field_distribution_list_assigned_count
-msgid "Number already assigned"
+msgid "Quantity already assigned"
 msgstr ""
 
 #. module: publication
@@ -136,12 +137,12 @@ msgstr ""
 
 #. module: publication
 #: model:ir.model.fields,field_description:publication.field_distribution_list_available_count
-msgid "Number still available"
+msgid "Quantity still available"
 msgstr ""
 
 #. module: publication
 #: model:ir.model.fields,field_description:publication.field_distribution_list_contract_count
-msgid "Number to distribute"
+msgid "Quantity to distribute"
 msgstr ""
 
 #. module: publication
@@ -194,13 +195,13 @@ msgstr ""
 #. module: publication
 #: model:ir.model.fields,field_description:publication.field_product_product_publishing_frequency_interval
 #: model:ir.model.fields,field_description:publication.field_product_template_publishing_frequency_interval
-msgid "Publish Every"
+msgid "Published Every"
 msgstr ""
 
 #. module: publication
 #: model:ir.model.fields,help:publication.field_product_product_publishing_frequency_interval
 #: model:ir.model.fields,help:publication.field_product_template_publishing_frequency_interval
-msgid "Publish every (Days/Week/Month/Quarter/Year)"
+msgid "Published every (Days/Week/Month/Quarter/Year)"
 msgstr ""
 
 #. module: publication
@@ -274,15 +275,5 @@ msgstr ""
 #. module: publication
 #: model:ir.model,name:publication.model_distribution_list
 msgid "distribution.list"
-msgstr ""
-
-#. module: publication
-#: model:ir.ui.view,arch_db:publication.view_partner_form
-msgid "Subscription contract lines"
-msgstr ""
-
-#. module: publication
-#: model:ir.ui.view,arch_db:publication.view_partner_form
-msgid "Publications to receive"
 msgstr ""
 
