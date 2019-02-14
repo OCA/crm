@@ -55,7 +55,7 @@ class TestPublication(common.SavepointCase):
         product_model = cls.env['product.product']
         cls.product_book = product_book = product_model.create({
             'name': 'Test yearbook',
-            'type': 'product',
+            'type': 'consu',
             'uom_id': cls.uom_unit.id,
             'uom_po_id': cls.uom_unit.id})
         cls.product_newsletter = product_newsletter = product_model.create({

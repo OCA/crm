@@ -63,11 +63,11 @@
                     <group colspan="4" col="4">
                         <field
                             name="product_id"
-                            options="{'create': false, 'create_edit': false}"
+                            options="{'no_create': true, 'no_create_edit': true}"
                             />
                         <field
                             name="contract_partner_id"
-                            options="{'create': false, 'create_edit': false}"
+                            options="{'no_create': true, 'no_create_edit': true}"
                             />
                     </group>
                     <group
@@ -79,7 +79,7 @@
                         <field name="available_count" />
                         <field
                             name="partner_id"
-                            options="{'create': false, 'create_edit': false}"
+                            options="{'no_create': true, 'no_create_edit': true}"
                             />
                         <field name="date_start" />
                         <field name="date_end" />

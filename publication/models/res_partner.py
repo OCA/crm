@@ -12,7 +12,6 @@ class ResPartner(models.Model):
         inverse_name='partner_id',
         domain=[('publication', '=', True)],
         string='Subscription contract lines')
-
     distribution_list_ids = fields.One2many(
         comodel_name='distribution.list',
         inverse_name='partner_id',

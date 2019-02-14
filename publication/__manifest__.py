@@ -12,7 +12,6 @@
     'depends': [
         'partner_noncommercial',
         'contract',
-        'web_m2x_options',
     ],
     'data': [
         'views/product_template.xml',
