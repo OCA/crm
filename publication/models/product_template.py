@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Copyright 2014-2019 Therp BV <https://therp.nl>.
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
-from odoo import fields, models
+from odoo import api, fields, models
 
 
 class ProductTemplate(models.Model):
@@ -27,3 +27,16 @@ class ProductTemplate(models.Model):
         string='Published Every',
         default=1,
         help="Published every (Days/Week/Month/Quarter/Year)")
+
+    @api.multi
+    def action_distribution_list(self):
+        self.ensure_one()
+        action = self.env.ref(
+            'publication.action_distribution_list').read()[0]
+        action['context'] = {
+            'default_product_id': self.product_variant_ids[0].id}
+        action['domain'] = [
+            ('product_id', '=', self.product_variant_ids[0].id)]
+        action['view_mode'] = 'form'
+        action['target'] = 'current'
+        return action
