@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record model="ir.ui.view" id="crm_case_claims_tree_view">
+        <field name="name">CRM - Claims Tree</field>
+        <field name="model">crm.claim</field>
+        <field name="arch" type="xml">
+            <tree string="Claims">
+                <field name="name"/>
+                <field name="partner_id"/>
+                <field name="user_id"/>
+                <field name="date"/>
+                <field name="stage_id"/>
+                <field name="activity_date_deadline"/>
+                <field name="activity_summary"/>
+                <field name="categ_id" string="Type"/>
+                <field name="date_deadline" invisible="1"/>
+                <field name="date_closed" invisible="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="crm_case_claims_form_view">
+        <field name="name">CRM - Claims Form</field>
+        <field name="model">crm.claim</field>
+        <field name="arch" type="xml">
+            <form string="Claim">
+                <header>
+                    <field name="stage_id" widget="statusbar" clickable="True"/>
+                </header>
+                <sheet string="Claims">
+                    <group>
+                        <field name="name"/>
+                        <field name="date"/>
+                    </group>
+                    <group colspan="4" col="4"  groups="base.group_user">
+                        <field name="priority" widget="priority"/>
+                        <field name="date_deadline"/>
+                    </group>
+                    <group colspan="4" col="4">
+                        <notebook>
+                            <page string="Claim Description">
+                                <group colspan="2" col="2" groups="base.group_user">
+                                    <separator colspan="2" string="Claim Reporter"/>
+                                    <field name="partner_id" string="Partner"/>
+                                    <field name="partner_phone"/>
+                                    <field name="email_from" widget="email"/>
+                                </group>
+                                <group colspan="2" col="2" groups="base.group_user">
+                                    <separator colspan="2" string="Responsibilities"/>
+                                    <field name="user_id" context="{'default_groups_ref': ['base.group_user', 'base.group_partner_manager', 'base.group_sale_salesman_all_leads']}"/>
+                                    <field name="user_fault"/>
+                                    <field name="categ_id" options="{'no_create': True, 'no_open': True}"/>
+                                    <field name="team_id"/>
+                                    <field name="model_ref_id" widget="reference"/>
+                                </group>
+                                <separator colspan="4" string="Claim/Action Description" groups="base.group_user"/>
+                                <field name="description" colspan="4" nolabel="1"/>
+                            </page>
+                            <page string="Follow Up" groups="base.group_user">
+                                <group colspan="2" col="2">
+                                    <separator colspan="2" string="Actions"/>
+                                    <field name="activity_date_deadline"/>
+                                    <field name="activity_summary"/>
+                                </group>
+                                <group colspan="2" col="2" groups="base.group_no_one">
+                                    <separator colspan="2" string="Dates"/>
+                                    <field name="create_date"/>
+                                    <field name="date_closed" invisible="1"/>
+                                    <field name="write_date"/>
+                                </group>
+
+                                <group colspan="2" col="2">
+                                    <separator colspan="2" string="Root Causes"/>
+                                    <field name="cause" colspan="2" nolabel="1"/>
+                                </group>
+                                <group colspan="2" col="2">
+                                    <separator colspan="2" string="Resolution Actions"/>
+                                    <field name="type_action"/>
+                                    <field name="resolution" colspan="2" nolabel="1" placeholder="Action Description..."/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread" options="{'post_refresh': 'recipients'}"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="crm_case_claims_calendar_view">
+        <field name="name">Claims Actions</field>
+        <field name="model">crm.claim</field>
+        <field name="priority" eval="2"/>
+        <field name="arch" type="xml">
+            <calendar string="Claims" date_start="activity_date_deadline" color="user_id">
+                <field name="name"/>
+            </calendar>
+        </field>
+    </record>
+
+    <record id="view_crm_case_claims_filter" model="ir.ui.view">
+        <field name="name">CRM - Claims Search</field>
+        <field name="model">crm.claim</field>
+        <field name="arch" type="xml">
+            <search string="Search Claims">
+                <field name="name" string="Claims"/>
+                <separator/>
+                <filter string="Unassigned Claims" name="Unassigned Claims" domain="[('user_id','=', False)]" help="Unassigned Claims" />
+                <field name="partner_id" filter_domain="[('partner_id','child_of',self)]"/>
+                <field name="user_id"/>
+                <group expand="0" name="claims" string="Group By">
+                    <filter string="Partner" name="partner" domain="[]" help="Partner" context="{'group_by':'partner_id'}"/>
+                    <filter string="Responsible" name="responsible" domain="[]" help="Responsible User" context="{'group_by':'user_id'}"/>
+                    <filter string="Stage" name="stage" domain="[]" context="{'group_by':'stage_id'}"/>
+                    <filter string="Type" name="type" domain="[]" context="{'group_by':'categ_id'}"/>
+                    <filter string="Claim Month" name="claim_month" domain="[]" help="Claim Date by Month" context="{'group_by':'date'}"/>
+                    <filter string="Deadline" name="deadline" domain="[]" context="{'group_by':'date_deadline'}"/>
+                    <filter string="Closure" name="closure" domain="[]" help="Date Closed" context="{'group_by':'date_closed'}" groups="base.group_no_one" invisible="1"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="crm_claim_category_claim0">
+        <field name="name">Claims</field>
+        <field name="res_model">crm.claim</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,calendar,form</field>
+        <field name="view_id" ref="crm_case_claims_tree_view"/>
+        <field name="context">
+        {"search_default_user_id":uid, "stage_type": 'claim'}</field>
+        <field name="search_view_id" ref="crm_claim.view_crm_case_claims_filter"/>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Record and track your customers' claims.
+                Claims may be linked to a sales order or a lot.
+                You can send emails with attachments and keep the full history for a claim (emails sent, intervention type and so on).
+                Claims may automatically be linked to an email address using the mail gateway module.
+            </p>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window.view" id="action_crm_tag_tree_claim0">
+        <field name="sequence" eval="1"/>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="crm_case_claims_tree_view"/>
+        <field name="act_window_id" ref="crm_claim_category_claim0"/>
+    </record>
+
+    <record model="ir.actions.act_window.view" id="action_crm_tag_calendar_claim0">
+        <field name="sequence" eval="2"/>
+        <field name="view_mode">calendar</field>
+        <field name="view_id" ref="crm_case_claims_calendar_view"/>
+        <field name="act_window_id" ref="crm_claim_category_claim0"/>
+    </record>
+
+    <record model="ir.actions.act_window.view" id="action_crm_tag_form_claim0">
+        <field name="sequence" eval="3"/>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="crm_case_claims_form_view"/>
+        <field name="act_window_id" ref="crm_claim_category_claim0"/>
+    </record>
+
+</odoo>
