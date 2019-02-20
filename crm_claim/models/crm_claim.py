@@ -59,7 +59,7 @@ class CrmClaim(models.Model):
     date = fields.Datetime(
         string='Claim Date',
         index=True,
-        detault=fields.Datetime.now,
+        default=fields.Datetime.now,
     )
     model_ref_id = fields.Reference(
         selection=referenceable_models,
