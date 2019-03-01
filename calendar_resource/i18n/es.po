@@ -10,19 +10,20 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-01-06 01:53+0000\n"
-"PO-Revision-Date: 2018-01-06 01:53+0000\n"
-"Last-Translator: enjolras <yo@miguelrevilla.com>, 2018\n"
+"PO-Revision-Date: 2019-03-01 10:52+0000\n"
+"Last-Translator: Marta Vázquez Rodríguez <vazrodmar@gmail.com>\n"
 "Language-Team: Spanish (https://www.transifex.com/oca/teams/23907/es/)\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.4\n"
 
 #. module: calendar_resource
 #: model:ir.model.fields,field_description:calendar_resource.field_resource_resource_allow_double_book
 msgid "Allow Double Booking"
-msgstr ""
+msgstr "Permitir reserva doble"
 
 #. module: calendar_resource
 #: model:ir.model.fields,field_description:calendar_resource.field_calendar_event_type_allowed_resource_ids
@@ -133,6 +134,8 @@ msgid ""
 "The resource, %s, cannot be double-booked with any overlapping meetings or "
 "events."
 msgstr ""
+"El recurso, %s, no puede ser doblemente reservado con superposición de "
+"reuniones o eventos."
 
 #. module: calendar_resource
 #: code:addons/calendar_resource/models/calendar_event.py:257
@@ -141,6 +144,8 @@ msgid ""
 "The resource, %s, is not available during the following dates and times "
 "which are conflicting with the event:%s%s"
 msgstr ""
+"El recurso, %s, no está disponible durante las siguientes fechas y horas "
+"dónde tiene conflictos con el evento: %s %s"
 
 #. module: calendar_resource
 #: code:addons/calendar_resource/models/calendar_event.py:132
@@ -149,6 +154,8 @@ msgid ""
 "The resource, '%s', is not allowed in the following event types: \n"
 "%s"
 msgstr ""
+"El recurso, '%s', no está permitido para el siguiente tipo de evento:\n"
+"%s"
 
 #. module: calendar_resource
 #: code:addons/calendar_resource/models/calendar_event.py:171
@@ -158,6 +165,9 @@ msgid ""
 "conflicting with this event.\n"
 "%s"
 msgstr ""
+"El recurso '%s', se encuentra libre durante los tiempos siguientes que están "
+"en conflicto con este evento.\n"
+"%s"
 
 #. module: calendar_resource
 #: model:ir.model,name:calendar_resource.model_resource_calendar_attendance
@@ -171,3 +181,6 @@ msgid ""
 "Work to cannot be earlier or the same as Work from. If it is a night shift, "
 "separate the hours into their own working time entries by weekday."
 msgstr ""
+"Trabajo hasta no puede ser anterior o igual a trabajo desde. Si es un turno "
+"de noche, separe las horas en sus propias entradas de tiempo de trabajo por "
+"día de la semana."
