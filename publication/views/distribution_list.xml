@@ -74,9 +74,18 @@
                         attrs="{'invisible': ['|',('product_id','=',False),('contract_partner_id','=',False)]}"
                         colspan="4" col="6"
                         >
-                        <field name="contract_count" />
-                        <field name="assigned_count" />
-                        <field name="available_count" />
+                        <field
+                            name="contract_count"
+                            attrs="{'invisible': [('distribution_type','=','email')]}"
+                        />
+                        <field
+                            name="assigned_count"
+                            attrs="{'invisible': [('distribution_type','=','email')]}"
+                        />
+                        <field
+                            name="available_count"
+                            attrs="{'invisible': [('distribution_type','=','email')]}"
+                        />
                         <field
                             name="partner_id"
                             options="{'no_create': true, 'no_create_edit': true}"
