@@ -145,37 +145,91 @@ class DistributionList(models.Model):
     @api.model
     def create(self, vals):
         result = super(DistributionList, self).create(vals)
-        result._limit_count()
+        self._update_contract_partner_copies(
+            result.product_id, result.contract_partner_id,
+        )
         return result
 
     @api.multi
     def write(self, vals):
+        old_values = set(self.mapped(
+            lambda x: (x.product_id, x.contract_partner_id)
+        )) if 'product_id' in vals else []
         result = super(DistributionList, self).write(vals)
-        self._limit_count()
+        needs_update = set([
+            'product_id', 'partner_id', 'contract_partner_id', 'copies'
+        ]) & set(vals.keys())
+        if needs_update:
+            for this in self:
+                self._update_contract_partner_copies(
+                    this.product_id, this.contract_partner_id,
+                )
+            for product, partner in old_values:
+                self.env['distribution.list']._update_contract_partner_copies(
+                    product, partner,
+                )
         return result
 
     @api.multi
-    def _limit_count(self):
-        """Limit number of copies send to amount set in contract lines.
+    def unlink(self):
+        updates = set(self.mapped(
+            lambda x: (x.product_id, x.contract_partner_id)
+        ))
+        result = super(DistributionList, self).unlink()
+        for product, partner in updates:
+            self._update_contract_partner_copies(product, partner)
+        return result
 
-        It should be possible to make a constrains method of this function,
-        but for inexplicable reasons this does not work.
+    @api.model
+    def _update_contract_partner_copies(self, product, partner, force=False):
+        """take care that the amount of copies for contract_partner_id partner
+        and product is the same as contracted by this partner for the product.
+        Balance differences by creating/adjusting a distribution.list entry for
+        partner.
+        TODO: if we want to support start and end dates, thing get a bit
+        trickyer here. Then we need to merge all invoice lines' intervals,
+        compartmentalize then to intervals with equal sums of quantities, and
+        do the below restricted to every interval but including infinite
+        invoice lines and distribution lists
         """
-        for this in self:
-            # Do not use counts from 'this' as they probably have not
-            # been updated yet.
-            product = this.product_id
-            contract_partner = this.contract_partner_id
-            contract_count = self.get_product_contract_count(
-                product.id, contract_partner.id)
-            assigned_count = self.get_product_contract_assigned_count(
-                product.id, contract_partner.id)
-            available_count = contract_count - assigned_count
-            if available_count < 0:
-                raise ValidationError(_(
-                    "Number of copies sent %d can not exceed contracted"
-                    " number %d for partner %s and product %s" % (
-                        assigned_count,
-                        contract_count,
-                        contract_partner.display_name,
-                        product.display_name)))
+        # ignore mailings (no copies)
+        if not product.publication or product.distribution_type != 'print':
+            return
+        own = self.search([
+            ('contract_partner_id', '=', partner.id),
+            ('partner_id', '=', partner.id),
+            ('product_id', '=', product.id),
+        ])
+        others = self.search([
+            ('contract_partner_id', '=', partner.id),
+            ('partner_id', '!=', partner.id),
+            ('product_id', '=', product.id),
+        ])
+        to_assign = self.get_product_contract_count(product.id, partner.id)
+        assign_to_own = to_assign - sum(others.mapped('copies'))
+        if assign_to_own < 0:
+            raise ValidationError(_(
+                # TODO: fix faulty translation
+                "Number of copies sent %d can not exceed contracted"
+                " number %d for partner %s and product %s" % (
+                    self.get_product_contract_assigned_count(
+                        product.id, partner.id,
+                    ),
+                    to_assign,
+                    partner.display_name,
+                    product.display_name)))
+        elif not assign_to_own:
+            own.unlink()
+        elif not own:
+            self.create({
+                'product_id': product.id,
+                'partner_id': partner.id,
+                'contract_partner_id': partner.id,
+                'copies': assign_to_own,
+            })
+        elif len(own) > 1:
+            # this unlink will trigger another run of this function where
+            # remaining own is updated
+            own[1:].unlink()
+        elif assign_to_own != own.copies:
+            own.write({'copies': assign_to_own})
