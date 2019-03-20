@@ -14,7 +14,7 @@ class AccountAnalyticInvoiceLine(models.Model):
         readonly=True)
     publication = fields.Boolean(
         string='Subscription product line',
-        related='product_id.publication',
+        related='product_id.product_tmpl_id.publication',
         store=True)
 
     @api.multi
