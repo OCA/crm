@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-# Copyright 2014-2018 Therp BV <https://therp.nl>.
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+# Copyright 2014-2019 Therp BV <https://therp.nl>.
+# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 # pylint: disable=invalid-name
 from odoo import _, api, fields, models
 from odoo.exceptions import ValidationError
@@ -209,15 +209,14 @@ class DistributionList(models.Model):
         assign_to_own = to_assign - sum(others.mapped('copies'))
         if assign_to_own < 0:
             raise ValidationError(_(
-                # TODO: fix faulty translation
                 "Number of copies sent %d can not exceed contracted"
-                " number %d for partner %s and product %s" % (
+                " number %d for partner %s and product %s") % (
                     self.get_product_contract_assigned_count(
                         product.id, partner.id,
                     ),
                     to_assign,
                     partner.display_name,
-                    product.display_name)))
+                    product.display_name))
         elif not assign_to_own:
             own.unlink()
         elif not own:
