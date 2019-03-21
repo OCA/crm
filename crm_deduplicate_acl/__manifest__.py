@@ -6,7 +6,7 @@
 {
     "name": "Deduplicate Contacts ACL",
     "summary": "Contact deduplication with fine-grained permission control",
-    "version": "11.0.1.0.0",
+    "version": "12.0.1.0.0",
     "category": "Tools",
     "website": "https://github.com/OCA/crm",
     "author": "Tecnativa, "
