@@ -195,6 +195,14 @@ class DistributionList(models.Model):
         # ignore mailings (no copies)
         if not product.publication or product.distribution_type != 'print':
             return
+        to_assign = self.get_product_contract_count(product.id, partner.id)
+        if to_assign == 0:
+            # No more (valid) contractlines for contract partner and product.
+            to_unlink = self.search([
+                ('contract_partner_id', '=', partner.id),
+                ('product_id', '=', product.id)])
+            super(DistributionList, to_unlink).unlink()
+            return
         own = self.search([
             ('contract_partner_id', '=', partner.id),
             ('partner_id', '=', partner.id),
@@ -205,7 +213,6 @@ class DistributionList(models.Model):
             ('partner_id', '!=', partner.id),
             ('product_id', '=', product.id),
         ])
-        to_assign = self.get_product_contract_count(product.id, partner.id)
         assign_to_own = to_assign - sum(others.mapped('copies'))
         if assign_to_own < 0:
             raise ValidationError(_(
