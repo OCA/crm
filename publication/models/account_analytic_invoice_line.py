@@ -14,7 +14,7 @@ class AccountAnalyticInvoiceLine(models.Model):
         readonly=True)
     publication = fields.Boolean(
         string='Subscription product line',
-        related='product_id.publication',
+        related='product_id.product_tmpl_id.publication',
         store=True)
 
     @api.multi
@@ -31,3 +31,41 @@ class AccountAnalyticInvoiceLine(models.Model):
         action['view_mode'] = 'form'
         action['target'] = 'current'
         return action
+
+    @api.model
+    def create(self, vals):
+        this = super(AccountAnalyticInvoiceLine, self).create(vals)
+        self.env['distribution.list']._update_contract_partner_copies(
+            this.product_id, this.analytic_account_id.partner_id,
+        )
+        return this
+
+    @api.multi
+    def write(self, vals):
+        old_values = set(self.mapped(
+            lambda x: (x.product_id, x.analytic_account_id.partner_id)
+        )) if 'product_id' in vals else []
+        result = super(AccountAnalyticInvoiceLine, self).write(vals)
+        needs_update = set(['product_id', 'quantity']) & set(vals.keys())
+        if needs_update:
+            for this in self:
+                self.env['distribution.list']._update_contract_partner_copies(
+                    this.product_id, this.analytic_account_id.partner_id,
+                )
+            for product, partner in old_values:
+                self.env['distribution.list']._update_contract_partner_copies(
+                    product, partner,
+                )
+        return result
+
+    @api.multi
+    def unlink(self):
+        updates = set(self.mapped(
+            lambda x: (x.product_id, x.analytic_account_id.partner_id)
+        ))
+        result = super(AccountAnalyticInvoiceLine, self).unlink()
+        for product, partner in updates:
+            self.env['distribution.list']._update_contract_partner_copies(
+                product, partner,
+            )
+        return result
