@@ -47,10 +47,6 @@ To use this module, you need to:
 #. This criteria will be used for excluding in the deduplication the selected
    kind of records.
 
-.. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
-   :alt: Try me on Runbot
-   :target: https://runbot.odoo-community.org/runbot/111/11.0
-
 Bug Tracker
 ===========
 
@@ -75,6 +71,7 @@ Contributors
 * Pedro M. Baeza <pedro.baeza@tecnativa.com>
 * Vicent Cubells <vicent.cubells@tecnativa.com>
 * Luis M. Ontalba <luis.martinez@tecnativa.com>
+* Victor M.M. Torres <victor.martin@tecnativa.com>
 
 Maintainers
 ~~~~~~~~~~~
