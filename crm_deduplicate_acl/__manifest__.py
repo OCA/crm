@@ -1,6 +1,7 @@
 # Copyright 2016 Tecnativa - Jairo Llopis
 # Copyright 2016 Tecnativa - Vicent Cubells
 # Copyright 2017-2018 Tecnativa - Pedro M. Baeza
+# Copyright 2019 Tecnativa - Victor M.M. Torres
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 {
