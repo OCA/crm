@@ -34,7 +34,7 @@ msgid "Display Name"
 msgstr "ชื่อที่ใช้แสดง"
 
 #. module: crm_phonecall_summary_predefined
-#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary_id_4881
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary_id_4883
 msgid "ID"
 msgstr "รหัส"
 
