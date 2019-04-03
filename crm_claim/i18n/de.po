@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* crm_claim
+# 	* crm_claim
 #
 msgid ""
 msgstr ""
@@ -222,8 +222,7 @@ msgid "Corrective"
 msgstr "Korrigierend"
 
 #. module: crm_claim
-#: selection:crm.claim,type_action:0
-#: selection:crm.claim.report,type_action:0
+#: selection:crm.claim,type_action:0 selection:crm.claim.report,type_action:0
 msgid "Corrective Action"
 msgstr "Korrigierende Aktion"
 
@@ -234,7 +233,8 @@ msgstr "Erstelldatum"
 
 #. module: crm_claim
 #: model:ir.actions.act_window,help:crm_claim.crm_claim_categ_action
-msgid "Create claim categories to better manage and classify your\n"
+msgid ""
+"Create claim categories to better manage and classify your\n"
 "            claims. Some example of claims can be: preventive action,\n"
 "            corrective action."
 msgstr ""
@@ -334,14 +334,15 @@ msgstr "Gruppieren nach"
 
 #. module: crm_claim
 #: model:ir.actions.act_window,help:crm_claim.action_report_crm_claim
-msgid "Have a general overview of all claims processed in the system by sorting them with specific criteria."
+msgid ""
+"Have a general overview of all claims processed in the system by sorting "
+"them with specific criteria."
 msgstr ""
 "Sie erhalten einen generellen Überblick über alle im System vorhandenen "
 "Forderungen durch deren Sortierung nach speziellen Kriterien."
 
 #. module: crm_claim
-#: selection:crm.claim,priority:0
-#: selection:crm.claim.report,priority:0
+#: selection:crm.claim,priority:0 selection:crm.claim.report,priority:0
 msgid "High"
 msgstr "Hoch"
 
@@ -349,13 +350,15 @@ msgstr "Hoch"
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category_id
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_id
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report_id
-#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage_id_4388
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage_id_4390
 msgid "ID"
 msgstr "ID"
 
 #. module: crm_claim
 #: model:ir.model.fields,help:crm_claim.field_crm_claim_stage_case_default
-msgid "If you check this field, this stage will be proposed by default on each sales team. It will not assign this stage to existing teams."
+msgid ""
+"If you check this field, this stage will be proposed by default on each "
+"sales team. It will not assign this stage to existing teams."
 msgstr ""
 "Setzen Sie hier einen Haken, damit diese Stufe standardmäßig für jedes "
 "Verkaufsteam vorgeschlagen wird. Für bereits existierende Teams wird sich "
@@ -389,14 +392,15 @@ msgstr "Zuletzt aktualisiert am"
 
 #. module: crm_claim
 #: model:ir.model.fields,help:crm_claim.field_crm_claim_stage_team_ids
-msgid "Link between stages and sales teams. When set, this limitate the current stage to the selected sales teams."
+msgid ""
+"Link between stages and sales teams. When set, this limitate the current "
+"stage to the selected sales teams."
 msgstr ""
 "Hier kann die Stufe mit Verkaufsteams verknüpft werden. Werden Verkaufsteams "
 "hinzugefügt, gilt die Stufe nur für die angegebenen Teams."
 
 #. module: crm_claim
-#: selection:crm.claim,priority:0
-#: selection:crm.claim.report,priority:0
+#: selection:crm.claim,priority:0 selection:crm.claim.report,priority:0
 msgid "Low"
 msgstr "Niedrig"
 
@@ -432,8 +436,7 @@ msgid "No Subject"
 msgstr "Ohne Thema"
 
 #. module: crm_claim
-#: selection:crm.claim,priority:0
-#: selection:crm.claim.report,priority:0
+#: selection:crm.claim,priority:0 selection:crm.claim.report,priority:0
 msgid "Normal"
 msgstr "Normal"
 
@@ -472,8 +475,7 @@ msgid "Preventive"
 msgstr "Präventiv"
 
 #. module: crm_claim
-#: selection:crm.claim,type_action:0
-#: selection:crm.claim.report,type_action:0
+#: selection:crm.claim,type_action:0 selection:crm.claim.report,type_action:0
 msgid "Preventive Action"
 msgstr "Präventive Aktion"
 
@@ -485,7 +487,11 @@ msgstr "Priorität"
 
 #. module: crm_claim
 #: model:ir.actions.act_window,help:crm_claim.crm_claim_category_claim0
-msgid "Record and track your customers' claims. Claims may be linked to a sales order or a lot.You can send emails with attachments and keep the full history for a claim (emails sent, intervention type and so on).Claims may automatically be linked to an email address using the mail gateway module."
+msgid ""
+"Record and track your customers' claims. Claims may be linked to a sales "
+"order or a lot.You can send emails with attachments and keep the full "
+"history for a claim (emails sent, intervention type and so on).Claims may "
+"automatically be linked to an email address using the mail gateway module."
 msgstr ""
 "Erfassen und verfolgen Sie die Forderungen Ihrer Kunden. Forderungen können "
 "mit Verkaufsaufträgen oder Losen verknüpft werden. Sie können Emails mit "
@@ -532,7 +538,9 @@ msgstr "Verantwortlicher"
 
 #. module: crm_claim
 #: model:ir.model.fields,help:crm_claim.field_crm_claim_team_id
-msgid "Responsible sales team. Define Responsible user and Email account for mail gateway."
+msgid ""
+"Responsible sales team. Define Responsible user and Email account for mail "
+"gateway."
 msgstr ""
 "Verantwortliches Verkaufsteam. Definieren Sie einen verantwortlichen "
 "Benutzer und ein Emailkonto für das Email-Gateway."
@@ -609,7 +617,10 @@ msgstr "Teams"
 
 #. module: crm_claim
 #: model:ir.model.fields,help:crm_claim.field_crm_claim_email_cc
-msgid "These email addresses will be added to the CC field of all inbound and outbound emails for this record before being sent. Separate multiple email addresses with a comma"
+msgid ""
+"These email addresses will be added to the CC field of all inbound and "
+"outbound emails for this record before being sent. Separate multiple email "
+"addresses with a comma"
 msgstr ""
 "Diese Email-Adressen werden zum CC von allen eingehenden und ausgehenden "
 "Emails für diesen Eintrag hinzugefügt, bevor sie gesendet werden. Trennen "
@@ -663,7 +674,8 @@ msgstr "Arbeitslast"
 
 #. module: crm_claim
 #: model:ir.actions.act_window,help:crm_claim.crm_claim_stage_act
-msgid "You can create claim stages to categorize the status of every\n"
+msgid ""
+"You can create claim stages to categorize the status of every\n"
 "            claim entered in the system. The stages define all the steps\n"
 "            required for the resolution of a claim."
 msgstr ""

@@ -183,7 +183,8 @@ msgstr "Pinche para crear unha categoría de reclamación."
 #. module: crm_claim
 #: model:ir.actions.act_window,help:crm_claim.crm_claim_stage_act
 msgid "Click to setup a new stage in the processing of the claims."
-msgstr "Piche para configurar unha nova etapa no procesamento das reclamacións."
+msgstr ""
+"Piche para configurar unha nova etapa no procesamento das reclamacións."
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report_date_closed
@@ -350,7 +351,7 @@ msgstr "Alta"
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category_id
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_id
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report_id
-#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage_id_4388
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage_id_4390
 msgid "ID"
 msgstr "ID (identificación)"
 
