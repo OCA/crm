@@ -3,7 +3,7 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 {
     'name': 'Publication',
-    'version': '10.0.1.0.0',
+    'version': '10.0.1.1.0',
     'category': 'Customer Relationship Management',
     'author': 'Therp BV, '
               'Odoo Community Association (OCA)',
@@ -13,6 +13,7 @@
         'contract',
     ],
     'data': [
+        'data/distribution_list_cron.xml',
         'views/product_template.xml',
         'views/distribution_list.xml',
         'views/res_partner.xml',

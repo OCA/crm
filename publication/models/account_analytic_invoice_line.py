@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 # Copyright 2014-2019 Therp BV <https://therp.nl>.
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
-# pylint: disable=no-member,too-few-public-methods
+# pylint: disable=no-member,too-few-public-methods,missing-docstring
+# pylint: disable=protected-access
 from odoo import api, fields, models
 
 

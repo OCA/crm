@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<odoo>
+
+    <record model="ir.cron" id="res_partner_cron_for_membership">
+        <field name="name">Recompute membership for partners</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field>
+        <field name="model" eval="'res.partner'"/>
+        <field name="function" eval="'cron_compute_membership'"/>
+        <field name="args" eval="'()'"/>
+    </record>
+
+</odoo>

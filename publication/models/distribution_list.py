@@ -1,24 +1,76 @@
 # -*- coding: utf-8 -*-
 # Copyright 2014-2019 Therp BV <https://therp.nl>.
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
-# pylint: disable=invalid-name
+# pylint: disable=no-member,too-few-public-methods,missing-docstring
+# pylint: disable=protected-access,invalid-name
 from odoo import _, api, fields, models
 from odoo.exceptions import ValidationError
 
 
-SQL_CONTRACT_COUNT = """
-SELECT COALESCE(SUM(ROUND(l.quantity)::integer), 0) as quantity
- FROM account_analytic_invoice_line l
- JOIN account_analytic_account c
- ON l.analytic_account_id = c.id
- WHERE l.product_id = %s
- AND c.partner_id = %s"""
+SQL_CONTRACT_COUNT = """\
+SELECT COALESCE(SUM(ROUND(aail.quantity)::integer), 0) as quantity
+ FROM account_analytic_invoice_line aail
+ JOIN account_analytic_account aaa
+ ON aail.analytic_account_id = aaa.id
+ WHERE aail.product_id = %s
+   AND aaa.partner_id = %s
+   AND (aaa.date_start IS NULL OR DATE(aaa.date_start) <= CURRENT_DATE)
+   AND (aaa.date_end IS NULL OR DATE(aaa.date_end) > CURRENT_DATE)
+"""
 
-SQL_ASSIGNED_COUNT = """
+SQL_ASSIGNED_COUNT = """\
 SELECT COALESCE(SUM(copies), 0) as copies
  FROM distribution_list
  WHERE product_id = %s
- AND contract_partner_id = %s"""
+ AND contract_partner_id = %s
+"""
+
+DISTRIBUTION_ANALYSIS_STATEMENT = """\
+-- Find all combinations of contract partner and publication
+-- where not all publications are send in the distribution list
+--
+-- First select all publication lines
+WITH publication_lines AS (
+ SELECT
+     aaa.partner_id, aail.product_id, pt.default_code,
+     COALESCE(SUM(ROUND(aail.quantity)::integer), 0) as quantity
+ FROM account_analytic_invoice_line aail
+ JOIN account_analytic_account aaa
+     ON aail.analytic_account_id = aaa.id
+ JOIN product_product pp
+     ON aail.product_id = pp.id
+ JOIN product_template pt
+     ON pp.product_tmpl_id = pt.id
+ WHERE pt.publication AND pt.distribution_type = 'print'
+   AND (aaa.date_start IS NULL OR DATE(aaa.date_start) <= CURRENT_DATE)
+   AND (aaa.date_end IS NULL OR DATE(aaa.date_end) > CURRENT_DATE)
+ GROUP BY aaa.partner_id, aail.product_id, pt.default_code
+ ),
+ -- Then select distribution lines
+ distribution_lines AS (
+ SELECT
+     dl.contract_partner_id, dl.product_id, pt.default_code,
+     COALESCE(SUM(ROUND(dl.copies)::integer), 0) as copies
+ FROM distribution_list dl
+ JOIN product_product pp
+     ON dl.product_id = pp.id
+ JOIN product_template pt
+     ON pp.product_tmpl_id = pt.id
+ GROUP BY dl.contract_partner_id, dl.product_id, pt.default_code
+ )
+ -- Finaly find differences between contracted and distributed copies
+ SELECT
+     COALESCE(pl.partner_id, dl.contract_partner_id) AS partner_id,
+     COALESCE(pl.product_id, dl.product_id) AS product_id,
+     COALESCE(pl.default_code, dl.default_code) AS default_code,
+     COALESCE(pl.quantity, 0) AS quantity,
+     COALESCE(dl.copies, 0) AS copies
+ FROM publication_lines pl
+ FULL OUTER JOIN distribution_lines dl
+     ON pl.partner_id = dl.contract_partner_id
+    AND pl.product_id = dl.product_id
+ WHERE COALESCE(pl.quantity, 0) <> COALESCE(dl.copies, 0)
+"""
 
 
 class DistributionList(models.Model):
@@ -129,7 +181,8 @@ class DistributionList(models.Model):
                 "You must select a publication before selecting"
                 " the contract partner."))
         if not self.product_id:
-            return
+            # If product not yet selected, no limit on partner selection.
+            return {'domain': {'contract_partner_id': []}}
         valid_partners = []
         line_model = self.env['account.analytic.invoice.line']
         lines = line_model.search([('product_id', '=', self.product_id.id)])
@@ -181,7 +234,7 @@ class DistributionList(models.Model):
         return result
 
     @api.model
-    def _update_contract_partner_copies(self, product, partner, force=False):
+    def _update_contract_partner_copies(self, product, partner):
         """take care that the amount of copies for contract_partner_id partner
         and product is the same as contracted by this partner for the product.
         Balance differences by creating/adjusting a distribution.list entry for
@@ -239,3 +292,22 @@ class DistributionList(models.Model):
             own[1:].unlink()
         elif assign_to_own != own.copies:
             own.write({'copies': assign_to_own})
+
+    @api.model
+    def cron_compute_distribution_list(self):
+        """Adapt distribution list to contract.
+
+        We use an SQL query to select the records that should be updated.
+
+        For all combinations of parter and publication product that are either
+        in contract lines or distribution list entries, we adjust the
+        distribution list entry for the contract partner if the number of
+        distributed copies is not equal to the number of contracted copies.
+        """
+        partner_model = self.env['res.partner']
+        product_model = self.env['product.product']
+        self.env.cr.execute(DISTRIBUTION_ANALYSIS_STATEMENT)
+        for row in self.env.cr.fetchall():
+            partner = partner_model.browse(row[0])
+            product = product_model.browse(row[1])
+            self._update_contract_partner_copies(product, partner)
