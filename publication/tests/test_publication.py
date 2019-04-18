@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # Copyright 2018-2019 Therp BV <https://therp.nl>.
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
+# pylint: disable=missing-docstring,invalid-name
 from odoo.tests import common
 from odoo.exceptions import ValidationError
 
@@ -123,41 +124,56 @@ class TestPublication(common.SavepointCase):
         self.assertEqual(partner_piet.subscription_ids[0], line_book)
 
     def test_distribution_list(self):
-        """Test adding recipients to distribution list."""
+        """Test adding recipients to distribution list.
+
+        All currently contracted publications should always be in the
+        distribution list. On creation of a contract, they are assigned to
+        the contract partner. When part or all of the available copies are
+        send to other partners, the number received by the contract partner
+        should automatically diminish.
+        """
         distribution_model = self.env['distribution.list']
         product_newsletter = self.product_newsletter
         partner_jan = self.partner_jan
         partner_joris = self.partner_joris
         partner_corneel = self.partner_corneel
+        partner_piet = self.partner_piet
         product_count = distribution_model.get_product_contract_count(
             product_newsletter.id, partner_jan.id)
         self.assertEqual(product_count, 40)
         assigned_count = \
             distribution_model.get_product_contract_assigned_count(
                 product_newsletter.id, partner_jan.id)
-        self.assertEqual(assigned_count, 0)
+        self.assertEqual(assigned_count, 40)  # should be autocreated
+        jan_distribution = partner_jan.distribution_list_ids[0]
+        self.assertEqual(jan_distribution.copies, 40)
         subscription01 = distribution_model.create({
             'product_id': product_newsletter.id,
             'contract_partner_id': partner_jan.id,
             'partner_id': partner_joris.id,
             'copies': 10})
+        joris_distribution = partner_joris.distribution_list_ids[0]
+        self.assertEqual(jan_distribution.copies, 30)
+        self.assertEqual(joris_distribution.copies, 10)
         self.assertEqual(subscription01.contract_count, 40)
-        self.assertEqual(subscription01.assigned_count, 10)
-        self.assertEqual(subscription01.available_count, 30)
+        self.assertEqual(subscription01.assigned_count, 40)
+        self.assertEqual(subscription01.available_count, 0)
         subscription02 = distribution_model.create({
             'product_id': product_newsletter.id,
             'contract_partner_id': partner_jan.id,
             'partner_id': partner_corneel.id,
             'copies': 10})
+        corneel_distribution = partner_corneel.distribution_list_ids[0]
         self.assertEqual(subscription02.contract_count, 40)
-        # Old entry should also be changed
-        self.assertEqual(subscription01.assigned_count, 20)
-        self.assertEqual(subscription01.available_count, 20)
+        self.assertEqual(jan_distribution.copies, 20)
+        self.assertEqual(joris_distribution.copies, 10)
+        self.assertEqual(corneel_distribution.copies, 10)
+        # Distribution of 30 to another partner should be impossible.
         with self.assertRaises(ValidationError):
             distribution_model.create({
                 'product_id': product_newsletter.id,
                 'contract_partner_id': partner_jan.id,
-                'partner_id': partner_jan.id,
+                'partner_id': partner_piet.id,
                 'copies': 30})
         # Delivery for Corneel should be to his store.
         self.assertIn('Wijnstraat', subscription02.contact_address)
