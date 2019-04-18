@@ -6,19 +6,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-01 10:39+0000\n"
-"PO-Revision-Date: 2017-12-01 10:39+0000\n"
+"POT-Creation-Date: 2019-04-18 09:54+0000\n"
+"PO-Revision-Date: 2019-04-18 09:54+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
-"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
 
 #. module: publication
-#: model:ir.model.fields,field_description:publication.field_distribution_list_active
-msgid "Active"
+#: model:ir.ui.view,arch_db:publication.product_template_only_form_view
+msgid "<span>Distribution</span>"
 msgstr ""
 
 #. module: publication
@@ -71,18 +70,12 @@ msgstr ""
 
 #. module: publication
 #: model:ir.actions.act_window,name:publication.action_distribution_list
-#: model:ir.ui.menu,name:publication.menu_distribution_list
 msgid "Distribution List"
 msgstr ""
 
 #. module: publication
 #: selection:product.template,distribution_type:0
 msgid "Electronic"
-msgstr ""
-
-#. module: publication
-#: model:ir.model.fields,help:publication.field_distribution_list_date_end
-msgid "End date is exclusive."
 msgstr ""
 
 #. module: publication
@@ -126,29 +119,18 @@ msgid "Name"
 msgstr ""
 
 #. module: publication
-#: model:ir.model.fields,field_description:publication.field_distribution_list_assigned_count
-msgid "Quantity already assigned"
-msgstr ""
-
-#. module: publication
 #: model:ir.model.fields,field_description:publication.field_distribution_list_copies
 msgid "Number of copies"
 msgstr ""
 
 #. module: publication
-#: model:ir.model.fields,field_description:publication.field_distribution_list_available_count
-msgid "Quantity still available"
-msgstr ""
-
-#. module: publication
-#: model:ir.model.fields,field_description:publication.field_distribution_list_contract_count
-msgid "Quantity to distribute"
+#: code:addons/publication/models/distribution_list.py:271
+#, python-format
+msgid "Number of copies sent %d can not exceed contracted number %d for partner %s and product %s"
 msgstr ""
 
 #. module: publication
 #: model:ir.model,name:publication.model_res_partner
-#: model:ir.model.fields,field_description:publication.field_account_analytic_contract_line_partner_id
-#: model:ir.model.fields,field_description:publication.field_account_analytic_invoice_line_partner_id
 msgid "Partner"
 msgstr ""
 
@@ -176,9 +158,13 @@ msgid "Publication"
 msgstr ""
 
 #. module: publication
-#: model:ir.actions.act_window,name:publication.action_publication
-#: model:ir.ui.menu,name:publication.menu_publication
+#: model:ir.ui.view,arch_db:publication.product_template_search_view
 msgid "Publications"
+msgstr ""
+
+#. module: publication
+#: model:ir.ui.view,arch_db:publication.product_template_search_view
+msgid "Publications (print or digital)"
 msgstr ""
 
 #. module: publication
@@ -211,6 +197,21 @@ msgid "Publishing frequency"
 msgstr ""
 
 #. module: publication
+#: model:ir.model.fields,field_description:publication.field_distribution_list_assigned_count
+msgid "Quantity already assigned"
+msgstr ""
+
+#. module: publication
+#: model:ir.model.fields,field_description:publication.field_distribution_list_available_count
+msgid "Quantity still available"
+msgstr ""
+
+#. module: publication
+#: model:ir.model.fields,field_description:publication.field_distribution_list_contract_count
+msgid "Quantity to distribute"
+msgstr ""
+
+#. module: publication
 #: selection:product.template,publishing_frequency_type:0
 msgid "Quarterly"
 msgstr ""
@@ -222,11 +223,24 @@ msgid "Receiving Partner"
 msgstr ""
 
 #. module: publication
-#: model:ir.model.fields,field_description:publication.field_distribution_list_display_address
+#: model:ir.model.fields,field_description:publication.field_distribution_list_contact_address
 msgid "Receiving address"
 msgstr ""
 
 #. module: publication
+#: model:ir.actions.server,name:publication.distribution_list_action_for_distribution_list
+#: model:ir.ui.menu,name:publication.menu_recompute_distribution_list
+msgid "Recompute distribution_list"
+msgstr ""
+
+#. module: publication
+#: model:ir.actions.server,name:publication.contract_line_action_for_publication
+#: model:ir.ui.menu,name:publication.menu_recompute_publication
+msgid "Recompute publication"
+msgstr ""
+
+#. module: publication
+#: model:ir.model.fields,help:publication.field_distribution_list_distribution_type
 #: model:ir.model.fields,help:publication.field_product_product_distribution_type
 #: model:ir.model.fields,help:publication.field_product_template_distribution_type
 msgid "Required if product is  publication"
@@ -245,16 +259,26 @@ msgid "Subscription contract lines"
 msgstr ""
 
 #. module: publication
-#: model:ir.model.fields,field_description:publication.field_account_analytic_contract_line_publication
 #: model:ir.model.fields,field_description:publication.field_account_analytic_invoice_line_publication
 msgid "Subscription product line"
 msgstr ""
 
 #. module: publication
-#: model:ir.ui.view,arch_db:publication.view_partner_form
 #: model:ir.ui.view,arch_db:publication.subscription_search
 #: model:ir.ui.view,arch_db:publication.subscription_tree
+#: model:ir.ui.view,arch_db:publication.view_partner_form
 msgid "Subscriptions"
+msgstr ""
+
+#. module: publication
+#: code:addons/publication/models/distribution_list.py:193
+#, python-format
+msgid "There are no active subscriptions for this publication."
+msgstr ""
+
+#. module: publication
+#: model:ir.model.fields,field_description:publication.field_distribution_list_distribution_type
+msgid "Type of publication"
 msgstr ""
 
 #. module: publication
@@ -265,6 +289,12 @@ msgstr ""
 #. module: publication
 #: selection:product.template,publishing_frequency_type:0
 msgid "Year(s)"
+msgstr ""
+
+#. module: publication
+#: code:addons/publication/models/distribution_list.py:180
+#, python-format
+msgid "You must select a publication before selecting the contract partner."
 msgstr ""
 
 #. module: publication

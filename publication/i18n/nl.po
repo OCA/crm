@@ -1,14 +1,14 @@
 # Translation of OpenERP Server.
 # This file contains the translation of the following modules:
 # 	* publication
-# Ronald Portier <ronald@therp.nl>, 2014, 2015.
+# Ronald Portier <ronald@therp.nl>, 2014-2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenERP Server 7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-01 10:39+0000\n"
-"PO-Revision-Date: 2015-02-09 12:54+0100\n"
+"POT-Creation-Date: 2019-04-18 09:54+0000\n"
+"PO-Revision-Date: 2019-04-18 12:54+0100\n"
 "Last-Translator: Ronald Portier <ronald@therp.nl>\n"
 "Language-Team: Nederlands <>\n"
 "Language: nl_NL\n"
@@ -19,9 +19,9 @@ msgstr ""
 "X-Generator: Gtranslator 2.91.6\n"
 
 #. module: publication
-#: model:ir.model.fields,field_description:publication.field_distribution_list_active
-msgid "Active"
-msgstr "Actief"
+#: model:ir.ui.view,arch_db:publication.product_template_only_form_view
+msgid "<span>Distribution</span>"
+msgstr "<span>Verzendlijst</span>"
 
 #. module: publication
 #: model:ir.model.fields,help:publication.field_product_product_publishing_frequency_type
@@ -73,7 +73,6 @@ msgstr "Voorkeur voor email of drukwerk"
 
 #. module: publication
 #: model:ir.actions.act_window,name:publication.action_distribution_list
-#: model:ir.ui.menu,name:publication.menu_distribution_list
 msgid "Distribution List"
 msgstr "Verzendlijst"
 
@@ -81,11 +80,6 @@ msgstr "Verzendlijst"
 #: selection:product.template,distribution_type:0
 msgid "Electronic"
 msgstr "Elektronisch"
-
-#. module: publication
-#: model:ir.model.fields,help:publication.field_distribution_list_date_end
-msgid "End date is exclusive."
-msgstr "Einddatum it tot datum"
 
 #. module: publication
 #: model:ir.ui.view,arch_db:publication.subscription_search
@@ -128,29 +122,21 @@ msgid "Name"
 msgstr "Naam"
 
 #. module: publication
-#: model:ir.model.fields,field_description:publication.field_distribution_list_assigned_count
-msgid "Quantity already assigned"
-msgstr "Aantal al toegekend"
-
-#. module: publication
 #: model:ir.model.fields,field_description:publication.field_distribution_list_copies
 msgid "Number of copies"
 msgstr "Aantal exemplaren"
 
 #. module: publication
-#: model:ir.model.fields,field_description:publication.field_distribution_list_available_count
-msgid "Quantity still available"
-msgstr "Aantal nog beschikbaar"
-
-#. module: publication
-#: model:ir.model.fields,field_description:publication.field_distribution_list_contract_count
-msgid "Quantity to distribute"
-msgstr "Aantal exemplaren"
+#: code:addons/publication/models/distribution_list.py:271
+#, python-format
+msgid ""
+"Number of copies sent %d can not exceed contracted number %d for partner %s "
+"and product %s"
+msgstr "Het aantal gezonden exemplaren %d mag niet hoger zijn dan het"
+" gecontracteerde aantal %d voor relatie %s en product %s"
 
 #. module: publication
 #: model:ir.model,name:publication.model_res_partner
-#: model:ir.model.fields,field_description:publication.field_account_analytic_contract_line_partner_id
-#: model:ir.model.fields,field_description:publication.field_account_analytic_invoice_line_partner_id
 msgid "Partner"
 msgstr "Relatie"
 
@@ -178,16 +164,20 @@ msgid "Publication"
 msgstr "Publicatie"
 
 #. module: publication
-#: model:ir.actions.act_window,name:publication.action_publication
-#: model:ir.ui.menu,name:publication.menu_publication
+#: model:ir.ui.view,arch_db:publication.product_template_search_view
 msgid "Publications"
 msgstr "Publicaties"
+
+#. module: publication
+#: model:ir.ui.view,arch_db:publication.product_template_search_view
+msgid "Publications (print or digital)"
+msgstr "Publicaties te ontvangen (op papier of digitaal)"
 
 #. module: publication
 #: model:ir.model.fields,field_description:publication.field_res_partner_distribution_list_ids
 #: model:ir.model.fields,field_description:publication.field_res_users_distribution_list_ids
 msgid "Publications received"
-msgstr "Publicaties"
+msgstr "Publicaties ontvangen"
 
 #. module: publication
 #: model:ir.ui.view,arch_db:publication.view_partner_form
@@ -213,6 +203,21 @@ msgid "Publishing frequency"
 msgstr "Frequentie van verschijnen"
 
 #. module: publication
+#: model:ir.model.fields,field_description:publication.field_distribution_list_assigned_count
+msgid "Quantity already assigned"
+msgstr "Aantal al toegekend"
+
+#. module: publication
+#: model:ir.model.fields,field_description:publication.field_distribution_list_available_count
+msgid "Quantity still available"
+msgstr "Aantal nog beschikbaar"
+
+#. module: publication
+#: model:ir.model.fields,field_description:publication.field_distribution_list_contract_count
+msgid "Quantity to distribute"
+msgstr "Aantal exemplaren"
+
+#. module: publication
 #: selection:product.template,publishing_frequency_type:0
 msgid "Quarterly"
 msgstr "Kwartaal"
@@ -224,11 +229,24 @@ msgid "Receiving Partner"
 msgstr "Ontvangende relatie"
 
 #. module: publication
-#: model:ir.model.fields,field_description:publication.field_distribution_list_display_address
+#: model:ir.model.fields,field_description:publication.field_distribution_list_contact_address
 msgid "Receiving address"
 msgstr "Verzendadres"
 
 #. module: publication
+#: model:ir.actions.server,name:publication.distribution_list_action_for_distribution_list
+#: model:ir.ui.menu,name:publication.menu_recompute_distribution_list
+msgid "Recompute distribution_list"
+msgstr "Bijwerken verzendlijst"
+
+#. module: publication
+#: model:ir.actions.server,name:publication.contract_line_action_for_publication
+#: model:ir.ui.menu,name:publication.menu_recompute_publication
+msgid "Recompute publication"
+msgstr "Bijwerken publicatie"
+
+#. module: publication
+#: model:ir.model.fields,help:publication.field_distribution_list_distribution_type
 #: model:ir.model.fields,help:publication.field_product_product_distribution_type
 #: model:ir.model.fields,help:publication.field_product_template_distribution_type
 msgid "Required if product is  publication"
@@ -247,17 +265,27 @@ msgid "Subscription contract lines"
 msgstr "Abonnementen"
 
 #. module: publication
-#: model:ir.model.fields,field_description:publication.field_account_analytic_contract_line_publication
 #: model:ir.model.fields,field_description:publication.field_account_analytic_invoice_line_publication
 msgid "Subscription product line"
 msgstr "Contractregel voor abonnement"
 
 #. module: publication
-#: model:ir.ui.view,arch_db:publication.view_partner_form
 #: model:ir.ui.view,arch_db:publication.subscription_search
 #: model:ir.ui.view,arch_db:publication.subscription_tree
+#: model:ir.ui.view,arch_db:publication.view_partner_form
 msgid "Subscriptions"
 msgstr "Abonnementen"
+
+#. module: publication
+#: code:addons/publication/models/distribution_list.py:193
+#, python-format
+msgid "There are no active subscriptions for this publication."
+msgstr "En zijn geen actieve abonnementen voor deze publicatie"
+
+#. module: publication
+#: model:ir.model.fields,field_description:publication.field_distribution_list_distribution_type
+msgid "Type of publication"
+msgstr "Type publicatie"
 
 #. module: publication
 #: selection:product.template,publishing_frequency_type:0
@@ -268,6 +296,12 @@ msgstr "Week(en)"
 #: selection:product.template,publishing_frequency_type:0
 msgid "Year(s)"
 msgstr "Jaar(en)"
+
+#. module: publication
+#: code:addons/publication/models/distribution_list.py:180
+#, python-format
+msgid "You must select a publication before selecting the contract partner."
+msgstr "U dient een publicatie te selecteren voor het kiezen van een relatie."
 
 #. module: publication
 #: model:ir.model,name:publication.model_account_analytic_invoice_line

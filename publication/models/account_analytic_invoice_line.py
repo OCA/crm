@@ -6,6 +6,18 @@
 from odoo import api, fields, models
 
 
+LINE_ANALYSIS_STATEMENT = """\
+SELECT
+    aail.id -- ,
+    -- pt.id, pt.name, pt.default_code, pt.publication,
+    -- aail.partner_id, aail.analytic_account_id, aail.publication
+ FROM account_analytic_invoice_line aail
+ JOIN product_product pp ON aail.product_id = pp.id
+ JOIN product_template pt ON pp.product_tmpl_id = pt.id
+ WHERE aail.publication <> pt.publication
+"""
+
+
 class AccountAnalyticInvoiceLine(models.Model):
     _inherit = 'account.analytic.invoice.line'
 
@@ -70,3 +82,16 @@ class AccountAnalyticInvoiceLine(models.Model):
                 product, partner,
             )
         return result
+
+    @api.model
+    def cron_compute_publication(self):
+        """Recompute publication for all lines where needed.
+
+        We use an SQL query to select the records that should be updated.
+        """
+        self.env.cr.execute(LINE_ANALYSIS_STATEMENT)
+        data = self.env.cr.fetchall()
+        line_ids = [rec[0] for rec in data]
+        lines = self.browse(line_ids)
+        for line in lines:
+            line.write({'publication': line.product_id.publication})

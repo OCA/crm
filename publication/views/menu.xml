@@ -29,4 +29,23 @@
         sequence="81"
         />
 
+    <record
+        id="contract_line_action_for_publication"
+        model="ir.actions.server"
+        >
+        <field name="name">Recompute publication</field>
+        <field name="model_id" ref="model_res_partner"/>
+        <field name="code">
+            env['account.analytic.invoice.line'].cron_compute_publication()
+        </field>
+    </record>
+
+    <menuitem
+        id="menu_recompute_publication"
+        action="contract_line_action_for_publication"
+        name="Recompute publication"
+        parent="partner_noncommercial.menu_partner"
+        sequence="83"
+        />
+
 </odoo>

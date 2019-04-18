@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding='UTF-8'?>
 <odoo noupdate="1">
 
-    <record model="ir.cron" id="res_partner_cron_for_membership">
-        <field name="name">Recompute membership for partners</field>
+    <record model="ir.cron" id="distribution_list_cron_for_distribution_list">
+        <field name="name">Recompute distribution_list for partners</field>
         <field name="interval_number">1</field>
         <field name="interval_type">days</field>
         <field name="numbercall">-1</field>
-        <field name="model" eval="'res.partner'"/>
-        <field name="function" eval="'cron_compute_membership'"/>
+        <field name="model" eval="'distribution.list'"/>
+        <field name="function" eval="'cron_compute_distribution_list'"/>
+        <field name="args" eval="'()'"/>
+    </record>
+
+    <record model="ir.cron" id="contract_line_cron_for_publication">
+        <field name="name">Recompute publication for partners</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field>
+        <field name="model" eval="'account.analytic.invoice.line'"/>
+        <field name="function" eval="'cron_compute_publication'"/>
         <field name="args" eval="'()'"/>
     </record>
 
