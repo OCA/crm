@@ -20,42 +20,52 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: crm_phonecall_summary_predefined
-#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary_create_uid
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall__name
+msgid "Call Summary"
+msgstr ""
+
+#. module: crm_phonecall_summary_predefined
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary__create_uid
 msgid "Created by"
 msgstr "Creado por"
 
 #. module: crm_phonecall_summary_predefined
-#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary_create_date
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary__create_date
 msgid "Created on"
 msgstr "Creado en"
 
 #. module: crm_phonecall_summary_predefined
-#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary_display_name
+#: model:ir.model,name:crm_phonecall_summary_predefined.model_crm_phonecall_summary
+msgid "Crm Phonecall Summary"
+msgstr ""
+
+#. module: crm_phonecall_summary_predefined
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary__display_name
 msgid "Display Name"
 msgstr ""
 
 #. module: crm_phonecall_summary_predefined
-#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary_id_4816
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary__id
 msgid "ID"
 msgstr "ID"
 
 #. module: crm_phonecall_summary_predefined
-#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary___last_update
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary____last_update
 msgid "Last Modified on"
 msgstr ""
 
 #. module: crm_phonecall_summary_predefined
-#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary_write_uid
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary__write_uid
 msgid "Last Updated by"
 msgstr "Ultima actualización por"
 
 #. module: crm_phonecall_summary_predefined
-#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary_write_date
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary__write_date
 msgid "Last Updated on"
 msgstr "Ultima actualización en"
 
 #. module: crm_phonecall_summary_predefined
-#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary_name
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary__name
 msgid "Name"
 msgstr "Nombre"
 
@@ -70,27 +80,22 @@ msgid "Phonecall"
 msgstr ""
 
 #. module: crm_phonecall_summary_predefined
-#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary_phonecall_ids
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary__phonecall_ids
 msgid "Phonecalls"
 msgstr ""
 
 #. module: crm_phonecall_summary_predefined
-#: model:ir.model.fields,help:crm_phonecall_summary_predefined.field_crm_phonecall_summary_phonecall_ids
+#: model:ir.model.fields,help:crm_phonecall_summary_predefined.field_crm_phonecall_summary__phonecall_ids
 msgid "Phonecalls with this summary."
 msgstr ""
 
 #. module: crm_phonecall_summary_predefined
-#: model:ir.actions.act_window,name:crm_phonecall_summary_predefined.summary_action
-#: model:ir.ui.menu,name:crm_phonecall_summary_predefined.summary_menu
+#: model:ir.actions.act_window,name:crm_phonecall_summary_predefined.crm_phonecall_summary_action
+#: model:ir.ui.menu,name:crm_phonecall_summary_predefined.crm_phonecall_summary_menu
 msgid "Summaries"
 msgstr ""
 
 #. module: crm_phonecall_summary_predefined
-#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary_id
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall__summary_id
 msgid "Summary"
-msgstr ""
-
-#. module: crm_phonecall_summary_predefined
-#: model:ir.model,name:crm_phonecall_summary_predefined.model_crm_phonecall_summary
-msgid "crm.phonecall.summary"
 msgstr ""
