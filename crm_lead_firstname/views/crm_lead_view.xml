@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- © 2016 Antiun Ingeniería S.L. - Jairo Llopis
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+
+<odoo>
+    <record id="crm_case_form_view_leads" model="ir.ui.view">
+        <field name="name">Add firstname and lastname</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_form_view_leads"/>
+        <field name="arch" type="xml">
+            <xpath expr="//label[@for='contact_name']" position="attributes">
+                <attribute name="string">Contact Name</attribute>
+            </xpath>
+            <xpath expr="//field[@name='contact_name']" position="attributes">
+                <attribute name="placeholder">Firstname</attribute>
+            </xpath>
+            <xpath expr="//field[@name='contact_name']" position="after">
+                <field name="contact_lastname" placeholder="Lastname"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="crm_case_form_view_oppor" model="ir.ui.view">
+        <field name="name">Add firstname and lastname</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
+        <field name="arch" type="xml">
+            <xpath expr="//label[@for='contact_name']" position="attributes">
+                <attribute name="string">Contact Name</attribute>
+            </xpath>
+            <xpath expr="//field[@name='contact_name']" position="attributes">
+                <attribute name="placeholder">Firstname</attribute>
+            </xpath>
+            <xpath expr="//field[@name='contact_name']" position="after">
+                <field name="contact_lastname" placeholder="Lastname"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
