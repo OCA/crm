@@ -22,7 +22,7 @@ msgid "Claim"
 msgstr "Жалба"
 
 #. module: crm_claim_code
-#: model:ir.model.fields,field_description:crm_claim_code.field_crm_claim_code
+#: model:ir.model.fields,field_description:crm_claim_code.field_crm_claim__code
 msgid "Claim Number"
 msgstr "Жалба Номер"
 

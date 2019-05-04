@@ -21,12 +21,12 @@ msgstr ""
 #. module: crm_claim_code
 #: model:ir.model,name:crm_claim_code.model_crm_claim
 msgid "Claim"
-msgstr "Reclamación"
+msgstr "Reclamo"
 
 #. module: crm_claim_code
-#: model:ir.model.fields,field_description:crm_claim_code.field_crm_claim_code
+#: model:ir.model.fields,field_description:crm_claim_code.field_crm_claim__code
 msgid "Claim Number"
-msgstr "Número de reclamación"
+msgstr "Número de reclamo"
 
 #. module: crm_claim_code
 #: sql_constraint:crm.claim:0
