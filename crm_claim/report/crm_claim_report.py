@@ -167,6 +167,6 @@ class CrmClaimReport(models.Model):
                 from
                 %s
                 %s)
-            """ % (AsIs(self._table), AsIs(self._select()), AsIs(self._from()),
-                   AsIs(self._group_by()))
+            """, (AsIs(self._table), AsIs(self._select()), AsIs(self._from()),
+                  AsIs(self._group_by()))
         )
