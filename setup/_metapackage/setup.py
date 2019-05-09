@@ -9,6 +9,7 @@ setuptools.setup(
     version=version,
     install_requires=[
         'odoo12-addon-crm_claim',
+        'odoo12-addon-crm_claim_code',
         'odoo12-addon-crm_lead_code',
         'odoo12-addon-crm_lead_firstname',
         'odoo12-addon-crm_lead_product',
