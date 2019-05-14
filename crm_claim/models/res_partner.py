@@ -17,7 +17,7 @@ class ResPartner(models.Model):
     @api.model
     def _compute_claim_count(self):
         partners = self | self.mapped('child_ids')
-        partner_data = self.env['crm.claim'].read_group(
+        partner_data = self.env['crm.claim'].sudo().read_group(
             [('partner_id', 'in', partners.ids)],
             ['partner_id'],
             ['partner_id'],
