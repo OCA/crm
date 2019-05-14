@@ -47,5 +47,8 @@ class CrmLead(models.Model):
     def _compute_is_same_currency(self):
         for lead in self:
             lead.is_same_currency = (
-                lead.customer_currency_id == lead.company_currency
+                lead.customer_currency_id == (
+                    lead.company_currency or
+                    self.env.user.company_id.currency_id
+                )
             )
