@@ -24,37 +24,37 @@ msgid "Lead/Opportunity"
 msgstr "Iniciatíva/Príležitosť"
 
 #. module: crm_location_nuts
-#: model:ir.model.fields,field_description:crm_location_nuts.field_crm_lead_nuts1_id
-#: model:ir.ui.view,arch_db:crm_location_nuts.crm_case_form_view_leads
-#: model:ir.ui.view,arch_db:crm_location_nuts.crm_case_form_view_oppor
-#: model:ir.ui.view,arch_db:crm_location_nuts.view_crm_case_leads_filter
-#: model:ir.ui.view,arch_db:crm_location_nuts.view_crm_case_opportunities_filter
+#: model:ir.model.fields,field_description:crm_location_nuts.field_crm_lead__nuts1_id
+#: model_terms:ir.ui.view,arch_db:crm_location_nuts.crm_case_form_view_leads
+#: model_terms:ir.ui.view,arch_db:crm_location_nuts.crm_case_form_view_oppor
+#: model_terms:ir.ui.view,arch_db:crm_location_nuts.view_crm_case_leads_filter
+#: model_terms:ir.ui.view,arch_db:crm_location_nuts.view_crm_case_opportunities_filter
 msgid "NUTS L1"
 msgstr ""
 
 #. module: crm_location_nuts
-#: model:ir.model.fields,field_description:crm_location_nuts.field_crm_lead_nuts2_id
-#: model:ir.ui.view,arch_db:crm_location_nuts.crm_case_form_view_leads
-#: model:ir.ui.view,arch_db:crm_location_nuts.crm_case_form_view_oppor
-#: model:ir.ui.view,arch_db:crm_location_nuts.view_crm_case_leads_filter
-#: model:ir.ui.view,arch_db:crm_location_nuts.view_crm_case_opportunities_filter
+#: model:ir.model.fields,field_description:crm_location_nuts.field_crm_lead__nuts2_id
+#: model_terms:ir.ui.view,arch_db:crm_location_nuts.crm_case_form_view_leads
+#: model_terms:ir.ui.view,arch_db:crm_location_nuts.crm_case_form_view_oppor
+#: model_terms:ir.ui.view,arch_db:crm_location_nuts.view_crm_case_leads_filter
+#: model_terms:ir.ui.view,arch_db:crm_location_nuts.view_crm_case_opportunities_filter
 msgid "NUTS L2"
 msgstr ""
 
 #. module: crm_location_nuts
-#: model:ir.model.fields,field_description:crm_location_nuts.field_crm_lead_nuts3_id
-#: model:ir.ui.view,arch_db:crm_location_nuts.crm_case_form_view_leads
-#: model:ir.ui.view,arch_db:crm_location_nuts.crm_case_form_view_oppor
-#: model:ir.ui.view,arch_db:crm_location_nuts.view_crm_case_leads_filter
-#: model:ir.ui.view,arch_db:crm_location_nuts.view_crm_case_opportunities_filter
+#: model:ir.model.fields,field_description:crm_location_nuts.field_crm_lead__nuts3_id
+#: model_terms:ir.ui.view,arch_db:crm_location_nuts.crm_case_form_view_leads
+#: model_terms:ir.ui.view,arch_db:crm_location_nuts.crm_case_form_view_oppor
+#: model_terms:ir.ui.view,arch_db:crm_location_nuts.view_crm_case_leads_filter
+#: model_terms:ir.ui.view,arch_db:crm_location_nuts.view_crm_case_opportunities_filter
 msgid "NUTS L3"
 msgstr ""
 
 #. module: crm_location_nuts
-#: model:ir.model.fields,field_description:crm_location_nuts.field_crm_lead_nuts4_id
-#: model:ir.ui.view,arch_db:crm_location_nuts.crm_case_form_view_leads
-#: model:ir.ui.view,arch_db:crm_location_nuts.crm_case_form_view_oppor
-#: model:ir.ui.view,arch_db:crm_location_nuts.view_crm_case_leads_filter
-#: model:ir.ui.view,arch_db:crm_location_nuts.view_crm_case_opportunities_filter
+#: model:ir.model.fields,field_description:crm_location_nuts.field_crm_lead__nuts4_id
+#: model_terms:ir.ui.view,arch_db:crm_location_nuts.crm_case_form_view_leads
+#: model_terms:ir.ui.view,arch_db:crm_location_nuts.crm_case_form_view_oppor
+#: model_terms:ir.ui.view,arch_db:crm_location_nuts.view_crm_case_leads_filter
+#: model_terms:ir.ui.view,arch_db:crm_location_nuts.view_crm_case_opportunities_filter
 msgid "NUTS L4"
 msgstr ""

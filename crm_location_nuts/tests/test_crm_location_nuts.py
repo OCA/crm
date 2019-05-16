@@ -35,7 +35,7 @@ class TestCrmNuts(TestBaseLocationNuts):
 
     def test_onchange_nuts_crm(self):
         self.lead.country_id = self.country_2
-        self.lead._onchange_country_id()
+        self.lead._onchange_country_id_crm_location_nuts()
         self.assertEqual(self.lead.nuts1_id.country_id,
                          self.lead.country_id)
         self.lead.nuts4_id = self.nuts4_1
@@ -48,7 +48,7 @@ class TestCrmNuts(TestBaseLocationNuts):
         self.lead._onchange_nuts2_id()
         self.assertEqual(self.lead.nuts1_id.country_id, self.country_1)
         self.lead.country_id = self.country_2
-        self.lead._onchange_country_id()
+        self.lead._onchange_country_id_crm_location_nuts()
         self.assertEqual(self.lead.country_id, self.nuts1_2.country_id)
         self.assertFalse(self.lead.nuts2_id)
         self.assertFalse(self.lead.nuts3_id)
@@ -56,10 +56,10 @@ class TestCrmNuts(TestBaseLocationNuts):
 
     def test_onchange_states_crm(self):
         self.lead.state_id = self.state_2
-        self.lead.onchange_state_id_base_location_nuts()
+        self.lead._onchange_state_id_crm_location_nuts()
         self.assertEqual(self.state_2, self.lead.nuts4_id.state_id)
         self.lead.state_id = self.state_1
-        self.lead.onchange_state_id_base_location_nuts()
+        self.lead._onchange_state_id_crm_location_nuts()
         self.assertEqual(self.state_1, self.lead.nuts4_id.state_id)
         self.lead._onchange_nuts4_id()
         self.assertEqual(self.lead.nuts3_id, self.nuts3_1)
