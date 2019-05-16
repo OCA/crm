@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # Copyright 2015 Antonio Espinosa <antonio.espinosa@tecnativa.com>
 # Copyright 2017 David Vidal <david.vidal@tecnativa.com>
+# Copyright 2019 Alexandre Díaz <alexandre.diaz@tecnativa.com>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 from odoo import api, fields, models
@@ -33,18 +34,17 @@ class CrmLead(models.Model):
     )
 
     @api.multi
-    def _lead_create_contact(self, name, is_company, parent_id=False):
+    def _create_lead_partner_data(self, name, is_company, parent_id=False):
         """Sets NUTS region on created partner"""
-        partner_id = super(CrmLead, self)._lead_create_contact(
+        partner_data = super()._create_lead_partner_data(
             name, is_company, parent_id=parent_id)
-        data = {
+        partner_data.update({
             'nuts1_id': self.nuts1_id.id,
             'nuts2_id': self.nuts2_id.id,
             'nuts3_id': self.nuts3_id.id,
             'nuts4_id': self.nuts4_id.id,
-        }
-        partner_id.write(data)
-        return partner_id
+        })
+        return partner_data
 
     def _onchange_nuts(self, level):
         field = self["nuts%d_id" % level]
@@ -92,7 +92,7 @@ class CrmLead(models.Model):
         return self._onchange_nuts(1)
 
     @api.onchange('country_id')
-    def _onchange_country_id(self):
+    def _onchange_country_id_crm_location_nuts(self):
         """Sensible values and domains for related fields."""
         fields = ['state_id', 'nuts1_id', 'nuts2_id', 'nuts3_id', 'nuts4_id']
         country_domain = ([('country_id', '=', self.country_id.id)]
@@ -118,7 +118,7 @@ class CrmLead(models.Model):
         }
 
     @api.onchange('state_id')
-    def onchange_state_id_base_location_nuts(self):
+    def _onchange_state_id_crm_location_nuts(self):
         if self.state_id:
             self.country_id = self.state_id.country_id
             if self.state_id.country_id.state_level:
