@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright 2015 Antiun Ingenieria S.L. - Javier Iniesta
      Copyright 2018 Eficent Business and IT Consulting Services, S.L.
+     Copyright 2019 Tecnativa - Alexandre Díaz <alexandre.diaz@tecnativa.com>
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
 <odoo>
 
@@ -36,8 +37,9 @@
         <field name="country_id" position="after">
             <field name="industry_id"/>
         </field>
-        <filter name="unassigned" position="after">
-            <filter string="Industry"
+        <filter name="assigned_to_me" position="after">
+            <filter name="industry"
+                    string="Industry"
                     domain="[]"
                     context="{'group_by': 'industry_id'}"/>
         </filter>
@@ -77,7 +79,8 @@
             <field name="industry_id"/>
         </field>
         <filter name="stage" position="after">
-            <filter string="Industry"
+            <filter name="industry"
+                    string="Industry"
                     domain="[]"
                     context="{'group_by': 'industry_id'}"/>
         </filter>
