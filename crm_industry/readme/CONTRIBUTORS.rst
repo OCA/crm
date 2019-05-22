@@ -3,3 +3,4 @@
 * Javier Iniesta <javieria@antiun.com>
 * Luis M. Ontalba <luis.martinez@tecnativa.com>
 * Miquel Raïch <miquel.raich@eficent.com>
+* Alexandre Díaz <alexandre.diaz@tecnativa.com>
