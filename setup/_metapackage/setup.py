@@ -14,6 +14,7 @@ setuptools.setup(
         'odoo12-addon-crm_lead_code',
         'odoo12-addon-crm_lead_firstname',
         'odoo12-addon-crm_lead_product',
+        'odoo12-addon-crm_location',
         'odoo12-addon-crm_location_nuts',
         'odoo12-addon-crm_phonecall',
         'odoo12-addon-crm_phonecall_summary_predefined',
