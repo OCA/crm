@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_res_partner_form" model="ir.ui.view">
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page name="crm_mailchimp" string="Mailchimp" groups="crm_mailchimp.group_user">
+                    <group>
+                        <field name="mailchimp_list_ids" widget="many2many_tags" />
+                        <field name="mailchimp_interest_ids" />
+                    </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+</odoo>

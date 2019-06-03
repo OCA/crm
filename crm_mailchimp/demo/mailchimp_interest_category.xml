@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="interest_category_demo" model="mailchimp.interest.category">
+        <field name="name">Demo category</field>
+        <field name="list_id" ref="list_demo" />
+        <field name="mailchimp_id">XXXXX</field>
+    </record>
+</odoo>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+    <record id="rule_subscriber_list" model="ir.rule">
+        <field name="name">Restrict lists for subscribers</field>
+        <field name="groups" eval="[(4, ref('group_subscriber'))]" />
+        <field name="model_id" ref="model_mailchimp_list" />
+        <field name="domain_force">
+            [
+                '|',
+                ('group_ids', '=', False),
+                ('group_ids', 'in', user.groups_id.ids),
+            ]
+        </field>
+    </record>
+    <record id="rule_subscriber_interest_category" model="ir.rule">
+        <field name="name">Restrict interest categories for subscribers</field>
+        <field name="groups" eval="[(4, ref('group_subscriber'))]" />
+        <field name="model_id" ref="model_mailchimp_interest_category" />
+        <field name="domain_force">
+            [
+                '|',
+                ('list_id.group_ids', '=', False),
+                ('list_id.group_ids', 'in', user.groups_id.ids),
+                '|',
+                ('group_ids', '=', False),
+                ('group_ids', 'in', user.groups_id.ids),
+            ]
+        </field>
+    </record>
+    <record id="rule_subscriber_interest" model="ir.rule">
+        <field name="name">Restrict interests for subscribers</field>
+        <field name="groups" eval="[(4, ref('group_subscriber'))]" />
+        <field name="model_id" ref="model_mailchimp_interest" />
+        <field name="domain_force">
+            [
+                '|',
+                ('category_id.list_id.group_ids', '=', False),
+                ('category_id.list_id.group_ids', 'in', user.groups_id.ids),
+                '|',
+                ('category_id.group_ids', '=', False),
+                ('category_id.group_ids', 'in', user.groups_id.ids),
+            ]
+        </field>
+    </record>
+</odoo>
