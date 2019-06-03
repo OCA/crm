@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+    <record id="cron" model="ir.cron">
+        <field name="name">Push partner data to mailchimp</field>
+        <field name="active" eval="False" />
+        <field name="interval_type">days</field>
+        <field name="interval_number">1</field>
+        <field name="numbercall">-1</field>
+        <field name="model">mailchimp.list</field>
+        <field name="function">_cron</field>
+        <field name="args">(86400,)</field>
+    </record>
+</odoo>
