@@ -4,7 +4,7 @@
 
 {
     "name": "CRM Meeting Commercial Partner",
-    "version": "11.0.1.0.0",
+    "version": "12.0.1.0.0",
     "category": "Customer Relationship Management",
     "author": "Eficent ,Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/crm",
