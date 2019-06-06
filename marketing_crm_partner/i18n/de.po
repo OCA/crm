@@ -20,8 +20,7 @@ msgstr ""
 "X-Generator: Weblate 3.3\n"
 
 #. module: marketing_crm_partner
-#: model:ir.model.fields,field_description:marketing_crm_partner.field_res_users_campaign_id
-#: model:ir.ui.view,arch_db:marketing_crm_partner.view_res_partner_filter
+#: model_terms:ir.ui.view,arch_db:marketing_crm_partner.view_res_partner_filter
 msgid "Campaign"
 msgstr "Kampagne"
 
@@ -36,41 +35,33 @@ msgid "Lead/Opportunity"
 msgstr "Lead/Chance"
 
 #. module: marketing_crm_partner
-#: model:ir.ui.view,arch_db:marketing_crm_partner.view_partner_form
+#: model_terms:ir.ui.view,arch_db:marketing_crm_partner.view_partner_form
 msgid "Marketing"
 msgstr "Marketing"
 
 #. module: marketing_crm_partner
-#: model:ir.model.fields,field_description:marketing_crm_partner.field_res_users_medium_id
-#: model:ir.ui.view,arch_db:marketing_crm_partner.view_res_partner_filter
+#: model_terms:ir.ui.view,arch_db:marketing_crm_partner.view_res_partner_filter
 msgid "Medium"
 msgstr "Medium"
 
 #. module: marketing_crm_partner
-#: model:ir.model.fields,field_description:marketing_crm_partner.field_res_users_source_id
-#: model:ir.ui.view,arch_db:marketing_crm_partner.view_res_partner_filter
+#: model_terms:ir.ui.view,arch_db:marketing_crm_partner.view_res_partner_filter
 msgid "Source"
 msgstr "Herkunft"
 
-#. module: marketing_crm_partner
-#: model:ir.model.fields,help:marketing_crm_partner.field_res_users_campaign_id
-msgid ""
-"This is a name that helps you keep track of your different campaign efforts, "
-"e.g. Fall_Drive, Christmas_Special"
-msgstr ""
-"Dieser Name dienst der Nachvollziehbarkeit des Aufwandes für die "
-"verschiedenen Kampagnen. Beispiel: Weihnachtsspezial"
+#~ msgid ""
+#~ "This is a name that helps you keep track of your different campaign "
+#~ "efforts, e.g. Fall_Drive, Christmas_Special"
+#~ msgstr ""
+#~ "Dieser Name dienst der Nachvollziehbarkeit des Aufwandes für die "
+#~ "verschiedenen Kampagnen. Beispiel: Weihnachtsspezial"
 
-#. module: marketing_crm_partner
-#: model:ir.model.fields,help:marketing_crm_partner.field_res_users_medium_id
-msgid "This is the method of delivery, e.g. Postcard, Email, or Banner Ad"
-msgstr "Dies ist die Liefermethode. Beispiel: Postkarte, Email, Werbebanner"
+#~ msgid "This is the method of delivery, e.g. Postcard, Email, or Banner Ad"
+#~ msgstr "Dies ist die Liefermethode. Beispiel: Postkarte, Email, Werbebanner"
 
-#. module: marketing_crm_partner
-#: model:ir.model.fields,help:marketing_crm_partner.field_res_users_source_id
-msgid ""
-"This is the source of the link, e.g. Search Engine, another domain, or name "
-"of email list"
-msgstr ""
-"Das ist die Herkunft der Verknüpfung. Beispiel: Suchmaschine, andere Domäne, "
-"Name einer Mailingliste"
+#~ msgid ""
+#~ "This is the source of the link, e.g. Search Engine, another domain, or "
+#~ "name of email list"
+#~ msgstr ""
+#~ "Das ist die Herkunft der Verknüpfung. Beispiel: Suchmaschine, andere "
+#~ "Domäne, Name einer Mailingliste"

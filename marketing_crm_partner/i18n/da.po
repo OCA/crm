@@ -19,8 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: marketing_crm_partner
-#: model:ir.model.fields,field_description:marketing_crm_partner.field_res_users_campaign_id
-#: model:ir.ui.view,arch_db:marketing_crm_partner.view_res_partner_filter
+#: model_terms:ir.ui.view,arch_db:marketing_crm_partner.view_res_partner_filter
 msgid "Campaign"
 msgstr ""
 
@@ -35,39 +34,18 @@ msgid "Lead/Opportunity"
 msgstr ""
 
 #. module: marketing_crm_partner
-#: model:ir.ui.view,arch_db:marketing_crm_partner.view_partner_form
+#: model_terms:ir.ui.view,arch_db:marketing_crm_partner.view_partner_form
 msgid "Marketing"
 msgstr ""
 
 #. module: marketing_crm_partner
-#: model:ir.model.fields,field_description:marketing_crm_partner.field_res_users_medium_id
-#: model:ir.ui.view,arch_db:marketing_crm_partner.view_res_partner_filter
+#: model_terms:ir.ui.view,arch_db:marketing_crm_partner.view_res_partner_filter
 msgid "Medium"
 msgstr "Medium"
 
 #. module: marketing_crm_partner
-#: model:ir.model.fields,field_description:marketing_crm_partner.field_res_users_source_id
-#: model:ir.ui.view,arch_db:marketing_crm_partner.view_res_partner_filter
+#: model_terms:ir.ui.view,arch_db:marketing_crm_partner.view_res_partner_filter
 msgid "Source"
-msgstr ""
-
-#. module: marketing_crm_partner
-#: model:ir.model.fields,help:marketing_crm_partner.field_res_users_campaign_id
-msgid ""
-"This is a name that helps you keep track of your different campaign efforts, "
-"e.g. Fall_Drive, Christmas_Special"
-msgstr ""
-
-#. module: marketing_crm_partner
-#: model:ir.model.fields,help:marketing_crm_partner.field_res_users_medium_id
-msgid "This is the method of delivery, e.g. Postcard, Email, or Banner Ad"
-msgstr ""
-
-#. module: marketing_crm_partner
-#: model:ir.model.fields,help:marketing_crm_partner.field_res_users_source_id
-msgid ""
-"This is the source of the link, e.g. Search Engine, another domain, or name "
-"of email list"
 msgstr ""
 
 #~ msgid "Partner"
