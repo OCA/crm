@@ -6,7 +6,7 @@
 {
     "name": "Tracking Fields in Partners",
     "summary": "Copy tracking fields from leads to partners",
-    "version": "11.0.1.0.0",
+    "version": "12.0.1.0.0",
     "category": "Marketing",
     "website": "https://www.github.com/oca/crm",
     "author": "Tecnativa, "
