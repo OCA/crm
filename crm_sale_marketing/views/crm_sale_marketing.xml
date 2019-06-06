@@ -14,7 +14,7 @@
                         'default_team_id': team_id,
                         'default_campaign_id': campaign_id,
                         'default_medium_id': medium_id,
-                        'default_source_id': source_id
+                        'default_source_id': source_id,
                         }
                    </attribute>
                 </button>
