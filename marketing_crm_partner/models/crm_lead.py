@@ -16,7 +16,7 @@ class CRMLead(models.Model):
         res = super()._create_lead_partner_data(
             name, is_company, parent_id=parent_id,
         )
-        # We use self.env['utm.mixin'] for not losing possible overridens
+        # We use self.env['utm.mixin'] for not losing possible overrides
         # see https://github.com/odoo/odoo/blob/
         # e5c8071484c883bf78478a39ef2120bcd8f2442d/addons/utm/models/utm.py#L51
         for _key, field, _cookie in self.env['utm.mixin'].tracking_fields():
