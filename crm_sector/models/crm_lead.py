@@ -19,7 +19,7 @@ class CrmLead(models.Model):
     def _check_sectors(self):
         for lead in self:
             if lead.sector_id in lead.secondary_sector_ids:
-                raise exceptions.UserError(_(
+                raise exceptions.ValidationError(_(
                     'The secondary sectors must be different from the main '
                     'sector.'))
 
