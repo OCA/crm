@@ -16,6 +16,7 @@
                 <field name="categ_id" string="Type"/>
                 <field name="date_deadline" invisible="1"/>
                 <field name="date_closed" invisible="1"/>
+                <field name="company_id" groups="base.group_multi_company"/>
             </tree>
         </field>
     </record>
@@ -32,6 +33,7 @@
                     <group>
                         <field name="name"/>
                         <field name="date"/>
+                        <field name="company_id" groups="base.group_multi_company"/>
                     </group>
                     <group colspan="4" col="4"  groups="base.group_user">
                         <field name="priority" widget="priority"/>
