@@ -5,7 +5,7 @@
 
 {
     'name': 'Claims Management',
-    'version': '11.0.2.0.0',
+    'version': '11.0.2.1.0',
     'category': 'Customer Relationship Management',
     'author': 'Odoo S.A., '
               'Tecnativa, '
@@ -23,6 +23,7 @@
         'views/res_partner_views.xml',
         'views/crm_claim_menu.xml',
         'security/ir.model.access.csv',
+        'security/crm_claim_security.xml',
         'report/crm_claim_report_view.xml',
         'data/crm_claim_data.xml',
     ],
