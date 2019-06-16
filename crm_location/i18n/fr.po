@@ -19,8 +19,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. module: crm_location
-#: model:ir.ui.view,arch_db:crm_location.crm_case_form_view_leads
-#: model:ir.ui.view,arch_db:crm_location.crm_case_form_view_oppor
+#: model_terms:ir.ui.view,arch_db:crm_location.crm_case_form_view_leads
+#: model_terms:ir.ui.view,arch_db:crm_location.crm_case_form_view_oppor
 msgid "City completion"
 msgstr ""
 
@@ -30,11 +30,11 @@ msgid "Lead/Opportunity"
 msgstr "Piste/Opportunité"
 
 #. module: crm_location
-#: model:ir.model.fields,field_description:crm_location.field_crm_lead_location_id
+#: model:ir.model.fields,field_description:crm_location.field_crm_lead__location_id
 msgid "Location"
 msgstr "Emplacement"
 
 #. module: crm_location
-#: model:ir.model.fields,help:crm_location.field_crm_lead_location_id
+#: model:ir.model.fields,help:crm_location.field_crm_lead__location_id
 msgid "Use the city name or the zip code to search the location"
 msgstr ""
