@@ -20,10 +20,10 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #. module: crm_industry
-#: model:ir.ui.view,arch_db:crm_industry.crm_case_form_view_leads
-#: model:ir.ui.view,arch_db:crm_industry.crm_case_form_view_oppor
-#: model:ir.ui.view,arch_db:crm_industry.view_crm_case_leads_filter
-#: model:ir.ui.view,arch_db:crm_industry.view_crm_case_opportunities_filter
+#: model_terms:ir.ui.view,arch_db:crm_industry.crm_case_form_view_leads
+#: model_terms:ir.ui.view,arch_db:crm_industry.crm_case_form_view_oppor
+#: model_terms:ir.ui.view,arch_db:crm_industry.view_crm_case_leads_filter
+#: model_terms:ir.ui.view,arch_db:crm_industry.view_crm_case_opportunities_filter
 msgid "Industry"
 msgstr ""
 
@@ -33,12 +33,12 @@ msgid "Lead/Opportunity"
 msgstr "Aday/Fırsat"
 
 #. module: crm_industry
-#: model:ir.model.fields,field_description:crm_industry.field_crm_lead_industry_id
+#: model:ir.model.fields,field_description:crm_industry.field_crm_lead__industry_id
 msgid "Main Industry"
 msgstr ""
 
 #. module: crm_industry
-#: model:ir.model.fields,field_description:crm_industry.field_crm_lead_secondary_industry_ids
+#: model:ir.model.fields,field_description:crm_industry.field_crm_lead__secondary_industry_ids
 #, fuzzy
 msgid "Secondary Industries"
 msgstr "İkincil Sektörler"
