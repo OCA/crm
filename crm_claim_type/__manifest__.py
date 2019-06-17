@@ -1,4 +1,5 @@
-# © 2015 Vauxoo: Yanina Aular <yani@vauxoo.com>, Osval Reyes <osval@vauxoo.com>
+# Copyright 2015 Vauxoo: Yanina Aular <yani@vauxoo.com>,
+#                        Osval Reyes <osval@vauxoo.com>
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 {
@@ -8,9 +9,9 @@
     'author': 'Odoo Community Association (OCA),'
               'Vauxoo,'
               'Ursa Information Systems',
-    'website': 'https://github.com/OCA/crm/tree/10.0/crm_claim_type',
+    'website': 'https://github.com/OCA/crm',
     'license': 'AGPL-3',
-    'version': '11.0.1.0.0',
+    'version': '12.0.1.0.0',
     'depends': [
         'crm_claim',
     ],
