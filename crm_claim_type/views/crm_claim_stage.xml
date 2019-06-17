@@ -41,7 +41,7 @@
         <field name="arch" type="xml">
             <search string="Search Stages">
                 <group expand="0" string="Group By">
-                    <filter string="Claim Type" domain="[]"
+                    <filter string="Claim Type" domain="[]" name="claim_type"
                         context="{'group_by':'claim_type'}"/>
                 </group>
             </search>
