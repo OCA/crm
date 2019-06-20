@@ -1,12 +1,11 @@
-# -*- coding: utf-8 -*-
-# © 2015 Antiun Ingeniería, S.L.
+# Copyright 2015 Antiun Ingeniería, S.L.
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 {
     "name": "VAT in leads",
     "summary": "Add VAT field to leads",
-    "version": "8.0.1.1.1",
+    "version": "12.0.1.0.0",
     "category": "Customer Relationship Management",
-    "website": "http://www.antiun.com",
+    "website": "https://github.com/OCA/crm",
     "author": "Antiun Ingeniería S.L., Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "application": False,
