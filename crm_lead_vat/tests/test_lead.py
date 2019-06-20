@@ -1,8 +1,7 @@
-# -*- coding: utf-8 -*-
-# © 2015 Antiun Ingeniería, S.L.
+# Copyright 2015 Antiun Ingeniería, S.L.
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
-from openerp.tests.common import TransactionCase
+from odoo.tests.common import TransactionCase
 
 
 class LeadCase(TransactionCase):
@@ -24,8 +23,8 @@ class LeadCase(TransactionCase):
     def test_onchange_partner_id(self):
         """Lead gets VAT from partner when linked to it."""
         self.partner.vat = self.test_field
-        result = self.lead.on_change_partner_id(self.lead.partner_id.id)
-        self.assertNotIn("vat", result["value"])
+        result = self.lead._onchange_partner_id_values(self.lead.partner_id.id)
+        self.assertNotIn("vat", result)
         self.lead.partner_id = self.partner
-        result = self.lead.on_change_partner_id(self.lead.partner_id.id)
-        self.assertEqual(result["value"]["vat"], self.test_field)
+        result = self.lead._onchange_partner_id_values(self.lead.partner_id.id)
+        self.assertEqual(result["vat"], self.test_field)
