@@ -1,32 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
-<data>
-
+<odoo>
     <record model="ir.ui.view" id="form_view">
-        <field name="name">Add VAT to lead</field>
         <field name="model">crm.lead</field>
         <field name="inherit_id" ref="crm.crm_case_form_view_leads"/>
         <field name="arch" type="xml">
-            <data>
-                <xpath expr="//field[@name='partner_id']" position="after">
-                    <field name="vat"/>
-                </xpath>
-            </data>
+            <field name="partner_id" position="after">
+                <field name="vat"/>
+            </field>
         </field>
     </record>
 
     <record model="ir.ui.view" id="opportunity_form_view">
-        <field name="name">Add VAT to opportunity</field>
         <field name="model">crm.lead</field>
         <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
         <field name="arch" type="xml">
-            <data>
-                <xpath expr="//field[@name='partner_id']" position="after">
-                    <field name="vat"/>
-                </xpath>
-            </data>
+            <field name="partner_id" position="after">
+                <field name="vat"/>
+            </field>
         </field>
     </record>
-
-</data>
-</openerp>
+</odoo>
