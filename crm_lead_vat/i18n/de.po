@@ -25,12 +25,12 @@ msgid "Lead/Opportunity"
 msgstr "Lead/Chance"
 
 #. module: crm_lead_vat
-#: field:crm.lead,vat:0
+#: model:ir.model.fields,field_description:crm_lead_vat.field_crm_lead__vat
 msgid "TIN"
 msgstr "USt-ID:"
 
 #. module: crm_lead_vat
-#: help:crm.lead,vat:0
+#: model:ir.model.fields,help:crm_lead_vat.field_crm_lead__vat
 msgid "Tax Identification Number. The first 2 characters are the country code."
 msgstr ""
 "Steueridentifikationsnummer. Die ersten zwei Zeichen stellen den "
