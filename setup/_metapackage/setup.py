@@ -22,6 +22,7 @@ setuptools.setup(
         'odoo11-addon-crm_phonecall_planner',
         'odoo11-addon-crm_phonecall_summary_predefined',
         'odoo11-addon-crm_sale_marketing',
+        'odoo11-addon-crm_stage_type',
         'odoo11-addon-marketing_crm_partner',
     ],
     classifiers=[
