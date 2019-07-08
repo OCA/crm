@@ -54,7 +54,6 @@ class CrmPhonecall(models.Model):
          ('done', 'Held')
          ],
         string='Status',
-        readonly=True,
         track_visibility='onchange',
         default='open',
         help='The status is set to Confirmed, when a case is created.\n'
