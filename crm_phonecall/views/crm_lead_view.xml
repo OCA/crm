@@ -7,10 +7,9 @@
         <field name="inherit_id" ref="crm.crm_case_form_view_leads"/>
         <field name="arch" type="xml">
             <xpath expr="//div[@name='button_box']" position="inside">
-                <button class="oe_inline oe_stat_button" type="action"
-                    name="%(crm_phonecall.crm_case_categ_phone_incoming0)d"
-                    icon="fa-phone"
-                    context="{'default_opportunity_id': active_id, 'search_default_opportunity_id': active_id, 'default_partner_id': partner_id, 'default_duration': 1.0}">
+                <button class="oe_inline oe_stat_button" type="object"
+                    name="button_open_phonecall"
+                    icon="fa-phone">
                     <field string="Calls" name="phonecall_count" widget="statinfo"/>
                 </button>
             </xpath>
@@ -22,10 +21,9 @@
         <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
         <field name="arch" type="xml">
             <xpath expr="//div[@name='button_box']" position="inside">
-                <button class="oe_inline oe_stat_button" type="action"
-                    name="%(crm_phonecall.crm_case_categ_phone_incoming0)d"
-                    icon="fa-phone"
-                    context="{'default_opportunity_id': active_id, 'search_default_opportunity_id': active_id, 'default_partner_id': partner_id, 'default_duration': 1.0}">
+                <button class="oe_inline oe_stat_button" type="object"
+                    name="button_open_phonecall"
+                    icon="fa-phone">
                     <field string="Calls" name="phonecall_count" widget="statinfo"/>
                 </button>
             </xpath>

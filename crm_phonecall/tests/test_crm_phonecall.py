@@ -126,3 +126,13 @@ class TestCrmPhoneCall(common.SavepointCase):
             'crm_phonecall', 'view_crm_case_phonecalls_filter')
         self.assertEqual(result['search_view_id'], search_view[1])
         self.assertNotEqual(result['res_id'], self.phonecall1.id)
+
+    def test_opportunity_open_phonecall(self):
+        action_dict = self.opportunity2.button_open_phonecall()
+        action_context = action_dict.get('context')
+        self.assertEqual(action_context.get('default_opportunity_id'),
+                         self.opportunity2.id)
+        self.assertEqual(action_context.get('search_default_opportunity_id'),
+                         self.opportunity2.id)
+        self.assertEqual(action_context.get('default_partner_id'),
+                         self.opportunity2.partner_id.id)
