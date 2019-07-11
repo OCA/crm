@@ -576,7 +576,7 @@ msgid "Phone"
 msgstr "Telefon"
 
 #. module: crm_phonecall
-#: code:addons/crm_phonecall/models/crm_phonecall.py:201
+#: code:addons/crm_phonecall/models/crm_phonecall.py:200
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
 #, python-format
 msgid "Phone Call"
