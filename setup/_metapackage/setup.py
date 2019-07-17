@@ -20,6 +20,7 @@ setuptools.setup(
         'odoo12-addon-crm_location_nuts',
         'odoo12-addon-crm_phonecall',
         'odoo12-addon-crm_phonecall_summary_predefined',
+        'odoo12-addon-crm_stage_type',
     ],
     classifiers=[
         'Programming Language :: Python',
