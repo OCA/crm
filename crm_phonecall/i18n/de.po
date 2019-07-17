@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-06-01 02:38+0000\n"
-"PO-Revision-Date: 2019-07-11 14:43+0000\n"
+"PO-Revision-Date: 2019-07-17 12:43+0000\n"
 "Last-Translator: Maria Sparenberg <maria.sparenberg@gmx.net>\n"
 "Language-Team: German (https://www.transifex.com/oca/teams/23907/de/)\n"
 "Language: de\n"
@@ -409,7 +409,7 @@ msgstr "Haupt-Anhang"
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__medium_id
 msgid "Medium"
-msgstr ""
+msgstr "Medium"
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_inbound_phone_tree_view
@@ -520,7 +520,7 @@ msgstr "Dies ist die Anzahl von Nachrichten mit einem Übertragungsfehler."
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__message_unread_counter
 msgid "Number of unread messages"
-msgstr ""
+msgstr "Dies ist die Anzahl von ungelesenen Nachrichten."
 
 #. module: crm_phonecall
 #: model_terms:ir.actions.act_window,help:crm_phonecall.crm_case_categ_phone_outgoing0
@@ -573,7 +573,7 @@ msgid "Phone"
 msgstr "Telefon"
 
 #. module: crm_phonecall
-#: code:addons/crm_phonecall/models/crm_phonecall.py:201
+#: code:addons/crm_phonecall/models/crm_phonecall.py:200
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
 #, python-format
 msgid "Phone Call"
@@ -653,7 +653,7 @@ msgstr "Telefonat-Kategorien"
 #: model:ir.model.fields,field_description:crm_phonecall.field_res_partner__phonecall_count
 #: model:ir.model.fields,field_description:crm_phonecall.field_res_users__phonecall_count
 msgid "Phonecall Count"
-msgstr ""
+msgstr "Zähler für Telefonate"
 
 #. module: crm_phonecall
 #: model:ir.model,name:crm_phonecall.model_crm_phonecall2phonecall
@@ -748,7 +748,7 @@ msgstr "Menü für geplante Telefonate anzeigen"
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__source_id
 msgid "Source"
-msgstr ""
+msgstr "Quelle"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__state
@@ -828,12 +828,12 @@ msgstr "Nicht zugewiesen"
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_unread
 msgid "Unread Messages"
-msgstr ""
+msgstr "Ungelesene Nachrichte"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_unread_counter
 msgid "Unread Messages Counter"
-msgstr ""
+msgstr "Zähler für ungelesene Nachrichten"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__user_id
@@ -843,12 +843,12 @@ msgstr "Benutzer"
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__website_message_ids
 msgid "Website Messages"
-msgstr ""
+msgstr "Website-Nachrichten"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__website_message_ids
 msgid "Website communication history"
-msgstr ""
+msgstr "Website-Kommunikationshistorie"
 
 #. module: crm_phonecall
 #: model_terms:ir.actions.act_window,help:crm_phonecall.crm_case_categ_phone_outgoing0
