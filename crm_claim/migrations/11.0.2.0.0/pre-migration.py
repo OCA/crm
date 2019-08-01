@@ -20,7 +20,7 @@ def migrate(cr, version):
           %s,
           id,
           name,
-          user_id,
+          COALESCE(user_id, create_uid),
           COALESCE(date_action_next, now()),
           action_next,
           %s
