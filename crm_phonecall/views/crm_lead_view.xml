@@ -7,7 +7,7 @@
         <field name="inherit_id" ref="crm.crm_case_form_view_leads"/>
         <field name="arch" type="xml">
             <xpath expr="//div[@name='button_box']" position="inside">
-                <button class="oe_inline oe_stat_button" type="object"
+                <button class="oe_stat_button" type="object"
                     name="button_open_phonecall"
                     icon="fa-phone">
                     <field string="Calls" name="phonecall_count" widget="statinfo"/>
@@ -21,7 +21,7 @@
         <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
         <field name="arch" type="xml">
             <xpath expr="//div[@name='button_box']" position="inside">
-                <button class="oe_inline oe_stat_button" type="object"
+                <button class="oe_stat_button" type="object"
                     name="button_open_phonecall"
                     icon="fa-phone">
                     <field string="Calls" name="phonecall_count" widget="statinfo"/>
