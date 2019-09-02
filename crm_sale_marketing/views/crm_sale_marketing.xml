@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="crm_case_form_view_oppor_extended">
+        <field name="name">CRM - Opportunities - Quote extended</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="sale_crm.crm_case_form_view_oppor"/>
+        <field name="arch" type="xml">
+            <data>
+                <button name='%(sale_crm.sale_action_quotations_new)d' position='attributes'>
+                    <attribute name="context">{
+                        'search_default_partner_id': partner_id,
+                        'default_partner_id': partner_id,
+                        'default_team_id': team_id,
+                        'default_campaign_id': campaign_id,
+                        'default_medium_id': medium_id,
+                        'default_source_id': source_id,
+                        }
+                   </attribute>
+                </button>
+            </data>
+        </field>
+    </record>
+
+</odoo>

@@ -20,6 +20,7 @@ setuptools.setup(
         'odoo12-addon-crm_location_nuts',
         'odoo12-addon-crm_phonecall',
         'odoo12-addon-crm_phonecall_summary_predefined',
+        'odoo12-addon-crm_sale_marketing',
         'odoo12-addon-crm_stage_type',
         'odoo12-addon-marketing_crm_partner',
     ],
