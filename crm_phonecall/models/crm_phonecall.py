@@ -183,6 +183,9 @@ class CrmPhonecall(models.Model):
             self.partner_mobile = self.opportunity_id.mobile
             self.partner_id = self.opportunity_id.partner_id.id
             self.tag_ids = self.opportunity_id.tag_ids.ids
+            self.campaign_id = self.opportunity_id.campaign_id.id
+            self.medium_id = self.opportunity_id.medium_id.id
+            self.source_id = self.opportunity_id.source_id.id
 
     @api.multi
     def redirect_phonecall_view(self):
