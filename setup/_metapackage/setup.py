@@ -21,6 +21,7 @@ setuptools.setup(
         'odoo12-addon-crm_phonecall',
         'odoo12-addon-crm_phonecall_summary_predefined',
         'odoo12-addon-crm_stage_type',
+        'odoo12-addon-marketing_crm_partner',
     ],
     classifiers=[
         'Programming Language :: Python',
