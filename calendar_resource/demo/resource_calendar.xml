@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 LasLabs Inc.
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+
+    <record id="resource_calendar_1" model="resource.calendar">
+        <field name="name">Resource Demo Calendar</field>
+    </record>
+
+</odoo>

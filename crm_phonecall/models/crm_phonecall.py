@@ -13,7 +13,7 @@ class CrmPhonecall(models.Model):
     _name = "crm.phonecall"
     _description = "Phonecall"
     _order = "id desc"
-    _inherit = ['mail.thread']
+    _inherit = ['mail.thread', 'utm.mixin']
 
     date_action_last = fields.Datetime(
         string='Last Action',
@@ -136,7 +136,8 @@ class CrmPhonecall(models.Model):
     @api.multi
     def schedule_another_phonecall(self, schedule_time, call_summary,
                                    user_id=False, team_id=False,
-                                   tag_ids=False, action='schedule'):
+                                   tag_ids=False, action='schedule',
+                                   return_recordset=False):
         """
         action :('schedule','Schedule a call'), ('log','Log a call')
         """
@@ -159,6 +160,9 @@ class CrmPhonecall(models.Model):
                 'partner_mobile': call.partner_mobile,
                 'priority': call.priority,
                 'opportunity_id': call.opportunity_id.id or False,
+                'campaign_id': call.campaign_id.id,
+                'source_id': call.source_id.id,
+                'medium_id': call.medium_id.id,
             }
             if tag_ids:
                 values.update({'tag_ids': [(6, 0, [tag_ids])]})
@@ -166,7 +170,10 @@ class CrmPhonecall(models.Model):
             if action == 'log':
                 call.write({'state': 'done'})
             phonecall_dict[call.id] = new_id
-        return phonecall_dict
+        if return_recordset:
+            return reduce(lambda x, y: x + y,  phonecall_dict.values())
+        else:
+            return phonecall_dict
 
     @api.onchange('opportunity_id')
     def on_change_opportunity(self):
@@ -230,6 +237,9 @@ class CrmPhonecall(models.Model):
                 'type': 'opportunity',
                 'phone': call.partner_phone or False,
                 'email_from': default_contact and default_contact.email,
+                'campaign_id': call.campaign_id.id,
+                'source_id': call.source_id.id,
+                'medium_id': call.medium_id.id,
                 'tag_ids': [(6, 0, call.tag_ids.ids)],
             })
             vals = {

@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
-# For copyright and license notices, see __openerp__.py file in root directory
+# For copyright and license notices, see __manifest__.py file in root directory
 ##############################################################################
 
 from . import models
-from openerp import SUPERUSER_ID
+from odoo import api, SUPERUSER_ID
 
 
 def create_code_equal_to_id(cr):
@@ -15,11 +15,12 @@ def create_code_equal_to_id(cr):
 
 
 def assign_old_sequences(cr, registry):
-    lead_obj = registry['crm.lead']
-    sequence_obj = registry['ir.sequence']
-    lead_ids = lead_obj.search(cr, SUPERUSER_ID, [], order="id")
-    for lead_id in lead_ids:
+    env = api.Environment(cr, SUPERUSER_ID, dict())
+    lead_obj = env['crm.lead']
+    sequence_obj = env['ir.sequence']
+    leads = lead_obj.search([], order="id")
+    for lead_id in leads.ids:
         cr.execute('UPDATE crm_lead '
-                   'SET code = \'%s\' '
-                   'WHERE id = %d;' %
-                   (sequence_obj.get(cr, SUPERUSER_ID, 'crm.lead'), lead_id))
+                   'SET code = %s '
+                   'WHERE id = %s;',
+                   (sequence_obj.next_by_code('crm.lead'), lead_id, ))

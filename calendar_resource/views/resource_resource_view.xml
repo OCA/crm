@@ -23,6 +23,12 @@
             <xpath expr="//form/group" position="inside">
                 <field name="note" />
             </xpath>
+            <xpath expr="//field[@name='time_efficiency']" position="after">
+                <field name="allowed_event_types"
+                       widget="many2many_tags"
+                       placeholder="Select Resources"
+                       class="oe_inline" />
+            </xpath>
         </field>
     </record>
 

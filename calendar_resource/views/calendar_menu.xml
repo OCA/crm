@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 LasLabs Inc.
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+
+    <menuitem id="resource.menu_resource_config"
+              name="Resources"
+              parent="calendar.mail_menu_calendar"
+              sequence="30"
+              />
+
+    <menuitem id="resource.menu_resource_calendar"
+              name="Working Times"
+              groups="group_resource_manager"
+              parent="resource.menu_resource_config"
+              action="resource.action_resource_calendar_form"
+              />
+
+    <menuitem id="calendar_menu"
+              name="Calendars"
+              parent="calendar.mail_menu_calendar"
+              sequence="40"
+              />
+
+    <menuitem id="calendar_event_menu"
+              name="Event Calendar"
+              parent="calendar_menu"
+              sequence="42"
+              action="calendar.action_calendar_event"
+              />
+
+</odoo>

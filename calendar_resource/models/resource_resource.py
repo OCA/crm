@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 # Copyright 2013 Savoir-faire Linux
+# Copyright 2017 Laslabs Inc.
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
-from openerp import fields, models
+from odoo import fields, models
 
 
 class ResourceResource(models.Model):
@@ -23,4 +24,9 @@ class ResourceResource(models.Model):
     event_ids = fields.Many2many(
         string='Calendar Events',
         comodel_name='calendar.event',
+    )
+    allowed_event_types = fields.Many2many(
+        string='Event Types',
+        comodel_name='calendar.event.type',
+        help='Event types this resource is allowed at.',
     )

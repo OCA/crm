@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2017 LasLabs Inc.
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+
+    <record id="resource_calendar_attendance_1" model="resource.calendar.attendance">
+        <field name="name">Interval 1</field>
+        <field name="dayofweek">1</field>
+        <field name="hour_from" eval="12" />
+        <field name="hour_to" eval="20" />
+        <field name="calendar_id" ref="resource_calendar_1" />
+    </record>
+
+    <record id="resource_calendar_attendance_2" model="resource.calendar.attendance">
+        <field name="name">Interval 2</field>
+        <field name="dayofweek">1</field>
+        <field name="hour_from" eval="20" />
+        <field name="hour_to" eval="23.9997" />
+        <field name="calendar_id" ref="resource_calendar_1" />
+    </record>
+
+    <record id="resource_calendar_attendance_3" model="resource.calendar.attendance">
+        <field name="name">Interval 3</field>
+        <field name="dayofweek">2</field>
+        <field name="hour_from" eval="5" />
+        <field name="hour_to" eval="11.5" />
+        <field name="calendar_id" ref="resource_calendar_1" />
+    </record>
+
+    <record id="resource_calendar_attendance_4" model="resource.calendar.attendance">
+        <field name="name">Interval 4</field>
+        <field name="dayofweek">1</field>
+        <field name="hour_from" eval="0" />
+        <field name="hour_to" eval="16" />
+        <field name="calendar_id" ref="resource_calendar_1" />
+    </record>
+
+    <record id="resource_calendar_attendance_5" model="resource.calendar.attendance">
+        <field name="name">Interval 5</field>
+        <field name="dayofweek">3</field>
+        <field name="hour_from" eval="9" />
+        <field name="hour_to" eval="23.984" />
+        <field name="calendar_id" ref="resource_calendar_1" />
+    </record>
+
+    <record id="resource_calendar_attendance_6" model="resource.calendar.attendance">
+        <field name="name">Interval 6</field>
+        <field name="dayofweek">2</field>
+        <field name="hour_from" eval="0" />
+        <field name="hour_to" eval="16" />
+        <field name="calendar_id" ref="resource_calendar_1" />
+    </record>
+
+</odoo>

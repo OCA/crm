@@ -16,8 +16,7 @@ Configuration
 To configure the possible summary options, activate the developer mode and go
 to:
 
-* Go to *Sales > Configuration > Sales & Opportunities > Phone Calls >
-Summaries*.
+* Go to *Sales > Configuration > Sales & Opportunities > Phone Calls > Summaries*.
 
 Usage
 =====
