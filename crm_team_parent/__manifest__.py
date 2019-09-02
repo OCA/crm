@@ -8,7 +8,7 @@
     "version": "12.0.1.0.0",
     "license": "AGPL-3",
     "author": "ACSONE SA/NV,Odoo Community Association (OCA)",
-    "website": "https://github.com/acsone/crm",
+    "website": "https://github.com/OCA/crm",
     "depends": ["sales_team"],
     "data": ["views/crm_team.xml"],
     "demo": [],
