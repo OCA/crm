@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 # Copyright 2019 Camptocamp (https://www.camptocamp.com)
+# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
 {
     'name': 'Street3 in lead addresses',
@@ -10,7 +10,7 @@
     'category': 'Customer Relationship Management',
     'complexity': 'easy',
     'depends': ['partner_address_street3', 'crm'],
-    'website': 'http://www.camptocamp.com',
+    'website': 'https://github.com/OCA/crm',
     'data': ['view/crm_lead_view.xml'],
     'installable': True,
     'auto_install': False,
