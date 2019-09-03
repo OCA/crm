@@ -1,0 +1,114 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* crm_lead_partner_role
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: crm_lead_partner_role
+#: model:ir.model,name:crm_lead_partner_role.model_crm_role
+msgid "CRM Role"
+msgstr ""
+
+#. module: crm_lead_partner_role
+#: model:ir.model.fields,field_description:crm_lead_partner_role.field_crm_partner_role_create_uid
+#: model:ir.model.fields,field_description:crm_lead_partner_role.field_crm_role_create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: crm_lead_partner_role
+#: model:ir.model.fields,field_description:crm_lead_partner_role.field_crm_partner_role_create_date
+#: model:ir.model.fields,field_description:crm_lead_partner_role.field_crm_role_create_date
+msgid "Created on"
+msgstr ""
+
+#. module: crm_lead_partner_role
+#: model:ir.model.fields,field_description:crm_lead_partner_role.field_crm_partner_role_crm_lead_id
+msgid "Crm lead id"
+msgstr ""
+
+#. module: crm_lead_partner_role
+#: model:ir.model.fields,field_description:crm_lead_partner_role.field_crm_partner_role_display_name
+#: model:ir.model.fields,field_description:crm_lead_partner_role.field_crm_role_display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: crm_lead_partner_role
+#: model:ir.model.fields,field_description:crm_lead_partner_role.field_crm_partner_role_id
+#: model:ir.model.fields,field_description:crm_lead_partner_role.field_crm_role_id
+msgid "ID"
+msgstr ""
+
+#. module: crm_lead_partner_role
+#: model:ir.model.fields,field_description:crm_lead_partner_role.field_crm_partner_role___last_update
+#: model:ir.model.fields,field_description:crm_lead_partner_role.field_crm_role___last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: crm_lead_partner_role
+#: model:ir.model.fields,field_description:crm_lead_partner_role.field_crm_partner_role_write_uid
+#: model:ir.model.fields,field_description:crm_lead_partner_role.field_crm_role_write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: crm_lead_partner_role
+#: model:ir.model.fields,field_description:crm_lead_partner_role.field_crm_partner_role_write_date
+#: model:ir.model.fields,field_description:crm_lead_partner_role.field_crm_role_write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: crm_lead_partner_role
+#: model:ir.model,name:crm_lead_partner_role.model_crm_partner_role
+msgid "Lead partners and roles"
+msgstr ""
+
+#. module: crm_lead_partner_role
+#: model:ir.model,name:crm_lead_partner_role.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr ""
+
+#. module: crm_lead_partner_role
+#: model:ir.model.fields,field_description:crm_lead_partner_role.field_crm_role_name
+msgid "Name"
+msgstr ""
+
+#. module: crm_lead_partner_role
+#: model:ir.model.fields,field_description:crm_lead_partner_role.field_crm_partner_role_role_partner_id
+msgid "Partner"
+msgstr ""
+
+#. module: crm_lead_partner_role
+#: model:ir.model.fields,field_description:crm_lead_partner_role.field_crm_lead_partner_role_ids
+msgid "Partner role ids"
+msgstr ""
+
+#. module: crm_lead_partner_role
+#: model:ir.model.fields,help:crm_lead_partner_role.field_crm_lead_partner_role_ids
+msgid "Partners involved on this lead and their roles."
+msgstr ""
+
+#. module: crm_lead_partner_role
+#: model:ir.ui.view,arch_db:crm_lead_partner_role.crm_case_form_view_leads_inherit
+#: model:ir.ui.view,arch_db:crm_lead_partner_role.crm_case_form_view_oppor_inherit
+msgid "Related people"
+msgstr ""
+
+#. module: crm_lead_partner_role
+#: model:ir.model.fields,field_description:crm_lead_partner_role.field_crm_partner_role_role_id
+msgid "Role"
+msgstr ""
+
+#. module: crm_lead_partner_role
+#: model:ir.actions.act_window,name:crm_lead_partner_role.crm_role_action
+#: model:ir.ui.menu,name:crm_lead_partner_role.menu_action_crm_role
+msgid "Roles"
+msgstr ""
+

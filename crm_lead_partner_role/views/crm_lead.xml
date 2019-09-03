@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="crm_case_form_view_leads_inherit" model="ir.ui.view">
+        <field name="name">crm.lead.form.lead.inherit</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_form_view_leads" />
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page name="related_people" string="Related people">
+                    <field name="partner_role_ids" widget="one2many_list" context="{'default_crm_lead_id': active_id}" >
+                        <tree editable="bottom">
+                            <field name="role_partner_id" />
+                            <field name="role_id" />
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+    <record id="crm_case_form_view_oppor_inherit" model="ir.ui.view">
+        <field name="name">crm.lead.form.opportunity</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_form_view_oppor" />
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page name="related_people" string="Related people">
+                    <field name="partner_role_ids" widget="one2many_list" context="{'default_crm_lead_id': active_id}">
+                        <tree editable="bottom">
+                            <field name="role_partner_id" />
+                            <field name="role_id" />
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

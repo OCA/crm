@@ -274,8 +274,7 @@ msgid "Held"
 msgstr ""
 
 #. module: crm_phonecall
-#: selection:crm.phonecall,priority:0
-#: selection:crm.phonecall.report,priority:0
+#: selection:crm.phonecall,priority:0 selection:crm.phonecall.report,priority:0
 msgid "High"
 msgstr ""
 
@@ -340,8 +339,7 @@ msgid "Logged Calls"
 msgstr ""
 
 #. module: crm_phonecall
-#: selection:crm.phonecall,priority:0
-#: selection:crm.phonecall.report,priority:0
+#: selection:crm.phonecall,priority:0 selection:crm.phonecall.report,priority:0
 msgid "Low"
 msgstr ""
 
@@ -397,8 +395,7 @@ msgid "Next Action"
 msgstr ""
 
 #. module: crm_phonecall
-#: selection:crm.phonecall,priority:0
-#: selection:crm.phonecall.report,priority:0
+#: selection:crm.phonecall,priority:0 selection:crm.phonecall.report,priority:0
 msgid "Normal"
 msgstr ""
 
@@ -469,7 +466,7 @@ msgid "Phone"
 msgstr ""
 
 #. module: crm_phonecall
-#: code:addons/crm_phonecall/models/crm_phonecall.py:200
+#: code:addons/crm_phonecall/models/crm_phonecall.py:203
 #: model:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
 #, python-format
 msgid "Phone Call"
