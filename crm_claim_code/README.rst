@@ -41,6 +41,9 @@ Contributors
 * Oihane Crucelaegui <oihanecrucelaegi@avanzosc.es>
 * Alfredo de la Fuente <alfredodelafuente@avanzosc.es>
 * Vicent Cubells <vicent.cubells@tecnativa.com>
+* `RGB Consulting <https://rgbconsulting.com>`_:
+
+  * Domantas Sidorenkovas
 
 Maintainer
 ----------

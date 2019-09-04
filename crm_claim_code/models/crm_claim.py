@@ -9,6 +9,7 @@ from odoo import api, fields, models
 
 class CrmClaim(models.Model):
     _inherit = "crm.claim"
+    _rec_name = 'display_name'
 
     code = fields.Char(
         string='Claim Number',
@@ -16,6 +17,10 @@ class CrmClaim(models.Model):
         default="/",
         readonly=True,
         copy=False,
+    )
+    display_name = fields.Char(
+        compute='compute_display_name',
+        store=True
     )
 
     _sql_constraints = [
@@ -28,3 +33,10 @@ class CrmClaim(models.Model):
         if values.get('code', '/') == '/':
             values['code'] = self.env['ir.sequence'].next_by_code('crm.claim')
         return super(CrmClaim, self).create(values)
+
+    @api.multi
+    @api.depends('name', 'code')
+    def compute_display_name(self):
+        for rec in self:
+            if rec.name and rec.code:
+                rec.display_name = u'[%s] %s' % (rec.code, rec.name)
