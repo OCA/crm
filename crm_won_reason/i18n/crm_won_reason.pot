@@ -1,0 +1,125 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* crm_won_reason
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-10 07:37+0000\n"
+"PO-Revision-Date: 2019-09-10 07:37+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: crm_won_reason
+#: model:ir.model.fields,field_description:crm_won_reason.field_crm_won_reason__active
+msgid "Active"
+msgstr ""
+
+#. module: crm_won_reason
+#: model_terms:ir.ui.view,arch_db:crm_won_reason.crm_lead_won_view_form
+msgid "Cancel"
+msgstr ""
+
+#. module: crm_won_reason
+#: model_terms:ir.ui.view,arch_db:crm_won_reason.crm_won_reason_view_form
+msgid "Channel"
+msgstr ""
+
+#. module: crm_won_reason
+#: model:ir.model.fields,field_description:crm_won_reason.field_crm_lead_won__create_uid
+#: model:ir.model.fields,field_description:crm_won_reason.field_crm_won_reason__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: crm_won_reason
+#: model:ir.model.fields,field_description:crm_won_reason.field_crm_lead_won__create_date
+#: model:ir.model.fields,field_description:crm_won_reason.field_crm_won_reason__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: crm_won_reason
+#: model_terms:ir.actions.act_window,help:crm_won_reason.crm_won_reason_action
+msgid "Define a new won reason"
+msgstr ""
+
+#. module: crm_won_reason
+#: model:ir.model.fields,field_description:crm_won_reason.field_crm_lead_won__display_name
+#: model:ir.model.fields,field_description:crm_won_reason.field_crm_won_reason__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: crm_won_reason
+#: model:ir.model,name:crm_won_reason.model_crm_lead_won
+msgid "Get Won Reason"
+msgstr ""
+
+#. module: crm_won_reason
+#: model:ir.model.fields,field_description:crm_won_reason.field_crm_lead_won__id
+#: model:ir.model.fields,field_description:crm_won_reason.field_crm_won_reason__id
+msgid "ID"
+msgstr ""
+
+#. module: crm_won_reason
+#: model:ir.model.fields,field_description:crm_won_reason.field_crm_lead_won____last_update
+#: model:ir.model.fields,field_description:crm_won_reason.field_crm_won_reason____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: crm_won_reason
+#: model:ir.model.fields,field_description:crm_won_reason.field_crm_lead_won__write_uid
+#: model:ir.model.fields,field_description:crm_won_reason.field_crm_won_reason__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: crm_won_reason
+#: model:ir.model.fields,field_description:crm_won_reason.field_crm_lead_won__write_date
+#: model:ir.model.fields,field_description:crm_won_reason.field_crm_won_reason__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: crm_won_reason
+#: model:ir.model,name:crm_won_reason.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr ""
+
+#. module: crm_won_reason
+#: model:ir.actions.server,name:crm_won_reason.action_mark_as_won
+msgid "Mark as won"
+msgstr ""
+
+#. module: crm_won_reason
+#: model:ir.model.fields,field_description:crm_won_reason.field_crm_won_reason__name
+msgid "Name"
+msgstr ""
+
+#. module: crm_won_reason
+#: model:ir.model,name:crm_won_reason.model_crm_won_reason
+msgid "Opp. Won Reason"
+msgstr ""
+
+#. module: crm_won_reason
+#: model_terms:ir.ui.view,arch_db:crm_won_reason.crm_lead_won_view_form
+msgid "Submit"
+msgstr ""
+
+#. module: crm_won_reason
+#: model_terms:ir.actions.act_window,help:crm_won_reason.crm_won_reason_action
+msgid "Use won reasons to explain why an opportunity is won."
+msgstr ""
+
+#. module: crm_won_reason
+#: model:ir.actions.act_window,name:crm_won_reason.crm_lead_won_action
+#: model:ir.actions.act_window,name:crm_won_reason.crm_won_reason_action
+#: model:ir.model.fields,field_description:crm_won_reason.field_crm_lead__won_reason
+#: model:ir.model.fields,field_description:crm_won_reason.field_crm_lead_won__won_reason_id
+#: model:ir.ui.menu,name:crm_won_reason.menu_crm_won_reason
+#: model_terms:ir.ui.view,arch_db:crm_won_reason.crm_lead_won_view_form
+#: model_terms:ir.ui.view,arch_db:crm_won_reason.view_crm_case_opportunities_filter_inherit
+msgid "Won Reason"
+msgstr ""
+

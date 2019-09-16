@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_crm_won_reason_manager,crm.won.reason.manager,model_crm_won_reason,sales_team.group_sale_manager,1,1,1,1
+access_crm_won_reason_salesman,crm.won.reason.salesman,model_crm_won_reason,sales_team.group_sale_salesman,1,0,0,0
+access_crm_won_reason_user,crm.won.reason.user,model_crm_won_reason,base.group_user,1,0,0,0

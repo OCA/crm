@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2019 RGB Consulting - Domantas Sidorenkovas
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="crm_won_reason_view_form" model="ir.ui.view">
+        <field name="name">crm.won.reason.form</field>
+        <field name="model">crm.won.reason</field>
+        <field name="arch" type="xml">
+            <form string="Channel">
+                <group>
+                    <field name="name"/>
+                    <field name="active"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="crm_won_reason_action" model="ir.actions.act_window">
+        <field name="name">Won Reason</field>
+        <field name="res_model">crm.won.reason</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Define a new won reason
+            </p>
+            <p>
+                Use won reasons to explain why an opportunity is won.
+            </p>
+        </field>
+    </record>
+
+    <menuitem
+            id="menu_crm_won_reason"
+            action="crm_won_reason_action"
+            parent="crm.menu_crm_config_lead"
+            sequence="7"/>
+</odoo>
