@@ -18,3 +18,9 @@ class Lead(models.Model):
                 'crm_won_reason.crm_lead_won_action').read()[0]
             return action
         return super(Lead, self).action_set_won_rainbowman()
+
+    @api.model
+    def _onchange_stage_id_values(self, stage_id):
+        res = super(Lead, self)._onchange_stage_id_values(stage_id)
+        res['won_reason'] = False
+        return res
