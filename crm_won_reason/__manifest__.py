@@ -7,6 +7,7 @@
     'depends': ['crm'],
     'author': "RGB Consulting,"
               "Odoo Community Association (OCA)",
+    "maintainers": ["admin-rgbconsulting"],
     'license': 'AGPL-3',
     'website': "https://github.com/OCA/crm",
     'data': [
