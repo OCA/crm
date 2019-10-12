@@ -4,5 +4,3 @@
 
 CRM addons for Odoo
 ===================
-
-
