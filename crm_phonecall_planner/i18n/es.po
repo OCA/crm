@@ -8,19 +8,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-13 03:59+0000\n"
-"PO-Revision-Date: 2019-02-04 13:50+0000\n"
+"POT-Creation-Date: 2019-10-25 16:20+0000\n"
+"PO-Revision-Date: 2019-10-25 18:22+0200\n"
 "Last-Translator: Marta Vázquez Rodríguez <vazrodmar@gmail.com>\n"
 "Language-Team: Spanish (https://www.transifex.com/oca/teams/23907/es/)\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.4\n"
+"X-Generator: Poedit 2.2.1\n"
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner_repeat_calls
+#: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner__repeat_calls
 msgid ""
 "Allow repeated calls for the same partner, campaign, medium and source "
 "combination?"
@@ -29,92 +29,102 @@ msgstr ""
 "medio y fuente?"
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_name
+#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__name
 msgid "Call Summary"
 msgstr "Resumen de la llamada"
 
 #. module: crm_phonecall_planner
-#: model:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
+#: model_terms:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
 msgid "Call details"
 msgstr "Detalles de la llamada"
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_duration
+#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__duration
 msgid "Call duration"
 msgstr "Duración de la llamada"
 
 #. module: crm_phonecall_planner
-#: model:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
+#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__campaign_id
+msgid "Campaign"
+msgstr "Campaña"
+
+#. module: crm_phonecall_planner
+#: model_terms:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
 msgid "Cancel"
 msgstr "Cancelar"
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_create_uid
+#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__create_uid
 msgid "Created by"
 msgstr "Creado por"
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_create_date
+#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__create_date
 msgid "Created on"
 msgstr "Creado el"
 
 #. module: crm_phonecall_planner
-#: model:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
+#: model_terms:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
 msgid "Criteria"
 msgstr "Criterios"
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_days_gap
+#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__days_gap
 msgid "Days Gap"
 msgstr "Días de separación"
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_display_name
+#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__display_name
 msgid "Display Name"
 msgstr "Nombre a mostrar"
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_end
+#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__end
 msgid "End"
 msgstr "Fin"
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner_res_partner_domain
+#: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner__res_partner_domain
 msgid "Filter the parters that will get a scheduled call."
 msgstr "Filtrar los contactos a los que se les programará alguna llamada."
 
 #. module: crm_phonecall_planner
-#: model:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
+#: model_terms:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
 msgid "Generate planning"
 msgstr "Generar planificación"
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_id
+#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__id
 msgid "ID"
 msgstr "ID"
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner___last_update
+#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner____last_update
 msgid "Last Modified on"
 msgstr "Última modificación en"
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_write_uid
+#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__write_uid
 msgid "Last Updated by"
 msgstr "Última modificación por"
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_write_date
+#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__write_date
 msgid "Last Updated on"
 msgstr "Última actualización en"
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner_duration
+#: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner__duration
 msgid "Leave this free time between phone calls."
 msgstr "Dejar este tiempo libre entre llamadas telefónicas."
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_res_partner_domain
+#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__medium_id
+msgid "Medium"
+msgstr "Medio"
+
+#. module: crm_phonecall_planner
+#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__res_partner_domain
 msgid "Partners filter"
 msgstr "Filtro para contactos"
 
@@ -124,7 +134,7 @@ msgid "Phonecall planner"
 msgstr "Planificador de llamadas telefónicas"
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_planned_calls
+#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__planned_calls
 msgid "Planned Calls"
 msgstr "Llamadas planificadas"
 
@@ -135,27 +145,27 @@ msgid "Planner"
 msgstr "Planificador"
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_repeat_calls
+#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__repeat_calls
 msgid "Repeat Calls"
 msgstr "Repetir llamadas"
 
 #. module: crm_phonecall_planner
-#: model:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
+#: model_terms:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
 msgid "Repetition"
 msgstr "Repetición"
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_user_id
+#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__user_id
 msgid "Responsible"
 msgstr "Responsable"
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_team_id
+#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__team_id
 msgid "Sales Team"
 msgstr "Equipo de ventas"
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner_start
+#: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner__start
 msgid ""
 "Schedule calls from this moment. The time you select will be used as the "
 "plan starting time for each day in the range."
@@ -164,7 +174,7 @@ msgstr ""
 "como hora de comienzo de la planificación para cada día dentro del rango."
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner_end
+#: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner__end
 msgid ""
 "Schedule calls until this moment. The time you select will be used as the "
 "plan ending time for each day in the range."
@@ -173,17 +183,22 @@ msgstr ""
 "como hora de finalización de la planificación para cada día dentro del rango."
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner_days_gap
+#: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner__days_gap
 msgid "Schedule one call each X days to the same partner."
 msgstr "Planificar una llamada cada X días para el mismo contacto."
 
 #. module: crm_phonecall_planner
-#: model:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
+#: model_terms:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
 msgid "Scheduling"
 msgstr "Horarios"
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_start
+#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__source_id
+msgid "Source"
+msgstr "Fuente"
+
+#. module: crm_phonecall_planner
+#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__start
 msgid "Start"
 msgstr "Comienzo"
 
@@ -194,39 +209,46 @@ msgid "Starting date must be less than ending date"
 msgstr "La fecha de comienzo debe ser inferior a la de finalización"
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_tag_ids
+#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__tag_ids
 msgid "Tags"
 msgstr "Etiquetas"
 
 #. module: crm_phonecall_planner
-#: model:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
+#: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner__campaign_id
+#, fuzzy
+#| msgid ""
+#| "This is a name that helps you keep track of your different campaign "
+#| "efforts Ex: Fall_Drive, Christmas_Special"
+msgid ""
+"This is a name that helps you keep track of your different campaign efforts, "
+"e.g. Fall_Drive, Christmas_Special"
+msgstr ""
+"Éste es un nombre que facilita la búsqueda de los diferentes esfuerzos de "
+"campañas. Por ejemplo: campaña de Navidad, rebajas de otoño"
+
+#. module: crm_phonecall_planner
+#: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner__medium_id
+#, fuzzy
+#| msgid "This is the method of delivery. Ex: Postcard, Email, or Banner Ad"
+msgid "This is the method of delivery, e.g. Postcard, Email, or Banner Ad"
+msgstr ""
+"Este es el método de envío. Por ejemplo: carta postal, correo electrónico, "
+"publicidad web"
+
+#. module: crm_phonecall_planner
+#: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner__source_id
+#, fuzzy
+#| msgid ""
+#| "This is the source of the link Ex: Search Engine, another domain, or name "
+#| "of email list"
+msgid ""
+"This is the source of the link, e.g. Search Engine, another domain, or name "
+"of email list"
+msgstr ""
+"Ésta es la fuente del enlace. Por ejemplo: motor de búsqueda, otro dominio o "
+"nombre de una lista de correo"
+
+#. module: crm_phonecall_planner
+#: model_terms:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
 msgid "Times"
 msgstr "Horas"
-
-#~ msgid "Campaign"
-#~ msgstr "Campaña"
-
-#~ msgid "Medium"
-#~ msgstr "Medio"
-
-#~ msgid "Source"
-#~ msgstr "Fuente"
-
-#~ msgid ""
-#~ "This is a name that helps you keep track of your different campaign "
-#~ "efforts Ex: Fall_Drive, Christmas_Special"
-#~ msgstr ""
-#~ "Éste es un nombre que facilita la búsqueda de los diferentes esfuerzos de "
-#~ "campañas. Por ejemplo: campaña de Navidad, rebajas de otoño"
-
-#~ msgid "This is the method of delivery. Ex: Postcard, Email, or Banner Ad"
-#~ msgstr ""
-#~ "Este es el método de envío. Por ejemplo: carta postal, correo "
-#~ "electrónico, publicidad web"
-
-#~ msgid ""
-#~ "This is the source of the link Ex: Search Engine, another domain, or name "
-#~ "of email list"
-#~ msgstr ""
-#~ "Ésta es la fuente del enlace. Por ejemplo: motor de búsqueda, otro "
-#~ "dominio o nombre de una lista de correo"

@@ -2,7 +2,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from __future__ import division
-from datetime import timedelta
+from datetime import datetime, timedelta
 from odoo import fields
 from odoo.exceptions import ValidationError
 from odoo.tests.common import SavepointCase
@@ -82,8 +82,8 @@ class PlannerCase(SavepointCase):
         })
         self.assertEqual(0, float_compare(wizard.duration, 7 / 60, 6))
         self.assertLessEqual(wizard.start, fields.Datetime.now())
-        start = fields.Datetime.from_string(wizard.start)
-        end = fields.Datetime.from_string(wizard.end)
+        start = wizard.start
+        end = wizard.end
         self.assertEqual(end, start + timedelta(days=30, hours=8))
 
     def test_start_before_end(self):
@@ -98,9 +98,9 @@ class PlannerCase(SavepointCase):
         """The planner creates one call per partner."""
         self.wizard.action_accept()
         expected_dates = {
-            "2017-09-25 09:00:00",
-            "2017-09-25 10:00:00",
-            "2017-09-26 09:00:00",
+            datetime(2017, 9, 25, 9),
+            datetime(2017, 9, 25, 10),
+            datetime(2017, 9, 26, 9),
         }
         real_dates = self.wizard.planned_calls.mapped("date")
         self.assertEqual(expected_dates, set(real_dates))
@@ -118,19 +118,19 @@ class PlannerCase(SavepointCase):
         })
         self.wizard.action_accept()
         expected_dates = {
-            '2017-09-25 12:00:00',
-            '2017-09-25 15:00:00',
-            '2017-09-26 12:00:00',
-            '2017-10-02 12:00:00',
-            '2017-10-02 15:00:00',
-            '2017-10-03 12:00:00',
-            '2017-10-03 15:00:00',
-            '2017-10-09 12:00:00',
-            '2017-10-09 15:00:00',
-            '2017-10-10 12:00:00',
-            '2017-10-16 12:00:00',
-            '2017-10-16 15:00:00',
-            '2017-10-17 12:00:00',
+            datetime(2017, 9, 25, 12),
+            datetime(2017, 9, 25, 15),
+            datetime(2017, 9, 26, 12),
+            datetime(2017, 10, 2, 12),
+            datetime(2017, 10, 2, 15),
+            datetime(2017, 10, 3, 12),
+            datetime(2017, 10, 3, 15),
+            datetime(2017, 10, 9, 12),
+            datetime(2017, 10, 9, 15),
+            datetime(2017, 10, 10, 12),
+            datetime(2017, 10, 16, 12),
+            datetime(2017, 10, 16, 15),
+            datetime(2017, 10, 17, 12),
         }
         real_dates = self.wizard.planned_calls.mapped("date")
         self.assertEqual(expected_dates, set(real_dates))
