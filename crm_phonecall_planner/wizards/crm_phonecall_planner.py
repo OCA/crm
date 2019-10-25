@@ -75,7 +75,7 @@ class CrmPhonecallPlan(models.TransientModel):
 
     @api.model
     def _default_start(self):
-        return datetime.now()
+        return fields.Datetime.now()
 
     @api.model
     def _default_end(self):
@@ -95,8 +95,8 @@ class CrmPhonecallPlan(models.TransientModel):
         Phonecall = self.env["crm.phonecall"]
         Partner = self.env["res.partner"]
         # Prepare all required time variables
-        start = fields.Datetime.from_string(self.start)
-        end = fields.Datetime.from_string(self.end)
+        start = self.start
+        end = self.end
         call_duration = timedelta(hours=self.duration)
         now = start - call_duration
         repetition_gap = timedelta(days=self.days_gap)
