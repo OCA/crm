@@ -17,7 +17,7 @@
                         <field name="tag_ids" widget="many2many_tags"/>
                     </group>
                     <group name="scheduling" string="Scheduling">
-                        <group name="criteria" string="Criteria">
+                        <group name="criteria" string="Criteria" colspan="4">
                             <field name="res_partner_domain" widget="domain" options='{"model": "res.partner"}'/>
                             <field name="campaign_id"/>
                             <field name="source_id"/>
