@@ -9,19 +9,20 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-14 05:51+0000\n"
-"PO-Revision-Date: 2017-12-14 05:51+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
+"PO-Revision-Date: 2019-10-27 15:33+0000\n"
+"Last-Translator: Sergio Zanchetta <primes2h@gmail.com>\n"
 "Language-Team: Italian (https://www.transifex.com/oca/teams/23907/it/)\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.8\n"
 
 #. module: crm_location_nuts
 #: model:ir.model,name:crm_location_nuts.model_crm_lead
 msgid "Lead/Opportunity"
-msgstr "Lead/Opportunità"
+msgstr "Contatto/Opportunità"
 
 #. module: crm_location_nuts
 #: model:ir.model.fields,field_description:crm_location_nuts.field_crm_lead__nuts1_id
@@ -30,7 +31,7 @@ msgstr "Lead/Opportunità"
 #: model_terms:ir.ui.view,arch_db:crm_location_nuts.view_crm_case_leads_filter
 #: model_terms:ir.ui.view,arch_db:crm_location_nuts.view_crm_case_opportunities_filter
 msgid "NUTS L1"
-msgstr ""
+msgstr "Livello NUTS 1"
 
 #. module: crm_location_nuts
 #: model:ir.model.fields,field_description:crm_location_nuts.field_crm_lead__nuts2_id
@@ -39,7 +40,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:crm_location_nuts.view_crm_case_leads_filter
 #: model_terms:ir.ui.view,arch_db:crm_location_nuts.view_crm_case_opportunities_filter
 msgid "NUTS L2"
-msgstr ""
+msgstr "LIvello NUTS 2"
 
 #. module: crm_location_nuts
 #: model:ir.model.fields,field_description:crm_location_nuts.field_crm_lead__nuts3_id
@@ -48,7 +49,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:crm_location_nuts.view_crm_case_leads_filter
 #: model_terms:ir.ui.view,arch_db:crm_location_nuts.view_crm_case_opportunities_filter
 msgid "NUTS L3"
-msgstr ""
+msgstr "Livello NUTS 3"
 
 #. module: crm_location_nuts
 #: model:ir.model.fields,field_description:crm_location_nuts.field_crm_lead__nuts4_id
@@ -57,4 +58,4 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:crm_location_nuts.view_crm_case_leads_filter
 #: model_terms:ir.ui.view,arch_db:crm_location_nuts.view_crm_case_opportunities_filter
 msgid "NUTS L4"
-msgstr ""
+msgstr "Livello NUTS 4"
