@@ -22,6 +22,7 @@ addon | version | summary
 [crm_lead_website](crm_lead_website/) | 10.0.1.0.0 | Add Website field to leads
 [crm_location](crm_location/) | 10.0.1.0.0 | CRM location
 [crm_location_nuts](crm_location_nuts/) | 10.0.1.0.0 | NUTS Regions in CRM
+[crm_mailchimp](crm_mailchimp/) | 10.0.1.0.0 | Manage your mailchimp audiences with Odoo
 [crm_meeting_commercial_partner](crm_meeting_commercial_partner/) | 10.0.1.0.0 | CRM Meeting Commercial Partner
 [crm_phonecall](crm_phonecall/) | 10.0.1.1.1 | CRM Phone Calls
 [crm_phonecall_summary_predefined](crm_phonecall_summary_predefined/) | 10.0.1.0.0 | Allows to choose from a defined summary list
