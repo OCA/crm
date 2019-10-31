@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="generator" content="Docutils 0.14: http://docutils.sourceforge.net/" />
+<meta name="generator" content="Docutils 0.15.1: http://docutils.sourceforge.net/" />
 <title>Mailchimp integration</title>
 <style type="text/css">
 
@@ -390,7 +390,9 @@ ul.auto-toc {
 <p>To configure this module, you need to:</p>
 <ol class="arabic simple">
 <li>go to <cite>Settings / Mailchimp / Settings</cite> and fill in your mailchimp credentials (this will import audiences)</li>
+<li>here, you’ll also find the URL to configure as webhook for mailchimp. For now, only unsubscribe is supported.</li>
 <li>go to <cite>Settings / Mailchimp / Audiences</cite> and review the merge fields in audiences. For every merge field, fill in python code that generates this field’s value (ie: for FNAME, you probably need partner.name)</li>
+<li>when you’re happy with your settings, you might want to activate the cronjob <cite>Push partner data to mailchimp</cite>, which will push partners to mailchimp periodically. It will only update partners changed in the last 24 hours, so in case you change the interval of the job, you need to adapt the arguments to the amount of seconds of your interval.</li>
 </ol>
 </div>
 <div class="section" id="usage">
