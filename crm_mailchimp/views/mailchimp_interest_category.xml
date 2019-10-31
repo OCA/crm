@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_mailchimp_interest_category_form" model="ir.ui.view">
+        <field name="model">mailchimp.interest.category</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="name" readonly="True" />
+                    <field name="group_ids" widget="many2many_tags" />
+                </group>
+                <field name="interest_ids" readonly="True">
+                    <tree delete="false" create="false" editable="bottom">
+                        <field name="name" />
+                    </tree>
+                </field>
+            </form>
+        </field>
+    </record>
+</odoo>

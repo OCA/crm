@@ -1,0 +1,8 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+access_mailchimp_list_subscriber,access_mailchimp_list,model_mailchimp_list,group_subscriber,1,0,0,0
+access_mailchimp_interest_subscriber,access_mailchimp_interest,model_mailchimp_interest,group_subscriber,1,0,0,0
+access_mailchimp_interest_category_subscriber,access_mailchimp_interest_category,model_mailchimp_interest_category,group_subscriber,1,0,0,0
+access_mailchimp_list,access_mailchimp_list,model_mailchimp_list,group_manager,1,1,1,1
+access_mailchimp_interest,access_mailchimp_interest,model_mailchimp_interest,group_manager,1,1,1,1
+access_mailchimp_interest_category,access_mailchimp_interest_category,model_mailchimp_interest_category,group_manager,1,1,1,1
+access_mailchimp_merge_field,access_mailchimp_merge_field,model_mailchimp_merge_field,group_manager,1,1,1,1

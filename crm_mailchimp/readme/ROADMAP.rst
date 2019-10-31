@@ -1,0 +1,3 @@
+- support tags
+- support more mailchimp hooks
+- support propagating deletions from Odoo to mailchimp

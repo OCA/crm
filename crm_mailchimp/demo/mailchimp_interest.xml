@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="interest_demo0" model="mailchimp.interest">
+        <field name="name">Interest 0</field>
+        <field name="category_id" ref="interest_category_demo" />
+        <field name="mailchimp_id">XXXXX</field>
+    </record>
+    <record id="interest_demo1" model="mailchimp.interest">
+        <field name="name">Interest 1</field>
+        <field name="category_id" ref="interest_category_demo" />
+        <field name="mailchimp_id">XXXXX</field>
+    </record>
+    <record id="interest_demo2" model="mailchimp.interest">
+        <field name="name">Interest 2</field>
+        <field name="category_id" ref="interest_category_demo" />
+        <field name="mailchimp_id">XXXXX</field>
+    </record>
+</odoo>
