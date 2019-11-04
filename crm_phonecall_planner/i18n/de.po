@@ -21,7 +21,7 @@ msgstr ""
 "X-Generator: Weblate 3.3\n"
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner_repeat_calls
+#: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner__repeat_calls
 msgid ""
 "Allow repeated calls for the same partner, campaign, medium and source "
 "combination?"
@@ -30,92 +30,102 @@ msgstr ""
 "Kampagne, Medium und Herkunft?"
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_name
+#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__name
 msgid "Call Summary"
 msgstr "Telefonat-Zusammenfassung"
 
 #. module: crm_phonecall_planner
-#: model:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
+#: model_terms:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
 msgid "Call details"
 msgstr "Telefonat-Details"
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_duration
+#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__duration
 msgid "Call duration"
 msgstr "Telefonatdauer"
 
 #. module: crm_phonecall_planner
-#: model:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
+#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__campaign_id
+msgid "Campaign"
+msgstr "Kampagne"
+
+#. module: crm_phonecall_planner
+#: model_terms:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
 msgid "Cancel"
 msgstr "Abbrechen"
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_create_uid
+#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__create_uid
 msgid "Created by"
 msgstr "Erstellt von"
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_create_date
+#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__create_date
 msgid "Created on"
 msgstr "Erstellt am"
 
 #. module: crm_phonecall_planner
-#: model:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
+#: model_terms:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
 msgid "Criteria"
 msgstr "Kriterien"
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_days_gap
+#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__days_gap
 msgid "Days Gap"
 msgstr "Tagverzögerung"
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_display_name
+#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__display_name
 msgid "Display Name"
 msgstr "Anzeigename"
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_end
+#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__end
 msgid "End"
 msgstr "Ende"
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner_res_partner_domain
+#: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner__res_partner_domain
 msgid "Filter the parters that will get a scheduled call."
 msgstr "Filtern Sie die Partner, die einen geplantes Anruf erhalten sollen."
 
 #. module: crm_phonecall_planner
-#: model:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
+#: model_terms:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
 msgid "Generate planning"
 msgstr "Planung erstellen"
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_id
+#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__id
 msgid "ID"
 msgstr "ID"
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner___last_update
+#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner____last_update
 msgid "Last Modified on"
 msgstr "Zuletzt geändert am"
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_write_uid
+#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__write_uid
 msgid "Last Updated by"
 msgstr "Zuletzt aktualisiert von"
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_write_date
+#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__write_date
 msgid "Last Updated on"
 msgstr "Zuletzt aktualisiert am"
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner_duration
+#: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner__duration
 msgid "Leave this free time between phone calls."
 msgstr "Lassen Sie eine gewisse Zeit zwischen Telefonaten vergehen."
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_res_partner_domain
+#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__medium_id
+msgid "Medium"
+msgstr "Mittel"
+
+#. module: crm_phonecall_planner
+#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__res_partner_domain
 msgid "Partners filter"
 msgstr "Partnerfilter"
 
@@ -125,7 +135,7 @@ msgid "Phonecall planner"
 msgstr "Telefonatplaner"
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_planned_calls
+#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__planned_calls
 msgid "Planned Calls"
 msgstr "Geplante Telefonate"
 
@@ -136,27 +146,27 @@ msgid "Planner"
 msgstr "Planer"
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_repeat_calls
+#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__repeat_calls
 msgid "Repeat Calls"
 msgstr "Anrufe wiederholen"
 
 #. module: crm_phonecall_planner
-#: model:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
+#: model_terms:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
 msgid "Repetition"
 msgstr "Wiederholung"
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_user_id
+#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__user_id
 msgid "Responsible"
 msgstr "Verantwortlich"
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_team_id
+#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__team_id
 msgid "Sales Team"
 msgstr "Verkaufsteam"
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner_start
+#: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner__start
 msgid ""
 "Schedule calls from this moment. The time you select will be used as the "
 "plan starting time for each day in the range."
@@ -165,7 +175,7 @@ msgstr ""
 "geplante Startzeit für jeden Tag in diesem Intervall verwendet."
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner_end
+#: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner__end
 msgid ""
 "Schedule calls until this moment. The time you select will be used as the "
 "plan ending time for each day in the range."
@@ -174,17 +184,22 @@ msgstr ""
 "als geplante Endzeit für jeden Tag in diesem Intervall verwendet."
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner_days_gap
+#: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner__days_gap
 msgid "Schedule one call each X days to the same partner."
 msgstr "Planen Sie einen Anruf alle X Tage für denselben Partner."
 
 #. module: crm_phonecall_planner
-#: model:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
+#: model_terms:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
 msgid "Scheduling"
 msgstr "Planung"
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_start
+#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__source_id
+msgid "Source"
+msgstr "Herkunft"
+
+#. module: crm_phonecall_planner
+#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__start
 msgid "Start"
 msgstr "Beginnen"
 
@@ -195,37 +210,44 @@ msgid "Starting date must be less than ending date"
 msgstr "Das Startdatum muss vor dem Enddatum liegen"
 
 #. module: crm_phonecall_planner
-#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner_tag_ids
+#: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__tag_ids
 msgid "Tags"
 msgstr "Schlagworte"
 
 #. module: crm_phonecall_planner
-#: model:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
+#: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner__campaign_id
+#, fuzzy
+#| msgid ""
+#| "This is a name that helps you keep track of your different campaign "
+#| "efforts Ex: Fall_Drive, Christmas_Special"
+msgid ""
+"This is a name that helps you keep track of your different campaign efforts, "
+"e.g. Fall_Drive, Christmas_Special"
+msgstr ""
+"Dies ist eine Bezeichnung, die Ihnen hilft die verschiedenen Kampagnen zu "
+"beobachten. Z.B. Herbsoffensive, Weihnachtsspecial."
+
+#. module: crm_phonecall_planner
+#: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner__medium_id
+#, fuzzy
+#| msgid "This is the method of delivery. Ex: Postcard, Email, or Banner Ad"
+msgid "This is the method of delivery, e.g. Postcard, Email, or Banner Ad"
+msgstr "Dies ist der Lieferweg, z. B. Postkarte, Email oder Plakatwerbung"
+
+#. module: crm_phonecall_planner
+#: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner__source_id
+#, fuzzy
+#| msgid ""
+#| "This is the source of the link Ex: Search Engine, another domain, or name "
+#| "of email list"
+msgid ""
+"This is the source of the link, e.g. Search Engine, another domain, or name "
+"of email list"
+msgstr ""
+"Dies ist der Ursprung der Verbindung, z. B. Suchmaschine, andere Domain oder "
+"Name aus Email-Liste"
+
+#. module: crm_phonecall_planner
+#: model_terms:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
 msgid "Times"
 msgstr "Zeiten"
-
-#~ msgid "Campaign"
-#~ msgstr "Kampagne"
-
-#~ msgid "Medium"
-#~ msgstr "Mittel"
-
-#~ msgid "Source"
-#~ msgstr "Herkunft"
-
-#~ msgid ""
-#~ "This is a name that helps you keep track of your different campaign "
-#~ "efforts Ex: Fall_Drive, Christmas_Special"
-#~ msgstr ""
-#~ "Dies ist eine Bezeichnung, die Ihnen hilft die verschiedenen Kampagnen zu "
-#~ "beobachten. Z.B. Herbsoffensive, Weihnachtsspecial."
-
-#~ msgid "This is the method of delivery. Ex: Postcard, Email, or Banner Ad"
-#~ msgstr "Dies ist der Lieferweg, z. B. Postkarte, Email oder Plakatwerbung"
-
-#~ msgid ""
-#~ "This is the source of the link Ex: Search Engine, another domain, or name "
-#~ "of email list"
-#~ msgstr ""
-#~ "Dies ist der Ursprung der Verbindung, z. B. Suchmaschine, andere Domain "
-#~ "oder Name aus Email-Liste"
