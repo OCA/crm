@@ -16,8 +16,8 @@ Usage
 To use this module, you need to:
 
 * Go to Lead, enter the marketing details. When the lead/opportunity is
-converted to quotation the module will automatically copy the marketing
-details from opportunity to the quotation.
+  converted to quotation the module will automatically copy the marketing
+  details from opportunity to the quotation.
 
 .. image:: https://odoo-community.org/website/image/ir.attachment/5784_f2813bd/datas
    :alt: Try me on Runbot
