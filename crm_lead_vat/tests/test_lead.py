@@ -17,7 +17,9 @@ class LeadCase(TransactionCase):
     def test_transfered_values(self):
         """Field gets transfered when creating partner."""
         self.lead.vat = self.test_field
-        self.lead.handle_partner_assignation()
+        partner_ids = self.lead.handle_partner_assignation()
+        for lead_id in partner_ids:
+            self.env["crm.lead"].browse(lead_id).partner_id = partner_ids[lead_id]
         self.assertEqual(self.lead.partner_id.vat, self.test_field)
 
     def test_onchange_partner_id(self):
