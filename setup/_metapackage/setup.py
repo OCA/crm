@@ -18,6 +18,7 @@ setuptools.setup(
         'odoo12-addon-crm_lead_vat',
         'odoo12-addon-crm_location',
         'odoo12-addon-crm_location_nuts',
+        'odoo12-addon-crm_meeting_commercial_partner',
         'odoo12-addon-crm_phonecall',
         'odoo12-addon-crm_phonecall_planner',
         'odoo12-addon-crm_phonecall_summary_predefined',
