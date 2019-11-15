@@ -21,7 +21,7 @@ class ActivityReport(models.Model):
     create_date = fields.Datetime('Create Date', readonly=True)
     date_closed = fields.Datetime('Closed Date', readonly=True)
     date_conversion = fields.Datetime('Conversion Date', readonly=True)
-    date_deadline = fields.Datetime('Deadline Date', readonly=True)
+    date_deadline = fields.Date('Deadline Date', readonly=True)
     date_open = fields.Datetime('Open Date', readonly=True)
     lost_reason = fields.Many2one('crm.lost.reason', 'Lost Reason',
                                   readonly=True)
