@@ -9,49 +9,46 @@ class CrmLeadLine(models.Model):
     _description = "Line in CRM Lead"
 
     @api.multi
-    @api.depends('price_unit', 'product_qty')
+    @api.depends("price_unit", "product_qty")
     def _compute_planned_revenue(self):
         for rec in self:
             rec.planned_revenue = rec.product_qty * rec.price_unit
 
     @api.multi
-    @api.depends('lead_id.probability', 'planned_revenue')
+    @api.depends("lead_id.probability", "planned_revenue")
     def _compute_expected_revenue(self):
         for rec in self:
-            if rec.lead_id and rec.lead_id.type != 'lead':
-                rec.expected_revenue = \
-                    rec.planned_revenue * rec.lead_id.probability * (1/100)
+            if rec.lead_id and rec.lead_id.type != "lead":
+                rec.expected_revenue = (
+                    rec.planned_revenue * rec.lead_id.probability * (1 / 100)
+                )
 
-    lead_id = fields.Many2one(
-        'crm.lead',
-        string='Lead')
-    name = fields.Char('Description', required=True, translate=True)
-    product_id = fields.Many2one("product.product",
-                                 string="Product",
-                                 index=True)
-    category_id = fields.Many2one('product.category',
-                                  string='Product Category',
-                                  index=True)
-    product_tmpl_id = fields.Many2one('product.template',
-                                      string='Product Template',
-                                      index=True)
-    product_qty = fields.Integer(string='Product Quantity',
-                                 default=1,
-                                 required=True)
-    uom_id = fields.Many2one('uom.uom',
-                             string='Unit of Measure',
-                             readonly=True)
-    price_unit = fields.Float(string='Price Unit')
-    planned_revenue = fields.Float(compute='_compute_planned_revenue',
-                                   string='Planned revenue',
-                                   compute_sudo=True,
-                                   store=True)
-    expected_revenue = fields.Float(compute='_compute_expected_revenue',
-                                    string='Expected revenue',
-                                    compute_sudo=True,
-                                    store=True)
+    lead_id = fields.Many2one("crm.lead", string="Lead")
+    name = fields.Char("Description", required=True, translate=True)
+    product_id = fields.Many2one("product.product", string="Product", index=True)
+    category_id = fields.Many2one(
+        "product.category", string="Product Category", index=True
+    )
+    product_tmpl_id = fields.Many2one(
+        "product.template", string="Product Template", index=True
+    )
+    product_qty = fields.Integer(string="Product Quantity", default=1, required=True)
+    uom_id = fields.Many2one("uom.uom", string="Unit of Measure", readonly=True)
+    price_unit = fields.Float(string="Price Unit")
+    planned_revenue = fields.Float(
+        compute="_compute_planned_revenue",
+        string="Planned revenue",
+        compute_sudo=True,
+        store=True,
+    )
+    expected_revenue = fields.Float(
+        compute="_compute_expected_revenue",
+        string="Expected revenue",
+        compute_sudo=True,
+        store=True,
+    )
 
-    @api.onchange('product_id')
+    @api.onchange("product_id")
     def _onchange_product_id(self):
         domain = {}
         if not self.lead_id:
@@ -59,7 +56,7 @@ class CrmLeadLine(models.Model):
 
         if not self.product_id:
             self.price_unit = 0.0
-            domain['uom_id'] = []
+            domain["uom_id"] = []
             if self.name and self.name != self.category_id.name:
                 self.name = ""
         else:
@@ -71,19 +68,21 @@ class CrmLeadLine(models.Model):
             if product.name:
                 self.name = product.name
 
-            if not self.uom_id or product.uom_id.category_id.id != \
-                    self.uom_id.category_id.id:
+            if (
+                not self.uom_id
+                or product.uom_id.category_id.id != self.uom_id.category_id.id
+            ):
                 self.uom_id = product.uom_id.id
-            domain['uom_id'] = [(
-                'category_id', '=', product.uom_id.category_id.id)]
+            domain["uom_id"] = [("category_id", "=", product.uom_id.category_id.id)]
 
             if self.uom_id and self.uom_id.id != product.uom_id.id:
                 self.price_unit = product.uom_id._compute_price(
-                    self.price_unit, self.uom_id)
+                    self.price_unit, self.uom_id
+                )
 
-        return {'domain': domain}
+        return {"domain": domain}
 
-    @api.onchange('category_id')
+    @api.onchange("category_id")
     def _onchange_category_id(self):
         domain = {}
         if not self.lead_id:
@@ -98,13 +97,12 @@ class CrmLeadLine(models.Model):
             if self.product_id and self.product_id.categ_id != categ_id:
                 self.product_id = None
                 self.name = categ_id.name
-            if self.product_tmpl_id and \
-                    self.product_tmpl_id.categ_id != categ_id:
+            if self.product_tmpl_id and self.product_tmpl_id.categ_id != categ_id:
                 self.product_tmpl_id = None
 
-        return {'domain': domain}
+        return {"domain": domain}
 
-    @api.onchange('product_tmpl_id')
+    @api.onchange("product_tmpl_id")
     def _onchange_product_tmpl_id(self):
         domain = {}
         if not self.lead_id:
@@ -122,9 +120,9 @@ class CrmLeadLine(models.Model):
                     self.product_id = None
                     self.name = product_tmpl.name
 
-        return {'domain': domain}
+        return {"domain": domain}
 
-    @api.onchange('uom_id')
+    @api.onchange("uom_id")
     def _onchange_uom_id(self):
         result = {}
         if not self.uom_id:
@@ -133,6 +131,7 @@ class CrmLeadLine(models.Model):
         if self.product_id and self.uom_id:
             price_unit = self.product_id.list_price
             self.price_unit = self.product_id.uom_id._compute_price(
-                price_unit, self.uom_id)
+                price_unit, self.uom_id
+            )
 
         return result
