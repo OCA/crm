@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="crm_lead_view_form_inherit" model="ir.ui.view">
+        <field name="name">crm.lead.form.inherit</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form" />
+        <field name="model">crm.lead</field>
+        <field name="arch" type="xml">
+            <xpath
+                expr="//button[@name='action_set_automated_probability']"
+                position="before"
+            >
+                <field name="is_stage_probability" invisible="1" />
+                <button
+                    class="btn btn-link"
+                    name="action_set_stage_probability"
+                    type="object"
+                    attrs="{'invisible': [('is_stage_probability', '=', True)]}"
+                >
+                    <i
+                        class="fa fa-gear"
+                        role="img"
+                        title="Switch to stage probability"
+                        aria-label="Switch to stage probability"
+                    />
+                </button>
+                <small
+                    class="oe_grey"
+                    attrs="{'invisible': [('is_stage_probability', '=', True)]}"
+                ><field name="stage_probability" /> %% (According to stage)</small>
+            </xpath>
+        </field>
+    </record>
+</odoo>
