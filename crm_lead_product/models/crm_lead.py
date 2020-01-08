@@ -5,15 +5,13 @@ from odoo import api, fields, models
 
 
 class CrmLead(models.Model):
-    _inherit = 'crm.lead'
+    _inherit = "crm.lead"
 
     lead_line_ids = fields.One2many(
-        comodel_name='crm.lead.line',
-        inverse_name='lead_id',
-        string='Lead Lines',
+        comodel_name="crm.lead.line", inverse_name="lead_id", string="Lead Lines"
     )
 
-    @api.onchange('lead_line_ids')
+    @api.onchange("lead_line_ids")
     def _onchange_lead_line_ids(self):
         planned_revenue = 0
         for lead_line in self.lead_line_ids:
@@ -30,6 +28,6 @@ class CrmLead(models.Model):
         for lead_line in self.lead_line_ids:
             planned_revenue += lead_line.planned_revenue
 
-        res['planned_revenue'] = planned_revenue
+        res["planned_revenue"] = planned_revenue
 
         return res
