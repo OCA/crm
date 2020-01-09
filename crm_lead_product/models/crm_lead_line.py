@@ -1,4 +1,4 @@
-# Copyright (C) 2018 Eficent Business and IT Consulting Services S.L.
+# Copyright (C) 2017-19 ForgeFlow S.L. (https://www.forgeflow.com)
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from odoo import api, fields, models
@@ -8,13 +8,11 @@ class CrmLeadLine(models.Model):
     _name = "crm.lead.line"
     _description = "Line in CRM Lead"
 
-    @api.multi
     @api.depends("price_unit", "product_qty")
     def _compute_planned_revenue(self):
         for rec in self:
             rec.planned_revenue = rec.product_qty * rec.price_unit
 
-    @api.multi
     @api.depends("lead_id.probability", "planned_revenue")
     def _compute_expected_revenue(self):
         for rec in self:
