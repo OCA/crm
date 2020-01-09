@@ -1,4 +1,4 @@
-# Copyright (C) 2018 Eficent Business and IT Consulting Services S.L.
+# Copyright (C) 2017-19 ForgeFlow S.L. (https://www.forgeflow.com)
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from odoo import api, fields, models
@@ -19,7 +19,6 @@ class CrmLead(models.Model):
                 planned_revenue += lead_line.planned_revenue
                 self.planned_revenue = planned_revenue
 
-    @api.multi
     def _convert_opportunity_data(self, customer, team_id=False):
         res = super(CrmLead, self)._convert_opportunity_data(customer, team_id)
 
