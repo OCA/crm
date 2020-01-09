@@ -1,8 +1,7 @@
-# © 2017-TODAY Eficent Business and IT Consulting Services S.L.
+# © 2017-19 ForgeFlow S.L. (https://www.forgeflow.com)
 # License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl.html)
 
 from odoo.tests import common
-
 
 class TestCrmLeadLine(common.TransactionCase):
     def setUp(self):
@@ -52,7 +51,7 @@ class TestCrmLeadLine(common.TransactionCase):
                 "lead_id": self.lead.id,
                 "name": self.product_1.name,
                 "product_id": self.product_1.id,
-                "uom.id": self.product_1.uom_id.id,
+                "uom_id": self.product_1.uom_id.id,
                 "price_unit": self.product_1.price,
             }
         )
