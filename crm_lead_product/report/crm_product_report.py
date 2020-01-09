@@ -3,7 +3,7 @@
 
 from psycopg2.extensions import AsIs
 
-from odoo import api, fields, models, tools
+from odoo import fields, models, tools
 
 
 class ActivityReport(models.Model):
