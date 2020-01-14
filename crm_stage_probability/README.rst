@@ -28,10 +28,23 @@ CRM stage probability
 This module restore the CRM feature from Odoo <= 12.0 with lead probability
 according to its stage.
 
+.. IMPORTANT::
+   This is an alpha version, the data model and design can change at any time without warning.
+   Only for development or testing purpose, do not use in production.
+   `More details on development status <https://odoo-community.org/page/development-status>`_
+
 **Table of contents**
 
 .. contents::
    :local:
+
+Configuration
+=============
+
+To configure this module, you need to:
+
+1. Set the probabilities on the stages
+2. Run the "Update leads probability" wizard on the stages to update
 
 Bug Tracker
 ===========
@@ -50,10 +63,12 @@ Authors
 ~~~~~~~
 
 * Camptocamp
+* Odoo SA
 
 Contributors
 ~~~~~~~~~~~~
 
+* Odoo SA
 * Akim Juillerat <akim.juillerat@camptocamp.com>
 
 Maintainers
