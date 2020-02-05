@@ -1,7 +1,7 @@
 # © 2016 Antiun Ingeniería S.L. - Jairo Llopis
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
-from odoo import api, fields, models
+from odoo import fields, models
 
 
 class CrmLead(models.Model):
@@ -10,7 +10,6 @@ class CrmLead(models.Model):
     contact_name = fields.Char("First name")
     contact_lastname = fields.Char("Last name")
 
-    @api.multi
     def _create_lead_partner_data(self, name, is_company, parent_id=False):
         """Ensure first and last names of contact match those in lead."""
         lead_partner_data = super(CrmLead, self)._create_lead_partner_data(
