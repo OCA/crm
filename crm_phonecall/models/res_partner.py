@@ -2,7 +2,7 @@
 # Copyright 2017 Tecnativa - Vicent Cubells
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo import api, fields, models
+from odoo import fields, models
 
 
 class ResPartner(models.Model):
@@ -15,7 +15,6 @@ class ResPartner(models.Model):
     )
     phonecall_count = fields.Integer(compute="_compute_phonecall_count")
 
-    @api.multi
     def _compute_phonecall_count(self):
         """Calculate number of phonecalls."""
         for partner in self:

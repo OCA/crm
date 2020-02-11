@@ -14,13 +14,13 @@ CRM Phone Calls
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fcrm-lightgray.png?logo=github
-    :target: https://github.com/OCA/crm/tree/12.0/crm_phonecall
+    :target: https://github.com/OCA/crm/tree/13.0/crm_phonecall
     :alt: OCA/crm
 .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
-    :target: https://translation.odoo-community.org/projects/crm-12-0/crm-12-0-crm_phonecall
+    :target: https://translation.odoo-community.org/projects/crm-13-0/crm-13-0-crm_phonecall
     :alt: Translate me on Weblate
 .. |badge5| image:: https://img.shields.io/badge/runbot-Try%20me-875A7B.png
-    :target: https://runbot.odoo-community.org/runbot/111/12.0
+    :target: https://runbot.odoo-community.org/runbot/111/13.0
     :alt: Try me on Runbot
 
 |badge1| |badge2| |badge3| |badge4| |badge5| 
@@ -37,14 +37,14 @@ Usage
 
 To use this module, you need to:
 
-#. Go to *Sales > Phone Calls > Logged Calls > Create*.
+#. Go to *CRM > Phone Calls > Logged Calls > Create*.
 #. If your user has *Show Scheduled Calls Menu* permission, you will see
    scheduled calls menu too.
 #. In any moment you can schedule another call, schedule a meeting or convert
    call contact to opportunity.
-#. Calls can be categorized and you can manage categories in *Sales >
-   Configuration > Leads & Opportunities > Phone Calls > Categories*.
-#. Calls can be analyzed in *Sales > Reports > Phone Calls Analysis*.
+#. Calls can be categorized and you can manage categories in *CRM >
+   Configuration > Pipeline > Phone Calls > Categories*.
+#. Calls can be analyzed in *CRM > Reporting > Phone Calls Analysis*.
 
 Known issues / Roadmap
 ======================
@@ -57,7 +57,7 @@ Bug Tracker
 Bugs are tracked on `GitHub Issues <https://github.com/OCA/crm/issues>`_.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us smashing it by providing a detailed and welcomed
-`feedback <https://github.com/OCA/crm/issues/new?body=module:%20crm_phonecall%0Aversion:%2012.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+`feedback <https://github.com/OCA/crm/issues/new?body=module:%20crm_phonecall%0Aversion:%2013.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
 Do not contact contributors directly about support or help with technical issues.
 
@@ -76,9 +76,10 @@ Contributors
 * Odoo S.A.
 * `Tecnativa <https://www.tecnativa.com>`_
 
-  * Vicent Cubells <vicent.cubells@tecnativa.com>
-  * Jairo Llopis <jairo.llopis@tecnativa.com>
-  * David Vidal <david.vidal@tecnativa.com>
+  * Vicent Cubells
+  * Jairo Llopis
+  * David Vidal
+  * Alexandre Díaz
 
 * Anand Kansagra <kansagraanand@hotmail.com>
 
@@ -95,6 +96,6 @@ OCA, or the Odoo Community Association, is a nonprofit organization whose
 mission is to support the collaborative development of Odoo features and
 promote its widespread use.
 
-This module is part of the `OCA/crm <https://github.com/OCA/crm/tree/12.0/crm_phonecall>`_ project on GitHub.
+This module is part of the `OCA/crm <https://github.com/OCA/crm/tree/13.0/crm_phonecall>`_ project on GitHub.
 
 You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.
