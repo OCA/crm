@@ -6,7 +6,7 @@
     "version": "13.0.1.0.0",
     "category": "Customer Relationship Management",
     "author": "Odoo S.A., Tecnativa, Odoo Community Association (OCA)",
-    "website": "https://www.tecnativa.com",
+    "website": "https://github.com/OCA/crm",
     "license": "AGPL-3",
     "depends": ["crm", "calendar"],
     "data": [
