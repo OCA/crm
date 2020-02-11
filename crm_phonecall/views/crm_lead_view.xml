@@ -5,7 +5,7 @@
     <record id="crm_case_form_view_leads_inherit" model="ir.ui.view">
         <field name="name">CRM - Leads Form</field>
         <field name="model">crm.lead</field>
-        <field name="inherit_id" ref="crm.crm_case_form_view_leads"/>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
         <field name="arch" type="xml">
             <xpath expr="//div[@name='button_box']" position="inside">
                 <button class="oe_stat_button" type="object"
@@ -14,20 +14,6 @@
                     <field string="Calls" name="phonecall_count" widget="statinfo"/>
                 </button>
             </xpath>
-        </field>
-    </record>
-    <record id="crm_case_form_view_oppor_inherit" model="ir.ui.view">
-        <field name="name">Opportunities</field>
-        <field name="model">crm.lead</field>
-        <field name="inherit_id" ref="crm.crm_case_form_view_oppor"/>
-        <field name="arch" type="xml">
-            <button name="action_schedule_meeting" position="before">
-                <button class="oe_stat_button" type="object"
-                    name="button_open_phonecall"
-                    icon="fa-phone">
-                    <field string="Calls" name="phonecall_count" widget="statinfo"/>
-                </button>
-            </button>
         </field>
     </record>
 
