@@ -4,7 +4,6 @@
     <record id="crm_phonecall_categ_action" model="ir.actions.act_window">
         <field name="name">Phonecall Categories</field>
         <field name="res_model">crm.lead.tag</field>
-        <field name="view_type">form</field>
         <field name="view_id" ref="crm.crm_lead_tag_tree"/>
         <field name="domain">[]</field>
         <field name="context" eval="{'object_id': ref('model_crm_phonecall')}"/>
@@ -27,7 +26,7 @@
         <field name="name">CRM - Phone Calls Tree</field>
         <field name="model">crm.phonecall</field>
         <field name="arch" type="xml">
-            <tree colors="gray:state in ('cancel','done');blue:state in ('pending',)" string="Phone Calls">
+            <tree decoration-muted="state in ('cancel','done')" decoration-info="state in ('pending',)" string="Phone Calls">
                 <field name="date"/>
                 <field name="name"/>
                 <field name="partner_id"/>
@@ -201,7 +200,6 @@
     <record id="crm_case_categ_phone0" model="ir.actions.act_window">
         <field name="name">Phone Calls</field>
         <field name="res_model">crm.phonecall</field>
-        <field name="view_type">form</field>
         <field name="view_mode">tree,form,calendar</field>
         <field name="view_id" ref="crm_case_phone_tree_view"/>
         <field name="context">{"search_default_user_id":uid}</field>
@@ -236,7 +234,6 @@
     <record id="crm_case_categ_phone_incoming0" model="ir.actions.act_window">
         <field name="name">Logged Calls</field>
         <field name="res_model">crm.phonecall</field>
-        <field name="view_type">form</field>
         <field name="view_mode">tree,calendar</field>
         <field name="view_id" ref="crm_case_inbound_phone_tree_view"/>
         <field name="domain">[]</field>
@@ -284,7 +281,6 @@
     <record id="crm_case_categ_phone_outgoing0" model="ir.actions.act_window">
         <field name="name">Scheduled Calls</field>
         <field name="res_model">crm.phonecall</field>
-        <field name="view_type">form</field>
         <field name="view_mode">tree,form,calendar</field>
         <field name="view_id" ref="crm_case_phone_tree_view"/>
         <field name="domain">[('state','!=','done')]</field>

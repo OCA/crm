@@ -10,7 +10,7 @@ class TestCrmPhoneCall(common.SavepointCase):
     @classmethod
     def setUpClass(cls):
         """Created required data."""
-        super(TestCrmPhoneCall, cls).setUpClass()
+        super().setUpClass()
         cls.company = cls.env.ref("base.main_company")
         partner_obj = cls.env["res.partner"]
         cls.campaign1 = cls.env["utm.campaign"].create({"name": "campaign 1"})
