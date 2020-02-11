@@ -67,7 +67,7 @@ class CrmPhonecall(models.Model):
         default="1",
     )
     date_closed = fields.Datetime(string="Closed", readonly=True)
-    date = fields.Datetime(default=fields.Datetime.now)
+    date = fields.Datetime(default=lambda self: fields.Datetime.now())
     opportunity_id = fields.Many2one(comodel_name="crm.lead", string="Lead/Opportunity")
 
     @api.onchange("partner_id")
@@ -77,7 +77,6 @@ class CrmPhonecall(models.Model):
             self.partner_phone = self.partner_id.phone
             self.partner_mobile = self.partner_id.mobile
 
-    @api.multi
     def write(self, values):
         """Override to add case management: open/close dates."""
         if values.get("state"):
@@ -87,19 +86,22 @@ class CrmPhonecall(models.Model):
             elif values.get("state") == "open":
                 values["date_open"] = fields.Datetime.now()
                 values["duration"] = 0.0
-        return super(CrmPhonecall, self).write(values)
+        return super().write(values)
 
-    @api.multi
     def compute_duration(self):
         """Calculate duration based on phonecall date."""
-        for phonecall in self.filtered("date"):
+        phonecall_dates = self.filtered("date")
+        phonecall_no_dates = self - phonecall_dates
+        for phonecall in phonecall_dates:
             if phonecall.duration <= 0 and phonecall.date:
                 duration = fields.Datetime.now() - phonecall.date
                 values = {"duration": duration.seconds / 60.0}
                 phonecall.write(values)
+            else:
+                phonecall.duration = 0.0
+        phonecall_no_dates.write({"duration": 0.0})
         return True
 
-    @api.multi
     def schedule_another_phonecall(
         self,
         schedule_time,
@@ -155,7 +157,6 @@ class CrmPhonecall(models.Model):
             self.partner_id = self.opportunity_id.partner_id.id
             self.tag_ids = self.opportunity_id.tag_ids.ids
 
-    @api.multi
     def redirect_phonecall_view(self):
         """Redirect on the phonecall related view."""
         model_data = self.env["ir.model.data"]
@@ -187,7 +188,6 @@ class CrmPhonecall(models.Model):
             }
         return value
 
-    @api.multi
     def convert_opportunity(
         self,
         opportunity_summary=False,
@@ -235,7 +235,6 @@ class CrmPhonecall(models.Model):
             opportunity_dict[call.id] = opportunity_id
         return opportunity_dict
 
-    @api.multi
     def action_make_meeting(self):
         """Open meeting's calendar view to schedule a meeting on phonecall."""
         partner_ids = [self.env["res.users"].browse(self.env.uid).partner_id.id]
@@ -255,11 +254,10 @@ class CrmPhonecall(models.Model):
             }
         return res
 
-    @api.multi
     def action_button_convert2opportunity(self):
         """Convert a phonecall into an opp and redirect to the opp view."""
         opportunity_dict = {}
         for call in self:
             opportunity_dict = call.convert_opportunity()
-            return opportunity_dict[call.id].redirect_opportunity_view()
+            return opportunity_dict[call.id].redirect_lead_opportunity_view()
         return opportunity_dict
