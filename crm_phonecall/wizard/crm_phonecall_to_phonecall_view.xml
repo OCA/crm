@@ -26,7 +26,6 @@
     <record id="phonecall_to_phonecall_act" model="ir.actions.act_window">
         <field name="name">Schedule Other Call</field>
         <field name="res_model">crm.phonecall2phonecall</field>
-        <field name="view_type">form</field>
         <field name="view_mode">form</field>
         <field name="view_id" ref="phonecall_to_phonecall_view"/>
         <field name="target">new</field>
