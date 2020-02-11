@@ -3,7 +3,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 from psycopg2.extensions import AsIs
 
-from odoo import api, fields, models, tools
+from odoo import fields, models, tools
 
 AVAILABLE_STATES = [
     ("draft", "Draft"),
@@ -85,11 +85,10 @@ class CrmPhonecallReport(models.Model):
         """
         return from_str
 
-    @api.model_cr
     def init(self):
         """Initialize the report."""
-        tools.drop_view_if_exists(self._cr, self._table)
-        self._cr.execute(
+        tools.drop_view_if_exists(self.env.cr, self._table)
+        self.env.cr.execute(
             """
             create or replace view %s as (
                 %s
