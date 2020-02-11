@@ -10,7 +10,4 @@ class CalendarEvent(models.Model):
 
     _inherit = "calendar.event"
 
-    phonecall_id = fields.Many2one(
-        comodel_name='crm.phonecall',
-        string='Phonecall',
-    )
+    phonecall_id = fields.Many2one(comodel_name="crm.phonecall", string="Phonecall")

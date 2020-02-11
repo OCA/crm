@@ -3,15 +3,14 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 from psycopg2.extensions import AsIs
 
-from odoo import tools
-from odoo import api, fields, models
+from odoo import api, fields, models, tools
 
 AVAILABLE_STATES = [
-    ('draft', 'Draft'),
-    ('open', 'Todo'),
-    ('cancel', 'Cancelled'),
-    ('done', 'Held'),
-    ('pending', 'Pending')
+    ("draft", "Draft"),
+    ("open", "Todo"),
+    ("cancel", "Cancelled"),
+    ("done", "Held"),
+    ("pending", "Pending"),
 ]
 
 
@@ -22,76 +21,39 @@ class CrmPhonecallReport(models.Model):
     _description = "Phone calls by user"
     _auto = False
 
-    user_id = fields.Many2one(
-        comodel_name='res.users',
-        string='User',
-        readonly=True,
-    )
-    team_id = fields.Many2one(
-        comodel_name='crm.team',
-        string='Team',
-        readonly=True,
-    )
+    user_id = fields.Many2one(comodel_name="res.users", string="User", readonly=True)
+    team_id = fields.Many2one(comodel_name="crm.team", string="Team", readonly=True)
     priority = fields.Selection(
-        selection=[
-            ('0', 'Low'),
-            ('1', 'Normal'),
-            ('2', 'High')
-        ],
-        string='Priority',
+        selection=[("0", "Low"), ("1", "Normal"), ("2", "High")], string="Priority"
     )
-    nbr_cases = fields.Integer(
-        string='# of Cases',
-        readonly=True,
-    )
-    state = fields.Selection(
-        AVAILABLE_STATES,
-        string='Status',
-        readonly=True,
-    )
-    create_date = fields.Datetime(
-        string='Create Date',
-        readonly=True,
-        index=True,
-    )
+    nbr_cases = fields.Integer(string="# of Cases", readonly=True)
+    state = fields.Selection(AVAILABLE_STATES, string="Status", readonly=True)
+    create_date = fields.Datetime(string="Create Date", readonly=True, index=True)
     delay_close = fields.Float(
-        string='Delay to close',
+        string="Delay to close",
         digits=(16, 2),
         readonly=True,
         group_operator="avg",
         help="Number of Days to close the case",
     )
     duration = fields.Float(
-        string='Duration',
-        digits=(16, 2),
-        readonly=True,
-        group_operator="avg",
+        string="Duration", digits=(16, 2), readonly=True, group_operator="avg"
     )
     delay_open = fields.Float(
-        string='Delay to open',
+        string="Delay to open",
         digits=(16, 2),
         readonly=True,
         group_operator="avg",
         help="Number of Days to open the case",
     )
     partner_id = fields.Many2one(
-        comodel_name='res.partner',
-        string='Partner',
-        readonly=True,
+        comodel_name="res.partner", string="Partner", readonly=True
     )
     company_id = fields.Many2one(
-        comodel_name='res.company',
-        string='Company',
-        readonly=True,
+        comodel_name="res.company", string="Company", readonly=True
     )
-    opening_date = fields.Datetime(
-        readonly=True,
-        index=True,
-    )
-    date_closed = fields.Datetime(
-        string='Close Date',
-        readonly=True,
-        index=True)
+    opening_date = fields.Datetime(readonly=True, index=True)
+    date_closed = fields.Datetime(string="Close Date", readonly=True, index=True)
 
     def _select(self):
         select_str = """
@@ -132,6 +94,6 @@ class CrmPhonecallReport(models.Model):
             create or replace view %s as (
                 %s
                 %s
-            )""", (
-                AsIs(self._table), AsIs(self._select()), AsIs(self._from()))
+            )""",
+            (AsIs(self._table), AsIs(self._select()), AsIs(self._from())),
         )
