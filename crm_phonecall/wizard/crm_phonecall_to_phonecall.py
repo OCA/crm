@@ -19,7 +19,7 @@ class CrmPhonecall2phonecall(models.TransientModel):
     phone = fields.Char()
     tag_ids = fields.Many2many(
         comodel_name="crm.lead.tag",
-        relation="crm_phonecall_tag_rel",
+        relation="crm_phonecall2phonecall_tag_rel",
         column1="phone_id",
         column2="tag_id",
         string="Tags",
@@ -34,7 +34,6 @@ class CrmPhonecall2phonecall(models.TransientModel):
     partner_id = fields.Many2one(comodel_name="res.partner", string="Partner")
     note = fields.Text()
 
-    @api.multi
     def action_schedule(self):
         """Schedule a phonecall."""
         phonecall_obj = self.env["crm.phonecall"]
@@ -53,7 +52,7 @@ class CrmPhonecall2phonecall(models.TransientModel):
     @api.model
     def default_get(self, fields):
         """Function gets default values."""
-        res = super(CrmPhonecall2phonecall, self).default_get(fields)
+        res = super().default_get(fields)
         res.update({"action": "schedule", "date": time.strftime("%Y-%m-%d %H:%M:%S")})
         for phonecall in self.env["crm.phonecall"].browse(
             self.env.context.get("active_id")
