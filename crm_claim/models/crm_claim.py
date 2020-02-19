@@ -137,7 +137,7 @@ class CrmClaim(models.Model):
         string="Stage",
         track_visibility="onchange",
         default=_get_default_stage_id,
-        domain="['|', ("team_ids", "=", team_id), ("case_default", "=", True)]"
+        domain="['|', ('team_ids', '=', team_id), ('case_default', '=', True)]"
     )
     cause = fields.Text(
         string="Root Cause",
