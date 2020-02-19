@@ -11,15 +11,19 @@ class TestCrmClaim(common.SavepointCase):
 
         Claims = cls.env["crm.claim"].with_context(
             mail_create_nosubscribe=True)
-        cls.claim = Claims.create({
+        cls.claim = Claims.create(
+            {
             "name": "Test Claim",
             "team_id": cls.env.ref("sales_team.salesteam_website_sales").id,
-        })
-        cls.partner = cls.env["res.partner"].create({
+            }
+        )
+        cls.partner = cls.env["res.partner"].create(
+            {
             "name": "Partner Claim",
             "email": "partner.claim@example.com",
             "phone": "1234567890",
-        })
+            }
+        )
         cls.claim_categ = cls.env.ref("crm_claim.categ_claim1")
         cls.sales_team = cls.claim_categ.team_id
 
@@ -36,6 +40,6 @@ class TestCrmClaim(common.SavepointCase):
         self.assertEqual(self.claim.team_id, self.sales_team)
         new_claim = self.claim.copy()
         self.assertEqual(new_claim.stage_id.id, 1)
-        self.assertIn('copy', new_claim.name)
+        self.assertIn("copy", new_claim.name)
         self.assertTrue(new_claim.stage_id.id)
         self.assertEqual(self.partner.claim_count, 2)
