@@ -15,17 +15,17 @@ class CrmClaimReport(models.Model):
     _description = "CRM Claim Report"
 
     user_id = fields.Many2one(
-        comodel_name='res.users',
-        string='User',
+        comodel_name="res.users",
+        string="User",
         readonly=True,
     )
     team_id = fields.Many2one(
-        comodel_name='crm.team',
-        string='Team',
+        comodel_name="crm.team",
+        string="Team",
         readonly=True,
     )
     nbr_claims = fields.Integer(
-        string='# of Claims',
+        string="# of Claims",
         readonly=True,
         #oldname='nbr',
     )
