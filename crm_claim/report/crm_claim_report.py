@@ -14,10 +14,12 @@ class CrmClaimReport(models.Model):
     _auto = False
     _description = "CRM Claim Report"
 
-    user_id = fields.Many2one(comodel_name="res.users", string="User",  readonly=True)
+    user_id = fields.Many2one(comodel_name="res.users", string="User", readonly=True)
     team_id = fields.Many2one(comodel_name="crm.team", string="Team", readonly=True)
     nbr_claims = fields.Integer(string="# of Claims", readonly=True)
-    company_id = fields.Many2one(comodel_name="res.company", string="Company", readonly=True)
+    company_id = fields.Many2one(
+        comodel_name="res.company", string="Company", readonly=True
+    )
     create_date = fields.Datetime(readonly=True, index=True)
     claim_date = fields.Datetime(string="Claim Date", readonly=True)
     delay_close = fields.Float(
@@ -36,21 +38,14 @@ class CrmClaimReport(models.Model):
     categ_id = fields.Many2one(
         comodel_name="crm.claim.category",
         string="Category",
-        readonly=True,
+        readonly=True
     )
     partner_id = fields.Many2one(
         comodel_name="res.partner",
         string="Partner",
-        readonly=True,
+        readonly=True
     )
-    priority = fields.Selection(
-        selection=[
-            ("0", "Low"),
-            ("1", "Normal"),
-            ("2", "High"),
-        ],
-        string="Priority",
-    )
+    priority = fields.Selection(selection=[("0", "Low"), ("1", "Normal"), ("2", "High")], string="Priority")
     type_action = fields.Selection(
         selection=[
             ("correction", "Corrective Action"),
@@ -58,30 +53,16 @@ class CrmClaimReport(models.Model):
         ],
         string="Action Type",
     )
-    date_closed = fields.Datetime(
-        string="Close Date",
-        readonly=True,
-        index=True,
-    )
-    date_deadline = fields.Date(
-        string="Deadline",
-        readonly=True,
-        index=True,
-    )
+    date_closed = fields.Datetime(string="Close Date", readonly=True, index=True)
+    date_deadline = fields.Date(string="Deadline", readonly=True, index=True)
     delay_expected = fields.Float(
         string="Overpassed Deadline",
         digits=(16, 2),
         readonly=True,
         group_operator="avg",
     )
-    email = fields.Integer(
-        string="# Emails",
-        readonly=True,
-    )
-    subject = fields.Char(
-        string="Claim Subject",
-        readonly=True,
-    )
+    email = fields.Integer(string="# Emails", readonly=True)
+    subject = fields.Char(string="Claim Subject", readonly=True)
 
     def _select(self):
         select_str = """
@@ -144,6 +125,11 @@ class CrmClaimReport(models.Model):
                 from
                 %s
                 %s)
-            """, (AsIs(self._table), AsIs(self._select()), AsIs(self._from()),
-                  AsIs(self._group_by()))
+            """, 
+            (
+                AsIs(self._table), 
+                AsIs(self._select()), 
+                AsIs(self._from()),
+                AsIs(self._group_by()),
+            ),
         )
