@@ -10,11 +10,11 @@ class CrmClaimCategory(models.Model):
     _description = "Category of claim"
 
     name = fields.Char(
-        string='Name',
+        string="Name",
         required=True,
         translate=True,
     )
     team_id = fields.Many2one(
-        comodel_name='crm.team',
-        string='Sales Team',
+        comodel_name="crm.team",
+        string="Sales Team",
     )
