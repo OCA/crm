@@ -7,15 +7,10 @@
     "name": "Claims Management",
     "version": "13.0.1.1.0",
     "category": "Customer Relationship Management",
-    "author": "Odoo S.A., "
-              "Tecnativa, "
-              "Odoo Community Association (OCA)",
+    "author": "Odoo S.A., Tecnativa, Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "summary": "Track your customers/vendors claims and grievances.",
-    "depends": [
-        'crm',
-        'mail',
-    ],
+    "depends": ["crm", "mail"],
     "data": [
         "security/ir.model.access.csv",
         "security/crm_claim_security.xml",
@@ -27,8 +22,6 @@
         "views/crm_claim_menu.xml",
         "report/crm_claim_report_view.xml",
     ],
-    "demo": [
-        "demo/crm_claim_demo.xml",
-    ],
+    "demo": ["demo/crm_claim_demo.xml"],
     "installable": True,
 }
