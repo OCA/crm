@@ -9,18 +9,18 @@ class TestCrmClaim(common.SavepointCase):
     def setUpClass(cls):
         super(TestCrmClaim, cls).setUpClass()
 
-        Claims = cls.env['crm.claim'].with_context(
+        Claims = cls.env["crm.claim"].with_context(
             mail_create_nosubscribe=True)
         cls.claim = Claims.create({
-            'name': 'Test Claim',
-            'team_id': cls.env.ref('sales_team.salesteam_website_sales').id,
+            "name": "Test Claim",
+            "team_id": cls.env.ref("sales_team.salesteam_website_sales").id,
         })
-        cls.partner = cls.env['res.partner'].create({
-            'name': 'Partner Claim',
-            'email': 'partner.claim@example.com',
-            'phone': '1234567890',
+        cls.partner = cls.env["res.partner"].create({
+            "name": "Partner Claim",
+            "email": "partner.claim@example.com",
+            "phone": "1234567890",
         })
-        cls.claim_categ = cls.env.ref('crm_claim.categ_claim1')
+        cls.claim_categ = cls.env.ref("crm_claim.categ_claim1")
         cls.sales_team = cls.claim_categ.team_id
 
     def test_crm_claim(self):
