@@ -14,94 +14,72 @@ class CrmClaimReport(models.Model):
     _auto = False
     _description = "CRM Claim Report"
 
-    user_id = fields.Many2one(
-        comodel_name="res.users",
-        string="User",
-        readonly=True,
-    )
-    team_id = fields.Many2one(
-        comodel_name="crm.team",
-        string="Team",
-        readonly=True,
-    )
-    nbr_claims = fields.Integer(
-        string="# of Claims",
-        readonly=True,
-        #oldname='nbr',
-    )
-    company_id = fields.Many2one(
-        comodel_name='res.company',
-        string='Company',
-        readonly=True,
-    )
-    create_date = fields.Datetime(
-        readonly=True,
-        index=True,
-    )
-    claim_date = fields.Datetime(
-        string='Claim Date',
-        readonly=True,
-    )
+    user_id = fields.Many2one(comodel_name="res.users", string="User",  readonly=True)
+    team_id = fields.Many2one(comodel_name="crm.team", string="Team", readonly=True)
+    nbr_claims = fields.Integer(string="# of Claims", readonly=True)
+    company_id = fields.Many2one(comodel_name="res.company", string="Company", readonly=True)
+    create_date = fields.Datetime(readonly=True, index=True)
+    claim_date = fields.Datetime(string="Claim Date", readonly=True)
     delay_close = fields.Float(
-        string='Delay to close',
+        string="Delay to close",
         digits=(16, 2),
         readonly=True,
         group_operator="avg",
         help="Number of Days to close the case",
     )
     stage_id = fields.Many2one(
-        comodel_name='crm.claim.stage',
-        string='Stage',
+        comodel_name="crm.claim.stage",
+        string="Stage",
         readonly=True,
-        domain="[('team_ids','=',team_id)]",
+        domain="[("team_ids","=",team_id)]",
     )
     categ_id = fields.Many2one(
-        comodel_name='crm.claim.category',
-        string='Category',
+        comodel_name="crm.claim.category",
+        string="Category",
         readonly=True,
     )
     partner_id = fields.Many2one(
-        comodel_name='res.partner',
-        string='Partner',
+        comodel_name="res.partner",
+        string="Partner",
         readonly=True,
     )
     priority = fields.Selection(
         selection=[
-            ('0', 'Low'),
-            ('1', 'Normal'),
-            ('2', 'High'),
+            ("0", "Low"),
+            ("1", "Normal"),
+            ("2", "High"),
         ],
-        string='Priority',
+        string="Priority",
     )
     type_action = fields.Selection(
         selection=[
-            ('correction', 'Corrective Action'),
-            ('prevention', 'Preventive Action'),
+            ("correction", "Corrective Action"),
+            ("prevention", "Preventive Action"),
         ],
-        string='Action Type',
+        string="Action Type",
     )
     date_closed = fields.Datetime(
-        string='Close Date',
+        string="Close Date",
         readonly=True,
         index=True,
     )
     date_deadline = fields.Date(
-        string='Deadline',
+        string="Deadline",
         readonly=True,
         index=True,
     )
     delay_expected = fields.Float(
-        string='Overpassed Deadline',
+        string="Overpassed Deadline",
         digits=(16, 2),
         readonly=True,
         group_operator="avg",
     )
     email = fields.Integer(
-        string='# Emails',
+        string="# Emails",
         readonly=True,
     )
     subject = fields.Char(
-        string='Claim Subject',
+        string="Claim Subject",
         readonly=True,
     )
 
