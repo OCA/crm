@@ -52,7 +52,9 @@ class CrmClaim(models.Model):
     date = fields.Datetime(string="Claim Date", index=True, default=fields.Datetime.now)
     model_ref_id = fields.Reference(selection="_selection_model", string="Reference")
     categ_id = fields.Many2one(comodel_name="crm.claim.category", string="Category")
-    priority = fields.Selection(selection=[("0", "Low"), ("1", "Normal"), ("2", "High")], default="1")
+    priority = fields.Selection(
+        selection=[("0", "Low"), ("1", "Normal"), ("2", "High")], default="1"
+    )
     type_action = fields.Selection(
         selection=[
             ("correction", "Corrective Action"),
@@ -73,7 +75,7 @@ class CrmClaim(models.Model):
         index=True,
         default=_get_default_team,
         help="Responsible sales team. Define Responsible user and Email "
-             "account for mail gateway.",
+        "account for mail gateway.",
     )
     company_id = fields.Many2one(
         comodel_name="res.company",
@@ -87,15 +89,14 @@ class CrmClaim(models.Model):
         "inbound and outbound emails for this record before being sent. "
         "Separate multiple email addresses with a comma",
     )
-    email_from = fields.Char(
-        string="Email", help="Destination email for email gateway.")
+    email_from = fields.Char(string="Email", help="Destination email for email gateway.")
     partner_phone = fields.Char(string="Phone")
     stage_id = fields.Many2one(
         comodel_name="crm.claim.stage",
         string="Stage",
         track_visibility="onchange",
         default=_get_default_stage_id,
-        domain="['|', ('team_ids', '=', team_id), ('case_default', '=', True)]"
+        domain="['|', ("team_ids", "=", team_id), ("case_default", "=", True)]"
     )
     cause = fields.Text(string="Root Cause")
 
@@ -121,7 +122,9 @@ class CrmClaim(models.Model):
         # AND with the domain in parameter
         search_domain += list(domain)
         # perform search, return the first found
-        return self.env["crm.claim.stage"].search(search_domain, order=order, limit=1).id
+        return (
+            self.env["crm.claim.stage"].search(search_domain, order=order, limit=1).id
+        )
 
     @api.onchange("partner_id")
     def onchange_partner_id(self):
