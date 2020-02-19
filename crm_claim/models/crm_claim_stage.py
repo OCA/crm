@@ -16,7 +16,7 @@ class CrmClaimStage(models.Model):
     _order = "sequence"
 
     name = fields.Char(
-        string='Stage Name',
+        string="Stage Name",
         required=True,
         translate=True,
     )
@@ -26,17 +26,17 @@ class CrmClaimStage(models.Model):
     )
     
     team_ids = fields.Many2many(
-        comodel_name='crm.team',
-        relation='crm_team_claim_stage_rel',
-        column1='stage_id',
-        column2='team_id',
-        string='Teams',
+        comodel_name="crm.team",
+        relation="crm_team_claim_stage_rel",
+        column1="stage_id",
+        column2="team_id",
+        string="Teams",
         help="Link between stages and sales teams. When set, this limitate "
              "the current stage to the selected sales teams.",
     )
     
     case_default = fields.Boolean(
-        string='Common to All Teams',
+        string="Common to All Teams",
         help="If you check this field, this stage will be proposed by default "
              "on each sales team. It will not assign this stage to existing "
              "teams.")
