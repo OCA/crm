@@ -31,7 +31,7 @@ class CrmClaimReport(models.Model):
         comodel_name="crm.claim.stage",
         string="Stage",
         readonly=True,
-        domain="[("team_ids","=",team_id)]",
+        domain="[('team_ids','=',team_id)]",
     )
     categ_id = fields.Many2one(
         comodel_name="crm.claim.category",
