@@ -4,7 +4,7 @@
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
 from psycopg2.extensions import AsIs
-from odoo import api, fields, models, tools
+from odoo import fields, models, tools
 
 
 class CrmClaimReport(models.Model):
