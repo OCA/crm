@@ -9,15 +9,15 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-04 15:47+0000\n"
-"PO-Revision-Date: 2019-10-18 11:44+0000\n"
-"Last-Translator: Roodin <santi@comunitea.com>\n"
+"PO-Revision-Date: 2020-03-01 22:13+0000\n"
+"Last-Translator: Antonio Pérez Ruth <antonio.perez@makrin.es>\n"
 "Language-Team: Spanish (https://www.transifex.com/oca/teams/23907/es/)\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.8\n"
+"X-Generator: Weblate 3.10\n"
 
 #. module: crm_claim_type
 #: model:crm.claim.stage,name:crm_claim_type.stage_claim10
@@ -52,12 +52,12 @@ msgstr "Tipos de reclamación"
 #: model:ir.model.fields,help:crm_claim_type.field_crm_claim__claim_type
 #: model:ir.model.fields,help:crm_claim_type.field_crm_claim_stage__claim_type
 msgid "Claim classification"
-msgstr "Clasificación"
+msgstr "Clasificación de las reclamaciones"
 
 #. module: crm_claim_type
 #: model:ir.model,name:crm_claim_type.model_crm_claim_stage
 msgid "Claim stages"
-msgstr "Etapas de reclamaciones"
+msgstr "Estados de las reclamaciones"
 
 #. module: crm_claim_type
 #: model_terms:ir.ui.view,arch_db:crm_claim_type.crm_claim_type_form
@@ -72,7 +72,7 @@ msgstr "Tipos de reclamaciones"
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_stage__claim_common
 msgid "Common to All Claim Types"
-msgstr "Común para todos los tipos"
+msgstr "Común para todos los tipos de reclamación"
 
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type__create_uid
@@ -92,12 +92,12 @@ msgstr "Cliente"
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type__description
 msgid "Description"
-msgstr "Descripciòn"
+msgstr "Descripción"
 
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type__display_name
 msgid "Display Name"
-msgstr "Nombre mostrado"
+msgstr "Nombre para mostrar"
 
 #. module: crm_claim_type
 #: model:crm.claim.stage,name:crm_claim_type.stage_claim11
@@ -107,12 +107,12 @@ msgstr "Hecho"
 #. module: crm_claim_type
 #: model_terms:ir.ui.view,arch_db:crm_claim_type.crm_stage_claim_type_search
 msgid "Group By"
-msgstr "Agrupar por"
+msgstr "Agrupado por"
 
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type__id
 msgid "ID"
-msgstr "ID"
+msgstr "Identificador"
 
 #. module: crm_claim_type
 #: model:ir.model.fields,help:crm_claim_type.field_crm_claim_stage__claim_common
@@ -136,7 +136,7 @@ msgstr "Última actualización por"
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type__write_date
 msgid "Last Updated on"
-msgstr "Última actualización en"
+msgstr "Última actualización el"
 
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type__name
