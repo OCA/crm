@@ -9,15 +9,15 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-04 15:47+0000\n"
-"PO-Revision-Date: 2019-02-04 19:50+0000\n"
-"Last-Translator: Marta Vázquez Rodríguez <vazrodmar@gmail.com>\n"
+"PO-Revision-Date: 2020-03-01 22:13+0000\n"
+"Last-Translator: Antonio Pérez Ruth <antonio.perez@makrin.es>\n"
 "Language-Team: Spanish (https://www.transifex.com/oca/teams/23907/es/)\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.4\n"
+"X-Generator: Weblate 3.10\n"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__nbr_cases
@@ -67,12 +67,12 @@ msgstr "Asignar a"
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_attachment_count
 msgid "Attachment Count"
-msgstr "Contador Adjuntos"
+msgstr "Contador de adjuntos"
 
 #. module: crm_phonecall
 #: model:ir.filters,name:crm_phonecall.filter_crm_phonecall_sales_team
 msgid "By Sales Team"
-msgstr "Por equipo de ventas"
+msgstr "Por el equipo de ventas"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__name
@@ -109,7 +109,7 @@ msgstr "Cancelada"
 #. module: crm_phonecall
 #: model:ir.ui.menu,name:crm_phonecall.menu_crm_case_phonecall-act
 msgid "Categories"
-msgstr "Categorias"
+msgstr "Categorías"
 
 #. module: crm_phonecall
 #: model_terms:ir.actions.act_window,help:crm_phonecall.crm_phonecall_categ_action
@@ -220,12 +220,12 @@ msgstr "Fecha"
 #. module: crm_phonecall
 #: model:ir.filters,name:crm_phonecall.filter_crm_phonecall_delay_to_close
 msgid "Delay To Close"
-msgstr "Tiempo restante para el cierre"
+msgstr "Retraso del cierre"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__delay_close
 msgid "Delay to close"
-msgstr "Demora cierre"
+msgstr "Retraso del cierre"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__delay_open
@@ -235,7 +235,7 @@ msgstr "Retraso de apertura"
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__description
 msgid "Description"
-msgstr "Descripciòn"
+msgstr "Descripción"
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
@@ -247,7 +247,7 @@ msgstr "Descripción..."
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__display_name
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__display_name
 msgid "Display Name"
-msgstr "Nombre mostrado"
+msgstr "Nombre para mostrar"
 
 #. module: crm_phonecall
 #: selection:crm.phonecall.report,state:0
@@ -268,7 +268,7 @@ msgstr "Duración en minutos y segundos."
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__email_from
 msgid "Email"
-msgstr "Email"
+msgstr "Correo electrónico"
 
 #. module: crm_phonecall
 #: model:ir.model,name:crm_phonecall.model_calendar_event
@@ -299,7 +299,7 @@ msgstr "Seguidores (Empresas)"
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
 msgid "Group By"
-msgstr "Agrupar por"
+msgstr "Agrupado por"
 
 #. module: crm_phonecall
 #: selection:crm.phonecall,state:0 selection:crm.phonecall.report,state:0
@@ -317,22 +317,22 @@ msgstr "Alta"
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__id
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__id
 msgid "ID"
-msgstr "ID"
+msgstr "Identificador"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__message_unread
 msgid "If checked new messages require your attention."
-msgstr "Si está marcado, nuevos mensajes requieren su atención."
+msgstr "Si está marcado, los nuevos mensajes requieren su atención."
 
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__message_needaction
 msgid "If checked, new messages require your attention."
-msgstr "Si está marcado, nuevos mensajes requieren su atención."
+msgstr "Si está marcado, los nuevos mensajes requieren su atención."
 
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__message_has_error
 msgid "If checked, some messages have a delivery error."
-msgstr "Si está marccado, algunos mensajes tienen error de entrega."
+msgstr "Si está marcado, algunos mensajes tienen error de entrega."
 
 #. module: crm_phonecall
 #: model_terms:ir.actions.act_window,help:crm_phonecall.crm_case_categ_phone_incoming0
@@ -370,7 +370,7 @@ msgstr "Última actualización por"
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__write_date
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__write_date
 msgid "Last Updated on"
-msgstr "Última actualización en"
+msgstr "Última actualización el"
 
 #. module: crm_phonecall
 #: model:ir.model,name:crm_phonecall.model_crm_lead
@@ -453,7 +453,7 @@ msgstr "Mis llamadas"
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
 msgid "My Sales Team(s)"
-msgstr "Mis equipos de venta"
+msgstr "Mi(s) equipo(s) de ventas"
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
@@ -463,7 +463,7 @@ msgstr "Mi equipo"
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
 msgid "New Mail"
-msgstr "Nuevo correo"
+msgstr "Nuevo correo electrónico"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__date_action_next
@@ -503,7 +503,7 @@ msgstr "Número de días para abrir el caso"
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_has_error_counter
 msgid "Number of error"
-msgstr "Número de error"
+msgstr "Número del error"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__message_needaction_counter
@@ -592,7 +592,7 @@ msgstr "Llamadas"
 #: model:ir.actions.act_window,name:crm_phonecall.crm_phonecall_report_action_team
 #: model:ir.ui.menu,name:crm_phonecall.menu_report_crm_phonecalls_tree
 msgid "Phone Calls Analysis"
-msgstr "Análisis de llamadas"
+msgstr "Análisis de las llamadas"
 
 #. module: crm_phonecall
 #: model:ir.filters,name:crm_phonecall.filter_crm_phonecall_phone_call_to_do
@@ -618,8 +618,7 @@ msgstr "Llamadas por usuario"
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
 msgid "Phone calls that are assigned to one of the sale teams I manage"
-msgstr ""
-"Las llamadas de teléfono están asignadas a uno de los equipos que yo gestiono"
+msgstr "Llamadas asignadas a uno de los equipos que yo gestiono"
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
@@ -695,7 +694,7 @@ msgstr "Equipo de ventas"
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__team_id
 msgid "Sales team to which Case belongs to."
-msgstr "Equipo de ventas al qual pertenece."
+msgstr "Equipo de ventas al que pertenece."
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
@@ -781,7 +780,7 @@ msgstr ""
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__email_from
 msgid "These people will receive email."
-msgstr "Estas personas recibirán un email."
+msgstr "Estas personas recibirán un correo electrónico."
 
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__campaign_id
@@ -789,14 +788,14 @@ msgid ""
 "This is a name that helps you keep track of your different campaign efforts, "
 "e.g. Fall_Drive, Christmas_Special"
 msgstr ""
-"Este es un nombre que le ayuda a mantener un seguimiento de sus esfuerzos en "
-"campañas diferentes, por ejemplo, Fall_Drive, Christmas_Special"
+"Este nombre le ayuda a mantener un seguimiento de sus esfuerzos en "
+"diferentes campañas, por ejemplo, Campaña de otoño, Especial de Navidad"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__medium_id
 msgid "This is the method of delivery, e.g. Postcard, Email, or Banner Ad"
 msgstr ""
-"Este es el método de entrega, por ejemplo, postal, correo electrónico o "
+"Éste es el método de entrega, por ejemplo, postal, correo electrónico o "
 "anuncio"
 
 #. module: crm_phonecall
@@ -805,7 +804,7 @@ msgid ""
 "This is the source of the link, e.g. Search Engine, another domain, or name "
 "of email list"
 msgstr ""
-"Esta es la fuente del enlace, por ejemplo, motor de búsqueda, otro dominio o "
+"Ésta es la fuente del enlace, por ejemplo, motor de búsqueda, otro dominio o "
 "nombre de lista de correo electrónico"
 
 #. module: crm_phonecall
@@ -847,7 +846,7 @@ msgstr "Usuario"
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__website_message_ids
 msgid "Website Messages"
-msgstr "Mensajes página web"
+msgstr "Mensajes de la página web"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__website_message_ids
