@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* crm_lead_product
+# 	* crm_lead_product
 #
 msgid ""
 msgstr ""
@@ -160,7 +160,6 @@ msgid "Last Updated on"
 msgstr "Última modificación en"
 
 #. module: crm_lead_product
-#: selection:crm.product.report,type:0
 #: model:ir.model.fields,field_description:crm_lead_product.field_crm_lead_line__lead_id
 #: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_search
 msgid "Lead"
@@ -218,7 +217,6 @@ msgid "Opportunities Analysis"
 msgstr "Análisis de oportunidades"
 
 #. module: crm_lead_product
-#: selection:crm.product.report,type:0
 #: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_search
 msgid "Opportunity"
 msgstr "Oportunidad"
@@ -237,10 +235,14 @@ msgstr "Análisis Pipeline"
 
 #. module: crm_lead_product
 #: model_terms:ir.actions.act_window,help:crm_lead_product.crm_product_report_action
-msgid "Pipeline Analysis gives you an instant access to\n"
-"your opportunities with information such as the expected revenue, planned cost,\n"
-"missed deadlines or the number of interactions per opportunity. This report is\n"
-"mainly used by the sales manager in order to do the periodic review with the\n"
+msgid ""
+"Pipeline Analysis gives you an instant access to\n"
+"your opportunities with information such as the expected revenue, planned "
+"cost,\n"
+"missed deadlines or the number of interactions per opportunity. This report "
+"is\n"
+"mainly used by the sales manager in order to do the periodic review with "
+"the\n"
 "teams of the sales pipeline."
 msgstr ""
 "El análisis Pipeline proporciona en tiempo real acceso a tus oportunidades "
@@ -305,8 +307,7 @@ msgid "Product Template"
 msgstr "Plantilla de producto"
 
 #. module: crm_lead_product
-#: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_case_form_view_leads
-#: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_case_form_view_oppor
+#: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_lead_view_form
 #: model_terms:ir.ui.view,arch_db:crm_lead_product.view_tree_lead_line
 msgid "Products"
 msgstr "Productos"
