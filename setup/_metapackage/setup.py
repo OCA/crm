@@ -9,6 +9,7 @@ setuptools.setup(
     version=version,
     install_requires=[
         'odoo13-addon-crm_lead_product',
+        'odoo13-addon-crm_phonecall',
         'odoo13-addon-crm_stage_probability',
     ],
     classifiers=[
