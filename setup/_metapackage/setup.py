@@ -16,6 +16,7 @@ setuptools.setup(
         'odoo10-addon-crm_deduplicate_filter',
         'odoo10-addon-crm_lead_code',
         'odoo10-addon-crm_lead_partner_role',
+        'odoo10-addon-crm_lead_project',
         'odoo10-addon-crm_lead_website',
         'odoo10-addon-crm_location',
         'odoo10-addon-crm_location_nuts',
