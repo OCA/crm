@@ -36,7 +36,7 @@ msgid "Display Name"
 msgstr "Naziv"
 
 #. module: crm_phonecall_summary_predefined
-#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary_id_4924
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary_id_5116
 msgid "ID"
 msgstr "ID"
 
