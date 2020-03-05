@@ -112,7 +112,7 @@ msgid "Groups"
 msgstr ""
 
 #. module: crm_mailchimp
-#: model:ir.model.fields,field_description:crm_mailchimp.field_mailchimp_interest_category_id_4668
+#: model:ir.model.fields,field_description:crm_mailchimp.field_mailchimp_interest_category_id_4841
 #: model:ir.model.fields,field_description:crm_mailchimp.field_mailchimp_interest_id
 #: model:ir.model.fields,field_description:crm_mailchimp.field_mailchimp_list_id
 #: model:ir.model.fields,field_description:crm_mailchimp.field_mailchimp_merge_field_id
