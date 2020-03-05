@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="crm_project_tasks_action" model="ir.actions.act_window">
+        <field name="name">Tasks</field>
+        <field name="res_model">project.task</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">kanban,tree,form,calendar,pivot,graph</field>
+        <field name="domain">[('project_id.crm_project', '=', True)]</field>
+    </record>
+
+    <record id="crm_project_projects_action" model="ir.actions.act_window">
+        <field name="name">Projects</field>
+        <field name="res_model">project.project</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">kanban,form</field>
+        <field name="context">{'remove_create_button': True}</field>
+        <field name="domain">[('crm_project', '=', True)]</field>
+    </record>
+
+    <menuitem name="CRM Projects" id="menu_crm_projects" parent="sales_team.menu_sales" sequence="70" groups="project.group_project_user" />
+    <menuitem action="crm_project_projects_action" id="menu_crm_project_projects" parent="menu_crm_projects" sequence="10" />
+    <menuitem action="crm_project_tasks_action" id="menu_crm_project_tasks" parent="menu_crm_projects" sequence="20" />
+
+</odoo>

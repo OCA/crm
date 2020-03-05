@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="crm_case_form_view_oppor_inherit" model="ir.ui.view">
+        <field name="name">crm.lead.form.opportunity.inherit</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_form_view_oppor" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <field name="project_id" invisible="1" />
+                <button name="action_open_project_form" string="Project"
+                        type="object" class="oe_stat_button"
+                        icon="fa-puzzle-piece"
+                        attrs="{'invisible': [('project_id', '=', False)]}" />
+            </xpath>
+            <xpath expr="//header" position="inside">
+                <button name="%(crm_lead_project.crm_opportunity_create_project_action)d"
+                        string="Create project"
+                        type="action" class="btn-link"
+                        attrs="{'invisible': [('project_id', '!=', False)]}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
