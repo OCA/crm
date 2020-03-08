@@ -6,15 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2019-02-04 19:50+0000\n"
-"Last-Translator: Marta Vázquez Rodríguez <vazrodmar@gmail.com>\n"
+"PO-Revision-Date: 2020-03-08 13:13+0000\n"
+"Last-Translator: Antonio Pérez Ruth <antonio.perez@makrin.es>\n"
 "Language-Team: none\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.4\n"
+"X-Generator: Weblate 3.10\n"
 
 #. module: crm_lead_product
 #: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__active
@@ -51,7 +51,7 @@ msgstr "Compañía"
 #. module: crm_lead_product
 #: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__partner_name
 msgid "Contact Name"
-msgstr "Nombre Contacto"
+msgstr "Nombre del contacto"
 
 #. module: crm_lead_product
 #: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__date_conversion
@@ -109,7 +109,7 @@ msgstr "Descripción"
 #: model:ir.model.fields,field_description:crm_lead_product.field_crm_lead_line__display_name
 #: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__display_name
 msgid "Display Name"
-msgstr "Nombre a mostrar"
+msgstr "Nombre para mostrar"
 
 #. module: crm_lead_product
 #: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_search
@@ -320,7 +320,7 @@ msgstr "Cantidad"
 #: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__team_id
 #: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_search
 msgid "Sales Team"
-msgstr "Equipos de Venta"
+msgstr "Equipo de Ventas"
 
 #. module: crm_lead_product
 #: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__user_id
