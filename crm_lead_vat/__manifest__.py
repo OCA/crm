@@ -3,17 +3,13 @@
 {
     "name": "VAT in leads",
     "summary": "Add VAT field to leads",
-    "version": "12.0.1.0.0",
+    "version": "13.0.1.0.0",
     "category": "Customer Relationship Management",
     "website": "https://github.com/OCA/crm",
     "author": "Antiun Ingeniería S.L., Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": [
-        "crm",
-    ],
-    "data": [
-        "views/crm_lead.xml",
-    ],
+    "depends": ["crm"],
+    "data": ["views/crm_lead.xml"],
 }
