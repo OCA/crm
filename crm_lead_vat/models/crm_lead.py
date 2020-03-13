@@ -1,7 +1,7 @@
 # Copyright 2015 Antiun Ingeniería, S.L.
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
-from odoo import api, fields, models
+from odoo import fields, models
 
 
 class Lead(models.Model):
@@ -13,7 +13,6 @@ class Lead(models.Model):
         "country code.",
     )
 
-    @api.multi
     def _create_lead_partner(self):
         """Add VAT to partner."""
         return super(
