@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <record id="crm_lead_stage_search_inherit" model="ir.ui.view">
         <field name="name">Stage - Search - inherit</field>
@@ -27,8 +27,11 @@
         <field name="arch" type="xml">
             <field name="team_count" position="after">
                 <group name="probability">
-                    <field name="on_change"/>
-                    <field name="probability" attrs="{'invisible': [('on_change', '=', False)]}"/>
+                    <field name="on_change" />
+                    <field
+                        name="probability"
+                        attrs="{'invisible': [('on_change', '=', False)]}"
+                    />
                 </group>
             </field>
         </field>
