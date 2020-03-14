@@ -76,6 +76,11 @@ msgid "By Sales Team"
 msgstr "nach Verkaufsteam"
 
 #. module: crm_phonecall
+#: model:ir.model,name:crm_phonecall.model_calendar_event
+msgid "Calendar Event"
+msgstr ""
+
+#. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__name
 msgid "Call Summary"
 msgstr "Telefonat-Zusammenfassung"
@@ -87,7 +92,6 @@ msgstr "Telefonat-Zusammenfassung"
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_form_view_leads_inherit
-#: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_form_view_oppor_inherit
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_partners_form_crm_calls_inherit
 msgid "Calls"
 msgstr "Telefonate"
@@ -103,7 +107,8 @@ msgid "Campaign"
 msgstr "Kampagne"
 
 #. module: crm_phonecall
-#: selection:crm.phonecall,state:0 selection:crm.phonecall.report,state:0
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall__state__cancel
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall_report__state__cancel
 msgid "Cancelled"
 msgstr "Abgebrochen"
 
@@ -145,7 +150,7 @@ msgid "Company"
 msgstr "Unternehmen"
 
 #. module: crm_phonecall
-#: selection:crm.phonecall,state:0
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall__state__open
 msgid "Confirmed"
 msgstr "Bestätigt"
 
@@ -251,7 +256,7 @@ msgid "Display Name"
 msgstr "Anzeigename"
 
 #. module: crm_phonecall
-#: selection:crm.phonecall.report,state:0
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall_report__state__draft
 msgid "Draft"
 msgstr "Entwurf"
 
@@ -270,11 +275,6 @@ msgstr "Dauer in Minuten und Sekunden."
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__email_from
 msgid "Email"
 msgstr "Email"
-
-#. module: crm_phonecall
-#: model:ir.model,name:crm_phonecall.model_calendar_event
-msgid "Event"
-msgstr "Ereignis"
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
@@ -303,13 +303,15 @@ msgid "Group By"
 msgstr "Gruppieren nach"
 
 #. module: crm_phonecall
-#: selection:crm.phonecall,state:0 selection:crm.phonecall.report,state:0
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall__state__done
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall_report__state__done
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
 msgid "Held"
 msgstr "Gehalten"
 
 #. module: crm_phonecall
-#: selection:crm.phonecall,priority:0 selection:crm.phonecall.report,priority:0
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall__priority__2
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall_report__priority__2
 msgid "High"
 msgstr "Hoch"
 
@@ -321,17 +323,14 @@ msgid "ID"
 msgstr "ID"
 
 #. module: crm_phonecall
-#: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__message_unread
-msgid "If checked new messages require your attention."
-msgstr "Wenn es gesetzt ist, erfordern neue Nachrichten Ihre Aufmerksamkeit."
-
-#. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__message_needaction
+#: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__message_unread
 msgid "If checked, new messages require your attention."
 msgstr "Wenn es gesetzt ist, erfordern neue Nachrichten Ihre Aufmerksamkeit."
 
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__message_has_error
+#: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
 msgstr ""
 "Wenn es gesetzt ist, gibt es einige Nachrichten mit einem Übertragungsfehler."
@@ -386,7 +385,7 @@ msgid "Log Call"
 msgstr "Telefonat protokollieren"
 
 #. module: crm_phonecall
-#: selection:crm.phonecall2phonecall,action:0
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall2phonecall__action__log
 msgid "Log a call"
 msgstr "Telefonat protokollieren"
 
@@ -397,7 +396,8 @@ msgid "Logged Calls"
 msgstr "Protokollierte Telefonate"
 
 #. module: crm_phonecall
-#: selection:crm.phonecall,priority:0 selection:crm.phonecall.report,priority:0
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall__priority__0
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall_report__priority__0
 msgid "Low"
 msgstr "Niedrig"
 
@@ -473,7 +473,8 @@ msgid "Next Action"
 msgstr "Nächste Aktion"
 
 #. module: crm_phonecall
-#: selection:crm.phonecall,priority:0 selection:crm.phonecall.report,priority:0
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall__priority__1
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall_report__priority__1
 msgid "Normal"
 msgstr "Normal"
 
@@ -504,7 +505,9 @@ msgstr "Anzahl der Tage bis zur Eröffnung des Falls"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_has_error_counter
-msgid "Number of error"
+#, fuzzy
+#| msgid "Number of error"
+msgid "Number of errors"
 msgstr "Anzahl der Fehler"
 
 #. module: crm_phonecall
@@ -561,7 +564,8 @@ msgid "Partner"
 msgstr "Partner"
 
 #. module: crm_phonecall
-#: selection:crm.phonecall,state:0 selection:crm.phonecall.report,state:0
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall__state__pending
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall_report__state__pending
 msgid "Pending"
 msgstr "Ausstehend"
 
@@ -573,7 +577,7 @@ msgid "Phone"
 msgstr "Telefon"
 
 #. module: crm_phonecall
-#: code:addons/crm_phonecall/models/crm_phonecall.py:200
+#: code:addons/crm_phonecall/models/crm_phonecall.py:0
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
 #, python-format
 msgid "Phone Call"
@@ -686,6 +690,13 @@ msgid "Responsible"
 msgstr "Verantwortlich"
 
 #. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_has_sms_error
+#, fuzzy
+#| msgid "Message Delivery error"
+msgid "SMS Delivery error"
+msgstr "Nachrichten-Übertragungsfehler"
+
+#. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__team_id
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__team_id
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
@@ -715,7 +726,7 @@ msgid "Schedule Other Call"
 msgstr "Weiteres Telefonat planen"
 
 #. module: crm_phonecall
-#: selection:crm.phonecall2phonecall,action:0
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall2phonecall__action__schedule
 msgid "Schedule a call"
 msgstr "Telefonat planen"
 
@@ -810,7 +821,7 @@ msgid "To Do"
 msgstr "Zu erledigen"
 
 #. module: crm_phonecall
-#: selection:crm.phonecall.report,state:0
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall_report__state__open
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
 msgid "Todo"
 msgstr "Todo"
@@ -858,3 +869,10 @@ msgid ""
 msgstr ""
 "Sie können die Import-Funktion verwenden, um eine Liste von zu prüfenden "
 "Chancen zu importieren."
+
+#~ msgid "Event"
+#~ msgstr "Ereignis"
+
+#~ msgid "If checked new messages require your attention."
+#~ msgstr ""
+#~ "Wenn es gesetzt ist, erfordern neue Nachrichten Ihre Aufmerksamkeit."
