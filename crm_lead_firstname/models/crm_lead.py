@@ -1,4 +1,4 @@
-# © 2016 Antiun Ingeniería S.L. - Jairo Llopis
+# Copyright 2016 Antiun Ingeniería S.L. - Jairo Llopis
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
 from odoo import fields, models
@@ -17,15 +17,11 @@ class CrmLead(models.Model):
         )
         if not is_company:
             if self.contact_name:
-                lead_partner_data.update(
-                    {"firstname": self.contact_name,}
-                )
+                lead_partner_data.update({"firstname": self.contact_name})
                 if "name" in lead_partner_data:
                     del lead_partner_data["name"]
             if self.contact_lastname:
-                lead_partner_data.update(
-                    {"lastname": self.contact_lastname,}
-                )
+                lead_partner_data.update({"lastname": self.contact_lastname})
                 if "name" in lead_partner_data:
                     del lead_partner_data["name"]
         return lead_partner_data
