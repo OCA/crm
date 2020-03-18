@@ -20,8 +20,7 @@ msgstr ""
 "X-Generator: Weblate 3.8\n"
 
 #. module: crm_lead_firstname
-#: model_terms:ir.ui.view,arch_db:crm_lead_firstname.crm_case_form_view_leads
-#: model_terms:ir.ui.view,arch_db:crm_lead_firstname.crm_case_form_view_oppor
+#: model_terms:ir.ui.view,arch_db:crm_lead_firstname.crm_lead_view_form
 msgid "Contact Name"
 msgstr "Nome de Contato"
 
@@ -31,8 +30,7 @@ msgid "First name"
 msgstr "Primeiro Nome"
 
 #. module: crm_lead_firstname
-#: model_terms:ir.ui.view,arch_db:crm_lead_firstname.crm_case_form_view_leads
-#: model_terms:ir.ui.view,arch_db:crm_lead_firstname.crm_case_form_view_oppor
+#: model_terms:ir.ui.view,arch_db:crm_lead_firstname.crm_lead_view_form
 msgid "Firstname"
 msgstr "Primeironome"
 
@@ -42,8 +40,7 @@ msgid "Last name"
 msgstr "Último Nome"
 
 #. module: crm_lead_firstname
-#: model_terms:ir.ui.view,arch_db:crm_lead_firstname.crm_case_form_view_leads
-#: model_terms:ir.ui.view,arch_db:crm_lead_firstname.crm_case_form_view_oppor
+#: model_terms:ir.ui.view,arch_db:crm_lead_firstname.crm_lead_view_form
 msgid "Lastname"
 msgstr "Sobrenome"
 
