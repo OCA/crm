@@ -4,7 +4,8 @@
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
 from psycopg2.extensions import AsIs
-from odoo import api, fields, models, tools
+
+from odoo import fields, models, tools
 
 
 class CrmClaimReport(models.Model):
@@ -14,96 +15,53 @@ class CrmClaimReport(models.Model):
     _auto = False
     _description = "CRM Claim Report"
 
-    user_id = fields.Many2one(
-        comodel_name='res.users',
-        string='User',
-        readonly=True,
-    )
-    team_id = fields.Many2one(
-        comodel_name='crm.team',
-        string='Team',
-        readonly=True,
-    )
-    nbr_claims = fields.Integer(
-        string='# of Claims',
-        readonly=True,
-        oldname='nbr',
-    )
+    user_id = fields.Many2one(comodel_name="res.users", string="User", readonly=True)
+    team_id = fields.Many2one(comodel_name="crm.team", string="Team", readonly=True)
+    nbr_claims = fields.Integer(string="# of Claims", readonly=True)
     company_id = fields.Many2one(
-        comodel_name='res.company',
-        string='Company',
-        readonly=True,
+        comodel_name="res.company", string="Company", readonly=True
     )
-    create_date = fields.Datetime(
-        readonly=True,
-        index=True,
-    )
-    claim_date = fields.Datetime(
-        string='Claim Date',
-        readonly=True,
-    )
+    create_date = fields.Datetime(readonly=True, index=True)
+    claim_date = fields.Datetime(string="Claim Date", readonly=True)
     delay_close = fields.Float(
-        string='Delay to close',
+        string="Delay to close",
         digits=(16, 2),
         readonly=True,
         group_operator="avg",
         help="Number of Days to close the case",
     )
     stage_id = fields.Many2one(
-        comodel_name='crm.claim.stage',
-        string='Stage',
+        comodel_name="crm.claim.stage",
+        string="Stage",
         readonly=True,
         domain="[('team_ids','=',team_id)]",
     )
     categ_id = fields.Many2one(
-        comodel_name='crm.claim.category',
-        string='Category',
-        readonly=True,
+        comodel_name="crm.claim.category", string="Category", readonly=True
     )
     partner_id = fields.Many2one(
-        comodel_name='res.partner',
-        string='Partner',
-        readonly=True,
+        comodel_name="res.partner", string="Partner", readonly=True
     )
     priority = fields.Selection(
-        selection=[
-            ('0', 'Low'),
-            ('1', 'Normal'),
-            ('2', 'High'),
-        ],
-        string='Priority',
+        selection=[("0", "Low"), ("1", "Normal"), ("2", "High")], string="Priority"
     )
     type_action = fields.Selection(
         selection=[
-            ('correction', 'Corrective Action'),
-            ('prevention', 'Preventive Action'),
+            ("correction", "Corrective Action"),
+            ("prevention", "Preventive Action"),
         ],
-        string='Action Type',
+        string="Action Type",
     )
-    date_closed = fields.Datetime(
-        string='Close Date',
-        readonly=True,
-        index=True,
-    )
-    date_deadline = fields.Date(
-        string='Deadline',
-        readonly=True,
-        index=True,
-    )
+    date_closed = fields.Datetime(string="Close Date", readonly=True, index=True)
+    date_deadline = fields.Date(string="Deadline", readonly=True, index=True)
     delay_expected = fields.Float(
-        string='Overpassed Deadline',
+        string="Overpassed Deadline",
         digits=(16, 2),
         readonly=True,
         group_operator="avg",
     )
-    email = fields.Integer(
-        string='# Emails',
-        readonly=True,
-    )
-    subject = fields.Char(
-        string='Claim Subject',
-        readonly=True,
-    )
+    email = fields.Integer(string="# Emails", readonly=True)
+    subject = fields.Char(string="Claim Subject", readonly=True)
 
     def _select(self):
         select_str = """
@@ -153,7 +111,6 @@ class CrmClaimReport(models.Model):
         """
         return group_by_str
 
-    @api.model_cr
     def init(self):
         """ Display Number of cases And Team Name
         @param cr: the current row, from the database cursor,
@@ -167,6 +124,11 @@ class CrmClaimReport(models.Model):
                 from
                 %s
                 %s)
-            """, (AsIs(self._table), AsIs(self._select()), AsIs(self._from()),
-                  AsIs(self._group_by()))
+            """,
+            (
+                AsIs(self._table),
+                AsIs(self._select()),
+                AsIs(self._from()),
+                AsIs(self._group_by()),
+            ),
         )
