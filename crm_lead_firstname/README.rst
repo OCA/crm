@@ -14,13 +14,13 @@ Firstname and Lastname in Leads
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fcrm-lightgray.png?logo=github
-    :target: https://github.com/OCA/crm/tree/12.0/crm_lead_firstname
+    :target: https://github.com/OCA/crm/tree/13.0/crm_lead_firstname
     :alt: OCA/crm
 .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
-    :target: https://translation.odoo-community.org/projects/crm-12-0/crm-12-0-crm_lead_firstname
+    :target: https://translation.odoo-community.org/projects/crm-13-0/crm-13-0-crm_lead_firstname
     :alt: Translate me on Weblate
 .. |badge5| image:: https://img.shields.io/badge/runbot-Try%20me-875A7B.png
-    :target: https://runbot.odoo-community.org/runbot/111/12.0
+    :target: https://runbot.odoo-community.org/runbot/111/13.0
     :alt: Try me on Runbot
 
 |badge1| |badge2| |badge3| |badge4| |badge5| 
@@ -28,7 +28,10 @@ Firstname and Lastname in Leads
 This module extends the functionality of CRM leads to support split first and
 last name fields for contacts and allow you to port that information to and
 from partners.
-
+Since leads are expected to create partners only when needed and after
+information is correctly set up, in leads there is no inverse logic to
+transform the old single name in the new split names automatically. The old
+single name will simply be the firstname now.
 
 **Table of contents**
 
@@ -37,11 +40,6 @@ from partners.
 
 Installation
 ============
-
-Since leads are expected to create partners only when needed and after
-information is correctly set up, in leads there is no inverse logic to
-transform the old single name in the new split names automatically. The old
-single name will simply be the firstname now.
 
 To install this module, you need to:
 
@@ -67,7 +65,7 @@ Bug Tracker
 Bugs are tracked on `GitHub Issues <https://github.com/OCA/crm/issues>`_.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us smashing it by providing a detailed and welcomed
-`feedback <https://github.com/OCA/crm/issues/new?body=module:%20crm_lead_firstname%0Aversion:%2012.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+`feedback <https://github.com/OCA/crm/issues/new?body=module:%20crm_lead_firstname%0Aversion:%2013.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
 Do not contact contributors directly about support or help with technical issues.
 
@@ -85,6 +83,7 @@ Contributors
 * Rafael Blasco
 * Jairo Llopis
 * Raf Ven <raf.ven@dynapps.be>
+* Nikos Tsirintanis <ntsirintanis@therp.nl>
 
 Maintainers
 ~~~~~~~~~~~
@@ -99,6 +98,6 @@ OCA, or the Odoo Community Association, is a nonprofit organization whose
 mission is to support the collaborative development of Odoo features and
 promote its widespread use.
 
-This module is part of the `OCA/crm <https://github.com/OCA/crm/tree/12.0/crm_lead_firstname>`_ project on GitHub.
+This module is part of the `OCA/crm <https://github.com/OCA/crm/tree/13.0/crm_lead_firstname>`_ project on GitHub.
 
 You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.
