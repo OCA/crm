@@ -7,10 +7,10 @@ from odoo import api, fields, models
 
 
 class CrmLead(models.Model):
-    _inherit = 'crm.lead'
+    _inherit = "crm.lead"
 
     @api.multi
-    @api.onchange('location_id')
+    @api.onchange("location_id")
     def on_change_city(self):
         if self.location_id:
             self.zip = self.location_id.name
@@ -19,13 +19,13 @@ class CrmLead(models.Model):
             self.country_id = self.location_id.city_id.country_id
 
     location_id = fields.Many2one(
-        'res.city.zip',
-        string='Location',
+        "res.city.zip",
+        string="Location",
         index=True,
-        help='Use the city name or the zip code to search the location',
+        help="Use the city name or the zip code to search the location",
     )
 
-    @api.onchange('partner_id')
+    @api.onchange("partner_id")
     def onchange_partner_id_crm_location(self):
         if self.partner_id:
             self.location_id = self.partner_id.zip_id.id
