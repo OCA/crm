@@ -9,22 +9,21 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-28 12:23+0000\n"
-"PO-Revision-Date: 2018-04-28 12:23+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
+"PO-Revision-Date: 2020-03-21 11:13+0000\n"
+"Last-Translator: Matjaz Mozetic <matjaz@matmoz.si>\n"
 "Language-Team: Slovenian (https://www.transifex.com/oca/teams/23907/sl/)\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
-"%100==4 ? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 3.10\n"
 
 #. module: crm_phonecall_summary_predefined
 #: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall__name
-#, fuzzy
-#| msgid "Summary"
 msgid "Call Summary"
-msgstr "Povzetek"
+msgstr "Povzetek klica"
 
 #. module: crm_phonecall_summary_predefined
 #: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary__create_uid
@@ -38,10 +37,8 @@ msgstr "Ustvarjeno"
 
 #. module: crm_phonecall_summary_predefined
 #: model:ir.model,name:crm_phonecall_summary_predefined.model_crm_phonecall_summary
-#, fuzzy
-#| msgid "Phonecalls with this summary."
 msgid "Crm Phonecall Summary"
-msgstr "Telefonski klici s tem povzetkom"
+msgstr "Povzetek telefonskega klica"
 
 #. module: crm_phonecall_summary_predefined
 #: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary__display_name
@@ -91,7 +88,7 @@ msgstr "Telefonski klici"
 #. module: crm_phonecall_summary_predefined
 #: model:ir.model.fields,help:crm_phonecall_summary_predefined.field_crm_phonecall_summary__phonecall_ids
 msgid "Phonecalls with this summary."
-msgstr "Telefonski klici s tem povzetkom"
+msgstr "Telefonski klici s tem povzetkom."
 
 #. module: crm_phonecall_summary_predefined
 #: model:ir.actions.act_window,name:crm_phonecall_summary_predefined.crm_phonecall_summary_action
