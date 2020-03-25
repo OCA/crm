@@ -19,8 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: crm_location
-#: model_terms:ir.ui.view,arch_db:crm_location.crm_case_form_view_leads
-#: model_terms:ir.ui.view,arch_db:crm_location.crm_case_form_view_oppor
+#: model_terms:ir.ui.view,arch_db:crm_location.crm_lead_view_form
 msgid "City completion"
 msgstr ""
 
