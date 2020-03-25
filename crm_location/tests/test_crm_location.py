@@ -9,6 +9,7 @@ class TestCrmLocation(common.SavepointCase):
     @classmethod
     def setUpClass(cls):
         super(TestCrmLocation, cls).setUpClass()
+        cls.env = cls.env(context=dict(cls.env.context, tracking_disable=True))
         cls.country = cls.env["res.country"].create({"name": "Test country"})
         cls.state = cls.env["res.country.state"].create(
             {
