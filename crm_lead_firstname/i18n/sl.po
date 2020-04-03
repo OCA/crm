@@ -21,8 +21,7 @@ msgstr ""
 "%100==4 ? 2 : 3);\n"
 
 #. module: crm_lead_firstname
-#: model_terms:ir.ui.view,arch_db:crm_lead_firstname.crm_case_form_view_leads
-#: model_terms:ir.ui.view,arch_db:crm_lead_firstname.crm_case_form_view_oppor
+#: model_terms:ir.ui.view,arch_db:crm_lead_firstname.crm_lead_view_form
 msgid "Contact Name"
 msgstr "Naziv stika"
 
@@ -34,8 +33,7 @@ msgid "First name"
 msgstr "Ime"
 
 #. module: crm_lead_firstname
-#: model_terms:ir.ui.view,arch_db:crm_lead_firstname.crm_case_form_view_leads
-#: model_terms:ir.ui.view,arch_db:crm_lead_firstname.crm_case_form_view_oppor
+#: model_terms:ir.ui.view,arch_db:crm_lead_firstname.crm_lead_view_form
 msgid "Firstname"
 msgstr "Ime"
 
@@ -45,8 +43,7 @@ msgid "Last name"
 msgstr "Priimek"
 
 #. module: crm_lead_firstname
-#: model_terms:ir.ui.view,arch_db:crm_lead_firstname.crm_case_form_view_leads
-#: model_terms:ir.ui.view,arch_db:crm_lead_firstname.crm_case_form_view_oppor
+#: model_terms:ir.ui.view,arch_db:crm_lead_firstname.crm_lead_view_form
 msgid "Lastname"
 msgstr "Priimek"
 
