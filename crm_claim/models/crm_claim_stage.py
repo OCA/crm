@@ -16,8 +16,8 @@ class CrmClaimStage(models.Model):
     _description = "Claim stages"
     _order = "sequence"
 
-    name = fields.Char(string="Stage Name", required=True, translate=True,)
-    sequence = fields.Integer(default=1, help="Used to order stages. Lower is better.",)
+    name = fields.Char(string="Stage Name", required=True, translate=True)
+    sequence = fields.Integer(default=1, help="Used to order stages. Lower is better.")
     team_ids = fields.Many2many(
         comodel_name="crm.team",
         relation="crm_team_claim_stage_rel",

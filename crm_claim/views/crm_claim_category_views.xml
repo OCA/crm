@@ -32,7 +32,6 @@
     <record id="crm_claim_categ_action" model="ir.actions.act_window">
         <field name="name">Claim Categories</field>
         <field name="res_model">crm.claim.category</field>
-        <field name="view_type">form</field>
         <field name="view_id" ref="crm_claim_category_tree" />
         <field name="help" type="html">
             <p class="oe_view_nocontent_create">

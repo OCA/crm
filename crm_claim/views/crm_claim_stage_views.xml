@@ -29,7 +29,6 @@
     <record id="crm_claim_stage_act" model="ir.actions.act_window">
         <field name="name">Claim Stages</field>
         <field name="res_model">crm.claim.stage</field>
-        <field name="view_type">form</field>
         <field name="view_id" ref="crm_claim_stage_tree" />
         <field name="help" type="html">
             <p class="oe_view_nocontent_create">
