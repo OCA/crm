@@ -18,8 +18,7 @@ msgstr ""
 "X-Generator: Poedit 1.8.6\n"
 
 #. module: crm_lead_firstname
-#: model_terms:ir.ui.view,arch_db:crm_lead_firstname.crm_case_form_view_leads
-#: model_terms:ir.ui.view,arch_db:crm_lead_firstname.crm_case_form_view_oppor
+#: model_terms:ir.ui.view,arch_db:crm_lead_firstname.crm_lead_view_form
 msgid "Contact Name"
 msgstr "Nombre del contacto"
 
@@ -31,8 +30,7 @@ msgid "First name"
 msgstr "Nombre de pila"
 
 #. module: crm_lead_firstname
-#: model_terms:ir.ui.view,arch_db:crm_lead_firstname.crm_case_form_view_leads
-#: model_terms:ir.ui.view,arch_db:crm_lead_firstname.crm_case_form_view_oppor
+#: model_terms:ir.ui.view,arch_db:crm_lead_firstname.crm_lead_view_form
 msgid "Firstname"
 msgstr "Nombre de pila"
 
@@ -42,8 +40,7 @@ msgid "Last name"
 msgstr "Apellido"
 
 #. module: crm_lead_firstname
-#: model_terms:ir.ui.view,arch_db:crm_lead_firstname.crm_case_form_view_leads
-#: model_terms:ir.ui.view,arch_db:crm_lead_firstname.crm_case_form_view_oppor
+#: model_terms:ir.ui.view,arch_db:crm_lead_firstname.crm_lead_view_form
 msgid "Lastname"
 msgstr "Apellido"
 
