@@ -11,8 +11,8 @@ msgstr ""
 "POT-Creation-Date: 2017-03-28 02:25+0000\n"
 "PO-Revision-Date: 2019-06-28 13:42+0000\n"
 "Last-Translator: Maria Sparenberg <maria.sparenberg@gmx.net>\n"
-"Language-Team: German (http://www.transifex.com/oca/OCA-crm-8-0/language/de/)"
-"\n"
+"Language-Team: German (http://www.transifex.com/oca/OCA-crm-8-0/language/"
+"de/)\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,8 +21,7 @@ msgstr ""
 "X-Generator: Weblate 3.6.1\n"
 
 #. module: crm_lead_firstname
-#: model_terms:ir.ui.view,arch_db:crm_lead_firstname.crm_case_form_view_leads
-#: model_terms:ir.ui.view,arch_db:crm_lead_firstname.crm_case_form_view_oppor
+#: model_terms:ir.ui.view,arch_db:crm_lead_firstname.crm_lead_view_form
 msgid "Contact Name"
 msgstr "Ansprechpartner"
 
@@ -32,8 +31,7 @@ msgid "First name"
 msgstr "Vorname"
 
 #. module: crm_lead_firstname
-#: model_terms:ir.ui.view,arch_db:crm_lead_firstname.crm_case_form_view_leads
-#: model_terms:ir.ui.view,arch_db:crm_lead_firstname.crm_case_form_view_oppor
+#: model_terms:ir.ui.view,arch_db:crm_lead_firstname.crm_lead_view_form
 msgid "Firstname"
 msgstr "Vorname"
 
@@ -43,8 +41,7 @@ msgid "Last name"
 msgstr "Nachname"
 
 #. module: crm_lead_firstname
-#: model_terms:ir.ui.view,arch_db:crm_lead_firstname.crm_case_form_view_leads
-#: model_terms:ir.ui.view,arch_db:crm_lead_firstname.crm_case_form_view_oppor
+#: model_terms:ir.ui.view,arch_db:crm_lead_firstname.crm_lead_view_form
 msgid "Lastname"
 msgstr "Nachname"
 
