@@ -2,8 +2,10 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from __future__ import division
+
 from datetime import datetime, timedelta
 from logging import getLogger
+
 from odoo import _, api, fields, models
 from odoo.exceptions import ValidationError
 from odoo.tools import safe_eval
@@ -18,25 +20,12 @@ class CrmPhonecallPlan(models.TransientModel):
         "utm.mixin",
     ]
 
-    name = fields.Char(
-        "Call Summary",
-        required=True,
-    )
-    user_id = fields.Many2one(
-        comodel_name="res.users",
-        string="Responsible",
-    )
-    team_id = fields.Many2one(
-        comodel_name="crm.team",
-        string="Sales Team",
-    )
-    tag_ids = fields.Many2many(
-        comodel_name="crm.lead.tag",
-        string="Tags",
-    )
+    name = fields.Char("Call Summary", required=True,)
+    user_id = fields.Many2one(comodel_name="res.users", string="Responsible",)
+    team_id = fields.Many2one(comodel_name="crm.team", string="Sales Team",)
+    tag_ids = fields.Many2many(comodel_name="crm.lead.tag", string="Tags",)
     res_partner_domain = fields.Char(
-        "Partners filter",
-        help="Filter the parters that will get a scheduled call.",
+        "Partners filter", help="Filter the parters that will get a scheduled call.",
     )
     duration = fields.Float(
         string="Call duration",
@@ -48,26 +37,24 @@ class CrmPhonecallPlan(models.TransientModel):
         default=lambda self: self._default_start(),
         required=True,
         help="Schedule calls from this moment. The time you select will be "
-             "used as the plan starting time for each day in the range.",
+        "used as the plan starting time for each day in the range.",
     )
     end = fields.Datetime(
         default=lambda self: self._default_end(),
         required=True,
         help="Schedule calls until this moment. The time you select will be "
-             "used as the plan ending time for each day in the range.",
+        "used as the plan ending time for each day in the range.",
     )
     repeat_calls = fields.Boolean(
         help="Allow repeated calls for the same partner, campaign, medium "
-             "and source combination?",
+        "and source combination?",
     )
     days_gap = fields.Integer(
         default=1,
         required=True,
-        help="Schedule one call each X days to the same partner."
+        help="Schedule one call each X days to the same partner.",
     )
-    planned_calls = fields.Many2many(
-        comodel_name="crm.phonecall",
-    )
+    planned_calls = fields.Many2many(comodel_name="crm.phonecall",)
 
     @api.model
     def _default_duration(self):
@@ -85,8 +72,7 @@ class CrmPhonecallPlan(models.TransientModel):
     def _constrains_plan_dates(self):
         for one in self:
             if one.start > one.end:
-                raise ValidationError(
-                    _("Starting date must be less than ending date"))
+                raise ValidationError(_("Starting date must be less than ending date"))
 
     @api.multi
     def action_accept(self):
@@ -118,10 +104,7 @@ class CrmPhonecallPlan(models.TransientModel):
             ("medium_id", "=", self.medium_id.id),
         ]
         existing_calls = Phonecall.search(
-            utm_domain + [
-                ("partner_id", "!=", False),
-            ],
-            order="date",
+            utm_domain + [("partner_id", "!=", False)], order="date",
         )
         # Get partners to plan
         partner_domain = safe_eval(self.res_partner_domain or "[]") + [
@@ -133,8 +116,7 @@ class CrmPhonecallPlan(models.TransientModel):
         while partners and now <= end:
             now += call_duration
             _logger.debug(
-                "Plannig phonecalls for %s",
-                fields.Datetime.to_string(now),
+                "Plannig phonecalls for %s", fields.Datetime.to_string(now),
             )
             # Should we continue tomorrow?
             if not start.time() <= now.time() <= end.time():
@@ -147,17 +129,21 @@ class CrmPhonecallPlan(models.TransientModel):
                 continue
             # Know partners that we cannot call right now
             if self.repeat_calls:
-                forbidden_partners = Phonecall.search(utm_domain + [
-                    ("partner_id", "in", partners.ids),
-                    ("date", ">",
-                     fields.Datetime.to_string(now - repetition_gap)),
-                ]).mapped("partner_id")
+                forbidden_partners = Phonecall.search(
+                    utm_domain
+                    + [
+                        ("partner_id", "in", partners.ids),
+                        ("date", ">", fields.Datetime.to_string(now - repetition_gap)),
+                    ]
+                ).mapped("partner_id")
             # Know partners we can call right now
-            available_partners = Partner.with_context(now=now).search([
-                ("id", "in", partners.ids),
-                ("id", "not in", forbidden_partners.ids),
-                ("phonecall_available", "=", True),
-            ])
+            available_partners = Partner.with_context(now=now).search(
+                [
+                    ("id", "in", partners.ids),
+                    ("id", "not in", forbidden_partners.ids),
+                    ("phonecall_available", "=", True),
+                ]
+            )
             # Continue when nobody is available
             if not available_partners:
                 continue
@@ -168,6 +154,7 @@ class CrmPhonecallPlan(models.TransientModel):
                 partners -= winner
                 continue
             # Get a partner with no calls, or with the oldest one
+            # pylint: disable=E8103
             self.env.cr.execute(
                 oldest_call_to_partner.format(
                     ",".join(["%s"] * len(available_partners)),
@@ -192,17 +179,19 @@ class CrmPhonecallPlan(models.TransientModel):
             partner.display_name,
             fields.Datetime.to_string(when),
         )
-        self.planned_calls |= self.env["crm.phonecall"].create({
-            "campaign_id": self.campaign_id.id,
-            "date": when,
-            "duration": self.duration,
-            "medium_id": self.medium_id.id,
-            "partner_mobile": partner.mobile,
-            "name": self.name,
-            "partner_id": partner.id,
-            "partner_phone": partner.phone,
-            "source_id": self.source_id.id,
-            "tag_ids": [(6, 0, self.tag_ids.ids)],
-            "team_id": self.team_id.id,
-            "user_id": self.user_id.id,
-        })
+        self.planned_calls |= self.env["crm.phonecall"].create(
+            {
+                "campaign_id": self.campaign_id.id,
+                "date": when,
+                "duration": self.duration,
+                "medium_id": self.medium_id.id,
+                "partner_mobile": partner.mobile,
+                "name": self.name,
+                "partner_id": partner.id,
+                "partner_phone": partner.phone,
+                "source_id": self.source_id.id,
+                "tag_ids": [(6, 0, self.tag_ids.ids)],
+                "team_id": self.team_id.id,
+                "user_id": self.user_id.id,
+            }
+        )
