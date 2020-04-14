@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!-- Copyright 2017 Jairo Llopis <jairo.llopis@tecnativa.com>
-     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
 <odoo>
     <record id="crm_phonecall_plan_view_form" model="ir.ui.view">
         <field name="name">Phonecalls planner</field>
@@ -54,7 +54,6 @@
     <record id="crm_phonecall_planner_open" model="ir.actions.act_window">
         <field name="name">Planner</field>
         <field name="res_model">crm.phonecall.planner</field>
-        <field name="view_type">form</field>
         <field name="view_mode">form</field>
         <field name="target">new</field>
     </record>
