@@ -1,5 +1,5 @@
 # Copyright 2017 Jairo Llopis <jairo.llopis@tecnativa.com>
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
 from __future__ import division
 
@@ -74,7 +74,6 @@ class CrmPhonecallPlan(models.TransientModel):
             if one.start > one.end:
                 raise ValidationError(_("Starting date must be less than ending date"))
 
-    @api.multi
     def action_accept(self):
         """Generate phonecall plan according to given criteria."""
         self.ensure_one()
@@ -172,7 +171,6 @@ class CrmPhonecallPlan(models.TransientModel):
             "domain": [("id", "in", self.planned_calls.ids)],
         }
 
-    @api.multi
     def _schedule_call(self, partner, when):
         _logger.debug(
             "Planning a call for %s at %s",
