@@ -1,4 +1,7 @@
 * Odoo S.A.
-* Vicent Cubells <vicent.cubells@tecnativa.com>
 * Bhavesh Odedra <bodedra@ursainfosystems.com>
-* Cristina Martin R. <cristina.martin@tecnativa.com>
+* `Tecnativa <https://www.tecnativa.com>` _:
+
+  * Manuel Calero
+  * Cristina Martin R.
+  * Vicent Cubells

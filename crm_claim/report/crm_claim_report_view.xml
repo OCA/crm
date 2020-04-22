@@ -112,7 +112,7 @@
     <record id="action_report_crm_claim" model="ir.actions.act_window">
         <field name="name">Claims Analysis</field>
         <field name="res_model">crm.claim.report</field>
-        <field name="view_type">form</field>
+        <field name="binding_view_types">form</field>
         <field name="view_mode">pivot,graph</field>
         <field
             name="context"
