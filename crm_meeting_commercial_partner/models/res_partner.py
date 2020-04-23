@@ -28,5 +28,4 @@ class ResPartner(models.Model):
         self.ensure_one()
         action = super(ResPartner, self).schedule_meeting()
         action['domain'] = [('partner_ids', 'child_of', self.ids)]
-        action['context'].pop('search_default_partner_ids')
         return action
