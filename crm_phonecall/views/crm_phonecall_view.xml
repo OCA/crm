@@ -120,45 +120,52 @@
                             <field name="partner_phone" />
                         </h2>
                     </div>
-                    <group col="4">
-                        <field name="date" />
-                        <field
-                            name="user_id"
-                            context="{'default_groups_ref': ['base.group_user', 'base.group_partner_manager', 'sales_team.group_sale_salesman_all_leads']}"
-                        />
-                        <label for="duration" />
-                        <div>
+                    <group>
+                        <group>
+                            <field name="date" />
+                            <label for="duration" />
+                            <div>
+                                <field
+                                    name="duration"
+                                    widget="float_time"
+                                    class="oe_inline"
+                                    style="vertical-align:baseline"
+                                />
+                                <b> min(s)</b>
+                            </div>
+                            <field name="partner_id" />
+                            <field name="partner_mobile" />
                             <field
-                                name="duration"
-                                widget="float_time"
-                                class="oe_inline"
-                                style="vertical-align:baseline"
+                                name="opportunity_id"
+                                context="{'opportunity_id': opportunity_id}"
                             />
-                            <b> min(s)</b>
-                        </div>
-                        <field
-                            name="team_id"
-                            colspan="1"
-                            widget="selection"
-                            groups="sales_team.group_sale_salesman"
-                        />
-                        <field name="partner_id" />
-                        <field name="tag_ids" widget="many2many_tags" />
-                        <field name="partner_mobile" />
-                        <field name="priority" widget="priority" />
-                        <field
-                            name="opportunity_id"
-                            context="{'opportunity_id': opportunity_id}"
-                        />
-                    </group>
-                    <group
-                        string="Tracking"
-                        groups="base.group_no_one"
-                        name="categorization"
-                    >
-                        <field name="campaign_id" />
-                        <field name="source_id" />
-                        <field name="medium_id" />
+                        </group>
+                        <group>
+                            <field
+                                name="user_id"
+                                context="{'default_groups_ref': ['base.group_user', 'base.group_partner_manager', 'sales_team.group_sale_salesman_all_leads']}"
+                            />
+                            <field
+                                name="team_id"
+                                colspan="1"
+                                widget="selection"
+                                groups="sales_team.group_sale_salesman"
+                            />
+                            <field name="tag_ids" widget="many2many_tags" />
+                            <field name="priority" widget="priority" />
+                        </group>
+                        <group
+                            string="Tracking"
+                            groups="base.group_no_one"
+                            name="categorization"
+                        >
+                            <field name="campaign_id" />
+                            <field name="source_id" />
+                            <field name="medium_id" />
+                        </group>
+                        <group name="additional_info" string="Additional Info">
+                            <field name="direction" widget="radio" />
+                        </group>
                     </group>
                     <field name="description" placeholder="Description..." />
                 </sheet>
@@ -184,7 +191,7 @@
                     context="{'default_groups_ref': ['base.group_user', 'base.group_partner_manager', 'sales_team.group_sale_salesman']}"
                 />
                 <field name="tag_ids" widget="many2many_tags" invisible="1" />
-                <field name="state" invisible="1" />
+                <field name="state" />
                 <field name="create_date" invisible="1" />
                 <field name="opportunity_id" invisible="1" />
                 <field name="campaign_id" groups="base.group_no_one" />
@@ -260,6 +267,19 @@
                 />
                 <separator />
                 <filter
+                    string="Incoming Calls"
+                    name="in_calls"
+                    domain="[('direction','=','in')]"
+                />
+                <filter
+                    string="Outgoing Calls"
+                    name="out_calls"
+                    domain="[('direction','=','out')]"
+                />
+                <separator />
+                <filter name="date" string="Date" date="date" />
+                <separator />
+                <filter
                     string="New Mail"
                     name="message_unread"
                     domain="[('message_unread','=',True)]"
@@ -295,6 +315,12 @@
                         name="month"
                         context="{'group_by':'date'}"
                         help="Calls Date by Month"
+                    />
+                    <filter
+                        string="State"
+                        name="state"
+                        context="{'group_by':'state'}"
+                        help="Calls by status"
                     />
                 </group>
             </search>
