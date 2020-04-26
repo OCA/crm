@@ -69,6 +69,9 @@ class CrmPhonecall(models.Model):
     date_closed = fields.Datetime(string="Closed", readonly=True)
     date = fields.Datetime(default=lambda self: fields.Datetime.now())
     opportunity_id = fields.Many2one(comodel_name="crm.lead", string="Lead/Opportunity")
+    direction = fields.Selection(
+        [("in", "In"), ("out", "Out")], default="out", required=True
+    )
 
     @api.onchange("partner_id")
     def on_change_partner_id(self):
