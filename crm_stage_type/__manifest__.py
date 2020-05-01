@@ -7,16 +7,10 @@
     "version": "12.0.1.0.0",
     "category": "CRM",
     "website": "https://github.com/OCA/crm",
-    "author": "Eficent, "
-              "Odoo Community Association (OCA)",
+    "author": "Eficent, " "Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": [
-        "crm",
-    ],
-    "data": [
-        "views/crm_lead_views.xml",
-        "views/crm_stage_views.xml",
-    ],
+    "depends": ["crm",],
+    "data": ["views/crm_lead_views.xml", "views/crm_stage_views.xml",],
 }
