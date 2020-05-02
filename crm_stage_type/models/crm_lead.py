@@ -25,41 +25,18 @@ class Lead(models.Model):
         return stages.browse(stage_ids)
 
     def _stage_find(self, team_id=False, domain=None, order="sequence"):
-        ctx_type = self.env.context.get("default_type")
-        types = ["both"]
-        if ctx_type:
-            types += [ctx_type]
         # check whether we should try to add a condition on type
-        avoid_add_type_term = any(
-            [term for term in domain if len(term) == 3 if term[0] == "lead_type"]
-        )
-        if avoid_add_type_term:
-            return super(Lead, self)._stage_find(team_id, domain, order)
-        # collect all team_ids by adding given one,
-        # and the ones related to the current leads
-        team_ids = set()
-        if team_id:
-            team_ids.add(team_id)
-        for lead in self:
-            if lead.team_id:
-                team_ids.add(lead.team_id.id)
-        # generate the domain
-        if team_ids:
-            search_domain = [
-                "|",
-                ("team_id", "=", False),
-                ("team_id", "in", list(team_ids)),
-            ]
-        else:
-            search_domain = [("team_id", "=", False)]
-        search_domain.append(("lead_type", "in", types))
-        # AND with the domain in parameter
-        if domain:
-            search_domain += list(domain)
-        # perform search, return the first found
-        return self.env["crm.stage"].search(search_domain, order=order, limit=1)
+        domain = domain or []
+        if not any(
+            [term for term in domain if len(term) == 3 and term[0] == "lead_type"]
+        ):
+            types = ["both"]
+            ctx_type = self.env.context.get("default_type")
+            if ctx_type:
+                types += [ctx_type]
+            domain.append(("lead_type", "in", types))
+        return super(Lead, self)._stage_find(team_id, domain, order)
 
-    @api.multi
     def merge_opportunity(self, user_id=False, team_id=False):
         opportunities_head = super(Lead, self).merge_opportunity(user_id, team_id)
         if opportunities_head.team_id:
@@ -76,7 +53,6 @@ class Lead(models.Model):
                 )
         return opportunities_head
 
-    @api.multi
     def _convert_opportunity_data(self, customer, team_id=False):
         value = super(Lead, self)._convert_opportunity_data(customer, team_id)
         if not self.stage_id or self.stage_id.lead_type == "lead":
@@ -84,6 +60,4 @@ class Lead(models.Model):
                 team_id=team_id, domain=[("lead_type", "in", ["opportunity", "both"])]
             )
             value["stage_id"] = stage.id
-            if stage:
-                value["probability"] = stage.probability
         return value
