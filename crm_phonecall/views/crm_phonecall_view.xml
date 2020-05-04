@@ -220,6 +220,20 @@
             </tree>
         </field>
     </record>
+    <record id="crm_case_inbound_phone_tree_view_no_editable" model="ir.ui.view">
+        <field name="name">CRM - Logged Phone Calls - Tree No Editable</field>
+        <field name="model">crm.phonecall</field>
+        <field name="inherit_id" ref="crm_phonecall.crm_case_inbound_phone_tree_view" />
+        <field
+            name="groups_id"
+            eval="[(4,ref('crm_phonecall.group_show_form_view'))]"
+        />
+        <field name="arch" type="xml">
+            <tree position="attributes">
+                <attribute name="editable" />
+            </tree>
+        </field>
+    </record>
     <record id="crm_case_phone_calendar_view" model="ir.ui.view">
         <field name="name">CRM - Phone Calls Calendar</field>
         <field name="model">crm.phonecall</field>
