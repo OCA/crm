@@ -29,7 +29,8 @@ msgid "Lead/Opportunity"
 msgstr "Iniciativa/Oportunidad"
 
 #. module: crm_lead_code
-#: code:addons/crm_lead_code/models/crm_lead.py:16 sql_constraint:crm.lead:0
+#: code:addons/crm_lead_code/models/crm_lead.py:0
+#: model:ir.model.constraint,message:crm_lead_code.constraint_crm_lead_crm_lead_unique_code
 #, python-format
 msgid "The code must be unique!"
 msgstr ""
