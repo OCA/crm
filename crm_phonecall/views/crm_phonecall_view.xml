@@ -311,29 +311,29 @@
                 <group expand="0" string="Group By">
                     <filter
                         string="Partner"
-                        name="partner"
+                        name="groupby_partner"
                         context="{'group_by':'partner_id'}"
                     />
                     <filter
                         string="Responsible"
-                        name="responsible"
+                        name="groupby_responsible"
                         context="{'group_by':'user_id'}"
                     />
                     <filter
                         string="Creation"
-                        name="creation"
+                        name="groupby_creation"
                         help="Creation Date"
                         context="{'group_by':'create_date'}"
                     />
                     <filter
                         string="Month"
-                        name="month"
+                        name="groupby_month"
                         context="{'group_by':'date'}"
                         help="Calls Date by Month"
                     />
                     <filter
                         string="State"
-                        name="state"
+                        name="groupby_state"
                         context="{'group_by':'state'}"
                         help="Calls by status"
                     />
