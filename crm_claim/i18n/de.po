@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2020-01-24 16:13+0000\n"
-"Last-Translator: Malin Kienke <malin.kienke@initos.com>\n"
+"PO-Revision-Date: 2020-05-06 15:19+0000\n"
+"Last-Translator: Maria Sparenberg <maria.sparenberg@gmx.net>\n"
 "Language-Team: none\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:crm_claim.field_res_partner__claim_count
 #: model:ir.model.fields,field_description:crm_claim.field_res_users__claim_count
 msgid "# Claims"
-msgstr ""
+msgstr "# Forderungen"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__email
@@ -30,13 +30,13 @@ msgstr "# E-Mails"
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__nbr_claims
 msgid "# of Claims"
-msgstr ""
+msgstr "# Forderungen"
 
 #. module: crm_claim
 #: code:addons/crm_claim/models/crm_claim.py:198
 #, python-format
 msgid "%s (copy)"
-msgstr ""
+msgstr "%s (Kopie)"
 
 #. module: crm_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
@@ -46,7 +46,7 @@ msgstr "Beschreibung der Aktion..."
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_needaction
 msgid "Action Needed"
-msgstr "Benötigt Aktion"
+msgstr "Aktion notwendig"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__type_action
@@ -72,12 +72,12 @@ msgstr "Aktivitäten"
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__activity_state
 msgid "Activity State"
-msgstr ""
+msgstr "Aktivitätsstatus"
 
 #. module: crm_claim
 #: model:ir.ui.menu,name:crm_claim.menu_aftersale
 msgid "After Sale"
-msgstr ""
+msgstr "Kundendienst"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_attachment_count
@@ -104,7 +104,7 @@ msgstr "Kategorie"
 #. module: crm_claim
 #: model:ir.model,name:crm_claim.model_crm_claim_category
 msgid "Category of claim"
-msgstr "Kategorie der Nachforderung"
+msgstr "Forderungskategorie"
 
 #. module: crm_claim
 #: model:ir.model,name:crm_claim.model_crm_claim
@@ -113,20 +113,20 @@ msgstr "Kategorie der Nachforderung"
 #: model:ir.ui.menu,name:crm_claim.menu_config_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
 msgid "Claim"
-msgstr "Nachforderung"
+msgstr "Forderung"
 
 #. module: crm_claim
 #: model:ir.actions.act_window,name:crm_claim.crm_claim_categ_action
 #: model_terms:ir.ui.view,arch_db:crm_claim.crm_claim_category_form
 #: model_terms:ir.ui.view,arch_db:crm_claim.crm_claim_category_tree
 msgid "Claim Categories"
-msgstr "Nachforderungskategorien"
+msgstr "Forderungskategorien"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__date
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__claim_date
 msgid "Claim Date"
-msgstr "Datum der Nachforderung"
+msgstr "Datum der Forderung"
 
 #. module: crm_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
