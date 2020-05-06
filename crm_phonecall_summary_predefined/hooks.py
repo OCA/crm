@@ -3,7 +3,7 @@
 
 from psycopg2 import IntegrityError
 
-from odoo import api, SUPERUSER_ID
+from odoo import SUPERUSER_ID, api
 
 
 def convert_names_to_many2one(cr, registry):  # pragma: no cover
@@ -15,8 +15,6 @@ def convert_names_to_many2one(cr, registry):  # pragma: no cover
         for s in phone_call.search([("summary_id", "=", False)]):
             try:
                 with env.cr.savepoint():
-                    s.summary_id = summary.create({
-                        "name": s.name,
-                    })
+                    s.summary_id = summary.create({"name": s.name,})
             except IntegrityError:
                 s.summary_id = summary.search([("name", "=", s.name)])
