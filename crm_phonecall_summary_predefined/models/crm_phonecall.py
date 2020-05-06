@@ -1,6 +1,6 @@
 # Copyright 2016 Antiun Ingeniería S.L. - Jairo Llopis
 # Copyright 2017 Tecnativa - Vicent Cubells
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
 from odoo import fields, models
 
@@ -19,6 +19,11 @@ class CRMPhonecall(models.Model):
         required=True,
         ondelete="restrict",
     )
+
+    def get_values_schedule_another_phonecall(self, vals):
+        res = super().get_values_schedule_another_phonecall(vals)
+        res.update({"summary_id": vals.get("summary_id")})
+        return res
 
 
 class CRMPhonecallSummary(models.Model):
