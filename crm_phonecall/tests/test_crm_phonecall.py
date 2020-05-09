@@ -27,11 +27,13 @@ class TestCrmPhoneCall(common.SavepointCase):
             'phone': '123 456 789',
             'mobile': '123 456 789',
             'type': 'contact',
+            'email': "partner1@crm_phonecall"
         })
         cls.partner2 = partner_obj.create({
             'name': 'Partner2',
             'phone': '789 654 321',
             'mobile': '789 654 321',
+            'email': "partner2@crm_phonecall"
         })
         cls.phonecall1 = cls.env['crm.phonecall'].create({
             'name': 'Call #1 for test',
@@ -54,6 +56,9 @@ class TestCrmPhoneCall(common.SavepointCase):
         })
         cls.tag = cls.env.ref('crm.categ_oppor1')
 
+    def test_partner_phonecall_count(self):
+        self.assertEqual(self.partner1.phonecall_count, 1)
+
     def test_on_change_partner(self):
         """Partner change method test."""
         self.phonecall1.partner_id = self.partner2
@@ -66,6 +71,14 @@ class TestCrmPhoneCall(common.SavepointCase):
         self.assertTrue(self.phonecall1.date_closed)
         self.phonecall1.state = 'open'
         self.assertEqual(self.phonecall1.duration, 0.0)
+
+    def test_compute_duration(self):
+        call_without_date = self.env['crm.phonecall'].create({
+            'name': 'Call without date',
+            'duration': 120,
+        })
+        call_without_date.compute_duration()
+        self.assertEqual(call_without_date.duration, 0)
 
     def test_schedule_another_phonecall(self):
         """Schedule another phonecall."""

@@ -8,7 +8,7 @@
     "author": "Odoo S.A., "
               "Tecnativa, "
               "Odoo Community Association (OCA)",
-    "website": "https://www.tecnativa.com",
+    "website": "https://github.com/OCA/crm",
     "license": "AGPL-3",
     "depends": [
         'crm',
@@ -21,6 +21,7 @@
         'views/crm_phonecall_view.xml',
         'views/res_partner_view.xml',
         'views/crm_lead_view.xml',
+        'views/res_config_settings_views.xml',
         'report/crm_phonecall_report_view.xml',
     ],
     'installable': True,

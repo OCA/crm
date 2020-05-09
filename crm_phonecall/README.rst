@@ -37,14 +37,14 @@ Usage
 
 To use this module, you need to:
 
-#. Go to *Sales > Phone Calls > Logged Calls > Create*.
+#. Go to *CRM > Phone Calls > Logged Calls > Create*.
 #. If your user has *Show Scheduled Calls Menu* permission, you will see
    scheduled calls menu too.
 #. In any moment you can schedule another call, schedule a meeting or convert
    call contact to opportunity.
-#. Calls can be categorized and you can manage categories in *Sales >
-   Configuration > Leads & Opportunities > Phone Calls > Categories*.
-#. Calls can be analyzed in *Sales > Reports > Phone Calls Analysis*.
+#. Calls can be categorized and you can manage categories in *CRM >
+   Configuration > Pipeline > Phone Calls > Categories*.
+#. Calls can be analyzed in *CRM > Reporting > Phone Calls Analysis*.
 
 Known issues / Roadmap
 ======================
@@ -76,11 +76,17 @@ Contributors
 * Odoo S.A.
 * `Tecnativa <https://www.tecnativa.com>`_
 
-  * Vicent Cubells <vicent.cubells@tecnativa.com>
-  * Jairo Llopis <jairo.llopis@tecnativa.com>
-  * David Vidal <david.vidal@tecnativa.com>
+  * Vicent Cubells
+  * Jairo Llopis
+  * David Vidal
+  * Alexandre Díaz
 
 * Anand Kansagra <kansagraanand@hotmail.com>
+
+* `Druidoo <https://www.druidoo.io>`_
+
+  * Iván Todorovich <ivan.todorovich@druidoo.io>
+  * Manuel Marquez <manuel.marquez@druidoo.io>
 
 Maintainers
 ~~~~~~~~~~~
