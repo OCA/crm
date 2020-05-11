@@ -70,17 +70,21 @@ class TestCrmPhoneCall(common.SavepointCase):
     def test_schedule_another_phonecall(self):
         """Schedule another phonecall."""
         phonecall2 = self.phonecall1.schedule_another_phonecall(
-            schedule_time=False,
-            call_summary="Test schedule method",
-            action="schedule",
-            tag_ids=self.tag.ids,
+            {
+                "schedule_time": False,
+                "name": "Test schedule method",
+                "action": "schedule",
+                "tag_ids": self.tag.ids,
+            }
         )[self.phonecall1.id]
         self.assertNotEqual(phonecall2.id, self.phonecall1.id)
         self.assertEqual(self.phonecall1.state, "open")
         phonecall3 = self.phonecall1.schedule_another_phonecall(
-            schedule_time="2017-12-31 00:00:00",
-            call_summary="Test schedule method2",
-            action="log",
+            {
+                "schedule_time": "2017-12-31 00:00:00",
+                "name": "Test schedule method2",
+                "action": "log",
+            }
         )[self.phonecall1.id]
         self.assertNotEqual(phonecall3.id, self.phonecall1.id)
         self.assertNotEqual(phonecall3.id, phonecall2.id)
