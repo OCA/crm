@@ -105,44 +105,33 @@ class CrmPhonecall(models.Model):
         phonecall_no_dates.write({"duration": 0.0})
         return True
 
-    def schedule_another_phonecall(
-        self,
-        schedule_time,
-        call_summary,
-        user_id=False,
-        team_id=False,
-        tag_ids=False,
-        action="schedule",
-        return_recordset=False,
-    ):
+    def get_values_schedule_another_phonecall(self, vals):
+        res = {
+            "name": vals.get("name"),
+            "user_id": vals.get("user_id") or self.user_id.id or False,
+            "description": self.description or False,
+            "date": vals.get("schedule_time") or self.date,
+            "team_id": vals.get("team_id") or self.team_id.id or False,
+            "partner_id": self.partner_id.id or False,
+            "partner_phone": self.partner_phone,
+            "partner_mobile": self.partner_mobile,
+            "priority": self.priority,
+            "opportunity_id": self.opportunity_id.id or False,
+            "campaign_id": self.campaign_id.id,
+            "source_id": self.source_id.id,
+            "medium_id": self.medium_id.id,
+        }
+        if vals.get("tag_ids"):
+            res.update({"tag_ids": [(6, 0, vals.get("tag_ids"))]})
+        return res
+
+    def schedule_another_phonecall(self, vals, return_recordset=False):
         """Action :('schedule','Schedule a call'), ('log','Log a call')."""
         phonecall_dict = {}
         for call in self:
-            if not team_id:
-                team_id = call.team_id.id or False
-            if not user_id:
-                user_id = call.user_id.id or False
-            if not schedule_time:
-                schedule_time = call.date
-            values = {
-                "name": call_summary,
-                "user_id": user_id or False,
-                "description": call.description or False,
-                "date": schedule_time,
-                "team_id": team_id or False,
-                "partner_id": call.partner_id.id or False,
-                "partner_phone": call.partner_phone,
-                "partner_mobile": call.partner_mobile,
-                "priority": call.priority,
-                "opportunity_id": call.opportunity_id.id or False,
-                "campaign_id": call.campaign_id.id,
-                "source_id": call.source_id.id,
-                "medium_id": call.medium_id.id,
-            }
-            if tag_ids:
-                values.update({"tag_ids": [(6, 0, tag_ids)]})
+            values = call.get_values_schedule_another_phonecall(vals)
             new_id = self.create(values)
-            if action == "log":
+            if vals.get("action") == "log":
                 call.write({"state": "done"})
             phonecall_dict[call.id] = new_id
         if return_recordset:

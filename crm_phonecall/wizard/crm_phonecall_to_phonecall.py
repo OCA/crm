@@ -34,18 +34,24 @@ class CrmPhonecall2phonecall(models.TransientModel):
     partner_id = fields.Many2one(comodel_name="res.partner", string="Partner")
     note = fields.Text()
 
+    def get_vals_action_schedule(self):
+        vals = {
+            "schedule_time": self.date,
+            "name": self.name,
+            "user_id": self.user_id.id,
+            "team_id": self.team_id.id or False,
+            "tag_ids": self.tag_ids.ids,
+            "action": self.action,
+        }
+        return vals
+
     def action_schedule(self):
         """Schedule a phonecall."""
         phonecall_obj = self.env["crm.phonecall"]
         phonecalls = phonecall_obj.browse(self._context.get("active_ids", []))
+        vals = self.get_vals_action_schedule()
         new_phonecalls = phonecalls.schedule_another_phonecall(
-            self.date,
-            self.name,
-            self.user_id.id,
-            self.team_id.id or False,
-            self.tag_ids.ids,
-            action=self.action,
-            return_recordset=True,
+            vals, return_recordset=True
         )
         return new_phonecalls.redirect_phonecall_view()
 
