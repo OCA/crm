@@ -1,6 +1,6 @@
 # Copyright 2016 Tecnativa S.L. - Jairo Llopis
 # Copyright 2016 Tecnativa S.L. - Vicent Cubells
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
 from odoo.tests.common import TransactionCase
 
@@ -9,7 +9,7 @@ class LeadCase(TransactionCase):
     def setUp(self):
         super(LeadCase, self).setUp()
         self.medium = self.env["utm.medium"].create({"name": u"Website"})
-        self.campaign = self.env["utm.campaign"].create({"name": u"Dëmo campaign",})
+        self.campaign = self.env["utm.campaign"].create({"name": u"Dëmo campaign"})
         self.source = self.env["utm.source"].create({"name": u"Inteŕnet"})
         self.lead = self.env["crm.lead"].create(
             {
