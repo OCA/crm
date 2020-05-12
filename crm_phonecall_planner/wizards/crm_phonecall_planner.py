@@ -106,7 +106,7 @@ class CrmPhonecallPlan(models.TransientModel):
             FROM res_partner
             LEFT JOIN crm_phonecall
             ON res_partner.id = crm_phonecall.partner_id
-            WHERE res_partner.id IN ({})
+            WHERE res_partner.id IN %s
             GROUP BY res_partner.id
             ORDER BY COUNT(crm_phonecall.id), MAX(crm_phonecall.date)
             LIMIT 1
@@ -169,10 +169,8 @@ class CrmPhonecallPlan(models.TransientModel):
                 continue
             # Get a partner with no calls, or with the oldest one
             self.env.cr.execute(
-                oldest_call_to_partner.format(
-                    ",".join(["%s"] * len(available_partners)),
-                ),
-                available_partners.ids,
+                oldest_call_to_partner,
+                (tuple(available_partners.ids),)
             )
             winner = Partner.browse(self.env.cr.fetchone()[0])
             self._schedule_call(winner, now)
