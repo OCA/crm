@@ -2,7 +2,7 @@
 <!-- Copyright 2015 Antiun Ingenieria S.L. - Javier Iniesta
      Copyright 2018 Eficent Business and IT Consulting Services, S.L.
      Copyright 2019 Tecnativa - Alexandre Díaz <alexandre.diaz@tecnativa.com>
-     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html). -->
 <odoo>
 
 <record model="ir.ui.view" id="crm_case_form_view_leads">

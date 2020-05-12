@@ -1,6 +1,6 @@
 # Copyright 2015 Vauxoo: Yanina Aular <yani@vauxoo.com>,
-#                        Osval Reyes <osval@vauxoo.com>
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+# Copyright 2015 Vauxoo: Osval Reyes <osval@vauxoo.com>
+# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
 {
     'name': 'CRM Claim Types',

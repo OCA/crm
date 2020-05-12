@@ -1,7 +1,7 @@
 # Copyright 2015 Tecnativa - Pedro M. Baeza <pedro.baeza@tecnativa.com>
 # Copyright 2015 AvanzOsc (http://www.avanzosc.es)
 # Copyright 2017 Tecnativa - Vicent Cubells <vicent.cubells@tecnativa.com>
-# License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
+# License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl).
 
 from odoo import api, fields, models
 
