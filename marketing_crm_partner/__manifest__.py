@@ -9,15 +9,10 @@
     "version": "12.0.1.0.0",
     "category": "Marketing",
     "website": "https://www.github.com/oca/crm",
-    "author": "Tecnativa, "
-              "Odoo Community Association (OCA)",
+    "author": "Tecnativa, " "Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": [
-        "crm",
-    ],
-    "data": [
-        "views/res_partner_view.xml",
-    ],
+    "depends": ["crm",],
+    "data": ["views/res_partner_view.xml",],
 }
