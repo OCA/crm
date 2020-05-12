@@ -35,7 +35,7 @@ msgid "Display Name"
 msgstr "Nume Afişat"
 
 #. module: crm_phonecall_summary_predefined
-#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary_id_4930
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary_id_4961
 msgid "ID"
 msgstr "ID"
 
