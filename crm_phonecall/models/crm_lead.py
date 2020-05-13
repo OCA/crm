@@ -1,6 +1,6 @@
 # Copyright 2004-2016 Odoo SA (<http://www.odoo.com>)
 # Copyright 2017 Tecnativa - Vicent Cubells
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
 from odoo import fields, models
 from odoo.tools.safe_eval import safe_eval
