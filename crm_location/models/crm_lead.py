@@ -1,7 +1,7 @@
 # Copyright 2015 Antiun Ingenieria - Endika Iglesias <endikaig@antiun.com>
 # Copyright 2017 Tecnativa - Luis Martínez
 # Copyright 2019 Tecnativa - Alexandre Díaz
-# License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0.html
+# License AGPL-3 - See https://www.gnu.org/licenses/agpl-3.0.html
 
 from odoo import api, fields, models
 

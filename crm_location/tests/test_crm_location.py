@@ -1,6 +1,6 @@
 # Copyright 2017 Tecnativa - Luis M. Ontalba
 # Copyright 2019 Tecnativa - Alexandre Díaz
-# License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0
+# License AGPL-3 - See https://www.gnu.org/licenses/agpl-3.0
 
 from odoo.tests import common
 
