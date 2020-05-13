@@ -1,5 +1,6 @@
 # Copyright 2015 Antiun Ingeniería, S.L.
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
+
 {
     "name": "VAT in leads",
     "summary": "Add VAT field to leads",
