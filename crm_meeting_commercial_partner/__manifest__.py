@@ -9,8 +9,6 @@
     "author": "Eficent ,Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/crm",
     "license": "AGPL-3",
-    "depends": [
-        "crm",
-    ],
-    'installable': True,
+    "depends": ["crm",],
+    "installable": True,
 }
