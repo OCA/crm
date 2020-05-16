@@ -11,7 +11,7 @@ class TestCrmMeetingCommercialPartner(common.TransactionCase):
         super(TestCrmMeetingCommercialPartner, self).setUp()
         self.calendar_event_model = self.env["calendar.event"]
         self.partner_company = self.env["res.partner"].create(
-            {"name": "Company", "is_company": True,}
+            {"name": "Company", "is_company": True}
         )
         self.partner_contact_1 = self.env["res.partner"].create(
             {

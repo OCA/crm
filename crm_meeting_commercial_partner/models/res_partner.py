@@ -2,7 +2,7 @@
 # Copyright 2018 Eficent Business and IT Consulting Services, S.L.
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
-from odoo import api, fields, models
+from odoo import fields, models
 
 
 class ResPartner(models.Model):
@@ -10,7 +10,6 @@ class ResPartner(models.Model):
 
     meeting_count = fields.Integer(compute="_compute_meeting_count_commercial_partner")
 
-    @api.multi
     def _compute_meeting_count_commercial_partner(self):
         att_model = self.env["calendar.attendee"]
         for partner in self:
@@ -20,7 +19,6 @@ class ResPartner(models.Model):
             )
             partner.meeting_count = len(attendees)
 
-    @api.multi
     def schedule_meeting(self):
         self.ensure_one()
         action = super(ResPartner, self).schedule_meeting()
