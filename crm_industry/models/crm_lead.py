@@ -5,32 +5,40 @@ from odoo import _, api, exceptions, fields, models
 
 
 class CrmLead(models.Model):
-    _inherit = 'crm.lead'
+    _inherit = "crm.lead"
 
-    industry_id = fields.Many2one(comodel_name='res.partner.industry',
-                                  string='Main Industry')
+    industry_id = fields.Many2one(
+        comodel_name="res.partner.industry", string="Main Industry"
+    )
 
     secondary_industry_ids = fields.Many2many(
-        comodel_name='res.partner.industry', string="Secondary Industries",
-        domain="[('id', '!=', industry_id)]")
+        comodel_name="res.partner.industry",
+        string="Secondary Industries",
+        domain="[('id', '!=', industry_id)]",
+    )
 
-    @api.constrains('industry_id', 'secondary_industry_ids')
+    @api.constrains("industry_id", "secondary_industry_ids")
     def _check_industries(self):
         for lead in self:
             if lead.industry_id in lead.secondary_industry_ids:
-                raise exceptions.UserError(_(
-                    'The secondary industries must be different from the main '
-                    'industry.'))
+                raise exceptions.UserError(
+                    _(
+                        "The secondary industries must be different from the main "
+                        "industry."
+                    )
+                )
 
     @api.multi
     def _create_lead_partner_data(self, name, is_company, parent_id=False):
         """Propagate industries in the creation of partner.
         """
         values = super(CrmLead, self)._create_lead_partner_data(
-            name, is_company, parent_id)
-        values.update({
-            'industry_id': self.industry_id.id,
-            'secondary_industry_ids': [(6, 0,
-                                        self.secondary_industry_ids.ids)],
-        })
+            name, is_company, parent_id
+        )
+        values.update(
+            {
+                "industry_id": self.industry_id.id,
+                "secondary_industry_ids": [(6, 0, self.secondary_industry_ids.ids)],
+            }
+        )
         return values
