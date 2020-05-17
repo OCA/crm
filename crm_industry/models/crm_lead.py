@@ -1,6 +1,6 @@
 # Copyright 2015 Antiun Ingenieria S.L. - Javier Iniesta
 # Copyright 2018 Eficent Business and IT Consulting Services, S.L.
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 from odoo import _, api, exceptions, fields, models
 
 
@@ -28,7 +28,6 @@ class CrmLead(models.Model):
                     )
                 )
 
-    @api.multi
     def _create_lead_partner_data(self, name, is_company, parent_id=False):
         """Propagate industries in the creation of partner.
         """
