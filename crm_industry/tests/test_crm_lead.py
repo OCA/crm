@@ -1,15 +1,15 @@
 # Copyright 2015 Antiun Ingenieria S.L. - Javier Iniesta
 # Copyright 2018 Eficent Business and IT Consulting Services, S.L.
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
-from odoo.exceptions import ValidationError
+from odoo.exceptions import UserError
 from odoo.tests.common import TransactionCase
 
 
 class TestCrmLead(TransactionCase):
     def test_check_industries(self):
         industry = self.env["res.partner.industry"].create({"name": "Test"})
-        with self.assertRaises(ValidationError):
+        with self.assertRaises(UserError):
             self.env["crm.lead"].create(
                 {
                     "name": "Test",
