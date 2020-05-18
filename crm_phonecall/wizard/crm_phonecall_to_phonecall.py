@@ -28,7 +28,7 @@ class CrmPhonecall2phonecall(models.TransientModel):
     phone = fields.Char()
     tag_ids = fields.Many2many(
         comodel_name='crm.lead.tag',
-        relation='crm_phonecall_tag_rel',
+        relation='crm_phonecall2phonecall_tag_rel',
         column1='phone_id',
         column2='tag_id',
         string='Tags',
