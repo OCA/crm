@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!-- Copyright 2018 Eficent Business and IT Consulting Services, S.L.
-     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html). -->
 <odoo>
 
     <record id="crm_case_form_view_leads" model="ir.ui.view">

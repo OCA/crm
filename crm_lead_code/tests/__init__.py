@@ -1,5 +1,3 @@
-##############################################################################
-# For copyright and license notices, see __manifest__.py file in root directory
-##############################################################################
+# License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl).
 
 from . import test_crm_lead_code

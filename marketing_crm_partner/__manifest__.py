@@ -2,7 +2,7 @@
 # Copyright 2016 Tecnativa S.L. - Vicent Cubells
 # Copyright 2017 Tecnativa S.L. - David Vidal
 # Copyright 2018 Tecnativa S.L. - Cristina Martin R.
-# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
+# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 {
     "name": "Tracking Fields in Partners",
     "summary": "Copy tracking fields from leads to partners",

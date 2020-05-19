@@ -1,4 +1,4 @@
-# © 2017-TODAY Eficent Business and IT Consulting Services S.L.
+# Copyright 2017-2020 Eficent Business and IT Consulting Services S.L.
 # License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl.html)
 
 from odoo.tests import common
