@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-13 03:59+0000\n"
-"PO-Revision-Date: 2020-01-08 19:13+0000\n"
+"PO-Revision-Date: 2020-05-29 22:19+0000\n"
 "Last-Translator: Sergio Zanchetta <primes2h@gmail.com>\n"
 "Language-Team: Italian (https://www.transifex.com/oca/teams/23907/it/)\n"
 "Language: it\n"
@@ -91,7 +91,7 @@ msgstr ""
 #. module: crm_phonecall_planner
 #: model_terms:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
 msgid "Generate planning"
-msgstr ""
+msgstr "Genera pianificazione"
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__id
@@ -121,17 +121,17 @@ msgstr ""
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__medium_id
 msgid "Medium"
-msgstr ""
+msgstr "Media"
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__res_partner_domain
 msgid "Partners filter"
-msgstr ""
+msgstr "Filtri partner"
 
 #. module: crm_phonecall_planner
 #: model:ir.model,name:crm_phonecall_planner.model_crm_phonecall_planner
 msgid "Phonecall planner"
-msgstr "Pianificatore chiamate telefoniche"
+msgstr "Pianificatore telefonate"
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__planned_calls
@@ -147,12 +147,12 @@ msgstr "Pianificatore"
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__repeat_calls
 msgid "Repeat Calls"
-msgstr ""
+msgstr "Ripeti chiamate"
 
 #. module: crm_phonecall_planner
 #: model_terms:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
 msgid "Repetition"
-msgstr ""
+msgstr "Ripetizione"
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__user_id
@@ -186,7 +186,7 @@ msgstr ""
 #. module: crm_phonecall_planner
 #: model_terms:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
 msgid "Scheduling"
-msgstr ""
+msgstr "Pianificazione"
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__source_id
