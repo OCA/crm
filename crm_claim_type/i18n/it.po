@@ -9,29 +9,30 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-04 15:47+0000\n"
-"PO-Revision-Date: 2017-12-04 15:47+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
+"PO-Revision-Date: 2020-05-29 22:19+0000\n"
+"Last-Translator: Sergio Zanchetta <primes2h@gmail.com>\n"
 "Language-Team: Italian (https://www.transifex.com/oca/teams/23907/it/)\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.10\n"
 
 #. module: crm_claim_type
 #: model:crm.claim.stage,name:crm_claim_type.stage_claim10
 msgid "Accepted"
-msgstr ""
+msgstr "Accettato"
 
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type__active
 msgid "Active"
-msgstr ""
+msgstr "Attivo"
 
 #. module: crm_claim_type
 #: model:ir.model,name:crm_claim_type.model_crm_claim
 msgid "Claim"
-msgstr ""
+msgstr "Reclamo"
 
 #. module: crm_claim_type
 #: model:ir.model,name:crm_claim_type.model_crm_claim_type
@@ -39,39 +40,39 @@ msgstr ""
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_stage__claim_type
 #: model_terms:ir.ui.view,arch_db:crm_claim_type.crm_stage_claim_type_search
 msgid "Claim Type"
-msgstr ""
+msgstr "Tipo di reclamo"
 
 #. module: crm_claim_type
 #: model:ir.actions.act_window,name:crm_claim_type.crm_claim_type_act
 #: model:ir.ui.menu,name:crm_claim_type.menu_crm_claim_type_act
 msgid "Claim Types"
-msgstr ""
+msgstr "Tipi di reclamo"
 
 #. module: crm_claim_type
 #: model:ir.model.fields,help:crm_claim_type.field_crm_claim__claim_type
 #: model:ir.model.fields,help:crm_claim_type.field_crm_claim_stage__claim_type
 msgid "Claim classification"
-msgstr ""
+msgstr "Classificazione reclamo"
 
 #. module: crm_claim_type
 #: model:ir.model,name:crm_claim_type.model_crm_claim_stage
 msgid "Claim stages"
-msgstr ""
+msgstr "Fasi del reclamo"
 
 #. module: crm_claim_type
 #: model_terms:ir.ui.view,arch_db:crm_claim_type.crm_claim_type_form
 msgid "Claim type"
-msgstr ""
+msgstr "Tipo di reclamo"
 
 #. module: crm_claim_type
 #: model_terms:ir.ui.view,arch_db:crm_claim_type.crm_claim_type_tree
 msgid "Claim types"
-msgstr ""
+msgstr "Tipi di reclamo"
 
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_stage__claim_common
 msgid "Common to All Claim Types"
-msgstr ""
+msgstr "Comune a tutti i tipi di reclamo"
 
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type__create_uid
@@ -86,17 +87,17 @@ msgstr "Creato il"
 #. module: crm_claim_type
 #: model:crm.claim.type,name:crm_claim_type.crm_claim_type_customer
 msgid "Customer"
-msgstr ""
+msgstr "Cliente"
 
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type__description
 msgid "Description"
-msgstr ""
+msgstr "Descrizione"
 
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type__display_name
 msgid "Display Name"
-msgstr "Nome da visualizzare"
+msgstr "Nome visualizzato"
 
 #. module: crm_claim_type
 #: model:crm.claim.stage,name:crm_claim_type.stage_claim11
@@ -106,7 +107,7 @@ msgstr ""
 #. module: crm_claim_type
 #: model_terms:ir.ui.view,arch_db:crm_claim_type.crm_stage_claim_type_search
 msgid "Group By"
-msgstr ""
+msgstr "Raggruppa per"
 
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type__id
@@ -119,11 +120,13 @@ msgid ""
 "If you check this field, this stage will be proposed by default on each "
 "claim type."
 msgstr ""
+"Se il campo è selezionato questa fase viene proposta, in modo predefinito,  "
+"per ciascun tipo di reclamo."
 
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type____last_update
 msgid "Last Modified on"
-msgstr "Ultima Modifica il"
+msgstr "Ultima modifica il"
 
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type__write_uid
@@ -148,14 +151,14 @@ msgstr ""
 #. module: crm_claim_type
 #: model_terms:ir.ui.view,arch_db:crm_claim_type.crm_stage_claim_type_search
 msgid "Search Stages"
-msgstr ""
+msgstr "Ricerca fasi"
 
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim__stage_id
 msgid "Stage"
-msgstr ""
+msgstr "Fase"
 
 #. module: crm_claim_type
 #: model:crm.claim.type,name:crm_claim_type.crm_claim_type_supplier
 msgid "Supplier"
-msgstr ""
+msgstr "Fornitore"
