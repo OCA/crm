@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-06-09 08:00+0000\n"
-"PO-Revision-Date: 2020-01-08 19:13+0000\n"
+"PO-Revision-Date: 2020-05-29 22:19+0000\n"
 "Last-Translator: Sergio Zanchetta <primes2h@gmail.com>\n"
 "Language-Team: Italian (https://www.transifex.com/oca/teams/23907/it/)\n"
 "Language: it\n"
@@ -25,7 +25,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:crm_industry.view_crm_case_leads_filter
 #: model_terms:ir.ui.view,arch_db:crm_industry.view_crm_case_opportunities_filter
 msgid "Industry"
-msgstr ""
+msgstr "Settore"
 
 #. module: crm_industry
 #: model:ir.model,name:crm_industry.model_crm_lead
@@ -35,11 +35,10 @@ msgstr "Contatto/Opportunità"
 #. module: crm_industry
 #: model:ir.model.fields,field_description:crm_industry.field_crm_lead__industry_id
 msgid "Main Industry"
-msgstr ""
+msgstr "Settore principale"
 
 #. module: crm_industry
 #: model:ir.model.fields,field_description:crm_industry.field_crm_lead__secondary_industry_ids
-#, fuzzy
 msgid "Secondary Industries"
 msgstr "Settori secondari"
 
@@ -47,7 +46,7 @@ msgstr "Settori secondari"
 #: code:addons/crm_industry/models/crm_lead.py:21
 #, python-format
 msgid "The secondary industries must be different from the main industry."
-msgstr ""
+msgstr "I settori secondari devono essere diversi da quello principale."
 
 #~ msgid "Main Sector"
 #~ msgstr "Settore principale"
