@@ -294,12 +294,6 @@
                 <separator />
                 <filter name="date" string="Date" date="date" />
                 <separator />
-                <filter
-                    string="New Mail"
-                    name="message_unread"
-                    domain="[('message_unread','=',True)]"
-                />
-                <separator />
                 <field name="partner_id" operator="child_of" />
                 <field name="user_id" />
                 <field name="opportunity_id" />
