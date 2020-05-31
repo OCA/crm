@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2020-05-31 16:32+0000\n"
+"PO-Revision-Date: 2020-05-31 23:19+0000\n"
 "Last-Translator: Sergio Zanchetta <primes2h@gmail.com>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -341,7 +341,7 @@ msgstr "Richieste concrete"
 #. module: crm_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
 msgid "Follow Up"
-msgstr ""
+msgstr "Ulteriori informazioni"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_follower_ids
@@ -600,6 +600,14 @@ msgid "Record and track your customers' claims.\n"
 "                You can send emails with attachments and keep the full history for a claim (emails sent, intervention type and so on).\n"
 "                Claims may automatically be linked to an email address using the mail gateway module."
 msgstr ""
+"Registra e tiene traccia delle richieste dei clienti,\n"
+"                che possono essere collegate a un ordine di vendita o a un "
+"lotto.\n"
+"                È possibile inviare e-mail con allegati mantenendo l'intera "
+"cronologia di una richiesta (e-mail inviate, tipo di intervento e così via)."
+"\n"
+"                Le richieste possono essere automaticamente collegate a un "
+"indirizzo e-mail utilizzando il modulo per il gateway di posta."
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__model_ref_id
@@ -646,12 +654,12 @@ msgstr ""
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__cause
 msgid "Root Cause"
-msgstr ""
+msgstr "Causa principale"
 
 #. module: crm_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
 msgid "Root Causes"
-msgstr ""
+msgstr "Cause principali"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__team_id
