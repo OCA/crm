@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-06-01 02:38+0000\n"
-"PO-Revision-Date: 2020-06-01 17:19+0000\n"
+"PO-Revision-Date: 2020-06-01 20:19+0000\n"
 "Last-Translator: Pedro Castro Silva <pedrocs@exo.pt>\n"
 "Language-Team: Portuguese (https://www.transifex.com/oca/teams/23907/pt/)\n"
 "Language: pt\n"
@@ -176,6 +176,8 @@ msgid ""
 "Create specific phone call categories to better define the type of\n"
 "            calls tracked in the system."
 msgstr ""
+"Crie categorias específicas de chamadas telefónicas para melhor definir o "
+"tipo de chamadas rastreadas pelo sistema."
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__create_uid
@@ -266,7 +268,7 @@ msgstr "Duração em minutos e segundos."
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__email_from
 msgid "Email"
-msgstr ""
+msgstr "E-mail"
 
 #. module: crm_phonecall
 #: model:ir.model,name:crm_phonecall.model_calendar_event
@@ -471,7 +473,7 @@ msgstr "Próxima Ação"
 #. module: crm_phonecall
 #: selection:crm.phonecall,priority:0 selection:crm.phonecall.report,priority:0
 msgid "Normal"
-msgstr ""
+msgstr "Normal"
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
@@ -702,67 +704,67 @@ msgstr "Vendedor"
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.phonecall_to_phonecall_view
 msgid "Schedule Call"
-msgstr "Chamada Agendada"
+msgstr "Agendar Chamada"
 
 #. module: crm_phonecall
 #: model:ir.actions.act_window,name:crm_phonecall.phonecall_to_phonecall_act
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_inbound_phone_tree_view
 msgid "Schedule Other Call"
-msgstr ""
+msgstr "Agendar Outra Chamada"
 
 #. module: crm_phonecall
 #: selection:crm.phonecall2phonecall,action:0
 msgid "Schedule a call"
-msgstr ""
+msgstr "Agendar uma chamada"
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.phonecall_to_phonecall_view
 msgid "Schedule/Log a Call"
-msgstr ""
+msgstr "Agendar/Registar uma Chamada"
 
 #. module: crm_phonecall
 #: model:ir.actions.act_window,name:crm_phonecall.crm_case_categ_phone_outgoing0
 #: model:ir.ui.menu,name:crm_phonecall.menu_crm_case_phone_outbound
 msgid "Scheduled Calls"
-msgstr ""
+msgstr "Chamadas Agendadas"
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
 msgid "Search"
-msgstr ""
+msgstr "Pesquisar"
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
 msgid "Search Phonecalls"
-msgstr ""
+msgstr "Pesquisar Telefonemas"
 
 #. module: crm_phonecall
 #: model:res.groups,name:crm_phonecall.group_scheduled_calls
 msgid "Show Scheduled Calls Menu"
-msgstr ""
+msgstr "Exibir Menu de Chamadas Agendadas"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__source_id
 msgid "Source"
-msgstr ""
+msgstr "Fonte"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__state
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__state
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
 msgid "Status"
-msgstr ""
+msgstr "Estado"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__tag_ids
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__tag_ids
 msgid "Tags"
-msgstr ""
+msgstr "Etiquetas"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__team_id
 msgid "Team"
-msgstr ""
+msgstr "Equipa"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__state
@@ -771,11 +773,14 @@ msgid ""
 "When the call is over, the status is set to Held.\n"
 "If the callis not applicable anymore, the status can be set to Cancelled."
 msgstr ""
+"O estado é alterado para Confirmado quando um caso é criado.\n"
+"Quando a chamada termina, o estado muda para Retido.\n"
+"Se a chamada deixa de ser aplicável, o estado é alterado para Cancelado."
 
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__email_from
 msgid "These people will receive email."
-msgstr ""
+msgstr "Estas pessoas irão receber e-mail."
 
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__campaign_id
@@ -783,11 +788,13 @@ msgid ""
 "This is a name that helps you keep track of your different campaign efforts, "
 "e.g. Fall_Drive, Christmas_Special"
 msgstr ""
+"Este é o nome que o ajuda a distinguir os seus diferentes esforços de "
+"campanha, p. ex., Outono_Promo, Especial_Natal"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__medium_id
 msgid "This is the method of delivery, e.g. Postcard, Email, or Banner Ad"
-msgstr ""
+msgstr "Este é o método de envio, p. ex., Postal, Email, Banner Publicitário"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__source_id
@@ -795,52 +802,54 @@ msgid ""
 "This is the source of the link, e.g. Search Engine, another domain, or name "
 "of email list"
 msgstr ""
+"Esta é a fonte do links, p. ex., Motor de Busca, outro domínio ou nome de "
+"lista de emails"
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
 msgid "To Do"
-msgstr ""
+msgstr "A Fazer"
 
 #. module: crm_phonecall
 #: selection:crm.phonecall.report,state:0
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
 msgid "Todo"
-msgstr ""
+msgstr "A Fazer"
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
 msgid "Tracking"
-msgstr ""
+msgstr "Rastreio"
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
 msgid "Unassigned"
-msgstr ""
+msgstr "Não Atribuído"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_unread
 msgid "Unread Messages"
-msgstr ""
+msgstr "Mensagens Não Lidas"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_unread_counter
 msgid "Unread Messages Counter"
-msgstr ""
+msgstr "Nº de Mensagens Não Lidas"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__user_id
 msgid "User"
-msgstr ""
+msgstr "Utilizador"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__website_message_ids
 msgid "Website Messages"
-msgstr ""
+msgstr "Mensagens do Website"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__website_message_ids
 msgid "Website communication history"
-msgstr ""
+msgstr "Histórico de comunicação do website"
 
 #. module: crm_phonecall
 #: model_terms:ir.actions.act_window,help:crm_phonecall.crm_case_categ_phone_outgoing0
@@ -848,3 +857,5 @@ msgid ""
 "You can use the import feature to massively import a new list of\n"
 "            prospects to qualify."
 msgstr ""
+"Pode usar a funcionalidade de importação para importar massivamente uma nova "
+"lista de prospetos para qualificar."
