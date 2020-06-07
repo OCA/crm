@@ -1,0 +1,1 @@
+from . import test_crm_meeting_commercial_partner
