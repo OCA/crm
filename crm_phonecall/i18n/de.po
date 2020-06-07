@@ -463,11 +463,6 @@ msgid "My Team"
 msgstr "Mein Team"
 
 #. module: crm_phonecall
-#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
-msgid "New Mail"
-msgstr "Neue Email"
-
-#. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__date_action_next
 msgid "Next Action"
 msgstr "Nächste Aktion"
@@ -858,3 +853,6 @@ msgid ""
 msgstr ""
 "Sie können die Import-Funktion verwenden, um eine Liste von zu prüfenden "
 "Chancen zu importieren."
+
+#~ msgid "New Mail"
+#~ msgstr "Neue Email"

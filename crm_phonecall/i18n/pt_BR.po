@@ -459,11 +459,6 @@ msgid "My Team"
 msgstr ""
 
 #. module: crm_phonecall
-#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
-msgid "New Mail"
-msgstr "Novo email"
-
-#. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__date_action_next
 msgid "Next Action"
 msgstr ""
@@ -843,3 +838,6 @@ msgid ""
 "You can use the import feature to massively import a new list of\n"
 "            prospects to qualify."
 msgstr ""
+
+#~ msgid "New Mail"
+#~ msgstr "Novo email"

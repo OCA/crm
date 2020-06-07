@@ -457,11 +457,6 @@ msgid "My Team"
 msgstr ""
 
 #. module: crm_phonecall
-#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
-msgid "New Mail"
-msgstr ""
-
-#. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__date_action_next
 msgid "Next Action"
 msgstr ""

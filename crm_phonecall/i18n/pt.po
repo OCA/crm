@@ -461,11 +461,6 @@ msgid "My Team"
 msgstr "A Minha Equipa"
 
 #. module: crm_phonecall
-#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
-msgid "New Mail"
-msgstr "Novo E-Mail"
-
-#. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__date_action_next
 msgid "Next Action"
 msgstr "Próxima Ação"
@@ -618,7 +613,8 @@ msgstr "Chamadas telefónicas por utilizador"
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
 msgid "Phone calls that are assigned to one of the sale teams I manage"
-msgstr "Chamadas telefónicas atribuídas a uma das equipas de vendas que eu giro"
+msgstr ""
+"Chamadas telefónicas atribuídas a uma das equipas de vendas que eu giro"
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
@@ -859,3 +855,6 @@ msgid ""
 msgstr ""
 "Pode usar a funcionalidade de importação para importar massivamente uma nova "
 "lista de prospetos para qualificar."
+
+#~ msgid "New Mail"
+#~ msgstr "Novo E-Mail"
