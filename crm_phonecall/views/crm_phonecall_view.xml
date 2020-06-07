@@ -178,8 +178,6 @@
                 <separator/>
                 <filter string="To Do" name="current" domain="[('state','in',('open','pending'))]"/>
                 <separator/>
-                <filter string="New Mail" name="message_unread" domain="[('message_unread','=',True)]"/>
-                <separator/>
                 <field name="partner_id" operator="child_of"/>
                 <field name="user_id"/>
                 <field name="opportunity_id"/>
