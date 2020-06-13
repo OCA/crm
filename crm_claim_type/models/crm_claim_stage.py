@@ -9,14 +9,13 @@ from odoo import fields, models
 
 class CrmClaimStage(models.Model):
 
-    _inherit = 'crm.claim.stage'
+    _inherit = "crm.claim.stage"
 
-    claim_type = fields.Many2one(
-        'crm.claim.type',
-        help="Claim classification"
+    claim_type = fields.Many2one("crm.claim.type", help="Claim classification")
+
+    claim_common = fields.Boolean(
+        string="Common to All Claim Types",
+        help="If you check this field,"
+        " this stage will be proposed"
+        " by default on each claim type.",
     )
-
-    claim_common = fields.Boolean(string='Common to All Claim Types',
-                                  help="If you check this field,"
-                                  " this stage will be proposed"
-                                  " by default on each claim type.")
