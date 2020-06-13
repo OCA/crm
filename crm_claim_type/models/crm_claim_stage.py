@@ -1,7 +1,7 @@
-# Copyright 2017 URSA Information Systems
-# Copyright 2015 Vauxoo
-# Copyright 2013 Camptocamp
 # Copyright 2009-2013 Akretion
+# Copyright 2013 Camptocamp
+# Copyright 2015 Vauxoo
+# Copyright 2017 URSA Information Systems
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
 from odoo import fields, models
