@@ -6,7 +6,9 @@
     "name": "CRM Claim Types",
     "category": "Customer Relationship Management",
     "summary": "Claim types for CRM",
-    "author": "Odoo Community Association (OCA)," "Vauxoo," "Ursa Information Systems",
+    "author": "Vauxoo, "
+    "Ursa Information Systems, "
+    "Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/crm",
     "license": "AGPL-3",
     "version": "13.0.1.0.0",
