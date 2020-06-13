@@ -11,18 +11,18 @@ class CrmClaim(models.Model):
     """
         CRM Claim
     """
-    _inherit = 'crm.claim'
 
-    claim_type = fields.Many2one(
-        'crm.claim.type',
-        help="Claim classification")
+    _inherit = "crm.claim"
+
+    claim_type = fields.Many2one("crm.claim.type", help="Claim classification")
 
     stage_id = fields.Many2one(
-        'crm.claim.stage',
-        string='Stage',
-        track_visibility='onchange',
+        "crm.claim.stage",
+        string="Stage",
+        track_visibility="onchange",
         domain="[ '&',"
-               "'|',('team_ids', '=', team_id), "
-               "('case_default', '=', True), "
-               "'|',('claim_type', '=', claim_type)"
-               ",('claim_common', '=', True)]")
+        "'|',('team_ids', '=', team_id), "
+        "('case_default', '=', True), "
+        "'|',('claim_type', '=', claim_type)"
+        ",('claim_common', '=', True)]",
+    )
