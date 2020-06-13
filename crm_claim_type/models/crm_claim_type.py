@@ -10,7 +10,8 @@ class CrmClaimType(models.Model):
     """
         CRM Claim Type
     """
-    _name = 'crm.claim.type'
+
+    _name = "crm.claim.type"
     _description = "Claim Type"
 
     name = fields.Char(required=True, translate=True)
