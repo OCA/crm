@@ -8,6 +8,7 @@ setuptools.setup(
     description="Meta package for oca-crm Odoo addons",
     version=version,
     install_requires=[
+        'odoo13-addon-crm_claim',
         'odoo13-addon-crm_lead_code',
         'odoo13-addon-crm_lead_firstname',
         'odoo13-addon-crm_lead_product',
