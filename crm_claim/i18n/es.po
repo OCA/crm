@@ -37,7 +37,7 @@ msgid "# of Claims"
 msgstr "Nº de reclamaciones"
 
 #. module: crm_claim
-#: code:addons/crm_claim/models/crm_claim.py:198
+#: code:addons/crm_claim/models/crm_claim.py:0
 #, python-format
 msgid "%s (copy)"
 msgstr "%s (copia)"
@@ -72,6 +72,13 @@ msgstr "Activo"
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__activity_ids
 msgid "Activities"
 msgstr "Actividades"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__activity_exception_decoration
+#, fuzzy
+#| msgid "Action Description..."
+msgid "Activity Exception Decoration"
+msgstr "Descripción de la acción..."
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__activity_state
@@ -248,7 +255,8 @@ msgid "Corrective"
 msgstr "Correctivo"
 
 #. module: crm_claim
-#: selection:crm.claim,type_action:0 selection:crm.claim.report,type_action:0
+#: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim__type_action__correction
+#: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim_report__type_action__correction
 msgid "Corrective Action"
 msgstr "Acción correctiva"
 
@@ -382,7 +390,8 @@ msgstr ""
 "sistema ordenándolas con criterios específicos."
 
 #. module: crm_claim
-#: selection:crm.claim,priority:0 selection:crm.claim.report,priority:0
+#: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim__priority__2
+#: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim_report__priority__2
 msgid "High"
 msgstr "Alta"
 
@@ -395,17 +404,24 @@ msgid "ID"
 msgstr "Identificador"
 
 #. module: crm_claim
-#: model:ir.model.fields,help:crm_claim.field_crm_claim__message_unread
-msgid "If checked new messages require your attention."
-msgstr "Si está marcado, hay nuevos mensajes que requieren su atención."
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: crm_claim
+#: model:ir.model.fields,help:crm_claim.field_crm_claim__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
 
 #. module: crm_claim
 #: model:ir.model.fields,help:crm_claim.field_crm_claim__message_needaction
+#: model:ir.model.fields,help:crm_claim.field_crm_claim__message_unread
 msgid "If checked, new messages require your attention."
 msgstr "Si está marcado, hay nuevos mensajes que requieren su atención."
 
 #. module: crm_claim
 #: model:ir.model.fields,help:crm_claim.field_crm_claim__message_has_error
+#: model:ir.model.fields,help:crm_claim.field_crm_claim__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
 msgstr "Si está marcado, algún mensaje tiene error de envío."
 
@@ -459,7 +475,8 @@ msgstr ""
 "limitadas al equipo de venta seleccionado."
 
 #. module: crm_claim
-#: selection:crm.claim,priority:0 selection:crm.claim.report,priority:0
+#: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim__priority__0
+#: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim_report__priority__0
 msgid "Low"
 msgstr "Baja"
 
@@ -477,6 +494,13 @@ msgstr "Error en la entrega del mensaje"
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_ids
 msgid "Messages"
 msgstr "Mensajes"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__model_ref_id
+#, fuzzy
+#| msgid "Reference"
+msgid "Model Reference"
+msgstr "Referencia"
 
 #. module: crm_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
@@ -519,13 +543,14 @@ msgid "Next Activity Type"
 msgstr "Siguiente →"
 
 #. module: crm_claim
-#: code:addons/crm_claim/models/crm_claim.py:215
+#: code:addons/crm_claim/models/crm_claim.py:0
 #, python-format
 msgid "No Subject"
 msgstr "Sin asunto"
 
 #. module: crm_claim
-#: selection:crm.claim,priority:0 selection:crm.claim.report,priority:0
+#: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim__priority__1
+#: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim_report__priority__1
 msgid "Normal"
 msgstr "Normal"
 
@@ -541,7 +566,9 @@ msgstr "Nº de días para cerrar el caso"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_has_error_counter
-msgid "Number of error"
+#, fuzzy
+#| msgid "Number of error"
+msgid "Number of errors"
 msgstr "Número de error"
 
 #. module: crm_claim
@@ -558,11 +585,6 @@ msgstr "Número de mensajes con error de entrega"
 #: model:ir.model.fields,help:crm_claim.field_crm_claim__message_unread_counter
 msgid "Number of unread messages"
 msgstr "Número de mensajes no leídos"
-
-#. module: crm_claim
-#: selection:crm.claim,activity_state:0
-msgid "Overdue"
-msgstr "Sobrepasado"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__delay_expected
@@ -584,11 +606,6 @@ msgid "Phone"
 msgstr "Teléfono"
 
 #. module: crm_claim
-#: selection:crm.claim,activity_state:0
-msgid "Planned"
-msgstr "Fecha planificada"
-
-#. module: crm_claim
 #: model:crm.claim.category,name:crm_claim.categ_claim3
 msgid "Policy Claims"
 msgstr "Política de reclamaciones"
@@ -599,7 +616,8 @@ msgid "Preventive"
 msgstr "Preventivo"
 
 #. module: crm_claim
-#: selection:crm.claim,type_action:0 selection:crm.claim.report,type_action:0
+#: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim__type_action__prevention
+#: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim_report__type_action__prevention
 msgid "Preventive Action"
 msgstr "Acción preventiva"
 
@@ -625,11 +643,6 @@ msgstr ""
 "reclamación (correos enviados, tipo de intervención, etc.) Las reclamaciones "
 "pueden enlazarse automáticamente a una dirección de correo electrónico "
 "usando el módulo de puerta de enlace de correo electrónico."
-
-#. module: crm_claim
-#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__model_ref_id
-msgid "Reference"
-msgstr "Referencia"
 
 #. module: crm_claim
 #: model:crm.claim.stage,name:crm_claim.stage_claim3
@@ -681,6 +694,13 @@ msgstr "Causa principal"
 #: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
 msgid "Root Causes"
 msgstr "Causas principales"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_has_sms_error
+#, fuzzy
+#| msgid "Message Delivery error"
+msgid "SMS Delivery error"
+msgstr "Error en la entrega del mensaje"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__team_id
@@ -767,11 +787,6 @@ msgstr ""
 "las diferentes direcciones de correo con una coma"
 
 #. module: crm_claim
-#: selection:crm.claim,activity_state:0
-msgid "Today"
-msgstr "Hoy"
-
-#. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__user_fault
 msgid "Trouble Responsible"
 msgstr "Responsable problema"
@@ -781,6 +796,11 @@ msgstr "Responsable problema"
 #: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
 msgid "Type"
 msgstr "Tipo"
+
+#. module: crm_claim
+#: model:ir.model.fields,help:crm_claim.field_crm_claim__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
 
 #. module: crm_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
@@ -847,3 +867,15 @@ msgstr ""
 "Puede crear etapas de reclamaciones para categorizar el estado de cada "
 "reclamación introducida en el sistema. Las etapas definen todos los pasos "
 "requeridos para la resolución de la reclamación."
+
+#~ msgid "If checked new messages require your attention."
+#~ msgstr "Si está marcado, hay nuevos mensajes que requieren su atención."
+
+#~ msgid "Overdue"
+#~ msgstr "Sobrepasado"
+
+#~ msgid "Planned"
+#~ msgstr "Fecha planificada"
+
+#~ msgid "Today"
+#~ msgstr "Hoy"
