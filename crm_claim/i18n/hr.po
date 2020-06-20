@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* crm_claim
+# 	* crm_claim
 #
 msgid ""
 msgstr ""
@@ -13,8 +13,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
-"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 3.8\n"
 
 #. module: crm_claim
@@ -34,7 +34,7 @@ msgid "# of Claims"
 msgstr "# Zahtjeva"
 
 #. module: crm_claim
-#: code:addons/crm_claim/models/crm_claim.py:198
+#: code:addons/crm_claim/models/crm_claim.py:0
 #, python-format
 msgid "%s (copy)"
 msgstr "%s (kopija)"
@@ -69,6 +69,13 @@ msgstr "Aktivan"
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__activity_ids
 msgid "Activities"
 msgstr "Aktivnosti"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__activity_exception_decoration
+#, fuzzy
+#| msgid "Action Description..."
+msgid "Activity Exception Decoration"
+msgstr "Opis aktivnosti..."
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__activity_state
@@ -243,8 +250,8 @@ msgid "Corrective"
 msgstr ""
 
 #. module: crm_claim
-#: selection:crm.claim,type_action:0
-#: selection:crm.claim.report,type_action:0
+#: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim__type_action__correction
+#: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim_report__type_action__correction
 msgid "Corrective Action"
 msgstr ""
 
@@ -255,7 +262,8 @@ msgstr ""
 
 #. module: crm_claim
 #: model_terms:ir.actions.act_window,help:crm_claim.crm_claim_categ_action
-msgid "Create claim categories to better manage and classify your\n"
+msgid ""
+"Create claim categories to better manage and classify your\n"
 "            claims. Some example of claims can be: preventive action,\n"
 "            corrective action."
 msgstr ""
@@ -366,12 +374,14 @@ msgstr ""
 
 #. module: crm_claim
 #: model_terms:ir.actions.act_window,help:crm_claim.action_report_crm_claim
-msgid "Have a general overview of all claims processed in the system by sorting them with specific criteria."
+msgid ""
+"Have a general overview of all claims processed in the system by sorting "
+"them with specific criteria."
 msgstr ""
 
 #. module: crm_claim
-#: selection:crm.claim,priority:0
-#: selection:crm.claim.report,priority:0
+#: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim__priority__2
+#: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim_report__priority__2
 msgid "High"
 msgstr ""
 
@@ -384,23 +394,32 @@ msgid "ID"
 msgstr ""
 
 #. module: crm_claim
-#: model:ir.model.fields,help:crm_claim.field_crm_claim__message_unread
-msgid "If checked new messages require your attention."
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: crm_claim
+#: model:ir.model.fields,help:crm_claim.field_crm_claim__activity_exception_icon
+msgid "Icon to indicate an exception activity."
 msgstr ""
 
 #. module: crm_claim
 #: model:ir.model.fields,help:crm_claim.field_crm_claim__message_needaction
+#: model:ir.model.fields,help:crm_claim.field_crm_claim__message_unread
 msgid "If checked, new messages require your attention."
 msgstr ""
 
 #. module: crm_claim
 #: model:ir.model.fields,help:crm_claim.field_crm_claim__message_has_error
+#: model:ir.model.fields,help:crm_claim.field_crm_claim__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
 msgstr ""
 
 #. module: crm_claim
 #: model:ir.model.fields,help:crm_claim.field_crm_claim_stage__case_default
-msgid "If you check this field, this stage will be proposed by default on each sales team. It will not assign this stage to existing teams."
+msgid ""
+"If you check this field, this stage will be proposed by default on each "
+"sales team. It will not assign this stage to existing teams."
 msgstr ""
 
 #. module: crm_claim
@@ -436,12 +455,14 @@ msgstr ""
 
 #. module: crm_claim
 #: model:ir.model.fields,help:crm_claim.field_crm_claim_stage__team_ids
-msgid "Link between stages and sales teams. When set, this limitate the current stage to the selected sales teams."
+msgid ""
+"Link between stages and sales teams. When set, this limitate the current "
+"stage to the selected sales teams."
 msgstr ""
 
 #. module: crm_claim
-#: selection:crm.claim,priority:0
-#: selection:crm.claim.report,priority:0
+#: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim__priority__0
+#: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim_report__priority__0
 msgid "Low"
 msgstr ""
 
@@ -458,6 +479,11 @@ msgstr ""
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_ids
 msgid "Messages"
+msgstr ""
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__model_ref_id
+msgid "Model Reference"
 msgstr ""
 
 #. module: crm_claim
@@ -501,14 +527,14 @@ msgid "Next Activity Type"
 msgstr ""
 
 #. module: crm_claim
-#: code:addons/crm_claim/models/crm_claim.py:215
+#: code:addons/crm_claim/models/crm_claim.py:0
 #, python-format
 msgid "No Subject"
 msgstr ""
 
 #. module: crm_claim
-#: selection:crm.claim,priority:0
-#: selection:crm.claim.report,priority:0
+#: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim__priority__1
+#: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim_report__priority__1
 msgid "Normal"
 msgstr ""
 
@@ -524,7 +550,7 @@ msgstr ""
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_has_error_counter
-msgid "Number of error"
+msgid "Number of errors"
 msgstr ""
 
 #. module: crm_claim
@@ -540,11 +566,6 @@ msgstr ""
 #. module: crm_claim
 #: model:ir.model.fields,help:crm_claim.field_crm_claim__message_unread_counter
 msgid "Number of unread messages"
-msgstr ""
-
-#. module: crm_claim
-#: selection:crm.claim,activity_state:0
-msgid "Overdue"
 msgstr ""
 
 #. module: crm_claim
@@ -567,11 +588,6 @@ msgid "Phone"
 msgstr ""
 
 #. module: crm_claim
-#: selection:crm.claim,activity_state:0
-msgid "Planned"
-msgstr ""
-
-#. module: crm_claim
 #: model:crm.claim.category,name:crm_claim.categ_claim3
 msgid "Policy Claims"
 msgstr ""
@@ -582,8 +598,8 @@ msgid "Preventive"
 msgstr ""
 
 #. module: crm_claim
-#: selection:crm.claim,type_action:0
-#: selection:crm.claim.report,type_action:0
+#: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim__type_action__prevention
+#: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim_report__type_action__prevention
 msgid "Preventive Action"
 msgstr ""
 
@@ -595,15 +611,13 @@ msgstr ""
 
 #. module: crm_claim
 #: model_terms:ir.actions.act_window,help:crm_claim.crm_claim_category_claim0
-msgid "Record and track your customers' claims.\n"
+msgid ""
+"Record and track your customers' claims.\n"
 "                Claims may be linked to a sales order or a lot.\n"
-"                You can send emails with attachments and keep the full history for a claim (emails sent, intervention type and so on).\n"
-"                Claims may automatically be linked to an email address using the mail gateway module."
-msgstr ""
-
-#. module: crm_claim
-#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__model_ref_id
-msgid "Reference"
+"                You can send emails with attachments and keep the full "
+"history for a claim (emails sent, intervention type and so on).\n"
+"                Claims may automatically be linked to an email address using "
+"the mail gateway module."
 msgstr ""
 
 #. module: crm_claim
@@ -640,7 +654,9 @@ msgstr ""
 
 #. module: crm_claim
 #: model:ir.model.fields,help:crm_claim.field_crm_claim__team_id
-msgid "Responsible sales team. Define Responsible user and Email account for mail gateway."
+msgid ""
+"Responsible sales team. Define Responsible user and Email account for mail "
+"gateway."
 msgstr ""
 
 #. module: crm_claim
@@ -651,6 +667,11 @@ msgstr ""
 #. module: crm_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
 msgid "Root Causes"
+msgstr ""
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_has_sms_error
+msgid "SMS Delivery error"
 msgstr ""
 
 #. module: crm_claim
@@ -705,7 +726,8 @@ msgstr ""
 
 #. module: crm_claim
 #: model:ir.model.fields,help:crm_claim.field_crm_claim__activity_state
-msgid "Status based on activities\n"
+msgid ""
+"Status based on activities\n"
 "Overdue: Due date is already passed\n"
 "Today: Activity date is today\n"
 "Planned: Future activities."
@@ -723,12 +745,10 @@ msgstr ""
 
 #. module: crm_claim
 #: model:ir.model.fields,help:crm_claim.field_crm_claim__email_cc
-msgid "These email addresses will be added to the CC field of all inbound and outbound emails for this record before being sent. Separate multiple email addresses with a comma"
-msgstr ""
-
-#. module: crm_claim
-#: selection:crm.claim,activity_state:0
-msgid "Today"
+msgid ""
+"These email addresses will be added to the CC field of all inbound and "
+"outbound emails for this record before being sent. Separate multiple email "
+"addresses with a comma"
 msgstr ""
 
 #. module: crm_claim
@@ -740,6 +760,11 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_tree_view
 #: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
 msgid "Type"
+msgstr ""
+
+#. module: crm_claim
+#: model:ir.model.fields,help:crm_claim.field_crm_claim__activity_exception_decoration
+msgid "Type of the exception activity on record."
 msgstr ""
 
 #. module: crm_claim
@@ -799,7 +824,8 @@ msgstr ""
 
 #. module: crm_claim
 #: model_terms:ir.actions.act_window,help:crm_claim.crm_claim_stage_act
-msgid "You can create claim stages to categorize the status of every\n"
+msgid ""
+"You can create claim stages to categorize the status of every\n"
 "            claim entered in the system. The stages define all the steps\n"
 "            required for the resolution of a claim."
 msgstr ""
