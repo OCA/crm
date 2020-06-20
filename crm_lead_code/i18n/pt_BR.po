@@ -11,8 +11,8 @@ msgstr ""
 "POT-Creation-Date: 2017-12-04 15:47+0000\n"
 "PO-Revision-Date: 2019-09-03 03:23+0000\n"
 "Last-Translator: Rodrigo Macedo <rmsolucoeseminformatic4@gmail.com>\n"
-"Language-Team: Portuguese (Brazil) (https://www.transifex.com/oca/teams/"
-"23907/pt_BR/)\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/oca/"
+"teams/23907/pt_BR/)\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,7 +31,8 @@ msgid "Lead/Opportunity"
 msgstr "Prospector/Oportunidade"
 
 #. module: crm_lead_code
-#: code:addons/crm_lead_code/models/crm_lead.py:16 sql_constraint:crm.lead:0
+#: code:addons/crm_lead_code/models/crm_lead.py:0
+#: model:ir.model.constraint,message:crm_lead_code.constraint_crm_lead_crm_lead_unique_code
 #, python-format
 msgid "The code must be unique!"
 msgstr "O código deve ser único!"
