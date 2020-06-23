@@ -196,7 +196,7 @@ msgid "Start"
 msgstr ""
 
 #. module: crm_phonecall_planner
-#: code:addons/crm_phonecall_planner/wizards/crm_phonecall_planner.py:89
+#: code:addons/crm_phonecall_planner/wizards/crm_phonecall_planner.py:0
 #, python-format
 msgid "Starting date must be less than ending date"
 msgstr ""
