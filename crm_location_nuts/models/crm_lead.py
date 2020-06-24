@@ -13,22 +13,15 @@ class CrmLead(models.Model):
         comodel_name="res.partner.nuts", domain=[("level", "=", 1)], string="NUTS L1",
     )
     nuts2_id = fields.Many2one(
-        comodel_name="res.partner.nuts",
-        domain=[("level", "=", 2)],
-        string="NUTS L2",
-        oldname="region",
+        comodel_name="res.partner.nuts", domain=[("level", "=", 2)], string="NUTS L2",
     )
     nuts3_id = fields.Many2one(
-        comodel_name="res.partner.nuts",
-        domain=[("level", "=", 3)],
-        string="NUTS L3",
-        oldname="substate",
+        comodel_name="res.partner.nuts", domain=[("level", "=", 3)], string="NUTS L3",
     )
     nuts4_id = fields.Many2one(
         comodel_name="res.partner.nuts", domain=[("level", "=", 4)], string="NUTS L4",
     )
 
-    @api.multi
     def _create_lead_partner_data(self, name, is_company, parent_id=False):
         """Sets NUTS region on created partner"""
         partner_data = super()._create_lead_partner_data(
