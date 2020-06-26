@@ -33,6 +33,12 @@ opportunity), and propagates them through the workflow.
 .. contents::
    :local:
 
+Installation
+============
+
+This module depends on ``l10n_eu_nace``, which you can download from
+`OCA/community-data-files <https://github.com/OCA/community-data-files>`__.
+
 Bug Tracker
 ===========
 
@@ -54,10 +60,12 @@ Authors
 Contributors
 ~~~~~~~~~~~~
 
-* Pedro M. Baeza (`Tecnativa <https://www.tecnativa.com/>`__)
-* Antonio Espinosa (`Tecnativa <https://www.tecnativa.com/>`__)
-* David Vidal (`Tecnativa <https://www.tecnativa.com/>`__)
-* Jairo Llopis (`Tecnativa <https://www.tecnativa.com/>`__)
+* `Tecnativa <https://www.tecnativa.com/>`__:
+
+  * Pedro M. Baeza
+  * Antonio Espinosa
+  * David Vidal
+  * Jairo Llopis
 
 Maintainers
 ~~~~~~~~~~~
