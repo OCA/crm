@@ -1,0 +1,48 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* crm_activity_nace
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-06-19 18:30+0000\n"
+"PO-Revision-Date: 2017-06-19 20:31+0200\n"
+"Last-Translator: David <david.vidal@tecnativa.com>\n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#. module: crm_l10n_eu_nace
+#: model:ir.model,name:crm_l10n_eu_nace.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Iniciativa/Oportunidad"
+
+#. module: crm_l10n_eu_nace
+#: model:ir.model.fields,field_description:crm_l10n_eu_nace.field_crm_lead__nace_id
+msgid "Main NACE"
+msgstr ""
+
+#. module: crm_l10n_eu_nace
+#: model_terms:ir.ui.view,arch_db:crm_l10n_eu_nace.view_crm_case_leads_filter
+#: model_terms:ir.ui.view,arch_db:crm_l10n_eu_nace.view_crm_case_opportunities_filter
+msgid "NACE"
+msgstr ""
+
+#. module: crm_l10n_eu_nace
+#: model:ir.model.fields,field_description:crm_l10n_eu_nace.field_crm_lead__secondary_nace_ids
+msgid "Secondary NACE"
+msgstr ""
+
+#~ msgid "Activity"
+#~ msgstr "Actividad"
+
+#~ msgid "Main activity"
+#~ msgstr "Actividad principal"
+
+#~ msgid "Other activities"
+#~ msgstr "Otras actividades"
