@@ -78,7 +78,6 @@ msgstr "Activo"
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__activity_exception_decoration
 #, fuzzy
-#| msgid "Action Description..."
 msgid "Activity Exception Decoration"
 msgstr "Descripción de Accion"
 

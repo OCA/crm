@@ -76,7 +76,6 @@ msgstr "Actividades"
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__activity_exception_decoration
 #, fuzzy
-#| msgid "Action Description..."
 msgid "Activity Exception Decoration"
 msgstr "Descripción de la acción..."
 
@@ -498,7 +497,6 @@ msgstr "Mensajes"
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__model_ref_id
 #, fuzzy
-#| msgid "Reference"
 msgid "Model Reference"
 msgstr "Referencia"
 
@@ -567,7 +565,6 @@ msgstr "Nº de días para cerrar el caso"
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_has_error_counter
 #, fuzzy
-#| msgid "Number of error"
 msgid "Number of errors"
 msgstr "Número de error"
 
@@ -698,7 +695,6 @@ msgstr "Causas principales"
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_has_sms_error
 #, fuzzy
-#| msgid "Message Delivery error"
 msgid "SMS Delivery error"
 msgstr "Error en la entrega del mensaje"
 
