@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_crm_claim_type_technical,crm.claim.type.technical,model_crm_claim_type,base.group_no_one,1,1,1,1
+access_crm_claim_type_manager,crm.claim.type.manager,model_crm_claim_type,sales_team.group_sale_manager,1,0,0,0
+access_crm_claim_type_user,crm.claim.type.user,model_crm_claim_type,sales_team.group_sale_salesman,1,0,0,0
