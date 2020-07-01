@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2020-05-06 15:19+0000\n"
-"Last-Translator: Maria Sparenberg <maria.sparenberg@gmx.net>\n"
+"PO-Revision-Date: 2020-07-01 22:19+0000\n"
+"Last-Translator: Peter Schubert <psc@saco.info>\n"
 "Language-Team: none\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -82,7 +82,7 @@ msgstr "Kundendienst"
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_attachment_count
 msgid "Attachment Count"
-msgstr ""
+msgstr "Anzahl der Anhänge"
 
 #. module: crm_claim
 #: model:ir.model,name:crm_claim.model_crm_claim_report
