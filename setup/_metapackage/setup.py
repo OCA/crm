@@ -10,6 +10,7 @@ setuptools.setup(
     install_requires=[
         'odoo13-addon-crm_claim',
         'odoo13-addon-crm_claim_type',
+        'odoo13-addon-crm_industry',
         'odoo13-addon-crm_lead_code',
         'odoo13-addon-crm_lead_firstname',
         'odoo13-addon-crm_lead_product',
