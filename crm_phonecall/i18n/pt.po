@@ -60,6 +60,11 @@ msgid "Active"
 msgstr "Ativo(a)"
 
 #. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
+msgid "Additional Info"
+msgstr ""
+
+#. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__user_id
 msgid "Assign To"
 msgstr "Atribuir A"
@@ -73,6 +78,18 @@ msgstr "Nº de Anexos"
 #: model:ir.filters,name:crm_phonecall.filter_crm_phonecall_sales_team
 msgid "By Sales Team"
 msgstr "Por Equipa de Venda"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,help:crm_phonecall.field_res_config_settings__group_show_form_view
+msgid "By default form is disabled for calls, with this group it is enabled."
+msgstr ""
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.res_config_settings_view_form
+msgid ""
+"By default form view is disabled for calls, with this setting it is enabled "
+"for all users."
+msgstr ""
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__name
@@ -95,6 +112,11 @@ msgstr "Chamadas"
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
 msgid "Calls Date by Month"
 msgstr "Data das Chamadas Por Mês"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+msgid "Calls by status"
+msgstr ""
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__campaign_id
@@ -141,6 +163,11 @@ msgstr "Fechada"
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__company_id
 msgid "Company"
 msgstr "Empresa"
+
+#. module: crm_phonecall
+#: model:ir.model,name:crm_phonecall.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
 
 #. module: crm_phonecall
 #: selection:crm.phonecall,state:0
@@ -243,6 +270,13 @@ msgid "Description..."
 msgstr "Descrição..."
 
 #. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__direction
+#, fuzzy
+#| msgid "Creation"
+msgid "Direction"
+msgstr "Criação"
+
+#. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__display_name
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__display_name
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__display_name
@@ -269,6 +303,13 @@ msgstr "Duração em minutos e segundos."
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__email_from
 msgid "Email"
 msgstr "E-mail"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_res_config_settings__group_show_form_view
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.res_config_settings_view_form
+#: model:res.groups,name:crm_phonecall.group_show_form_view
+msgid "Enable form view for phone calls"
+msgstr ""
 
 #. module: crm_phonecall
 #: model:ir.model,name:crm_phonecall.model_calendar_event
@@ -333,6 +374,11 @@ msgstr "Se assinalado, há novas mensagens que requerem a sua atenção."
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__message_has_error
 msgid "If checked, some messages have a delivery error."
 msgstr "Se assinalado, algumas mensagens têm erro de envio."
+
+#. module: crm_phonecall
+#: selection:crm.phonecall,direction:0
+msgid "In"
+msgstr ""
 
 #. module: crm_phonecall
 #: model_terms:ir.actions.act_window,help:crm_phonecall.crm_case_categ_phone_incoming0
@@ -547,6 +593,11 @@ msgid "Opening Date"
 msgstr "Data de Abertura"
 
 #. module: crm_phonecall
+#: selection:crm.phonecall,direction:0
+msgid "Out"
+msgstr ""
+
+#. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__partner_id
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__partner_id
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
@@ -566,7 +617,7 @@ msgid "Phone"
 msgstr "Telefone"
 
 #. module: crm_phonecall
-#: code:addons/crm_phonecall/models/crm_phonecall.py:200
+#: code:addons/crm_phonecall/models/crm_phonecall.py:208
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
 #, python-format
 msgid "Phone Call"
@@ -658,6 +709,7 @@ msgstr "Telefonema a Telefonema"
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_lead__phonecall_ids
 #: model:ir.model.fields,field_description:crm_phonecall.field_res_partner__phonecall_ids
 #: model:ir.model.fields,field_description:crm_phonecall.field_res_users__phonecall_ids
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.res_config_settings_view_form
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
 msgid "Phonecalls"
 msgstr "Telefonemas"
@@ -743,6 +795,13 @@ msgstr "Exibir Menu de Chamadas Agendadas"
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__source_id
 msgid "Source"
 msgstr "Fonte"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+#, fuzzy
+#| msgid "Status"
+msgid "State"
+msgstr "Estado"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__state
