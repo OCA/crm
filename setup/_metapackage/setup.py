@@ -20,6 +20,7 @@ setuptools.setup(
         'odoo13-addon-crm_phonecall',
         'odoo13-addon-crm_phonecall_planner',
         'odoo13-addon-crm_stage_probability',
+        'odoo13-addon-crm_stage_type',
     ],
     classifiers=[
         'Programming Language :: Python',
