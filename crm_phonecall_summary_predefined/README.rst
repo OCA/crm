@@ -46,7 +46,7 @@ To configure the possible summary options:
 Usage
 =====
 
-#. Go to *CRM > Phone Calls > Logged Calls*.
+#. Go to *CRM > Configuration > Pipelines > Phone Calls > Summaries*.
 #. There you can use the new *Summary* field
 
 Bug Tracker
