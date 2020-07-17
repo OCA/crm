@@ -1,0 +1,60 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* crm_stage_type
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2020-03-21 11:13+0000\n"
+"Last-Translator: Matjaz Mozetic <matjaz@matmoz.si>\n"
+"Language-Team: none\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 3.10\n"
+
+#. module: crm_stage_type
+#: selection:crm.stage,lead_type:0
+msgid "Both"
+msgstr "Oboje"
+
+#. module: crm_stage_type
+#: model:ir.model,name:crm_stage_type.model_crm_stage
+msgid "CRM Stages"
+msgstr "CRM stopnje"
+
+#. module: crm_stage_type
+#: selection:crm.stage,lead_type:0
+msgid "Lead"
+msgstr "Indic"
+
+#. module: crm_stage_type
+#: model:ir.model,name:crm_stage_type.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Indic/priložnost"
+
+#. module: crm_stage_type
+#: selection:crm.stage,lead_type:0
+msgid "Opportunity"
+msgstr "Priložnost"
+
+#. module: crm_stage_type
+#: model:ir.model.fields,field_description:crm_stage_type.field_crm_lead__stage_id
+msgid "Stage"
+msgstr "Stopnja"
+
+#. module: crm_stage_type
+#: model:ir.model.fields,help:crm_stage_type.field_crm_stage__lead_type
+msgid "This field is used to distinguish stages related to Leadsfrom stages related to Opportunities, or to specify stagesavailable for both types."
+msgstr ""
+"To polje se uporablja za razločevanje stopenj indicev od stopenj priložnosti "
+"ali za določitev stopenj, ki so skupne obema."
+
+#. module: crm_stage_type
+#: model:ir.model.fields,field_description:crm_stage_type.field_crm_stage__lead_type
+msgid "Type"
+msgstr "Tip"

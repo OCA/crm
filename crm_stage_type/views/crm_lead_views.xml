@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<!-- Copyright 2018 Eficent Business and IT Consulting Services, S.L.
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html). -->
+<odoo>
+    <record id="crm_case_form_view_leads" model="ir.ui.view">
+        <field name="name">crm.lead.form.lead</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form" />
+        <field name="arch" type="xml">
+            <field name="stage_id" position="attributes">
+                <attribute
+                    name="domain"
+                >[('team_id', 'in', [team_id, False]), ('lead_type', 'in', [type, 'both'])]</attribute>
+                <attribute
+                    name="attrs"
+                >{'invisible': [('active', '=', False)]}</attribute>
+            </field>
+        </field>
+    </record>
+    <record id="crm_case_tree_view_leads" model="ir.ui.view">
+        <field name="name">crm.lead.tree.lead</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_tree_view_leads" />
+        <field name="arch" type="xml">
+            <field name="phone" position="after">
+                <field name="stage_id" />
+            </field>
+        </field>
+    </record>
+</odoo>
