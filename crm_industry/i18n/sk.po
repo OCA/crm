@@ -19,8 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #. module: crm_industry
-#: model_terms:ir.ui.view,arch_db:crm_industry.crm_case_form_view_leads
-#: model_terms:ir.ui.view,arch_db:crm_industry.crm_case_form_view_oppor
+#: model_terms:ir.ui.view,arch_db:crm_industry.crm_lead_view_form
 #: model_terms:ir.ui.view,arch_db:crm_industry.view_crm_case_leads_filter
 #: model_terms:ir.ui.view,arch_db:crm_industry.view_crm_case_opportunities_filter
 msgid "Industry"
@@ -42,7 +41,7 @@ msgid "Secondary Industries"
 msgstr ""
 
 #. module: crm_industry
-#: code:addons/crm_industry/models/crm_lead.py:21
+#: code:addons/crm_industry/models/crm_lead.py:0
 #, python-format
 msgid "The secondary industries must be different from the main industry."
 msgstr ""
