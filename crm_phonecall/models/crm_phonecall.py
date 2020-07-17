@@ -98,10 +98,13 @@ class CrmPhonecall(models.Model):
         string='Closed',
         readonly=True,
     )
-    date = fields.Datetime(default=fields.Datetime.now)
+    date = fields.Datetime(default=lambda self: fields.Datetime.now())
     opportunity_id = fields.Many2one(
         comodel_name='crm.lead',
         string='Lead/Opportunity',
+    )
+    direction = fields.Selection(
+        [('in', 'In'), ('out', 'Out')], default='out', required=True
     )
 
     @api.onchange('partner_id')
@@ -126,11 +129,16 @@ class CrmPhonecall(models.Model):
     @api.multi
     def compute_duration(self):
         """Calculate duration based on phonecall date."""
-        for phonecall in self.filtered('date'):
+        phonecall_dates = self.filtered('date')
+        phonecall_no_dates = self - phonecall_dates
+        for phonecall in phonecall_dates:
             if phonecall.duration <= 0 and phonecall.date:
                 duration = fields.Datetime.now() - phonecall.date
                 values = {'duration': duration.seconds / 60.0}
                 phonecall.write(values)
+            else:
+                phonecall.duration = 0.0
+        phonecall_no_dates.write({"duration": 0.0})
         return True
 
     @api.multi
