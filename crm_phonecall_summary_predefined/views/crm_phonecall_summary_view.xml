@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2016 Antiun Ingeniería S.L. - Jairo Llopis
+     Copyright 2017 Tecnativa - Vicent Cubells
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html). -->
+<odoo>
+    <record id="crm_phonecall_summary_view_form" model="ir.ui.view">
+        <field name="name">CRM Phonecall Summary Form</field>
+        <field name="model">crm.phonecall.summary</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet name="Phonecall Summary">
+                    <group>
+                        <field name="name" />
+                    </group>
+                    <group name="Phonecalls">
+                        <field name="phonecall_ids" nolabel="True" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="crm_phonecall_summary_view_tree" model="ir.ui.view">
+        <field name="name">CRM Phonecall Summary Tree</field>
+        <field name="model">crm.phonecall.summary</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+    <record id="crm_phonecall_summary_view_search" model="ir.ui.view">
+        <field name="name">CRM Phonecall Summary Search</field>
+        <field name="model">crm.phonecall.summary</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+            </search>
+        </field>
+    </record>
+    <act_window
+        name="Summaries"
+        id="crm_phonecall_summary_action"
+        res_model="crm.phonecall.summary"
+    />
+    <menuitem
+        id="crm_phonecall_summary_menu"
+        action="crm_phonecall_summary_action"
+        groups="sales_team.group_sale_manager"
+        parent="crm_phonecall.menu_crm_config_phonecall"
+    />
+</odoo>
