@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!-- Helpdesk report after Sales Services Graph View -->
+        <record id="view_report_crm_helpdesk_graph" model="ir.ui.view">
+            <field name="name">crm.helpdesk.report.graph</field>
+            <field name="model">crm.helpdesk.report</field>
+            <field name="arch" type="xml">
+                <graph orientation="horizontal" string="Helpdesk" type="bar" stacked="True">
+                    <field name="state" type="row"/>
+                    <field name="team_id" type="col"/>
+                    <field name="date" interval="month" type="col"/>
+                    <field name="nbr_requests" type="measure"/>
+                </graph>
+            </field>
+        </record>
+
+<!-- Helpdesk report after Sales Services Search View -->
+        <record id="view_report_crm_helpdesk_filter" model="ir.ui.view">
+            <field name="name">crm.helpdesk.report.select</field>
+            <field name="model">crm.helpdesk.report</field>
+            <field name="arch" type="xml">
+                <search string="Search">
+                    <filter string="New" domain="[('state','=','draft')]" />
+                    <filter string="Open" domain="[('state','=','open')]" />
+                    <filter string="Closed" domain="[('state','=','cancel')]" />
+                    <separator/>
+                    <filter string="My Case(s)" help="My Case(s)" domain="[('user_id','=',uid)]" />
+                    <separator/>
+                    <filter string="My Sales Team(s)"
+                            context="{'invisible_team': False}"
+                            domain="[('team_id.user_id','=',uid)]"
+                            help="My Sales Team(s)"  groups="sales_team.group_sale_salesman"/>
+                    <separator/>
+                    <filter string="My Company"
+                            context="{'invisible_team': False}"
+                            domain="[('company_id.user_ids','=',uid)]" help="My Company"/>
+                    <field name="user_id" string="Salesperson"/>
+                    <field name="team_id" string="Sales Team"
+                           context="{'invisible_team': False}"
+                           groups="sales_team.group_sale_salesman"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                    <field name="partner_id" filter_domain="[('partner_id','child_of',self)]"/>
+                    <group expand="0" string="Extended Filters..." groups="base.group_no_one">
+                        <field name="priority" string="Priority"/>
+                        <field name="tag_ids"/>
+                        <field name="create_date"/>
+                        <field name="date_closed" string="Close Date"/>
+                    </group>
+                    <group expand="1" string="Group By">
+                        <filter string="Salesperson" context="{'group_by':'user_id'}"/>
+                        <filter string="Sales Team"
+                                context="{'group_by':'team_id'}"
+                                groups="sales_team.group_sale_salesman"/>
+                        <filter string="Partner" context="{'group_by':'partner_id'}" />
+                        <filter string="Status" context="{'group_by':'state'}" />
+                        <filter string="Company" groups="base.group_multi_company" context="{'group_by':'company_id'}" />
+                        <separator/>
+                        <filter string="Month" context="{'group_by':'date:month'}" help="Month of helpdesk requests"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+<!-- Helpdesk report after Sales Services Action -->
+        <record id="action_report_crm_helpdesk" model="ir.actions.act_window">
+            <field name="name">Helpdesk Analysis</field>
+            <field name="res_model">crm.helpdesk.report</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">graph</field>
+            <field name="context">{"search_default_year":1,"search_default_User":1,"search_default_this_month":1,'group_by_no_leaf':1,'group_by':[]}</field>
+            <field name="view_id" ref="view_report_crm_helpdesk_graph"/>
+            <field name="search_view_id" ref="view_report_crm_helpdesk_filter"/>
+            <field name="help">Have a general overview of all support requests by sorting them with specific criteria such as the processing time, number of requests answered, emails sent and costs.</field>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="action_report_crm_helpdesk_graph">
+            <field name="sequence" eval="2"/>
+            <field name="view_mode">graph</field>
+            <field name="view_id" ref="view_report_crm_helpdesk_graph"/>
+            <field name="act_window_id" ref="action_report_crm_helpdesk"/>
+        </record>
+
+        <menuitem name="Helpdesk Analysis" action="action_report_crm_helpdesk"
+            id="menu_report_crm_helpdesks_tree" parent="crm.crm_menu_report" sequence="20"/>
+</odoo>
