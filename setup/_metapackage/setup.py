@@ -14,6 +14,7 @@ setuptools.setup(
         'odoo11-addon-crm_deduplicate_by_ref',
         'odoo11-addon-crm_deduplicate_by_website',
         'odoo11-addon-crm_deduplicate_filter',
+        'odoo11-addon-crm_helpdesk',
         'odoo11-addon-crm_industry',
         'odoo11-addon-crm_lead_firstname',
         'odoo11-addon-crm_lead_product',
