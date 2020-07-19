@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-04-28 12:23+0000\n"
-"PO-Revision-Date: 2018-04-28 12:23+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
-"Language-Team: Spanish (Argentina) (https://www.transifex.com/oca/"
-"teams/23907/es_AR/)\n"
+"PO-Revision-Date: 2020-07-20 00:19+0000\n"
+"Last-Translator: Ignacio Buioli <ibuioli@gmail.com>\n"
+"Language-Team: Spanish (Argentina) (https://www.transifex.com/oca/teams/"
+"23907/es_AR/)\n"
 "Language: es_AR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.10\n"
 
 #. module: crm_phonecall_summary_predefined
 #: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary_create_uid
@@ -62,35 +63,35 @@ msgstr "Nombre"
 #. module: crm_phonecall_summary_predefined
 #: sql_constraint:crm.phonecall.summary:0
 msgid "Name must be unique"
-msgstr ""
+msgstr "El nombre debe ser único"
 
 #. module: crm_phonecall_summary_predefined
 #: model:ir.model,name:crm_phonecall_summary_predefined.model_crm_phonecall
 msgid "Phonecall"
-msgstr ""
+msgstr "Llamada Telefónica"
 
 #. module: crm_phonecall_summary_predefined
 #: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary_phonecall_ids
 msgid "Phonecalls"
-msgstr ""
+msgstr "Llamadas Telefónicas"
 
 #. module: crm_phonecall_summary_predefined
 #: model:ir.model.fields,help:crm_phonecall_summary_predefined.field_crm_phonecall_summary_phonecall_ids
 msgid "Phonecalls with this summary."
-msgstr ""
+msgstr "Llamadas Telefónicas con este resumen."
 
 #. module: crm_phonecall_summary_predefined
 #: model:ir.actions.act_window,name:crm_phonecall_summary_predefined.summary_action
 #: model:ir.ui.menu,name:crm_phonecall_summary_predefined.summary_menu
 msgid "Summaries"
-msgstr ""
+msgstr "Resúmenes"
 
 #. module: crm_phonecall_summary_predefined
 #: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary_id
 msgid "Summary"
-msgstr ""
+msgstr "Resumen"
 
 #. module: crm_phonecall_summary_predefined
 #: model:ir.model,name:crm_phonecall_summary_predefined.model_crm_phonecall_summary
 msgid "crm.phonecall.summary"
-msgstr ""
+msgstr "crm.phonecall.summary"
