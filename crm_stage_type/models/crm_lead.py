@@ -28,7 +28,7 @@ class Lead(models.Model):
         if ctx_type:
             types += [ctx_type]
         # check whether we should try to add a condition on type
-        avoid_add_type_term = any([
+        avoid_add_type_term = domain and any([
             term for term in domain if len(term) == 3 if term[0] == 'lead_type'
         ])
         if avoid_add_type_term:
