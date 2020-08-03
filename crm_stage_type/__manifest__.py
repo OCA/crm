@@ -4,7 +4,7 @@
 {
     "name": "CRM Stage Type",
     "summary": "Add type in the lead and opportunity stages",
-    "version": "12.0.1.1.0",
+    "version": "12.0.1.1.1",
     "category": "CRM",
     "website": "https://github.com/OCA/crm",
     "author": "Eficent, "
