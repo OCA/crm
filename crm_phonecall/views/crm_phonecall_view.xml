@@ -220,6 +220,11 @@
                 <separator/>
                 <filter string="To Do" name="current" domain="[('state','in',('open','pending'))]"/>
                 <separator/>
+                <filter string="Incoming Calls" name="in_calls" domain="[('direction','=','in')]"/>
+                <filter string="Outgoing Calls" name="out_calls" domain="[('direction','=','out')]"/>
+                <separator/>
+                <filter name="date" string="Date" date="date"/>
+                <separator/>
                 <field name="partner_id" operator="child_of"/>
                 <field name="user_id"/>
                 <field name="opportunity_id"/>
