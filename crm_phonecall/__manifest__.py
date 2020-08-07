@@ -3,7 +3,7 @@
 
 {
     "name": "CRM Phone Calls",
-    "version": "12.0.1.5.0",
+    "version": "12.0.1.6.0",
     "category": "Customer Relationship Management",
     "author": "Odoo S.A., "
               "Tecnativa, "
