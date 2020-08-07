@@ -242,6 +242,7 @@ msgstr "Kunde"
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__date
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__date
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
 msgid "Date"
 msgstr "Datum"
 
@@ -389,6 +390,13 @@ msgid ""
 msgstr ""
 "Um ein Telefonat weiterzuverfolgen, können Sie eine Anfrage für ein weiteres "
 "Telefonat, Meeting oder eine Verkaufschance auslösen."
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+#, fuzzy
+#| msgid "Phone Calls"
+msgid "Incoming Calls"
+msgstr "Telefonate"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_is_follower
@@ -597,6 +605,13 @@ msgstr "Eröffnungsdatum"
 #: selection:crm.phonecall,direction:0
 msgid "Out"
 msgstr ""
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+#, fuzzy
+#| msgid "Phone Calls"
+msgid "Outgoing Calls"
+msgstr "Telefonate"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__partner_id

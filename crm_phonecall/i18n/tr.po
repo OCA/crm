@@ -240,6 +240,7 @@ msgstr "Müşteri"
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__date
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__date
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
 msgid "Date"
 msgstr "Tarih"
 
@@ -385,6 +386,13 @@ msgid ""
 "In order to follow up on the call, you can trigger a request for\n"
 "            another call, a meeting or an opportunity."
 msgstr ""
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+#, fuzzy
+#| msgid "Phone Calls"
+msgid "Incoming Calls"
+msgstr "Telefon Çağrıları"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_is_follower
@@ -590,6 +598,13 @@ msgstr "Oluşturulma Tarihi"
 #: selection:crm.phonecall,direction:0
 msgid "Out"
 msgstr ""
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+#, fuzzy
+#| msgid "Phone Calls"
+msgid "Outgoing Calls"
+msgstr "Telefon Çağrıları"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__partner_id

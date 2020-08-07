@@ -242,6 +242,7 @@ msgstr "Client"
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__date
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__date
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
 msgid "Date"
 msgstr "Date"
 
@@ -389,6 +390,13 @@ msgid ""
 msgstr ""
 "Pour faire suite à un appel, vous pouvez déclencher une requête pour\n"
 "            un autre appel, une rendez-vous ou une opportunité."
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+#, fuzzy
+#| msgid "Phone Calls"
+msgid "Incoming Calls"
+msgstr "Appels téléphoniques"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_is_follower
@@ -599,6 +607,13 @@ msgstr "Date d'ouverture"
 #: selection:crm.phonecall,direction:0
 msgid "Out"
 msgstr ""
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+#, fuzzy
+#| msgid "Phone Calls"
+msgid "Outgoing Calls"
+msgstr "Appels téléphoniques"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__partner_id
