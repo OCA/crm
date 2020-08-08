@@ -10,10 +10,10 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-14 05:51+0000\n"
-"PO-Revision-Date: 2020-07-19 00:19+0000\n"
+"PO-Revision-Date: 2020-08-08 05:59+0000\n"
 "Last-Translator: Ignacio Buioli <ibuioli@gmail.com>\n"
-"Language-Team: Spanish (Argentina) (https://www.transifex.com/oca/"
-"teams/23907/es_AR/)\n"
+"Language-Team: Spanish (Argentina) (https://www.transifex.com/oca/teams/"
+"23907/es_AR/)\n"
 "Language: es_AR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -397,10 +397,8 @@ msgstr ""
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
-#, fuzzy
-#| msgid "Phone Calls"
 msgid "Incoming Calls"
-msgstr "Llamadas Telefónicas"
+msgstr "Llamadas Entrantes"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_is_follower
@@ -613,10 +611,8 @@ msgstr "Fuera"
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
-#, fuzzy
-#| msgid "Phone Calls"
 msgid "Outgoing Calls"
-msgstr "Llamadas Telefónicas"
+msgstr "Llamadas Salientes"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__partner_id
@@ -863,8 +859,8 @@ msgid ""
 "This is a name that helps you keep track of your different campaign efforts, "
 "e.g. Fall_Drive, Christmas_Special"
 msgstr ""
-"Este es un nombre que lo ayuda a realizar un seguimiento de sus diferentes "
-"esfuerzos de campaña, ej. Liquidación_Otoño, Especial_Navidad"
+"Este es el nombre que le ayuda a rastrear sus diferentes esfuerzos de "
+"campaña, ej. Liquidación_Otoño, Especial_Navidad"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__medium_id
@@ -879,8 +875,8 @@ msgid ""
 "This is the source of the link, e.g. Search Engine, another domain, or name "
 "of email list"
 msgstr ""
-"Este es el origen del enlace, ej. Motor de Búsqueda, Otro Dominio o el "
-"Nombre de la lista de correo electrónico"
+"Este es el origen del vínculo, ej. Motor de Búsqueda, otro dominio, o el "
+"nombre de la lista de correo electrónico"
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
