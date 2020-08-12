@@ -25,6 +25,11 @@ msgid "Call Summary"
 msgstr ""
 
 #. module: crm_phonecall_summary_predefined
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall2phonecall__name
+msgid "Call summary"
+msgstr ""
+
+#. module: crm_phonecall_summary_predefined
 #: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary__create_uid
 msgid "Created by"
 msgstr "Tạo bởi"
@@ -70,13 +75,18 @@ msgid "Name"
 msgstr ""
 
 #. module: crm_phonecall_summary_predefined
-#: sql_constraint:crm.phonecall.summary:0
+#: model:ir.model.constraint,message:crm_phonecall_summary_predefined.constraint_crm_phonecall_summary_name_unique
 msgid "Name must be unique"
 msgstr ""
 
 #. module: crm_phonecall_summary_predefined
 #: model:ir.model,name:crm_phonecall_summary_predefined.model_crm_phonecall
 msgid "Phonecall"
+msgstr ""
+
+#. module: crm_phonecall_summary_predefined
+#: model:ir.model,name:crm_phonecall_summary_predefined.model_crm_phonecall2phonecall
+msgid "Phonecall To Phonecall"
 msgstr ""
 
 #. module: crm_phonecall_summary_predefined
@@ -96,6 +106,7 @@ msgid "Summaries"
 msgstr ""
 
 #. module: crm_phonecall_summary_predefined
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall2phonecall__summary_id
 #: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall__summary_id
 msgid "Summary"
 msgstr ""
