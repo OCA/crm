@@ -21,14 +21,12 @@ msgstr ""
 #. module: crm_phonecall_summary_predefined
 #: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall__name
 #, fuzzy
-#| msgid "Summary"
 msgid "Call Summary"
 msgstr "Résumé"
 
 #. module: crm_phonecall_summary_predefined
 #: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall2phonecall__name
 #, fuzzy
-#| msgid "Summary"
 msgid "Call summary"
 msgstr "Résumé"
 
