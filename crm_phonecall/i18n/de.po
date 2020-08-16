@@ -279,7 +279,6 @@ msgstr "Beschreibung..."
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__direction
 #, fuzzy
-#| msgid "Creation"
 msgid "Direction"
 msgstr "Erstellung"
 
@@ -609,7 +608,6 @@ msgstr ""
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
 #, fuzzy
-#| msgid "Phone Calls"
 msgid "Outgoing Calls"
 msgstr "Telefonate"
 
@@ -750,7 +748,6 @@ msgstr "Verantwortlich"
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_has_sms_error
 #, fuzzy
-#| msgid "Message Delivery error"
 msgid "SMS Delivery error"
 msgstr "Nachrichten-Übertragungsfehler"
 
@@ -822,7 +819,6 @@ msgstr "Quelle"
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
 #, fuzzy
-#| msgid "Status"
 msgid "State"
 msgstr "Status"
 
