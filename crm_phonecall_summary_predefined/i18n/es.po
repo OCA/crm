@@ -27,7 +27,6 @@ msgstr "Resumen de llamadas"
 #. module: crm_phonecall_summary_predefined
 #: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall2phonecall__name
 #, fuzzy
-#| msgid "Call Summary"
 msgid "Call summary"
 msgstr "Resumen de llamadas"
 
