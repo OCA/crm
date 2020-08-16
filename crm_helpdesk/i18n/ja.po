@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * crm_helpdesk
-# 
+#
 # Translators:
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2014
 msgid ""
@@ -12,50 +12,34 @@ msgstr ""
 "PO-Revision-Date: 2016-12-03 10:03+0000\n"
 "Last-Translator: Yoshi Tashiro <tashiro@roomsfor.hk>\n"
 "Language-Team: Japanese (http://www.transifex.com/odoo/odoo-8/language/ja/)\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: ja\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk.report,email:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_email
 msgid "# Emails"
 msgstr "Eメールの数"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk.report,nbr:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_nbr_requests
 msgid "# of Requests"
 msgstr "予定の数"
 
 #. module: crm_helpdesk
-#: model:ir.actions.act_window,help:crm_helpdesk.crm_case_helpdesk_act111
-msgid ""
-"<p class=\"oe_view_nocontent_create\">\n"
-"                Click to create a new request. \n"
-"              </p><p>\n"
-"                Helpdesk and Support allow you to track your interventions.\n"
-"              </p><p>\n"
-"                Use the Odoo Issues system to manage your support\n"
-"                activities. Issues can be connected to the email gateway: new\n"
-"                emails may create issues, each of them automatically gets the\n"
-"                history of the conversation with the customer.\n"
-"              </p>\n"
-"            "
-msgstr ""
-
-#. module: crm_helpdesk
-#: field:crm.helpdesk,active:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_active
 msgid "Active"
 msgstr "仕掛り中"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "All pending Helpdesk Request"
 msgstr "ヘルプデスクの保留中の問合せの合計"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "Assigned to Me or My Sales Team(s)"
 msgstr ""
 
@@ -65,108 +49,105 @@ msgid "Cancelled"
 msgstr "キャンセルされました"
 
 #. module: crm_helpdesk
-#: model:ir.ui.menu,name:crm_helpdesk.menu_crm_case_helpdesk-act
-msgid "Categories"
-msgstr "分類"
-
-#. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_form_view_helpdesk
 msgid "Categorization"
 msgstr "分類"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,categ_id:0 field:crm.helpdesk.report,categ_id:0
-msgid "Category"
-msgstr "分類"
-
-#. module: crm_helpdesk
-#: field:crm.helpdesk,channel_id:0 field:crm.helpdesk.report,channel_id:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_channel_id
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_channel_id
 msgid "Channel"
 msgstr "チャネル"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
-#: field:crm.helpdesk.report,date_closed:0
+#: model:ir.actions.act_window,help:crm_helpdesk.crm_case_helpdesk_act111
+msgid "Click to create a new request."
+msgstr ""
+
+#. module: crm_helpdesk
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_date_closed
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Close Date"
 msgstr "締切り日"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,date_closed:0 selection:crm.helpdesk,state:0
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
-#: selection:crm.helpdesk.report,state:0
+#: selection:crm.helpdesk,state:0 selection:crm.helpdesk.report,state:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_date_closed
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Closed"
 msgstr "終了"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_form_view_helpdesk
 msgid "Communication"
 msgstr "コミュニケーション"
 
 #. module: crm_helpdesk
-#: help:crm.helpdesk,channel_id:0
+#: model:ir.model.fields,help:crm_helpdesk.field_crm_helpdesk_channel_id
 msgid "Communication channel."
 msgstr "コミュニケーション・チャネル"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,company_id:0
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
-#: field:crm.helpdesk.report,company_id:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_company_id
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_company_id
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Company"
 msgstr "会社"
 
 #. module: crm_helpdesk
-#: model:ir.actions.act_window,help:crm_helpdesk.crm_helpdesk_categ_action
-msgid ""
-"Create and manage helpdesk categories to better manage and classify your "
-"support requests."
-msgstr "サポート問合せを管理するためにヘルプデスクの区分を作成する。"
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_contact_name
+msgid "Contact Name"
+msgstr ""
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,create_uid:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_create_uid
 msgid "Created by"
 msgstr "作成者"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,create_date:0 field:crm.helpdesk.report,create_date:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_create_date
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_create_date
 msgid "Creation Date"
 msgstr "作成日"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_tree_view_helpdesk
-#: field:crm.helpdesk,date:0 field:crm.helpdesk.report,date:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_date
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_date
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_tree_view_helpdesk
 msgid "Date"
 msgstr "日付"
 
 #. module: crm_helpdesk
-#: help:crm.helpdesk,message_last_post:0
-msgid "Date of the last message posted on the record."
-msgstr "記録上の最後のメッセージが投稿された日"
-
-#. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_form_view_helpdesk
 msgid "Dates"
 msgstr "日付"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
-#: field:crm.helpdesk,date_deadline:0
-#: field:crm.helpdesk.report,date_deadline:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_date_deadline
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_date_deadline
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "Deadline"
 msgstr "締切り期限"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk.report,delay_close:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_delay_close
 msgid "Delay to Close"
 msgstr "締めを延期する"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,description:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_description
 msgid "Description"
 msgstr "詳細"
 
 #. module: crm_helpdesk
-#: help:crm.helpdesk,email_from:0
+#: model:ir.model.fields,help:crm_helpdesk.field_crm_helpdesk_email_from
 msgid "Destination email for email gateway"
+msgstr ""
+
+#. module: crm_helpdesk
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_display_name
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_display_name
+msgid "Display Name"
 msgstr ""
 
 #. module: crm_helpdesk
@@ -175,54 +156,33 @@ msgid "Draft"
 msgstr "予定"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,duration:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_duration
 msgid "Duration"
 msgstr "期間"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,email_from:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_email_from
 msgid "Email"
 msgstr "Eメール"
 
 #. module: crm_helpdesk
-#: code:addons/crm_helpdesk/crm_helpdesk.py:117
-#, python-format
-msgid "Error!"
-msgstr "エラー"
-
-#. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
-msgid "Escalate"
-msgstr "エスカレート"
-
-#. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
-msgid "Estimates"
-msgstr "予測"
-
-#. module: crm_helpdesk
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Extended Filters..."
 msgstr "拡張フィルタ…"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_form_view_helpdesk
 msgid "Extra Info"
 msgstr "追加情報"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,message_follower_ids:0
-msgid "Followers"
-msgstr "フォロワー"
-
-#. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_form_view_helpdesk
 msgid "General"
 msgstr "一般"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Group By"
 msgstr "グループ化"
 
@@ -232,12 +192,13 @@ msgid ""
 "Have a general overview of all support requests by sorting them with "
 "specific criteria such as the processing time, number of requests answered, "
 "emails sent and costs."
-msgstr "処理時間、回答済みと言わせ件数，送信済みEメール、経費などの基準で分類して全てのサポート問合せの全体表示を見ると良いでしょう。"
+msgstr ""
+"処理時間、回答済みと言わせ件数，送信済みEメール、経費などの基準で分類して全て"
+"のサポート問合せの全体表示を見ると良いでしょう。"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_graph
 #: model:ir.model,name:crm_helpdesk.model_crm_helpdesk
-#: model:ir.ui.menu,name:crm_helpdesk.menu_config_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_graph
 msgid "Helpdesk"
 msgstr "ヘルプデスク"
 
@@ -248,27 +209,22 @@ msgid "Helpdesk Analysis"
 msgstr "ヘルプデスク分析"
 
 #. module: crm_helpdesk
-#: model:ir.actions.act_window,name:crm_helpdesk.crm_helpdesk_categ_action
-msgid "Helpdesk Categories"
-msgstr "ヘルプデスクの分類"
-
-#. module: crm_helpdesk
 #: model:ir.actions.act_window,name:crm_helpdesk.crm_case_helpdesk_act111
 msgid "Helpdesk Requests"
 msgstr "ヘルプデスクへの問合せ"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_form_view_helpdesk
 msgid "Helpdesk Support"
 msgstr "ヘルプデスク・サポート"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_tree_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_tree_view_helpdesk
 msgid "Helpdesk Support Tree"
 msgstr "ヘルプデスク・サポート・ツリー"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_helpdesk_calendar_view
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_helpdesk_calendar_view
 msgid "Helpdesk Supports"
 msgstr "ヘルプデスク・サポート"
 
@@ -278,12 +234,17 @@ msgid "Helpdesk and Support"
 msgstr "ヘルプデスクとサポート"
 
 #. module: crm_helpdesk
+#: model:ir.actions.act_window,help:crm_helpdesk.crm_case_helpdesk_act111
+msgid "Helpdesk and Support allow you to track your interventions."
+msgstr ""
+
+#. module: crm_helpdesk
 #: model:ir.model,name:crm_helpdesk.model_crm_helpdesk_report
 msgid "Helpdesk report after Sales Services"
 msgstr "セールスサービスの後のヘルプデスク報告"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid ""
 "Helpdesk requests that are assigned to me or to one of the sale teams I "
 "manage"
@@ -300,21 +261,10 @@ msgid "Highest"
 msgstr "最高"
 
 #. module: crm_helpdesk
-#: help:crm.helpdesk,message_summary:0
-msgid ""
-"Holds the Chatter summary (number of messages, ...). This summary is "
-"directly in html format in order to be inserted in kanban views."
-msgstr ""
-
-#. module: crm_helpdesk
-#: field:crm.helpdesk,id:0 field:crm.helpdesk.report,id:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_id
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_id
 msgid "ID"
 msgstr "ID"
-
-#. module: crm_helpdesk
-#: help:crm.helpdesk,message_unread:0
-msgid "If checked new messages require your attention."
-msgstr "チェックされている場合は、新しいメッセージに注意が必要です。"
 
 #. module: crm_helpdesk
 #: selection:crm.helpdesk,state:0
@@ -322,24 +272,25 @@ msgid "In Progress"
 msgstr "対応中"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,message_is_follower:0
-msgid "Is a Follower"
-msgstr ""
-
-#. module: crm_helpdesk
-#: field:crm.helpdesk,date_action_last:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_date_action_last
 msgid "Last Action"
 msgstr "前回の活動"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,message_last_post:0
-msgid "Last Message Date"
-msgstr "最終メッセージ日"
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk___last_update
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report___last_update
+msgid "Last Modified on"
+msgstr ""
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,write_uid:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_write_uid
 msgid "Last Updated by"
 msgstr "最終更新者"
+
+#. module: crm_helpdesk
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_lost_reason
+msgid "Lost Reason"
+msgstr ""
 
 #. module: crm_helpdesk
 #: selection:crm.helpdesk,priority:0 selection:crm.helpdesk.report,priority:0
@@ -352,69 +303,59 @@ msgid "Lowest"
 msgstr "最低"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,message_ids:0
-msgid "Messages"
-msgstr "メッセージ"
-
-#. module: crm_helpdesk
-#: help:crm.helpdesk,message_ids:0
-msgid "Messages and communication history"
-msgstr "メッセージと通信履歴"
-
-#. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_form_view_helpdesk
 msgid "Misc"
 msgstr "その他"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Month"
 msgstr "月"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Month of helpdesk requests"
 msgstr "ヘルプデスク問合せの月"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "My Case(s)"
 msgstr "私の事象"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "My Company"
 msgstr ""
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "My Sales Team(s)"
 msgstr "私の営業チーム"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,name:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_name
 msgid "Name"
 msgstr "氏名"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
 #: selection:crm.helpdesk,state:0
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "New"
 msgstr "新規"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "New Helpdesk Request"
 msgstr "新しいヘルプデスク問合せ"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,date_action_next:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_date_action_next
 msgid "Next Action"
 msgstr "次の作業"
 
 #. module: crm_helpdesk
-#: code:addons/crm_helpdesk/crm_helpdesk.py:134
+#: code:addons/crm_helpdesk/models/crm_helpdesk.py:98
 #, python-format
 msgid "No Subject"
 msgstr "件名なし"
@@ -425,206 +366,246 @@ msgid "Normal"
 msgstr "正常"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_form_view_helpdesk
 msgid "Notes"
 msgstr "注記"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
 #: selection:crm.helpdesk.report,state:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_date_open
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Open"
 msgstr "未割当て"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "Open Helpdesk Request"
 msgstr "ヘルプデスク問合せを開く"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk.report,delay_expected:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_delay_expected
 msgid "Overpassed Deadline"
 msgstr "締切日を経過"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_tree_view_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
-#: field:crm.helpdesk,partner_id:0
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
-#: field:crm.helpdesk.report,partner_id:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_partner_id
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_partner_id
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_tree_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Partner"
 msgstr "パートナ"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
 #: selection:crm.helpdesk,state:0 selection:crm.helpdesk.report,state:0
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "Pending"
 msgstr "保留"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,planned_cost:0 field:crm.helpdesk.report,planned_cost:0
-msgid "Planned Costs"
-msgstr "予定経費"
-
-#. module: crm_helpdesk
-#: field:crm.helpdesk,planned_revenue:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_planned_revenue
 msgid "Planned Revenue"
 msgstr "売上予定"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
-#: field:crm.helpdesk,priority:0
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
-#: field:crm.helpdesk.report,priority:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_priority
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_priority
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Priority"
 msgstr "優先度"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,probability:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_probability
 msgid "Probability (%)"
 msgstr "確率 (%)"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_tree_view_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_form_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_tree_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "Query"
 msgstr "クエリ"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,ref:0
-msgid "Reference"
-msgstr "参照"
-
-#. module: crm_helpdesk
-#: field:crm.helpdesk,ref2:0
-msgid "Reference 2"
-msgstr "参照2"
-
-#. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
-msgid "References"
-msgstr "参照"
-
-#. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "Request Date by Month"
 msgstr ""
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "Request Month"
 msgstr ""
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
-#: field:crm.helpdesk,user_id:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_user_id
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "Responsible"
 msgstr "責任者"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "Responsible User"
 msgstr "ユーザ責任者"
 
 #. module: crm_helpdesk
-#: help:crm.helpdesk,section_id:0
+#: model:ir.model.fields,help:crm_helpdesk.field_crm_helpdesk_team_id
 msgid ""
 "Responsible sales team. Define Responsible user and Email account for mail "
 "gateway."
 msgstr ""
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
-#: field:crm.helpdesk,section_id:0
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_team_id
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Sales Team"
 msgstr "営業チーム"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Salesperson"
 msgstr "営業担当者"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Search"
 msgstr "検索"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "Search Helpdesk"
 msgstr "ヘルプデスクを検索"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk.report,section_id:0
-msgid "Section"
-msgstr "セクション"
-
-#. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
-#: field:crm.helpdesk,state:0
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
-#: field:crm.helpdesk.report,state:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_state
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_state
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Status"
 msgstr "ステータス"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,message_summary:0
-msgid "Summary"
-msgstr "要約"
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_tag_ids
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_tag_ids
+msgid "Tags"
+msgstr ""
 
 #. module: crm_helpdesk
-#: help:crm.helpdesk,state:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_team_id
+msgid "Team"
+msgstr ""
+
+#. module: crm_helpdesk
+#: model:ir.model.fields,help:crm_helpdesk.field_crm_helpdesk_state
 msgid ""
-"The status is set to 'Draft', when a case is created.                                  \n"
-"If the case is in progress the status is set to 'Open'.                                  \n"
-"When the case is over, the status is set to 'Done'.                                  \n"
+"The status is set to 'Draft', when a case is created.              \n"
+"If the case is in progress the status is set to 'Open'.              \n"
+"When the case is over, the status is set to 'Done'.              \n"
 "If the case needs to be reviewed then the status is set to 'Pending'."
 msgstr ""
 
 #. module: crm_helpdesk
-#: help:crm.helpdesk,email_cc:0
+#: model:ir.model.fields,help:crm_helpdesk.field_crm_helpdesk_email_cc
 msgid ""
 "These email addresses will be added to the CC field of all inbound and "
 "outbound emails for this record before being sent. Separate multiple email "
 "addresses with a comma"
-msgstr "これらのEメールアドレスは送受信するEメールの CC 欄に追加されます。複数のEメールアドレスの間にはコンマを入れてください。"
+msgstr ""
+"これらのEメールアドレスは送受信するEメールの CC 欄に追加されます。複数のEメー"
+"ルアドレスの間にはコンマを入れてください。"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,message_unread:0
-msgid "Unread Messages"
-msgstr "未読メッセージ"
-
-#. module: crm_helpdesk
-#: field:crm.helpdesk,write_date:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_write_date
 msgid "Update Date"
 msgstr "日を更新する"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk.report,user_id:0
+#: model:ir.actions.act_window,help:crm_helpdesk.crm_case_helpdesk_act111
+msgid ""
+"Use the Odoo Issues system to manage your support\n"
+"                activities. Issues can be connected to the email gateway: "
+"new\n"
+"                emails may create issues, each of them automatically gets "
+"the\n"
+"                history of the conversation with the customer."
+msgstr ""
+
+#. module: crm_helpdesk
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_user_id
 msgid "User"
 msgstr "ユーザ"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,email_cc:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_email_cc
 msgid "Watchers Emails"
 msgstr "担当者のEメール"
 
-#. module: crm_helpdesk
-#: field:crm.helpdesk,website_message_ids:0
-msgid "Website Messages"
-msgstr "ウェブサイトメッセージ"
+#~ msgid "Categories"
+#~ msgstr "分類"
 
-#. module: crm_helpdesk
-#: help:crm.helpdesk,website_message_ids:0
-msgid "Website communication history"
-msgstr "ウェブサイトコミュニケーション履歴"
+#~ msgid "Category"
+#~ msgstr "分類"
 
-#. module: crm_helpdesk
-#: code:addons/crm_helpdesk/crm_helpdesk.py:117
-#, python-format
-msgid ""
-"You can not escalate, you are already at the top level regarding your sales-"
-"team category."
-msgstr ""
+#~ msgid ""
+#~ "Create and manage helpdesk categories to better manage and classify your "
+#~ "support requests."
+#~ msgstr "サポート問合せを管理するためにヘルプデスクの区分を作成する。"
+
+#~ msgid "Date of the last message posted on the record."
+#~ msgstr "記録上の最後のメッセージが投稿された日"
+
+#~ msgid "Error!"
+#~ msgstr "エラー"
+
+#~ msgid "Escalate"
+#~ msgstr "エスカレート"
+
+#~ msgid "Estimates"
+#~ msgstr "予測"
+
+#~ msgid "Followers"
+#~ msgstr "フォロワー"
+
+#~ msgid "Helpdesk Categories"
+#~ msgstr "ヘルプデスクの分類"
+
+#~ msgid "If checked new messages require your attention."
+#~ msgstr "チェックされている場合は、新しいメッセージに注意が必要です。"
+
+#~ msgid "Last Message Date"
+#~ msgstr "最終メッセージ日"
+
+#~ msgid "Messages"
+#~ msgstr "メッセージ"
+
+#~ msgid "Messages and communication history"
+#~ msgstr "メッセージと通信履歴"
+
+#~ msgid "Planned Costs"
+#~ msgstr "予定経費"
+
+#~ msgid "Reference"
+#~ msgstr "参照"
+
+#~ msgid "Reference 2"
+#~ msgstr "参照2"
+
+#~ msgid "References"
+#~ msgstr "参照"
+
+#~ msgid "Section"
+#~ msgstr "セクション"
+
+#~ msgid "Summary"
+#~ msgstr "要約"
+
+#~ msgid "Unread Messages"
+#~ msgstr "未読メッセージ"
+
+#~ msgid "Website Messages"
+#~ msgstr "ウェブサイトメッセージ"
+
+#~ msgid "Website communication history"
+#~ msgstr "ウェブサイトコミュニケーション履歴"

@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * crm_helpdesk
-# 
+#
 # Translators:
 # Belkacem Mohammed <belkacem77@gmail.com>, 2015
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2015
@@ -13,50 +13,34 @@ msgstr ""
 "PO-Revision-Date: 2015-07-17 07:01+0000\n"
 "Last-Translator: Belkacem Mohammed <belkacem77@gmail.com>\n"
 "Language-Team: Kabyle (http://www.transifex.com/odoo/odoo-8/language/kab/)\n"
+"Language: kab\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: kab\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk.report,email:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_email
 msgid "# Emails"
 msgstr "# Imaylen"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk.report,nbr:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_nbr_requests
 msgid "# of Requests"
 msgstr "# n isutar"
 
 #. module: crm_helpdesk
-#: model:ir.actions.act_window,help:crm_helpdesk.crm_case_helpdesk_act111
-msgid ""
-"<p class=\"oe_view_nocontent_create\">\n"
-"                Click to create a new request. \n"
-"              </p><p>\n"
-"                Helpdesk and Support allow you to track your interventions.\n"
-"              </p><p>\n"
-"                Use the Odoo Issues system to manage your support\n"
-"                activities. Issues can be connected to the email gateway: new\n"
-"                emails may create issues, each of them automatically gets the\n"
-"                history of the conversation with the customer.\n"
-"              </p>\n"
-"            "
-msgstr "<p class=\"oe_view_nocontent_create\">\nSit i tmerna n usuter amaynut. \n</p><p>\nHelpdesk and Support allow you to track your interventions.\n</p><p>\nUse the Odoo Issues system to manage your support\nactivities. Issues can be connected to the email gateway: new\nemails may create issues, each of them automatically gets the\nhistory of the conversation with the customer.\n</p>"
-
-#. module: crm_helpdesk
-#: field:crm.helpdesk,active:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_active
 msgid "Active"
 msgstr "Urmid"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "All pending Helpdesk Request"
 msgstr "Isutar n tallalt iṭraǧun"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "Assigned to Me or My Sales Team(s)"
 msgstr ""
 
@@ -66,108 +50,105 @@ msgid "Cancelled"
 msgstr "Ifsax"
 
 #. module: crm_helpdesk
-#: model:ir.ui.menu,name:crm_helpdesk.menu_crm_case_helpdesk-act
-msgid "Categories"
-msgstr "Tiggayin"
-
-#. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_form_view_helpdesk
 msgid "Categorization"
 msgstr "Tuggayt"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,categ_id:0 field:crm.helpdesk.report,categ_id:0
-msgid "Category"
-msgstr "Taggayt"
-
-#. module: crm_helpdesk
-#: field:crm.helpdesk,channel_id:0 field:crm.helpdesk.report,channel_id:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_channel_id
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_channel_id
 msgid "Channel"
 msgstr "Abadu"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
-#: field:crm.helpdesk.report,date_closed:0
+#: model:ir.actions.act_window,help:crm_helpdesk.crm_case_helpdesk_act111
+msgid "Click to create a new request."
+msgstr ""
+
+#. module: crm_helpdesk
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_date_closed
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Close Date"
 msgstr "Azemz n umdel"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,date_closed:0 selection:crm.helpdesk,state:0
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
-#: selection:crm.helpdesk.report,state:0
+#: selection:crm.helpdesk,state:0 selection:crm.helpdesk.report,state:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_date_closed
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Closed"
 msgstr "Imdel"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_form_view_helpdesk
 msgid "Communication"
 msgstr "Taywalt"
 
 #. module: crm_helpdesk
-#: help:crm.helpdesk,channel_id:0
+#: model:ir.model.fields,help:crm_helpdesk.field_crm_helpdesk_channel_id
 msgid "Communication channel."
 msgstr "Abadu n teywalt."
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,company_id:0
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
-#: field:crm.helpdesk.report,company_id:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_company_id
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_company_id
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Company"
 msgstr "Takebbwanit"
 
 #. module: crm_helpdesk
-#: model:ir.actions.act_window,help:crm_helpdesk.crm_helpdesk_categ_action
-msgid ""
-"Create and manage helpdesk categories to better manage and classify your "
-"support requests."
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_contact_name
+msgid "Contact Name"
 msgstr ""
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,create_uid:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_create_uid
 msgid "Created by"
 msgstr "Yerna-t"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,create_date:0 field:crm.helpdesk.report,create_date:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_create_date
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_create_date
 msgid "Creation Date"
 msgstr "Azemz  n tmerna"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_tree_view_helpdesk
-#: field:crm.helpdesk,date:0 field:crm.helpdesk.report,date:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_date
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_date
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_tree_view_helpdesk
 msgid "Date"
 msgstr "Azemz"
 
 #. module: crm_helpdesk
-#: help:crm.helpdesk,message_last_post:0
-msgid "Date of the last message posted on the record."
-msgstr "Azemz n yizen anegaru di ţunefken ɣef ukalas agi"
-
-#. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_form_view_helpdesk
 msgid "Dates"
 msgstr "Izemzen"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
-#: field:crm.helpdesk,date_deadline:0
-#: field:crm.helpdesk.report,date_deadline:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_date_deadline
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_date_deadline
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "Deadline"
 msgstr "Azemz n tagara"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk.report,delay_close:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_delay_close
 msgid "Delay to Close"
 msgstr "Imenḍaṛ i wemdel"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,description:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_description
 msgid "Description"
 msgstr "Aglam"
 
 #. module: crm_helpdesk
-#: help:crm.helpdesk,email_from:0
+#: model:ir.model.fields,help:crm_helpdesk.field_crm_helpdesk_email_from
 msgid "Destination email for email gateway"
+msgstr ""
+
+#. module: crm_helpdesk
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_display_name
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_display_name
+msgid "Display Name"
 msgstr ""
 
 #. module: crm_helpdesk
@@ -176,54 +157,33 @@ msgid "Draft"
 msgstr "Arewway"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,duration:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_duration
 msgid "Duration"
 msgstr "Timirt"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,email_from:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_email_from
 msgid "Email"
 msgstr "Imayl"
 
 #. module: crm_helpdesk
-#: code:addons/crm_helpdesk/crm_helpdesk.py:117
-#, python-format
-msgid "Error!"
-msgstr "Tuccḍa!"
-
-#. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
-msgid "Escalate"
-msgstr "Sali"
-
-#. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
-msgid "Estimates"
-msgstr ""
-
-#. module: crm_helpdesk
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Extended Filters..."
 msgstr "Imzizdigen leqqayen..."
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_form_view_helpdesk
 msgid "Extra Info"
 msgstr ""
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,message_follower_ids:0
-msgid "Followers"
-msgstr "Imagazen"
-
-#. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_form_view_helpdesk
 msgid "General"
 msgstr "Amatu"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Group By"
 msgstr "Sdukel s"
 
@@ -236,9 +196,8 @@ msgid ""
 msgstr ""
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_graph
 #: model:ir.model,name:crm_helpdesk.model_crm_helpdesk
-#: model:ir.ui.menu,name:crm_helpdesk.menu_config_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_graph
 msgid "Helpdesk"
 msgstr "Afellaru n tallalt"
 
@@ -249,27 +208,22 @@ msgid "Helpdesk Analysis"
 msgstr "Tasleṭ n ufellaru n tallalt"
 
 #. module: crm_helpdesk
-#: model:ir.actions.act_window,name:crm_helpdesk.crm_helpdesk_categ_action
-msgid "Helpdesk Categories"
-msgstr "Tiggayin n ufellaru n tallalt"
-
-#. module: crm_helpdesk
 #: model:ir.actions.act_window,name:crm_helpdesk.crm_case_helpdesk_act111
 msgid "Helpdesk Requests"
 msgstr "Isutar n ufellaru n tallalt"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_form_view_helpdesk
 msgid "Helpdesk Support"
 msgstr "Tallalt"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_tree_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_tree_view_helpdesk
 msgid "Helpdesk Support Tree"
 msgstr ""
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_helpdesk_calendar_view
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_helpdesk_calendar_view
 msgid "Helpdesk Supports"
 msgstr "Tallalin"
 
@@ -279,12 +233,17 @@ msgid "Helpdesk and Support"
 msgstr "Afellaru n tallalt"
 
 #. module: crm_helpdesk
+#: model:ir.actions.act_window,help:crm_helpdesk.crm_case_helpdesk_act111
+msgid "Helpdesk and Support allow you to track your interventions."
+msgstr ""
+
+#. module: crm_helpdesk
 #: model:ir.model,name:crm_helpdesk.model_crm_helpdesk_report
 msgid "Helpdesk report after Sales Services"
 msgstr ""
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid ""
 "Helpdesk requests that are assigned to me or to one of the sale teams I "
 "manage"
@@ -301,21 +260,10 @@ msgid "Highest"
 msgstr ""
 
 #. module: crm_helpdesk
-#: help:crm.helpdesk,message_summary:0
-msgid ""
-"Holds the Chatter summary (number of messages, ...). This summary is "
-"directly in html format in order to be inserted in kanban views."
-msgstr "Igber agzul n lehduṛ (amḍan n iznan,…). Agzul agi illa  deg umasal HTML iwakken ad isireg aseqdec-ines di tmeẓri n Kanban."
-
-#. module: crm_helpdesk
-#: field:crm.helpdesk,id:0 field:crm.helpdesk.report,id:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_id
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_id
 msgid "ID"
 msgstr "Asulay"
-
-#. module: crm_helpdesk
-#: help:crm.helpdesk,message_unread:0
-msgid "If checked new messages require your attention."
-msgstr "Si coché, de nouveaux messages demandent votre attention."
 
 #. module: crm_helpdesk
 #: selection:crm.helpdesk,state:0
@@ -323,24 +271,25 @@ msgid "In Progress"
 msgstr "Anazzal"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,message_is_follower:0
-msgid "Is a Follower"
-msgstr "D amagaz"
-
-#. module: crm_helpdesk
-#: field:crm.helpdesk,date_action_last:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_date_action_last
 msgid "Last Action"
 msgstr "Tigawt taneggarut"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,message_last_post:0
-msgid "Last Message Date"
-msgstr "Azemz n yizen aneggaru"
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk___last_update
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report___last_update
+msgid "Last Modified on"
+msgstr ""
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,write_uid:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_write_uid
 msgid "Last Updated by"
 msgstr "Aleqqem aneggaru sɣuṛ"
+
+#. module: crm_helpdesk
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_lost_reason
+msgid "Lost Reason"
+msgstr ""
 
 #. module: crm_helpdesk
 #: selection:crm.helpdesk,priority:0 selection:crm.helpdesk.report,priority:0
@@ -353,69 +302,59 @@ msgid "Lowest"
 msgstr ""
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,message_ids:0
-msgid "Messages"
-msgstr "Iznan"
-
-#. module: crm_helpdesk
-#: help:crm.helpdesk,message_ids:0
-msgid "Messages and communication history"
-msgstr "Amazray n iznan  d  tiywalin"
-
-#. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_form_view_helpdesk
 msgid "Misc"
 msgstr "Divers"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Month"
 msgstr "Aggur"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Month of helpdesk requests"
 msgstr "Aggur n isutar n tallalt"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "My Case(s)"
 msgstr ""
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "My Company"
 msgstr "Takebbwanit-iw"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "My Sales Team(s)"
 msgstr "Tirebbaɛ-iw uzenzi"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,name:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_name
 msgid "Name"
 msgstr "Isem"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
 #: selection:crm.helpdesk,state:0
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "New"
 msgstr "Amaynut"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "New Helpdesk Request"
 msgstr "Asuter n tallalt tamaynut"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,date_action_next:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_date_action_next
 msgid "Next Action"
 msgstr "Tigawt d iteddun"
 
 #. module: crm_helpdesk
-#: code:addons/crm_helpdesk/crm_helpdesk.py:134
+#: code:addons/crm_helpdesk/models/crm_helpdesk.py:98
 #, python-format
 msgid "No Subject"
 msgstr "Ulac taɣawsa"
@@ -426,166 +365,148 @@ msgid "Normal"
 msgstr "Normal"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_form_view_helpdesk
 msgid "Notes"
 msgstr "Notes"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
 #: selection:crm.helpdesk.report,state:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_date_open
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Open"
 msgstr "Lli"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "Open Helpdesk Request"
 msgstr "Asuter n tallalt yellin"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk.report,delay_expected:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_delay_expected
 msgid "Overpassed Deadline"
 msgstr ""
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_tree_view_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
-#: field:crm.helpdesk,partner_id:0
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
-#: field:crm.helpdesk.report,partner_id:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_partner_id
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_partner_id
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_tree_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Partner"
 msgstr "Amendid"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
 #: selection:crm.helpdesk,state:0 selection:crm.helpdesk.report,state:0
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "Pending"
 msgstr "Iţraǧu"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,planned_cost:0 field:crm.helpdesk.report,planned_cost:0
-msgid "Planned Costs"
-msgstr "Tisqamin iɣiwsen"
-
-#. module: crm_helpdesk
-#: field:crm.helpdesk,planned_revenue:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_planned_revenue
 msgid "Planned Revenue"
 msgstr ""
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
-#: field:crm.helpdesk,priority:0
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
-#: field:crm.helpdesk.report,priority:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_priority
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_priority
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Priority"
 msgstr "Tazwart"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,probability:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_probability
 msgid "Probability (%)"
 msgstr "Tiseqqaṛ (%)"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_tree_view_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_form_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_tree_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "Query"
 msgstr "Asuter"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,ref:0
-msgid "Reference"
-msgstr "Tamsisɣelt"
-
-#. module: crm_helpdesk
-#: field:crm.helpdesk,ref2:0
-msgid "Reference 2"
-msgstr "Tamsisɣelt 2"
-
-#. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
-msgid "References"
-msgstr "Timsisɣal"
-
-#. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "Request Date by Month"
 msgstr "Azemz n usuter s waggur"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "Request Month"
 msgstr "Aggur n usuter"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
-#: field:crm.helpdesk,user_id:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_user_id
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "Responsible"
 msgstr "Amasay"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "Responsible User"
 msgstr "Aseqdac amasay"
 
 #. module: crm_helpdesk
-#: help:crm.helpdesk,section_id:0
+#: model:ir.model.fields,help:crm_helpdesk.field_crm_helpdesk_team_id
 msgid ""
 "Responsible sales team. Define Responsible user and Email account for mail "
 "gateway."
 msgstr ""
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
-#: field:crm.helpdesk,section_id:0
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_team_id
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Sales Team"
 msgstr "Tarbaɛt n uzenzi"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Salesperson"
 msgstr "Amzenzi"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Search"
 msgstr "Nnadi"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "Search Helpdesk"
 msgstr "Nadi tallalt"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk.report,section_id:0
-msgid "Section"
-msgstr "Tigezmi"
-
-#. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
-#: field:crm.helpdesk,state:0
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
-#: field:crm.helpdesk.report,state:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_state
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_state
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Status"
 msgstr "Addad"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,message_summary:0
-msgid "Summary"
-msgstr "Résumé"
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_tag_ids
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_tag_ids
+msgid "Tags"
+msgstr ""
 
 #. module: crm_helpdesk
-#: help:crm.helpdesk,state:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_team_id
+msgid "Team"
+msgstr ""
+
+#. module: crm_helpdesk
+#: model:ir.model.fields,help:crm_helpdesk.field_crm_helpdesk_state
 msgid ""
-"The status is set to 'Draft', when a case is created.                                  \n"
-"If the case is in progress the status is set to 'Open'.                                  \n"
-"When the case is over, the status is set to 'Done'.                                  \n"
+"The status is set to 'Draft', when a case is created.              \n"
+"If the case is in progress the status is set to 'Open'.              \n"
+"When the case is over, the status is set to 'Done'.              \n"
 "If the case needs to be reviewed then the status is set to 'Pending'."
 msgstr ""
 
 #. module: crm_helpdesk
-#: help:crm.helpdesk,email_cc:0
+#: model:ir.model.fields,help:crm_helpdesk.field_crm_helpdesk_email_cc
 msgid ""
 "These email addresses will be added to the CC field of all inbound and "
 "outbound emails for this record before being sent. Separate multiple email "
@@ -593,39 +514,124 @@ msgid ""
 msgstr ""
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,message_unread:0
-msgid "Unread Messages"
-msgstr "Iznan ur neţwaɣer-ara"
-
-#. module: crm_helpdesk
-#: field:crm.helpdesk,write_date:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_write_date
 msgid "Update Date"
 msgstr "Azemz n uleqqem"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk.report,user_id:0
+#: model:ir.actions.act_window,help:crm_helpdesk.crm_case_helpdesk_act111
+msgid ""
+"Use the Odoo Issues system to manage your support\n"
+"                activities. Issues can be connected to the email gateway: "
+"new\n"
+"                emails may create issues, each of them automatically gets "
+"the\n"
+"                history of the conversation with the customer."
+msgstr ""
+
+#. module: crm_helpdesk
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_user_id
 msgid "User"
 msgstr "Aseqdac"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,email_cc:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_email_cc
 msgid "Watchers Emails"
 msgstr ""
 
-#. module: crm_helpdesk
-#: field:crm.helpdesk,website_message_ids:0
-msgid "Website Messages"
-msgstr "Iznan n usmel  Web"
+#~ msgid ""
+#~ "<p class=\"oe_view_nocontent_create\">\n"
+#~ "                Click to create a new request. \n"
+#~ "              </p><p>\n"
+#~ "                Helpdesk and Support allow you to track your "
+#~ "interventions.\n"
+#~ "              </p><p>\n"
+#~ "                Use the Odoo Issues system to manage your support\n"
+#~ "                activities. Issues can be connected to the email gateway: "
+#~ "new\n"
+#~ "                emails may create issues, each of them automatically gets "
+#~ "the\n"
+#~ "                history of the conversation with the customer.\n"
+#~ "              </p>\n"
+#~ "            "
+#~ msgstr ""
+#~ "<p class=\"oe_view_nocontent_create\">\n"
+#~ "Sit i tmerna n usuter amaynut. \n"
+#~ "</p><p>\n"
+#~ "Helpdesk and Support allow you to track your interventions.\n"
+#~ "</p><p>\n"
+#~ "Use the Odoo Issues system to manage your support\n"
+#~ "activities. Issues can be connected to the email gateway: new\n"
+#~ "emails may create issues, each of them automatically gets the\n"
+#~ "history of the conversation with the customer.\n"
+#~ "</p>"
 
-#. module: crm_helpdesk
-#: help:crm.helpdesk,website_message_ids:0
-msgid "Website communication history"
-msgstr "Amazray n Taywalt n usmel  Web"
+#~ msgid "Categories"
+#~ msgstr "Tiggayin"
 
-#. module: crm_helpdesk
-#: code:addons/crm_helpdesk/crm_helpdesk.py:117
-#, python-format
-msgid ""
-"You can not escalate, you are already at the top level regarding your sales-"
-"team category."
-msgstr ""
+#~ msgid "Category"
+#~ msgstr "Taggayt"
+
+#~ msgid "Date of the last message posted on the record."
+#~ msgstr "Azemz n yizen anegaru di ţunefken ɣef ukalas agi"
+
+#~ msgid "Error!"
+#~ msgstr "Tuccḍa!"
+
+#~ msgid "Escalate"
+#~ msgstr "Sali"
+
+#~ msgid "Followers"
+#~ msgstr "Imagazen"
+
+#~ msgid "Helpdesk Categories"
+#~ msgstr "Tiggayin n ufellaru n tallalt"
+
+#~ msgid ""
+#~ "Holds the Chatter summary (number of messages, ...). This summary is "
+#~ "directly in html format in order to be inserted in kanban views."
+#~ msgstr ""
+#~ "Igber agzul n lehduṛ (amḍan n iznan,…). Agzul agi illa  deg umasal HTML "
+#~ "iwakken ad isireg aseqdec-ines di tmeẓri n Kanban."
+
+#~ msgid "If checked new messages require your attention."
+#~ msgstr "Si coché, de nouveaux messages demandent votre attention."
+
+#~ msgid "Is a Follower"
+#~ msgstr "D amagaz"
+
+#~ msgid "Last Message Date"
+#~ msgstr "Azemz n yizen aneggaru"
+
+#~ msgid "Messages"
+#~ msgstr "Iznan"
+
+#~ msgid "Messages and communication history"
+#~ msgstr "Amazray n iznan  d  tiywalin"
+
+#~ msgid "Planned Costs"
+#~ msgstr "Tisqamin iɣiwsen"
+
+#~ msgid "Reference"
+#~ msgstr "Tamsisɣelt"
+
+#~ msgid "Reference 2"
+#~ msgstr "Tamsisɣelt 2"
+
+#~ msgid "References"
+#~ msgstr "Timsisɣal"
+
+#~ msgid "Section"
+#~ msgstr "Tigezmi"
+
+#~ msgid "Summary"
+#~ msgstr "Résumé"
+
+#~ msgid "Unread Messages"
+#~ msgstr "Iznan ur neţwaɣer-ara"
+
+#~ msgid "Website Messages"
+#~ msgstr "Iznan n usmel  Web"
+
+#~ msgid "Website communication history"
+#~ msgstr "Amazray n Taywalt n usmel  Web"

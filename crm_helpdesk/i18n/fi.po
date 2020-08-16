@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * crm_helpdesk
-# 
+#
 # Translators:
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2014
 # Jarmo Kortetjärvi <jarmo.kortetjarvi@gmail.com>, 2016
@@ -15,50 +15,34 @@ msgstr ""
 "PO-Revision-Date: 2016-05-19 13:41+0000\n"
 "Last-Translator: Jarmo Kortetjärvi <jarmo.kortetjarvi@gmail.com>\n"
 "Language-Team: Finnish (http://www.transifex.com/odoo/odoo-8/language/fi/)\n"
+"Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: fi\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk.report,email:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_email
 msgid "# Emails"
 msgstr "Sähköpostien määrä"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk.report,nbr:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_nbr_requests
 msgid "# of Requests"
 msgstr "# pyyntöä"
 
 #. module: crm_helpdesk
-#: model:ir.actions.act_window,help:crm_helpdesk.crm_case_helpdesk_act111
-msgid ""
-"<p class=\"oe_view_nocontent_create\">\n"
-"                Click to create a new request. \n"
-"              </p><p>\n"
-"                Helpdesk and Support allow you to track your interventions.\n"
-"              </p><p>\n"
-"                Use the Odoo Issues system to manage your support\n"
-"                activities. Issues can be connected to the email gateway: new\n"
-"                emails may create issues, each of them automatically gets the\n"
-"                history of the conversation with the customer.\n"
-"              </p>\n"
-"            "
-msgstr "<p class=\"oe_view_nocontent_create\">\n                Klikkaa luodaksesi uusi pyyntö. \n              </p><p>\n                Asiakaspalvelu ja tuki mahdollistaa tukipyyntöjen seurannan.\n              </p><p>\n                Käytä Odoo tukipyyntöjä tukitoimintojen hallintaan.\n                Tukipyynnöt voidaan kytkeä sähköpostiin: uusi\n                sähköposti luo tukipyynnön automaattisesti ja jokaiseen niistä kytkeytyy automaattisesti asiakkaan kanssa käyty keskusteluhistoria.\n              </p>\n            "
-
-#. module: crm_helpdesk
-#: field:crm.helpdesk,active:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_active
 msgid "Active"
 msgstr "Aktiivinen"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "All pending Helpdesk Request"
 msgstr "Kaikki odottavat asiakaspalvelupyynnöt"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "Assigned to Me or My Sales Team(s)"
 msgstr "Annettu minulle tai tiimilleni tehtäväksi"
 
@@ -68,109 +52,106 @@ msgid "Cancelled"
 msgstr "Peruttu"
 
 #. module: crm_helpdesk
-#: model:ir.ui.menu,name:crm_helpdesk.menu_crm_case_helpdesk-act
-msgid "Categories"
-msgstr "Ryhmät"
-
-#. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_form_view_helpdesk
 msgid "Categorization"
 msgstr "Kategorisointi"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,categ_id:0 field:crm.helpdesk.report,categ_id:0
-msgid "Category"
-msgstr "Ryhmä"
-
-#. module: crm_helpdesk
-#: field:crm.helpdesk,channel_id:0 field:crm.helpdesk.report,channel_id:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_channel_id
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_channel_id
 msgid "Channel"
 msgstr "Kanava"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
-#: field:crm.helpdesk.report,date_closed:0
+#: model:ir.actions.act_window,help:crm_helpdesk.crm_case_helpdesk_act111
+msgid "Click to create a new request."
+msgstr ""
+
+#. module: crm_helpdesk
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_date_closed
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Close Date"
 msgstr "Sulkemispäivä"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,date_closed:0 selection:crm.helpdesk,state:0
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
-#: selection:crm.helpdesk.report,state:0
+#: selection:crm.helpdesk,state:0 selection:crm.helpdesk.report,state:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_date_closed
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Closed"
 msgstr "Suljettu"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_form_view_helpdesk
 msgid "Communication"
 msgstr "Viestintä"
 
 #. module: crm_helpdesk
-#: help:crm.helpdesk,channel_id:0
+#: model:ir.model.fields,help:crm_helpdesk.field_crm_helpdesk_channel_id
 msgid "Communication channel."
 msgstr "Kommunikaatiokanava"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,company_id:0
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
-#: field:crm.helpdesk.report,company_id:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_company_id
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_company_id
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Company"
 msgstr "Yritys"
 
 #. module: crm_helpdesk
-#: model:ir.actions.act_window,help:crm_helpdesk.crm_helpdesk_categ_action
-msgid ""
-"Create and manage helpdesk categories to better manage and classify your "
-"support requests."
-msgstr "Luo ja hallitse asiakaspalveluryhmiä hallitaksesi ja luokitellaksesi  tukipyyntöjä."
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_contact_name
+msgid "Contact Name"
+msgstr ""
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,create_uid:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_create_uid
 msgid "Created by"
 msgstr "Luonut"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,create_date:0 field:crm.helpdesk.report,create_date:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_create_date
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_create_date
 msgid "Creation Date"
 msgstr "Luontipäivä"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_tree_view_helpdesk
-#: field:crm.helpdesk,date:0 field:crm.helpdesk.report,date:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_date
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_date
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_tree_view_helpdesk
 msgid "Date"
 msgstr "Päiväys"
 
 #. module: crm_helpdesk
-#: help:crm.helpdesk,message_last_post:0
-msgid "Date of the last message posted on the record."
-msgstr "Viimeisen viestin päivämäärä"
-
-#. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_form_view_helpdesk
 msgid "Dates"
 msgstr "Päivämäärät"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
-#: field:crm.helpdesk,date_deadline:0
-#: field:crm.helpdesk.report,date_deadline:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_date_deadline
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_date_deadline
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "Deadline"
 msgstr "Määräaika"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk.report,delay_close:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_delay_close
 msgid "Delay to Close"
 msgstr "Sulkemisen viive"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,description:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_description
 msgid "Description"
 msgstr "Kuvaus"
 
 #. module: crm_helpdesk
-#: help:crm.helpdesk,email_from:0
+#: model:ir.model.fields,help:crm_helpdesk.field_crm_helpdesk_email_from
 msgid "Destination email for email gateway"
 msgstr "Sähköpostin välityspalvelimelle kohteen sähköpostiosoite"
+
+#. module: crm_helpdesk
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_display_name
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_display_name
+msgid "Display Name"
+msgstr ""
 
 #. module: crm_helpdesk
 #: selection:crm.helpdesk.report,state:0
@@ -178,54 +159,33 @@ msgid "Draft"
 msgstr "Luonnos"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,duration:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_duration
 msgid "Duration"
 msgstr "Kesto"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,email_from:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_email_from
 msgid "Email"
 msgstr "Sähköposti"
 
 #. module: crm_helpdesk
-#: code:addons/crm_helpdesk/crm_helpdesk.py:117
-#, python-format
-msgid "Error!"
-msgstr "Virhe!"
-
-#. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
-msgid "Escalate"
-msgstr "Kohota"
-
-#. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
-msgid "Estimates"
-msgstr "Arviot"
-
-#. module: crm_helpdesk
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Extended Filters..."
 msgstr "Laajennetut Suotimet..."
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_form_view_helpdesk
 msgid "Extra Info"
 msgstr "Lisätiedot"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,message_follower_ids:0
-msgid "Followers"
-msgstr "Seuraajat"
-
-#. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_form_view_helpdesk
 msgid "General"
 msgstr "Yleinen"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Group By"
 msgstr "Ryhmittele"
 
@@ -235,12 +195,14 @@ msgid ""
 "Have a general overview of all support requests by sorting them with "
 "specific criteria such as the processing time, number of requests answered, "
 "emails sent and costs."
-msgstr "Näe yleiskuva kaikista pyynnöistä. Voit järjestää pyyntöjä eri tekijöiden mukaisesti, esimerkiksi käsittelyajan, pyyntömäärien, lähetettyjen sähköpostien ja kustannusten mukaan."
+msgstr ""
+"Näe yleiskuva kaikista pyynnöistä. Voit järjestää pyyntöjä eri tekijöiden "
+"mukaisesti, esimerkiksi käsittelyajan, pyyntömäärien, lähetettyjen "
+"sähköpostien ja kustannusten mukaan."
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_graph
 #: model:ir.model,name:crm_helpdesk.model_crm_helpdesk
-#: model:ir.ui.menu,name:crm_helpdesk.menu_config_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_graph
 msgid "Helpdesk"
 msgstr "Asiakaspalvelu"
 
@@ -251,27 +213,22 @@ msgid "Helpdesk Analysis"
 msgstr "Asiakaspalvelun analyysi"
 
 #. module: crm_helpdesk
-#: model:ir.actions.act_window,name:crm_helpdesk.crm_helpdesk_categ_action
-msgid "Helpdesk Categories"
-msgstr "Asiakaspalveluryhmät"
-
-#. module: crm_helpdesk
 #: model:ir.actions.act_window,name:crm_helpdesk.crm_case_helpdesk_act111
 msgid "Helpdesk Requests"
 msgstr "Asiakaspalvelupyynnöt"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_form_view_helpdesk
 msgid "Helpdesk Support"
 msgstr "Asiakaspalvelu"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_tree_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_tree_view_helpdesk
 msgid "Helpdesk Support Tree"
 msgstr "Asiakaspalvelun tukipuu"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_helpdesk_calendar_view
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_helpdesk_calendar_view
 msgid "Helpdesk Supports"
 msgstr "Asiakaspalvelu tukee"
 
@@ -281,12 +238,17 @@ msgid "Helpdesk and Support"
 msgstr "Asiakaspalvelu ja tuki"
 
 #. module: crm_helpdesk
+#: model:ir.actions.act_window,help:crm_helpdesk.crm_case_helpdesk_act111
+msgid "Helpdesk and Support allow you to track your interventions."
+msgstr ""
+
+#. module: crm_helpdesk
 #: model:ir.model,name:crm_helpdesk.model_crm_helpdesk_report
 msgid "Helpdesk report after Sales Services"
 msgstr "Asiakaspalvelun raportti jälkimarkkinointipalveluista"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid ""
 "Helpdesk requests that are assigned to me or to one of the sale teams I "
 "manage"
@@ -303,21 +265,10 @@ msgid "Highest"
 msgstr "Korkein"
 
 #. module: crm_helpdesk
-#: help:crm.helpdesk,message_summary:0
-msgid ""
-"Holds the Chatter summary (number of messages, ...). This summary is "
-"directly in html format in order to be inserted in kanban views."
-msgstr "Sisältää viestien yhteenvedon (viestien määrän,...). Tämä yhteenveto on valmiiksi  html-muodossa, jotta se voidaan viedä kanban näkymään."
-
-#. module: crm_helpdesk
-#: field:crm.helpdesk,id:0 field:crm.helpdesk.report,id:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_id
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_id
 msgid "ID"
 msgstr "TUNNISTE (ID)"
-
-#. module: crm_helpdesk
-#: help:crm.helpdesk,message_unread:0
-msgid "If checked new messages require your attention."
-msgstr "Jos valittu, uudet viestit vaativat huomiosi."
 
 #. module: crm_helpdesk
 #: selection:crm.helpdesk,state:0
@@ -325,24 +276,25 @@ msgid "In Progress"
 msgstr "Käynnissä"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,message_is_follower:0
-msgid "Is a Follower"
-msgstr "on seuraaja"
-
-#. module: crm_helpdesk
-#: field:crm.helpdesk,date_action_last:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_date_action_last
 msgid "Last Action"
 msgstr "Viimeisin tapahtuma"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,message_last_post:0
-msgid "Last Message Date"
-msgstr "Viimeinen viestipvm"
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk___last_update
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report___last_update
+msgid "Last Modified on"
+msgstr ""
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,write_uid:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_write_uid
 msgid "Last Updated by"
 msgstr "Viimeksi päivittänyt"
+
+#. module: crm_helpdesk
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_lost_reason
+msgid "Lost Reason"
+msgstr ""
 
 #. module: crm_helpdesk
 #: selection:crm.helpdesk,priority:0 selection:crm.helpdesk.report,priority:0
@@ -355,69 +307,59 @@ msgid "Lowest"
 msgstr "Alin"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,message_ids:0
-msgid "Messages"
-msgstr "Viestit"
-
-#. module: crm_helpdesk
-#: help:crm.helpdesk,message_ids:0
-msgid "Messages and communication history"
-msgstr "Viesti- ja kommunikointihistoria"
-
-#. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_form_view_helpdesk
 msgid "Misc"
 msgstr "Sekalaiset"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Month"
 msgstr "Kuukausi"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Month of helpdesk requests"
 msgstr "Asiakaspalvelupyyntöjen kuukausi"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "My Case(s)"
 msgstr "Omat tapaukset"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "My Company"
 msgstr "Oma yritykseni"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "My Sales Team(s)"
 msgstr "Oma myyntitiimi"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,name:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_name
 msgid "Name"
 msgstr "Nimi"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
 #: selection:crm.helpdesk,state:0
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "New"
 msgstr "Uusi"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "New Helpdesk Request"
 msgstr "Uusi asiakaspalvelupyyntö"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,date_action_next:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_date_action_next
 msgid "Next Action"
 msgstr "Seuraava Toimenpide"
 
 #. module: crm_helpdesk
-#: code:addons/crm_helpdesk/crm_helpdesk.py:134
+#: code:addons/crm_helpdesk/models/crm_helpdesk.py:98
 #, python-format
 msgid "No Subject"
 msgstr "Ei otsikkoa"
@@ -428,206 +370,310 @@ msgid "Normal"
 msgstr "Tavallinen"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_form_view_helpdesk
 msgid "Notes"
 msgstr "Muistiinpanot"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
 #: selection:crm.helpdesk.report,state:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_date_open
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Open"
 msgstr "Avaa"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "Open Helpdesk Request"
 msgstr "Avoimet asiakaspalvelupyynnöt"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk.report,delay_expected:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_delay_expected
 msgid "Overpassed Deadline"
 msgstr "Ylitetty aikaraja"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_tree_view_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
-#: field:crm.helpdesk,partner_id:0
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
-#: field:crm.helpdesk.report,partner_id:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_partner_id
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_partner_id
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_tree_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Partner"
 msgstr "Kumppani"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
 #: selection:crm.helpdesk,state:0 selection:crm.helpdesk.report,state:0
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "Pending"
 msgstr "Odottava"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,planned_cost:0 field:crm.helpdesk.report,planned_cost:0
-msgid "Planned Costs"
-msgstr "Suunnitellut kulut"
-
-#. module: crm_helpdesk
-#: field:crm.helpdesk,planned_revenue:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_planned_revenue
 msgid "Planned Revenue"
 msgstr "Suunniteltu liikevaihto"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
-#: field:crm.helpdesk,priority:0
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
-#: field:crm.helpdesk.report,priority:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_priority
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_priority
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Priority"
 msgstr "Prioriteetti"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,probability:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_probability
 msgid "Probability (%)"
 msgstr "Todennäköisyys (%)"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_tree_view_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_form_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_tree_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "Query"
 msgstr "Kysymys"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,ref:0
-msgid "Reference"
-msgstr "Viite"
-
-#. module: crm_helpdesk
-#: field:crm.helpdesk,ref2:0
-msgid "Reference 2"
-msgstr "Viittaus 2"
-
-#. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
-msgid "References"
-msgstr "Viitteet"
-
-#. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "Request Date by Month"
 msgstr "Pyynnöt kuukausittain päiväyksen mukaan"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "Request Month"
 msgstr "Pyynnöt kuukausittain"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
-#: field:crm.helpdesk,user_id:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_user_id
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "Responsible"
 msgstr "Vastuuhenkilö"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "Responsible User"
 msgstr "Vastuukäyttäjä"
 
 #. module: crm_helpdesk
-#: help:crm.helpdesk,section_id:0
+#: model:ir.model.fields,help:crm_helpdesk.field_crm_helpdesk_team_id
 msgid ""
 "Responsible sales team. Define Responsible user and Email account for mail "
 "gateway."
-msgstr "Vastuullinen myyntitiimi. Määritä vastuukäyttäjä ja sähköpostiosoite välityspalvelimelle."
+msgstr ""
+"Vastuullinen myyntitiimi. Määritä vastuukäyttäjä ja sähköpostiosoite "
+"välityspalvelimelle."
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
-#: field:crm.helpdesk,section_id:0
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_team_id
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Sales Team"
 msgstr "Myyntitiimi"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Salesperson"
 msgstr "Myyjä"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Search"
 msgstr "Etsi"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "Search Helpdesk"
 msgstr "Hae asiakaspalvelusta"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk.report,section_id:0
-msgid "Section"
-msgstr "Osa"
-
-#. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
-#: field:crm.helpdesk,state:0
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
-#: field:crm.helpdesk.report,state:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_state
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_state
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Status"
 msgstr "Tila"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,message_summary:0
-msgid "Summary"
-msgstr "Yhteenveto"
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_tag_ids
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_tag_ids
+msgid "Tags"
+msgstr ""
 
 #. module: crm_helpdesk
-#: help:crm.helpdesk,state:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_team_id
+msgid "Team"
+msgstr ""
+
+#. module: crm_helpdesk
+#: model:ir.model.fields,help:crm_helpdesk.field_crm_helpdesk_state
 msgid ""
-"The status is set to 'Draft', when a case is created.                                  \n"
-"If the case is in progress the status is set to 'Open'.                                  \n"
-"When the case is over, the status is set to 'Done'.                                  \n"
+"The status is set to 'Draft', when a case is created.              \n"
+"If the case is in progress the status is set to 'Open'.              \n"
+"When the case is over, the status is set to 'Done'.              \n"
 "If the case needs to be reviewed then the status is set to 'Pending'."
-msgstr "Asetettu tila on \"Ehdotus\" kun pyyntö on luotu. \nJos pyyntö on käsittelyssä, on sen tila \"Avoin\".\nKun pyyntö on käsitelty, tila on \"Valmis\".\nJos pyyntö pitää katselmoida, on sen tila \"Odottaa\"."
+msgstr ""
 
 #. module: crm_helpdesk
-#: help:crm.helpdesk,email_cc:0
+#: model:ir.model.fields,help:crm_helpdesk.field_crm_helpdesk_email_cc
 msgid ""
 "These email addresses will be added to the CC field of all inbound and "
 "outbound emails for this record before being sent. Separate multiple email "
 "addresses with a comma"
-msgstr "Nämä sähköpostiosoitteet lisätään cc (kopio viestistä) kenttään tähän tietueeseen liittyvien sähköpostien osalta. Erota useammat osoitteet pilkulla."
+msgstr ""
+"Nämä sähköpostiosoitteet lisätään cc (kopio viestistä) kenttään tähän "
+"tietueeseen liittyvien sähköpostien osalta. Erota useammat osoitteet "
+"pilkulla."
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,message_unread:0
-msgid "Unread Messages"
-msgstr "Lukemattomia viestejä"
-
-#. module: crm_helpdesk
-#: field:crm.helpdesk,write_date:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_write_date
 msgid "Update Date"
 msgstr "Päivitysaika"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk.report,user_id:0
+#: model:ir.actions.act_window,help:crm_helpdesk.crm_case_helpdesk_act111
+msgid ""
+"Use the Odoo Issues system to manage your support\n"
+"                activities. Issues can be connected to the email gateway: "
+"new\n"
+"                emails may create issues, each of them automatically gets "
+"the\n"
+"                history of the conversation with the customer."
+msgstr ""
+
+#. module: crm_helpdesk
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_user_id
 msgid "User"
 msgstr "Käyttäjä"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,email_cc:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_email_cc
 msgid "Watchers Emails"
 msgstr "Seuraajien Sähköpostit"
 
-#. module: crm_helpdesk
-#: field:crm.helpdesk,website_message_ids:0
-msgid "Website Messages"
-msgstr "Verkkosivu ilmoitukset"
+#~ msgid ""
+#~ "<p class=\"oe_view_nocontent_create\">\n"
+#~ "                Click to create a new request. \n"
+#~ "              </p><p>\n"
+#~ "                Helpdesk and Support allow you to track your "
+#~ "interventions.\n"
+#~ "              </p><p>\n"
+#~ "                Use the Odoo Issues system to manage your support\n"
+#~ "                activities. Issues can be connected to the email gateway: "
+#~ "new\n"
+#~ "                emails may create issues, each of them automatically gets "
+#~ "the\n"
+#~ "                history of the conversation with the customer.\n"
+#~ "              </p>\n"
+#~ "            "
+#~ msgstr ""
+#~ "<p class=\"oe_view_nocontent_create\">\n"
+#~ "                Klikkaa luodaksesi uusi pyyntö. \n"
+#~ "              </p><p>\n"
+#~ "                Asiakaspalvelu ja tuki mahdollistaa tukipyyntöjen "
+#~ "seurannan.\n"
+#~ "              </p><p>\n"
+#~ "                Käytä Odoo tukipyyntöjä tukitoimintojen hallintaan.\n"
+#~ "                Tukipyynnöt voidaan kytkeä sähköpostiin: uusi\n"
+#~ "                sähköposti luo tukipyynnön automaattisesti ja jokaiseen "
+#~ "niistä kytkeytyy automaattisesti asiakkaan kanssa käyty "
+#~ "keskusteluhistoria.\n"
+#~ "              </p>\n"
+#~ "            "
 
-#. module: crm_helpdesk
-#: help:crm.helpdesk,website_message_ids:0
-msgid "Website communication history"
-msgstr "Verkkosivun viestihistoria"
+#~ msgid "Categories"
+#~ msgstr "Ryhmät"
 
-#. module: crm_helpdesk
-#: code:addons/crm_helpdesk/crm_helpdesk.py:117
-#, python-format
-msgid ""
-"You can not escalate, you are already at the top level regarding your sales-"
-"team category."
-msgstr "Et voi eskaloida, olet jo myyntitiimissäsi ylimmässä kategoriassa."
+#~ msgid "Category"
+#~ msgstr "Ryhmä"
+
+#~ msgid ""
+#~ "Create and manage helpdesk categories to better manage and classify your "
+#~ "support requests."
+#~ msgstr ""
+#~ "Luo ja hallitse asiakaspalveluryhmiä hallitaksesi ja luokitellaksesi  "
+#~ "tukipyyntöjä."
+
+#~ msgid "Date of the last message posted on the record."
+#~ msgstr "Viimeisen viestin päivämäärä"
+
+#~ msgid "Error!"
+#~ msgstr "Virhe!"
+
+#~ msgid "Escalate"
+#~ msgstr "Kohota"
+
+#~ msgid "Estimates"
+#~ msgstr "Arviot"
+
+#~ msgid "Followers"
+#~ msgstr "Seuraajat"
+
+#~ msgid "Helpdesk Categories"
+#~ msgstr "Asiakaspalveluryhmät"
+
+#~ msgid ""
+#~ "Holds the Chatter summary (number of messages, ...). This summary is "
+#~ "directly in html format in order to be inserted in kanban views."
+#~ msgstr ""
+#~ "Sisältää viestien yhteenvedon (viestien määrän,...). Tämä yhteenveto on "
+#~ "valmiiksi  html-muodossa, jotta se voidaan viedä kanban näkymään."
+
+#~ msgid "If checked new messages require your attention."
+#~ msgstr "Jos valittu, uudet viestit vaativat huomiosi."
+
+#~ msgid "Is a Follower"
+#~ msgstr "on seuraaja"
+
+#~ msgid "Last Message Date"
+#~ msgstr "Viimeinen viestipvm"
+
+#~ msgid "Messages"
+#~ msgstr "Viestit"
+
+#~ msgid "Messages and communication history"
+#~ msgstr "Viesti- ja kommunikointihistoria"
+
+#~ msgid "Planned Costs"
+#~ msgstr "Suunnitellut kulut"
+
+#~ msgid "Reference"
+#~ msgstr "Viite"
+
+#~ msgid "Reference 2"
+#~ msgstr "Viittaus 2"
+
+#~ msgid "References"
+#~ msgstr "Viitteet"
+
+#~ msgid "Section"
+#~ msgstr "Osa"
+
+#~ msgid "Summary"
+#~ msgstr "Yhteenveto"
+
+#~ msgid ""
+#~ "The status is set to 'Draft', when a case is "
+#~ "created.                                  \n"
+#~ "If the case is in progress the status is set to "
+#~ "'Open'.                                  \n"
+#~ "When the case is over, the status is set to "
+#~ "'Done'.                                  \n"
+#~ "If the case needs to be reviewed then the status is set to 'Pending'."
+#~ msgstr ""
+#~ "Asetettu tila on \"Ehdotus\" kun pyyntö on luotu. \n"
+#~ "Jos pyyntö on käsittelyssä, on sen tila \"Avoin\".\n"
+#~ "Kun pyyntö on käsitelty, tila on \"Valmis\".\n"
+#~ "Jos pyyntö pitää katselmoida, on sen tila \"Odottaa\"."
+
+#~ msgid "Unread Messages"
+#~ msgstr "Lukemattomia viestejä"
+
+#~ msgid "Website Messages"
+#~ msgstr "Verkkosivu ilmoitukset"
+
+#~ msgid "Website communication history"
+#~ msgstr "Verkkosivun viestihistoria"
+
+#~ msgid ""
+#~ "You can not escalate, you are already at the top level regarding your "
+#~ "sales-team category."
+#~ msgstr "Et voi eskaloida, olet jo myyntitiimissäsi ylimmässä kategoriassa."

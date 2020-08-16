@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * crm_helpdesk
-# 
+#
 # Translators:
 # Anders Wallenquist <anders.wallenquist@vertel.se>, 2016
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2014
@@ -13,50 +13,34 @@ msgstr ""
 "PO-Revision-Date: 2016-12-30 12:50+0000\n"
 "Last-Translator: Anders Wallenquist <anders.wallenquist@vertel.se>\n"
 "Language-Team: Swedish (http://www.transifex.com/odoo/odoo-8/language/sv/)\n"
+"Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: sv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk.report,email:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_email
 msgid "# Emails"
 msgstr "# e-postmeddelanden"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk.report,nbr:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_nbr_requests
 msgid "# of Requests"
 msgstr "# Av begäran"
 
 #. module: crm_helpdesk
-#: model:ir.actions.act_window,help:crm_helpdesk.crm_case_helpdesk_act111
-msgid ""
-"<p class=\"oe_view_nocontent_create\">\n"
-"                Click to create a new request. \n"
-"              </p><p>\n"
-"                Helpdesk and Support allow you to track your interventions.\n"
-"              </p><p>\n"
-"                Use the Odoo Issues system to manage your support\n"
-"                activities. Issues can be connected to the email gateway: new\n"
-"                emails may create issues, each of them automatically gets the\n"
-"                history of the conversation with the customer.\n"
-"              </p>\n"
-"            "
-msgstr ""
-
-#. module: crm_helpdesk
-#: field:crm.helpdesk,active:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_active
 msgid "Active"
 msgstr "Aktiv"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "All pending Helpdesk Request"
 msgstr "Alla väntande kundjtänstärenden"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "Assigned to Me or My Sales Team(s)"
 msgstr "Anslut mig till mitt/mina säljlag"
 
@@ -66,109 +50,106 @@ msgid "Cancelled"
 msgstr "Avbruten"
 
 #. module: crm_helpdesk
-#: model:ir.ui.menu,name:crm_helpdesk.menu_crm_case_helpdesk-act
-msgid "Categories"
-msgstr "Kategorier"
-
-#. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_form_view_helpdesk
 msgid "Categorization"
 msgstr "Kategorisering"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,categ_id:0 field:crm.helpdesk.report,categ_id:0
-msgid "Category"
-msgstr "Kategori"
-
-#. module: crm_helpdesk
-#: field:crm.helpdesk,channel_id:0 field:crm.helpdesk.report,channel_id:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_channel_id
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_channel_id
 msgid "Channel"
 msgstr "Kanal"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
-#: field:crm.helpdesk.report,date_closed:0
+#: model:ir.actions.act_window,help:crm_helpdesk.crm_case_helpdesk_act111
+msgid "Click to create a new request."
+msgstr ""
+
+#. module: crm_helpdesk
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_date_closed
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Close Date"
 msgstr "Stängningsdatum"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,date_closed:0 selection:crm.helpdesk,state:0
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
-#: selection:crm.helpdesk.report,state:0
+#: selection:crm.helpdesk,state:0 selection:crm.helpdesk.report,state:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_date_closed
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Closed"
 msgstr "Stängd"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_form_view_helpdesk
 msgid "Communication"
 msgstr "Kommunikation"
 
 #. module: crm_helpdesk
-#: help:crm.helpdesk,channel_id:0
+#: model:ir.model.fields,help:crm_helpdesk.field_crm_helpdesk_channel_id
 msgid "Communication channel."
 msgstr "Kommunikationskanal"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,company_id:0
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
-#: field:crm.helpdesk.report,company_id:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_company_id
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_company_id
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Company"
 msgstr "Företag"
 
 #. module: crm_helpdesk
-#: model:ir.actions.act_window,help:crm_helpdesk.crm_helpdesk_categ_action
-msgid ""
-"Create and manage helpdesk categories to better manage and classify your "
-"support requests."
-msgstr "Skapa och hantera kundtjänstkategorier för att bättre administrera och klassificera supportärenden."
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_contact_name
+msgid "Contact Name"
+msgstr ""
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,create_uid:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_create_uid
 msgid "Created by"
 msgstr "Skapad av"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,create_date:0 field:crm.helpdesk.report,create_date:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_create_date
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_create_date
 msgid "Creation Date"
 msgstr "Skapad datum"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_tree_view_helpdesk
-#: field:crm.helpdesk,date:0 field:crm.helpdesk.report,date:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_date
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_date
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_tree_view_helpdesk
 msgid "Date"
 msgstr "Datum"
 
 #. module: crm_helpdesk
-#: help:crm.helpdesk,message_last_post:0
-msgid "Date of the last message posted on the record."
-msgstr "Datum för senast publicerade meddelandet i loggen."
-
-#. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_form_view_helpdesk
 msgid "Dates"
 msgstr "Datum"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
-#: field:crm.helpdesk,date_deadline:0
-#: field:crm.helpdesk.report,date_deadline:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_date_deadline
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_date_deadline
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "Deadline"
 msgstr "Frist"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk.report,delay_close:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_delay_close
 msgid "Delay to Close"
 msgstr "Avslutsledtid"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,description:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_description
 msgid "Description"
 msgstr "Beskrivning"
 
 #. module: crm_helpdesk
-#: help:crm.helpdesk,email_from:0
+#: model:ir.model.fields,help:crm_helpdesk.field_crm_helpdesk_email_from
 msgid "Destination email for email gateway"
 msgstr "Mottagande e-postadress i E-postbryggan"
+
+#. module: crm_helpdesk
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_display_name
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_display_name
+msgid "Display Name"
+msgstr ""
 
 #. module: crm_helpdesk
 #: selection:crm.helpdesk.report,state:0
@@ -176,54 +157,33 @@ msgid "Draft"
 msgstr "Preliminär"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,duration:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_duration
 msgid "Duration"
 msgstr "Varaktighet"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,email_from:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_email_from
 msgid "Email"
 msgstr "Epost"
 
 #. module: crm_helpdesk
-#: code:addons/crm_helpdesk/crm_helpdesk.py:117
-#, python-format
-msgid "Error!"
-msgstr "Fel"
-
-#. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
-msgid "Escalate"
-msgstr "Eskalera"
-
-#. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
-msgid "Estimates"
-msgstr "Uppskattningar"
-
-#. module: crm_helpdesk
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Extended Filters..."
 msgstr "Utökade filter..."
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_form_view_helpdesk
 msgid "Extra Info"
 msgstr "Extra Info"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,message_follower_ids:0
-msgid "Followers"
-msgstr "Följare"
-
-#. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_form_view_helpdesk
 msgid "General"
 msgstr "Allmänt"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Group By"
 msgstr "Gruppera efter"
 
@@ -233,12 +193,14 @@ msgid ""
 "Have a general overview of all support requests by sorting them with "
 "specific criteria such as the processing time, number of requests answered, "
 "emails sent and costs."
-msgstr "Har en allmän översikt med alla supportärenden sorterade på specifika kriterier som t ex handläggningstid, antal besvarade ärenden, e-postmeddelanden skickade och kostnader."
+msgstr ""
+"Har en allmän översikt med alla supportärenden sorterade på specifika "
+"kriterier som t ex handläggningstid, antal besvarade ärenden, e-"
+"postmeddelanden skickade och kostnader."
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_graph
 #: model:ir.model,name:crm_helpdesk.model_crm_helpdesk
-#: model:ir.ui.menu,name:crm_helpdesk.menu_config_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_graph
 msgid "Helpdesk"
 msgstr "Kundtjänst"
 
@@ -249,27 +211,22 @@ msgid "Helpdesk Analysis"
 msgstr "Kuntjänstanalys"
 
 #. module: crm_helpdesk
-#: model:ir.actions.act_window,name:crm_helpdesk.crm_helpdesk_categ_action
-msgid "Helpdesk Categories"
-msgstr "Kundtjänstkategorier"
-
-#. module: crm_helpdesk
 #: model:ir.actions.act_window,name:crm_helpdesk.crm_case_helpdesk_act111
 msgid "Helpdesk Requests"
 msgstr "Kunstjänstärende"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_form_view_helpdesk
 msgid "Helpdesk Support"
 msgstr "Kundtjänstsupport"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_tree_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_tree_view_helpdesk
 msgid "Helpdesk Support Tree"
 msgstr "Kundtjänstsupport trädvy"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_helpdesk_calendar_view
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_helpdesk_calendar_view
 msgid "Helpdesk Supports"
 msgstr "Kundtjänst stödjer"
 
@@ -279,16 +236,23 @@ msgid "Helpdesk and Support"
 msgstr "Kundtjänst och support"
 
 #. module: crm_helpdesk
+#: model:ir.actions.act_window,help:crm_helpdesk.crm_case_helpdesk_act111
+msgid "Helpdesk and Support allow you to track your interventions."
+msgstr ""
+
+#. module: crm_helpdesk
 #: model:ir.model,name:crm_helpdesk.model_crm_helpdesk_report
 msgid "Helpdesk report after Sales Services"
 msgstr "Kundtjänstrapport tjänster eftermarknad"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid ""
 "Helpdesk requests that are assigned to me or to one of the sale teams I "
 "manage"
-msgstr "Kundtjänst-förfrågningar som tilldelats mig eller till någon av de försäljningsteam jag hanterar"
+msgstr ""
+"Kundtjänst-förfrågningar som tilldelats mig eller till någon av de "
+"försäljningsteam jag hanterar"
 
 #. module: crm_helpdesk
 #: selection:crm.helpdesk,priority:0 selection:crm.helpdesk.report,priority:0
@@ -301,21 +265,10 @@ msgid "Highest"
 msgstr "Högsta"
 
 #. module: crm_helpdesk
-#: help:crm.helpdesk,message_summary:0
-msgid ""
-"Holds the Chatter summary (number of messages, ...). This summary is "
-"directly in html format in order to be inserted in kanban views."
-msgstr "Lagrar pladder-sammanfattning (antal meddelanden, ...). Denna sammanfattning presenteras i html-format för att kunna sättas in i kanban vyer."
-
-#. module: crm_helpdesk
-#: field:crm.helpdesk,id:0 field:crm.helpdesk.report,id:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_id
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_id
 msgid "ID"
 msgstr "ID"
-
-#. module: crm_helpdesk
-#: help:crm.helpdesk,message_unread:0
-msgid "If checked new messages require your attention."
-msgstr "Om ikryssad nya meddelanden som kräver din uppmärksamhet"
 
 #. module: crm_helpdesk
 #: selection:crm.helpdesk,state:0
@@ -323,24 +276,25 @@ msgid "In Progress"
 msgstr "Pågår"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,message_is_follower:0
-msgid "Is a Follower"
-msgstr "Är en följare"
-
-#. module: crm_helpdesk
-#: field:crm.helpdesk,date_action_last:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_date_action_last
 msgid "Last Action"
 msgstr "Senaste åtgärd"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,message_last_post:0
-msgid "Last Message Date"
-msgstr "Senast meddelandedatum"
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk___last_update
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report___last_update
+msgid "Last Modified on"
+msgstr ""
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,write_uid:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_write_uid
 msgid "Last Updated by"
 msgstr "Senast uppdaterad av"
+
+#. module: crm_helpdesk
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_lost_reason
+msgid "Lost Reason"
+msgstr ""
 
 #. module: crm_helpdesk
 #: selection:crm.helpdesk,priority:0 selection:crm.helpdesk.report,priority:0
@@ -353,69 +307,59 @@ msgid "Lowest"
 msgstr "Lägsta"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,message_ids:0
-msgid "Messages"
-msgstr "Meddelanden"
-
-#. module: crm_helpdesk
-#: help:crm.helpdesk,message_ids:0
-msgid "Messages and communication history"
-msgstr "Meddelande- och kommunikationshistorik"
-
-#. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_form_view_helpdesk
 msgid "Misc"
 msgstr "Övrigt"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Month"
 msgstr "Månad"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Month of helpdesk requests"
 msgstr "Månad av kuntjänstärenden"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "My Case(s)"
 msgstr "Mina ärenden"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "My Company"
 msgstr "olagMitt b"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "My Sales Team(s)"
 msgstr "Mina säljlag"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,name:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_name
 msgid "Name"
 msgstr "Namn"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
 #: selection:crm.helpdesk,state:0
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "New"
 msgstr "Nya"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "New Helpdesk Request"
 msgstr "Nytt kundtjänstärende"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,date_action_next:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_date_action_next
 msgid "Next Action"
 msgstr "Nästa åtgärd"
 
 #. module: crm_helpdesk
-#: code:addons/crm_helpdesk/crm_helpdesk.py:134
+#: code:addons/crm_helpdesk/models/crm_helpdesk.py:98
 #, python-format
 msgid "No Subject"
 msgstr "Ingen rubrik"
@@ -426,206 +370,282 @@ msgid "Normal"
 msgstr "Normal"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_form_view_helpdesk
 msgid "Notes"
 msgstr "Anteckningar"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
 #: selection:crm.helpdesk.report,state:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_date_open
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Open"
 msgstr "Öppen"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "Open Helpdesk Request"
 msgstr "Öppna kuntjänstärenden"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk.report,delay_expected:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_delay_expected
 msgid "Overpassed Deadline"
 msgstr "Passerad tidsfrist"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_tree_view_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
-#: field:crm.helpdesk,partner_id:0
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
-#: field:crm.helpdesk.report,partner_id:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_partner_id
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_partner_id
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_tree_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Partner"
 msgstr "Partner"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
 #: selection:crm.helpdesk,state:0 selection:crm.helpdesk.report,state:0
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "Pending"
 msgstr "Väntande"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,planned_cost:0 field:crm.helpdesk.report,planned_cost:0
-msgid "Planned Costs"
-msgstr "Planerade kostnader"
-
-#. module: crm_helpdesk
-#: field:crm.helpdesk,planned_revenue:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_planned_revenue
 msgid "Planned Revenue"
 msgstr "Plannerade intäkter"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
-#: field:crm.helpdesk,priority:0
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
-#: field:crm.helpdesk.report,priority:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_priority
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_priority
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Priority"
 msgstr "Prioritet"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,probability:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_probability
 msgid "Probability (%)"
 msgstr "Sannolikhet (%)"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_tree_view_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_form_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_tree_view_helpdesk
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "Query"
 msgstr "Fråga"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,ref:0
-msgid "Reference"
-msgstr "Referens"
-
-#. module: crm_helpdesk
-#: field:crm.helpdesk,ref2:0
-msgid "Reference 2"
-msgstr "Referens 2"
-
-#. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.crm_case_form_view_helpdesk
-msgid "References"
-msgstr "Referenser"
-
-#. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "Request Date by Month"
 msgstr ""
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "Request Month"
 msgstr ""
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
-#: field:crm.helpdesk,user_id:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_user_id
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "Responsible"
 msgstr "Ansvarig"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "Responsible User"
 msgstr "Handläggare"
 
 #. module: crm_helpdesk
-#: help:crm.helpdesk,section_id:0
+#: model:ir.model.fields,help:crm_helpdesk.field_crm_helpdesk_team_id
 msgid ""
 "Responsible sales team. Define Responsible user and Email account for mail "
 "gateway."
-msgstr "Ansvarigt säljlag. Definiera ansvarig användare och e-postkonto för bryggan."
+msgstr ""
+"Ansvarigt säljlag. Definiera ansvarig användare och e-postkonto för bryggan."
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
-#: field:crm.helpdesk,section_id:0
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_team_id
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Sales Team"
 msgstr "Säljteam"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Salesperson"
 msgstr "Säljare"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Search"
 msgstr "Sök"
 
 #. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "Search Helpdesk"
 msgstr "Sök kundtjänst"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk.report,section_id:0
-msgid "Section"
-msgstr "Sektion"
-
-#. module: crm_helpdesk
-#: view:crm.helpdesk:crm_helpdesk.view_crm_case_helpdesk_filter
-#: field:crm.helpdesk,state:0
-#: view:crm.helpdesk.report:crm_helpdesk.view_report_crm_helpdesk_filter
-#: field:crm.helpdesk.report,state:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_state
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_state
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
+#: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_filter
 msgid "Status"
 msgstr "Status"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,message_summary:0
-msgid "Summary"
-msgstr "Sammandrag"
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_tag_ids
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_tag_ids
+msgid "Tags"
+msgstr ""
 
 #. module: crm_helpdesk
-#: help:crm.helpdesk,state:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_team_id
+msgid "Team"
+msgstr ""
+
+#. module: crm_helpdesk
+#: model:ir.model.fields,help:crm_helpdesk.field_crm_helpdesk_state
 msgid ""
-"The status is set to 'Draft', when a case is created.                                  \n"
-"If the case is in progress the status is set to 'Open'.                                  \n"
-"When the case is over, the status is set to 'Done'.                                  \n"
+"The status is set to 'Draft', when a case is created.              \n"
+"If the case is in progress the status is set to 'Open'.              \n"
+"When the case is over, the status is set to 'Done'.              \n"
 "If the case needs to be reviewed then the status is set to 'Pending'."
-msgstr "Statusen är satt till \"Utkast\", när ett ärende skapas.\nOm ärendet pågår status är inställd på \"Öppna\".\nNär fallet är över, är det status till \"Klar\".\nOm ärendet måste ses över så att status är \"Väntar\"."
+msgstr ""
 
 #. module: crm_helpdesk
-#: help:crm.helpdesk,email_cc:0
+#: model:ir.model.fields,help:crm_helpdesk.field_crm_helpdesk_email_cc
 msgid ""
 "These email addresses will be added to the CC field of all inbound and "
 "outbound emails for this record before being sent. Separate multiple email "
 "addresses with a comma"
-msgstr "Dessa e-postadresser läggs till kopie-fältet på alla inkommande och utgående meddelanden för denna post innan de skickas. Separera flera adresser med komma."
+msgstr ""
+"Dessa e-postadresser läggs till kopie-fältet på alla inkommande och utgående "
+"meddelanden för denna post innan de skickas. Separera flera adresser med "
+"komma."
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,message_unread:0
-msgid "Unread Messages"
-msgstr "Olästa meddelanden"
-
-#. module: crm_helpdesk
-#: field:crm.helpdesk,write_date:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_write_date
 msgid "Update Date"
 msgstr "Uppdateringsdatum"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk.report,user_id:0
+#: model:ir.actions.act_window,help:crm_helpdesk.crm_case_helpdesk_act111
+msgid ""
+"Use the Odoo Issues system to manage your support\n"
+"                activities. Issues can be connected to the email gateway: "
+"new\n"
+"                emails may create issues, each of them automatically gets "
+"the\n"
+"                history of the conversation with the customer."
+msgstr ""
+
+#. module: crm_helpdesk
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_user_id
 msgid "User"
 msgstr "Användare"
 
 #. module: crm_helpdesk
-#: field:crm.helpdesk,email_cc:0
+#: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_email_cc
 msgid "Watchers Emails"
 msgstr "Övervakarens e-post"
 
-#. module: crm_helpdesk
-#: field:crm.helpdesk,website_message_ids:0
-msgid "Website Messages"
-msgstr "Webbplatsmeddelanden"
+#~ msgid "Categories"
+#~ msgstr "Kategorier"
 
-#. module: crm_helpdesk
-#: help:crm.helpdesk,website_message_ids:0
-msgid "Website communication history"
-msgstr "Webbplatsens kommunikationshistorik"
+#~ msgid "Category"
+#~ msgstr "Kategori"
 
-#. module: crm_helpdesk
-#: code:addons/crm_helpdesk/crm_helpdesk.py:117
-#, python-format
-msgid ""
-"You can not escalate, you are already at the top level regarding your sales-"
-"team category."
-msgstr "Du kan inte eskalera längre, du har nått toppen för denna säljlags-kategori."
+#~ msgid ""
+#~ "Create and manage helpdesk categories to better manage and classify your "
+#~ "support requests."
+#~ msgstr ""
+#~ "Skapa och hantera kundtjänstkategorier för att bättre administrera och "
+#~ "klassificera supportärenden."
+
+#~ msgid "Date of the last message posted on the record."
+#~ msgstr "Datum för senast publicerade meddelandet i loggen."
+
+#~ msgid "Error!"
+#~ msgstr "Fel"
+
+#~ msgid "Escalate"
+#~ msgstr "Eskalera"
+
+#~ msgid "Estimates"
+#~ msgstr "Uppskattningar"
+
+#~ msgid "Followers"
+#~ msgstr "Följare"
+
+#~ msgid "Helpdesk Categories"
+#~ msgstr "Kundtjänstkategorier"
+
+#~ msgid ""
+#~ "Holds the Chatter summary (number of messages, ...). This summary is "
+#~ "directly in html format in order to be inserted in kanban views."
+#~ msgstr ""
+#~ "Lagrar pladder-sammanfattning (antal meddelanden, ...). Denna "
+#~ "sammanfattning presenteras i html-format för att kunna sättas in i kanban "
+#~ "vyer."
+
+#~ msgid "If checked new messages require your attention."
+#~ msgstr "Om ikryssad nya meddelanden som kräver din uppmärksamhet"
+
+#~ msgid "Is a Follower"
+#~ msgstr "Är en följare"
+
+#~ msgid "Last Message Date"
+#~ msgstr "Senast meddelandedatum"
+
+#~ msgid "Messages"
+#~ msgstr "Meddelanden"
+
+#~ msgid "Messages and communication history"
+#~ msgstr "Meddelande- och kommunikationshistorik"
+
+#~ msgid "Planned Costs"
+#~ msgstr "Planerade kostnader"
+
+#~ msgid "Reference"
+#~ msgstr "Referens"
+
+#~ msgid "Reference 2"
+#~ msgstr "Referens 2"
+
+#~ msgid "References"
+#~ msgstr "Referenser"
+
+#~ msgid "Section"
+#~ msgstr "Sektion"
+
+#~ msgid "Summary"
+#~ msgstr "Sammandrag"
+
+#~ msgid ""
+#~ "The status is set to 'Draft', when a case is "
+#~ "created.                                  \n"
+#~ "If the case is in progress the status is set to "
+#~ "'Open'.                                  \n"
+#~ "When the case is over, the status is set to "
+#~ "'Done'.                                  \n"
+#~ "If the case needs to be reviewed then the status is set to 'Pending'."
+#~ msgstr ""
+#~ "Statusen är satt till \"Utkast\", när ett ärende skapas.\n"
+#~ "Om ärendet pågår status är inställd på \"Öppna\".\n"
+#~ "När fallet är över, är det status till \"Klar\".\n"
+#~ "Om ärendet måste ses över så att status är \"Väntar\"."
+
+#~ msgid "Unread Messages"
+#~ msgstr "Olästa meddelanden"
+
+#~ msgid "Website Messages"
+#~ msgstr "Webbplatsmeddelanden"
+
+#~ msgid "Website communication history"
+#~ msgstr "Webbplatsens kommunikationshistorik"
+
+#~ msgid ""
+#~ "You can not escalate, you are already at the top level regarding your "
+#~ "sales-team category."
+#~ msgstr ""
+#~ "Du kan inte eskalera längre, du har nått toppen för denna säljlags-"
+#~ "kategori."
