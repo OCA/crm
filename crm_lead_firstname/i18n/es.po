@@ -25,7 +25,6 @@ msgstr "Nombre del contacto"
 #. module: crm_lead_firstname
 #: model:ir.model.fields,field_description:crm_lead_firstname.field_crm_lead__contact_name
 #, fuzzy
-#| msgid "Firstname"
 msgid "First name"
 msgstr "Nombre de pila"
 
