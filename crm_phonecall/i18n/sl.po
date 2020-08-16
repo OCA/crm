@@ -274,7 +274,6 @@ msgstr "Opis..."
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__direction
 #, fuzzy
-#| msgid "Creation"
 msgid "Direction"
 msgstr "Nastanek"
 

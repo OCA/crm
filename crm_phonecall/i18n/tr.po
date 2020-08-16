@@ -272,7 +272,6 @@ msgstr "Açıklama..."
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__direction
 #, fuzzy
-#| msgid "Creation"
 msgid "Direction"
 msgstr "Oluşturma"
 
@@ -390,7 +389,6 @@ msgstr ""
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
 #, fuzzy
-#| msgid "Phone Calls"
 msgid "Incoming Calls"
 msgstr "Telefon Çağrıları"
 
@@ -602,7 +600,6 @@ msgstr ""
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
 #, fuzzy
-#| msgid "Phone Calls"
 msgid "Outgoing Calls"
 msgstr "Telefon Çağrıları"
 
@@ -808,7 +805,6 @@ msgstr ""
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
 #, fuzzy
-#| msgid "Status"
 msgid "State"
 msgstr "Durumu"
 
