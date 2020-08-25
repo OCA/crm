@@ -1,6 +1,6 @@
 [![Runbot Status](https://runbot.odoo-community.org/runbot/badge/flat/111/10.0.svg)](https://runbot.odoo-community.org/runbot/repo/github-com-oca-crm-111)
-[![Build Status](https://travis-ci.org/OCA/crm.svg?branch=master)](https://travis-ci.org/OCA/crm)
-[![Coverage Status](https://img.shields.io/coveralls/OCA/crm.svg)](https://coveralls.io/r/OCA/crm?branch=master)
+[![Build Status](https://travis-ci.org/OCA/crm.svg?branch=10.0)](https://travis-ci.org/OCA/crm)
+[![Coverage Status](https://codecov.io/gh/OCA/crm/branch/10.0/graphs/badge.svg)](https://codecov.io/gh/OCA/crm/branch/10.0)
 
 CRM addons for Odoo
 ===================
@@ -47,3 +47,9 @@ addon | version | summary
 [partner_withdrawal](partner_withdrawal/) | 8.0.1.0.0 (unported) | Partner membership withdrawal
 
 [//]: # (end addons)
+
+----
+
+OCA, or the [Odoo Community Association](http://odoo-community.org/), is a nonprofit organization whose
+mission is to support the collaborative development of Odoo features and
+promote its widespread use.
