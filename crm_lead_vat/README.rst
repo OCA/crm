@@ -26,7 +26,7 @@ VAT in leads
 |badge1| |badge2| |badge3| |badge4| |badge5| 
 
 This module was written to extend the functionality of CRM leads to support
-setting the VAT.
+setting the VAT identification number (https://en.wikipedia.org/wiki/VAT_identification_number).
 
 **Table of contents**
 
