@@ -5,13 +5,11 @@
     <record id="project_task_form2" model="ir.ui.view">
         <field name="name">project.task.form.2</field>
         <field name="model">project.task</field>
-        <field name="inherit_id" ref="hr_timesheet.view_task_form2_inherited"/>
+        <field name="inherit_id" ref="project.view_task_form2"/>
         <field name="arch" type="xml">
-
             <xpath expr="//sheet//field[@name='user_id']" position="after">
                 <field name="lead_id"/>
             </xpath>
-
         </field>
     </record>
 
@@ -21,11 +19,9 @@
         <field name="model">project.task</field>
         <field name="inherit_id" ref="project.view_task_tree2"/>
         <field name="arch" type="xml">
-
             <xpath expr="//tree//field[@name='user_id']" position="after">
                 <field name="lead_id"/>
             </xpath>
-
         </field>
     </record>
 
@@ -35,11 +31,9 @@
         <field name="model">project.task</field>
         <field name="inherit_id" ref="project.view_task_search_form"/>
         <field name="arch" type="xml">
-            
             <field name="name" position="after">
                 <field name="lead_id" string="Opportunity" filter_domain="[('lead_id','ilike', self)]"/>
             </field>
-
         </field>
     </record> 
 
