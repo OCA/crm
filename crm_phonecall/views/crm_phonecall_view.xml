@@ -2,8 +2,8 @@
 <odoo>
     <record id="crm_phonecall_categ_action" model="ir.actions.act_window">
         <field name="name">Phonecall Categories</field>
-        <field name="res_model">crm.lead.tag</field>
-        <field name="view_id" ref="crm.crm_lead_tag_tree" />
+        <field name="res_model">crm.tag</field>
+        <field name="view_id" ref="sales_team.sales_team_crm_tag_view_tree" />
         <field name="domain">[]</field>
         <field name="context" eval="{'object_id': ref('model_crm_phonecall')}" />
         <field name="help" type="html">
