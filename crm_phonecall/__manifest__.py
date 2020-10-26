@@ -1,10 +1,11 @@
-# For more information contact me on mireda2012@gmail.com
+# @@ -1,11 +1,10 @@
+# Copyright 2017 Tecnativa - Vicent Cubells
 
 {
     "name": "CRM Phone Calls",
     "version": "14.0.1.0.0",
     "category": "Customer Relationship Management",
-    "author": "Odoo Community Association (OCA)",
+    "author": "Odoo S.A., Tecnativa, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/crm",
     "license": "AGPL-3",
     "depends": ["crm", "calendar"],
