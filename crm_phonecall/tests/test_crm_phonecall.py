@@ -52,7 +52,7 @@ class TestCrmPhoneCall(common.SavepointCase):
                 "partner_id": cls.partner2.id,
             }
         )
-        cls.tag = cls.env.ref("crm.categ_oppor1")
+        cls.tag = cls.env.ref("sales_team.categ_oppor1")
 
     def test_on_change_partner(self):
         """Partner change method test."""

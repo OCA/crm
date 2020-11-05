@@ -2,18 +2,16 @@
 <odoo>
     <record id="crm_phonecall_categ_action" model="ir.actions.act_window">
         <field name="name">Phonecall Categories</field>
-        <field name="res_model">crm.lead.tag</field>
-        <field name="view_id" ref="crm.crm_lead_tag_tree" />
+        <field name="res_model">crm.tag</field>
+        <field name="view_id" ref="sales_team.sales_team_crm_tag_view_tree" />
         <field name="domain">[]</field>
-        <field name="context" eval="{'object_id': ref('model_crm_phonecall')}" />
+        <field eval="{'object_id': ref('model_crm_phonecall')}" name="context" />
         <field name="help" type="html">
-            <p class="oe_view_nocontent_create">
-                Click to add a new category.
-            </p>
+            <p class="oe_view_nocontent_create">Click to add a new category.</p>
             <p>
-            Create specific phone call categories to better define the type of
+                Create specific phone call categories to better define the type of
             calls tracked in the system.
-        </p>
+            </p>
         </field>
     </record>
     <menuitem
@@ -23,8 +21,8 @@
         sequence="45"
     />
     <menuitem
-        id="menu_crm_case_phonecall-act"
         action="crm_phonecall_categ_action"
+        id="menu_crm_case_phonecall-act"
         name="Categories"
         parent="menu_crm_config_phonecall"
     />
@@ -33,33 +31,33 @@
         <field name="model">crm.phonecall</field>
         <field name="arch" type="xml">
             <tree
-                decoration-muted="state in ('cancel','done')"
                 decoration-info="state in ('pending',)"
+                decoration-muted="state in ('cancel','done')"
                 string="Phone Calls"
             >
                 <field name="date" />
                 <field name="name" />
                 <field name="partner_id" />
                 <button
-                    string="Meeting"
-                    states="open,pending"
-                    name="action_make_meeting"
                     icon="fa-calendar"
+                    name="action_make_meeting"
+                    states="open,pending"
+                    string="Meeting"
                     type="object"
                 />
                 <button
-                    string="Convert to Opportunity"
-                    type="object"
+                    attrs="{'invisible':[('opportunity_id','!=',False)]}"
+                    icon="fa-hand-pointer-o"
                     name="action_button_convert2opportunity"
                     states="open,pending"
-                    icon="fa-hand-pointer-o"
-                    attrs="{'invisible':[('opportunity_id','!=',False)]}"
+                    string="Convert to Opportunity"
+                    type="object"
                 />
                 <field name="partner_phone" />
                 <field name="user_id" />
-                <field name="tag_ids" invisible="1" />
-                <field name="create_date" invisible="1" />
-                <field name="opportunity_id" invisible="1" />
+                <field invisible="1" name="tag_ids" />
+                <field invisible="1" name="create_date" />
+                <field invisible="1" name="opportunity_id" />
                 <field name="state" />
             </tree>
         </field>
@@ -73,37 +71,49 @@
                     <field
                         name="state"
                         nolabel="1"
-                        widget="statusbar"
                         options="{'clickable': 1}"
+                        widget="statusbar"
                     />
                 </header>
                 <sheet string="Phone Call">
                     <div class="oe_button_box" name="button_box">
                         <button
-                            class="oe_stat_button"
-                            type="object"
-                            name="action_button_convert2opportunity"
-                            icon="fa-star"
                             attrs="{'invisible':[ '|', ('opportunity_id','!=',False), ('state', 'not in', ('open', 'done'))]}"
+                            class="oe_stat_button"
                             help="Convert To Opportunity"
+                            icon="fa-star"
+                            name="action_button_convert2opportunity"
+                            type="object"
                         >
-                            <span>Convert<br />To Opportunity</span>
+                            <span>
+                                Convert
+                                <br />
+                                To Opportunity
+                            </span>
                         </button>
                         <button
                             class="oe_stat_button"
-                            type="action"
-                            name="%(phonecall_to_phonecall_act)d"
                             icon="fa-phone"
+                            name="%(phonecall_to_phonecall_act)d"
+                            type="action"
                         >
-                            <span>Schedule<br />Other Call</span>
+                            <span>
+                                Schedule
+                                <br />
+                                Other Call
+                            </span>
                         </button>
                         <button
                             class="oe_stat_button"
+                            icon="fa-calendar fa-fw"
                             name="action_make_meeting"
                             type="object"
-                            icon="fa-calendar fa-fw"
                         >
-                            <span>Schedule<br />A Meeting</span>
+                            <span>
+                                Schedule
+                                <br />
+                                A Meeting
+                            </span>
                         </button>
                     </div>
                     <div class="oe_title">
@@ -126,38 +136,38 @@
                             <label for="duration" />
                             <div>
                                 <field
-                                    name="duration"
-                                    widget="float_time"
                                     class="oe_inline"
+                                    name="duration"
                                     style="vertical-align:baseline"
+                                    widget="float_time"
                                 />
-                                <b> min(s)</b>
+                                <b>min(s)</b>
                             </div>
                             <field name="partner_id" />
                             <field name="partner_mobile" />
                             <field
-                                name="opportunity_id"
                                 context="{'opportunity_id': opportunity_id}"
+                                name="opportunity_id"
                             />
                         </group>
                         <group>
                             <field
-                                name="user_id"
                                 context="{'default_groups_ref': ['base.group_user', 'base.group_partner_manager', 'sales_team.group_sale_salesman_all_leads']}"
+                                name="user_id"
                             />
                             <field
-                                name="team_id"
                                 colspan="1"
-                                widget="selection"
                                 groups="sales_team.group_sale_salesman"
+                                name="team_id"
+                                widget="selection"
                             />
                             <field name="tag_ids" widget="many2many_tags" />
                             <field name="priority" widget="priority" />
                         </group>
                         <group
-                            string="Tracking"
                             groups="base.group_no_one"
                             name="categorization"
+                            string="Tracking"
                         >
                             <field name="campaign_id" />
                             <field name="source_id" />
@@ -180,43 +190,43 @@
         <field name="name">CRM - Logged Phone Calls Tree</field>
         <field name="model">crm.phonecall</field>
         <field name="arch" type="xml">
-            <tree string="Phone Calls" editable="top">
+            <tree editable="top" string="Phone Calls">
                 <field name="date" />
                 <field name="name" />
                 <field name="partner_id" />
-                <field name="partner_phone" invisible="1" />
-                <field name="partner_mobile" invisible="1" />
+                <field invisible="1" name="partner_phone" />
+                <field invisible="1" name="partner_mobile" />
                 <field
-                    name="user_id"
                     context="{'default_groups_ref': ['base.group_user', 'base.group_partner_manager', 'sales_team.group_sale_salesman']}"
+                    name="user_id"
                 />
-                <field name="tag_ids" widget="many2many_tags" invisible="1" />
+                <field invisible="1" name="tag_ids" widget="many2many_tags" />
                 <field name="direction" />
                 <field name="state" />
-                <field name="create_date" invisible="1" />
-                <field name="opportunity_id" invisible="1" />
-                <field name="campaign_id" groups="base.group_no_one" />
-                <field name="source_id" groups="base.group_no_one" />
-                <field name="medium_id" groups="base.group_no_one" />
+                <field invisible="1" name="create_date" />
+                <field invisible="1" name="opportunity_id" />
+                <field groups="base.group_no_one" name="campaign_id" />
+                <field groups="base.group_no_one" name="source_id" />
+                <field groups="base.group_no_one" name="medium_id" />
                 <button
-                    string="Schedule Other Call"
                     icon="fa-phone"
                     name="%(phonecall_to_phonecall_act)d"
+                    string="Schedule Other Call"
                     type="action"
                 />
                 <button
-                    string="Meeting"
                     icon="fa-calendar"
                     name="action_make_meeting"
+                    string="Meeting"
                     type="object"
                 />
                 <button
-                    string="Convert to Opportunity"
+                    attrs="{'invisible':[('opportunity_id','!=',False)]}"
+                    icon="fa-hand-pointer-o"
                     name="action_button_convert2opportunity"
                     states="open,pending"
-                    icon="fa-hand-pointer-o"
+                    string="Convert to Opportunity"
                     type="object"
-                    attrs="{'invisible':[('opportunity_id','!=',False)]}"
                 />
             </tree>
         </field>
@@ -226,8 +236,8 @@
         <field name="model">crm.phonecall</field>
         <field name="inherit_id" ref="crm_phonecall.crm_case_inbound_phone_tree_view" />
         <field
-            name="groups_id"
             eval="[(4,ref('crm_phonecall.group_show_form_view'))]"
+            name="groups_id"
         />
         <field name="arch" type="xml">
             <tree position="attributes">
@@ -238,13 +248,13 @@
     <record id="crm_case_phone_calendar_view" model="ir.ui.view">
         <field name="name">CRM - Phone Calls Calendar</field>
         <field name="model">crm.phonecall</field>
-        <field name="priority" eval="2" />
+        <field eval="2" name="priority" />
         <field name="arch" type="xml">
             <calendar
-                string="Phone Calls"
-                date_start="date"
                 color="user_id"
                 date_delay="duration"
+                date_start="date"
+                string="Phone Calls"
             >
                 <field name="name" />
                 <field name="partner_id" />
@@ -260,76 +270,76 @@
                 <field name="date" />
                 <field name="state" />
                 <filter
-                    string="My Phonecalls"
-                    name="my_phonecalls"
                     domain="[('user_id', '=', uid)]"
+                    name="my_phonecalls"
+                    string="My Phonecalls"
                 />
                 <filter
-                    string="My Team"
-                    name="my_team"
                     domain="[('team_id.user_id', '=', uid)]"
+                    name="my_team"
+                    string="My Team"
                 />
                 <filter
-                    string="Unassigned"
-                    name="unassigned"
                     domain="[('user_id','=',False)]"
+                    name="unassigned"
+                    string="Unassigned"
                 />
                 <separator />
                 <filter
-                    string="To Do"
-                    name="current"
                     domain="[('state','in',('open','pending'))]"
+                    name="current"
+                    string="To Do"
                 />
                 <separator />
                 <filter
-                    string="Incoming Calls"
-                    name="in_calls"
                     domain="[('direction','=','in')]"
+                    name="in_calls"
+                    string="Incoming Calls"
                 />
                 <filter
-                    string="Outgoing Calls"
-                    name="out_calls"
                     domain="[('direction','=','out')]"
+                    name="out_calls"
+                    string="Outgoing Calls"
                 />
                 <separator />
-                <filter name="date" string="Date" date="date" />
+                <filter date="date" name="date" string="Date" />
                 <separator />
                 <field name="partner_id" operator="child_of" />
                 <field name="user_id" />
                 <field name="opportunity_id" />
                 <field
+                    groups="sales_team.group_sale_manager"
                     name="team_id"
                     string="Sales Team"
-                    groups="sales_team.group_sale_manager"
                 />
                 <group expand="0" string="Group By">
                     <filter
-                        string="Partner"
-                        name="groupby_partner"
                         context="{'group_by':'partner_id'}"
+                        name="groupby_partner"
+                        string="Partner"
                     />
                     <filter
-                        string="Responsible"
-                        name="groupby_responsible"
                         context="{'group_by':'user_id'}"
+                        name="groupby_responsible"
+                        string="Responsible"
                     />
                     <filter
-                        string="Creation"
-                        name="groupby_creation"
-                        help="Creation Date"
                         context="{'group_by':'create_date'}"
+                        help="Creation Date"
+                        name="groupby_creation"
+                        string="Creation"
                     />
                     <filter
-                        string="Month"
-                        name="groupby_month"
                         context="{'group_by':'date'}"
                         help="Calls Date by Month"
+                        name="groupby_month"
+                        string="Month"
                     />
                     <filter
-                        string="State"
-                        name="groupby_state"
                         context="{'group_by':'state'}"
                         help="Calls by status"
+                        name="groupby_state"
+                        string="State"
                     />
                 </group>
             </search>
@@ -340,31 +350,31 @@
         <field name="res_model">crm.phonecall</field>
         <field name="view_mode">tree,form,calendar</field>
         <field name="view_id" ref="crm_case_phone_tree_view" />
-        <field name="context">{"search_default_user_id":uid}</field>
+        <field name="context">{&quot;search_default_user_id&quot;:uid}</field>
         <field name="search_view_id" ref="view_crm_case_phonecalls_filter" />
     </record>
     <record id="action_crm_tag_tree_phone0" model="ir.actions.act_window.view">
-        <field name="sequence" eval="1" />
+        <field eval="1" name="sequence" />
         <field name="view_mode">tree</field>
         <field name="view_id" ref="crm_case_phone_tree_view" />
         <field name="act_window_id" ref="crm_case_categ_phone0" />
     </record>
     <record id="action_crm_tag_calendar_phone0" model="ir.actions.act_window.view">
-        <field name="sequence" eval="2" />
+        <field eval="2" name="sequence" />
         <field name="view_mode">calendar</field>
         <field name="view_id" ref="crm_case_phone_calendar_view" />
         <field name="act_window_id" ref="crm_case_categ_phone0" />
     </record>
     <record id="action_crm_tag_form_phone0" model="ir.actions.act_window.view">
-        <field name="sequence" eval="3" />
+        <field eval="3" name="sequence" />
         <field name="view_mode">form</field>
         <field name="view_id" ref="crm_case_phone_form_view" />
         <field name="act_window_id" ref="crm_case_categ_phone0" />
     </record>
     <menuitem
+        groups="sales_team.group_sale_salesman"
         id="menu_crm_case_phone"
         name="Phone Calls"
-        groups="sales_team.group_sale_salesman"
         parent="crm.crm_menu_root"
         sequence="6"
     />
@@ -374,27 +384,27 @@
         <field name="view_mode">tree,calendar</field>
         <field name="view_id" ref="crm_case_inbound_phone_tree_view" />
         <field name="domain">[]</field>
-        <field
-            name="context"
-        >{'search_default_state': 'done', 'default_state': 'done'}</field>
+        <field name="context">
+            {'search_default_state': 'done', 'default_state': 'done'}
+        </field>
         <field name="search_view_id" ref="view_crm_case_phonecalls_filter" />
         <field name="help" type="html">
             <p class="oe_view_nocontent_create">
                 Click to log the summary of a phone call.
             </p>
             <p>
-            Odoo allows you to log inbound calls on the fly to track the
+                Odoo allows you to log inbound calls on the fly to track the
             history of the communication with a customer or to inform another
             team member.
-        </p>
+            </p>
             <p>
-            In order to follow up on the call, you can trigger a request for
+                In order to follow up on the call, you can trigger a request for
             another call, a meeting or an opportunity.
-        </p>
+            </p>
         </field>
     </record>
     <record id="action_crm_tag_tree_phone_incoming0" model="ir.actions.act_window.view">
-        <field name="sequence" eval="1" />
+        <field eval="1" name="sequence" />
         <field name="view_mode">tree</field>
         <field name="view_id" ref="crm_case_inbound_phone_tree_view" />
         <field name="act_window_id" ref="crm_case_categ_phone_incoming0" />
@@ -403,22 +413,22 @@
         id="action_crm_tag_calendar_phone_incoming0"
         model="ir.actions.act_window.view"
     >
-        <field name="sequence" eval="2" />
+        <field eval="2" name="sequence" />
         <field name="view_mode">calendar</field>
         <field name="view_id" ref="crm_case_phone_calendar_view" />
         <field name="act_window_id" ref="crm_case_categ_phone_incoming0" />
     </record>
     <record id="action_crm_tag_form_phone_incoming0" model="ir.actions.act_window.view">
-        <field name="sequence" eval="3" />
+        <field eval="3" name="sequence" />
         <field name="view_mode">form</field>
         <field name="view_id" ref="crm_case_phone_form_view" />
         <field name="act_window_id" ref="crm_case_categ_phone_incoming0" />
     </record>
     <menuitem
-        name="Logged Calls"
-        id="menu_crm_case_phone_inbound"
-        parent="menu_crm_case_phone"
         action="crm_case_categ_phone_incoming0"
+        id="menu_crm_case_phone_inbound"
+        name="Logged Calls"
+        parent="menu_crm_case_phone"
     />
     <record id="crm_case_categ_phone_outgoing0" model="ir.actions.act_window">
         <field name="name">Scheduled Calls</field>
@@ -428,21 +438,19 @@
         <field name="domain">[('state','!=','done')]</field>
         <field name="search_view_id" ref="view_crm_case_phonecalls_filter" />
         <field name="help" type="html">
-            <p class="oe_view_nocontent_create">
-                Click to schedule a call
+            <p class="oe_view_nocontent_create">Click to schedule a call</p>
+            <p>
+                Odoo allows you to easily define all the calls to be done
+            by your sales team and follow up based on their summary.
             </p>
             <p>
-            Odoo allows you to easily define all the calls to be done
-            by your sales team and follow up based on their summary.
-        </p>
-            <p>
-            You can use the import feature to massively import a new list of
+                You can use the import feature to massively import a new list of
             prospects to qualify.
-        </p>
+            </p>
         </field>
     </record>
     <record id="action_crm_tag_tree_phone_outgoing0" model="ir.actions.act_window.view">
-        <field name="sequence" eval="1" />
+        <field eval="1" name="sequence" />
         <field name="view_mode">tree</field>
         <field name="view_id" ref="crm_case_phone_tree_view" />
         <field name="act_window_id" ref="crm_case_categ_phone_outgoing0" />
@@ -451,22 +459,22 @@
         id="action_crm_tag_calendar_phone_outgoing0"
         model="ir.actions.act_window.view"
     >
-        <field name="sequence" eval="2" />
+        <field eval="2" name="sequence" />
         <field name="view_mode">calendar</field>
         <field name="view_id" ref="crm_case_phone_calendar_view" />
         <field name="act_window_id" ref="crm_case_categ_phone_outgoing0" />
     </record>
     <record id="action_crm_tag_form_phone_outgoing0" model="ir.actions.act_window.view">
-        <field name="sequence" eval="3" />
+        <field eval="3" name="sequence" />
         <field name="view_mode">form</field>
         <field name="view_id" ref="crm_case_phone_form_view" />
         <field name="act_window_id" ref="crm_case_categ_phone_outgoing0" />
     </record>
     <menuitem
+        action="crm_case_categ_phone_outgoing0"
+        groups="crm_phonecall.group_scheduled_calls"
         id="menu_crm_case_phone_outbound"
         name="Scheduled Calls"
         parent="menu_crm_case_phone"
-        groups="crm_phonecall.group_scheduled_calls"
-        action="crm_case_categ_phone_outgoing0"
     />
 </odoo>

@@ -6,6 +6,8 @@
   * David Vidal
   * Alexandre Díaz
 
+* RIDA YAHLA <mireda2012@gmail.com>
+
 * Anand Kansagra <kansagraanand@hotmail.com>
 
 * `Druidoo <https://www.druidoo.io>`_
