@@ -1,9 +1,9 @@
+# @@ -1,11 +1,10 @@
 # Copyright 2017 Tecnativa - Vicent Cubells
-# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
 {
     "name": "CRM Phone Calls",
-    "version": "13.0.1.2.2",
+    "version": "14.0.1.0.0",
     "category": "Customer Relationship Management",
     "author": "Odoo S.A., Tecnativa, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/crm",
