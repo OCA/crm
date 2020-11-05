@@ -40,7 +40,7 @@ class CrmPhonecall(models.Model):
             ("done", "Held"),
         ],
         string="Status",
-        track_visibility="onchange",
+        tracking=3,
         default="open",
         help="The status is set to Confirmed, when a case is created.\n"
         "When the call is over, the status is set to Held.\n"
@@ -53,11 +53,11 @@ class CrmPhonecall(models.Model):
     active = fields.Boolean(required=False, default=True)
     duration = fields.Float(help="Duration in minutes and seconds.")
     tag_ids = fields.Many2many(
-        comodel_name="crm.lead.tag",
+        comodel_name="crm.tag",
         relation="crm_phonecall_tag_rel",
+        string="Tags",
         column1="phone_id",
         column2="tag_id",
-        string="Tags",
     )
     partner_phone = fields.Char(string="Phone")
     partner_mobile = fields.Char("Mobile")
@@ -184,7 +184,7 @@ class CrmPhonecall(models.Model):
         self,
         opportunity_summary=False,
         partner_id=False,
-        planned_revenue=0.0,
+        expected_revenue=0.0,
         probability=0.0,
     ):
         """Convert lead to opportunity."""
@@ -202,7 +202,7 @@ class CrmPhonecall(models.Model):
             opportunity_id = opportunity.create(
                 {
                     "name": opportunity_summary or call.name,
-                    "planned_revenue": planned_revenue,
+                    "expected_revenue": expected_revenue,
                     "probability": probability,
                     "partner_id": partner_id or False,
                     "mobile": default_contact and default_contact.mobile,
@@ -234,8 +234,8 @@ class CrmPhonecall(models.Model):
         for phonecall in self:
             if phonecall.partner_id and phonecall.partner_id.email:
                 partner_ids.append(phonecall.partner_id.id)
-            res = self.env["ir.actions.act_window"].for_xml_id(
-                "calendar", "action_calendar_event"
+            res = self.env["ir.actions.act_window"]._for_xml_id(
+                "calendar.action_calendar_event"
             )
             res["context"] = {
                 "default_phonecall_id": phonecall.id,
