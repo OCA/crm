@@ -17,11 +17,12 @@
                             id="crm_phonecall_show_form_settings"
                         >
                             <label
-                                string="Enable form view for phone calls"
                                 for="group_show_form_view"
+                                string="Enable form view for phone calls"
                             />
                             <div class="text-muted">
-                                By default form view is disabled for calls, with this setting it is enabled for all users.
+                                By default form view is disabled for calls, with this
+                                setting it is enabled for all users.
                             </div>
                         </div>
                     </div>
