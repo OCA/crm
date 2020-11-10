@@ -25,8 +25,8 @@ class FirstNameCase(SavepointCase):
 
     def test_create_contact(self):
         """Contact correctly created."""
-        partner_id = self.lead.handle_partner_assignment()[self.lead.id]
-        partner = self.partner_model.browse(partner_id)
+        self.lead.handle_partner_assignment()
+        partner = self.partner_model.browse(self.lead.partner_id.id)
         self.assertEqual(self.lead.contact_name, partner.firstname)
         self.assertEqual(self.lead.contact_lastname, partner.lastname)
 
