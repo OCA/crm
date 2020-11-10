@@ -1,13 +1,13 @@
 # Copyright 2016 Antiun Ingeniería S.L. - Jairo Llopis
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
-from odoo.tests.common import Form, SavepointCase
+from odoo.tests import Form, common
 
 
-class FirstNameCase(SavepointCase):
+class FirstNameCase(common.SavepointCase):
     @classmethod
     def setUpClass(cls):
-        super(FirstNameCase, cls).setUpClass()
+        super().setUpClass()
         cls.env = cls.env(context=dict(cls.env.context, tracking_disable=True))
         cls.lead_model = cls.env["crm.lead"]
         cls.partner_model = cls.env["res.partner"]
