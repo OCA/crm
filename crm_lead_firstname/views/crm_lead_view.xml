@@ -17,7 +17,7 @@
                 <field name="contact_lastname" placeholder="Lastname" />
             </xpath>
             <xpath
-                expr="//page[@name='lead']//label[@for='contact_name']"
+                expr="//page[@name='lead']//label[@for='contact_name_page_lead']"
                 position="attributes"
             >
                 <attribute name="string">Contact Name</attribute>
