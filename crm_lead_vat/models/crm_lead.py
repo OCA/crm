@@ -13,18 +13,15 @@ class Lead(models.Model):
         "country code.",
     )
 
-    def _create_lead_partner(self):
+    def _create_customer(self):
         """Add VAT to partner."""
-        return super(
-            Lead, self.with_context(default_vat=self.vat)
-        )._create_lead_partner()
+        return super(Lead, self.with_context(default_vat=self.vat))._create_customer()
 
-    def _onchange_partner_id_values(self, partner_id):
+    def _prepare_values_from_partner(self, partner):
         """Recover VAT from partner if available."""
-        result = super(Lead, self)._onchange_partner_id_values(partner_id)
-        if not partner_id:
+        result = super(Lead, self)._prepare_values_from_partner(partner)
+        if not partner:
             return result
-        partner = self.env["res.partner"].browse(partner_id)
         if partner.vat:
             result["vat"] = partner.vat
         return result
