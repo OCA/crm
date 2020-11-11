@@ -84,6 +84,7 @@ Contributors
 * Jairo Llopis
 * Raf Ven <raf.ven@dynapps.be>
 * Nikos Tsirintanis <ntsirintanis@therp.nl>
+* Rida Yahla <mi_reda2012@live.fr>
 
 
 Maintainers

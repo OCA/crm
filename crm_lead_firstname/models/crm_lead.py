@@ -10,10 +10,10 @@ class CrmLead(models.Model):
     contact_name = fields.Char("First name")
     contact_lastname = fields.Char("Last name")
 
-    def _create_lead_partner_data(self, name, is_company, parent_id=False):
+    def _prepare_customer_values(self, partner_name, is_company, parent_id=False):
         """Ensure first and last names of contact match those in lead."""
-        lead_partner_data = super(CrmLead, self)._create_lead_partner_data(
-            name, is_company, parent_id
+        lead_partner_data = super(CrmLead, self)._prepare_customer_values(
+            partner_name, is_company, parent_id
         )
         if not is_company:
             if self.contact_name:
@@ -26,12 +26,11 @@ class CrmLead(models.Model):
                     del lead_partner_data["name"]
         return lead_partner_data
 
-    def _onchange_partner_id_values(self, partner_id):
+    def _prepare_values_from_partner(self, partner):
         """Recover first and last names from partner if available."""
-        result = super(CrmLead, self)._onchange_partner_id_values(partner_id)
+        result = super(CrmLead, self)._prepare_values_from_partner(partner)
 
-        if partner_id:
-            partner = self.env["res.partner"].browse(partner_id)
+        if partner:
             if not partner.is_company:
                 result.update(
                     {
@@ -40,4 +39,4 @@ class CrmLead(models.Model):
                     }
                 )
 
-        return result
+        return self._convert_to_write(result)
