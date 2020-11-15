@@ -207,7 +207,7 @@
         <field name="view_mode">tree,calendar,form</field>
         <field name="view_id" ref="crm_case_claims_tree_view" />
         <field name="context">
-        {"search_default_user_id":uid, "stage_type": 'claim'}</field>
+        {&quot;search_default_user_id&quot;:uid, &quot;stage_type&quot;: 'claim'}</field>
         <field name="search_view_id" ref="crm_claim.view_crm_case_claims_filter" />
         <field name="help" type="html">
             <p class="oe_view_nocontent_create">

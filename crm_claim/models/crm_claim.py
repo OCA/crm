@@ -66,7 +66,7 @@ class CrmClaim(models.Model):
     user_id = fields.Many2one(
         comodel_name="res.users",
         string="Responsible",
-        track_visibility="always",
+        tracking=True,
         default=lambda self: self.env.user,
     )
     user_fault = fields.Char(string="Trouble Responsible")
@@ -97,7 +97,7 @@ class CrmClaim(models.Model):
     stage_id = fields.Many2one(
         comodel_name="crm.claim.stage",
         string="Stage",
-        track_visibility="onchange",
+        tracking=3,
         default=_get_default_stage_id,
         domain="['|', ('team_ids', '=', team_id), ('case_default', '=', True)]",
     )
