@@ -19,7 +19,7 @@ class CrmClaim(models.Model):
     stage_id = fields.Many2one(
         "crm.claim.stage",
         string="Stage",
-        track_visibility="onchange",
+        tracking=3,
         domain="[ '&',"
         "'|',('team_ids', '=', team_id), "
         "('case_default', '=', True), "
