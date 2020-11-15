@@ -112,9 +112,9 @@ class CrmClaimReport(models.Model):
         return group_by_str
 
     def init(self):
-        """ Display Number of cases And Team Name
+        """Display Number of cases And Team Name
         @param cr: the current row, from the database cursor,
-         """
+        """
 
         tools.drop_view_if_exists(self.env.cr, self._table)
         self.env.cr.execute(

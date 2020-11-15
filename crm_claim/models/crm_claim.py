@@ -104,10 +104,10 @@ class CrmClaim(models.Model):
     cause = fields.Text(string="Root Cause")
 
     def stage_find(self, team_id, domain=None, order="sequence"):
-        """ Override of the base.stage method
-            Parameter of the stage search taken from the lead:
-            - team_id: if set, stages must belong to this team or
-              be a default case
+        """Override of the base.stage method
+        Parameter of the stage search taken from the lead:
+        - team_id: if set, stages must belong to this team or
+          be a default case
         """
         if domain is None:  # pragma: no cover
             domain = []
@@ -132,7 +132,7 @@ class CrmClaim(models.Model):
     @api.onchange("partner_id")
     def onchange_partner_id(self):
         """This function returns value of partner address based on partner
-           :param email: ignored
+        :param email: ignored
         """
         if self.partner_id:
             self.email_from = self.partner_id.email
@@ -163,9 +163,9 @@ class CrmClaim(models.Model):
     # -------------------------------------------------------
     @api.model
     def message_new(self, msg, custom_values=None):
-        """ Overrides mail_thread message_new that is called by the mailgateway
-            through message_process.
-            This override updates the document according to the email.
+        """Overrides mail_thread message_new that is called by the mailgateway
+        through message_process.
+        This override updates the document according to the email.
         """
         if custom_values is None:
             custom_values = {}
