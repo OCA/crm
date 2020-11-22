@@ -216,9 +216,6 @@ msgstr "Etiquetas"
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner__campaign_id
 #, fuzzy
-#| msgid ""
-#| "This is a name that helps you keep track of your different campaign "
-#| "efforts Ex: Fall_Drive, Christmas_Special"
 msgid ""
 "This is a name that helps you keep track of your different campaign efforts, "
 "e.g. Fall_Drive, Christmas_Special"
@@ -229,7 +226,6 @@ msgstr ""
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner__medium_id
 #, fuzzy
-#| msgid "This is the method of delivery. Ex: Postcard, Email, or Banner Ad"
 msgid "This is the method of delivery, e.g. Postcard, Email, or Banner Ad"
 msgstr ""
 "Este es el método de envío. Por ejemplo: carta postal, correo electrónico, "
@@ -238,9 +234,6 @@ msgstr ""
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner__source_id
 #, fuzzy
-#| msgid ""
-#| "This is the source of the link Ex: Search Engine, another domain, or name "
-#| "of email list"
 msgid ""
 "This is the source of the link, e.g. Search Engine, another domain, or name "
 "of email list"
