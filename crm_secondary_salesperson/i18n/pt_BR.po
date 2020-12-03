@@ -1,0 +1,28 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* crm_secondary_salesperson
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-03 13:59+0000\n"
+"PO-Revision-Date: 2020-12-03 11:00-0300\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 2.4.1\n"
+"Last-Translator: Marcel Savegnago <marcel.savegnago@gmail.com>\n"
+"Language: pt_BR\n"
+
+#. module: crm_secondary_salesperson
+#: model:ir.model,name:crm_secondary_salesperson.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Prospecto/Oportunidade"
+
+#. module: crm_secondary_salesperson
+#: model:ir.model.fields,field_description:crm_secondary_salesperson.field_crm_lead__secondary_user_id
+msgid "Secondary Salesperson"
+msgstr "Vendedor Secundário"
