@@ -152,7 +152,7 @@ class MailchimpList(models.Model):
             'status': 'subscribed',
             'status_if_new': 'subscribed',
             'merge_fields': {
-                merge_field.tag: tools.safe_eval.safe_eval(
+                merge_field.tag: tools.safe_eval(
                     merge_field.code, {'partner': partner}, mode='eval'
                 )
                 for merge_field in self.merge_field_ids
