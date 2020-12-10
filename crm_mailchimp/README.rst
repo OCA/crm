@@ -23,7 +23,7 @@ Mailchimp integration
     :target: https://runbot.odoo-community.org/runbot/111/10.0
     :alt: Try me on Runbot
 
-|badge1| |badge2| |badge3| |badge4| |badge5| 
+|badge1| |badge2| |badge3| |badge4| |badge5|
 
 This module allows to push Odoo partner data to a mailchimp audience.
 
@@ -81,6 +81,8 @@ Contributors
 ~~~~~~~~~~~~
 
 * Holger Brunn <hbrunn@therp.nl>
+* `Acsone <https://https://www.acsone.eu/>`__:
+  * Régis Pirard <regis.pirard@acsone.eu>
 
 Other credits
 ~~~~~~~~~~~~~

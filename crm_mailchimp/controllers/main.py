@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # Copyright 2019 Therp BV <https://therp.nl>
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 from werkzeug.exceptions import NotFound
@@ -17,7 +16,7 @@ class Mailchimp(http.Controller):
         # this to a dict containing all values
         # if we encounter this kind of thing more often make it a decorator
         args = {}
-        for string_path, value in kwargs.items():
+        for string_path, value in list(kwargs.items()):
             path = [
                 component.rstrip(']') for component in string_path.split('[')
             ]

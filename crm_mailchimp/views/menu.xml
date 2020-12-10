@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
+    <!-- Actions -->
     <act_window
         id="action_mailchimp_settings"
         res_model="mailchimp.settings"
@@ -12,7 +13,19 @@
         res_model="mailchimp.list"
         name="Audiences"
     />
-    <menuitem id="menu_root" name="Mailchimp" parent="base.menu_administration" />
-    <menuitem id="menu_list" action="action_mailchimp_list" parent="menu_root" />
-    <menuitem id="menu_settings" action="action_mailchimp_settings" parent="menu_root" />
+    <!-- Menus -->
+    <menuitem
+        id="menu_mailchimp_root"
+        name="Mailchimp"
+        parent="base.menu_administration"
+        sequence="60"/>
+    <menuitem
+        id="menu_list"
+        action="action_mailchimp_list"
+        parent="menu_mailchimp_root" />
+    <menuitem id="menu_settings"
+        action="action_mailchimp_settings"
+        parent="menu_mailchimp_root" />
 </odoo>
+
+

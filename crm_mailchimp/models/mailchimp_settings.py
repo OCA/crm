@@ -1,8 +1,7 @@
-# -*- coding: utf-8 -*-
 # Copyright 2019 Therp BV <https://therp.nl>
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 import hashlib
-import urlparse
+import urllib.parse
 from odoo import api, fields, models
 
 
@@ -18,11 +17,11 @@ class MailchimpSettings(models.TransientModel):
     @api.multi
     @api.depends('username')
     def _compute_webhook_url(self):
-        base_url = urlparse.urlparse(
+        base_url = urllib.parse.urlparse(
             self.env['ir.config_parameter'].get_param('web.base.url'),
         )
         for this in self:
-            this.webhook_url = urlparse.urlunparse(
+            this.webhook_url = urllib.parse.urlunparse(
                 base_url[:2] + ('/mailchimp/%s' % self._get_webhook_key(),) +
                 base_url[3:],
             )
@@ -56,7 +55,7 @@ class MailchimpSettings(models.TransientModel):
 
     @api.model
     def _get_webhook_key(self):
-        return hashlib.sha1(
+        return hashlib.sha1(str(
             self.env['ir.config_parameter'].get_param('database.secret') +
             self.env['ir.config_parameter'].get_param('web.base.url')
-        ).hexdigest()
+        ).encode('utf-8')).hexdigest()

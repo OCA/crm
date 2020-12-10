@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # Copyright 2019 Therp BV <https://therp.nl>
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 import hashlib
@@ -47,7 +46,7 @@ class ResPartner(models.Model):
             }
         result = super(ResPartner, self).write(vals)
         if 'mailchimp_list_ids' in vals:
-            for this, lists in lists_per_partner.items():
+            for this, lists in list(lists_per_partner.items()):
                 vals = {
                     'mailchimp_deleted_list_ids': [
                         (4, deleted_list.id)
@@ -66,7 +65,7 @@ class ResPartner(models.Model):
                     continue
                 this.write(vals)
         if 'email' in vals:
-            for this, email in emails_per_partner.items():
+            for this, email in list(emails_per_partner.items()):
                 this.write({
                     # as this field is reset when syncing, keep the first
                     # changed addres since last sync, because this is what
