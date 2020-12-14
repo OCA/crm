@@ -15,7 +15,11 @@ TODO: add repo description.
 
 [//]: # (addons)
 
-This part will be replaced when running the oca-gen-addons-table script from OCA/maintainer-tools.
+Available addons
+----------------
+addon | version | summary
+--- | --- | ---
+[crm_lead_code](crm_lead_code/) | 14.0.1.0.0 | Sequential Code for Leads / Opportunities
 
 [//]: # (end addons)
 
