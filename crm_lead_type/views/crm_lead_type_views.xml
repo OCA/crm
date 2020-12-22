@@ -1,0 +1,47 @@
+<odoo>
+    <record id="view_form_crm_lead_type" model="ir.ui.view">
+        <field name="name">view.form.crm.lead.type</field>
+        <field name="model">crm.lead.type</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" required="1" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="view_tree_crm_lead_type" model="ir.ui.view">
+        <field name="name">view.tree.crm.lead.type</field>
+        <field name="model">crm.lead.type</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+    <record id="view_search_crm_lead_type" model="ir.ui.view">
+        <field name="name">view.search.crm.lead.type</field>
+        <field name="model">crm.lead.type</field>
+        <field name="arch" type="xml">
+            <search string="Search Lead Type">
+                <field filter_domain="[('name', 'ilike', self)]" name="name" />
+            </search>
+        </field>
+    </record>
+    <record id="action_crm_lead_type" model="ir.actions.act_window">
+        <field name="name">Lead Types</field>
+        <field name="res_model">crm.lead.type</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="view_search_crm_lead_type" />
+    </record>
+    <menuitem
+        action="crm_lead_type.action_crm_lead_type"
+        id="menu_crm_lead_type"
+        name="Lead Types"
+        parent="crm.crm_menu_config"
+    />
+</odoo>

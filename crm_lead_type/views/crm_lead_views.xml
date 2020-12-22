@@ -1,0 +1,27 @@
+<odoo>
+    <record id="view_crm_lead_form_inherit" model="ir.ui.view">
+        <field name="name">view.crm.lead.form.inherit</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='lead_priority']" position="inside">
+                <field name="lead_type_id" />
+            </xpath>
+        </field>
+    </record>
+    <record id="view_crm_lead_search_inherit" model="ir.ui.view">
+        <field name="name">view.crm.lead.search.inherit</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.view_crm_case_leads_filter" />
+        <field name="arch" type="xml">
+            <filter name="source" position="after">
+                <filter
+                    string="Type"
+                    name="lead_type"
+                    domain="[]"
+                    context="{'group_by':'lead_type_id'}"
+                />
+            </filter>
+        </field>
+    </record>
+</odoo>
