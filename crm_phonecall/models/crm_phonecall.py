@@ -13,7 +13,7 @@ class CrmPhonecall(models.Model):
     _name = "crm.phonecall"
     _description = "Phonecall"
     _order = "id desc"
-    _inherit = ["mail.thread", "utm.mixin"]
+    _inherit = ["mail.thread", "utm.mixin", "mail.activity.mixin"]
 
     date_action_last = fields.Datetime(string="Last Action", readonly=True)
     date_action_next = fields.Datetime(string="Next Action", readonly=True)
