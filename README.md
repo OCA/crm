@@ -21,7 +21,7 @@ addon | version | summary
 [crm_lead_vat](crm_lead_vat/) | 13.0.1.0.0 | Add VAT field to leads
 [crm_location](crm_location/) | 13.0.1.0.0 | CRM location
 [crm_meeting_commercial_partner](crm_meeting_commercial_partner/) | 13.0.1.0.1 | CRM Meeting Commercial Partner
-[crm_phonecall](crm_phonecall/) | 13.0.1.2.2 | CRM Phone Calls
+[crm_phonecall](crm_phonecall/) | 13.0.1.3.0 | CRM Phone Calls
 [crm_phonecall_planner](crm_phonecall_planner/) | 13.0.1.0.0 | Schedule phone calls according to some criteria
 [crm_phonecall_summary_predefined](crm_phonecall_summary_predefined/) | 13.0.1.0.0 | Allows to choose from a defined summary list
 [crm_stage_probability](crm_stage_probability/) | 13.0.1.0.0 | Define fixed probability on the stages
