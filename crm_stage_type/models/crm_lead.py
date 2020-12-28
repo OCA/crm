@@ -49,7 +49,7 @@ class Lead(models.Model):
             )
             if opportunities_head.stage_id not in team_stage_ids:
                 opportunities_head.write(
-                    {"stage_id": team_stage_ids[0] if team_stage_ids else False}
+                    {"stage_id": team_stage_ids[0].id if team_stage_ids else False}
                 )
         return opportunities_head
 
