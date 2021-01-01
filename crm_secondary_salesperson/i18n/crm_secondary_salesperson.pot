@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-03 13:59+0000\n"
-"PO-Revision-Date: 2020-12-03 13:59+0000\n"
+"POT-Creation-Date: 2021-01-01 19:32+0000\n"
+"PO-Revision-Date: 2021-01-01 19:32+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -23,5 +23,10 @@ msgstr ""
 #. module: crm_secondary_salesperson
 #: model:ir.model.fields,field_description:crm_secondary_salesperson.field_crm_lead__secondary_user_id
 msgid "Secondary Salesperson"
+msgstr ""
+
+#. module: crm_secondary_salesperson
+#: sql_constraint:crm.lead:0
+msgid "The secondary salesperson must be different from the primary salesperson!"
 msgstr ""
 
