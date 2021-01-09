@@ -17,7 +17,7 @@ Firstname and Lastname in Leads
     :target: https://github.com/OCA/crm/tree/14.0/crm_lead_firstname
     :alt: OCA/crm
 .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
-    :target: https://translation.odoo-community.org/projects/crm-13-0/crm-13-0-crm_lead_firstname
+    :target: https://translation.odoo-community.org/projects/crm-14-0/crm-14-0-crm_lead_firstname
     :alt: Translate me on Weblate
 .. |badge5| image:: https://img.shields.io/badge/runbot-Try%20me-875A7B.png
     :target: https://runbot.odoo-community.org/runbot/111/14.0
@@ -84,8 +84,6 @@ Contributors
 * Jairo Llopis
 * Raf Ven <raf.ven@dynapps.be>
 * Nikos Tsirintanis <ntsirintanis@therp.nl>
-* Rida Yahla <mi_reda2012@live.fr>
-
 
 Maintainers
 ~~~~~~~~~~~
