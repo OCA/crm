@@ -9,6 +9,7 @@ setuptools.setup(
     version=version,
     install_requires=[
         'odoo14-addon-crm_lead_code',
+        'odoo14-addon-crm_lead_firstname',
     ],
     classifiers=[
         'Programming Language :: Python',
