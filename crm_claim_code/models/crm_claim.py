@@ -10,20 +10,15 @@ class CrmClaim(models.Model):
     _inherit = "crm.claim"
 
     code = fields.Char(
-        string='Claim Number',
-        required=True,
-        default="/",
-        readonly=True,
-        copy=False,
+        string="Claim Number", required=True, default="/", readonly=True, copy=False,
     )
 
     _sql_constraints = [
-        ('crm_claim_unique_code', 'UNIQUE (code)',
-         'The code must be unique!'),
+        ("crm_claim_unique_code", "UNIQUE (code)", "The code must be unique!"),
     ]
 
     @api.model
     def create(self, values):
-        if values.get('code', '/') == '/':
-            values['code'] = self.env['ir.sequence'].next_by_code('crm.claim')
+        if values.get("code", "/") == "/":
+            values["code"] = self.env["ir.sequence"].next_by_code("crm.claim")
         return super(CrmClaim, self).create(values)

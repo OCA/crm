@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-
     <record model="ir.ui.view" id="crm_claim_add_seq_form_view_inh">
         <field name="name">crm.claim.add.seq.form.view.inh</field>
         <field name="model">crm.claim</field>
@@ -11,7 +10,6 @@
             </field>
         </field>
     </record>
-
     <record model="ir.ui.view" id="crm_claim_add_seq_tree_view_inh">
         <field name="name">crm.claim.add.seq.tree.view.inh</field>
         <field name="model">crm.claim</field>
@@ -22,16 +20,16 @@
             </field>
         </field>
     </record>
-
     <record model="ir.ui.view" id="view_crm_case_claims_filter_inh_claimseq">
         <field name="name">view.crm.case.claims.filter.inh.claimseq</field>
         <field name="model">crm.claim</field>
         <field name="inherit_id" ref="crm_claim.view_crm_case_claims_filter" />
         <field name="arch" type="xml">
             <field name="name" position="attributes">
-                <attribute name="filter_domain">['|', ('name', 'ilike', self), ('code', 'ilike', self)]</attribute>
+                <attribute
+                    name="filter_domain"
+                >['|', ('name', 'ilike', self), ('code', 'ilike', self)]</attribute>
             </field>
         </field>
     </record>
-
 </odoo>

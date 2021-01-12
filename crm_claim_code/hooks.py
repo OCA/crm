@@ -1,20 +1,19 @@
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
-from odoo.api import Environment
 from odoo import SUPERUSER_ID
-
+from odoo.api import Environment
 
 new_field_code_added = False
 
 
 def create_code_equal_to_id(cr):
-    cr.execute("SELECT column_name FROM information_schema.columns "
-               "WHERE table_name = 'crm_claim' AND column_name = 'code'")
+    cr.execute(
+        "SELECT column_name FROM information_schema.columns "
+        "WHERE table_name = 'crm_claim' AND column_name = 'code'"
+    )
     if not cr.fetchone():
-        cr.execute('ALTER TABLE crm_claim '
-                   'ADD COLUMN code character varying;')
-        cr.execute('UPDATE crm_claim '
-                   'SET code = id;')
+        cr.execute("ALTER TABLE crm_claim " "ADD COLUMN code character varying;")
+        cr.execute("UPDATE crm_claim " "SET code = id;")
         global new_field_code_added
         new_field_code_added = True
 
@@ -26,8 +25,8 @@ def assign_old_sequences(cr, registry):
     with Environment.manage():
         env = Environment(cr, SUPERUSER_ID, {})
 
-        sequence_model = env['ir.sequence']
+        sequence_model = env["ir.sequence"]
 
-        claims = env['crm.claim'].search([], order="id")
+        claims = env["crm.claim"].search([], order="id")
         for claim in claims:
-            claim.code = sequence_model.next_by_code('crm.claim')
+            claim.code = sequence_model.next_by_code("crm.claim")
