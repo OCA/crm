@@ -1,4 +1,4 @@
-# License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
+# License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl).
 
 from odoo import SUPERUSER_ID
 from odoo.api import Environment
@@ -12,8 +12,8 @@ def create_code_equal_to_id(cr):
         "WHERE table_name = 'crm_claim' AND column_name = 'code'"
     )
     if not cr.fetchone():
-        cr.execute("ALTER TABLE crm_claim " "ADD COLUMN code character varying;")
-        cr.execute("UPDATE crm_claim " "SET code = id;")
+        cr.execute("ALTER TABLE crm_claim ADD COLUMN code character varying;")
+        cr.execute("UPDATE crm_claim SET code = id;")
         global new_field_code_added
         new_field_code_added = True
 
