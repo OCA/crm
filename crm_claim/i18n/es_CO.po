@@ -37,7 +37,6 @@ msgid "# of Claims"
 msgstr "# de Reclamaciones"
 
 #. module: crm_claim
-#: code:addons/crm_claim/models/crm_claim.py:198
 #: code:addons/crm_claim/models/crm_claim.py:208
 #, python-format
 msgid "%s (copy)"
@@ -513,7 +512,6 @@ msgid "Next Activity Type"
 msgstr "Tipo de Acción"
 
 #. module: crm_claim
-#: code:addons/crm_claim/models/crm_claim.py:215
 #: code:addons/crm_claim/models/crm_claim.py:225
 #, python-format
 msgid "No Subject"
