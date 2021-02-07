@@ -1,3 +1,6 @@
+# Copyright 2010-2020 Odoo S. A.
+# Copyright 2021 Tecnativa - Pedro M. Baeza
+# License LGPL-3 - See https://www.gnu.org/licenses/lgpl-3.0.html
 from odoo import api, fields, models
 
 
@@ -10,7 +13,7 @@ class CrmLeadConvert2Task(models.TransientModel):
 
     @api.model
     def default_get(self, fields):
-        result = super(CrmLeadConvert2Task, self).default_get(fields)
+        result = super().default_get(fields)
         lead_id = self.env.context.get("active_id")
         if lead_id:
             result["lead_id"] = lead_id
@@ -19,7 +22,6 @@ class CrmLeadConvert2Task(models.TransientModel):
     lead_id = fields.Many2one("crm.lead", string="Lead", domain=[("type", "=", "lead")])
     project_id = fields.Many2one("project.project", string="Project")
 
-    @api.multi
     def action_lead_to_project_task(self):
         self.ensure_one()
         # get the lead to transform
@@ -44,8 +46,8 @@ class CrmLeadConvert2Task(models.TransientModel):
             [("res_model", "=", "crm.lead"), ("res_id", "=", lead.id)]
         )
         attachments.write({"res_model": "project.task", "res_id": task.id})
-        # archive the lead
-        lead.write({"active": False})
+        # remove the lead
+        lead.unlink()
         # return the action to go to the form view of the new Task
         view = self.env.ref("project.view_task_form2")
         return {
