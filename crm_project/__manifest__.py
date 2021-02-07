@@ -1,21 +1,16 @@
-# Part of Odoo. See LICENSE file for full copyright and licensing details.
+# Copyright 2010-2020 Odoo S. A.
+# Copyright 2021 Tecnativa - Pedro M. Baeza
+# License LGPL-3 - See https://www.gnu.org/licenses/lgpl-3.0.html
 {
-    "name": "Lead to Tasks",
-    "summary": "Create Tasks from Leads",
+    "name": "Lead to Task",
+    "summary": "Create Tasks from Leads/Opportunities",
     "sequence": "19",
     "category": "Project",
     "complexity": "easy",
-    "description": """
-Lead to Tasks
-=============
-
-Link module to map leads to tasks
-        """,
-    "data": [
-        "security/ir.model.access.csv",
-        "wizard/crm_lead_convert2task_views.xml",
-        "views/crm_lead_views.xml",
-    ],
+    "data": ["wizard/crm_lead_convert2task_views.xml", "views/crm_lead_views.xml"],
+    "author": "Odoo S.A., Odoo Community Association (OCA), Tecnativa",
     "depends": ["crm", "project"],
-    "version": "12.0.1.0.0",
+    "version": "13.0.1.0.0",
+    "license": "LGPL-3",
+    "installable": True,
 }
