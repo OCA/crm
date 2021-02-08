@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-06-01 02:38+0000\n"
-"PO-Revision-Date: 2020-12-14 13:19+0000\n"
+"PO-Revision-Date: 2021-02-08 18:44+0000\n"
 "Last-Translator: Yann Papouin <y.papouin@dec-industrie.com>\n"
 "Language-Team: French (https://www.transifex.com/oca/teams/23907/fr/)\n"
 "Language: fr\n"
@@ -382,7 +382,7 @@ msgstr "Si coché, certains messages ont une erreur de livraison."
 #. module: crm_phonecall
 #: selection:crm.phonecall,direction:0
 msgid "In"
-msgstr "Dans"
+msgstr "Entrant"
 
 #. module: crm_phonecall
 #: model_terms:ir.actions.act_window,help:crm_phonecall.crm_case_categ_phone_incoming0
@@ -606,7 +606,7 @@ msgstr "Date d'ouverture"
 #. module: crm_phonecall
 #: selection:crm.phonecall,direction:0
 msgid "Out"
-msgstr "Out"
+msgstr "Sortant"
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
