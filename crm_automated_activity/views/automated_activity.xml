@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2021 Eder Brito
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+
+    <record model="ir.ui.view" id="automated_activity_form">
+        <field name="name">automated.activity.form</field>
+        <field name="model">automated.activity</field>
+        <field name="arch" type="xml">
+            <form string="Automated Activity">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="crm_stage_id" invisible="1"/>
+                            <field name="apply_in"/>
+                            <field name="activity_type_id"/>
+                        </group>
+                        <group>
+                            <field name="days_deadline"/>
+                            <field name="summary"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="note"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="automated_activity_tree">
+        <field name="name">automated.activity.tree</field>
+        <field name="model">automated.activity</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="crm_stage_id" invisible="1"/>
+                <field name="apply_in"/>
+                <field name="activity_type_id"/>
+                <field name="days_deadline"/>
+                <field name="summary"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>

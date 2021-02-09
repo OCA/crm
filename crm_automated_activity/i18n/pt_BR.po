@@ -1,0 +1,151 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* crm_automated_activity
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-02-09 20:27+0000\n"
+"PO-Revision-Date: 2021-02-09 20:27+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: crm_automated_activity
+#: model:ir.model.fields,field_description:crm_automated_activity.field_automated_activity__activity_type_id
+msgid "Activity Type"
+msgstr "Tipo de Atividade"
+
+#. module: crm_automated_activity
+#: model:ir.model.fields,field_description:crm_automated_activity.field_automated_activity__apply_in
+msgid "Apply In"
+msgstr "Aplicar Em"
+
+#. module: crm_automated_activity
+#: model:ir.model.fields,field_description:crm_automated_activity.field_crm_stage__automated_activity_ids
+msgid "Automated Activities"
+msgstr "Atividades Automáticas"
+
+#. module: crm_automated_activity
+#: model_terms:ir.ui.view,arch_db:crm_automated_activity.automated_activity_form
+msgid "Automated Activity"
+msgstr "Atividade Automática"
+
+#. module: crm_automated_activity
+#: model:ir.model,name:crm_automated_activity.model_automated_activity
+msgid "Automated Activity for Stages"
+msgstr "Atividade Automatizada por Estágios"
+
+#. module: crm_automated_activity
+#: model:ir.model,name:crm_automated_activity.model_crm_stage
+msgid "CRM Stages"
+msgstr "Estágios CRM"
+
+#. module: crm_automated_activity
+#: model:ir.model.fields.selection,name:crm_automated_activity.selection__automated_activity__apply_in__write
+msgid "Changing an Opportunity Stage"
+msgstr "Alterando um Estágio da Oportunidade"
+
+#. module: crm_automated_activity
+#: model:ir.model.fields,field_description:crm_automated_activity.field_crm_stage__create_automated_activity
+msgid "Create Automatically Activities"
+msgstr "Crie Atividades Automaticamente"
+
+#. module: crm_automated_activity
+#: model:ir.model.fields.selection,name:crm_automated_activity.selection__automated_activity__apply_in__create_write
+msgid "Create Opportunity and Change Stage"
+msgstr "Criar Oportunidade e Alterar o Estágio"
+
+#. module: crm_automated_activity
+#: model:ir.model.fields,field_description:crm_automated_activity.field_automated_activity__create_uid
+msgid "Created by"
+msgstr "Criado por"
+
+#. module: crm_automated_activity
+#: model:ir.model.fields,field_description:crm_automated_activity.field_automated_activity__create_date
+msgid "Created on"
+msgstr "Criado em"
+
+#. module: crm_automated_activity
+#: model:ir.model.fields.selection,name:crm_automated_activity.selection__automated_activity__apply_in__create
+msgid "Creating an Opportunity"
+msgstr "Criando uma Oportunidade"
+
+#. module: crm_automated_activity
+#: model:ir.model.fields,field_description:crm_automated_activity.field_automated_activity__days_deadline
+msgid "Days to Deadline"
+msgstr "Prazo em Dias"
+
+#. module: crm_automated_activity
+#: model:ir.model.fields,field_description:crm_automated_activity.field_automated_activity__display_name
+msgid "Display Name"
+msgstr "Nome de Exibição"
+
+#. module: crm_automated_activity
+#: model:ir.model.fields,field_description:crm_automated_activity.field_automated_activity__id
+msgid "ID"
+msgstr "ID"
+
+#. module: crm_automated_activity
+#: model:ir.model.fields,field_description:crm_automated_activity.field_automated_activity____last_update
+msgid "Last Modified on"
+msgstr "Última Modificação em"
+
+#. module: crm_automated_activity
+#: model:ir.model.fields,field_description:crm_automated_activity.field_automated_activity__write_uid
+msgid "Last Updated by"
+msgstr "Última Atualização por"
+
+#. module: crm_automated_activity
+#: model:ir.model.fields,field_description:crm_automated_activity.field_automated_activity__write_date
+msgid "Last Updated on"
+msgstr "Última Atualização em"
+
+#. module: crm_automated_activity
+#: model:ir.model,name:crm_automated_activity.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Lead/Oportunidade"
+
+#. module: crm_automated_activity
+#: model:ir.model.fields,field_description:crm_automated_activity.field_automated_activity__note
+msgid "Note"
+msgstr "Nota"
+
+#. module: crm_automated_activity
+#: model:ir.model.fields,help:crm_automated_activity.field_automated_activity__note
+msgid "Note for Activity"
+msgstr "Nota para Atividade"
+
+#. module: crm_automated_activity
+#: model:ir.model.fields,help:crm_automated_activity.field_automated_activity__apply_in
+msgid "Select in which case this rule will be applied"
+msgstr "Selecione em qual caso esta regra será aplicada"
+
+#. module: crm_automated_activity
+#: model:ir.model.fields,field_description:crm_automated_activity.field_automated_activity__crm_stage_id
+msgid "Stage"
+msgstr "Estágio"
+
+#. module: crm_automated_activity
+#: model:ir.model.fields,field_description:crm_automated_activity.field_automated_activity__summary
+msgid "Summary"
+msgstr "Resumo"
+
+#. module: crm_automated_activity
+#: model:ir.model.fields,help:crm_automated_activity.field_automated_activity__summary
+msgid "Summary for Activity"
+msgstr "Resumo para Atividade"
+
+#. module: crm_automated_activity
+#: model:ir.model.fields,help:crm_automated_activity.field_automated_activity__days_deadline
+msgid "The number set here will sum with the current date of the action"
+msgstr "O número definido aqui será somado à data atual da ação"
+
+#. module: crm_automated_activity
+#: model:ir.model.fields,help:crm_automated_activity.field_automated_activity__activity_type_id
+msgid "Type for created activities"
+msgstr "Tipo para atividades criadas"
