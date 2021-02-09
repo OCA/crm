@@ -21,6 +21,7 @@ setuptools.setup(
         'odoo13-addon-crm_phonecall',
         'odoo13-addon-crm_phonecall_planner',
         'odoo13-addon-crm_phonecall_summary_predefined',
+        'odoo13-addon-crm_project',
         'odoo13-addon-crm_stage_probability',
         'odoo13-addon-crm_stage_type',
     ],
