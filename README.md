@@ -25,6 +25,7 @@ addon | version | summary
 [crm_phonecall](crm_phonecall/) | 13.0.1.3.0 | CRM Phone Calls
 [crm_phonecall_planner](crm_phonecall_planner/) | 13.0.1.0.0 | Schedule phone calls according to some criteria
 [crm_phonecall_summary_predefined](crm_phonecall_summary_predefined/) | 13.0.1.0.0 | Allows to choose from a defined summary list
+[crm_project](crm_project/) | 13.0.1.0.0 | Create Tasks from Leads/Opportunities
 [crm_stage_probability](crm_stage_probability/) | 13.0.1.0.0 | Define fixed probability on the stages
 [crm_stage_type](crm_stage_type/) | 13.0.1.0.0 | Add type in the lead and opportunity stages
 
