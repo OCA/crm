@@ -13,29 +13,39 @@ class TestAutomatedActivity(common.SavepointCase):
 
         cls.crm_stage = cls.env["crm.stage"].create({"name": "Test Stage"})
 
-        cls.automated_activity = cls.env["automated.activity"].create(
+    def test_new_automated_activity(self):
+        self.assertTrue(self.activity_type)
+        self.assertTrue(self.crm_stage)
+
+        automated_activity = self.env["automated.activity"]
+
+        automated_activity.create(
             {
-                "crm_stage_id": cls.crm_stage.id,
+                "crm_stage_id": self.crm_stage.id,
                 "apply_in": "create",
-                "activity_type_id": cls.activity_type.id,
+                "activity_type_id": self.activity_type.id,
                 "summary": "Test Automated Activity",
                 "days_deadline": "3",
                 "note": "Note",
             }
         )
 
-        cls.crm_lead = cls.env["crm.lead"].create(
-            {"name": "Test Lead", "type": "opportunity", "user_id": cls.env.user.id}
+        self.assertTrue(automated_activity)
+
+        crm_lead = self.env["crm.lead"].create(
+            {"name": "Test Lead", "type": "opportunity", "user_id": self.env.user.id}
         )
 
-        cls.mail_activity = cls.env["mail.activity"].search(
+        self.assertTrue(crm_lead)
+
+        mail_activity = self.env["mail.activity"].search(
             [
-                ("res_id", "=", cls.crm_lead.id),
+                ("res_id", "=", crm_lead.id),
                 ("res_model", "=", "crm.lead"),
-                ("res_name", "=", cls.crm_lead.name),
+                ("res_name", "=", crm_lead.name),
             ]
         )
 
-    def test_new_automated_activity(self):
+        self.assertTrue(mail_activity)
 
-        self.assertIn(self.mail_activity.id, self.crm_lead.activity_ids.ids)
+        self.assertIn(crm_lead.activity_ids.id, mail_activity.ids)
