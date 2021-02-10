@@ -3,35 +3,40 @@
 
 from odoo.tests import common
 
-class TestAutomatedActivity(common.SavepointCase):
 
+class TestAutomatedActivity(common.SavepointCase):
     @classmethod
     def setUpClass(cls):
         super(TestAutomatedActivity, cls).setUpClass()
 
         cls.activity_type = cls.env.ref("mail.mail_activity_data_call")
 
-        cls.crm_stage = cls.env["crm.stage"].create({
-            'name':'Test Stage',
-            'create_automated_activity': True,
-            'automated_activity_ids': [(0, 0, {
-                'apply_in': 'create',
-                'activity_type_id': cls.activity_type.id,
-                'summary': 'Test Automated Activity',
-                'days_deadline': 3
-            })]
-        })
+        cls.crm_stage = cls.env["crm.stage"].create(
+            {
+                "name": "Test Stage",
+                "create_automated_activity": True,
+                "automated_activity_ids": [
+                    (
+                        0,
+                        0,
+                        {
+                            "apply_in": "create",
+                            "activity_type_id": cls.activity_type.id,
+                            "summary": "Test Automated Activity",
+                            "days_deadline": 3,
+                        },
+                    )
+                ],
+            }
+        )
 
-        cls.crm_lead = cls.env["crm.lead"].create({
-            'name': 'Test Lead',
-            'type': 'opportunity',
-            'user_id': cls.env.user.id
-        })
+        cls.crm_lead = cls.env["crm.lead"].create(
+            {"name": "Test Lead", "type": "opportunity", "user_id": cls.env.user.id}
+        )
 
-        cls.mail_activity = cls.env["mail.activity"].search([
-            ('res_id', '=', cls.crm_lead.id),
-            ('res_model', '=', 'crm.lead')
-        ])
+        cls.mail_activity = cls.env["mail.activity"].search(
+            [("res_id", "=", cls.crm_lead.id), ("res_model", "=", "crm.lead")]
+        )
 
     def test_new_automated_activity(self):
 
