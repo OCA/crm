@@ -26,7 +26,7 @@ class TestAutomatedActivity(common.SavepointCase):
 
     def test_new_automated_activity(self):
         crm_lead = self.env["crm.lead"].create(
-            {"name": "Test Lead", "type": "Opportunity", "user": self.env.user.id}
+            {"name": "Test Lead", "type": "Opportunity", "user_id": self.env.user.id}
         )
 
         mail_activity = self.env["mail.activity"].search(
