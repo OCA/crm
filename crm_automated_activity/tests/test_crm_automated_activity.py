@@ -11,7 +11,9 @@ class TestAutomatedActivity(common.SavepointCase):
 
         cls.activity_type = cls.env.ref("mail.mail_activity_data_call")
 
-        cls.crm_stage = cls.env["crm.stage"].create({"name": "Test Stage"})
+        cls.crm_stage = cls.env["crm.stage"].create(
+            {"name": "Test Stage", "create_automated_activity": True}
+        )
 
         cls.automated_activity = cls.env["automated.activity"].create(
             {
