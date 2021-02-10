@@ -8,7 +8,7 @@
     "version": "13.0.1.0.0",
     "license": "AGPL-3",
     "author": "Eder Brito,Odoo Community Association (OCA)",
-    "website": "pingotecnologia.com.br",
+    "website": "https://github/oca/crm",
     "depends": ["crm"],
     "data": [
         "security/automated_activity.xml",
