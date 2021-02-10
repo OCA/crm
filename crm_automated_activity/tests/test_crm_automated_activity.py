@@ -24,11 +24,10 @@ class TestAutomatedActivity(common.SavepointCase):
                 "crm_stage_id": self.crm_stage.id,
                 "apply_in": "create",
                 "activity_type_id": self.activity_type.id,
-                "summary": "Test Automated Activity",
-                "days_deadline": "3",
-                "note": "Note",
             }
         )
+
+        automated_activity._onchange_activity_type()
 
         self.assertTrue(automated_activity)
 
