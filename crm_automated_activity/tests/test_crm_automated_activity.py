@@ -29,11 +29,12 @@ class TestAutomatedActivity(common.SavepointCase):
             {"name": "Test Lead", "type": "opportunity", "user_id": self.env.user.id}
         )
 
-        mail_activity = self.env["mail.activity"].search([
-            ('res_id','=', crm_lead.id),
-            ('res_model','=', 'crm.lead'),
-            ('res_name','=', crm_lead.name)
-        ])
+        mail_activity = self.env["mail.activity"].search(
+            [
+                ("res_id", "=", crm_lead.id),
+                ("res_model", "=", "crm.lead"),
+                ("res_name", "=", crm_lead.name),
+            ]
+        )
 
         self.assertIn(mail_activity, crm_lead.activity_ids)
-
