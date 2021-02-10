@@ -40,7 +40,7 @@ class TestAutomatedActivity(common.SavepointCase):
 
         self.assertTrue(self.crm_stage)
 
-        self.assertTrue(self.crm_stage.automated_activity)
+        self.assertTrue(self.crm_stage.automated_activity_ids)
 
         self.assertTrue(self.crm_lead)
 
