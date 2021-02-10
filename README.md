@@ -12,6 +12,7 @@ Available addons
 ----------------
 addon | version | summary
 --- | --- | ---
+[crm_automated_activity](crm_automated_activity/) | 13.0.1.0.1 | Automated Activities for CRM Stages
 [crm_claim](crm_claim/) | 13.0.1.0.1 | Track your customers/vendors claims and grievances.
 [crm_claim_code](crm_claim_code/) | 13.0.1.0.0 | Sequential Code for Claims
 [crm_claim_type](crm_claim_type/) | 13.0.1.0.0 | Claim types for CRM
