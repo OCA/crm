@@ -37,4 +37,4 @@ class TestAutomatedActivity(common.SavepointCase):
             ]
         )
 
-        self.assertIn(mail_activity.id, crm_lead.activity_ids)
+        self.assertIn(mail_activity.id, crm_lead.activity_ids.ids)
