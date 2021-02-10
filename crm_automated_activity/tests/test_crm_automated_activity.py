@@ -12,7 +12,22 @@ class TestAutomatedActivity(common.SavepointCase):
         cls.activity_type = cls.env.ref("mail.mail_activity_data_call")
 
         cls.crm_stage = cls.env["crm.stage"].create(
-            {"name": "Test Stage", "create_automated_activity": True}
+            {
+                "name": "Test Stage",
+                "create_automated_activity": True,
+                "automated_activity_ids": [
+                    (
+                        0,
+                        0,
+                        {
+                            "apply_in": "create",
+                            "activity_type_id": cls.activity_type.id,
+                            "summary": "Test Automated Activity",
+                            "days_deadline": 3,
+                        },
+                    )
+                ],
+            }
         )
 
         cls.crm_stage.automated_activity_ids(
