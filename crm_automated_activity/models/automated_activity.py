@@ -5,7 +5,7 @@ from odoo import api, fields, models
 
 
 class AutomatedActivity(models.Model):
-    _name = "automated.activity"
+    _name = "crm.automated.activity"
     _description = "Automated Activity for Stages"
 
     apply_in = fields.Selection(
