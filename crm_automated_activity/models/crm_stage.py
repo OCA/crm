@@ -11,7 +11,7 @@ class CrmStage(models.Model):
     create_automated_activity = fields.Boolean(string="Create Automatically Activities")
 
     automated_activity_ids = fields.One2many(
-        comodel_name="automated.activity",
+        comodel_name="crm.automated.activity",
         inverse_name="crm_stage_id",
         string="Automated Activities",
     )

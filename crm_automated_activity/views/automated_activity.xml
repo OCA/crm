@@ -2,9 +2,9 @@
 <!-- Copyright 2021 Eder Brito
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
 <odoo>
-    <record model="ir.ui.view" id="automated_activity_form">
-        <field name="name">automated.activity.form</field>
-        <field name="model">automated.activity</field>
+    <record model="ir.ui.view" id="crm_automated_activity_form">
+        <field name="name">crm.automated.activity.form</field>
+        <field name="model">crm.automated.activity</field>
         <field name="arch" type="xml">
             <form string="Automated Activity">
                 <sheet>
@@ -26,9 +26,9 @@
             </form>
         </field>
     </record>
-    <record model="ir.ui.view" id="automated_activity_tree">
-        <field name="name">automated.activity.tree</field>
-        <field name="model">automated.activity</field>
+    <record model="ir.ui.view" id="crm_automated_activity_tree">
+        <field name="name">crm.automated.activity.tree</field>
+        <field name="model">crm.automated.activity</field>
         <field name="arch" type="xml">
             <tree>
                 <field name="crm_stage_id" invisible="1" />

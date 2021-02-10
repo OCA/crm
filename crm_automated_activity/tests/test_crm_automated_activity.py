@@ -22,7 +22,7 @@ class TestAutomatedActivity(common.SavepointCase):
                 "apply_in": "create",
                 "activity_type_id": cls.activity_type.id,
                 "summary": "Test Automated Activity",
-                "days_deadline": "3",
+                "days_deadline": 3,
             },
         )
 
@@ -46,4 +46,4 @@ class TestAutomatedActivity(common.SavepointCase):
 
         self.assertTrue(self.mail_activity)
 
-        self.assertIn(self.crm_lead.activity_ids.ids, self.mail_activity.id)
+        self.assertIn(self.mail_activity.id, self.crm_lead.activity_ids.ids)

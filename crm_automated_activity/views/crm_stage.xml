@@ -2,8 +2,8 @@
 <!-- Copyright 2021 Eder Brito
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
 <odoo>
-    <record model="ir.ui.view" id="automated_activity_crm_stage_form">
-        <field name="name">automated.activity.crm.stage.form</field>
+    <record model="ir.ui.view" id="crm_automated_activity_crm_stage_form">
+        <field name="name">crm.automated.activity.crm.stage.form</field>
         <field name="model">crm.stage</field>
         <field name="inherit_id" ref="crm.crm_stage_form" />
         <field name="arch" type="xml">
@@ -18,20 +18,4 @@
             </xpath>
         </field>
     </record>
-    <!--    <record model="ir.ui.view" id="crm_form_view">-->
-    <!--        <field name="name">crm.form (in crm_stages_activity)</field>-->
-    <!--        <field name="model">crm.lead</field>-->
-    <!--        <field name="inherit_id" ref="crm.lead"/>-->
-    <!--        <field name="arch" type="xml">-->
-    <!--            &lt;!&ndash; TODO &ndash;&gt;-->
-    <!--        </field>-->
-    <!--    </record>-->
-    <!--    <record model="ir.ui.view" id="crm_tree_view">-->
-    <!--        <field name="name">crm.tree (in crm_stages_activity)</field>-->
-    <!--        <field name="model">crm</field>-->
-    <!--        <field name="inherit_id" ref="TODO othermodule.tree_view"/>-->
-    <!--        <field name="arch" type="xml">-->
-    <!--            &lt;!&ndash; TODO &ndash;&gt;-->
-    <!--        </field>-->
-    <!--    </record>-->
 </odoo>
