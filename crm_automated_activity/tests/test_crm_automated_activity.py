@@ -24,17 +24,18 @@ class TestAutomatedActivity(common.SavepointCase):
             }
         )
 
-    def test_new_automated_activity(self):
-        crm_lead = self.env["crm.lead"].create(
-            {"name": "Test Lead", "type": "opportunity", "user_id": self.env.user.id}
+        cls.crm_lead = cls.env["crm.lead"].create(
+            {"name": "Test Lead", "type": "opportunity", "user_id": cls.env.user.id}
         )
 
-        mail_activity = self.env["mail.activity"].search(
+        cls.mail_activity = cls.env["mail.activity"].search(
             [
-                ("res_id", "=", crm_lead.id),
+                ("res_id", "=", cls.crm_lead.id),
                 ("res_model", "=", "crm.lead"),
-                ("res_name", "=", crm_lead.name),
+                ("res_name", "=", cls.crm_lead.name),
             ]
         )
 
-        self.assertIn(mail_activity.id, crm_lead.activity_ids.ids)
+    def test_new_automated_activity(self):
+
+        self.assertIn(self.mail_activity.id, self.crm_lead.activity_ids.ids)
