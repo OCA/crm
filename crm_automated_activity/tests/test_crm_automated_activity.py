@@ -11,14 +11,6 @@ class TestAutomatedActivity(common.SavepointCase):
 
         cls.activity_type = cls.env.ref("mail.mail_activity_data_call")
 
-        cls.activity_type2 = cls.env["mail.activity.type"].create(
-            {"name": "Activity Type Week", "delay_count": 2, "delay_unit": "weeks"}
-        )
-
-        cls.activity_type3 = cls.env["mail.activity.type"].create(
-            {"name": "Activity Type Months", "delay_count": 1, "delay_unit": "months"}
-        )
-
         cls.crm_automated_actitivy = cls.env["crm.automated.activity"].create(
             {
                 "apply_in": "create_write",
@@ -28,12 +20,6 @@ class TestAutomatedActivity(common.SavepointCase):
             }
         )
 
-        cls.crm_automated_actitivy._onchange_activity_type()
-
-        cls.crm_automated_actitivy.activity_type_id = cls.activity_type2.id
-        cls.crm_automated_actitivy._onchange_activity_type()
-
-        cls.crm_automated_actitivy.activity_type_id = cls.activity_type3.id
         cls.crm_automated_actitivy._onchange_activity_type()
 
         cls.crm_stage = cls.env["crm.stage"].create(
