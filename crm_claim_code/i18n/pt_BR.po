@@ -1,0 +1,33 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* crm_claim_code
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-09-05 16:00+0000\n"
+"PO-Revision-Date: 2019-09-03 03:23+0000\n"
+"Last-Translator: Rodrigo Macedo <rmsolucoeseminformatic4@gmail.com>\n"
+"Language-Team: \n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.8\n"
+
+#. module: crm_claim_code
+#: model:ir.model,name:crm_claim_code.model_crm_claim
+msgid "Claim"
+msgstr "Reclamação"
+
+#. module: crm_claim_code
+#: model:ir.model.fields,field_description:crm_claim_code.field_crm_claim__code
+msgid "Claim Number"
+msgstr "Número de reclamação"
+
+#. module: crm_claim_code
+#: sql_constraint:crm.claim:0
+msgid "The code must be unique!"
+msgstr "O código deve ser único!"
