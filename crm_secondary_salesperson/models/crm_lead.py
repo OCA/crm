@@ -9,7 +9,7 @@ class CrmLead(models.Model):
     _inherit = "crm.lead"
 
     secondary_user_id = fields.Many2one(
-        "res.users", string="Secondary Salesperson", track_visibility="onchange"
+        comodel_name="res.users", string="Secondary Salesperson", tracking=True
     )
 
     _sql_constraints = [
