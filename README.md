@@ -28,6 +28,7 @@ addon | version | summary
 [crm_phonecall_planner](crm_phonecall_planner/) | 12.0.1.0.1 | Schedule phone calls according to some criteria
 [crm_phonecall_summary_predefined](crm_phonecall_summary_predefined/) | 12.0.1.0.0 | Allows to choose from a defined summary list
 [crm_sale_marketing](crm_sale_marketing/) | 12.0.1.0.0 | Marketing Details of Sales
+[crm_sale_secondary_salesperson](crm_sale_secondary_salesperson/) | 12.0.1.0.0 | Crm Sale Secondary Salesperson
 [crm_secondary_salesperson](crm_secondary_salesperson/) | 12.0.1.0.1 | CRM Secondary Salesperson
 [crm_stage_type](crm_stage_type/) | 12.0.1.1.1 | Add type in the lead and opportunity stages
 [crm_team_parent](crm_team_parent/) | 12.0.1.0.0 | Add a parent field on sales teams.
