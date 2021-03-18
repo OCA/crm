@@ -5,9 +5,9 @@ from odoo import api, models
 
 
 class SaleOrder(models.Model):
-    _inherit = 'sale.order'
+    _inherit = "sale.order"
 
-    @api.onchange('opportunity_id')
+    @api.onchange("opportunity_id")
     def _onchange_opportunity_id(self):
         if self.opportunity_id:
             self.secondary_user_id = self.opportunity_id.secondary_user_id

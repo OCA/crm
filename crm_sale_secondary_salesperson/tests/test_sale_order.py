@@ -11,12 +11,14 @@ class TestSaleOrder(common.SavepointCase):
         cls.user_admin = cls.env.ref("base.user_admin")
         cls.user_demo = cls.env.ref("base.user_demo")
         cls.partner = cls.env.ref("base.res_partner_12")
-        cls.lead = cls.env["crm.lead"].create({
-            "name": "Test lead",
-            "partner_id": cls.partner.id,
-            "user_id": cls.user_admin.id,
-            "secondary_user_id": cls.user_demo.id
-        })
+        cls.lead = cls.env["crm.lead"].create(
+            {
+                "name": "Test lead",
+                "partner_id": cls.partner.id,
+                "user_id": cls.user_admin.id,
+                "secondary_user_id": cls.user_demo.id,
+            }
+        )
 
     def test_sale_order_with_opportunity_id(self):
         order = Form(self.env["sale.order"])
