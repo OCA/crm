@@ -40,3 +40,15 @@ class CrmLead(models.Model):
                 )
 
         return self._convert_to_write(result)
+
+    def _prepare_contact_name_from_partner(self, partner):
+        result = super()._prepare_contact_name_from_partner(partner)
+        contact_name = False if partner.is_company else partner.firstname
+        contact_lastname = False if partner.is_company else partner.lastname
+        result.update(
+            {
+                "contact_name": contact_name or self.contact_name,
+                "contact_lastname": contact_lastname or self.contact_lastname,
+            }
+        )
+        return result
