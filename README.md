@@ -20,7 +20,7 @@ Available addons
 addon | version | summary
 --- | --- | ---
 [crm_lead_code](crm_lead_code/) | 14.0.1.0.0 | Sequential Code for Leads / Opportunities
-[crm_lead_firstname](crm_lead_firstname/) | 14.0.1.0.1 | Specify split names for contacts in leads
+[crm_lead_firstname](crm_lead_firstname/) | 14.0.1.0.2 | Specify split names for contacts in leads
 
 [//]: # (end addons)
 
