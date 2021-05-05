@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <record id="interest_demo0" model="mailchimp.interest">
         <field name="name">Interest 0</field>

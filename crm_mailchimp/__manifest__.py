@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # Copyright 2019 Therp BV <https://therp.nl>
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 {
@@ -8,9 +7,7 @@
     "license": "AGPL-3",
     "category": "Marketing",
     "summary": "Manage your mailchimp audiences with Odoo",
-    "depends": [
-        'mail',
-    ],
+    "depends": ["mail",],
     "demo": [
         "demo/mailchimp_list.xml",
         "demo/mailchimp_interest_category.xml",
@@ -28,9 +25,7 @@
         "views/mailchimp_settings.xml",
         "views/mailchimp_list.xml",
         "views/menu.xml",
-        'security/ir.model.access.csv',
+        "security/ir.model.access.csv",
     ],
-    "external_dependencies": {
-        'python': ['mailchimp3'],
-    },
+    "external_dependencies": {"python": ["mailchimp3"],},
 }

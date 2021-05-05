@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <act_window
         id="action_mailchimp_settings"
@@ -14,5 +14,9 @@
     />
     <menuitem id="menu_root" name="Mailchimp" parent="base.menu_administration" />
     <menuitem id="menu_list" action="action_mailchimp_list" parent="menu_root" />
-    <menuitem id="menu_settings" action="action_mailchimp_settings" parent="menu_root" />
+    <menuitem
+        id="menu_settings"
+        action="action_mailchimp_settings"
+        parent="menu_root"
+    />
 </odoo>

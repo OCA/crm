@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <record id="view_mailchimp_list_tree" model="ir.ui.view">
         <field name="model">mailchimp.list</field>
@@ -21,19 +21,36 @@
             <form create="false" delete="false">
                 <sheet>
                     <div class="oe_button_box" name="button_box">
-                        <button name="%(action_mailchimp_list_partners)d" type="action" class="oe_stat_button" icon="fa-users">
+                        <button
+                            name="%(action_mailchimp_list_partners)d"
+                            type="action"
+                            class="oe_stat_button"
+                            icon="fa-users"
+                        >
                             <div class="o_stat_info">Partners</div>
                         </button>
-                        <button name="action_update" type="object" class="oe_stat_button" icon="fa-repeat">
+                        <button
+                            name="action_update"
+                            type="object"
+                            class="oe_stat_button"
+                            icon="fa-repeat"
+                        >
                             <div class="o_stat_info">Update</div>
                         </button>
-                        <button name="action_push" type="object" class="oe_stat_button" icon="fa-share">
+                        <button
+                            name="action_push"
+                            type="object"
+                            class="oe_stat_button"
+                            icon="fa-share"
+                        >
                             <div class="o_stat_info">Push</div>
                         </button>
                     </div>
                     <div class="oe_title">
                         <label for="name" class="oe_edit_only" />
-                        <h1><field name="name" readonly="True" /></h1>
+                        <h1>
+                            <field name="name" readonly="True" />
+                        </h1>
                     </div>
                     <group>
                         <field name="active" />
