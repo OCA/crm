@@ -1,4 +1,4 @@
-# Copyright 2019 Therp BV <https://therp.nl>
+# Copyright 2019-2021 Therp BV <https://therp.nl>
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 import datetime
 import logging
@@ -48,11 +48,10 @@ class MailchimpList(models.Model):
             this = self.search(
                 [("mailchimp_id", "=", mailchimp_list["id"])]
             ) or self.create(
-                {"name": mailchimp_list["name"], "mailchimp_id": mailchimp_list["id"],}
+                {"name": mailchimp_list["name"], "mailchimp_id": mailchimp_list["id"]}
             )
             this._update_from_mailchimp()
 
-    @api.multi
     def _update_from_mailchimp(self):
         client = self._get_mailchimp_client()
         for this in self:
@@ -96,7 +95,6 @@ class MailchimpList(models.Model):
                 )
                 category._update_from_mailchimp()
 
-    @api.multi
     def _push_to_mailchimp(self, modified_after=None):
         date_domain = []
         if modified_after:
@@ -104,7 +102,7 @@ class MailchimpList(models.Model):
         for this in self:
             for partner in self.env["res.partner"].search(
                 date_domain
-                + [("mailchimp_list_ids", "in", this.ids), ("email", "!=", False),]
+                + [("mailchimp_list_ids", "in", this.ids), ("email", "!=", False)]
             ):
                 try:
                     this._push_partner_to_mailchimp(partner)
@@ -113,9 +111,7 @@ class MailchimpList(models.Model):
                         "Error pushing partner %d to mailchimp", partner,
                     )
                 # reset a possibly changed email address, see res.parter#write
-                partner.write(
-                    {"mailchimp_last_email": False,}
-                )
+                partner.write({"mailchimp_last_email": False})
 
             for partner in self.env["res.partner"].search(
                 date_domain
@@ -132,7 +128,6 @@ class MailchimpList(models.Model):
                     )
                 partner.write({"mailchimp_deleted_list_ids": [(3, this.id)]})
 
-    @api.multi
     def _remove_partner_from_mailchimp(self, partner):
         self.ensure_one()
         client = self._get_mailchimp_client()
@@ -140,7 +135,6 @@ class MailchimpList(models.Model):
             list_id=self.mailchimp_id, subscriber_hash=partner.mailchimp_id,
         )
 
-    @api.multi
     def _push_partner_to_mailchimp(self, partner):
         self.ensure_one()
         client = self._get_mailchimp_client()
@@ -150,7 +144,6 @@ class MailchimpList(models.Model):
             data=self._push_partner_to_mailchimp_data(partner),
         )
 
-    @api.multi
     def _push_partner_to_mailchimp_data(self, partner):
         self.ensure_one()
         data = {
@@ -171,11 +164,9 @@ class MailchimpList(models.Model):
         }
         return data
 
-    @api.multi
     def action_update(self):
         return self._update_from_mailchimp()
 
-    @api.multi
     def action_push(self):
         return self._push_to_mailchimp()
 

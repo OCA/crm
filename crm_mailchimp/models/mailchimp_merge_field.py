@@ -1,6 +1,6 @@
-# Copyright 2019 Therp BV <https://therp.nl>
+# Copyright 2019-2021 Therp BV <https://therp.nl>
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
-from odoo import api, fields, models
+from odoo import fields, models
 
 
 class MailchimpMergeField(models.Model):
@@ -13,7 +13,6 @@ class MailchimpMergeField(models.Model):
     mailchimp_id = fields.Char(required=True)
     code = fields.Char(default="'/'")
 
-    @api.multi
     def _update_from_mailchimp(self):
         client = self.env["mailchimp.list"]._get_mailchimp_client()
         for this in self:
@@ -21,5 +20,5 @@ class MailchimpMergeField(models.Model):
                 list_id=this.list_id.mailchimp_id, merge_id=this.mailchimp_id,
             )
             this.write(
-                {"tag": merge_field_data["tag"], "name": merge_field_data["name"],}
+                {"tag": merge_field_data["tag"], "name": merge_field_data["name"]}
             )

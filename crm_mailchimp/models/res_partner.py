@@ -1,8 +1,8 @@
-# Copyright 2019 Therp BV <https://therp.nl>
+# Copyright 2019-2021 Therp BV <https://therp.nl>
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 import hashlib
 
-from odoo import api, fields, models
+from odoo import fields, models
 
 
 class ResPartner(models.Model):
@@ -20,14 +20,12 @@ class ResPartner(models.Model):
     mailchimp_last_email = fields.Char()
     mailchimp_interest_ids = fields.Many2many("mailchimp.interest", string="Groups",)
 
-    @api.multi
     def _compute_mailchimp_id(self):
         for this in self:
             this.mailchimp_id = hashlib.md5(
-                (this.mailchimp_last_email or this.email or "").lower()
+                (this.mailchimp_last_email or this.email or "").lower().encode("utf-8")
             ).hexdigest()
 
-    @api.multi
     def write(self, vals):
         """When removing some list, mark the partner as to be removed from
         said lists. When changing email, keep the old one for syncing new mail

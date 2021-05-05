@@ -1,4 +1,4 @@
-# Copyright 2019 Therp BV <https://therp.nl>
+# Copyright 2019-2021 Therp BV <https://therp.nl>
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 from mailchimp3.mailchimpclient import MailChimpError
 from mock import Mock, patch
@@ -51,7 +51,7 @@ class TestCrmMailchimp(TransactionCase):
         }
         mock_client.lists.interest_categories.interests.all.return_value = {
             "interests": [
-                {"id": interest.mailchimp_id, "name": interest.name,}
+                {"id": interest.mailchimp_id, "name": interest.name}
                 for interest in self.interest0 + self.interest1 + self.interest2
             ],
         }
@@ -68,14 +68,8 @@ class TestCrmMailchimp(TransactionCase):
         settings_wizard = self.env["mailchimp.settings"].create({})
         self.assertEqual(settings_wizard.username, "/")
         self.assertEqual(settings_wizard.apikey, "/")
-        settings_wizard.write(
-            {"username": "a user", "apikey": "a key",}
-        )
+        settings_wizard.write({"username": "a user", "apikey": "a key"})
         settings_wizard.execute()
-        self.assertIn(
-            self.env["mailchimp.settings"]._get_webhook_key(),
-            settings_wizard.webhook_url,
-        )
         self.assertEqual(
             ir_config_parameter.get_param("crm_mailchimp.username"), "a user",
         )
@@ -84,7 +78,7 @@ class TestCrmMailchimp(TransactionCase):
         )
         # must have created our fake list from above
         created_list = self.env["mailchimp.list"].search(
-            [("name", "=", self.list_data["name"]),]
+            [("name", "=", self.list_data["name"])]
         )
         self.assertTrue(created_list)
         # and the merge field + category
@@ -127,21 +121,19 @@ class TestCrmMailchimp(TransactionCase):
     def test_crm_mailchimp_rules(self):
         interests = self.env["mailchimp.interest"].search([])
         # demo user (mailchimp user) sees all interests
+        interest_model = self.env["mailchimp.interest"]
         self.assertEqual(
-            self.env["mailchimp.interest"].sudo(self.user_demo).search([]), interests,
+            interest_model.with_user(self.user_demo).search([]), interests,
         )
         # subscriber only if she has the good group
         self.assertEqual(
-            self.env["mailchimp.interest"].sudo(self.user_subscriber).search([]),
-            interests,
+            interest_model.with_user(self.user_subscriber).search([]), interests,
         )
         self.env["ir.rule"].clear_caches()
         self.env.ref("crm_mailchimp.list_demo").write(
-            {"group_ids": [(4, self.env.ref("base.group_system").id)],}
+            {"group_ids": [(4, self.env.ref("base.group_system").id)]}
         )
-        self.assertFalse(
-            self.env["mailchimp.interest"].sudo(self.user_subscriber).search([]),
-        )
+        self.assertFalse(interest_model.with_user(self.user_subscriber).search([]),)
 
     @patch("odoo.addons.crm_mailchimp.controllers.main.request")
     def test_crm_mailchimp_controllers(self, mock_request):

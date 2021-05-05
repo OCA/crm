@@ -276,9 +276,3 @@ msgstr ""
 #: model:ir.model.fields,field_description:crm_mailchimp.field_mailchimp_settings_username
 msgid "Username"
 msgstr ""
-
-#. module: crm_mailchimp
-#: model:ir.model.fields,field_description:crm_mailchimp.field_mailchimp_settings_webhook_url
-msgid "Webhook url"
-msgstr ""
-

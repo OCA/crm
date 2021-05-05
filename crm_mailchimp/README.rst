@@ -14,13 +14,13 @@ Mailchimp integration
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fcrm-lightgray.png?logo=github
-    :target: https://github.com/OCA/crm/tree/10.0/crm_mailchimp
+    :target: https://github.com/OCA/crm/tree/13.0/crm_mailchimp
     :alt: OCA/crm
 .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
-    :target: https://translation.odoo-community.org/projects/crm-10-0/crm-10-0-crm_mailchimp
+    :target: https://translation.odoo-community.org/projects/crm-13-0/crm-13-0-crm_mailchimp
     :alt: Translate me on Weblate
 .. |badge5| image:: https://img.shields.io/badge/runbot-Try%20me-875A7B.png
-    :target: https://runbot.odoo-community.org/runbot/111/10.0
+    :target: https://runbot.odoo-community.org/runbot/111/13.0
     :alt: Try me on Runbot
 
 |badge1| |badge2| |badge3| |badge4| |badge5| 
@@ -37,10 +37,18 @@ Configuration
 
 To configure this module, you need to:
 
-#. go to `Settings / Mailchimp / Settings` and fill in your mailchimp credentials (this will import audiences)
-#. here, you'll also find the URL to configure as webhook for mailchimp. For now, only unsubscribe is supported.
-#. go to `Settings / Mailchimp / Audiences` and review the merge fields in audiences. For every merge field, fill in python code that generates this field's value (ie: for FNAME, you probably need partner.name)
-#. when you're happy with your settings, you might want to activate the cronjob `Push partner data to mailchimp`, which will push partners to mailchimp periodically. It will only update partners changed in the last 24 hours, so in case you change the interval of the job, you need to adapt the arguments to the amount of seconds of your interval.
+#. go to `Settings / Mailchimp / Settings` and fill in your mailchimp credentials
+   (this will import audiences)
+#. here, you'll also find the URL to configure as webhook for mailchimp.
+   For now, only unsubscribe is supported.
+#. go to `Settings / Mailchimp / Audiences` and review the merge fields in audiences.
+   For every merge field, fill in python code that generates this field's value
+   (ie: for FNAME, you probably need partner.name)
+#. when you're happy with your settings, you might want to activate the
+   cronjob `Push partner data to mailchimp`, which will push partners to mailchimp
+   periodically. It will only update partners changed in the last 24 hours, so
+   in case you change the interval of the job, you need to adapt the arguments
+   to the amount of seconds of your interval.
 
 Usage
 =====
@@ -50,7 +58,8 @@ To use this module, you need to:
 #. go to some partner as member of the group `Mailchimp / User`
 #. on the mailchimp tab, assign as least an audience and possibly groups
 
-Next time you push the list to mailchimp (either manually or via cronjob), this partner will be added or updated in the mailchimp audience.
+Next time you push the list to mailchimp (either manually or via cronjob),
+this partner will be added or updated in the mailchimp audience.
 
 Known issues / Roadmap
 ======================
@@ -65,7 +74,7 @@ Bug Tracker
 Bugs are tracked on `GitHub Issues <https://github.com/OCA/crm/issues>`_.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us smashing it by providing a detailed and welcomed
-`feedback <https://github.com/OCA/crm/issues/new?body=module:%20crm_mailchimp%0Aversion:%2010.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+`feedback <https://github.com/OCA/crm/issues/new?body=module:%20crm_mailchimp%0Aversion:%2013.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
 Do not contact contributors directly about support or help with technical issues.
 
@@ -81,11 +90,13 @@ Contributors
 ~~~~~~~~~~~~
 
 * Holger Brunn <hbrunn@therp.nl>
+* Ronald Portier <ronald@therp.nl>
 
 Other credits
 ~~~~~~~~~~~~~
 
-* Odoo Community Association: `Icon <https://github.com/OCA/maintainer-tools/blob/master/template/module/static/description/icon.svg>`_.
+* Odoo Community Association:
+  `Icon <https://github.com/OCA/maintainer-tools/blob/master/template/module/static/description/icon.svg>`_.
 
 Maintainers
 ~~~~~~~~~~~
@@ -100,6 +111,6 @@ OCA, or the Odoo Community Association, is a nonprofit organization whose
 mission is to support the collaborative development of Odoo features and
 promote its widespread use.
 
-This module is part of the `OCA/crm <https://github.com/OCA/crm/tree/10.0/crm_mailchimp>`_ project on GitHub.
+This module is part of the `OCA/crm <https://github.com/OCA/crm/tree/13.0/crm_mailchimp>`_ project on GitHub.
 
 You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.

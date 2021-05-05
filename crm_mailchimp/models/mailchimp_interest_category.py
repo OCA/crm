@@ -1,6 +1,6 @@
-# Copyright 2019 Therp BV <https://therp.nl>
+# Copyright 2019-2021 Therp BV <https://therp.nl>
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
-from odoo import api, fields, models
+from odoo import fields, models
 
 
 class MailchimpInterestCategory(models.Model):
@@ -17,7 +17,6 @@ class MailchimpInterestCategory(models.Model):
         "res.groups", string="Odoo groups", help="Restricted to groups",
     )
 
-    @api.multi
     def _update_from_mailchimp(self):
         client = self.env["mailchimp.list"]._get_mailchimp_client()
         for this in self:

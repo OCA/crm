@@ -22,7 +22,6 @@
                 <group name="general" string="General">
                     <field name="username" />
                     <field name="apikey" />
-                    <field name="webhook_url" />
                 </group>
             </form>
         </field>

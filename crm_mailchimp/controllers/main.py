@@ -1,4 +1,4 @@
-# Copyright 2019 Therp BV <https://therp.nl>
+# Copyright 2019-2021 Therp BV <https://therp.nl>
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 from werkzeug.exceptions import NotFound
 
@@ -39,12 +39,12 @@ class Mailchimp(http.Controller):
         partner = (
             request.env["res.partner"]
             .sudo()
-            .search([("email", "=", data.get("email")),])
+            .search([("email", "=", data.get("email"))])
         )
         mailchimp_list = (
             request.env["mailchimp.list"]
             .sudo()
-            .search([("mailchimp_id", "=", data.get("list_id")),])
+            .search([("mailchimp_id", "=", data.get("list_id"))])
         )
         if not partner or not mailchimp_list:
             raise NotFound()

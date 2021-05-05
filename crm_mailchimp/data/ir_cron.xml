@@ -6,8 +6,8 @@
         <field name="interval_type">days</field>
         <field name="interval_number">1</field>
         <field name="numbercall">-1</field>
-        <field name="model">mailchimp.list</field>
-        <field name="function">_cron</field>
-        <field name="args">(86400,)</field>
+        <field name="model_id" ref="model_mailchimp_list" />
+        <field name="state">code</field>
+        <field name="code">model._cron()</field>
     </record>
 </odoo>
