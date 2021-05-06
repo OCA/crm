@@ -8,6 +8,8 @@ from odoo import exceptions
 from odoo.tests.common import TransactionCase
 from odoo.tools.misc import mute_logger
 
+from odoo.addons.website.tools import MockRequest
+
 from ..controllers.main import Mailchimp as MailchimpController
 
 
@@ -135,55 +137,51 @@ class TestCrmMailchimp(TransactionCase):
         )
         self.assertFalse(interest_model.with_user(self.user_subscriber).search([]),)
 
-    @patch("odoo.addons.crm_mailchimp.controllers.main.request")
-    def test_crm_mailchimp_controllers(self, mock_request):
-        mock_request.env = self.env
+    def test_crm_mailchimp_controllers(self):
+        """Test the controller for the webhooks called by Mailchimp."""
         controller = MailchimpController()
-        # test reqeust by mailchimp without parameters
-        self.assertEqual(
-            controller.hook.original_func(
-                controller, self.env["mailchimp.settings"]._get_webhook_key(),
-            ),
-            "",
-        )
-        # wrong key
-        with self.assertRaises(exceptions.AccessDenied):
-            controller.hook.original_func(controller, "wrong key")
-        # wrong type
-        with self.assertRaises(NotFound):
-            controller.hook.original_func(
-                controller,
-                self.env["mailchimp.settings"]._get_webhook_key(),
+        webhook_key = self.env["mailchimp.settings"]._get_webhook_key()
+        with MockRequest(self.env):
+            # Request without arguments is a test and should return an empty string.
+            response = controller.hook(webhook_key)
+            self.assertEqual(response.status_code, 200)
+            self.assertEqual(response.get_data(as_text=True), "")
+            # Request with a wrong webhook key should result in AccessDenied exception.
+            with self.assertRaises(exceptions.AccessDenied):
+                response = controller.hook("wrong key")
+            # Request with wrong type of actions should result in NotFound exception.
+            with self.assertRaises(NotFound):
+                response = controller.hook(
+                    webhook_key,
+                    **{
+                        "type": "not_existing_type",
+                        "data[action]": "unsub",
+                        "data[email]": self.user_demo.email,
+                        "data[list_id]": self.list.mailchimp_id,
+                    }
+                )
+            # Request for non-existing partner should result in NotFound exception.
+            with self.assertRaises(NotFound):
+                response = controller.hook(
+                    webhook_key,
+                    **{
+                        "type": "unsubscribe",
+                        "data[action]": "unsub",
+                        "data[email]": "unknown@unknown.com",
+                    }
+                )
+            # correct request
+            self.assertTrue(self.user_demo.mailchimp_list_ids)
+            self.assertTrue(self.user_demo.mailchimp_interest_ids)
+            response = controller.hook(
+                webhook_key,
                 **{
-                    "type": "not_existing_type",
+                    "type": "unsubscribe",
                     "data[action]": "unsub",
                     "data[email]": self.user_demo.email,
                     "data[list_id]": self.list.mailchimp_id,
                 }
             )
-        # nonexisting partner
-        with self.assertRaises(NotFound):
-            controller.hook.original_func(
-                controller,
-                self.env["mailchimp.settings"]._get_webhook_key(),
-                **{
-                    "type": "unsubscribe",
-                    "data[action]": "unsub",
-                    "data[email]": "unknown@unknown.com",
-                }
-            )
-        # correct request
-        self.assertTrue(self.user_demo.mailchimp_list_ids)
-        self.assertTrue(self.user_demo.mailchimp_interest_ids)
-        controller.hook.original_func(
-            controller,
-            self.env["mailchimp.settings"]._get_webhook_key(),
-            **{
-                "type": "unsubscribe",
-                "data[action]": "unsub",
-                "data[email]": self.user_demo.email,
-                "data[list_id]": self.list.mailchimp_id,
-            }
-        )
-        self.assertFalse(self.user_demo.mailchimp_list_ids)
-        self.assertFalse(self.user_demo.mailchimp_interest_ids)
+            self.assertEqual(response.status_code, 200)
+            self.assertFalse(self.user_demo.mailchimp_list_ids)
+            self.assertFalse(self.user_demo.mailchimp_interest_ids)

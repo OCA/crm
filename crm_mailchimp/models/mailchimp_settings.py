@@ -21,7 +21,9 @@ class MailchimpSettings(models.TransientModel):
 
     @api.model
     def _get_webhook_key(self):
-        return hashlib.sha1(
-            self.env["ir.config_parameter"].get_param("database.secret")
-            + self.env["ir.config_parameter"].get_param("web.base.url")
-        ).hexdigest()
+        parameter_model = self.env["ir.config_parameter"]
+        raw_key = "{secret}{url}".format(
+            secret=parameter_model.get_param("database.secret"),
+            url=parameter_model.get_param("web.base.url"),
+        )
+        return hashlib.sha1(raw_key.encode("utf-8")).hexdigest()

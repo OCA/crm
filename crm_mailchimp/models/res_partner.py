@@ -18,7 +18,9 @@ class ResPartner(models.Model):
         string="Deleted audiences",
     )
     mailchimp_last_email = fields.Char()
-    mailchimp_interest_ids = fields.Many2many("mailchimp.interest", string="Groups",)
+    mailchimp_interest_ids = fields.Many2many(
+        "mailchimp.interest", string="Mailchimp groups"
+    )
 
     def _compute_mailchimp_id(self):
         for this in self:
