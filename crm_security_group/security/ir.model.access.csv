@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_crm_lead_user,crm.lead.user,crm.model_crm_lead,crm_security_group.group_crm_own_leads,1,1,1,0
+access_crm_team_user,crm.team.user,sales_team.model_crm_team,crm_security_group.group_crm_own_leads,1,0,0,0
+access_crm_team_manager,crm.team.manager,sales_team.model_crm_team,crm_security_group.group_crm_own_leads,1,1,1,1
+access_crm_stage_manager,crm.stage.manager,crm.model_crm_stage,crm_security_group.group_crm_manager,1,1,1,1
+access_crm_tag_own_leads,sale_team.crm.tag.own.leads,sales_team.model_crm_tag,crm_security_group.group_crm_own_leads,1,1,1,0
+access_crm_tag_manager,sale_team.crm.tag.manager,sales_team.model_crm_tag,crm_security_group.group_crm_manager,1,1,1,1
+access_crm_lead_scoring_frequency_user,crm.lead.scoring.frequency.user,crm.model_crm_lead_scoring_frequency,crm_security_group.group_crm_own_leads,1,0,0,0
+access_crm_lead_scoring_frequency_field_user,crm.lead.scoring.frequency.field.user,crm.model_crm_lead_scoring_frequency_field,crm_security_group.group_crm_own_leads,1,0,0,0
