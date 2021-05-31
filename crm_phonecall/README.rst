@@ -81,9 +81,9 @@ Contributors
   * David Vidal
   * Alexandre Díaz
 
-* Anand Kansagra <kansagraanand@hotmail.com>
+* RIDA YAHLA <mireda2012@gmail.com>
 
-* YAHLA RIDA <mireda2012@gmail.com>
+* Anand Kansagra <kansagraanand@hotmail.com>
 
 * `Druidoo <https://www.druidoo.io>`_
 
