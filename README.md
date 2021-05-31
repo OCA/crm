@@ -21,6 +21,7 @@ addon | version | summary
 --- | --- | ---
 [crm_lead_code](crm_lead_code/) | 14.0.1.0.0 | Sequential Code for Leads / Opportunities
 [crm_lead_firstname](crm_lead_firstname/) | 14.0.1.0.2 | Specify split names for contacts in leads
+[crm_phonecall](crm_phonecall/) | 14.0.1.0.0 | CRM Phone Calls
 [crm_security_group](crm_security_group/) | 14.0.1.0.1 | Add new group in Sales to show only CRM
 
 [//]: # (end addons)
