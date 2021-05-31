@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 13.0\n"
+"Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -20,22 +20,37 @@ msgstr ""
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
-msgid "<b> min(s)</b>"
+msgid "<b>min(s)</b>"
 msgstr ""
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
-msgid "<span>Convert<br/>To Opportunity</span>"
+msgid ""
+"<span>\n"
+"                                Convert\n"
+"                                <br/>\n"
+"                                To Opportunity\n"
+"                            </span>"
 msgstr ""
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
-msgid "<span>Schedule<br/>A Meeting</span>"
+msgid ""
+"<span>\n"
+"                                Schedule\n"
+"                                <br/>\n"
+"                                A Meeting\n"
+"                            </span>"
 msgstr ""
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
-msgid "<span>Schedule<br/>Other Call</span>"
+msgid ""
+"<span>\n"
+"                                Schedule\n"
+"                                <br/>\n"
+"                                Other Call\n"
+"                            </span>"
 msgstr ""
 
 #. module: crm_phonecall
@@ -81,8 +96,8 @@ msgstr ""
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.res_config_settings_view_form
 msgid ""
-"By default form view is disabled for calls, with this setting it is enabled "
-"for all users."
+"By default form view is disabled for calls, with this\n"
+"                                setting it is enabled for all users."
 msgstr ""
 
 #. module: crm_phonecall
@@ -273,9 +288,13 @@ msgid "Direction"
 msgstr ""
 
 #. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_calendar_event__display_name
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_lead__display_name
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__display_name
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__display_name
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__display_name
+#: model:ir.model.fields,field_description:crm_phonecall.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:crm_phonecall.field_res_partner__display_name
 msgid "Display Name"
 msgstr ""
 
@@ -302,8 +321,8 @@ msgstr ""
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_res_config_settings__group_show_form_view
-#: model_terms:ir.ui.view,arch_db:crm_phonecall.res_config_settings_view_form
 #: model:res.groups,name:crm_phonecall.group_show_form_view
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.res_config_settings_view_form
 msgid "Enable form view for phone calls"
 msgstr ""
 
@@ -347,9 +366,13 @@ msgid "High"
 msgstr ""
 
 #. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_calendar_event__id
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_lead__id
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__id
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__id
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__id
+#: model:ir.model.fields,field_description:crm_phonecall.field_res_config_settings__id
+#: model:ir.model.fields,field_description:crm_phonecall.field_res_partner__id
 msgid "ID"
 msgstr ""
 
@@ -393,9 +416,13 @@ msgid "Last Action"
 msgstr ""
 
 #. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_calendar_event____last_update
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_lead____last_update
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall____last_update
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall____last_update
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report____last_update
+#: model:ir.model.fields,field_description:crm_phonecall.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:crm_phonecall.field_res_partner____last_update
 msgid "Last Modified on"
 msgstr ""
 
