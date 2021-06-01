@@ -33,7 +33,7 @@ class CrmPhonecallPlan(models.TransientModel):
         string="Sales Team",
     )
     tag_ids = fields.Many2many(
-        comodel_name="crm.lead.tag",
+        comodel_name="crm.tag",
         string="Tags",
     )
     res_partner_domain = fields.Char(

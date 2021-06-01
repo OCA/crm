@@ -131,6 +131,7 @@ Contributors
   * Jairo Llopis <jairo.llopis@tecnativa.com>
   * David Vidal <david.vidal@tecnativa.com>
   * Alexandre Díaz <alexandre.diaz@tecnativa.com>
+  * Rida Yahla <mireda2012@gmail.com>
 
 Maintainers
 ~~~~~~~~~~~
