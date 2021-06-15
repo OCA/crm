@@ -17,7 +17,7 @@ Claims Management
     :target: https://github.com/OCA/crm/tree/14.0/crm_claim
     :alt: OCA/crm
 .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
-    :target: https://translation.odoo-community.org/projects/crm-13-0/crm-13-0-crm_claim
+    :target: https://translation.odoo-community.org/projects/crm-14-0/crm-14-0-crm_claim
     :alt: Translate me on Weblate
 .. |badge5| image:: https://img.shields.io/badge/runbot-Try%20me-875A7B.png
     :target: https://runbot.odoo-community.org/runbot/111/14.0
@@ -89,8 +89,6 @@ Contributors
 * `Guadaltech <https://www.guadaltech.es>`_:
 
   * Fernando La Chica <fernando.lachica@guadaltech.es>
-  
-* Rida Yahla <mireda2012@gmail.com>
 
 Maintainers
 ~~~~~~~~~~~
