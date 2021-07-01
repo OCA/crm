@@ -31,7 +31,7 @@ addon | version | summary
 [crm_security_group](crm_security_group/) | 13.0.1.0.0 | Add new group in Sales to show only CRM
 [crm_stage_probability](crm_stage_probability/) | 13.0.1.0.0 | Define fixed probability on the stages
 [crm_stage_type](crm_stage_type/) | 13.0.1.0.0 | Add type in the lead and opportunity stages
-[marketing_crm_partner](marketing_crm_partner/) | 13.0.1.0.0 | Copy tracking fields from leads to partners
+[marketing_crm_partner](marketing_crm_partner/) | 13.0.1.0.1 | Copy tracking fields from leads to partners
 
 [//]: # (end addons)
 <!-- prettier-ignore-end -->
