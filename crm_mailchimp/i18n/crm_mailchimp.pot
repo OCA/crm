@@ -182,12 +182,6 @@ msgid "Mailchimp id"
 msgstr ""
 
 #. module: crm_mailchimp
-#: model:ir.model.fields,field_description:crm_mailchimp.field_res_partner_mailchimp_last_email
-#: model:ir.model.fields,field_description:crm_mailchimp.field_res_users_mailchimp_last_email
-msgid "Mailchimp last email"
-msgstr ""
-
-#. module: crm_mailchimp
 #: model:ir.actions.act_window,name:crm_mailchimp.action_mailchimp_list_partners
 msgid "Mailchimp mailinglist partners"
 msgstr ""

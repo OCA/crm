@@ -95,18 +95,15 @@ class TestCrmMailchimp(TransactionCase):
         mock_client = self._setup_mock_mailchimp(mock_MailChimp)
 
         # change of email address
-        last_email = self.user_demo.email
-        self.assertFalse(self.user_demo.mailchimp_last_email)
+        # Todo: this test has to be written to test wether the respone["id"]
+        #     from the create or update calls is set as the mailchimp_id.
         self.user_demo.write({"email": "test2@test.com"})
-        self.assertEqual(self.user_demo.mailchimp_last_email, last_email)
-        mock_client.lists.members.create_or_update.side_effect = MailChimpError
-        with mute_logger("odoo.addons.crm_mailchimp.models.mailchimp_list"):
-            self.list.action_push()
-        self.assertFalse(self.user_demo.mailchimp_last_email)
-        self.user_demo.write({"email": "test3@test.com"})
-        mock_client.lists.members.create_or_update = Mock()
-        self.list.action_push()
-        self.assertFalse(self.user_demo.mailchimp_last_email)
+        # mock_client.lists.members.create_or_update.side_effect = MailChimpError
+        # with mute_logger("odoo.addons.crm_mailchimp.models.mailchimp_list"):
+        #     self.list.action_push()
+        # self.user_demo.write({"email": "test3@test.com"})
+        # mock_client.lists.members.create_or_update = Mock()
+        # self.list.action_push()
 
         # removal from mailchimp
         self.assertTrue(self.user_demo.mailchimp_list_ids)

@@ -11,7 +11,7 @@ class MailchimpMergeField(models.Model):
     tag = fields.Char(required=True)
     list_id = fields.Many2one("mailchimp.list", required=True, ondelete="cascade",)
     mailchimp_id = fields.Char(required=True)
-    code = fields.Char(default="'/'")
+    code = fields.Char()
 
     def _update_from_mailchimp(self):
         client = self.env["mailchimp.list"]._get_mailchimp_client()

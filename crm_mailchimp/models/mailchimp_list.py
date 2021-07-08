@@ -3,7 +3,9 @@
 import datetime
 import logging
 
-from odoo import api, fields, models, tools
+from odoo import _, api, fields, models
+from odoo.tools import ormcache
+from odoo.tools.safe_eval import safe_eval
 
 try:
     from mailchimp3 import MailChimp
@@ -32,7 +34,7 @@ class MailchimpList(models.Model):
     group_ids = fields.Many2many("res.groups", help="Restricted to groups")
 
     @api.model
-    @tools.ormcache()
+    @ormcache()
     def _get_mailchimp_client(self):
         return MailChimp(
             mc_api=self.env["ir.config_parameter"].get_param("crm_mailchimp.apikey"),
@@ -96,6 +98,7 @@ class MailchimpList(models.Model):
                 category._update_from_mailchimp()
 
     def _push_to_mailchimp(self, modified_after=None):
+        """Push partners to mailchimp."""
         date_domain = []
         if modified_after:
             date_domain = [("write_date", ">=", modified_after)]
@@ -110,9 +113,6 @@ class MailchimpList(models.Model):
                     _logger.exception(
                         "Error pushing partner %d to mailchimp", partner,
                     )
-                # reset a possibly changed email address, see res.parter#write
-                partner.write({"mailchimp_last_email": False})
-
             for partner in self.env["res.partner"].search(
                 date_domain
                 + [
@@ -138,29 +138,53 @@ class MailchimpList(models.Model):
     def _push_partner_to_mailchimp(self, partner):
         self.ensure_one()
         client = self._get_mailchimp_client()
-        client.lists.members.create_or_update(
-            list_id=self.mailchimp_id,
-            subscriber_hash=partner.mailchimp_id,
-            data=self._push_partner_to_mailchimp_data(partner),
-        )
+        if partner.mailchimp_id:
+            response = client.lists.members.create_or_update(
+                list_id=self.mailchimp_id,
+                subscriber_hash=partner.mailchimp_id,
+                data=self._push_partner_to_mailchimp_data(partner),
+            )
+        else:
+            response = client.lists.members.create(
+                list_id=self.mailchimp_id,
+                data=self._push_partner_to_mailchimp_data(partner),
+            )
+        if partner.mailchimp_id != response["id"]:
+            _logger.debug(
+                _("Partner %s has new mailchimp_id for email %s"),
+                partner.display_name,
+                partner.email,
+            )
+            partner.write({"mailchimp_id": response["id"]})
 
     def _push_partner_to_mailchimp_data(self, partner):
+        """Get data from subscriber to push to Mailchimp, where code has been set."""
         self.ensure_one()
+        merge_fields = {}
+        for merge_field in self.merge_field_ids:
+            if not merge_field.code:
+                continue
+            try:
+                merge_fields[merge_field.tag] = safe_eval(
+                    merge_field.code, {"partner": partner}, mode="eval"
+                )
+            except Exception:
+                _logger.error(
+                    _("Error getting data for merge-field %s, for partner %s"),
+                    merge_field.tag,
+                    partner.display_name,
+                )
+                raise
+        interests = {
+            interest.mailchimp_id: bool(partner.mailchimp_interest_ids & interest)
+            for interest in self.mapped("interest_category_ids.interest_ids")
+        }
         data = {
             "email_address": partner.email,
             "status": "subscribed",
             "status_if_new": "subscribed",
-            "merge_fields": {
-                merge_field.tag: tools.safe_eval.safe_eval(
-                    merge_field.code, {"partner": partner}, mode="eval"
-                )
-                for merge_field in self.merge_field_ids
-                if merge_field.code
-            },
-            "interests": {
-                interest.mailchimp_id: bool(partner.mailchimp_interest_ids & interest)
-                for interest in self.mapped("interest_category_ids.interest_ids")
-            },
+            "merge_fields": merge_fields,
+            "interests": interests,
         }
         return data
 
