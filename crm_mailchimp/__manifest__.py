@@ -22,6 +22,7 @@
         "security/ir_rule.xml",
         "views/res_partner.xml",
         "views/mailchimp_interest_category.xml",
+        "views/mailchimp_interest.xml",
         "views/mailchimp_merge_field.xml",
         "views/mailchimp_settings.xml",
         "views/mailchimp_list.xml",

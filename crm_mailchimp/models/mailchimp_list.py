@@ -56,46 +56,16 @@ class MailchimpList(models.Model):
 
     def _update_from_mailchimp(self):
         client = self._get_mailchimp_client()
+        merge_field_model = self.env["mailchimp.merge.field"]
+        interest_category_model = self.env["mailchimp.interest.category"]
         for this in self:
+            # Update list itself.
             mailchimp_list = client.lists.get(this.mailchimp_id)
             this.write({"name": mailchimp_list["name"]})
-            for mailchimp_merge_field in client.lists.merge_fields.all(
-                get_all=True,
-                list_id=this.mailchimp_id,
-                fields="merge_fields.name,merge_fields.merge_id," "merge_fields.tag",
-            )["merge_fields"]:
-                merge_field = self.env["mailchimp.merge.field"].search(
-                    [
-                        ("mailchimp_id", "=", mailchimp_merge_field["merge_id"]),
-                        ("list_id", "=", this.id),
-                    ]
-                ) or self.env["mailchimp.merge.field"].create(
-                    {
-                        "name": mailchimp_merge_field["name"],
-                        "list_id": this.id,
-                        "mailchimp_id": mailchimp_merge_field["merge_id"],
-                        "tag": mailchimp_merge_field["tag"],
-                    }
-                )
-                merge_field._update_from_mailchimp()
-            for mailchimp_category in client.lists.interest_categories.all(
-                get_all=True,
-                list_id=this.mailchimp_id,
-                fields="categories.title,categories.id",
-            )["categories"]:
-                category = self.env["mailchimp.interest.category"].search(
-                    [
-                        ("mailchimp_id", "=", mailchimp_category["id"]),
-                        ("list_id", "=", this.id),
-                    ]
-                ) or self.env["mailchimp.interest.category"].create(
-                    {
-                        "name": mailchimp_category["title"],
-                        "list_id": this.id,
-                        "mailchimp_id": mailchimp_category["id"],
-                    }
-                )
-                category._update_from_mailchimp()
+            # Update merge fields.
+            merge_field_model._update_from_mailchimp(client, this)
+            # Update categories (including underlying interests).
+            interest_category_model._update_from_mailchimp(client, this)
 
     def _push_to_mailchimp(self, modified_after=None):
         """Push partners to mailchimp."""

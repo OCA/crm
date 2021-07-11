@@ -1,6 +1,6 @@
 # Copyright 2019-2021 Therp BV <https://therp.nl>
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
-from odoo import fields, models
+from odoo import api, fields, models
 
 
 class MailchimpInterestCategory(models.Model):
@@ -17,25 +17,30 @@ class MailchimpInterestCategory(models.Model):
         "res.groups", string="Odoo groups", help="Restricted to groups",
     )
 
-    def _update_from_mailchimp(self):
-        client = self.env["mailchimp.list"]._get_mailchimp_client()
-        for this in self:
-            for mc_interest in client.lists.interest_categories.interests.all(
-                get_all=True,
-                list_id=this.list_id.mailchimp_id,
-                category_id=this.mailchimp_id,
-                fields="interests.name,interests.id",
-            )["interests"]:
-                interest = self.env["mailchimp.interest"].search(
-                    [
-                        ("category_id", "=", this.id),
-                        ("mailchimp_id", "=", mc_interest["id"]),
-                    ]
-                ) or self.env["mailchimp.interest"].create(
+    @api.model
+    def _update_from_mailchimp(self, client, mailchimp_list):
+        """Update interest categories and underlying interests from mailchimp."""
+        interest_model = self.env["mailchimp.interest"]
+        mailchimp_categories = client.lists.interest_categories.all(
+            get_all=True,
+            list_id=mailchimp_list.mailchimp_id,
+            fields="categories.title,categories.id",
+        )["categories"]
+        for mailchimp_category in mailchimp_categories:
+            category = self.env["mailchimp.interest.category"].search(
+                [
+                    ("mailchimp_id", "=", mailchimp_category["id"]),
+                    ("list_id", "=", mailchimp_list.id),
+                ]
+            )
+            if category:
+                category.write({"name": mailchimp_category["title"]})
+            else:
+                category = self.create(
                     {
-                        "name": mc_interest["name"],
-                        "category_id": this.id,
-                        "mailchimp_id": mc_interest["id"],
+                        "name": mailchimp_category["title"],
+                        "list_id": mailchimp_list.id,
+                        "mailchimp_id": mailchimp_category["id"],
                     }
                 )
-                interest._update_from_mailchimp()
+            interest_model._update_from_mailchimp(client, category)
