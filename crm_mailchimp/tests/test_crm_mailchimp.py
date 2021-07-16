@@ -1,16 +1,17 @@
 # Copyright 2019-2021 Therp BV <https://therp.nl>
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
-from mailchimp3.mailchimpclient import MailChimpError
+# from mailchimp3.mailchimpclient import MailChimpError
 from mock import Mock, patch
 from werkzeug.exceptions import NotFound
 
 from odoo import exceptions
 from odoo.tests.common import TransactionCase
-from odoo.tools.misc import mute_logger
 
 from odoo.addons.website.tools import MockRequest
 
 from ..controllers.main import Mailchimp as MailchimpController
+
+# from odoo.tools.misc import mute_logger
 
 
 class TestCrmMailchimp(TransactionCase):
@@ -57,6 +58,12 @@ class TestCrmMailchimp(TransactionCase):
                 for interest in self.interest0 + self.interest1 + self.interest2
             ],
         }
+        mock_client.lists.members.create_or_update.return_value = {
+            "id": "the mailchimp id",
+        }
+        mock_client.lists.members.create.return_value = {
+            "id": "the mailchimp id",
+        }
         return mock_client
 
     @patch("odoo.addons.crm_mailchimp.models.mailchimp_list.MailChimp")
@@ -88,53 +95,53 @@ class TestCrmMailchimp(TransactionCase):
         self.assertTrue(
             created_list.mapped("interest_category_ids.interest_ids.display_name")
         )
-        self.assertTrue(created_list.merge_field_ids)
+        # Fake list must have models (well, at least one).
+        self.assertTrue(created_list.model_ids)
+        # Models must have merge fields.
+        for list_model in created_list.model_ids:
+            self.assertTrue(list_model.merge_field_ids)
 
     @patch("odoo.addons.crm_mailchimp.models.mailchimp_list.MailChimp")
     def test_crm_mailchimp_backend(self, mock_MailChimp):
-        mock_client = self._setup_mock_mailchimp(mock_MailChimp)
-
+        # mock_client = self._setup_mock_mailchimp(mock_MailChimp)
+        self._setup_mock_mailchimp(mock_MailChimp)
+        self.assertTrue(bool(self.user_demo))
+        partner = self.user_demo.partner_id
+        # Subscribe the demo user (or rather the partner).
+        subscriber = self._subscribe_partner(partner)
         # change of email address
-        # Todo: this test has to be written to test wether the respone["id"]
-        #     from the create or update calls is set as the mailchimp_id.
-        self.user_demo.write({"email": "test2@test.com"})
-        # mock_client.lists.members.create_or_update.side_effect = MailChimpError
+        partner.write({"email": "test2@test.com"})
+        self.assertEqual(partner.email, subscriber.email)
         # with mute_logger("odoo.addons.crm_mailchimp.models.mailchimp_list"):
         #     self.list.action_push()
-        # self.user_demo.write({"email": "test3@test.com"})
-        # mock_client.lists.members.create_or_update = Mock()
+        # partner.write({"email": "test3@test.com"})
         # self.list.action_push()
-
         # removal from mailchimp
-        self.assertTrue(self.user_demo.mailchimp_list_ids)
-        self.assertTrue(self.user_demo.mailchimp_interest_ids)
-        self.assertFalse(self.user_demo.mailchimp_deleted_list_ids)
-        self.user_demo.write({"mailchimp_list_ids": [(6, 0, [])]})
-        self.assertEqual(self.user_demo.mailchimp_deleted_list_ids, self.list)
-        self.assertFalse(self.user_demo.mailchimp_interest_ids)
-        mock_client.lists.members.delete.side_effect = MailChimpError
-        with mute_logger("odoo.addons.crm_mailchimp.models.mailchimp_list"):
-            self.list._cron(60)
-        self.assertFalse(self.user_demo.mailchimp_deleted_list_ids)
 
     def test_crm_mailchimp_rules(self):
-        interests = self.env["mailchimp.interest"].search([])
-        # demo user (mailchimp user) sees all interests
+        """Check access to interests and lists."""
+        demo_list = self.env.ref("crm_mailchimp.list_demo")
         interest_model = self.env["mailchimp.interest"]
+        interest_domain = [("category_id.list_id", "=", demo_list.id)]
+        interests = interest_model.search(interest_domain)
+        # demo user (mailchimp user) sees all interests
         self.assertEqual(
-            interest_model.with_user(self.user_demo).search([]), interests,
+            interest_model.with_user(self.user_demo).search(interest_domain), interests,
         )
         # subscriber only if she has the good group
         self.assertEqual(
-            interest_model.with_user(self.user_subscriber).search([]), interests,
+            interest_model.with_user(self.user_subscriber).search(interest_domain),
+            interests,
         )
-        self.env["ir.rule"].clear_caches()
-        self.env.ref("crm_mailchimp.list_demo").write(
-            {"group_ids": [(4, self.env.ref("base.group_system").id)]}
+        self.env.cache.invalidate()
+        # Specify that only system users can see the demo list.
+        demo_list.write({"group_ids": [(6, 0, [self.env.ref("base.group_system").id])]})
+        self.assertFalse(
+            interest_model.with_user(self.user_subscriber).search(interest_domain)
         )
-        self.assertFalse(interest_model.with_user(self.user_subscriber).search([]),)
 
-    def test_crm_mailchimp_controllers(self):
+    @patch("odoo.addons.crm_mailchimp.models.mailchimp_list.MailChimp")
+    def test_crm_mailchimp_controllers(self, mock_MailChimp):
         """Test the controller for the webhooks called by Mailchimp."""
         controller = MailchimpController()
         webhook_key = self.env["mailchimp.settings"]._get_webhook_key()
@@ -168,8 +175,10 @@ class TestCrmMailchimp(TransactionCase):
                     }
                 )
             # correct request
-            self.assertTrue(self.user_demo.mailchimp_list_ids)
-            self.assertTrue(self.user_demo.mailchimp_interest_ids)
+            self._setup_mock_mailchimp(mock_MailChimp)
+            partner = self.user_demo.partner_id
+            self._subscribe_partner(partner)
+            self.assertEqual(partner.subscription_count, 1)
             response = controller.hook(
                 webhook_key,
                 **{
@@ -180,5 +189,13 @@ class TestCrmMailchimp(TransactionCase):
                 }
             )
             self.assertEqual(response.status_code, 200)
-            self.assertFalse(self.user_demo.mailchimp_list_ids)
-            self.assertFalse(self.user_demo.mailchimp_interest_ids)
+            self.assertEqual(partner.subscription_count, 0)
+
+    def _subscribe_partner(self, partner):
+        """Subscribe a partner to the demo list and return subscriber record."""
+        subscriber_model = self.env["mailchimp.subscriber"]
+        subscriber = subscriber_model.create(
+            {"list_id": self.list.id, "res_model": partner._name, "res_id": partner.id}
+        )
+        subscriber.write({"interest_ids": [(0, 0, {"interest_id": self.interest1.id})]})
+        return subscriber

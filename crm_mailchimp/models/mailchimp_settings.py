@@ -14,6 +14,7 @@ class MailchimpSettings(models.TransientModel):
     apikey = fields.Char(required=True, config_parameter="crm_mailchimp.apikey")
 
     def execute(self):
+        """Get audiences configured in Mailchimp."""
         result = super(MailchimpSettings, self).execute()
         if result:
             self.env["mailchimp.list"]._read_from_mailchimp()

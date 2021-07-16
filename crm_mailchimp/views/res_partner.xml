@@ -1,25 +1,24 @@
-<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-    <record id="view_res_partner_form" model="ir.ui.view">
+    <record model="ir.ui.view" id="view_partner_form">
+        <field name="name">res.partner.form.subscription</field>
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="base.view_partner_form" />
         <field name="arch" type="xml">
-            <notebook position="inside">
-                <page
-                    name="crm_mailchimp"
-                    string="Mailchimp"
-                    groups="crm_mailchimp.group_user"
+            <xpath expr="/form/sheet/div[@name='button_box']" position="inside">
+                <button
+                    name="button_open_subscriptions"
+                    type="object"
+                    class="oe_stat_button"
+                    icon="fa-pencil-square-o"
                 >
-                    <group>
-                        <field
-                            name="mailchimp_list_ids"
-                            widget="many2many_tags"
-                            options="{'no_create_edit': True}"
-                        />
-                        <field name="mailchimp_interest_ids" />
-                    </group>
-                </page>
-            </notebook>
+                    <div class="o_form_field o_stat_info">
+                        <span class="o_stat_value">
+                            <field name="subscription_count" />
+                        </span>
+                        <span class="o_stat_text">Subscriptions</span>
+                    </div>
+                </button>
+            </xpath>
         </field>
     </record>
 </odoo>

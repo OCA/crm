@@ -9,23 +9,25 @@ class MailchimpMergeField(models.Model):
 
     name = fields.Char(required=True)
     tag = fields.Char(required=True)
-    list_id = fields.Many2one("mailchimp.list", required=True, ondelete="cascade",)
-    mailchimp_id = fields.Char(required=True)
+    list_model_id = fields.Many2one(
+        comodel_name="mailchimp.list.model", required=True, ondelete="cascade",
+    )
     code = fields.Char()
+    mailchimp_id = fields.Char(required=True)
 
     @api.model
-    def _update_from_mailchimp(self, client, mailchimp_list):
+    def _update_from_mailchimp(self, client, list_model):
         """Create or update merge fields from mailchimp."""
         mail_chimp_merge_fields = client.lists.merge_fields.all(
             get_all=True,
-            list_id=mailchimp_list.mailchimp_id,
-            fields="merge_fields.name,merge_fields.merge_id," "merge_fields.tag",
+            list_id=list_model.list_id.mailchimp_id,
+            fields="merge_fields.name,merge_fields.merge_id,merge_fields.tag",
         )["merge_fields"]
         for mailchimp_merge_field in mail_chimp_merge_fields:
             merge_field = self.search(
                 [
                     ("mailchimp_id", "=", mailchimp_merge_field["merge_id"]),
-                    ("list_id", "=", mailchimp_list.id),
+                    ("list_model_id", "=", list_model.id),
                 ]
             )
             if merge_field:
@@ -39,7 +41,7 @@ class MailchimpMergeField(models.Model):
                 self.create(
                     {
                         "name": mailchimp_merge_field["name"],
-                        "list_id": mailchimp_list.id,
+                        "list_model_id": list_model.id,
                         "mailchimp_id": mailchimp_merge_field["merge_id"],
                         "tag": mailchimp_merge_field["tag"],
                     }

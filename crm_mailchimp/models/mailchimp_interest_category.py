@@ -9,13 +9,15 @@ class MailchimpInterestCategory(models.Model):
 
     name = fields.Char(required=True)
     list_id = fields.Many2one("mailchimp.list", required=True, ondelete="cascade",)
-    mailchimp_id = fields.Char(required=True)
     interest_ids = fields.One2many(
-        "mailchimp.interest", "category_id", string="Mailchimp groups",
+        comodel_name="mailchimp.interest",
+        inverse_name="category_id",
+        string="Mailchimp groups",
     )
     group_ids = fields.Many2many(
-        "res.groups", string="Odoo groups", help="Restricted to groups",
+        comodel_name="res.groups", string="Odoo groups", help="Restricted to groups",
     )
+    mailchimp_id = fields.Char(required=True)
 
     @api.model
     def _update_from_mailchimp(self, client, mailchimp_list):

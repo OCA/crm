@@ -8,10 +8,10 @@
             </tree>
         </field>
     </record>
-    <record id="action_mailchimp_list_partners" model="ir.actions.act_window">
-        <field name="name">Mailchimp mailinglist partners</field>
-        <field name="res_model">res.partner</field>
-        <field name="domain">[('mailchimp_list_ids', '=', active_id)]</field>
+    <record id="action_mailchimp_list_subscribers" model="ir.actions.act_window">
+        <field name="name">Mailchimp mailinglist subscribers</field>
+        <field name="res_model">mailchimp.subscriber</field>
+        <field name="domain">[('list_id', '=', active_id)]</field>
     </record>
     <record id="view_mailchimp_list_form" model="ir.ui.view">
         <field name="model">mailchimp.list</field>
@@ -20,12 +20,12 @@
                 <sheet>
                     <div class="oe_button_box" name="button_box">
                         <button
-                            name="%(action_mailchimp_list_partners)d"
+                            name="%(action_mailchimp_list_subscribers)d"
                             type="action"
                             class="oe_stat_button"
                             icon="fa-users"
                         >
-                            <div class="o_stat_info">Partners</div>
+                            <div class="o_stat_info">Subscribers</div>
                         </button>
                         <button
                             name="action_update"
@@ -54,14 +54,8 @@
                         <field name="active" />
                         <field name="group_ids" widget="many2many_tags" />
                     </group>
-                    <label for="merge_field_ids" />
-                    <field name="merge_field_ids">
-                        <tree create="false" delete="false" editable="top">
-                            <field name="name" readonly="True" />
-                            <field name="tag" readonly="True" />
-                            <field name="code" />
-                        </tree>
-                    </field>
+                    <label for="model_ids" />
+                    <field name="model_ids" />
                     <label for="interest_category_ids" />
                     <field name="interest_category_ids">
                         <tree create="false" delete="false">

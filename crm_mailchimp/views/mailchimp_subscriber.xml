@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_mailchimp_subscriber_tree" model="ir.ui.view">
+        <field name="model">mailchimp.subscriber</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="list_id" />
+                <field name="email" />
+            </tree>
+        </field>
+    </record>
+    <record id="view_mailchimp_subscriber_form" model="ir.ui.view">
+        <field name="model">mailchimp.subscriber</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="list_id" />
+                    <field name="res_model" />
+                    <field name="res_id" />
+                    <field name="email" />
+                    <field name="interest_ids">
+                        <tree
+                            editable="top"
+                            context="{'default_subscriber_id': active_id, 'default_list_id': list_id}"
+                        >
+                            <field name="subscriber_id" invisible="1" />
+                            <field name="list_id" invisible="1" />
+                            <field name="interest_id" />
+                        </tree>
+                    </field>
+                </group>
+            </form>
+        </field>
+    </record>
+    <record id="action_mailchimp_subscriber" model="ir.actions.act_window">
+        <field name="name">action.mailchimp.subscriber</field>
+        <field name="res_model">mailchimp.subscriber</field>
+    </record>
+</odoo>
