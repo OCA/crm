@@ -29,8 +29,7 @@ class CrmLead(models.Model):
                 )
 
     def _create_lead_partner_data(self, name, is_company, parent_id=False):
-        """Propagate industries in the creation of partner.
-        """
+        """Propagate industries in the creation of partner."""
         values = super(CrmLead, self)._create_lead_partner_data(
             name, is_company, parent_id
         )
