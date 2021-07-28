@@ -20,6 +20,7 @@ Available addons
 addon | version | summary
 --- | --- | ---
 [crm_claim](crm_claim/) | 14.0.1.0.1 | Track your customers/vendors claims and grievances.
+[crm_industry](crm_industry/) | 14.0.1.0.0 | Link leads/opportunities to industries
 [crm_lead_code](crm_lead_code/) | 14.0.1.0.0 | Sequential Code for Leads / Opportunities
 [crm_lead_firstname](crm_lead_firstname/) | 14.0.1.0.2 | Specify split names for contacts in leads
 [crm_lead_vat](crm_lead_vat/) | 14.0.1.1.0 | Add VAT field to leads
