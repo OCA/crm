@@ -35,7 +35,7 @@ class TestCrmLead(TransactionCase):
         }
         lead = self.env["crm.lead"].create(lead_vals)
         partner = self.env["res.partner"].create(
-            lead._create_lead_partner_data(lead.partner_name, True, False)
+            lead._prepare_customer_values(lead.partner_name, is_company=True)
         )
         self.assertEqual(partner.industry_id, lead.industry_id)
         self.assertEqual(partner.secondary_industry_ids, lead.secondary_industry_ids)
