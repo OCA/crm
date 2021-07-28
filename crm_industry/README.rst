@@ -17,7 +17,7 @@ CRM Industry
     :target: https://github.com/OCA/crm/tree/14.0/crm_industry
     :alt: OCA/crm
 .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
-    :target: https://translation.odoo-community.org/projects/crm-13-0/crm-13-0-crm_industry
+    :target: https://translation.odoo-community.org/projects/crm-14-0/crm-14-0-crm_industry
     :alt: Translate me on Weblate
 .. |badge5| image:: https://img.shields.io/badge/runbot-Try%20me-875A7B.png
     :target: https://runbot.odoo-community.org/runbot/111/14.0
