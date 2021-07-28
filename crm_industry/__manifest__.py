@@ -4,7 +4,7 @@
 {
     "name": "CRM Industry",
     "summary": "Link leads/opportunities to industries",
-    "version": "13.0.1.0.0",
+    "version": "14.0.1.0.0",
     "category": "Customer Relationship Management",
     "website": "https://github.com/OCA/crm",
     "author": "Tecnativa, Odoo Community Association (OCA)",
