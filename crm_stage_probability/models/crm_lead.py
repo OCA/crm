@@ -7,20 +7,20 @@ class CrmLead(models.Model):
 
     _inherit = "crm.lead"
 
-    def _default_probability(self):
-        if "default_stage_id" in self._context:
-            stage_id = self._context.get("default_stage_id")
-        else:
-            stage_id = self._default_stage_id()
-        if stage_id:
-            return self.env["crm.stage"].browse(stage_id).probability
-        return 10
-
     is_stage_probability = fields.Boolean(
         compute="_compute_is_stage_probability", readonly=True
     )
     stage_probability = fields.Float(related="stage_id.probability", readonly=True)
     probability = fields.Float(default=lambda self: self._default_probability())
+
+    def _default_probability(self):
+        if "default_stage_id" in self._context:
+            stage_id = self._context.get("default_stage_id")
+        else:
+            stage_id = self._stage_find(domain=[("fold", "=", False)]).id
+        if stage_id:
+            return self.env["crm.stage"].browse(stage_id).probability
+        return 10
 
     @api.depends("probability", "stage_id", "stage_id.probability")
     def _compute_is_stage_probability(self):
@@ -37,13 +37,16 @@ class CrmLead(models.Model):
                 continue
             lead.is_automated_probability = False
 
-    def _update_probability(self):
+    @api.depends(
+        lambda self: ["tag_ids", "stage_id", "team_id"] + self._pls_get_safe_fields()
+    )
+    def _compute_probabilities(self):
         self = self.with_context(_auto_update_probability=True)
-        return super()._update_probability()
+        return super()._compute_probabilities()
 
     @api.model
     def _onchange_stage_id_values(self, stage_id):
-        """ returns the new values when stage_id has changed """
+        """returns the new values when stage_id has changed"""
         if not stage_id:
             return {}
         stage = self.env["crm.stage"].browse(stage_id)
@@ -53,10 +56,8 @@ class CrmLead(models.Model):
 
     @api.onchange("stage_id")
     def _onchange_stage_id(self):
-        res = super()._onchange_stage_id()
         values = self._onchange_stage_id_values(self.stage_id.id)
         self.update(values)
-        return res
 
     def write(self, vals):
         # Avoid to update probability with automated_probability on
