@@ -40,7 +40,9 @@ class TestCrmLeadProbability(SavepointCase):
         opportunity = self.env["crm.lead"].create(
             {"name": "My opportunity", "type": "opportunity"}
         )
-        default_stage_id = self.env["crm.lead"]._default_stage_id()
+        default_stage_id = (
+            self.env["crm.lead"]._stage_find(domain=[("fold", "=", False)]).id
+        )
         default_stage = self.env["crm.stage"].browse(default_stage_id)
         self.assertEqual(opportunity.probability, default_stage.probability)
         self.assertFalse(opportunity.is_automated_probability)

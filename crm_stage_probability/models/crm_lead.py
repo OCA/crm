@@ -7,20 +7,20 @@ class CrmLead(models.Model):
 
     _inherit = "crm.lead"
 
-    def _default_probability(self):
-        if "default_stage_id" in self._context:
-            stage_id = self._context.get("default_stage_id")
-        else:
-            stage_id = self._default_stage_id()
-        if stage_id:
-            return self.env["crm.stage"].browse(stage_id).probability
-        return 10
-
     is_stage_probability = fields.Boolean(
         compute="_compute_is_stage_probability", readonly=True
     )
     stage_probability = fields.Float(related="stage_id.probability", readonly=True)
     probability = fields.Float(default=lambda self: self._default_probability())
+
+    def _default_probability(self):
+        if "default_stage_id" in self._context:
+            stage_id = self._context.get("default_stage_id")
+        else:
+            stage_id = self._stage_find(domain=[("fold", "=", False)]).id
+        if stage_id:
+            return self.env["crm.stage"].browse(stage_id).probability
+        return 10
 
     @api.depends("probability", "stage_id", "stage_id.probability")
     def _compute_is_stage_probability(self):
