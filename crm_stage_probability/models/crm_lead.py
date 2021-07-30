@@ -53,10 +53,8 @@ class CrmLead(models.Model):
 
     @api.onchange("stage_id")
     def _onchange_stage_id(self):
-        res = super()._onchange_stage_id()
         values = self._onchange_stage_id_values(self.stage_id.id)
         self.update(values)
-        return res
 
     def write(self, vals):
         # Avoid to update probability with automated_probability on
