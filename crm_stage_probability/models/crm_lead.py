@@ -37,9 +37,12 @@ class CrmLead(models.Model):
                 continue
             lead.is_automated_probability = False
 
-    def _update_probability(self):
+    @api.depends(
+        lambda self: ["tag_ids", "stage_id", "team_id"] + self._pls_get_safe_fields()
+    )
+    def _compute_probabilities(self):
         self = self.with_context(_auto_update_probability=True)
-        return super()._update_probability()
+        return super()._compute_probabilities()
 
     @api.model
     def _onchange_stage_id_values(self, stage_id):
