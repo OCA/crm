@@ -47,6 +47,15 @@ class TestCrmLeadProbability(SavepointCase):
         self.assertEqual(opportunity.probability, default_stage.probability)
         self.assertFalse(opportunity.is_automated_probability)
 
+    def test_create_opportunity_default_stage_id(self):
+        opportunity = (
+            self.env["crm.lead"]
+            .with_context(default_stage_id=self.stage_qualified.id)
+            .create({"name": "My opportunity", "type": "opportunity"})
+        )
+        self.assertEqual(opportunity.probability, self.stage_qualified.probability)
+        self.assertFalse(opportunity.is_automated_probability)
+
     def test_mass_update(self):
         all_stages = self.env["crm.stage"].search([])
         self.assertTrue(all(all_stages.mapped("on_change")))
@@ -59,3 +68,11 @@ class TestCrmLeadProbability(SavepointCase):
         all_leads = self.env["crm.lead"].search([])
         self.assertTrue(all(all_leads.mapped("is_stage_probability")))
         self.assertFalse(all(all_leads.mapped("is_automated_probability")))
+        new_line = wiz.crm_stage_update_ids.filtered(
+            lambda x: x.stage_id == self.stage_new
+        )
+        self.assertEqual(new_line.lead_count, 13)
+        won_line = wiz.crm_stage_update_ids.filtered(
+            lambda x: x.stage_id == self.stage_won
+        )
+        self.assertEqual(won_line.lead_count, 3)
