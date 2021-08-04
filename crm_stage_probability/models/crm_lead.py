@@ -46,7 +46,7 @@ class CrmLead(models.Model):
 
     @api.model
     def _onchange_stage_id_values(self, stage_id):
-        """ returns the new values when stage_id has changed """
+        """returns the new values when stage_id has changed"""
         if not stage_id:
             return {}
         stage = self.env["crm.stage"].browse(stage_id)

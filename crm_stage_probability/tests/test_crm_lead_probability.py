@@ -1,5 +1,6 @@
 # Copyright 2020 Camptocamp SA
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl)
+from odoo.exceptions import UserError
 from odoo.tests import SavepointCase
 
 
@@ -76,3 +77,19 @@ class TestCrmLeadProbability(SavepointCase):
             lambda x: x.stage_id == self.stage_won
         )
         self.assertEqual(won_line.lead_count, 3)
+
+    def test_mass_update_no_onchange_stage(self):
+        new_stage = self.env["crm.stage"].create(
+            {
+                "name": "No Onchange",
+                "sequence": 10,
+            }
+        )
+        self.assertFalse(new_stage.on_change)
+        with self.assertRaises(UserError) as context:
+            (
+                self.env["crm.lead.stage.probability.update"]
+                .with_context(active_ids=new_stage.ids)
+                .create({})
+            )
+        self.assertTrue("Following stages must be set as" in str(context.exception))
