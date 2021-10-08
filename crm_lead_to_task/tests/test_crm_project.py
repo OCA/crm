@@ -21,7 +21,9 @@ class TestCrmProject(common.SavepointCase):
     def test_crm_project(self):
         wizard = (
             self.env["crm.lead.convert2task"]
-            .with_context(active_id=self.lead.id,)
+            .with_context(
+                active_id=self.lead.id,
+            )
             .create({"project_id": self.project.id})
         )
         action = wizard.action_lead_to_project_task()
