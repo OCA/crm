@@ -8,7 +8,6 @@ class CrmLeadConvert2Task(models.TransientModel):
     """ wizard to convert a Lead into a Project task and move the Mail Thread """
 
     _name = "crm.lead.convert2task"
-    _inherit = "crm.partner.binding"
     _description = "Lead convert to Task"
 
     @api.model
@@ -19,23 +18,26 @@ class CrmLeadConvert2Task(models.TransientModel):
             result["lead_id"] = lead_id
         return result
 
-    lead_id = fields.Many2one("crm.lead", string="Lead", domain=[("type", "=", "lead")])
-    project_id = fields.Many2one("project.project", string="Project")
+    lead_id = fields.Many2one(
+        comodel_name="crm.lead", string="Lead", domain=[("type", "=", "lead")]
+    )
+    project_id = fields.Many2one(comodel_name="project.project", string="Project")
 
     def action_lead_to_project_task(self):
         self.ensure_one()
         # get the lead to transform
         lead = self.lead_id
-        partner_id = self._find_matching_partner()
-        if not partner_id and (lead.partner_name or lead.contact_name):
-            partner_id = lead.handle_partner_assignation()[lead.id]
+        partner = lead._find_matching_partner()
+        if not partner and (lead.partner_name or lead.contact_name):
+            lead.handle_partner_assignment()
+            partner = lead.partner_id
         # create new project.task
         vals = {
             "name": lead.name,
             "description": lead.description,
             "email_from": lead.email_from,
             "project_id": self.project_id.id,
-            "partner_id": partner_id,
+            "partner_id": partner.id,
             "user_id": None,
         }
         task = self.env["project.task"].create(vals)
