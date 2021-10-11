@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2019-11-20 18:35+0000\n"
-"Last-Translator: Bole <bole@dajmi5.com>\n"
+"PO-Revision-Date: 2021-10-11 16:34+0000\n"
+"Last-Translator: Matija Krolo <matija.krolo@ecodica.eu>\n"
 "Language-Team: none\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 3.8\n"
+"X-Generator: Weblate 4.3.2\n"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_res_partner__claim_count
@@ -152,13 +152,13 @@ msgstr ""
 #. module: crm_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.crm_claim_stage_form
 msgid "Claim Stage"
-msgstr ""
+msgstr "Stadij zahtjeva"
 
 #. module: crm_claim
 #: model:ir.actions.act_window,name:crm_claim.crm_claim_stage_act
 #: model_terms:ir.ui.view,arch_db:crm_claim.crm_claim_stage_tree
 msgid "Claim Stages"
-msgstr ""
+msgstr "Stadiji zahtjeva"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__name
