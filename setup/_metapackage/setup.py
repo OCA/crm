@@ -15,6 +15,7 @@ setuptools.setup(
         'odoo14-addon-crm_lead_vat',
         'odoo14-addon-crm_location',
         'odoo14-addon-crm_phonecall',
+        'odoo14-addon-crm_project',
         'odoo14-addon-crm_security_group',
     ],
     classifiers=[
