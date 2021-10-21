@@ -20,7 +20,10 @@ class CrmLead(models.Model):
     def create(self, vals_list):
         for vals in vals_list:
             if vals.get("code", "/") == "/":
-                vals["code"] = self.env.ref(
-                    "crm_lead_code.sequence_lead", raise_if_not_found=False
-                ).next_by_id()
-        return super().create(vals_list)
+                seq_date = fields.Date.context_today(self)
+                vals["code"] = (
+                    self.env["ir.sequence"]
+                    .with_company(self.company_id)
+                    .next_by_code("crm.lead", sequence_date=seq_date)
+                )
+        return super(CrmLead, self).create(vals_list)
