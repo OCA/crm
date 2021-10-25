@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Add phone number extension fields for crm lead -->
+    <record id="crm_lead_view_form" model="ir.ui.view">
+        <field name="name">view.CRM.opportunity.number.extension.form</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form" />
+        <field name="arch" type="xml">
+            <field name="phone" position="after">
+                <label for="phone_extension" string="Extn. " />
+                <field name="phone_extension" string="Extn." />
+            </field>
+            <xpath
+                expr="//group[@name='lead_info']//field[@name='phone']"
+                position="after"
+            >
+
+                <label for="phone_extension" string="Extn. " />
+                <field name="phone_extension" string="Extn." />
+            </xpath>
+        </field>
+    </record>
+</odoo>
