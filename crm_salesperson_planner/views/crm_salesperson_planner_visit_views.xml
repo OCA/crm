@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2021 Sygel - Valentin Vinagre
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record model="ir.ui.view" id="crm_salesperson_planner_visit_tree_view">
+        <field name="name">CRM - Salesperson Planner Visit Tree</field>
+        <field name="model">crm.salesperson.planner.visit</field>
+        <field name="arch" type="xml">
+            <tree
+                string="Visits"
+                decoration-success="state == 'done'"
+                decoration-info="state == 'confirm'"
+                decoration-warning="state == 'incident'"
+                decoration-muted="state == 'cancel'"
+            >
+                <field name="name" />
+                <field name="sequence" />
+                <field name="date" />
+                <field name="partner_id" />
+                <field name="user_id" />
+                <field name="company_id" groups="base.group_multi_company" />
+                <field name="state" />
+                <button
+                    name="action_draft"
+                    type="object"
+                    attrs="{'invisible': [('state', 'not in', ['cancel','incident', 'done'])]}"
+                    icon="fa-undo"
+                />
+                <button
+                    name="action_confirm"
+                    type="object"
+                    icon="fa-calendar text-success"
+                    attrs="{'invisible': [('state', '!=', 'draft')]}"
+                />
+                <button
+                    name="action_done"
+                    type="object"
+                    icon="fa-check"
+                    attrs="{'invisible': [('state', '!=', 'confirm')]}"
+                />
+                <button
+                    name="%(crm_salesperson_planner_visit_close_wiz_action)d"
+                    type="action"
+                    icon="fa-ban text-danger"
+                    attrs="{'invisible': [('state', 'in', ['cancel','incident', 'done'])]}"
+                    context="{'att_close_type':'cancel'}"
+                />
+                <button
+                    name="%(crm_salesperson_planner_visit_close_wiz_action)d"
+                    type="action"
+                    icon="fa-exclamation-triangle"
+                    attrs="{'invisible': [('state', '!=', 'confirm')]}"
+                    context="{'att_close_type':'incident'}"
+                />
+            </tree>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="crm_salesperson_planner_visit_form_view">
+        <field name="name">CRM - Salesperson Planner Visit Form</field>
+        <field name="model">crm.salesperson.planner.visit</field>
+        <field name="arch" type="xml">
+            <form string="Visit">
+                <header>
+                    <button
+                        name="action_draft"
+                        id="action_draft"
+                        string="Draft"
+                        type="object"
+                        attrs="{'invisible': [('state', 'not in', ['cancel','incident', 'done'])]}"
+                    />
+                    <button
+                        name="action_confirm"
+                        id="action_confirm"
+                        string="Confirm"
+                        class="btn-primary"
+                        type="object"
+                        attrs="{'invisible': [('state', '!=', 'draft')]}"
+                    />
+                    <button
+                        name="action_done"
+                        id="action_done"
+                        string="Done"
+                        class="btn-primary"
+                        type="object"
+                        attrs="{'invisible': [('state', '!=', 'confirm')]}"
+                    />
+                    <button
+                        name="%(crm_salesperson_planner_visit_close_wiz_action)d"
+                        id="action_cancel"
+                        string="Cancel"
+                        type="action"
+                        attrs="{'invisible': [('state', 'in', ['cancel','incident', 'done'])]}"
+                        context="{'att_close_type':'cancel'}"
+                    />
+                    <button
+                        name="%(crm_salesperson_planner_visit_close_wiz_action)d"
+                        id="action_incident"
+                        string="Incident"
+                        type="action"
+                        attrs="{'invisible': [('state', '!=', 'confirm')]}"
+                        context="{'att_close_type':'incident'}"
+                    />
+                    <field
+                        name="state"
+                        widget="statusbar"
+                        statusbar_visible="draft,confirm,done,cancel"
+                    />
+                </header>
+                <sheet string="Visit">
+                    <div class="oe_button_box" name="button_box">
+                    </div>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" readonly="1" />
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field
+                                name="partner_id"
+                                widget="res_partner_many2one"
+                                context="{'res_partner_search_mode': 'customer', 'show_address': True, 'show_vat': True}"
+                                options="{&quot;always_reload&quot;: True}"
+                            />
+                            <field
+                                name="partner_phone"
+                                widget="phone"
+                                attrs="{'invisible': [('partner_id', '=', False)]}"
+                            />
+                            <field
+                                name="partner_mobile"
+                                widget="phone"
+                                attrs="{'invisible': [('partner_id', '=', False)]}"
+                            />
+                        </group>
+                        <group>
+                            <field name="date" />
+                            <field name="calendar_event_id" readonly="1" />
+                            <field name="sequence" />
+                            <field name="user_id" />
+                            <field
+                                name="company_id"
+                                groups="base.group_multi_company"
+                            />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page
+                            string="Close Info"
+                            attrs="{'invisible': [('state', 'not in', ['cancel', 'incident'])]}"
+                        >
+                            <group>
+                                <field
+                                    name="close_reason_id"
+                                    readonly="1"
+                                    options="{'no_edit': True, 'no_open': True}"
+                                />
+                                <field name="close_reason_notes" readonly="1" />
+                                <field
+                                    name="close_reason_image"
+                                    widget="image"
+                                    readonly="1"
+                                    attrs="{'invisible': [('close_reason_image', '=', False)]}"
+                                />
+                            </group>
+                        </page>
+                        <page string="Internal Notes">
+                            <field
+                                name="description"
+                                placeholder="Add a description..."
+                            />
+                        </page>
+                        <page string="Opportunities">
+                            <group>
+                                <field
+                                    name="opportunity_ids"
+                                    nolabel="1"
+                                    options="{'no_create': True}"
+                                />
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field
+                        name="message_follower_ids"
+                        widget="mail_followers"
+                        groups="base.group_user"
+                    />
+                    <field name="activity_ids" widget="mail_activity" />
+                    <field name="message_ids" widget="mail_thread" />
+                </div>
+            </form>
+        </field>
+    </record>
+    <record id="crm_salesperson_planner_visit_filter" model="ir.ui.view">
+        <field name="name">CRM - Salesperson Planner Visit Search</field>
+        <field name="model">crm.salesperson.planner.visit</field>
+        <field name="arch" type="xml">
+            <search string="Search Visits">
+                <field name="name" />
+                <field
+                    name="partner_id"
+                    filter_domain="[('partner_id','child_of',self)]"
+                />
+                <field name="user_id" />
+                <field name="date" />
+                <field name="opportunity_ids" />
+                <separator />
+                <filter
+                    string="My Visits"
+                    name="assigned_to_me"
+                    domain="[('user_id', '=', uid)]"
+                    help="Visits that are assigned to me"
+                />
+                <separator orientation="vertical" />
+                <filter
+                    string="Late Visits"
+                    name="visits_overdue"
+                    domain="[('date', '&lt;', context_today().strftime('%Y-%m-%d'))]"
+                />
+                <filter
+                    string="Today Visits"
+                    name="visits_today"
+                    domain="[('date', '=', context_today().strftime('%Y-%m-%d'))]"
+                />
+                <filter
+                    string="Future Visits"
+                    name="visits_upcoming_all"
+                    domain="[('date', '&gt;', context_today().strftime('%Y-%m-%d'))]"
+                />
+                <group expand="0" name="visits" string="Group By">
+                    <filter
+                        string="Salesperson"
+                        name="salesperson"
+                        context="{'group_by': 'user_id'}"
+                    />
+                    <filter
+                        string="Partner"
+                        name="partner"
+                        context="{'group_by': 'partner_id'}"
+                    />
+                    <filter
+                        string="State"
+                        name="state"
+                        context="{'group_by': 'state'}"
+                    />
+                    <filter
+                        string="Company"
+                        name="company"
+                        context="{'group_by':'company_id'}"
+                        groups="base.group_multi_company"
+                    />
+                    <separator orientation="vertical" />
+                    <filter
+                        string="Visit by Date"
+                        context="{'group_by':'date'}"
+                        name="date"
+                    />
+                </group>
+            </search>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="my_crm_salesperson_planner_visit_action">
+        <field name="name">Visits</field>
+        <field name="res_model">crm.salesperson.planner.visit</field>
+        <field name="view_mode">tree,form,pivot</field>
+        <field name="context">{
+            'search_default_visits_today':1,
+        }</field>
+        <field name="domain">[('user_id', '=', uid)]</field>
+        <field
+            name="search_view_id"
+            ref="crm_salesperson_planner.crm_salesperson_planner_visit_filter"
+        />
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Record and track my sales commercial visits.
+            </p>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="all_crm_salesperson_planner_visit_action">
+        <field name="name">Visits</field>
+        <field name="res_model">crm.salesperson.planner.visit</field>
+        <field name="view_mode">tree,form,pivot</field>
+        <field name="context">{
+            'search_default_salesperson':1,
+        }</field>
+        <field
+            name="search_view_id"
+            ref="crm_salesperson_planner.crm_salesperson_planner_visit_filter"
+        />
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Record and track all sales commercial visits.
+            </p>
+        </field>
+    </record>
+</odoo>
