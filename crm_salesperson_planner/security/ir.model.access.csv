@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_crm_salesperson_planner_visit_user,crm.salesperson.planner.visit.user,model_crm_salesperson_planner_visit,sales_team.group_sale_salesman,1,1,1,1
+access_crm_salesperson_planner_visit_close_reason_user,crm.salesperson.planner.visit.close.reason.user,model_crm_salesperson_planner_visit_close_reason,sales_team.group_sale_salesman,1,0,0,0
+access_crm_salesperson_planner_visit_close_reason_manager,crm.salesperson.planner.visit.close.reason.manager,model_crm_salesperson_planner_visit_close_reason,sales_team.group_sale_manager,1,1,1,1
+access_crm_salesperson_planner_visit_template_user,crm.salesperson.planner.visit.template.user,model_crm_salesperson_planner_visit_template,sales_team.group_sale_salesman,1,1,1,1

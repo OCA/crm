@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2021 Sygel - Valentin Vinagre
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="crm_lead_crm_salesperson_planner" model="ir.ui.view">
+        <field name="name">crm.lead.view.crm.salesperson.planner</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form" />
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page string="Salesperson Visits">
+                    <group>
+                        <field name="crm_salesperson_planner_visit_ids" nolabel="1" />
+                    </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+</odoo>
