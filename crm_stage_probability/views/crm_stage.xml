@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="crm_lead_stage_search_inherit" model="ir.ui.view">
+        <field name="name">Stage - Search - inherit</field>
+        <field name="inherit_id" ref="crm.crm_lead_stage_search" />
+        <field name="model">crm.stage</field>
+        <field name="arch" type="xml">
+            <field name="sequence" position="after">
+                <field name="probability" />
+            </field>
+        </field>
+    </record>
+    <record id="crm_stage_tree_inherit" model="ir.ui.view">
+        <field name="name">crm.stage.tree.inherit</field>
+        <field name="model">crm.stage</field>
+        <field name="inherit_id" ref="crm.crm_stage_tree" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="probability" />
+            </field>
+        </field>
+    </record>
+    <record id="crm_stage_form_inherit" model="ir.ui.view">
+        <field name="name">crm.stage.form.inherit</field>
+        <field name="model">crm.stage</field>
+        <field name="inherit_id" ref="crm.crm_stage_form" />
+        <field name="arch" type="xml">
+            <field name="team_count" position="after">
+                <group name="probability">
+                    <field name="on_change" />
+                    <field
+                        name="probability"
+                        attrs="{'invisible': [('on_change', '=', False)]}"
+                    />
+                </group>
+            </field>
+        </field>
+    </record>
+</odoo>
