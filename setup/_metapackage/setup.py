@@ -18,6 +18,7 @@ setuptools.setup(
         'odoo14-addon-crm_phonecall',
         'odoo14-addon-crm_project',
         'odoo14-addon-crm_security_group',
+        'odoo14-addon-crm_stage_probability',
     ],
     classifiers=[
         'Programming Language :: Python',
