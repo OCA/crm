@@ -29,6 +29,7 @@ addon | version | maintainers | summary
 [crm_phonecall](crm_phonecall/) | 14.0.1.0.1 |  | CRM Phone Calls
 [crm_project](crm_project/) | 14.0.1.0.0 |  | Create Tasks from Leads/Opportunities
 [crm_security_group](crm_security_group/) | 14.0.1.0.1 | [![victoralmau](https://github.com/victoralmau.png?size=30px)](https://github.com/victoralmau) | Add new group in Sales to show only CRM
+[crm_stage_probability](crm_stage_probability/) | 14.0.1.0.0 |  | Define fixed probability on the stages
 
 [//]: # (end addons)
 
