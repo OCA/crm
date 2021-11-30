@@ -4,7 +4,7 @@
 {
     "name": "CRM Stage Type",
     "summary": "Add type in the lead and opportunity stages",
-    "version": "13.0.1.0.0",
+    "version": "13.0.1.0.1",
     "category": "Sales",
     "website": "https://github.com/OCA/crm",
     "author": "ForgeFlow, Odoo Community Association (OCA)",
