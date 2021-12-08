@@ -11,9 +11,9 @@ class CRMLead(models.Model):
     _inherit = "crm.lead"
 
     @api.model
-    def _create_lead_partner_data(self, name, is_company, parent_id=False):
+    def _prepare_customer_values(self, name, is_company, parent_id=False):
         """Populate marketing fields in partner."""
-        res = super()._create_lead_partner_data(name, is_company, parent_id)
+        res = super()._prepare_customer_values(name, is_company, parent_id)
         # We use self.env['utm.mixin'] for not losing possible overrides
         # see https://github.com/odoo/odoo/blob/
         # e5c8071484c883bf78478a39ef2120bcd8f2442d/addons/utm/models/utm.py#L51
