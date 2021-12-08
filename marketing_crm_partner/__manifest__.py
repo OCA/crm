@@ -6,9 +6,9 @@
 {
     "name": "Tracking Fields in Partners",
     "summary": "Copy tracking fields from leads to partners",
-    "version": "13.0.1.0.1",
+    "version": "14.0.1.0.1",
     "category": "Marketing",
-    "website": "https://www.github.com/OCA/crm",
+    "website": "https://github.com/OCA/crm",
     "author": "Tecnativa, Odoo Community Association (OCA)",
     "license": "AGPL-3",
     "application": False,
