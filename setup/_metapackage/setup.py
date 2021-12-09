@@ -19,6 +19,7 @@ setuptools.setup(
         'odoo14-addon-crm_project',
         'odoo14-addon-crm_security_group',
         'odoo14-addon-crm_stage_probability',
+        'odoo14-addon-marketing_crm_partner',
     ],
     classifiers=[
         'Programming Language :: Python',
