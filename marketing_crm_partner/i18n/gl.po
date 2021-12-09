@@ -1,0 +1,70 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * marketing_crm_partner
+#
+# Translators:
+# Alejandro Santana <alejandrosantana@anubia.es>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0c\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-11-26 03:41+0000\n"
+"PO-Revision-Date: 2019-02-08 10:50+0000\n"
+"Last-Translator: Marta Vázquez Rodríguez <vazrodmar@gmail.com>\n"
+"Language-Team: Galician (https://www.transifex.com/oca/teams/23907/gl/)\n"
+"Language: gl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.4\n"
+
+#. module: marketing_crm_partner
+#: model_terms:ir.ui.view,arch_db:marketing_crm_partner.view_res_partner_filter
+msgid "Campaign"
+msgstr "Campaña"
+
+#. module: marketing_crm_partner
+#: model:ir.model,name:marketing_crm_partner.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: marketing_crm_partner
+#: model:ir.model,name:marketing_crm_partner.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Iniciativa/Oportunidade"
+
+#. module: marketing_crm_partner
+#: model_terms:ir.ui.view,arch_db:marketing_crm_partner.view_partner_form
+msgid "Marketing"
+msgstr "'Marketing'"
+
+#. module: marketing_crm_partner
+#: model_terms:ir.ui.view,arch_db:marketing_crm_partner.view_res_partner_filter
+msgid "Medium"
+msgstr "Medio"
+
+#. module: marketing_crm_partner
+#: model_terms:ir.ui.view,arch_db:marketing_crm_partner.view_res_partner_filter
+msgid "Source"
+msgstr "Orixe"
+
+#~ msgid ""
+#~ "This is a name that helps you keep track of your different campaign "
+#~ "efforts, e.g. Fall_Drive, Christmas_Special"
+#~ msgstr ""
+#~ "Este é un nome que axuda a manter o seguimento do esforzo das diferentes "
+#~ "campañas, por exemplo Especial de nadal"
+
+#~ msgid "This is the method of delivery, e.g. Postcard, Email, or Banner Ad"
+#~ msgstr "Este é o método de envío, por exemplo, Postal, Correo electrónico"
+
+#~ msgid ""
+#~ "This is the source of the link, e.g. Search Engine, another domain, or "
+#~ "name of email list"
+#~ msgstr ""
+#~ "Esta é a orixe do enlace, por exemplo, Motor de búsqueda, outro dominio "
+#~ "ou nome de lista de correo electrónico"
+
+#~ msgid "Partner"
+#~ msgstr "Empresa"
