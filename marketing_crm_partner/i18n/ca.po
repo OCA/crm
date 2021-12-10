@@ -21,6 +21,7 @@ msgstr ""
 "X-Generator: Weblate 3.10\n"
 
 #. module: marketing_crm_partner
+#: model:ir.model.fields,field_description:marketing_crm_partner.field_res_partner__campaign_id
 #: model_terms:ir.ui.view,arch_db:marketing_crm_partner.view_res_partner_filter
 msgid "Campaign"
 msgstr "Campanya"
@@ -29,6 +30,24 @@ msgstr "Campanya"
 #: model:ir.model,name:marketing_crm_partner.model_res_partner
 msgid "Contact"
 msgstr "Contacte"
+
+#. module: marketing_crm_partner
+#: model:ir.model.fields,field_description:marketing_crm_partner.field_crm_lead__display_name
+#: model:ir.model.fields,field_description:marketing_crm_partner.field_res_partner__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: marketing_crm_partner
+#: model:ir.model.fields,field_description:marketing_crm_partner.field_crm_lead__id
+#: model:ir.model.fields,field_description:marketing_crm_partner.field_res_partner__id
+msgid "ID"
+msgstr ""
+
+#. module: marketing_crm_partner
+#: model:ir.model.fields,field_description:marketing_crm_partner.field_crm_lead____last_update
+#: model:ir.model.fields,field_description:marketing_crm_partner.field_res_partner____last_update
+msgid "Last Modified on"
+msgstr ""
 
 #. module: marketing_crm_partner
 #: model:ir.model,name:marketing_crm_partner.model_crm_lead
@@ -41,14 +60,35 @@ msgid "Marketing"
 msgstr "Marketing"
 
 #. module: marketing_crm_partner
+#: model:ir.model.fields,field_description:marketing_crm_partner.field_res_partner__medium_id
 #: model_terms:ir.ui.view,arch_db:marketing_crm_partner.view_res_partner_filter
 msgid "Medium"
 msgstr "Mitjà"
 
 #. module: marketing_crm_partner
+#: model:ir.model.fields,field_description:marketing_crm_partner.field_res_partner__source_id
 #: model_terms:ir.ui.view,arch_db:marketing_crm_partner.view_res_partner_filter
 msgid "Source"
 msgstr "Font"
+
+#. module: marketing_crm_partner
+#: model:ir.model.fields,help:marketing_crm_partner.field_res_partner__campaign_id
+msgid ""
+"This is a name that helps you keep track of your different campaign efforts, "
+"e.g. Fall_Drive, Christmas_Special"
+msgstr ""
+
+#. module: marketing_crm_partner
+#: model:ir.model.fields,help:marketing_crm_partner.field_res_partner__medium_id
+msgid "This is the method of delivery, e.g. Postcard, Email, or Banner Ad"
+msgstr ""
+
+#. module: marketing_crm_partner
+#: model:ir.model.fields,help:marketing_crm_partner.field_res_partner__source_id
+msgid ""
+"This is the source of the link, e.g. Search Engine, another domain, or name "
+"of email list"
+msgstr ""
 
 #~ msgid "Partner"
 #~ msgstr "Empresa"
