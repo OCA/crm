@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # © 2016 Iván Todorovich <ivan.todorovich@gmail.com>
 # © 2015 Holger Brunn <hbrunn@therp.nl>
 # © 2009 Sandy Carter <sandy.carter@savoirfairelinux.com>

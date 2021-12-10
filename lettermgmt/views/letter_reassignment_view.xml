@@ -1,10 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!-- © 2016 Iván Todorovich <ivan.todorovich@gmail.com>
      © 2015 Holger Brunn <hbrunn@therp.nl>
      © 2009 Sandy Carter <sandy.carter@savoirfairelinux.com>
      © 2009 Parthiv Patel, Tech Receptives
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
-     
 <openerp>
   <data>
 
@@ -15,8 +14,8 @@
       <field name="model">letter.reassignment</field>
       <field name="arch" type="xml">
         <tree string="Reassignment">
-          <field name="name"/>
-          <field name="comment"/>
+          <field name="name" />
+          <field name="comment" />
         </tree>
       </field>
     </record>
@@ -27,8 +26,8 @@
       <field name="arch" type="xml">
         <form string="Reassignment">
             <group>
-                <field name="name"/>
-                <field name="comment"/>
+                <field name="name" />
+                <field name="comment" />
             </group>
         </form>
       </field>
@@ -42,7 +41,7 @@
       <field name="res_model">letter.reassignment</field>
       <field name="view_type">form</field>
       <field name="view_mode">tree,form</field>
-      <field name="view_id" ref="letter_reassignment_tree_view"/>
+      <field name="view_id" ref="letter_reassignment_tree_view" />
     </record>
 
     <!-- Menus -->
