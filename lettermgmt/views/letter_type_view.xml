@@ -4,7 +4,7 @@
      © 2009 Sandy Carter <sandy.carter@savoirfairelinux.com>
      © 2009 Parthiv Patel, Tech Receptives
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
-<openerp>
+<odoo>
   <data>
 
     <!-- Views -->
@@ -37,9 +37,7 @@
 
     <record model="ir.actions.act_window" id="action_letter_type_tree_view">
       <field name="name">Letter Type</field>
-      <field name="type">ir.actions.act_window</field>
       <field name="res_model">letter.type</field>
-      <field name="view_type">form</field>
       <field name="view_mode">tree,form</field>
       <field name="view_id" ref="letter_type_tree_view" />
       <field name="help" type="html">
@@ -62,4 +60,4 @@
         />
 
   </data>
-</openerp>
+</odoo>

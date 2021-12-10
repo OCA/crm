@@ -35,7 +35,7 @@ class ResLetter(models.Model):
         default="draft",
         readonly=True,
         copy=False,
-        track_visibility="onchange",
+        tracking=True,
         help="""
             * Draft: not confirmed yet.\n
             * Sent: has been sent, can't be modified anymore.\n
@@ -66,14 +66,14 @@ class ResLetter(models.Model):
     recipient_partner_id = fields.Many2one(
         "res.partner",
         string="Recipient",
-        track_visibility="onchange",
+        tracking=True,
         # required=True, TODO: make it required in 9.0
         default=default_recipient,
     )
     sender_partner_id = fields.Many2one(
         "res.partner",
         string="Sender",
-        track_visibility="onchange",
+        tracking=True,
         # required=True, TODO: make it required in 9.0
         default=default_sender,
     )
@@ -144,40 +144,40 @@ class ResLetter(models.Model):
             vals["number"] = sequence.get("%s.letter" % move_type)
         return super(ResLetter, self).create(vals)
 
-    @api.one
     def action_cancel(self):
+        self.ensure_one()
         """ Put the state of the letter into Cancelled """
         self.write({"state": "cancel"})
         return True
 
-    @api.one
     def action_cancel_draft(self):
+        self.ensure_one()
         """ Go from cancelled state to draf state """
         self.write({"state": "draft"})
         return True
 
-    @api.one
     def action_send(self):
+        self.ensure_one()
         """ Put the state of the letter into sent """
         self.write({"state": "sent", "snd_date": self.snd_date or fields.Date.today()})
         return True
 
-    @api.one
     def action_received(self):
+        self.ensure_one()
         """ Put the state of the letter into Received """
         self.write({"state": "rec", "rec_date": self.rec_date or fields.Date.today()})
         return True
 
-    @api.one
     def action_rec_ret(self):
+        self.ensure_one()
         """ Put the state of the letter into Received but Returned """
         self.write(
             {"state": "rec_ret", "rec_date": self.rec_date or fields.Date.today()}
         )
         return True
 
-    @api.one
     def action_rec_bad(self):
+        self.ensure_one()
         """ Put the state of the letter into Received but Damaged """
         self.write(
             {"state": "rec_bad", "rec_date": self.rec_date or fields.Date.today()}

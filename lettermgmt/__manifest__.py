@@ -16,6 +16,8 @@
     "installable": True,
     "depends": ["mail"],
     "data": [
+        "security/ir.model.access.csv",
+        "security/lettermgmt_security.xml",
         "views/res_letter_view.xml",
         "views/letter_category_view.xml",
         "views/letter_type_view.xml",
@@ -23,8 +25,6 @@
         "views/letter_folder_view.xml",
         "views/letter_reassignment_view.xml",
         "data/letter_sequence.xml",
-        "security/ir.model.access.csv",
-        "security/lettermgmt_security.xml",
     ],
     "demo": ["data/letter_demo.xml"],
 }

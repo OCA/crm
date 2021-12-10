@@ -4,37 +4,37 @@
      © 2009 Sandy Carter <sandy.carter@savoirfairelinux.com>
      © 2009 Parthiv Patel, Tech Receptives
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
-<openerp>
+<odoo>
   <data>
 
     <!-- Views -->
 
-    <record model="ir.ui.view" id="res_letter_tree_view">
-      <field name="name">Letter Tree</field>
-      <field name="model">res.letter</field>
-      <field name="arch" type="xml">
-        <tree
-                    colors="blue:state in ('draft','created','validated');black:state in ('sent','rec');red:state in ('rec_bad','rec_ret');gray:state == 'cancel'"
-                    string="Letters"
-                >
-          <field name="number" />
-          <field
-                        name="sender_partner_id"
-                        invisible="context.get('move',False) == 'out'"
-                    />
-          <field
-                        name="recipient_partner_id"
-                        invisible="context.get('move',False) == 'in'"
-                    />
-          <field name="name" />
-          <field name="category_ids" widget="many2many_tags" />
-          <field name="date" />
-          <field name="channel_id" />
-          <field name="track_ref" />
-          <field name="state" />
-        </tree>
+      <record model="ir.ui.view" id="res_letter_tree_view">
+          <field name="name">Letter Tree</field>
+          <field name="model">res.letter</field>
+          <field name="arch" type="xml">
+              <tree decoration-info="state in ('draft','created','validated')"
+                  decoration-danger="state in ('rec_bad','rec_ret')"
+                  decoration-muted="state == 'cancel'"
+                  string="Letters">
+                <field name="number" />
+              <field
+                  name="sender_partner_id"
+                  invisible="context.get('move',False) == 'out'"
+                  />
+              <field
+                  name="recipient_partner_id"
+                  invisible="context.get('move',False) == 'in'"
+                  />
+              <field name="name" />
+              <field name="category_ids" widget="many2many_tags" />
+              <field name="date" />
+              <field name="channel_id" />
+              <field name="track_ref" />
+              <field name="state" />
+          </tree>
       </field>
-    </record>
+  </record>
 
     <record model="ir.ui.view" id="res_letter_calendar_view">
       <field name="name">Letter Calendar</field>
@@ -233,9 +233,7 @@
 
     <record model="ir.actions.act_window" id="action_res_letter_out_tree_view">
       <field name="name">Outbound Letters</field>
-      <field name="type">ir.actions.act_window</field>
       <field name="res_model">res.letter</field>
-      <field name="view_type">form</field>
       <field name="view_mode">tree,form,calendar</field>
       <field name="domain">[('move','=','out')]</field>
       <field name="context">{'move':'out', 'search_default_pending': 1}</field>
@@ -243,9 +241,7 @@
 
     <record model="ir.actions.act_window" id="action_res_letter_in_tree_view">
       <field name="name">Inbound Letters</field>
-      <field name="type">ir.actions.act_window</field>
       <field name="res_model">res.letter</field>
-      <field name="view_type">form</field>
       <field name="view_mode">tree,form,calendar</field>
       <field name="domain">[('move','=','in')]</field>
       <field name="context">{'move':'in', 'search_default_pending': 1}</field>
@@ -322,4 +318,4 @@
         />
 
   </data>
-</openerp>
+</odoo>
