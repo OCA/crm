@@ -3,20 +3,19 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
 {
-    'name': 'NUTS Regions in CRM',
-    'category': 'Customer Relationship Management',
-    'version': '12.0.1.0.0',
-    'depends': [
-        'crm',
-        'sales_team',
-        'base_location_nuts',
+    "name": "NUTS Regions in CRM",
+    "category": "Customer Relationship Management",
+    "version": "12.0.1.0.0",
+    "depends": [
+        "crm",
+        "sales_team",
+        "base_location_nuts",
     ],
-    'data': [
-        'views/crm_lead_view.xml',
+    "data": [
+        "views/crm_lead_view.xml",
     ],
-    'author': 'Tecnativa, '
-              'Odoo Community Association (OCA)',
-    'website': 'https://www.tecnativa.com',
-    'license': 'AGPL-3',
-    'installable': True,
+    "author": "Tecnativa, " "Odoo Community Association (OCA)",
+    "website": "https://github.com/OCA/crm",
+    "license": "AGPL-3",
+    "installable": True,
 }
