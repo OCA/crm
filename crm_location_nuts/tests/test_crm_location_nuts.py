@@ -1,24 +1,26 @@
 # Copyright 2017 Tecnativa - David Vidal
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl-3.0).
 
-from odoo.addons.base_location_nuts.tests.test_base_location_nuts\
-    import TestBaseLocationNuts
+from odoo.addons.base_location_nuts.tests.test_base_location_nuts import (
+    TestBaseLocationNuts,
+)
 
 
 class TestCrmNuts(TestBaseLocationNuts):
     @classmethod
     def setUpClass(cls):
         super(TestCrmNuts, cls).setUpClass()
-        cls.nuts1_1 = cls.env[
-            'res.partner.nuts'].search([('code', '=', 'ES')])
-        cls.lead = cls.env['crm.lead'].create({
-            'name': 'Test Lead',
-            'contact_name': 'Mr. Odoo',
-            'nuts1_id': cls.nuts1_1.id,
-            'nuts2_id': cls.nuts2_1.id,
-            'nuts3_id': cls.nuts3_1.id,
-            'nuts4_id': cls.nuts4_1.id,
-        })
+        cls.nuts1_1 = cls.env["res.partner.nuts"].search([("code", "=", "ES")])
+        cls.lead = cls.env["crm.lead"].create(
+            {
+                "name": "Test Lead",
+                "contact_name": "Mr. Odoo",
+                "nuts1_id": cls.nuts1_1.id,
+                "nuts2_id": cls.nuts2_1.id,
+                "nuts3_id": cls.nuts3_1.id,
+                "nuts4_id": cls.nuts4_1.id,
+            }
+        )
 
     def test_create_partner(self):
         partner = self.lead._create_lead_partner()
@@ -35,12 +37,10 @@ class TestCrmNuts(TestBaseLocationNuts):
     def test_onchange_nuts_crm(self):
         self.lead.country_id = self.country_2
         self.lead._onchange_country_id_crm_location_nuts()
-        self.assertEqual(self.lead.nuts1_id.country_id,
-                         self.lead.country_id)
+        self.assertEqual(self.lead.nuts1_id.country_id, self.lead.country_id)
         self.lead.nuts4_id = self.nuts4_1
         self.lead._onchange_nuts4_id()
-        self.assertEqual(self.lead.country_id,
-                         self.country_1)
+        self.assertEqual(self.lead.country_id, self.country_1)
         self.assertEqual(self.lead.nuts3_id, self.nuts3_1)
         self.lead._onchange_nuts3_id()
         self.assertEqual(self.lead.nuts2_id, self.nuts2_1)
