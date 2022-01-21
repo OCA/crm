@@ -5,7 +5,7 @@
 {
     "name": "NUTS Regions in CRM",
     "category": "Customer Relationship Management",
-    "version": "12.0.1.0.0",
+    "version": "14.0.1.0.0",
     "depends": [
         "crm",
         "sales_team",
@@ -14,7 +14,7 @@
     "data": [
         "views/crm_lead_view.xml",
     ],
-    "author": "Tecnativa, " "Odoo Community Association (OCA)",
+    "author": "Tecnativa, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/crm",
     "license": "AGPL-3",
     "installable": True,
