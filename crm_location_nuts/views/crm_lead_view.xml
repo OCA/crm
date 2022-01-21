@@ -4,7 +4,7 @@
 <record model="ir.ui.view" id="crm_case_form_view_leads">
     <field name="name">Add NUTS fields</field>
     <field name="model">crm.lead</field>
-    <field name="inherit_id" ref="crm.crm_case_form_view_leads" />
+    <field name="inherit_id" ref="crm.crm_lead_view_form" />
     <field name="arch" type="xml">
         <field name="country_id" position="before">
             <field
@@ -28,6 +28,28 @@
                     options='{"no_open": True, "no_create": True}'
                 />
         </field>
+        <xpath expr="//page[@name='lead']//field[@name='country_id']" position="before">
+            <field
+                    name="nuts1_id"
+                    placeholder="NUTS L1"
+                    options='{"no_open": True, "no_create": True}'
+                />
+            <field
+                    name="nuts2_id"
+                    placeholder="NUTS L2"
+                    options='{"no_open": True, "no_create": True}'
+                />
+            <field
+                    name="nuts3_id"
+                    placeholder="NUTS L3"
+                    options='{"no_open": True, "no_create": True}'
+                />
+            <field
+                    name="nuts4_id"
+                    placeholder="NUTS L4"
+                    options='{"no_open": True, "no_create": True}'
+                />
+        </xpath>
     </field>
 </record>
 
@@ -68,36 +90,6 @@
                     context="{'group_by': 'nuts4_id'}"
                 />
         </group>
-    </field>
-</record>
-
-<record model="ir.ui.view" id="crm_case_form_view_oppor">
-    <field name="name">Add NUTS fields</field>
-    <field name="model">crm.lead</field>
-    <field name="inherit_id" ref="crm.crm_case_form_view_oppor" />
-    <field name="arch" type="xml">
-        <field name="country_id" position="before">
-            <field
-                    name="nuts1_id"
-                    placeholder="NUTS L1"
-                    options='{"no_open": True, "no_create": True}'
-                />
-            <field
-                    name="nuts2_id"
-                    placeholder="NUTS L2"
-                    options='{"no_open": True, "no_create": True}'
-                />
-            <field
-                    name="nuts3_id"
-                    placeholder="NUTS L3"
-                    options='{"no_open": True, "no_create": True}'
-                />
-            <field
-                    name="nuts4_id"
-                    placeholder="NUTS L4"
-                    options='{"no_open": True, "no_create": True}'
-                />
-        </field>
     </field>
 </record>
 

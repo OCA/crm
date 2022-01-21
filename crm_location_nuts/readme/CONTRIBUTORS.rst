@@ -1,3 +1,6 @@
-* Antonio Espinosa <antonio.espinosa@tecnativa.com>
-* David Vidal <david.vidal@tecnativa.com>
-* Alexandre Díaz <alexandre.diaz@tecnativa.com>
+* `Tecnativa <https://www.tecnativa.com>`_:
+
+  * Antonio Espinosa
+  * David Vidal
+  * Alexandre Díaz
+  * Ernesto Tejeda

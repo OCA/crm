@@ -23,7 +23,7 @@ class TestCrmNuts(TestBaseLocationNuts):
         )
 
     def test_create_partner(self):
-        partner = self.lead._create_lead_partner()
+        partner = self.lead._create_customer()
         self.assertEqual(partner.nuts1_id, self.nuts1_1)
         self.assertEqual(partner.nuts2_id, self.nuts2_1)
         self.assertEqual(partner.nuts3_id, self.nuts3_1)
