@@ -26,6 +26,7 @@ addon | version | maintainers | summary
 [crm_lead_firstname](crm_lead_firstname/) | 14.0.1.0.2 |  | Specify split names for contacts in leads
 [crm_lead_vat](crm_lead_vat/) | 14.0.1.1.0 |  | Add VAT field to leads
 [crm_location](crm_location/) | 14.0.1.0.0 |  | CRM location
+[crm_location_nuts](crm_location_nuts/) | 14.0.1.0.0 |  | NUTS Regions in CRM
 [crm_phone_extension](crm_phone_extension/) | 14.0.1.0.1 | [![bizzappdev](https://github.com/bizzappdev.png?size=30px)](https://github.com/bizzappdev) | CRM Phone Number Extension
 [crm_phonecall](crm_phonecall/) | 14.0.1.0.1 |  | CRM Phone Calls
 [crm_project](crm_project/) | 14.0.1.0.0 |  | Create Tasks from Leads/Opportunities
