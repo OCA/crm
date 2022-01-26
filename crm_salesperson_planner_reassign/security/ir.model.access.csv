@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_crm_salesperson_planner_visit_reassign_manager,crm.salesperson.planner.visit.reassign.manager,model_crm_salesperson_planner_visit_reassign,sales_team.group_sale_salesman_all_leads,1,1,1,1
+access_crm_salesperson_planner_visit_reassign_line_manager,crm.salesperson.planner.visit.reassign.line.manager,model_crm_salesperson_planner_visit_reassign_line,sales_team.group_sale_salesman_all_leads,1,1,1,1

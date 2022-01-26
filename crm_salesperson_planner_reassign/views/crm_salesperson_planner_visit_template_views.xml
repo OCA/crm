@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2022 Sygel - Manuel Regidor
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record
+        id="crm_salesperson_planner_reassign_visit_template_form_view"
+        model="ir.ui.view"
+    >
+        <field
+            name="name"
+        >crm.salesperson.planner.reassign.visit.template.form.view</field>
+        <field name="model">crm.salesperson.planner.visit.template</field>
+        <field
+            name="inherit_id"
+            ref="crm_salesperson_planner.crm_salesperson_planner_visit_template_form_view"
+        />
+        <field name="arch" type="xml">
+            <field name="user_id" position="after">
+                <field name="last_user_id" readonly="1" />
+            </field>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2022 Sygel - Manuel Regidor
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record model="ir.ui.view" id="crm_salesperson_planner_visit_reassign_tree_view">
+        <field name="name">CRM - Salesperson Planner Visit Reassign Tree</field>
+        <field name="model">crm.salesperson.planner.visit.reassign</field>
+        <field name="arch" type="xml">
+            <tree string="Salesperson Reassign">
+                <field name="name" />
+                <field name="current_user_id" />
+                <field name="new_user_id" />
+                <field name="start_date" />
+                <field name="end_date" />
+                <field name="state" />
+            </tree>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="crm_salesperson_planner_visit_reassign_form_view">
+        <field name="name">CRM - Salesperson Planner Visit Reassign Form</field>
+        <field name="model">crm.salesperson.planner.visit.reassign</field>
+        <field name="arch" type="xml">
+            <form string="Salesperson Reassign">
+                <header>
+                    <button
+                        name="action_search"
+                        string="Search"
+                        type="object"
+                        attrs="{'invisible': ['|', '|', ('state', '!=', 'draft'), '|', ('salesperson_reassign_line_ids', '!=', []), ('visit_reassign_line_ids', '!=', [])]}"
+                        class="btn-primary"
+                    />
+                    <button
+                        name="action_search"
+                        string="Search"
+                        type="object"
+                        attrs="{'invisible': ['|', ('state', '!=', 'draft'), '&amp;',('salesperson_reassign_line_ids', '=', []), ('visit_reassign_line_ids', '=', [])]}"
+                    />
+                    <button
+                        name="action_validate"
+                        string="Validate"
+                        type="object"
+                        attrs="{'invisible': [ '|', ('state', '!=', 'draft'), '&amp;', ('salesperson_reassign_line_ids', '=', []), ('visit_reassign_line_ids', '=', [])]}"
+                        class="btn-primary"
+                    />
+                    <button
+                        name="action_reassign"
+                        string="Reassign"
+                        type="object"
+                        attrs="{'invisible': [('state', '!=', 'validated')]}"
+                        class="btn-primary"
+                    />
+                    <button
+                        name="action_cancel"
+                        string="Cancel"
+                        type="object"
+                        attrs="{'invisible': [('state', 'not in', ['draft', 'validated'])]}"
+                    />
+                    <button
+                        name="action_to_draft"
+                        string="Send to Draft"
+                        type="object"
+                        attrs="{'invisible': [('state', 'not in', ['validated', 'cancel'])]}"
+                    />
+                    <field
+                        name="state"
+                        widget="statusbar"
+                        statusbar_visible="draft,validated,done"
+                    />
+                </header>
+                <sheet string="Salesperson Reassign">
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" readonly="1" />
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field
+                                name="done_date"
+                                attrs="{'invisible': [('state', '!=', 'done')]}"
+                            />
+                            <field
+                                name="current_user_id"
+                                attrs="{'readonly': [('state', '!=', 'draft')]}"
+                            />
+                            <field
+                                name="new_user_id"
+                                attrs="{'readonly': [('state', '!=', 'draft')]}"
+                            />
+                        </group>
+                        <group attrs="{'invisible': [('search_visits', '=', False)]}">
+                            <label for="start_date" string="Date Range" />
+                            <div class="o_row">
+                                <field
+                                    name="start_date"
+                                    widget="daterange"
+                                    nolabel="1"
+                                    class="oe_inline"
+                                    options="{'related_end_date': 'end_date'}"
+                                    attrs="{'readonly': [('state', '!=', 'draft')]}"
+                                />
+                                <i
+                                    class="fa fa-long-arrow-right mx-2"
+                                    aria-label="Arrow icon"
+                                    title="Arrow"
+                                />
+                                <field
+                                    name="end_date"
+                                    widget="daterange"
+                                    nolabel="1"
+                                    class="oe_inline"
+                                    options="{'related_start_date': 'start_date'}"
+                                    attrs="{'readonly': [('state', '!=', 'draft')]}"
+                                />
+                            </div>
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field
+                                name="search_visits"
+                                attrs="{'readonly': [('state', '!=', 'draft')]}"
+                            />
+                        </group>
+                        <group>
+                            <field
+                                name="search_templates"
+                                attrs="{'readonly': [('state', '!=', 'draft')]}"
+                            />
+                        </group>
+                    </group>
+                    <group>
+                        <group
+                            string="Visits States"
+                            attrs="{'invisible': [('search_visits', '=', False)]}"
+                        >
+                            <field
+                                name="visit_draft_state"
+                                attrs="{'readonly': [('state', '!=', 'draft')]}"
+                            />
+                            <field
+                                name="visit_confirm_state"
+                                attrs="{'readonly': [('state', '!=', 'draft')]}"
+                            />
+                            <field
+                                name="visit_done_state"
+                                attrs="{'readonly': [('state', '!=', 'draft')]}"
+                            />
+                            <field
+                                name="visit_cancel_state"
+                                attrs="{'readonly': [('state', '!=', 'draft')]}"
+                            />
+                            <field
+                                name="visit_incident_state"
+                                attrs="{'readonly': [('state', '!=', 'draft')]}"
+                            />
+                        </group>
+                        <group
+                            string="Template States"
+                            attrs="{'invisible': [('search_templates', '=', False)]}"
+                        >
+                            <field
+                                name="template_draft_state"
+                                attrs="{'readonly': [('state', '!=', 'draft')]}"
+                            />
+                            <field
+                                name="template_in_progress_state"
+                                attrs="{'readonly': [('state', '!=', 'draft')]}"
+                            />
+                            <field
+                                name="template_done_state"
+                                attrs="{'readonly': [('state', '!=', 'draft')]}"
+                            />
+                            <field
+                                name="template_cancel_state"
+                                attrs="{'readonly': [('state', '!=', 'draft')]}"
+                            />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page
+                            string="Visits"
+                            attrs="{'invisible': [('search_visits', '=', False)]}"
+                        >
+                            <field
+                                name="visit_reassign_line_ids"
+                                attrs="{'readonly': [('state', '!=', 'draft')]}"
+                            >
+                                <tree create="0">
+                                    <field name="name" readonly="1" />
+                                    <field name="sequence" readonly="1" />
+                                    <field name="date" readonly="1" />
+                                    <field name="partner_id" readonly="1" />
+                                    <field name="visit_state" readonly="1" />
+                                </tree>
+                                <form readonly="1">
+                                    <sheet>
+                                        <group>
+                                            <field name="name" />
+                                            <field name="sequence" />
+                                            <field name="date" />
+                                            <field name="partner_id" />
+                                            <field name="visit_state" />
+                                        </group>
+                                    </sheet>
+                                </form>
+                            </field>
+                        </page>
+                        <page
+                            string="Templates"
+                            attrs="{'invisible': [('search_templates', '=', False)]}"
+                        >
+                            <field
+                                name="salesperson_reassign_line_ids"
+                                attrs="{'readonly': [('state', '!=', 'draft')]}"
+                            >
+                                <tree create="0">
+                                    <field name="name" readonly="1" />
+                                    <field name="sequence" readonly="1" />
+                                    <field name="date" readonly="1" />
+                                    <field name="template_state" readonly="1" />
+                                </tree>
+                                <form readonly="1">
+                                    <sheet>
+                                        <group>
+                                            <field name="name" />
+                                            <field name="sequence" />
+                                            <field name="date" />
+                                            <field name="template_state" />
+                                        </group>
+                                    </sheet>
+                                </form>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field
+                        name="message_follower_ids"
+                        widget="mail_followers"
+                        groups="base.group_user"
+                    />
+                    <field name="activity_ids" widget="mail_activity" />
+                    <field name="message_ids" widget="mail_thread" />
+                </div>
+            </form>
+        </field>
+    </record>
+    <record
+        model="ir.actions.act_window"
+        id="crm_salesperson_planner_visit_reassign_action"
+    >
+        <field name="name">Salesperson Reassign</field>
+        <field name="res_model">crm.salesperson.planner.visit.reassign</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem
+        name="Salesperson Reassign"
+        id="menu_crm_salesperson_planner_visit_reassign"
+        parent="crm_salesperson_planner.menu_salesperson_planner"
+        action="crm_salesperson_planner_visit_reassign_action"
+        sequence="40"
+    />
+</odoo>
