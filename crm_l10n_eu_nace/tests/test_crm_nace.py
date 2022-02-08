@@ -23,8 +23,7 @@ class CrmNACECase(SingleTransactionCase):
                 "name": "test lead",
                 "partner_name": "someone",
                 "nace_id": self.nace_0.id,
-                "secondary_nace_ids": [
-                    (4, self.nace_1.id), (4, self.nace_2.id)],
+                "secondary_nace_ids": [(4, self.nace_1.id), (4, self.nace_2.id)],
             }
         )
         self.assertFalse(lead.partner_id)
