@@ -28,7 +28,6 @@ class CrmNACECase(SingleTransactionCase):
         )
         self.assertFalse(lead.partner_id)
         # Create that partner automatically
-        partner_id = lead.handle_partner_assignation()[lead.id]
-        partner = self.env["res.partner"].browse(partner_id, lead._prefetch)
+        partner = lead._create_customer()
         self.assertEqual(partner.nace_id, self.nace_0)
         self.assertEqual(partner.secondary_nace_ids, self.nace_1 | self.nace_2)

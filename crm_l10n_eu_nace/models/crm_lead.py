@@ -1,4 +1,4 @@
-from odoo import api, fields, models
+from odoo import fields, models
 
 
 class CrmLead(models.Model):
@@ -11,10 +11,9 @@ class CrmLead(models.Model):
         comodel_name="res.partner.nace", string="Secondary NACE"
     )
 
-    @api.multi
-    def _create_lead_partner_data(self, *args, **kwargs):
+    def _prepare_customer_values(self, name, is_company, parent_id=False):
         """Propagate NACE activity to created partner."""
-        result = super()._create_lead_partner_data(*args, **kwargs)
+        result = super()._prepare_customer_values(name, is_company, parent_id)
         if self.nace_id:
             result["nace_id"] = self.nace_id.id
         if self.secondary_nace_ids:

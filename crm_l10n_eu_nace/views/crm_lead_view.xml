@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <data>
-    <record model="ir.ui.view" id="crm_case_form_view_leads">
+    <record model="ir.ui.view" id="crm_lead_view_form">
         <field name="name">Add NACE fields</field>
         <field name="model">crm.lead</field>
-        <field name="inherit_id" ref="crm.crm_case_form_view_leads" />
+        <field name="inherit_id" ref="crm.crm_lead_view_form" />
         <field name="arch" type="xml">
             <field name="partner_name" position="after">
                 <field name="nace_id" />
                 <field name="secondary_nace_ids" widget="many2many_tags" />
             </field>
+            <xpath
+                expr="//page[@name='lead']//field[@name='partner_name']"
+                position="after"
+            >
+                <field name="nace_id" />
+                <field name="secondary_nace_ids" widget="many2many_tags" />
+            </xpath>
         </field>
     </record>
 
@@ -17,7 +24,7 @@
         <field name="model">crm.lead</field>
         <field name="inherit_id" ref="crm.view_crm_case_leads_filter" />
         <field name="arch" type="xml">
-            <field name="partner_id" position="after">
+            <field name="country_id" position="after">
                 <field name="nace_id" />
             </field>
             <filter name="country" position="after">
@@ -28,18 +35,6 @@
                     string="NACE"
                 />
             </filter>
-        </field>
-    </record>
-
-    <record model="ir.ui.view" id="crm_case_form_view_oppor">
-        <field name="name">Add NACE fields</field>
-        <field name="model">crm.lead</field>
-        <field name="inherit_id" ref="crm.crm_case_form_view_oppor" />
-        <field name="arch" type="xml">
-            <field name="partner_id" position="after">
-                <field name="nace_id" />
-                <field name="secondary_nace_ids" widget="many2many_tags" />
-            </field>
         </field>
     </record>
 
