@@ -29,7 +29,7 @@ class CrmLeadConvert2Task(models.TransientModel):
         lead = self.lead_id
         partner = lead._find_matching_partner()
         if not partner and (lead.partner_name or lead.contact_name):
-            lead.handle_partner_assignment()
+            lead._handle_partner_assignment()
             partner = lead.partner_id
         # create new project.task
         vals = {
@@ -38,7 +38,6 @@ class CrmLeadConvert2Task(models.TransientModel):
             "email_from": lead.email_from,
             "project_id": self.project_id.id,
             "partner_id": partner.id,
-            "user_id": None,
         }
         task = self.env["project.task"].create(vals)
         # move the mail thread
