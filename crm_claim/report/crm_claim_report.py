@@ -22,7 +22,7 @@ class CrmClaimReport(models.Model):
         comodel_name="res.company", string="Company", readonly=True
     )
     create_date = fields.Datetime(readonly=True, index=True)
-    claim_date = fields.Datetime(string="Claim Date", readonly=True)
+    claim_date = fields.Datetime(readonly=True)
     delay_close = fields.Float(
         string="Delay to close",
         digits=(16, 2),
@@ -43,7 +43,7 @@ class CrmClaimReport(models.Model):
         comodel_name="res.partner", string="Partner", readonly=True
     )
     priority = fields.Selection(
-        selection=[("0", "Low"), ("1", "Normal"), ("2", "High")], string="Priority"
+        selection=[("0", "Low"), ("1", "Normal"), ("2", "High")]
     )
     type_action = fields.Selection(
         selection=[
