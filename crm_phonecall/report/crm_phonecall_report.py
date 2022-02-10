@@ -24,11 +24,11 @@ class CrmPhonecallReport(models.Model):
     user_id = fields.Many2one(comodel_name="res.users", string="User", readonly=True)
     team_id = fields.Many2one(comodel_name="crm.team", string="Team", readonly=True)
     priority = fields.Selection(
-        selection=[("0", "Low"), ("1", "Normal"), ("2", "High")], string="Priority"
+        selection=[("0", "Low"), ("1", "Normal"), ("2", "High")]
     )
     nbr_cases = fields.Integer(string="# of Cases", readonly=True)
     state = fields.Selection(AVAILABLE_STATES, string="Status", readonly=True)
-    create_date = fields.Datetime(string="Create Date", readonly=True, index=True)
+    create_date = fields.Datetime(readonly=True, index=True)
     delay_close = fields.Float(
         string="Delay to close",
         digits=(16, 2),
@@ -36,9 +36,7 @@ class CrmPhonecallReport(models.Model):
         group_operator="avg",
         help="Number of Days to close the case",
     )
-    duration = fields.Float(
-        string="Duration", digits=(16, 2), readonly=True, group_operator="avg"
-    )
+    duration = fields.Float(digits=(16, 2), readonly=True, group_operator="avg")
     delay_open = fields.Float(
         string="Delay to open",
         digits=(16, 2),

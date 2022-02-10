@@ -33,7 +33,6 @@
             <tree
                 decoration-info="state in ('pending',)"
                 decoration-muted="state in ('cancel','done')"
-                string="Phone Calls"
             >
                 <field name="date" />
                 <field name="name" />
@@ -190,7 +189,7 @@
         <field name="name">CRM - Logged Phone Calls Tree</field>
         <field name="model">crm.phonecall</field>
         <field name="arch" type="xml">
-            <tree editable="top" string="Phone Calls">
+            <tree editable="top">
                 <field name="date" />
                 <field name="name" />
                 <field name="partner_id" />
