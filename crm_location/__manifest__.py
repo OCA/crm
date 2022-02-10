@@ -5,7 +5,7 @@
 {
     "name": "CRM location",
     "category": "Customer Relationship Management",
-    "version": "14.0.1.0.0",
+    "version": "15.0.1.0.2",
     "depends": ["crm", "base_location"],
     "data": ["views/crm_lead_view.xml"],
     "author": "Tecnativa, Odoo Community Association (OCA)",

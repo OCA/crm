@@ -3,3 +3,4 @@
 * Luis M. Ontalba <luis.martinez@tecnativa.com>
 * Alexandre Díaz <alexandre.diaz@tecnativa.com>
 * Tharathip Chaweewongphan <tharathipc@ecosoft.co.th>
+* Ruchir Shukla <ruchir@bizzappdev.com>
