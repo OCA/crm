@@ -5,7 +5,7 @@ from odoo import api, fields, models
 
 
 class CrmLeadConvert2Task(models.TransientModel):
-    """ wizard to convert a Lead into a Project task and move the Mail Thread """
+    """wizard to convert a Lead into a Project task and move the Mail Thread"""
 
     _name = "crm.lead.convert2task"
     _description = "Lead convert to Task"
