@@ -28,7 +28,6 @@ class CrmPhonecall2phonecall(models.TransientModel):
     team_id = fields.Many2one(comodel_name="crm.team", string="Sales Team")
     action = fields.Selection(
         selection=[("schedule", "Schedule a call"), ("log", "Log a call")],
-        string="Action",
         required=True,
     )
     partner_id = fields.Many2one(comodel_name="res.partner", string="Partner")
