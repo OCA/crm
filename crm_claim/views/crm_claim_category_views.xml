@@ -23,7 +23,7 @@
         <field name="name">crm.claim.category.tree</field>
         <field name="model">crm.claim.category</field>
         <field name="arch" type="xml">
-            <tree string="Claim Categories">
+            <tree>
                 <field name="name" />
                 <field name="team_id" />
             </tree>
