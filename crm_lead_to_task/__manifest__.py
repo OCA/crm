@@ -10,7 +10,7 @@
     "author": "Odoo S.A., Odoo Community Association (OCA), Tecnativa",
     "website": "https://github.com/OCA/crm",
     "depends": ["crm", "project"],
-    "version": "14.0.1.0.0",
+    "version": "15.0.1.0.1",
     "license": "LGPL-3",
     "installable": True,
     "data": [
