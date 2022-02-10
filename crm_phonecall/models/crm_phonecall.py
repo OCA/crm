@@ -63,7 +63,6 @@ class CrmPhonecall(models.Model):
     partner_mobile = fields.Char("Mobile")
     priority = fields.Selection(
         selection=[("0", "Low"), ("1", "Normal"), ("2", "High")],
-        string="Priority",
         default="1",
     )
     date_closed = fields.Datetime(string="Closed", readonly=True)
