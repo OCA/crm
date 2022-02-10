@@ -26,7 +26,7 @@ class CrmClaim(models.Model):
 
     @api.model
     def _get_default_stage_id(self):
-        """ Gives default stage_id """
+        """Gives default stage_id"""
         team_id = self.env["crm.team"]._get_default_team_id()
         return self.stage_find(team_id.id, [("sequence", "=", "1")])
 
