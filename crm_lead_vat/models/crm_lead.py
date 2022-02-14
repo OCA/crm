@@ -18,10 +18,10 @@ class Lead(models.Model):
         return super(Lead, self.with_context(default_vat=self.vat))._create_customer()
 
     def _prepare_values_from_partner(self, partner):
-        """Recover VAT from partner if available."""
         result = super(Lead, self)._prepare_values_from_partner(partner)
         if not partner:
             return result
         if partner.vat:
             result["vat"] = partner.vat
+
         return result
