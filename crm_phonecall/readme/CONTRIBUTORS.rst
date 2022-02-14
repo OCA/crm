@@ -14,3 +14,5 @@
 
   * Iván Todorovich <ivan.todorovich@druidoo.io>
   * Manuel Marquez <manuel.marquez@druidoo.io>
+
+* Ruchir Shukla <ruchir@bizzappdev.com>
