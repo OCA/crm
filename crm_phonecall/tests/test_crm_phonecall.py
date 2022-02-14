@@ -1,10 +1,10 @@
 # Copyright 2017 Tecnativa - Vicent Cubells
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
-from odoo.tests import common
+from odoo.tests import Form, common
 
 
-class TestCrmPhoneCall(common.SavepointCase):
+class TestCrmPhoneCall(common.TransactionCase):
     """Unit test case of the Crm Phonecall module."""
 
     @classmethod
@@ -53,6 +53,34 @@ class TestCrmPhoneCall(common.SavepointCase):
             }
         )
         cls.tag = cls.env.ref("sales_team.categ_oppor1")
+
+    def test_compute_phonecall_count_partner(self):
+        partner = self.env["res.partner"].create(
+            {"name": "Partner3", "phone": "123 654 007", "mobile": "123 654 007"}
+        )
+        phonecall = self.env["crm.phonecall"].create(
+            {
+                "name": "Call #2 for test",
+            }
+        )
+        phonecall_form = Form(phonecall)
+        phonecall_form.partner_id = partner
+        phonecall_form.save()
+        self.assertEqual(partner.phonecall_count, 1)
+
+    def test_compute_duration(self):
+        partner = self.env["res.partner"].create(
+            {"name": "Partner4", "phone": "123 456 007", "mobile": "123 456 007"}
+        )
+        phonecall = self.env["crm.phonecall"].create(
+            {
+                "name": "Call #3 for test",
+                "partner_id": partner.id,
+                "duration": 1,
+            }
+        )
+        phonecall.compute_duration()
+        self.assertEqual(phonecall.duration, 0.0)
 
     def test_on_change_partner(self):
         """Partner change method test."""
@@ -114,22 +142,22 @@ class TestCrmPhoneCall(common.SavepointCase):
 
     def test_make_meeting(self):
         """Make a meeting test."""
+        self.phonecall1.partner_id.email = "abc@abc.com"
         result = self.phonecall1.action_make_meeting()
         self.assertEqual(result["context"]["default_phonecall_id"], self.phonecall1.id)
 
     def test_wizard(self):
         """Schedule a call from wizard."""
-        model_data = self.env["ir.model.data"]
         wizard = (
             self.env["crm.phonecall2phonecall"]
             .with_context(active_ids=self.phonecall1.ids, active_id=self.phonecall1.id)
             .create({})
         )
         result = wizard.action_schedule()
-        search_view = model_data.get_object_reference(
-            "crm_phonecall", "view_crm_case_phonecalls_filter"
-        )
-        self.assertEqual(result["search_view_id"], search_view[1])
+        search_view_id = self.env.ref(
+            "crm_phonecall.view_crm_case_phonecalls_filter"
+        ).id
+        self.assertEqual(result["search_view_id"], search_view_id)
         self.assertNotEqual(result["res_id"], self.phonecall1.id)
 
     def test_opportunity_open_phonecall(self):

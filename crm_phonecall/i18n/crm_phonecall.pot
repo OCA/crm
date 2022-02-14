@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 14.0\n"
+"Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -288,13 +288,9 @@ msgid "Direction"
 msgstr ""
 
 #. module: crm_phonecall
-#: model:ir.model.fields,field_description:crm_phonecall.field_calendar_event__display_name
-#: model:ir.model.fields,field_description:crm_phonecall.field_crm_lead__display_name
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__display_name
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__display_name
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__display_name
-#: model:ir.model.fields,field_description:crm_phonecall.field_res_config_settings__display_name
-#: model:ir.model.fields,field_description:crm_phonecall.field_res_partner__display_name
 msgid "Display Name"
 msgstr ""
 
@@ -337,11 +333,6 @@ msgid "Followers"
 msgstr ""
 
 #. module: crm_phonecall
-#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_channel_ids
-msgid "Followers (Channels)"
-msgstr ""
-
-#. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_partner_ids
 msgid "Followers (Partners)"
 msgstr ""
@@ -350,6 +341,11 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
 msgid "Group By"
+msgstr ""
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__has_message
+msgid "Has Message"
 msgstr ""
 
 #. module: crm_phonecall
@@ -366,13 +362,9 @@ msgid "High"
 msgstr ""
 
 #. module: crm_phonecall
-#: model:ir.model.fields,field_description:crm_phonecall.field_calendar_event__id
-#: model:ir.model.fields,field_description:crm_phonecall.field_crm_lead__id
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__id
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__id
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__id
-#: model:ir.model.fields,field_description:crm_phonecall.field_res_config_settings__id
-#: model:ir.model.fields,field_description:crm_phonecall.field_res_partner__id
 msgid "ID"
 msgstr ""
 
@@ -416,13 +408,9 @@ msgid "Last Action"
 msgstr ""
 
 #. module: crm_phonecall
-#: model:ir.model.fields,field_description:crm_phonecall.field_calendar_event____last_update
-#: model:ir.model.fields,field_description:crm_phonecall.field_crm_lead____last_update
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall____last_update
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall____last_update
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report____last_update
-#: model:ir.model.fields,field_description:crm_phonecall.field_res_config_settings____last_update
-#: model:ir.model.fields,field_description:crm_phonecall.field_res_partner____last_update
 msgid "Last Modified on"
 msgstr ""
 
@@ -649,9 +637,7 @@ msgstr ""
 #: model:ir.actions.act_window,name:crm_phonecall.crm_case_categ_phone0
 #: model:ir.ui.menu,name:crm_phonecall.menu_crm_case_phone
 #: model:ir.ui.menu,name:crm_phonecall.menu_crm_config_phonecall
-#: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_inbound_phone_tree_view
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_calendar_view
-#: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_tree_view
 msgid "Phone Calls"
 msgstr ""
 
