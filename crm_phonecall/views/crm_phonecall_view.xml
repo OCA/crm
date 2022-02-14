@@ -17,14 +17,15 @@
     <menuitem
         id="menu_crm_config_phonecall"
         name="Phone Calls"
-        parent="crm.menu_crm_config_lead"
-        sequence="45"
+        parent="crm.crm_menu_config"
+        sequence="19"
     />
     <menuitem
         action="crm_phonecall_categ_action"
         id="menu_crm_case_phonecall-act"
         name="Categories"
         parent="menu_crm_config_phonecall"
+        sequence="0"
     />
     <record id="crm_case_phone_tree_view" model="ir.ui.view">
         <field name="name">CRM - Phone Calls Tree</field>
