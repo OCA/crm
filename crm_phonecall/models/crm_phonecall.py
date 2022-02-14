@@ -150,17 +150,12 @@ class CrmPhonecall(models.Model):
 
     def redirect_phonecall_view(self):
         """Redirect on the phonecall related view."""
-        model_data = self.env["ir.model.data"]
         # Select the view
-        tree_view = model_data.get_object_reference(
-            "crm_phonecall", "crm_case_phone_tree_view"
-        )
-        form_view = model_data.get_object_reference(
-            "crm_phonecall", "crm_case_phone_form_view"
-        )
-        search_view = model_data.get_object_reference(
-            "crm_phonecall", "view_crm_case_phonecalls_filter"
-        )
+        tree_view_id = self.env.ref("crm_phonecall.crm_case_phone_tree_view").id
+        form_view_id = self.env.ref("crm_phonecall.crm_case_phone_form_view").id
+        search_view_id = self.env.ref(
+            "crm_phonecall.view_crm_case_phonecalls_filter"
+        ).id
         value = {}
         for call in self:
             value = {
@@ -170,12 +165,12 @@ class CrmPhonecall(models.Model):
                 "res_model": "crm.phonecall",
                 "res_id": call.id,
                 "views": [
-                    (form_view and form_view[1] or False, "form"),
-                    (tree_view and tree_view[1] or False, "tree"),
+                    (form_view_id or False, "form"),
+                    (tree_view_id or False, "tree"),
                     (False, "calendar"),
                 ],
                 "type": "ir.actions.act_window",
-                "search_view_id": search_view and search_view[1] or False,
+                "search_view_id": search_view_id or False,
             }
         return value
 
