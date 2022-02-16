@@ -47,7 +47,7 @@ class CrmLeadConvert2Task(models.TransientModel):
         )
         attachments.write({"res_model": "project.task", "res_id": task.id})
         # remove the lead
-        lead.unlink()
+        lead.sudo().unlink()
         # return the action to go to the form view of the new Task
         view = self.env.ref("project.view_task_form2")
         return {
