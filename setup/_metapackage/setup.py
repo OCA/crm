@@ -23,6 +23,7 @@ setuptools.setup(
         'odoo13-addon-crm_phonecall_summary_predefined',
         'odoo13-addon-crm_project',
         'odoo13-addon-crm_sale_secondary_salesperson',
+        'odoo13-addon-crm_salesperson_planner',
         'odoo13-addon-crm_secondary_salesperson',
         'odoo13-addon-crm_security_group',
         'odoo13-addon-crm_stage_probability',
