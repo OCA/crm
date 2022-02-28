@@ -14,6 +14,7 @@ setuptools.setup(
         'odoo12-addon-crm_industry',
         'odoo12-addon-crm_l10n_eu_nace',
         'odoo12-addon-crm_lead_code',
+        'odoo12-addon-crm_lead_currency',
         'odoo12-addon-crm_lead_firstname',
         'odoo12-addon-crm_lead_product',
         'odoo12-addon-crm_lead_vat',
