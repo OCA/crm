@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<odoo>
+    <record id="crm_lead_win_view_form" model="ir.ui.view">
+        <field name="name">crm.lead.won.form</field>
+        <field name="model">crm.lead.won</field>
+        <field name="arch" type="xml">
+            <form string="Won Reason">
+                <group class="oe_title">
+                    <field name="won_reason_id" options="{'no_create_edit': True}" />
+                </group>
+                <footer>
+                    <button
+                        name="action_win_reason_apply"
+                        string="Submit"
+                        type="object"
+                        class="btn-primary"
+                        data-hotkey="q"
+                    />
+                    <button
+                        string="Cancel"
+                        class="btn-secondary"
+                        special="cancel"
+                        data-hotkey="z"
+                    />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="crm_lead_win_action" model="ir.actions.act_window">
+        <field name="name">Win Reason</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">crm.lead.won</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="crm_lead_win_view_form" />
+        <field name="target">new</field>
+    </record>
+
+</odoo>
