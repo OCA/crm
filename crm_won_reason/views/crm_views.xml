@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<odoo>
+    <record id="crm.crm_lost_reason_action" model="ir.actions.act_window">
+        <field name="name">Win or Lost Reasons</field>
+    </record>
+
+    <!-- Rename menuitem -->
+    <record id="crm.menu_crm_lost_reason" model="ir.ui.menu">
+        <field name="name">Win or Lost Reasons</field>
+    </record>
+
+    <record id="crm_lost_reason_view_tree" model="ir.ui.view">
+        <field name="name">crm.lost.reason.tree.inherit</field>
+        <field name="model">crm.lost.reason</field>
+        <field name="inherit_id" ref="crm.crm_lost_reason_view_tree" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="reason_type" />
+            </field>
+        </field>
+    </record>
+
+    <record id="crm_lead_view_form" model="ir.ui.view">
+        <field name="name">crm.lead.form.inherit</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form" />
+        <field name="arch" type="xml">
+            <!-- Hide standard button to avoid error if sale_crm is installed -->
+            <xpath
+                expr="//button[@name='action_set_won_rainbowman']"
+                position="attributes"
+            >
+                <attribute name='invisible'>1</attribute>
+            </xpath>
+            <xpath expr="//button[@name='action_set_won_rainbowman']" position="before">
+                <button
+                    name="%(crm_won_reason.crm_lead_win_action)d"
+                    string="Won"
+                    type="action"
+                    class="oe_highlight"
+                    data-hotkey="w"
+                    title="Mark as won"
+                    attrs="{'invisible': ['|','|', ('active','=',False), ('probability', '=', 100), ('type', '=', 'lead')]}"
+                />
+            </xpath>
+        </field>
+    </record>
+</odoo>
