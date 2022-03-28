@@ -36,19 +36,29 @@ class TestCrmPhoneCall(common.SavepointCase):
                 "medium_id": cls.medium1.id,
             }
         )
+        cls.phonecall2 = cls.env["crm.phonecall"].create(
+            {
+                "name": "Call #2 for test",
+                "partner_phone": "123 456 789",
+                "partner_mobile": "987 654 321",
+                "campaign_id": cls.campaign1.id,
+                "source_id": cls.source1.id,
+                "medium_id": cls.medium1.id,
+            }
+        )
         cls.opportunity1 = cls.env["crm.lead"].create(
             {
                 "name": "Opportunity #1",
-                "phone": "12345",
-                "mobile": "6789",
+                "phone": "111 111 111",
+                "mobile": "222 222 222",
                 "partner_id": cls.partner1.id,
             }
         )
         cls.opportunity2 = cls.env["crm.lead"].create(
             {
                 "name": "Opportunity #2",
-                "phone": "2222",
-                "mobile": "3333",
+                "phone": "222 222 222",
+                "mobile": "333 333 333",
                 "partner_id": cls.partner2.id,
             }
         )
@@ -105,12 +115,18 @@ class TestCrmPhoneCall(common.SavepointCase):
 
     def test_convert2opportunity(self):
         """Convert lead to opportunity test."""
+        # convert call with linked partner record
         result = self.phonecall1.action_button_convert2opportunity()
         self.assertEqual(result["res_model"], "crm.lead")
         lead = self.env["crm.lead"].browse(result["res_id"])
         self.assertEqual(lead.campaign_id, self.campaign1)
         self.assertEqual(lead.source_id, self.source1)
         self.assertEqual(lead.medium_id, self.medium1)
+        # convert call without linked partner record
+        result = self.phonecall2.action_button_convert2opportunity()
+        lead = self.env["crm.lead"].browse(result["res_id"])
+        self.assertEqual(lead.phone, self.phonecall2.partner_phone)
+        self.assertEqual(lead.mobile, self.phonecall2.partner_mobile)
 
     def test_make_meeting(self):
         """Make a meeting test."""
