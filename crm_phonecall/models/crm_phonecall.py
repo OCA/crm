@@ -73,11 +73,21 @@ class CrmPhonecall(models.Model):
     )
 
     @api.onchange("partner_id")
-    def on_change_partner_id(self):
+    def _onchange_partner_id(self):
         """Contact number details should be change based on partner."""
         if self.partner_id:
             self.partner_phone = self.partner_id.phone
             self.partner_mobile = self.partner_id.mobile
+
+    @api.onchange("opportunity_id")
+    def _onchange_opportunity_id(self):
+        """Based on opportunity, change contact, tags, partner, team."""
+        if self.opportunity_id:
+            self.team_id = self.opportunity_id.team_id.id
+            self.partner_phone = self.opportunity_id.phone
+            self.partner_mobile = self.opportunity_id.mobile
+            self.partner_id = self.opportunity_id.partner_id.id
+            self.tag_ids = self.opportunity_id.tag_ids.ids
 
     def write(self, values):
         """Override to add case management: open/close dates."""
@@ -107,15 +117,15 @@ class CrmPhonecall(models.Model):
     def get_values_schedule_another_phonecall(self, vals):
         res = {
             "name": vals.get("name"),
-            "user_id": vals.get("user_id") or self.user_id.id or False,
-            "description": self.description or False,
+            "user_id": vals.get("user_id") or self.user_id.id,
+            "description": self.description,
             "date": vals.get("schedule_time") or self.date,
-            "team_id": vals.get("team_id") or self.team_id.id or False,
-            "partner_id": self.partner_id.id or False,
+            "team_id": vals.get("team_id") or self.team_id.id,
+            "partner_id": self.partner_id.id,
             "partner_phone": self.partner_phone,
             "partner_mobile": self.partner_mobile,
             "priority": self.priority,
-            "opportunity_id": self.opportunity_id.id or False,
+            "opportunity_id": self.opportunity_id.id,
             "campaign_id": self.campaign_id.id,
             "source_id": self.source_id.id,
             "medium_id": self.medium_id.id,
@@ -137,16 +147,6 @@ class CrmPhonecall(models.Model):
             return reduce(lambda x, y: x + y, phonecall_dict.values())
         else:
             return phonecall_dict
-
-    @api.onchange("opportunity_id")
-    def on_change_opportunity(self):
-        """Based on opportunity, changed contact, tags, partner, team."""
-        if self.opportunity_id:
-            self.team_id = self.opportunity_id.team_id.id
-            self.partner_phone = self.opportunity_id.phone
-            self.partner_mobile = self.opportunity_id.mobile
-            self.partner_id = self.opportunity_id.partner_id.id
-            self.tag_ids = self.opportunity_id.tag_ids.ids
 
     def redirect_phonecall_view(self):
         """Redirect on the phonecall related view."""
@@ -174,53 +174,6 @@ class CrmPhonecall(models.Model):
             }
         return value
 
-    def convert_opportunity(
-        self,
-        opportunity_summary=False,
-        partner_id=False,
-        expected_revenue=0.0,
-        probability=0.0,
-    ):
-        """Convert lead to opportunity."""
-        partner = self.env["res.partner"]
-        opportunity = self.env["crm.lead"]
-        opportunity_dict = {}
-        default_contact = False
-        for call in self:
-            if not partner_id:
-                partner_id = call.partner_id.id or False
-            if partner_id:
-                address_id = partner.address_get().get("contact", False)
-                if address_id:
-                    default_contact = address_id.id
-            opportunity_id = opportunity.create(
-                {
-                    "name": opportunity_summary or call.name,
-                    "expected_revenue": expected_revenue,
-                    "probability": probability,
-                    "partner_id": partner_id or False,
-                    "mobile": default_contact and default_contact.mobile,
-                    "team_id": call.team_id.id or False,
-                    "description": call.description or False,
-                    "priority": call.priority,
-                    "type": "opportunity",
-                    "phone": call.partner_phone or False,
-                    "email_from": default_contact and default_contact.email,
-                    "campaign_id": call.campaign_id.id,
-                    "source_id": call.source_id.id,
-                    "medium_id": call.medium_id.id,
-                    "tag_ids": [(6, 0, call.tag_ids.ids)],
-                }
-            )
-            vals = {
-                "partner_id": partner_id,
-                "opportunity_id": opportunity_id.id,
-                "state": "done",
-            }
-            call.write(vals)
-            opportunity_dict[call.id] = opportunity_id
-        return opportunity_dict
-
     def action_make_meeting(self):
         """Open meeting's calendar view to schedule a meeting on phonecall."""
         partner_ids = [self.env["res.users"].browse(self.env.uid).partner_id.id]
@@ -240,10 +193,27 @@ class CrmPhonecall(models.Model):
             }
         return res
 
+    def _prepare_opportunity_vals(self):
+        return {
+            "name": self.name,
+            "partner_id": self.partner_id.id,
+            "phone": self.partner_phone or self.partner_id.phone,
+            "mobile": self.partner_mobile or self.partner_id.mobile,
+            "email_from": self.partner_id.email,
+            "team_id": self.team_id.id,
+            "description": self.description,
+            "priority": self.priority,
+            "type": "opportunity",
+            "campaign_id": self.campaign_id.id,
+            "source_id": self.source_id.id,
+            "medium_id": self.medium_id.id,
+            "tag_ids": [(6, 0, self.tag_ids.ids)],
+        }
+
     def action_button_convert2opportunity(self):
         """Convert a phonecall into an opp and redirect to the opp view."""
-        opportunity_dict = {}
-        for call in self:
-            opportunity_dict = call.convert_opportunity()
-            return opportunity_dict[call.id].redirect_lead_opportunity_view()
-        return opportunity_dict
+        self.ensure_one()
+        opportunity = self.env["crm.lead"]
+        opportunity_id = opportunity.create(self._prepare_opportunity_vals())
+        self.write({"opportunity_id": opportunity_id.id, "state": "done"})
+        return opportunity_id.redirect_lead_opportunity_view()
