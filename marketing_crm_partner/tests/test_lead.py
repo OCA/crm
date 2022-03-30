@@ -8,9 +8,9 @@ from odoo.tests.common import TransactionCase
 class LeadCase(TransactionCase):
     def setUp(self):
         super(LeadCase, self).setUp()
-        self.medium = self.env["utm.medium"].create({"name": u"Website"})
-        self.campaign = self.env["utm.campaign"].create({"name": u"Dëmo campaign"})
-        self.source = self.env["utm.source"].create({"name": u"Inteŕnet"})
+        self.medium = self.env["utm.medium"].create({"name": "Website"})
+        self.campaign = self.env["utm.campaign"].create({"name": "Dëmo campaign"})
+        self.source = self.env["utm.source"].create({"name": "Inteŕnet"})
         self.lead = self.env["crm.lead"].create(
             {
                 "name": "Lead1",

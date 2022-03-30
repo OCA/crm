@@ -8,7 +8,7 @@ class LeadCase(TransactionCase):
     def setUp(self):
         super(LeadCase, self).setUp()
         self.lead = self.env["crm.lead"].create(
-            {"name": __file__, "partner_name": u"HÎ"}
+            {"name": __file__, "partner_name": "HÎ"}
         )
         self.partner = self.env["res.partner"].create({"name": __file__})
         self.test_field = "ES98765432M"
