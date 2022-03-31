@@ -23,6 +23,7 @@ addon | version | maintainers | summary
 --- | --- | --- | ---
 [crm_industry](crm_industry/) | 15.0.1.0.0 |  | Link leads/opportunities to industries
 [crm_lead_code](crm_lead_code/) | 15.0.1.0.0 |  | Sequential Code for Leads / Opportunities
+[crm_location](crm_location/) | 15.0.1.0.1 |  | CRM location
 
 [//]: # (end addons)
 
