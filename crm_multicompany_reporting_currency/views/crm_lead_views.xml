@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="crm_case_tree_view_oppor" model="ir.ui.view">
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_tree_view_oppor" />
+        <field name="arch" type="xml">
+            <field name="expected_revenue" position="after">
+                <field name="multicompany_reporting_currency_id" invisible="1" />
+                <field name="type" invisible="1" />
+                <field
+                    name="amount_multicompany_reporting_currency"
+                    sum="Total"
+                    string="Total (Multicompany Reporting Currency)"
+                    optional="show"
+                    widget="monetary"
+                    options="{'currency_field': 'multicompany_reporting_currency_id'}"
+                    attrs="{'invisible': [('type', '=', 'lead')]}"
+                />
+            </field>
+        </field>
+    </record>
+
+    <record id="crm_lead_view_form" model="ir.ui.view">
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//h2" position="after">
+                <br />
+                <h2 class="o_row no-gutters align-items-end">
+                    <div class="col" attrs="{'invisible': [('type', '=', 'lead')]}">
+                        <label
+                            for="amount_multicompany_reporting_currency"
+                            class="oe_edit_only"
+                        />
+                        <div class="o_row">
+                            <field
+                                name="multicompany_reporting_currency_id"
+                                invisible="1"
+                            />
+                            <field
+                                name="amount_multicompany_reporting_currency"
+                                string="Total (Multicompany Reporting Currency)"
+                                class="oe_inline"
+                                widget='monetary'
+                                options="{'currency_field': 'multicompany_reporting_currency_id'}"
+                            />
+                        </div>
+                    </div>
+                </h2>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
