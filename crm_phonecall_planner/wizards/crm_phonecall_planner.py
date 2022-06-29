@@ -20,12 +20,25 @@ class CrmPhonecallPlan(models.TransientModel):
         "utm.mixin",
     ]
 
-    name = fields.Char("Call Summary", required=True,)
-    user_id = fields.Many2one(comodel_name="res.users", string="Responsible",)
-    team_id = fields.Many2one(comodel_name="crm.team", string="Sales Team",)
-    tag_ids = fields.Many2many(comodel_name="crm.lead.tag", string="Tags",)
+    name = fields.Char(
+        "Call Summary",
+        required=True,
+    )
+    user_id = fields.Many2one(
+        comodel_name="res.users",
+        string="Responsible",
+    )
+    team_id = fields.Many2one(
+        comodel_name="crm.team",
+        string="Sales Team",
+    )
+    tag_ids = fields.Many2many(
+        comodel_name="crm.lead.tag",
+        string="Tags",
+    )
     res_partner_domain = fields.Char(
-        "Partners filter", help="Filter the parters that will get a scheduled call.",
+        "Partners filter",
+        help="Filter the parters that will get a scheduled call.",
     )
     duration = fields.Float(
         string="Call duration",
@@ -54,7 +67,9 @@ class CrmPhonecallPlan(models.TransientModel):
         required=True,
         help="Schedule one call each X days to the same partner.",
     )
-    planned_calls = fields.Many2many(comodel_name="crm.phonecall",)
+    planned_calls = fields.Many2many(
+        comodel_name="crm.phonecall",
+    )
 
     @api.model
     def _default_duration(self):
@@ -86,7 +101,7 @@ class CrmPhonecallPlan(models.TransientModel):
         now = start - call_duration
         repetition_gap = timedelta(days=self.days_gap)
         tomorrow = timedelta(days=1) - call_duration
-        oldest_call_to_partner = u"""
+        oldest_call_to_partner = """
             SELECT res_partner.id
             FROM res_partner
             LEFT JOIN crm_phonecall
@@ -103,7 +118,8 @@ class CrmPhonecallPlan(models.TransientModel):
             ("medium_id", "=", self.medium_id.id),
         ]
         existing_calls = Phonecall.search(
-            utm_domain + [("partner_id", "!=", False)], order="date",
+            utm_domain + [("partner_id", "!=", False)],
+            order="date",
         )
         # Get partners to plan
         partner_domain = safe_eval(self.res_partner_domain or "[]") + [
@@ -115,7 +131,8 @@ class CrmPhonecallPlan(models.TransientModel):
         while partners and now <= end:
             now += call_duration
             _logger.debug(
-                "Plannig phonecalls for %s", fields.Datetime.to_string(now),
+                "Plannig phonecalls for %s",
+                fields.Datetime.to_string(now),
             )
             # Should we continue tomorrow?
             if not start.time() <= now.time() <= end.time():
