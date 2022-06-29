@@ -3,7 +3,7 @@
 {
     "name": "Phonecall planner",
     "summary": "Schedule phone calls according to some criteria",
-    "version": "13.0.1.0.0",
+    "version": "15.0.1.0.0",
     "category": "Customer Relationship Management",
     "website": "https://github.com/OCA/crm",
     "author": "Tecnativa, Odoo Community Association (OCA)",
@@ -11,5 +11,5 @@
     "application": False,
     "installable": True,
     "depends": ["crm_phonecall", "partner_phonecall_schedule"],
-    "data": ["wizards/crm_phonecall_planner_view.xml"],
+    "data": ["security/ir.model.access.csv", "wizards/crm_phonecall_planner_view.xml"],
 }
