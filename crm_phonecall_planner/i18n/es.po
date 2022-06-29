@@ -1,23 +1,19 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * crm_phonecall_planner
+# 	* crm_phonecall_planner
 #
-# Translators:
-# OCA Transbot <transbot@odoo-community.org>, 2018
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 9.0c\n"
+"Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-25 16:20+0000\n"
-"PO-Revision-Date: 2019-10-25 18:22+0200\n"
-"Last-Translator: Marta Vázquez Rodríguez <vazrodmar@gmail.com>\n"
-"Language-Team: Spanish (https://www.transifex.com/oca/teams/23907/es/)\n"
-"Language: es\n"
+"POT-Creation-Date: 2022-06-28 23:13+0000\n"
+"PO-Revision-Date: 2022-06-28 23:13+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 2.2.1\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner__repeat_calls
@@ -25,8 +21,8 @@ msgid ""
 "Allow repeated calls for the same partner, campaign, medium and source "
 "combination?"
 msgstr ""
-"¿Permitir llamadas repetidas para la misma combinación de contacto, campaña, "
-"medio y fuente?"
+"¿Permitir llamadas repetidas para la misma combinación de contacto, campaña,"
+" medio y fuente?"
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__name
@@ -96,7 +92,7 @@ msgstr "Generar planificación"
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__id
 msgid "ID"
-msgstr "ID"
+msgstr ""
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner____last_update
@@ -180,7 +176,8 @@ msgid ""
 "plan ending time for each day in the range."
 msgstr ""
 "Planificar llamadas hasta este momento. La hora que seleccione será usada "
-"como hora de finalización de la planificación para cada día dentro del rango."
+"como hora de finalización de la planificación para cada día dentro del "
+"rango."
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner__days_gap
@@ -215,17 +212,15 @@ msgstr "Etiquetas"
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner__campaign_id
-#, fuzzy
 msgid ""
-"This is a name that helps you keep track of your different campaign efforts, "
-"e.g. Fall_Drive, Christmas_Special"
+"This is a name that helps you keep track of your different campaign efforts,"
+" e.g. Fall_Drive, Christmas_Special"
 msgstr ""
 "Éste es un nombre que facilita la búsqueda de los diferentes esfuerzos de "
 "campañas. Por ejemplo: campaña de Navidad, rebajas de otoño"
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner__medium_id
-#, fuzzy
 msgid "This is the method of delivery, e.g. Postcard, Email, or Banner Ad"
 msgstr ""
 "Este es el método de envío. Por ejemplo: carta postal, correo electrónico, "
@@ -233,13 +228,12 @@ msgstr ""
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner__source_id
-#, fuzzy
 msgid ""
 "This is the source of the link, e.g. Search Engine, another domain, or name "
 "of email list"
 msgstr ""
-"Ésta es la fuente del enlace. Por ejemplo: motor de búsqueda, otro dominio o "
-"nombre de una lista de correo"
+"Ésta es la fuente del enlace. Por ejemplo: motor de búsqueda, otro dominio o"
+" nombre de una lista de correo"
 
 #. module: crm_phonecall_planner
 #: model_terms:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form

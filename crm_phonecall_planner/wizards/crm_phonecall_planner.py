@@ -8,7 +8,7 @@ from logging import getLogger
 
 from odoo import _, api, fields, models
 from odoo.exceptions import ValidationError
-from odoo.tools import safe_eval
+from odoo.tools.safe_eval import safe_eval
 
 _logger = getLogger(__name__)
 
@@ -33,7 +33,7 @@ class CrmPhonecallPlan(models.TransientModel):
         string="Sales Team",
     )
     tag_ids = fields.Many2many(
-        comodel_name="crm.lead.tag",
+        comodel_name="crm.tag",
         string="Tags",
     )
     res_partner_domain = fields.Char(
