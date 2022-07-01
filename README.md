@@ -26,6 +26,7 @@ addon | version | maintainers | summary
 [crm_lead_code](crm_lead_code/) | 15.0.1.0.0 |  | Sequential Code for Leads / Opportunities
 [crm_location](crm_location/) | 15.0.1.0.2 |  | CRM location
 [crm_phonecall](crm_phonecall/) | 15.0.1.0.1 |  | CRM Phone Calls
+[crm_phonecall_planner](crm_phonecall_planner/) | 15.0.1.0.0 |  | Schedule phone calls according to some criteria
 
 [//]: # (end addons)
 
