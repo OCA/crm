@@ -14,13 +14,13 @@ CRM Claim Types
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fcrm-lightgray.png?logo=github
-    :target: https://github.com/OCA/crm/tree/13.0/crm_claim_type
+    :target: https://github.com/OCA/crm/tree/15.0/crm_claim_type
     :alt: OCA/crm
 .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
-    :target: https://translation.odoo-community.org/projects/crm-13-0/crm-13-0-crm_claim_type
+    :target: https://translation.odoo-community.org/projects/crm-15-0/crm-15-0-crm_claim_type
     :alt: Translate me on Weblate
 .. |badge5| image:: https://img.shields.io/badge/runbot-Try%20me-875A7B.png
-    :target: https://runbot.odoo-community.org/runbot/111/13.0
+    :target: https://runbot.odoo-community.org/runbot/111/15.0
     :alt: Try me on Runbot
 
 |badge1| |badge2| |badge3| |badge4| |badge5| 
@@ -38,17 +38,20 @@ as well as stages configuration.
 Configuration
 =============
 
-This modules does not require special configurations.
+This module does not require any special configuration.
 It contains a predefined set of claim types.
 
-If you want add your own types go to ``CRM > Configuration > Claim > Claim Types``.
+If you want to add your own claim types, go to **CRM > Configuration > Claim
+> Claim Types**.
 
 Usage
 =====
 
 To use this module, you need to:
 
-* Go to Claims and select a claim type when creating/editing a claim
+* Go to **CRM > After Sale > Claims**, create a claim and fill out at least
+  **Claim Subject** and **Claim Type** fields.
+* Or select an existing claim and fill out all relevant information.
 
 Bug Tracker
 ===========
@@ -56,7 +59,7 @@ Bug Tracker
 Bugs are tracked on `GitHub Issues <https://github.com/OCA/crm/issues>`_.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us smashing it by providing a detailed and welcomed
-`feedback <https://github.com/OCA/crm/issues/new?body=module:%20crm_claim_type%0Aversion:%2013.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+`feedback <https://github.com/OCA/crm/issues/new?body=module:%20crm_claim_type%0Aversion:%2015.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
 Do not contact contributors directly about support or help with technical issues.
 
@@ -92,6 +95,6 @@ OCA, or the Odoo Community Association, is a nonprofit organization whose
 mission is to support the collaborative development of Odoo features and
 promote its widespread use.
 
-This module is part of the `OCA/crm <https://github.com/OCA/crm/tree/13.0/crm_claim_type>`_ project on GitHub.
+This module is part of the `OCA/crm <https://github.com/OCA/crm/tree/15.0/crm_claim_type>`_ project on GitHub.
 
 You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.
