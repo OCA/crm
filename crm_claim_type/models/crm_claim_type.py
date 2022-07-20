@@ -7,10 +7,6 @@ from odoo import fields, models
 
 
 class CrmClaimType(models.Model):
-    """
-    CRM Claim Type
-    """
-
     _name = "crm.claim.type"
     _description = "Claim Type"
 
