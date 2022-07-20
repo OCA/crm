@@ -9,7 +9,7 @@ from odoo import fields, models
 class CrmClaim(models.Model):
 
     """
-        CRM Claim
+    CRM Claim
     """
 
     _inherit = "crm.claim"
