@@ -88,7 +88,7 @@ msgstr "Llamada telefónica"
 #. module: crm_phonecall_summary_predefined
 #: model:ir.model,name:crm_phonecall_summary_predefined.model_crm_phonecall2phonecall
 msgid "Phonecall To Phonecall"
-msgstr ""
+msgstr "Llamada telefónica a llamada telefónica"
 
 #. module: crm_phonecall_summary_predefined
 #: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary__phonecall_ids
