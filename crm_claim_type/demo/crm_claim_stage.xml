@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+    <record id="stage_claim10" model="crm.claim.stage">
+        <field name="claim_type" ref="crm_claim_type.crm_claim_type_other" />
+        <field name="name">Accepted</field>
+        <field name="sequence">90</field>
+    </record>
+    <record id="stage_claim11" model="crm.claim.stage">
+        <field name="claim_type" ref="crm_claim_type.crm_claim_type_supplier" />
+        <field name="name">Done</field>
+        <field name="sequence">100</field>
+    </record>
+</odoo>
