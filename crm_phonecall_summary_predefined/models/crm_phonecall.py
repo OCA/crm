@@ -11,7 +11,10 @@ class CRMPhonecall(models.Model):
     _inherit = "crm.phonecall"
 
     name = fields.Char(
-        related="summary_id.name", store=True, required=False, readonly=True,
+        related="summary_id.name",
+        store=True,
+        required=False,
+        readonly=True,
     )
     summary_id = fields.Many2one(
         comodel_name="crm.phonecall.summary",
