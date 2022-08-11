@@ -37,11 +37,12 @@
             </search>
         </field>
     </record>
-    <act_window
-        name="Summaries"
-        id="crm_phonecall_summary_action"
-        res_model="crm.phonecall.summary"
-    />
+    <record id="crm_phonecall_summary_action" model="ir.actions.act_window">
+        <field name="name">Summaries</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">crm.phonecall.summary</field>
+        <field name="view_mode">tree</field>
+    </record>
     <menuitem
         id="crm_phonecall_summary_menu"
         action="crm_phonecall_summary_action"
