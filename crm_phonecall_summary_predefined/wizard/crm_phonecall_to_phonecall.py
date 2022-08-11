@@ -24,9 +24,9 @@ class CrmPhonecall2phonecall(models.TransientModel):
     def default_get(self, fields):
         """Function gets default values."""
         res = super().default_get(fields)
-        for phonecall in self.env["crm.phonecall"].browse(
-            self.env.context.get("active_id")
-        ):
+        model = self.env.context.get("active_model")
+        if model == "crm.phonecall":
+            phonecall = self.env[model].browse(self.env.context.get("active_id"))
             res["summary_id"] = getattr(phonecall, "summary_id").id
         return res
 

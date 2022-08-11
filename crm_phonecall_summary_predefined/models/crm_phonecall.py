@@ -38,7 +38,7 @@ class CRMPhonecallSummary(models.Model):
         ("name_unique", "UNIQUE (name)", "Name must be unique"),
     ]
 
-    name = fields.Char()
+    name = fields.Char(required=True)
     phonecall_ids = fields.One2many(
         comodel_name="crm.phonecall",
         inverse_name="summary_id",
