@@ -19,6 +19,7 @@ setuptools.setup(
         'odoo14-addon-crm_location_nuts',
         'odoo14-addon-crm_phone_extension',
         'odoo14-addon-crm_phonecall',
+        'odoo14-addon-crm_phonecall_summary_predefined',
         'odoo14-addon-crm_project',
         'odoo14-addon-crm_security_group',
         'odoo14-addon-crm_stage_probability',
