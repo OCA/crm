@@ -36,6 +36,7 @@ class CrmLead(models.Model):
                 super(CrmLead, lead)._compute_is_automated_probability()
                 continue
             lead.is_automated_probability = False
+        return
 
     @api.depends(
         lambda self: ["tag_ids", "stage_id", "team_id"] + self._pls_get_safe_fields()
