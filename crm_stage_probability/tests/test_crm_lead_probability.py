@@ -1,10 +1,10 @@
 # Copyright 2020 Camptocamp SA
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl)
 from odoo.exceptions import UserError
-from odoo.tests import SavepointCase
+from odoo.tests import TransactionCase
 
 
-class TestCrmLeadProbability(SavepointCase):
+class TestCrmLeadProbability(TransactionCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
@@ -36,6 +36,11 @@ class TestCrmLeadProbability(SavepointCase):
             self.opportunity_1.probability, self.opportunity_1.stage_id.probability
         )
         self.assertTrue(self.opportunity_1.is_stage_probability)
+        self.opportunity_1.write({"stage_id": False})
+        self.assertFalse(self.opportunity_1.is_automated_probability)
+        self.assertFalse(self.opportunity_1.is_stage_probability)
+        self.opportunity_1.action_set_stage_probability()
+        self.assertFalse(self.opportunity_1.probability)
 
     def test_create_opportunity(self):
         opportunity = self.env["crm.lead"].create(
@@ -47,6 +52,16 @@ class TestCrmLeadProbability(SavepointCase):
         default_stage = self.env["crm.stage"].browse(default_stage_id)
         self.assertEqual(opportunity.probability, default_stage.probability)
         self.assertFalse(opportunity.is_automated_probability)
+        # test if there is no default stage
+        self.env["crm.stage"].search([("fold", "=", False)]).write({"fold": True})
+        opportunity = self.env["crm.lead"].create(
+            {"name": "My opportunity", "type": "opportunity"}
+        )
+        self.assertEqual(opportunity.probability, 10)
+        self.assertFalse(opportunity.is_automated_probability)
+
+    def test_change_stage_id_values(self):
+        self.opportunity_1._onchange_stage_id_values(False)
 
     def test_create_opportunity_default_stage_id(self):
         opportunity = (
