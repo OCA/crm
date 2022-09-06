@@ -9,6 +9,7 @@
     "license": "AGPL-3",
     "author": "Escodoo, Odoo Community Association (OCA)",
     "maintainers": ["marcelsavegnago"],
+    "development_status": "Production/Stable",
     "website": "https://github.com/OCA/crm",
     "images": ["static/description/banner.png"],
     "depends": ["crm"],
