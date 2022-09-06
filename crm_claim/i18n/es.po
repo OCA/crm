@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-29 16:26+0000\n"
-"PO-Revision-Date: 2020-03-01 22:13+0000\n"
+"POT-Creation-Date: 2022-09-06 08:33+0000\n"
+"PO-Revision-Date: 2022-09-06 10:34+0200\n"
 "Last-Translator: Antonio Pérez Ruth <antonio.perez@makrin.es>\n"
 "Language-Team: Spanish (https://www.transifex.com/oca/teams/23907/es/)\n"
 "Language: es\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.10\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_res_partner__claim_count
@@ -59,11 +59,6 @@ msgid "Action Type"
 msgstr "Tipo de acción"
 
 #. module: crm_claim
-#: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
-msgid "Actions"
-msgstr "Acciones"
-
-#. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__active
 msgid "Active"
 msgstr "Activo"
@@ -75,14 +70,18 @@ msgstr "Actividades"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__activity_exception_decoration
-#, fuzzy
 msgid "Activity Exception Decoration"
-msgstr "Descripción de la acción..."
+msgstr "Decoración de excepción de actividad"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__activity_state
 msgid "Activity State"
 msgstr "Estado actividad"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
 
 #. module: crm_claim
 #: model:ir.ui.menu,name:crm_claim.menu_aftersale
@@ -128,7 +127,6 @@ msgstr "Reclamación"
 #. module: crm_claim
 #: model:ir.actions.act_window,name:crm_claim.crm_claim_categ_action
 #: model_terms:ir.ui.view,arch_db:crm_claim.crm_claim_category_form
-#: model_terms:ir.ui.view,arch_db:crm_claim.crm_claim_category_tree
 msgid "Claim Categories"
 msgstr "Categorías de reclamaciones"
 
@@ -165,7 +163,6 @@ msgstr "Etapa de reclamación"
 
 #. module: crm_claim
 #: model:ir.actions.act_window,name:crm_claim.crm_claim_stage_act
-#: model_terms:ir.ui.view,arch_db:crm_claim.crm_claim_stage_tree
 msgid "Claim Stages"
 msgstr "Etapas reclamaciones"
 
@@ -191,7 +188,6 @@ msgstr "Descripción de la reclamación/acción"
 #: model:ir.ui.menu,name:crm_claim.menu_report_crm_claim_tree
 #: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_calendar_view
 #: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
-#: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_tree_view
 #: model_terms:ir.ui.view,arch_db:crm_claim.view_claim_res_partner_info_form
 #: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
 #: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_graph
@@ -268,12 +264,9 @@ msgstr "Fecha de creación"
 #: model_terms:ir.actions.act_window,help:crm_claim.crm_claim_categ_action
 msgid ""
 "Create claim categories to better manage and classify your\n"
-"            claims. Some example of claims can be: preventive action,\n"
+"            claims. Some examples of claims can be: preventive action,\n"
 "            corrective action."
 msgstr ""
-"Cree categorías de reclamaciones para gestionar y clasificar mejor sus "
-"reclamaciones. Algunos ejemplos de reclamaciones pueden ser: acción "
-"preventiva, acción correctiva."
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__create_uid
@@ -364,20 +357,25 @@ msgid "Followers"
 msgstr "Seguidores"
 
 #. module: crm_claim
-#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_channel_ids
-msgid "Followers (Channels)"
-msgstr "Seguidores (Canales)"
-
-#. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_partner_ids
 msgid "Followers (Partners)"
 msgstr "Seguidores (Empresas)"
+
+#. module: crm_claim
+#: model:ir.model.fields,help:crm_claim.field_crm_claim__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
 
 #. module: crm_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
 #: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
 msgid "Group By"
 msgstr "Agrupar por"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__has_message
+msgid "Has Message"
+msgstr ""
 
 #. module: crm_claim
 #: model_terms:ir.actions.act_window,help:crm_claim.action_report_crm_claim
@@ -405,12 +403,12 @@ msgstr "Identificador"
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__activity_exception_icon
 msgid "Icon"
-msgstr ""
+msgstr "Icono"
 
 #. module: crm_claim
 #: model:ir.model.fields,help:crm_claim.field_crm_claim__activity_exception_icon
 msgid "Icon to indicate an exception activity."
-msgstr ""
+msgstr "Icono para indicar una actividad de excepción."
 
 #. module: crm_claim
 #: model:ir.model.fields,help:crm_claim.field_crm_claim__message_needaction
@@ -496,7 +494,6 @@ msgstr "Mensajes"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__model_ref_id
-#, fuzzy
 msgid "Model Reference"
 msgstr "Referencia"
 
@@ -504,6 +501,11 @@ msgstr "Referencia"
 #: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
 msgid "Month of claim"
 msgstr "Mes de la reclamación"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
 
 #. module: crm_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
@@ -524,6 +526,11 @@ msgstr "Nombre"
 #: model:crm.claim.stage,name:crm_claim.stage_claim1
 msgid "New"
 msgstr "Nuevo"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr ""
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__activity_date_deadline
@@ -564,9 +571,8 @@ msgstr "Nº de días para cerrar el caso"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_has_error_counter
-#, fuzzy
 msgid "Number of errors"
-msgstr "Número de error"
+msgstr "Número de errores"
 
 #. module: crm_claim
 #: model:ir.model.fields,help:crm_claim.field_crm_claim__message_needaction_counter
@@ -694,9 +700,8 @@ msgstr "Causas principales"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_has_sms_error
-#, fuzzy
 msgid "SMS Delivery error"
-msgstr "Error en la entrega del mensaje"
+msgstr "Error de entrega de SMS"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__team_id
@@ -796,7 +801,7 @@ msgstr "Tipo"
 #. module: crm_claim
 #: model:ir.model.fields,help:crm_claim.field_crm_claim__activity_exception_decoration
 msgid "Type of the exception activity on record."
-msgstr ""
+msgstr "Tipo de actividad de excepción en registro."
 
 #. module: crm_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
@@ -864,14 +869,14 @@ msgstr ""
 "reclamación introducida en el sistema. Las etapas definen todos los pasos "
 "requeridos para la resolución de la reclamación."
 
-#~ msgid "If checked new messages require your attention."
-#~ msgstr "Si está marcado, hay nuevos mensajes que requieren su atención."
+#~ msgid ""
+#~ "Create claim categories to better manage and classify your\n"
+#~ "            claims. Some example of claims can be: preventive action,\n"
+#~ "            corrective action."
+#~ msgstr ""
+#~ "Cree categorías de reclamaciones para gestionar y clasificar mejor sus "
+#~ "reclamaciones. Algunos ejemplos de reclamaciones pueden ser: acción "
+#~ "preventiva, acción correctiva."
 
-#~ msgid "Overdue"
-#~ msgstr "Sobrepasado"
-
-#~ msgid "Planned"
-#~ msgstr "Fecha planificada"
-
-#~ msgid "Today"
-#~ msgstr "Hoy"
+#~ msgid "Followers (Channels)"
+#~ msgstr "Seguidores (Canales)"
