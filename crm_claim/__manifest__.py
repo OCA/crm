@@ -8,6 +8,7 @@
     "version": "13.0.1.0.1",
     "category": "Customer Relationship Management",
     "author": "Odoo S.A., " "Tecnativa, " "Odoo Community Association (OCA)",
+    "website": "https://github.com/OCA/crm",
     "license": "AGPL-3",
     "summary": "Track your customers/vendors claims and grievances.",
     "depends": ["crm", "mail"],
