@@ -55,11 +55,6 @@ msgid "Action Type"
 msgstr "Aktionstyp"
 
 #. module: crm_claim
-#: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
-msgid "Actions"
-msgstr "Aktionen"
-
-#. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__active
 msgid "Active"
 msgstr "Aktiv"
@@ -78,6 +73,11 @@ msgstr "Aktivitätsausnahme-Dekoration"
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__activity_state
 msgid "Activity State"
 msgstr "Aktivitätsstatus"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
 
 #. module: crm_claim
 #: model:ir.ui.menu,name:crm_claim.menu_aftersale
@@ -263,13 +263,9 @@ msgstr "Erstelldatum"
 #: model_terms:ir.actions.act_window,help:crm_claim.crm_claim_categ_action
 msgid ""
 "Create claim categories to better manage and classify your\n"
-"            claims. Some example of claims can be: preventive action,\n"
+"            claims. Some examples of claims can be: preventive action,\n"
 "            corrective action."
 msgstr ""
-"Legen Sie Reklamationskategorien an, um Ihre Reklamationen\n"
-"            besser verwalten und klassifizieren zu können. Beispiele für\n"
-"            Reklamationskategorien: präventive Maßnahmen, korrektive "
-"Maßnahmen."
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__create_uid
@@ -331,6 +327,7 @@ msgstr "Ziel-E-Mail für E-Mail-Gateway."
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category__display_name
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__display_name
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage__display_name
+#: model:ir.model.fields,field_description:crm_claim.field_res_partner__display_name
 msgid "Display Name"
 msgstr "Anzeigename"
 
@@ -370,6 +367,11 @@ msgid "Followers (Partners)"
 msgstr "Abonnenten (Partner)"
 
 #. module: crm_claim
+#: model:ir.model.fields,help:crm_claim.field_crm_claim__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: crm_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
 #: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
 msgid "Group By"
@@ -395,6 +397,7 @@ msgstr "Hoch"
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category__id
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__id
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage__id
+#: model:ir.model.fields,field_description:crm_claim.field_res_partner__id
 msgid "ID"
 msgstr "ID"
 
@@ -449,6 +452,7 @@ msgstr "Ist Follower"
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category____last_update
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report____last_update
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage____last_update
+#: model:ir.model.fields,field_description:crm_claim.field_res_partner____last_update
 msgid "Last Modified on"
 msgstr "Zuletzt bearbeitet am"
 
@@ -504,6 +508,11 @@ msgstr "Bezieht sich auf"
 #: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
 msgid "Month of claim"
 msgstr "Monat der Reklamation"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
 
 #. module: crm_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
@@ -864,3 +873,16 @@ msgstr ""
 "            Reklamation im System zu kategorisieren. Die Stadien definieren "
 "alle Schritte, die\n"
 "            für die Lösung einer Reklamation erforderlich sind."
+
+#~ msgid "Actions"
+#~ msgstr "Aktionen"
+
+#~ msgid ""
+#~ "Create claim categories to better manage and classify your\n"
+#~ "            claims. Some example of claims can be: preventive action,\n"
+#~ "            corrective action."
+#~ msgstr ""
+#~ "Legen Sie Reklamationskategorien an, um Ihre Reklamationen\n"
+#~ "            besser verwalten und klassifizieren zu können. Beispiele für\n"
+#~ "            Reklamationskategorien: präventive Maßnahmen, korrektive "
+#~ "Maßnahmen."
