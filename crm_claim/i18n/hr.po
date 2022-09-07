@@ -56,11 +56,6 @@ msgid "Action Type"
 msgstr "Vrsta radnje"
 
 #. module: crm_claim
-#: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
-msgid "Actions"
-msgstr "Radnje"
-
-#. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__active
 msgid "Active"
 msgstr "Aktivan"
@@ -828,3 +823,6 @@ msgid ""
 "            claim entered in the system. The stages define all the steps\n"
 "            required for the resolution of a claim."
 msgstr ""
+
+#~ msgid "Actions"
+#~ msgstr "Radnje"

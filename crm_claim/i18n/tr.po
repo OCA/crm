@@ -55,11 +55,6 @@ msgid "Action Type"
 msgstr "İşlem Türü"
 
 #. module: crm_claim
-#: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
-msgid "Actions"
-msgstr "İşlemler"
-
-#. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__active
 msgid "Active"
 msgstr "Aktiv"
@@ -611,8 +606,10 @@ msgstr "Öncelik"
 msgid ""
 "Record and track your customers' claims.\n"
 "                Claims may be linked to a sales order or a lot.\n"
-"                You can send emails with attachments and keep the full history for a claim (emails sent, intervention type and so on).\n"
-"                Claims may automatically be linked to an email address using the mail gateway module."
+"                You can send emails with attachments and keep the full "
+"history for a claim (emails sent, intervention type and so on).\n"
+"                Claims may automatically be linked to an email address using "
+"the mail gateway module."
 msgstr ""
 
 #. module: crm_claim
@@ -828,3 +825,6 @@ msgid ""
 "            claim entered in the system. The stages define all the steps\n"
 "            required for the resolution of a claim."
 msgstr ""
+
+#~ msgid "Actions"
+#~ msgstr "İşlemler"
