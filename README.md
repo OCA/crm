@@ -1,6 +1,7 @@
 
 [![Runboat](https://img.shields.io/badge/runboat-Try%20me-875A7B.png)](https://runboat.odoo-community.org/builds?repo=OCA/crm&target_branch=14.0)
-[![Build Status](https://travis-ci.com/OCA/crm.svg?branch=14.0)](https://travis-ci.com/OCA/crm)
+[![Pre-commit Status](https://github.com/OCA/crm/actions/workflows/pre-commit.yml/badge.svg?branch=14.0)](https://github.com/OCA/crm/actions/workflows/pre-commit.yml?query=branch%3A14.0)
+[![Build Status](https://github.com/OCA/crm/actions/workflows/test.yml/badge.svg?branch=14.0)](https://github.com/OCA/crm/actions/workflows/test.yml?query=branch%3A14.0)
 [![codecov](https://codecov.io/gh/OCA/crm/branch/14.0/graph/badge.svg)](https://codecov.io/gh/OCA/crm)
 [![Translation Status](https://translation.odoo-community.org/widgets/crm-14-0/-/svg-badge.svg)](https://translation.odoo-community.org/engage/crm-14-0/?utm_source=widget)
 
