@@ -60,11 +60,6 @@ msgid "Action Type"
 msgstr "Tipo de Acción"
 
 #. module: crm_claim
-#: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
-msgid "Actions"
-msgstr "Acciones"
-
-#. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__active
 msgid "Active"
 msgstr "Activo"
@@ -86,6 +81,11 @@ msgstr "Descripción de Accion"
 #, fuzzy
 msgid "Activity State"
 msgstr "Activo"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
 
 #. module: crm_claim
 #: model:ir.ui.menu,name:crm_claim.menu_aftersale
@@ -131,7 +131,6 @@ msgstr "Reclamación"
 #. module: crm_claim
 #: model:ir.actions.act_window,name:crm_claim.crm_claim_categ_action
 #: model_terms:ir.ui.view,arch_db:crm_claim.crm_claim_category_form
-#: model_terms:ir.ui.view,arch_db:crm_claim.crm_claim_category_tree
 msgid "Claim Categories"
 msgstr "Categorías de Reclamación"
 
@@ -168,7 +167,6 @@ msgstr ""
 
 #. module: crm_claim
 #: model:ir.actions.act_window,name:crm_claim.crm_claim_stage_act
-#: model_terms:ir.ui.view,arch_db:crm_claim.crm_claim_stage_tree
 msgid "Claim Stages"
 msgstr ""
 
@@ -194,7 +192,6 @@ msgstr ""
 #: model:ir.ui.menu,name:crm_claim.menu_report_crm_claim_tree
 #: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_calendar_view
 #: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
-#: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_tree_view
 #: model_terms:ir.ui.view,arch_db:crm_claim.view_claim_res_partner_info_form
 #: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
 #: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_graph
@@ -269,7 +266,7 @@ msgstr ""
 #: model_terms:ir.actions.act_window,help:crm_claim.crm_claim_categ_action
 msgid ""
 "Create claim categories to better manage and classify your\n"
-"            claims. Some example of claims can be: preventive action,\n"
+"            claims. Some examples of claims can be: preventive action,\n"
 "            corrective action."
 msgstr ""
 
@@ -362,19 +359,24 @@ msgid "Followers"
 msgstr ""
 
 #. module: crm_claim
-#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_channel_ids
-msgid "Followers (Channels)"
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_partner_ids
+msgid "Followers (Partners)"
 msgstr ""
 
 #. module: crm_claim
-#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_partner_ids
-msgid "Followers (Partners)"
+#: model:ir.model.fields,help:crm_claim.field_crm_claim__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
 msgstr ""
 
 #. module: crm_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
 #: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
 msgid "Group By"
+msgstr ""
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__has_message
+msgid "Has Message"
 msgstr ""
 
 #. module: crm_claim
@@ -497,6 +499,11 @@ msgid "Month of claim"
 msgstr ""
 
 #. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: crm_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
 msgid "My Company"
 msgstr ""
@@ -514,6 +521,11 @@ msgstr ""
 #. module: crm_claim
 #: model:crm.claim.stage,name:crm_claim.stage_claim1
 msgid "New"
+msgstr ""
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
 msgstr ""
 
 #. module: crm_claim
@@ -835,3 +847,6 @@ msgid ""
 "            claim entered in the system. The stages define all the steps\n"
 "            required for the resolution of a claim."
 msgstr ""
+
+#~ msgid "Actions"
+#~ msgstr "Acciones"
