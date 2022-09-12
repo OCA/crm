@@ -41,3 +41,29 @@ class CrmLead(models.Model):
             }
         )
         return values
+
+    @api.onchange("partner_id")
+    def _onchange_partner_id(self):
+        if self.partner_id:
+            if self.partner_id.industry_id:
+                self.industry_id = self.partner_id.industry_id
+            if self.partner_id.secondary_industry_ids:
+                self.secondary_industry_ids = self.partner_id.secondary_industry_ids
+
+    @api.model
+    def create(self, vals):
+        if vals.get("partner_id"):
+            customer = self.env["res.partner"].browse(vals["partner_id"])
+            if customer.industry_id and not vals.get("industry_id"):
+                vals.update({"industry_id": customer.industry_id.id})
+            if customer.secondary_industry_ids and not vals.get(
+                "secondary_industry_ids"
+            ):
+                vals.update(
+                    {
+                        "secondary_industry_ids": [
+                            (6, 0, customer.secondary_industry_ids.ids)
+                        ]
+                    }
+                )
+        return super().create(vals)
