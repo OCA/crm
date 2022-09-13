@@ -6,46 +6,48 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2022-09-13 12:07+0000\n"
+"Last-Translator: Claude R Perrin <claude@perrin.it>\n"
 "Language-Team: none\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.3.2\n"
 
 #. module: crm_l10n_eu_nace
 #: model:ir.model.fields,field_description:crm_l10n_eu_nace.field_crm_lead__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Nom affiché"
 
 #. module: crm_l10n_eu_nace
 #: model:ir.model.fields,field_description:crm_l10n_eu_nace.field_crm_lead__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: crm_l10n_eu_nace
 #: model:ir.model.fields,field_description:crm_l10n_eu_nace.field_crm_lead____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Dernière modification le"
 
 #. module: crm_l10n_eu_nace
 #: model:ir.model,name:crm_l10n_eu_nace.model_crm_lead
 msgid "Lead/Opportunity"
-msgstr ""
+msgstr "Piste/opportunité"
 
 #. module: crm_l10n_eu_nace
 #: model:ir.model.fields,field_description:crm_l10n_eu_nace.field_crm_lead__nace_id
 msgid "Main NACE"
-msgstr ""
+msgstr "NACE Principal"
 
 #. module: crm_l10n_eu_nace
 #: model_terms:ir.ui.view,arch_db:crm_l10n_eu_nace.view_crm_case_leads_filter
 #: model_terms:ir.ui.view,arch_db:crm_l10n_eu_nace.view_crm_case_opportunities_filter
 msgid "NACE"
-msgstr ""
+msgstr "NACE"
 
 #. module: crm_l10n_eu_nace
 #: model:ir.model.fields,field_description:crm_l10n_eu_nace.field_crm_lead__secondary_nace_ids
 msgid "Secondary NACE"
-msgstr ""
+msgstr "NACE Secondaire"
