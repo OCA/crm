@@ -1,10 +1,10 @@
 # Copyright 2016 Antiun Ingeniería S.L. - Jairo Llopis
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
-from odoo.tests.common import Form, SavepointCase
+from odoo.tests.common import Form, TransactionCase
 
 
-class FirstNameCase(SavepointCase):
+class FirstNameCase(TransactionCase):
     @classmethod
     def setUpClass(cls):
         super(FirstNameCase, cls).setUpClass()
@@ -25,7 +25,7 @@ class FirstNameCase(SavepointCase):
 
     def test_create_contact(self):
         """Contact correctly created."""
-        self.lead.handle_partner_assignment()
+        self.lead._handle_partner_assignment()
         partner = self.partner_model.browse(self.lead.partner_id.id)
         self.assertEqual(self.lead.contact_name, partner.firstname)
         self.assertEqual(self.lead.contact_lastname, partner.lastname)
@@ -33,7 +33,7 @@ class FirstNameCase(SavepointCase):
     def test_create_contact_empty(self):
         """No problems creating a contact without names."""
         self.lead.write({"contact_name": False, "contact_lastname": False})
-        self.lead.handle_partner_assignment()
+        self.lead._handle_partner_assignment()
 
     def test_onchange_partner(self):
         """When changing partner, fields get correctly updated."""
