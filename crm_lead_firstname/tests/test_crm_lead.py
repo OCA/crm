@@ -16,18 +16,18 @@ class FirstNameCase(SavepointCase):
             {
                 "name": "Léad",
                 "partner_name": "Pärtner",
-                "contact_firstname": "Firçt name",
-                "contact_lastname": "Laçt name",
+                "contact_firstname": "Firçtname",
+                "contact_lastname": "Laçtname",
             }
         )
         cls.partner = cls.partner_model.create(
-            {"firstname": "Firçt name", "lastname": "Laçt name"}
+            {"firstname": "Firçtname", "lastname": "Laçtname"}
         )
 
     def test_create_contact(self):
         """Contact correctly created."""
         self.lead.handle_partner_assignment()
-        partner = self.partner_model.browse(self.lead.partner_id.id)
+        partner = self.partner_model.browse(self.partner.id)
         self.assertEqual(self.lead.contact_firstname, partner.firstname)
         self.assertEqual(self.lead.contact_lastname, partner.lastname)
 

@@ -32,6 +32,12 @@ class CrmLead(models.Model):
             record.name = clean
             record._inverse_name()
 
+    @api.onchange('partner_id')
+    def onchange_partner_id(self):
+        if not self.partner_id.is_company:
+            self.contact_firstname = self.partner_id.firstname
+            self.contact_lastname = self.partner_id.lastname
+
     @api.depends("contact_firstname", "contact_lastname")
     def _compute_name(self):
         for record in self:
