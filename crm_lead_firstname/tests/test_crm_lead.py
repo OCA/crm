@@ -1,4 +1,5 @@
 # Copyright 2016 Antiun Ingeniería S.L. - Jairo Llopis
+# Copyright 2022 Doscaal - Alexandre Moreau
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
 from odoo.tests.common import Form, SavepointCase
@@ -15,7 +16,7 @@ class FirstNameCase(SavepointCase):
             {
                 "name": "Léad",
                 "partner_name": "Pärtner",
-                "contact_name": "Firçt name",
+                "contact_firstname": "Firçt name",
                 "contact_lastname": "Laçt name",
             }
         )
@@ -27,7 +28,7 @@ class FirstNameCase(SavepointCase):
         """Contact correctly created."""
         self.lead.handle_partner_assignment()
         partner = self.partner_model.browse(self.lead.partner_id.id)
-        self.assertEqual(self.lead.contact_name, partner.firstname)
+        self.assertEqual(self.lead.contact_firstname, partner.firstname)
         self.assertEqual(self.lead.contact_lastname, partner.lastname)
 
     def test_create_contact_empty(self):
@@ -41,5 +42,5 @@ class FirstNameCase(SavepointCase):
             lead_form.partner_id = self.partner
             lead_form.name = self.partner.name
             lead_form.save()
-            self.assertEqual(self.partner.firstname, lead_form.contact_name)
+            self.assertEqual(self.partner.firstname, lead_form.contact_firstname)
             self.assertEqual(self.partner.lastname, lead_form.contact_lastname)
