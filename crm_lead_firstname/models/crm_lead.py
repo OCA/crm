@@ -2,7 +2,7 @@
 # Copyright 2021 Doscaal - Alexandre Moreau
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
-from odoo import fields, models, api
+from odoo import api, fields, models
 
 
 class CrmLead(models.Model):
@@ -20,19 +20,19 @@ class CrmLead(models.Model):
 
     def _inverse_name(self):
         for record in self:
-            parts = self.env['res.partner']._get_inverse_name(
-                record.contact_name, False)
+            parts = self.env["res.partner"]._get_inverse_name(
+                record.contact_name, False
+            )
             record.contact_lastname = parts["lastname"]
             record.contact_firstname = parts["firstname"]
 
     def _inverse_name_after_cleaning_whitespace(self):
         for record in self:
-            clean = self.env['res.partner']._get_whitespace_cleaned_name(
-                record.name)
+            clean = self.env["res.partner"]._get_whitespace_cleaned_name(record.name)
             record.name = clean
             record._inverse_name()
 
-    @api.onchange('partner_id')
+    @api.onchange("partner_id")
     def onchange_partner_id(self):
         if not self.partner_id.is_company:
             self.contact_firstname = self.partner_id.firstname
@@ -41,13 +41,11 @@ class CrmLead(models.Model):
     @api.depends("contact_firstname", "contact_lastname")
     def _compute_name(self):
         for record in self:
-            record.contact_name = self.env['res.partner']._get_computed_name(
-                record.contact_lastname, record.contact_firstname)
+            record.contact_name = self.env["res.partner"]._get_computed_name(
+                record.contact_lastname, record.contact_firstname
+            )
 
-    def _prepare_customer_values(self,
-                                 partner_name,
-                                 is_company,
-                                 parent_id=False):
+    def _prepare_customer_values(self, partner_name, is_company, parent_id=False):
         """Ensure first and last names of contact match those in lead."""
         lead_partner_data = super(CrmLead, self)._prepare_customer_values(
             partner_name, is_company, parent_id
@@ -63,8 +61,7 @@ class CrmLead(models.Model):
                     del lead_partner_data["name"]
         return lead_partner_data
 
-    def _prepare_values_from_partner(self,
-                                     partner):
+    def _prepare_values_from_partner(self, partner):
         """Recover first and last names from partner if available."""
         result = super(CrmLead, self)._prepare_values_from_partner(partner)
 
@@ -79,8 +76,7 @@ class CrmLead(models.Model):
 
         return self._convert_to_write(result)
 
-    def _prepare_contact_name_from_partner(self,
-                                           partner):
+    def _prepare_contact_name_from_partner(self, partner):
         result = super()._prepare_contact_name_from_partner(partner)
         contact_firstname = False if partner.is_company else partner.firstname
         contact_lastname = False if partner.is_company else partner.lastname

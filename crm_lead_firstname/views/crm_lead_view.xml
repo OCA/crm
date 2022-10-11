@@ -23,10 +23,16 @@
             >
                 <attribute name="string">Contact Name</attribute>
             </xpath>
-            <xpath expr="//page[@name='lead']//field[@name='contact_name']" position="attributes">
+            <xpath
+                expr="//page[@name='lead']//field[@name='contact_name']"
+                position="attributes"
+            >
                 <attribute name="invisible">1</attribute>
             </xpath>
-            <xpath expr="//page[@name='lead']//field[@name='contact_name']" position="after">
+            <xpath
+                expr="//page[@name='lead']//field[@name='contact_name']"
+                position="after"
+            >
                 <field name="contact_firstname" placeholder="Firstname" />
                 <field name="contact_lastname" placeholder="Lastname" />
             </xpath>
