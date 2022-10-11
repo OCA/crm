@@ -44,7 +44,10 @@ class CrmLead(models.Model):
             record.contact_name = self.env['res.partner']._get_computed_name(
                 record.contact_lastname, record.contact_firstname)
 
-    def _prepare_customer_values(self, partner_name, is_company, parent_id=False):
+    def _prepare_customer_values(self,
+                                 partner_name,
+                                 is_company,
+                                 parent_id=False):
         """Ensure first and last names of contact match those in lead."""
         lead_partner_data = super(CrmLead, self)._prepare_customer_values(
             partner_name, is_company, parent_id
@@ -60,7 +63,8 @@ class CrmLead(models.Model):
                     del lead_partner_data["name"]
         return lead_partner_data
 
-    def _prepare_values_from_partner(self, partner):
+    def _prepare_values_from_partner(self,
+                                     partner):
         """Recover first and last names from partner if available."""
         result = super(CrmLead, self)._prepare_values_from_partner(partner)
 
@@ -75,7 +79,8 @@ class CrmLead(models.Model):
 
         return self._convert_to_write(result)
 
-    def _prepare_contact_name_from_partner(self, partner):
+    def _prepare_contact_name_from_partner(self,
+                                           partner):
         result = super()._prepare_contact_name_from_partner(partner)
         contact_firstname = False if partner.is_company else partner.firstname
         contact_lastname = False if partner.is_company else partner.lastname
