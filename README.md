@@ -30,6 +30,7 @@ addon | version | maintainers | summary
 [crm_phonecall](crm_phonecall/) | 15.0.1.0.2 |  | CRM Phone Calls
 [crm_phonecall_planner](crm_phonecall_planner/) | 15.0.1.0.0 |  | Schedule phone calls according to some criteria
 [crm_project](crm_project/) | 15.0.1.0.1 |  | Create Tasks from Leads/Opportunities
+[crm_stage_probability](crm_stage_probability/) | 15.0.1.0.0 |  | Define fixed probability on the stages
 
 [//]: # (end addons)
 
