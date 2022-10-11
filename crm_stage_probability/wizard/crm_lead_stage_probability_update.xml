@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_crm_lead_stage_probability_update" model="ir.ui.view">
+        <field name="name">crm.lead.stage.probability.update.form</field>
+        <field name="model">crm.lead.stage.probability.update</field>
+        <field name="arch" type="xml">
+            <form string="Leads probability mass update">
+                <div>
+                    <p
+                    >All the Leads and opportunities on following stages will be updated.</p>
+                </div>
+                <group name="stages">
+                    <field name="crm_stage_update_ids">
+                        <tree>
+                            <field name="stage_id" />
+                            <field name="lead_count" />
+                        </tree>
+                    </field>
+                </group>
+                <footer>
+                    <button
+                        name="execute"
+                        string="Update probabilities"
+                        type="object"
+                        class="btn-primary"
+                    />
+                    <button string="Cancel" class="btn-secondary" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_crm_lead_stage_probability_update" model="ir.actions.act_window">
+        <field name="name">Update leads probability</field>
+        <field name="res_model">crm.lead.stage.probability.update</field>
+        <field name="binding_model_id" ref="crm.model_crm_stage" />
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_crm_lead_stage_probability_update" />
+        <field name="groups_id" eval="[(4, ref('sales_team.group_sale_salesman'))]" />
+        <field name="target">new</field>
+    </record>
+</odoo>
