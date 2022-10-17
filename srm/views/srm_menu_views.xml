@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <menuitem
+        id="srm_menu_root"
+        name="SRM"
+        web_icon="crm,static/description/icon.png"
+        groups="purchase.group_purchase_user,purchase.group_purchase_manager"
+        sequence="99"
+    />
+
+    <!-- Purchases (MAIN USER MENU) -->
+    <menuitem
+        id="srm_menu_purchases"
+        name="Purchases"
+        parent="srm_menu_root"
+        sequence="1"
+    />
+    <menuitem
+        id="menu_srm_opportunities"
+        name="My Pipeline"
+        parent="srm_menu_purchases"
+        sequence="1"
+    />
+    <menuitem
+        id="res_partner_menu_supplier"
+        name="Vendors"
+        parent="srm_menu_purchases"
+        action="account.res_partner_action_supplier"
+        sequence="15"
+    />
+
+    <!-- LEADS (MAIN USER MENU) -->
+    <menuitem
+        id="srm_menu_leads"
+        name="Leads"
+        parent="srm_menu_root"
+        groups="crm.group_use_lead"
+        sequence="5"
+    />
+
+    <!-- REPORTING -->
+    <menuitem
+        id="srm_menu_report"
+        name="Reporting"
+        parent="srm_menu_root"
+        sequence="20"
+        groups="purchase.group_purchase_manager"
+    />
+    <menuitem
+        id="srm_opportunity_report_menu_lead"
+        name="Leads"
+        parent="srm_menu_report"
+        sequence="1"
+    />
+    <menuitem
+        id="srm_opportunity_report_menu"
+        name="Pipeline"
+        parent="srm_menu_report"
+        sequence="2"
+    />
+</odoo>

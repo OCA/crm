@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<odoo>
+    <record id="crm.action_your_pipeline" model="ir.actions.server">
+        <field
+            name="code"
+        >action = model.with_context(request_type='customer').action_your_pipeline()</field>
+    </record>
+
+    <record id="crm.crm_lead_action_pipeline" model="ir.actions.act_window">
+        <field
+            name="domain"
+        >[('type','=','opportunity'),('request_type','in',(False,'customer'))]</field>
+        <field name="context">{
+                'default_type': 'opportunity',
+                'default_request_type': 'customer',
+                'search_default_assigned_to_me': 1,
+        }</field>
+    </record>
+
+    <!-- dashboard action -->
+    <record id="crm_enterprise.crm_lead_action_dashboard" model="ir.actions.act_window">
+        <field
+            name="domain"
+        >['&amp;', ('request_type','in',(False,'customer')), '|', ('active','=',True), ('active','=',False)]</field>
+    </record>
+
+    <record
+        id="crm_enterprise.crm_opportunity_action_dashboard"
+        model="ir.actions.act_window"
+    >
+        <field name="domain">[('request_type','in',(False,'customer'))]</field>
+    </record>
+</odoo>
