@@ -1,5 +1,6 @@
 # Copyright 2010-2020 Odoo S. A.
 # Copyright 2021 Tecnativa - Pedro M. Baeza
+# Copyright 2022 Tecnativa - Víctor Martínez
 # License LGPL-3 - See https://www.gnu.org/licenses/lgpl-3.0.html
 from odoo import api, fields, models
 
@@ -38,6 +39,7 @@ class CrmLeadConvert2Task(models.TransientModel):
             "email_from": lead.email_from,
             "project_id": self.project_id.id,
             "partner_id": partner.id,
+            "email_cc": lead.email_cc,
         }
         task = self.env["project.task"].create(vals)
         # move the mail thread
