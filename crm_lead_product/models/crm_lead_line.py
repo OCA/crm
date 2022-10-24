@@ -9,16 +9,16 @@ class CrmLeadLine(models.Model):
     _description = "Line in CRM Lead"
 
     @api.depends("price_unit", "product_qty")
-    def _compute_planned_revenue(self):
-        for rec in self:
-            rec.planned_revenue = rec.product_qty * rec.price_unit
-
-    @api.depends("lead_id.probability", "planned_revenue")
     def _compute_expected_revenue(self):
         for rec in self:
+            rec.expected_revenue = rec.product_qty * rec.price_unit
+
+    @api.depends("lead_id.probability", "expected_revenue")
+    def _compute_prorated_revenue(self):
+        for rec in self:
             if rec.lead_id and rec.lead_id.type != "lead":
-                rec.expected_revenue = (
-                    rec.planned_revenue * rec.lead_id.probability * (1 / 100)
+                rec.prorated_revenue = (
+                    rec.expected_revenue * rec.lead_id.probability * (1 / 100)
                 )
 
     lead_id = fields.Many2one("crm.lead", string="Lead")
@@ -32,16 +32,14 @@ class CrmLeadLine(models.Model):
     )
     product_qty = fields.Integer(string="Product Quantity", default=1, required=True)
     uom_id = fields.Many2one("uom.uom", string="Unit of Measure", readonly=True)
-    price_unit = fields.Float(string="Price Unit")
-    planned_revenue = fields.Float(
-        compute="_compute_planned_revenue",
-        string="Planned revenue",
+    price_unit = fields.Float()
+    expected_revenue = fields.Float(
+        compute="_compute_expected_revenue",
         compute_sudo=True,
         store=True,
     )
-    expected_revenue = fields.Float(
-        compute="_compute_expected_revenue",
-        string="Expected revenue",
+    prorated_revenue = fields.Float(
+        compute="_compute_prorated_revenue",
         compute_sudo=True,
         store=True,
     )

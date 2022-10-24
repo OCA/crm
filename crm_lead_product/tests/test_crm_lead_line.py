@@ -4,8 +4,6 @@
 from odoo.tests import common
 
 
-@common.at_install(False)
-@common.post_install(True)
 class TestCrmLeadLine(common.TransactionCase):
     def setUp(self):
         super(TestCrmLeadLine, self).setUp()
@@ -144,9 +142,9 @@ class TestCrmLeadLine(common.TransactionCase):
 
         # Check if planned revenue is correctly set for lead line 1
         self.assertEqual(
-            self.lead.lead_line_ids[0].planned_revenue,
+            self.lead.lead_line_ids[0].expected_revenue,
             self.product_4.list_price,
-            "Planned revenue should be equal " "to the product standard price",
+            "Expected revenue should be equal " "to the product standard price",
         )
 
         self.lead.convert_opportunity(self.env.ref("base.res_partner_1").id)
@@ -154,15 +152,15 @@ class TestCrmLeadLine(common.TransactionCase):
         lead_line_1 = self.lead.lead_line_ids[0]
 
         self.assertEqual(
-            lead_line_1.expected_revenue,
-            lead_line_1.planned_revenue * self.lead.probability * (1 / 100),
-            "Expected revenue should be planned " "revenue times the probability",
+            lead_line_1.prorated_revenue,
+            lead_line_1.expected_revenue * self.lead.probability * (1 / 100),
+            "Prorated revenue should be expected " "revenue times the probability",
         )
 
         self.lead.write({"probability": 30})
 
         self.assertEqual(
-            lead_line_1.expected_revenue,
-            round(lead_line_1.planned_revenue * self.lead.probability * (1 / 100), 5),
-            "Expected revenue should be planned " "revenue times the probability",
+            lead_line_1.prorated_revenue,
+            round(lead_line_1.expected_revenue * self.lead.probability * (1 / 100), 5),
+            "Prorated revenue should be expected " "revenue times the probability",
         )
