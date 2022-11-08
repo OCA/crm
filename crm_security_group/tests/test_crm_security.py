@@ -78,7 +78,7 @@ class TestCrmSecurity(SavepointCase):
     def test_user_sale(self):
         model = self.model_ir_ui_menu.with_user(self.sale_user)
         items = model._visible_menu_ids()
-        self.assertTrue(self.crm_menu.id in items)
+        self.assertFalse(self.crm_menu.id in items)
         self.assertTrue(self.sale_menu.id in items)
         # Crm lead checks
         crm_lead_model = self.env["crm.lead"].with_user(self.sale_user)

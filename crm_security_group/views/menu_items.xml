@@ -3,7 +3,7 @@
     <record id="crm.crm_menu_root" model="ir.ui.menu">
         <field
             name="groups_id"
-            eval="[(4, ref('crm_security_group.group_crm_own_leads'))]"
+            eval="[(6,0,[ref('crm_security_group.group_crm_own_leads')])]"
         />
     </record>
     <record id="sale_crm.sale_order_menu_quotations_crm" model="ir.ui.menu">
@@ -18,7 +18,7 @@
     <record id="crm.crm_menu_report" model="ir.ui.menu">
         <field
             name="groups_id"
-            eval="[(4, ref('crm_security_group.group_crm_manager'))]"
+            eval="[(6,0,[ref('crm_security_group.group_crm_manager')])]"
         />
     </record>
     <record id="crm.crm_menu_config" model="ir.ui.menu">
