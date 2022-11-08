@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-    <record id="module_category_crm" model="ir.module.category">
-        <field name="name">CRM</field>
-        <field name="sequence">80</field>
-    </record>
     <record id="module_category_crm_crm" model="ir.module.category">
         <field name="name">CRM</field>
-        <field name="parent_id" ref="crm_security_group.module_category_crm" />
+        <field name="parent_id" ref="base.module_category_sales" />
     </record>
     <record id="group_crm_own_leads" model="res.groups">
         <field name="name">User: Own Documents Only</field>
