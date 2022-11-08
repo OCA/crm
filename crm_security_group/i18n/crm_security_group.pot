@@ -19,7 +19,6 @@ msgid "Administrator"
 msgstr ""
 
 #. module: crm_security_group
-#: model:ir.module.category,name:crm_security_group.module_category_crm
 #: model:ir.module.category,name:crm_security_group.module_category_crm_crm
 msgid "CRM"
 msgstr ""
