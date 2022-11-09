@@ -12,6 +12,7 @@ setuptools.setup(
         'odoo-addon-crm_claim_type>=15.0dev,<15.1dev',
         'odoo-addon-crm_industry>=15.0dev,<15.1dev',
         'odoo-addon-crm_lead_code>=15.0dev,<15.1dev',
+        'odoo-addon-crm_lead_firstname>=15.0dev,<15.1dev',
         'odoo-addon-crm_location>=15.0dev,<15.1dev',
         'odoo-addon-crm_multicompany_reporting_currency>=15.0dev,<15.1dev',
         'odoo-addon-crm_phonecall>=15.0dev,<15.1dev',
