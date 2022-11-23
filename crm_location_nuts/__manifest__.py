@@ -16,7 +16,7 @@
     ],
     'author': 'Tecnativa, '
               'Odoo Community Association (OCA)',
-    'website': 'https://www.tecnativa.com',
+    'website': 'https://github.com/OCA/crm',
     'license': 'AGPL-3',
     'installable': True,
 }

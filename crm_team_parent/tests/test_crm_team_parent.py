@@ -3,7 +3,7 @@
 
 from odoo.tests.common import TransactionCase
 
-from odoo.addons.crm_team_parent.models.crm_team import ParentLoopError
+from ..models.crm_team import ParentLoopError
 
 
 class TestCrmTeamParent(TransactionCase):
