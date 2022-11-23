@@ -8,7 +8,7 @@ from odoo import exceptions, fields
 from odoo.tests import common
 
 
-class TestCrmSalespersonPlannerVisitTemplate(common.SavepointCase):
+class TestCrmSalespersonPlannerVisitTemplate(common.TransactionCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
@@ -24,7 +24,7 @@ class TestCrmSalespersonPlannerVisitTemplate(common.SavepointCase):
         )
         cls.visit_template_base = cls.visit_template_model.create(
             {
-                "partner_ids": [(4, cls.partner1.id)],
+                "partner_ids": [(6, False, cls.partner1.ids)],
                 "start_date": fields.Date.today(),
                 "stop_date": fields.Date.today(),
                 "start": fields.Date.today(),
@@ -47,14 +47,14 @@ class TestCrmSalespersonPlannerVisitTemplate(common.SavepointCase):
         )
         self.visit_template_base.action_validate()
         self.visit_template_base.create_visits(days=4)
-        self.assertEqual(self.visit_template_base.visit_ids_count, 5)
+        self.assertEqual(self.visit_template_base.visit_ids_count, 4)
         self.assertEqual(
             len(
                 self.visit_template_base.visit_ids.filtered(
                     lambda a: a.state == "draft"
                 )
             ),
-            5,
+            4,
         )
         self.assertEqual(
             len(
@@ -98,7 +98,7 @@ class TestCrmSalespersonPlannerVisitTemplate(common.SavepointCase):
         )
         self.visit_template_base.action_validate()
         self.visit_template_base.create_visits(days=4)
-        self.assertEqual(self.visit_template_base.visit_ids_count, 5)
+        self.assertEqual(self.visit_template_base.visit_ids_count, 4)
         self.assertEqual(
             len(
                 self.visit_template_base.visit_ids.filtered(
@@ -113,7 +113,7 @@ class TestCrmSalespersonPlannerVisitTemplate(common.SavepointCase):
                     lambda a: a.calendar_event_id.id
                 )
             ),
-            5,
+            4,
         )
         self.assertEqual(self.visit_template_base.state, "in-progress")
         self.visit_template_base.create_visits(days=9)
@@ -149,7 +149,7 @@ class TestCrmSalespersonPlannerVisitTemplate(common.SavepointCase):
             }
         )
         visit_template.create_visits(days=10)
-        visit_0 = visit_template.visit_ids[0]
+        visit_0 = fields.first(visit_template.visit_ids)
         event_id_0 = visit_0.calendar_event_id
         self.assertEqual(visit_0.date, event_id_0.start_date)
         visit_0.write({"date": fields.Date.today() + timedelta(days=7)})
@@ -174,12 +174,12 @@ class TestCrmSalespersonPlannerVisitTemplate(common.SavepointCase):
             }
         )
         visit_template.create_visits(days=10)
-        first_visit = visit_template.visit_ids[0]
-        self.assertNotEqual(first_visit.calendar_event_id.id, False)
+        first_visit = fields.first(visit_template.visit_ids)
+        self.assertTrue(first_visit.calendar_event_id)
         with self.assertRaises(exceptions.ValidationError):
             first_visit.unlink()
         self.assertEqual(len(visit_template.visit_ids), 10)
         first_visit.action_cancel(self.close_reason)
-        self.assertEqual(first_visit.calendar_event_id.id, False)
+        self.assertFalse(first_visit.calendar_event_id)
         first_visit.unlink()
         self.assertEqual(len(visit_template.visit_ids), 9)

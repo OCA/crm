@@ -7,7 +7,7 @@
         <field name="name">CRM - Salesperson Planner Visit Template Tree</field>
         <field name="model">crm.salesperson.planner.visit.template</field>
         <field name="arch" type="xml">
-            <tree string="Visit Templates">
+            <tree>
                 <field name="name" />
                 <field name="partner_id" />
                 <field name="start_date" />
@@ -82,7 +82,7 @@
                             <field name="start" invisible="1" />
                             <field name="stop" invisible="1" />
                             <field name="stop_date" invisible="1" />
-                            <field name="start_datetime" invisible="1" />
+                            <field name="start" invisible="1" />
                             <field name="sequence" />
                             <field name="user_id" />
                             <field
@@ -118,13 +118,13 @@
                                     attrs="{'invisible': [('rrule_type', '!=', 'weekly')]}"
                                     name="weekdays"
                                 >
-                                    <field name="mo" />
-                                    <field name="tu" />
-                                    <field name="we" />
-                                    <field name="th" />
-                                    <field name="fr" />
-                                    <field name="sa" />
-                                    <field name="su" />
+                                    <field name="mon" />
+                                    <field name="tue" />
+                                    <field name="wed" />
+                                    <field name="thu" />
+                                    <field name="fri" />
+                                    <field name="sat" />
+                                    <field name="sun" />
                                 </group>
                                 <group
                                     attrs="{'invisible': [('rrule_type', '!=', 'monthly')]}"
@@ -144,7 +144,7 @@
                                                     'invisible': [('month_by', '!=', 'day')]}"
                                         />
                                         <field
-                                            name="week_list"
+                                            name="weekday"
                                             nolabel="1"
                                             attrs="{'required': [('month_by', '=', 'day'), ('rrule_type', '=', 'monthly')],
                                                     'invisible': [('month_by', '!=', 'day')]}"

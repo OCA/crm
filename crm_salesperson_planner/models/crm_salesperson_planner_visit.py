@@ -27,12 +27,10 @@ class CrmSalespersonPlannerVisit(models.Model):
     partner_phone = fields.Char(string="Phone", related="partner_id.phone")
     partner_mobile = fields.Char(string="Mobile", related="partner_id.mobile")
     date = fields.Date(
-        string="Date",
         default=fields.Date.context_today,
         required=True,
     )
     sequence = fields.Integer(
-        string="Sequence",
         help="Used to order Visits in the different views",
         default=20,
     )
@@ -58,7 +56,7 @@ class CrmSalespersonPlannerVisit(models.Model):
         copy=False,
         domain="[('type', '=', 'opportunity'), ('partner_id', 'child_of', partner_id)]",
     )
-    description = fields.Html(string="Description")
+    description = fields.Html()
     state = fields.Selection(
         string="Status",
         required=True,
@@ -77,10 +75,8 @@ class CrmSalespersonPlannerVisit(models.Model):
     close_reason_id = fields.Many2one(
         comodel_name="crm.salesperson.planner.visit.close.reason", string="Close Reason"
     )
-    close_reason_image = fields.Image(
-        string="Close Reason Image", max_width=1024, max_height=1024, attachment=True
-    )
-    close_reason_notes = fields.Text(string="Close Reason Notes")
+    close_reason_image = fields.Image(max_width=1024, max_height=1024, attachment=True)
+    close_reason_notes = fields.Text()
     visit_template_id = fields.Many2one(
         comodel_name="crm.salesperson.planner.visit.template", string="Visit Template"
     )
@@ -140,29 +136,32 @@ class CrmSalespersonPlannerVisit(models.Model):
             }
         )
 
+    def _prepare_calendar_event_vals(self):
+        return {
+            "name": self.name,
+            "partner_ids": [(6, 0, [self.partner_id.id, self.user_id.partner_id.id])],
+            "user_id": self.user_id.id,
+            "start_date": self.date,
+            "stop_date": self.date,
+            "start": self.date,
+            "stop": self.date,
+            "allday": True,
+            "res_model": self._name,
+            "res_model_id": self.env.ref(
+                "crm_salesperson_planner.model_crm_salesperson_planner_visit"
+            ).id,
+            "res_id": self.id,
+        }
+
     def create_calendar_event(self):
         events = self.env["calendar.event"]
-        model_id = self.env.ref(
-            "crm_salesperson_planner.model_crm_salesperson_planner_visit"
-        ).id
-        for sel in self:
-            event_vals = {
-                "name": sel.name,
-                "partner_ids": [(6, 0, [sel.partner_id.id, sel.user_id.partner_id.id])],
-                "user_id": sel.user_id.id,
-                "start_date": sel.date,
-                "stop_date": sel.date,
-                "start": sel.date,
-                "stop": sel.date,
-                "allday": True,
-                "res_model_id": model_id,
-                "res_id": sel.id,
-            }
-            event = self.env["calendar.event"].create(event_vals)
+        for item in self:
+            event = self.env["calendar.event"].create(
+                item._prepare_calendar_event_vals()
+            )
             if event:
                 event.activity_ids.unlink()
-                event.write({"res_model": "crm.salesperson.planner.visit"})
-                sel.write({"calendar_event_id": event.id})
+                item.calendar_event_id = event
             events += event
         return events
 
@@ -181,19 +180,19 @@ class CrmSalespersonPlannerVisit(models.Model):
     def unlink(self):
         if any(sel.state not in ["draft", "cancel"] for sel in self):
             raise ValidationError(_("Visits must be in cancelled state"))
-        return super(CrmSalespersonPlannerVisit, self).unlink()
+        return super().unlink()
 
     def write(self, values):
-        ret_val = super(CrmSalespersonPlannerVisit, self).write(values)
+        ret_val = super().write(values)
         if (values.get("date") or values.get("user_id")) and not self.env.context.get(
             "bypass_update_event"
         ):
             new_vals = {}
-            for sel in self.filtered(lambda a: a.calendar_event_id):
+            for item in self.filtered(lambda a: a.calendar_event_id):
                 if values.get("date"):
                     new_vals["start"] = values.get("date")
                     new_vals["stop"] = values.get("date")
                 if values.get("user_id"):
                     new_vals["user_id"] = values.get("user_id")
-                sel.calendar_event_id.write(new_vals)
+                item.calendar_event_id.write(new_vals)
         return ret_val
