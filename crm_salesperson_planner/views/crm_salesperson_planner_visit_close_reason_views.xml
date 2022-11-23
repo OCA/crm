@@ -9,7 +9,7 @@
         <field name="name">CRM - Salesperson Planner Visit Close Reason Tree</field>
         <field name="model">crm.salesperson.planner.visit.close.reason</field>
         <field name="arch" type="xml">
-            <tree string="Close Reasons">
+            <tree>
                 <field name="name" />
                 <field name="close_type" />
                 <field name="require_image" />
@@ -48,7 +48,7 @@
         model="ir.actions.act_window"
         id="crm_salesperson_planner_visit_close_reason_action"
     >
-        <field name="name">Close Reason</field>
+        <field name="name">Close Reasons</field>
         <field name="res_model">crm.salesperson.planner.visit.close.reason</field>
         <field name="view_mode">tree,form</field>
         <field name="help" type="html">

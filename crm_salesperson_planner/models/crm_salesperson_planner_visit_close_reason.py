@@ -15,5 +15,5 @@ class CrmSalespersonPlannerVisitCloseReason(models.Model):
         required=True,
         default="cancel",
     )
-    require_image = fields.Boolean(string="Require Image", default=False)
-    reschedule = fields.Boolean(string="Reschedule", default=False)
+    require_image = fields.Boolean(default=False)
+    reschedule = fields.Boolean(default=False)
