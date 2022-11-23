@@ -25,10 +25,8 @@ class CrmSalespersonPlannerVisitCloseWiz(models.TransientModel):
         string="Reason",
         required=True,
     )
-    image = fields.Image(string="Image", max_width=1024, max_height=1024)
-    new_date = fields.Date(
-        string="New Date", default=lambda self: self._default_new_date()
-    )
+    image = fields.Image(max_width=1024, max_height=1024)
+    new_date = fields.Date(default=lambda self: self._default_new_date())
     new_sequence = fields.Integer(
         string="Sequence",
         help="Used to order Visits in the different views",
@@ -37,11 +35,11 @@ class CrmSalespersonPlannerVisitCloseWiz(models.TransientModel):
     require_image = fields.Boolean(
         string="Require Image", related="reason_id.require_image"
     )
-    reschedule = fields.Boolean(string="Reschedule", default=True)
+    reschedule = fields.Boolean(default=True)
     allow_reschedule = fields.Boolean(
         string="Allow Reschedule", related="reason_id.reschedule"
     )
-    notes = fields.Text(string="Notes")
+    notes = fields.Text()
 
     def action_close_reason_apply(self):
         visits = self.env["crm.salesperson.planner.visit"].browse(

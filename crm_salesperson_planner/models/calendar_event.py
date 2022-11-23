@@ -35,9 +35,9 @@ class CalendarEvent(models.Model):
                 salesperson_visit_events.mapped(
                     "salesperson_planner_visit_ids"
                 ).with_context(bypass_update_event=True).write(new_vals)
-        return super(CalendarEvent, self).write(values)
+        return super().write(values)
 
-    def unlink(self, can_be_deleted=True):
+    def unlink(self):
         if not self.env.context.get("bypass_cancel_visit"):
             salesperson_visit_events = self.filtered(
                 lambda a: a.res_model == "crm.salesperson.planner.visit"
@@ -47,8 +47,13 @@ class CalendarEvent(models.Model):
                 error_msg = ""
                 for event in salesperson_visit_events:
                     error_msg += _(
-                        "Event %s is related to salesperson visit %s. "
-                        "Cancel it to delete this event.\n"
-                    ) % (event.name, event.salesperson_planner_visit_ids[0].name)
+                        "Event %(event_name)s is related to salesperson visit "
+                        "%(partner_name)s. Cancel it to delete this event.\n"
+                    ) % {
+                        "event_name": event.name,
+                        "partner_name": fields.first(
+                            event.salesperson_planner_visit_ids
+                        ).name,
+                    }
                 raise ValidationError(error_msg)
-        return super(CalendarEvent, self).unlink(can_be_deleted)
+        return super().unlink()
