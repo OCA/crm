@@ -14,7 +14,10 @@ class CrmSalespersonPlannerVisitTemplate(models.Model):
     _inherit = "calendar.event"
 
     name = fields.Char(
-        string="Visit Template Number", default="/", readonly=True, copy=False,
+        string="Visit Template Number",
+        default="/",
+        readonly=True,
+        copy=False,
     )
     partner_ids = fields.Many2many(
         string="Customer",
@@ -40,7 +43,9 @@ class CrmSalespersonPlannerVisitTemplate(models.Model):
             ("groups_id", "in", self.env.ref("sales_team.group_sale_salesman").id)
         ],
     )
-    categ_ids = fields.Many2many(relation="visit_category_rel",)
+    categ_ids = fields.Many2many(
+        relation="visit_category_rel",
+    )
     alarm_ids = fields.Many2many(relation="visit_calendar_event_rel")
     state = fields.Selection(
         string="Status",
@@ -64,7 +69,10 @@ class CrmSalespersonPlannerVisitTemplate(models.Model):
         string="Number of Sales Person Visits", compute="_compute_visit_ids_count"
     )
     auto_validate = fields.Boolean(string="Auto Validate", default=True)
-    rrule_type = fields.Selection(default="daily", required=True,)
+    rrule_type = fields.Selection(
+        default="daily",
+        required=True,
+    )
     last_visit_date = fields.Date(
         string="Last Visit Date", compute="_compute_last_visit_date", store=True
     )
