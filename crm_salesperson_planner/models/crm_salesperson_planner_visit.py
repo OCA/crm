@@ -13,14 +13,24 @@ class CrmSalespersonPlannerVisit(models.Model):
     _inherit = ["mail.thread", "mail.activity.mixin"]
 
     name = fields.Char(
-        string="Visit Number", required=True, default="/", readonly=True, copy=False,
+        string="Visit Number",
+        required=True,
+        default="/",
+        readonly=True,
+        copy=False,
     )
     partner_id = fields.Many2one(
-        comodel_name="res.partner", string="Customer", required=True,
+        comodel_name="res.partner",
+        string="Customer",
+        required=True,
     )
     partner_phone = fields.Char(string="Phone", related="partner_id.phone")
     partner_mobile = fields.Char(string="Mobile", related="partner_id.mobile")
-    date = fields.Date(string="Date", default=fields.Date.context_today, required=True,)
+    date = fields.Date(
+        string="Date",
+        default=fields.Date.context_today,
+        required=True,
+    )
     sequence = fields.Integer(
         string="Sequence",
         help="Used to order Visits in the different views",
