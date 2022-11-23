@@ -25,9 +25,9 @@ class ResPartner(models.Model):
             partner.salesperson_planner_visit_count = visit_count
 
     def action_view_salesperson_planner_visit(self):
-        action = self.env.ref(
+        action = self.env["ir.actions.act_window"]._for_xml_id(
             "crm_salesperson_planner.all_crm_salesperson_planner_visit_action"
-        ).read()[0]
+        )
         operator = "child_of" if self.is_company else "="
         action["domain"] = [("partner_id", operator, self.id)]
         return action

@@ -7,7 +7,7 @@ from odoo import fields
 from odoo.tests import common
 
 
-class TestCrmSalespersonPlannerVisit(common.SavepointCase):
+class TestCrmSalespersonPlannerVisit(common.TransactionCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
@@ -82,7 +82,7 @@ class TestCrmSalespersonPlannerVisit(common.SavepointCase):
 
     def config_close_wiz(self, att_close_type, vals):
         additionnal_context = {
-            "active_model": self.visit_model,
+            "active_model": self.visit_model._name,
             "active_ids": self.visit1.ids,
             "active_id": self.visit1.id,
             "att_close_type": att_close_type,

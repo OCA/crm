@@ -2,7 +2,7 @@
 # Copyright 2021 Sygel - Manuel Regidor
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html)
 
-from dateutil.relativedelta import relativedelta
+from datetime import timedelta
 
 from odoo import _, api, fields, models
 from odoo.exceptions import ValidationError
@@ -26,7 +26,6 @@ class CrmSalespersonPlannerVisitTemplate(models.Model):
         required=True,
     )
     sequence = fields.Integer(
-        string="Sequence",
         help="Used to order Visits in the different views",
         default=20,
     )
@@ -68,14 +67,12 @@ class CrmSalespersonPlannerVisitTemplate(models.Model):
     visit_ids_count = fields.Integer(
         string="Number of Sales Person Visits", compute="_compute_visit_ids_count"
     )
-    auto_validate = fields.Boolean(string="Auto Validate", default=True)
+    auto_validate = fields.Boolean(default=True)
     rrule_type = fields.Selection(
         default="daily",
         required=True,
     )
-    last_visit_date = fields.Date(
-        string="Last Visit Date", compute="_compute_last_visit_date", store=True
-    )
+    last_visit_date = fields.Date(compute="_compute_last_visit_date", store=True)
     final_date = fields.Date(string="Repeat Until")
     allday = fields.Boolean(default=True)
     recurrency = fields.Boolean(default=True)
@@ -104,26 +101,11 @@ class CrmSalespersonPlannerVisitTemplate(models.Model):
     def _compute_last_visit_date(self):
         for sel in self.filtered(lambda x: x.visit_ids):
             sel.last_visit_date = sel.visit_ids.sorted(lambda x: x.date)[-1].date
-        self.filtered(lambda x: not x.visit_ids).write({"last_visit_date": False})
-
-    # overwrite
-    # default _search method gives an error when trying to access
-    # instances of the model
-    def _search(
-        self,
-        args,
-        offset=0,
-        limit=None,
-        order=None,
-        count=False,
-        access_rights_uid=None,
-    ):
-        return super(models.Model, self)._search(args)
 
     @api.constrains("partner_ids")
     def _constrains_partner_ids(self):
-        for sel in self:
-            if len(sel.partner_ids) > 1:
+        for item in self:
+            if len(item.partner_ids) > 1:
                 raise ValidationError(_("Only one customer is allowed"))
 
     @api.model_create_multi
@@ -141,16 +123,10 @@ class CrmSalespersonPlannerVisitTemplate(models.Model):
     def write(self, vals):
         return super(models.Model, self).write(vals)
 
-    # overwrite
-    # default unlink method gives an error when trying to access
-    # instances of the model
-    def unlink(self, can_be_deleted=True):
-        return super(models.Model, self).unlink()
-
     def action_view_salesperson_planner_visit(self):
-        action = self.env.ref(
+        action = self.env["ir.actions.act_window"]._for_xml_id(
             "crm_salesperson_planner.all_crm_salesperson_planner_visit_action"
-        ).read()[0]
+        )
         action["domain"] = [("id", "=", self.visit_ids.ids)]
         action["context"] = {
             "default_partner_id": self.partner_id.id,
@@ -168,65 +144,62 @@ class CrmSalespersonPlannerVisitTemplate(models.Model):
     def action_draft(self):
         self.write({"state": "draft"})
 
-    def filter_dates(self, recurrences, days="7"):
-        last_date = recurrences[-1].date()
-        reference_date = self.start_date
-        visit_date = fields.Datetime.from_string(reference_date)
-        last_visit_date = False
-        if not self.last_visit_date:
-            last_visit_date = visit_date
-        else:
-            last_visit_date = fields.Datetime.from_string(
-                self.last_visit_date + relativedelta(days=1)
-            )
-        max_date = fields.Date.today() + relativedelta(
-            days=days, hours=23, minutes=59, seconds=59
-        )
-        recurrences = list(
-            filter(
-                lambda a: a.replace(tzinfo=None) <= max_date
-                and a.replace(tzinfo=None) > last_visit_date,
-                recurrences,
-            )
-        )
-        return recurrences, last_date
+    def _prepare_crm_salesperson_planner_visit_vals(self, dates):
+        return [
+            {
+                "partner_id": (
+                    fields.first(self.partner_ids).id if self.partner_ids else False
+                ),
+                "date": date,
+                "sequence": self.sequence,
+                "user_id": self.user_id.id,
+                "description": self.description,
+                "company_id": self.company_id.id,
+                "visit_template_id": self.id,
+            }
+            for date in dates
+        ]
+
+    def _get_max_date(self):
+        return self._increase_date(self.start_date, self.count)
+
+    def _increase_date(self, date, value):
+        if self.rrule_type == "daily":
+            date += timedelta(days=value)
+        elif self.rrule_type == "weekly":
+            date += timedelta(weeks=value)
+        elif self.rrule_type == "monthly":
+            date += timedelta(months=value)
+        elif self.rrule_type == "yearly":
+            date += timedelta(years=value)
+        return date
+
+    def _get_recurrence_dates(self, items):
+        dates = []
+        max_date = self._get_max_date()
+        from_date = self._increase_date(self.last_visit_date or self.start_date, 1)
+        if max_date > from_date:
+            for _x in range(items):
+                if from_date <= max_date:
+                    dates.append(from_date)
+                    from_date = self._increase_date(from_date, 1)
+        return dates
 
     def _create_visits(self, days=7):
-        visits_vals = []
-        for sel in self:
-            recurrences = self._get_recurrent_date_by_event()
-            days, last_date = sel.filter_dates(recurrences, days)
-            for day in days:
-                visits_vals.append(
-                    {
-                        "partner_id": sel.partner_ids[0].id,
-                        "date": day.date(),
-                        "sequence": sel.sequence,
-                        "user_id": sel.user_id.id,
-                        "description": sel.description,
-                        "company_id": sel.company_id.id,
-                        "visit_template_id": sel.id,
-                    }
-                )
-            if days and days[-1].date() >= last_date:
-                sel.write({"state": "done"})
-        return visits_vals
+        return self._prepare_crm_salesperson_planner_visit_vals(
+            self._get_recurrence_dates(days)
+        )
 
     def create_visits(self, days=7):
-        for sel in self:
-            visit_vals = sel._create_visits(days=days)
-            visits = self.env["crm.salesperson.planner.visit"].create(visit_vals)
-            if visits and sel.auto_validate:
+        for item in self:
+            visits = self.env["crm.salesperson.planner.visit"].create(
+                item._create_visits(days)
+            )
+            if visits and item.auto_validate:
                 visits.action_confirm()
+            if item.last_visit_date >= item._get_max_date():
+                item.state = "done"
 
     def _cron_create_visits(self, days=7):
         templates = self.search([("state", "=", "in-progress")])
-        templates.create_visits(days=days)
-
-    # overwrite
-    def get_recurrent_ids(self, domain, order=None):
-        return self.search([domain], order=order)
-
-    # overwrite
-    def create_attendees(self):
-        return []
+        templates.create_visits(days)
