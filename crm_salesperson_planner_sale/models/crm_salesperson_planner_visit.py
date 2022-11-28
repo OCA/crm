@@ -39,11 +39,8 @@ class CrmSalespersonPlannerVisit(models.Model):
             sel.quotation_count = mapped_quotation_data.get(sel.id, 0)
             sel.sale_order_count = mapped_sale_data.get(sel.id, 0)
 
-    def action_sale_quotation_new(self):
-        action = self.env.ref(
-            "crm_salesperson_planner_sale.crm_salesperson_visit_action_quotation_new"
-        ).read()[0]
-        action["context"] = {
+    def _prepare_context_from_action(self):
+        return {
             "search_default_visit_id": self.id,
             "default_visit_id": self.id,
             "search_default_partner_id": self.partner_id.commercial_partner_id.id,
@@ -52,49 +49,42 @@ class CrmSalespersonPlannerVisit(models.Model):
             "default_company_id": self.company_id.id or self.env.company.id,
             "default_user_id": self.user_id.id,
         }
+
+    def action_sale_quotation_new(self):
+        action = self.env["ir.actions.act_window"]._for_xml_id(
+            "crm_salesperson_planner_sale.crm_salesperson_visit_action_quotation_new"
+        )
+        action["context"] = self._prepare_context_from_action()
         return action
 
     def action_view_sale_quotation(self):
-        action = self.env.ref("sale.action_quotations_with_onboarding").read()[0]
-        action["context"] = {
-            "search_default_draft": 1,
-            "search_default_partner_id": self.partner_id.commercial_partner_id.id,
-            "default_partner_id": self.partner_id.commercial_partner_id.id,
-            "default_user_id": self.user_id.id,
-            "default_origin": self.name,
-            "default_company_id": self.company_id.id or self.env.company.id,
-            "default_visit_id": self.id,
-        }
+        action = self.env["ir.actions.act_window"]._for_xml_id(
+            "sale.action_quotations_with_onboarding"
+        )
+        ctx = self._prepare_context_from_action()
+        ctx.update(search_default_draft=1)
+        action["context"] = ctx
         action["domain"] = [
             ("visit_id", "=", self.id),
-            ("state", "in", ["draft", "sent"]),
+            ("state", "in", ("draft", "sent")),
         ]
-        quotations = self.mapped("order_ids").filtered(
-            lambda l: l.state in ("draft", "sent")
-        )
-        if len(quotations) == 1:
+        if self.quotation_count == 1:
             action["views"] = [(self.env.ref("sale.view_order_form").id, "form")]
-            action["res_id"] = quotations.id
+            quotation = self.order_ids.filtered(lambda l: l.state in ("draft", "sent"))
+            action["res_id"] = quotation.id
         return action
 
     def action_view_sale_order(self):
-        action = self.env.ref("sale.action_orders").read()[0]
-        action["context"] = {
-            "search_default_partner_id": self.partner_id.commercial_partner_id.id,
-            "default_partner_id": self.partner_id.commercial_partner_id.id,
-            "default_user_id": self.user_id.id,
-            "default_origin": self.name,
-            "default_company_id": self.company_id.id or self.env.company.id,
-            "default_visit_id": self.id,
-        }
+        action = self.env["ir.actions.act_window"]._for_xml_id("sale.action_orders")
+        action["context"] = self._prepare_context_from_action()
         action["domain"] = [
             ("visit_id", "=", self.id),
             ("state", "not in", ("draft", "sent", "cancel")),
         ]
-        orders = self.mapped("order_ids").filtered(
-            lambda l: l.state not in ("draft", "sent", "cancel")
-        )
-        if len(orders) == 1:
+        if self.sale_order_count == 1:
             action["views"] = [(self.env.ref("sale.view_order_form").id, "form")]
-            action["res_id"] = orders.id
+            order = self.order_ids.filtered(
+                lambda l: l.state not in ("draft", "sent", "cancel")
+            )
+            action["res_id"] = order.id
         return action
