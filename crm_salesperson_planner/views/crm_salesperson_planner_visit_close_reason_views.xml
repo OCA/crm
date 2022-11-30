@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2021 Sygel - Valentin Vinagre
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record
+        model="ir.ui.view"
+        id="crm_salesperson_planner_visit_close_reason_tree_view"
+    >
+        <field name="name">CRM - Salesperson Planner Visit Close Reason Tree</field>
+        <field name="model">crm.salesperson.planner.visit.close.reason</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="close_type" />
+                <field name="require_image" />
+                <field name="reschedule" />
+            </tree>
+        </field>
+    </record>
+    <record
+        model="ir.ui.view"
+        id="crm_salesperson_planner_visit_close_reason_form_view"
+    >
+        <field name="name">CRM - Salesperson Planner Visit Close Reason Form</field>
+        <field name="model">crm.salesperson.planner.visit.close.reason</field>
+        <field name="arch" type="xml">
+            <form string="Close Reason">
+                <sheet string="Close Reason">
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" />
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="close_type" />
+                            <field name="require_image" />
+                            <field name="reschedule" />
+                        </group>
+                        <group>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record
+        model="ir.actions.act_window"
+        id="crm_salesperson_planner_visit_close_reason_action"
+    >
+        <field name="name">Close Reasons</field>
+        <field name="res_model">crm.salesperson.planner.visit.close.reason</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Record reason for close commercial visits.
+            </p>
+        </field>
+    </record>
+</odoo>
