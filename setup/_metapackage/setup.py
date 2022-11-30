@@ -19,6 +19,7 @@ setuptools.setup(
         'odoo-addon-crm_phonecall_planner>=15.0dev,<15.1dev',
         'odoo-addon-crm_project>=15.0dev,<15.1dev',
         'odoo-addon-crm_salesperson_planner>=15.0dev,<15.1dev',
+        'odoo-addon-crm_salesperson_planner_sale>=15.0dev,<15.1dev',
         'odoo-addon-crm_security_group>=15.0dev,<15.1dev',
         'odoo-addon-crm_stage_probability>=15.0dev,<15.1dev',
     ],
