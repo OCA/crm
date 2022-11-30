@@ -44,6 +44,11 @@ msgid "Activity State"
 msgstr "Estado de la Actividad"
 
 #. module: crm_salesperson_planner
+#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: crm_salesperson_planner
 #: model_terms:ir.ui.view,arch_db:crm_salesperson_planner.crm_salesperson_planner_visit_form_view
 msgid "Add a description..."
 msgstr "Agregar descripción…"
@@ -70,11 +75,6 @@ msgid "Attachment Count"
 msgstr "Número de Adjuntos"
 
 #. module: crm_salesperson_planner
-#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__is_attendee
-msgid "Attendee"
-msgstr "Asistente"
-
-#. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__attendee_status
 msgid "Attendee Status"
 msgstr "Estado de asistente"
@@ -86,8 +86,8 @@ msgstr "Auto validar"
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__byday
-msgid "By day"
-msgstr "Por día"
+msgid "Byday"
+msgstr ""
 
 #. module: crm_salesperson_planner
 #: model:ir.actions.server,name:crm_salesperson_planner.ir_cron_create_visits_ir_actions_server
@@ -118,12 +118,26 @@ msgid "Cancelled"
 msgstr "Cancelado"
 
 #. module: crm_salesperson_planner
+#: model:ir.model.fields,help:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__is_organizer_alone
+msgid ""
+"Check if the organizer is alone in the event, i.e. if the organizer is the "
+"only one that hasn't declined\n"
+"        the event (only if the organizer is not the only attendee)"
+msgstr ""
+
+#. module: crm_salesperson_planner
+#: model:ir.model.fields,help:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__recurrence_update
+msgid ""
+"Choose what to do with other events in the recurrence. Updating All Events "
+"is not allowed when dates or time is modified"
+msgstr ""
+
+#. module: crm_salesperson_planner
 #: model_terms:ir.ui.view,arch_db:crm_salesperson_planner.crm_salesperson_planner_visit_form_view
 msgid "Close Info"
 msgstr "Información de cierre"
 
 #. module: crm_salesperson_planner
-#: model:ir.actions.act_window,name:crm_salesperson_planner.crm_salesperson_planner_visit_close_reason_action
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit__close_reason_id
 #: model_terms:ir.ui.view,arch_db:crm_salesperson_planner.crm_salesperson_planner_visit_close_reason_form_view
 #: model_terms:ir.ui.view,arch_db:crm_salesperson_planner.crm_salesperson_planner_visit_close_wiz_view_form
@@ -141,9 +155,9 @@ msgid "Close Reason Notes"
 msgstr "Notas de motivo de cierre"
 
 #. module: crm_salesperson_planner
+#: model:ir.actions.act_window,name:crm_salesperson_planner.crm_salesperson_planner_visit_close_reason_action
 #: model:ir.actions.act_window,name:crm_salesperson_planner.crm_salesperson_planner_visit_close_wiz_action
 #: model:ir.ui.menu,name:crm_salesperson_planner.menu_crm_config_salesperson_planner_close_reason
-#: model_terms:ir.ui.view,arch_db:crm_salesperson_planner.crm_salesperson_planner_visit_close_reason_tree_view
 msgid "Close Reasons"
 msgstr "Motivos de cierre"
 
@@ -211,7 +225,6 @@ msgstr "Cliente"
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit__date
-#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__display_start
 msgid "Date"
 msgstr "Fecha"
 
@@ -237,6 +250,11 @@ msgstr "Día del mes"
 #: model_terms:ir.ui.view,arch_db:crm_salesperson_planner.crm_salesperson_planner_visit_template_form_view
 msgid "Description"
 msgstr "Descripción"
+
+#. module: crm_salesperson_planner
+#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__display_description
+msgid "Display Description"
+msgstr ""
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit__display_name
@@ -286,24 +304,22 @@ msgid "End Date"
 msgstr "Fecha de finalización"
 
 #. module: crm_salesperson_planner
-#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__stop_datetime
-msgid "End Datetime"
-msgstr "Fecha y hora de finalización"
-
-#. module: crm_salesperson_planner
 #: code:addons/crm_salesperson_planner/models/calendar_event.py:0
 #, python-format
 msgid ""
-"Event %s is related to salesperson visit %s. Cancel it to delete this "
-"event.\n"
+"Event %(event_name)s is related to salesperson visit %(partner_name)s. "
+"Cancel it to delete this event.\n"
 msgstr ""
-"El evento %s está relacionado con la visita comercial %s. Cancelela para "
-"eliminar este evento.\n"
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__display_time
 msgid "Event Time"
 msgstr "Hora del evento"
+
+#. module: crm_salesperson_planner
+#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__follow_recurrence
+msgid "Follow Recurrence"
+msgstr ""
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit__message_follower_ids
@@ -312,19 +328,18 @@ msgid "Followers"
 msgstr "Seguidores"
 
 #. module: crm_salesperson_planner
-#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit__message_channel_ids
-#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__message_channel_ids
-msgid "Followers (Channels)"
-msgstr "Seguidores (Canales)"
-
-#. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit__message_partner_ids
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__message_partner_ids
 msgid "Followers (Partners)"
 msgstr "Seguidores (Socios)"
 
 #. module: crm_salesperson_planner
-#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__fr
+#: model:ir.model.fields,help:crm_salesperson_planner.field_crm_salesperson_planner_visit__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: crm_salesperson_planner
+#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__fri
 msgid "Fri"
 msgstr "Viernes"
 
@@ -342,6 +357,12 @@ msgstr "Motivo de cierre"
 #: model_terms:ir.ui.view,arch_db:crm_salesperson_planner.crm_salesperson_planner_visit_filter
 msgid "Group By"
 msgstr "Agrupar por"
+
+#. module: crm_salesperson_planner
+#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit__has_message
+#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__has_message
+msgid "Has Message"
+msgstr ""
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit__id
@@ -388,6 +409,17 @@ msgstr ""
 "del evento sin eliminarlo."
 
 #. module: crm_salesperson_planner
+#: model:ir.model.fields,help:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__show_as
+msgid ""
+"If the time is shown as 'busy', this event will be visible to other people "
+"with either the full         information or simply 'busy' written depending "
+"on its privacy. Use this option to let other people know         that you "
+"are unavailable during that period of time. \n"
+" If the event is shown as 'free', other users know         that you are "
+"available during that period of time."
+msgstr ""
+
+#. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_close_wiz__image
 msgid "Image"
 msgstr "Imagen"
@@ -419,6 +451,11 @@ msgstr "És seguidor"
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__is_highlighted
 msgid "Is the Event Highlighted"
 msgstr "Es el Evento Resaltado"
+
+#. module: crm_salesperson_planner
+#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__is_organizer_alone
+msgid "Is the Organizer Alone"
+msgstr ""
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit____last_update
@@ -489,6 +526,11 @@ msgid "Manually Create Visits"
 msgstr "Creación manual de visitas"
 
 #. module: crm_salesperson_planner
+#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__videocall_location
+msgid "Meeting URL"
+msgstr ""
+
+#. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit__message_has_error
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__message_has_error
 msgid "Message Delivery error"
@@ -506,9 +548,14 @@ msgid "Mobile"
 msgstr "Móvil"
 
 #. module: crm_salesperson_planner
-#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__mo
+#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__mon
 msgid "Mon"
 msgstr "Lunes"
+
+#. module: crm_salesperson_planner
+#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
 
 #. module: crm_salesperson_planner
 #: model:ir.ui.menu,name:crm_salesperson_planner.menu_crm_salesperson_planner_my_visits
@@ -520,6 +567,11 @@ msgstr "Mis visitas"
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_close_wiz__new_date
 msgid "New Date"
 msgstr "Nueva fecha"
+
+#. module: crm_salesperson_planner
+#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr ""
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit__activity_date_deadline
@@ -540,6 +592,11 @@ msgstr "Tipo de la siguiente actividad"
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_close_wiz__notes
 msgid "Notes"
 msgstr "Notas"
+
+#. module: crm_salesperson_planner
+#: model:ir.model.fields,help:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__alarm_ids
+msgid "Notifications sent to all attendees to remind of the meeting."
+msgstr ""
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit__message_needaction_counter
@@ -620,6 +677,11 @@ msgid "Partner-related data of the user"
 msgstr "Datos del usuario relativos a la empresa"
 
 #. module: crm_salesperson_planner
+#: model:ir.model.fields,help:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__privacy
+msgid "People to whom this event will be visible."
+msgstr ""
+
+#. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit__partner_phone
 msgid "Phone"
 msgstr "Teléfono"
@@ -661,29 +723,24 @@ msgid "Recurrence"
 msgstr "Recurrencia"
 
 #. module: crm_salesperson_planner
+#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__recurrence_id
+msgid "Recurrence Rule"
+msgstr ""
+
+#. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__end_type
 msgid "Recurrence Termination"
 msgstr "Finalizar recurrencia"
 
 #. module: crm_salesperson_planner
+#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__recurrence_update
+msgid "Recurrence Update"
+msgstr ""
+
+#. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__recurrency
 msgid "Recurrent"
 msgstr "Recurrente"
-
-#. module: crm_salesperson_planner
-#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__recurrent_id
-msgid "Recurrent ID"
-msgstr "ID recurrencia"
-
-#. module: crm_salesperson_planner
-#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__recurrent_id_date
-msgid "Recurrent ID date"
-msgstr "Fecha ID recurrencia"
-
-#. module: crm_salesperson_planner
-#: model:ir.model.fields,help:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__recurrency
-msgid "Recurrent Meeting"
-msgstr "Reunión periódica"
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__rrule
@@ -733,11 +790,6 @@ msgid "Reschedule"
 msgstr "Reprogramar"
 
 #. module: crm_salesperson_planner
-#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__partner_id
-msgid "Responsible"
-msgstr "Responsable"
-
-#. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit__activity_user_id
 msgid "Responsible User"
 msgstr "Usuario responsable"
@@ -785,9 +837,14 @@ msgid "Salesperson Visits"
 msgstr "Visitas comerciales"
 
 #. module: crm_salesperson_planner
-#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__sa
+#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__sat
 msgid "Sat"
 msgstr "Sabado"
+
+#. module: crm_salesperson_planner
+#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__partner_id
+msgid "Scheduled by"
+msgstr ""
 
 #. module: crm_salesperson_planner
 #: model_terms:ir.ui.view,arch_db:crm_salesperson_planner.crm_salesperson_planner_visit_filter
@@ -808,8 +865,8 @@ msgstr "Secuencia"
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__show_as
-msgid "Show Time as"
-msgstr "Mostrar hora como"
+msgid "Show as"
+msgstr ""
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__start
@@ -820,11 +877,6 @@ msgstr "Iniciar"
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__start_date
 msgid "Start Date"
 msgstr "Fecha de inicio"
-
-#. module: crm_salesperson_planner
-#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__start_datetime
-msgid "Start DateTime"
-msgstr "Fecha y hora de inicio"
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,help:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__start
@@ -871,7 +923,7 @@ msgid "Submit"
 msgstr "Enviar"
 
 #. module: crm_salesperson_planner
-#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__su
+#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__sun
 msgid "Sun"
 msgstr "Domingo"
 
@@ -932,7 +984,7 @@ msgid "The visit template number must be unique!"
 msgstr "¡El número de plantilla de visita debe ser único!"
 
 #. module: crm_salesperson_planner
-#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__th
+#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__thu
 msgid "Thu"
 msgstr "Jueves"
 
@@ -947,7 +999,7 @@ msgid "Today Visits"
 msgstr "Visitas de hoy"
 
 #. module: crm_salesperson_planner
-#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__tu
+#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__tue
 msgid "Tue"
 msgstr "Martes"
 
@@ -974,6 +1026,7 @@ msgid "Unread Messages Counter"
 msgstr "Nº de mensajes sin leer"
 
 #. module: crm_salesperson_planner
+#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__until
 #: model_terms:ir.ui.view,arch_db:crm_salesperson_planner.crm_salesperson_planner_visit_template_form_view
 msgid "Until"
 msgstr "Hasta"
@@ -1020,7 +1073,6 @@ msgstr "Número de plantilla de visita"
 #. module: crm_salesperson_planner
 #: model:ir.actions.act_window,name:crm_salesperson_planner.crm_salesperson_planner_visit_template_action
 #: model:ir.ui.menu,name:crm_salesperson_planner.menu_crm_salesperson_planner_visit_template
-#: model_terms:ir.ui.view,arch_db:crm_salesperson_planner.crm_salesperson_planner_visit_template_tree_view
 msgid "Visit Templates"
 msgstr "Plantillas de visitas"
 
@@ -1038,7 +1090,6 @@ msgstr "Visitado"
 #: model:ir.actions.act_window,name:crm_salesperson_planner.all_crm_salesperson_planner_visit_action
 #: model:ir.actions.act_window,name:crm_salesperson_planner.my_crm_salesperson_planner_visit_action
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_lead__crm_salesperson_planner_visit_ids
-#: model_terms:ir.ui.view,arch_db:crm_salesperson_planner.crm_salesperson_planner_visit_tree_view
 msgid "Visits"
 msgstr "Visitas"
 
@@ -1066,12 +1117,12 @@ msgid "Website communication history"
 msgstr "Historial de comunicación del sitio web"
 
 #. module: crm_salesperson_planner
-#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__we
+#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__wed
 msgid "Wed"
 msgstr "Miercoles"
 
 #. module: crm_salesperson_planner
-#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__week_list
+#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__weekday
 msgid "Weekday"
 msgstr "Día de la semana"
 
@@ -1079,3 +1130,41 @@ msgstr "Día de la semana"
 #: model:ir.model,name:crm_salesperson_planner.model_crm_salesperson_planner_visit_template_create
 msgid "crm salesperson planner visit template create"
 msgstr "crm salesperson planner visit template create"
+
+#~ msgid "Attendee"
+#~ msgstr "Asistente"
+
+#~ msgid "By day"
+#~ msgstr "Por día"
+
+#~ msgid "End Datetime"
+#~ msgstr "Fecha y hora de finalización"
+
+#, python-format
+#~ msgid ""
+#~ "Event %s is related to salesperson visit %s. Cancel it to delete this "
+#~ "event.\n"
+#~ msgstr ""
+#~ "El evento %s está relacionado con la visita comercial %s. Cancelela para "
+#~ "eliminar este evento.\n"
+
+#~ msgid "Followers (Channels)"
+#~ msgstr "Seguidores (Canales)"
+
+#~ msgid "Recurrent ID"
+#~ msgstr "ID recurrencia"
+
+#~ msgid "Recurrent ID date"
+#~ msgstr "Fecha ID recurrencia"
+
+#~ msgid "Recurrent Meeting"
+#~ msgstr "Reunión periódica"
+
+#~ msgid "Responsible"
+#~ msgstr "Responsable"
+
+#~ msgid "Show Time as"
+#~ msgstr "Mostrar hora como"
+
+#~ msgid "Start DateTime"
+#~ msgstr "Fecha y hora de inicio"
