@@ -7,7 +7,7 @@ from odoo import fields
 from odoo.tests import common
 
 
-class TestCrmSalespersonPlannerVisit(common.TransactionCase):
+class TestCrmSalespersonPlannerVisitBase(common.TransactionCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
@@ -67,6 +67,8 @@ class TestCrmSalespersonPlannerVisit(common.TransactionCase):
             }
         )
 
+
+class TestCrmSalespersonPlannerVisit(TestCrmSalespersonPlannerVisitBase):
     def test_crm_salesperson_planner_visit(self):
         self.assertNotEqual(self.visit1.name, "/")
         self.assertEqual(self.visit1.state, "draft")
