@@ -51,14 +51,22 @@ class CrmLead(models.Model):
     def _compute_currency_rate(self):
         # similar to currency_rate on sale.order
         for record in self:
-            if (
-                record.multicompany_reporting_currency_id and record.company_currency
+            date = record.create_date or fields.Date.today()
+            if not record.company_id:
+                record.currency_rate = (
+                    record.multicompany_reporting_currency_id.with_context(
+                        date=date
+                    ).rate
+                    or 1.0
+                )
+            elif (
+                record.company_currency and record.multicompany_reporting_currency_id
             ):  # the following crashes if any one is undefined
                 record.currency_rate = self.env["res.currency"]._get_conversion_rate(
-                    record.multicompany_reporting_currency_id,
                     record.company_currency,
-                    record.company_id or self.env.company,
-                    record.create_date or fields.Datetime.now(),
+                    record.multicompany_reporting_currency_id,
+                    record.company_id,
+                    date,
                 )
             else:
                 record.currency_rate = 1.0
