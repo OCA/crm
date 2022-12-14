@@ -5,7 +5,7 @@
     "name": "Crm Team Parent",
     "summary": """
         Add a parent field on sales teams.""",
-    "version": "12.0.1.0.0",
+    "version": "12.0.1.0.1",
     "license": "AGPL-3",
     "author": "ACSONE SA/NV,Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/crm",
