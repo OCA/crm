@@ -5,7 +5,7 @@
 
 {
     'name': 'Claims Management',
-    'version': '12.0.1.1.1',
+    'version': '12.0.1.1.2',
     'category': 'Customer Relationship Management',
     'author': 'Odoo S.A., '
               'Tecnativa, '
