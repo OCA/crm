@@ -5,7 +5,7 @@
     'name': 'CRM Lead Currency',
     'summary': """
         On leads/opportunities, add the amount in the customer's currency.""",
-    'version': '12.0.1.0.0',
+    'version': '12.0.1.0.1',
     'license': 'AGPL-3',
     'author': 'Camptocamp SA,Odoo Community Association (OCA)',
     'website': 'https://github.com/OCA/crm',
