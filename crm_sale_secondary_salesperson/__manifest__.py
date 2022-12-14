@@ -8,7 +8,6 @@
     "license": "AGPL-3",
     "author": "Tecnativa, Odoo Community Association (OCA)",
     "maintainers": ["victoralmau"],
-    "development_status": "Production/Stable",
     "website": "https://github.com/OCA/crm",
     "depends": ["sale_secondary_salesperson", "crm_secondary_salesperson", "sale_crm"],
 }

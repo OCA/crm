@@ -12,6 +12,7 @@
               'Odoo Community Association (OCA)',
     'license': 'AGPL-3',
     'summary': "Track your customers/vendors claims and grievances.",
+    "website": "https://github.com/OCA/crm",
     'depends': [
         'crm',
         'mail',

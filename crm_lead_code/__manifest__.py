@@ -9,7 +9,7 @@
     "author": "Tecnativa, "
               "AvanzOSC, "
               "Odoo Community Association (OCA)",
-    "website": "http://www.odoomrp.com",
+    "website": "https://github.com/OCA/crm",
     "license": "AGPL-3",
     "contributors": [
         "Oihane Crucelaegui <oihanecrucelaegi@avanzosc.es>",
