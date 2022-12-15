@@ -9,7 +9,7 @@
                 <field name="partner_id" />
                 <field name="user_id" />
                 <field name="date" />
-                <field name="stage_id" />
+                <field name="stage_id" groups="base.group_user" />
                 <field name="categ_id" string="Type" />
                 <field name="date_deadline" invisible="1" />
                 <field name="date_closed" invisible="1" />
@@ -27,6 +27,7 @@
                         name="stage_id"
                         widget="statusbar"
                         options="{'clickable': 1}"
+                        groups="base.group_user"
                     />
                 </header>
                 <sheet string="Claims">
