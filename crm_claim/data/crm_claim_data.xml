@@ -1,4 +1,4 @@
-<?xml version="1.0" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <odoo noupdate="1">
     <record model="crm.claim.category" id="categ_claim1">
         <field name="name">Factual Claims</field>
