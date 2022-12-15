@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 15.0\n"
+"Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -30,6 +30,7 @@ msgid "# of Claims"
 msgstr ""
 
 #. module: crm_claim
+#. odoo-python
 #: code:addons/crm_claim/models/crm_claim.py:0
 #, python-format
 msgid "%s (copy)"
@@ -236,7 +237,7 @@ msgid "Contact"
 msgstr ""
 
 #. module: crm_claim
-#: model:utm.campaign,name:crm_claim.claim_source1
+#: model:utm.campaign,title:crm_claim.claim_source1
 msgid "Corrective"
 msgstr ""
 
@@ -401,7 +402,6 @@ msgstr ""
 
 #. module: crm_claim
 #: model:ir.model.fields,help:crm_claim.field_crm_claim__message_needaction
-#: model:ir.model.fields,help:crm_claim.field_crm_claim__message_unread
 msgid "If checked, new messages require your attention."
 msgstr ""
 
@@ -533,6 +533,7 @@ msgid "Next Activity Type"
 msgstr ""
 
 #. module: crm_claim
+#. odoo-python
 #: code:addons/crm_claim/models/crm_claim.py:0
 #, python-format
 msgid "No Subject"
@@ -570,11 +571,6 @@ msgid "Number of messages with delivery error"
 msgstr ""
 
 #. module: crm_claim
-#: model:ir.model.fields,help:crm_claim.field_crm_claim__message_unread_counter
-msgid "Number of unread messages"
-msgstr ""
-
-#. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__delay_expected
 msgid "Overpassed Deadline"
 msgstr ""
@@ -599,7 +595,7 @@ msgid "Policy Claims"
 msgstr ""
 
 #. module: crm_claim
-#: model:utm.campaign,name:crm_claim.claim_source2
+#: model:utm.campaign,title:crm_claim.claim_source2
 msgid "Preventive"
 msgstr ""
 
@@ -777,16 +773,6 @@ msgid "Unassigned Claims"
 msgstr ""
 
 #. module: crm_claim
-#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_unread
-msgid "Unread Messages"
-msgstr ""
-
-#. module: crm_claim
-#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_unread_counter
-msgid "Unread Messages Counter"
-msgstr ""
-
-#. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__write_date
 msgid "Update Date"
 msgstr ""
@@ -819,11 +805,6 @@ msgstr ""
 #. module: crm_claim
 #: model:ir.model.fields,help:crm_claim.field_crm_claim__website_message_ids
 msgid "Website communication history"
-msgstr ""
-
-#. module: crm_claim
-#: model:ir.filters,name:crm_claim.filter_report_crm_claim_workload
-msgid "Workload"
 msgstr ""
 
 #. module: crm_claim

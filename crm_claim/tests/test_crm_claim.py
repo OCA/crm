@@ -7,7 +7,7 @@ from odoo.tests import common
 class TestCrmClaim(common.TransactionCase):
     @classmethod
     def setUpClass(cls):
-        super(TestCrmClaim, cls).setUpClass()
+        super().setUpClass()
 
         Claims = cls.env["crm.claim"].with_context(mail_create_nosubscribe=True)
         cls.claim = Claims.create(
