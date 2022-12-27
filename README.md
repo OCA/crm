@@ -17,7 +17,11 @@ TODO: add repo description.
 
 [//]: # (addons)
 
-This part will be replaced when running the oca-gen-addons-table script from OCA/maintainer-tools.
+Available addons
+----------------
+addon | version | maintainers | summary
+--- | --- | --- | ---
+[crm_claim](crm_claim/) | 16.0.1.0.0 |  | Track your customers/vendors claims and grievances.
 
 [//]: # (end addons)
 
