@@ -33,6 +33,7 @@ msgid "# of Claims"
 msgstr "# de reclamacions"
 
 #. module: crm_claim
+#. odoo-python
 #: code:addons/crm_claim/models/crm_claim.py:0
 #, python-format
 msgid "%s (copy)"
@@ -239,7 +240,7 @@ msgid "Contact"
 msgstr "Contacte"
 
 #. module: crm_claim
-#: model:utm.campaign,name:crm_claim.claim_source1
+#: model:utm.campaign,title:crm_claim.claim_source1
 msgid "Corrective"
 msgstr "Correctiva"
 
@@ -412,7 +413,6 @@ msgstr "Icona per a indicar una excepció d'activitat."
 
 #. module: crm_claim
 #: model:ir.model.fields,help:crm_claim.field_crm_claim__message_needaction
-#: model:ir.model.fields,help:crm_claim.field_crm_claim__message_unread
 msgid "If checked, new messages require your attention."
 msgstr "Si està marcat, els missatges nous requereixen la vostra atenció."
 
@@ -548,6 +548,7 @@ msgid "Next Activity Type"
 msgstr "Tipus de la propera activitat"
 
 #. module: crm_claim
+#. odoo-python
 #: code:addons/crm_claim/models/crm_claim.py:0
 #, python-format
 msgid "No Subject"
@@ -585,11 +586,6 @@ msgid "Number of messages with delivery error"
 msgstr "Nombre de missatges amb error de lliurament"
 
 #. module: crm_claim
-#: model:ir.model.fields,help:crm_claim.field_crm_claim__message_unread_counter
-msgid "Number of unread messages"
-msgstr "Nombre de missatges no llegits"
-
-#. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__delay_expected
 msgid "Overpassed Deadline"
 msgstr "Termini superat"
@@ -614,7 +610,7 @@ msgid "Policy Claims"
 msgstr "Polítiques de reclamacions"
 
 #. module: crm_claim
-#: model:utm.campaign,name:crm_claim.claim_source2
+#: model:utm.campaign,title:crm_claim.claim_source2
 msgid "Preventive"
 msgstr "Preventiva"
 
@@ -635,8 +631,10 @@ msgstr "Prioritat"
 msgid ""
 "Record and track your customers' claims.\n"
 "                Claims may be linked to a sales order or a lot.\n"
-"                You can send emails with attachments and keep the full history for a claim (emails sent, intervention type and so on).\n"
-"                Claims may automatically be linked to an email address using the mail gateway module."
+"                You can send emails with attachments and keep the full "
+"history for a claim (emails sent, intervention type and so on).\n"
+"                Claims may automatically be linked to an email address using "
+"the mail gateway module."
 msgstr ""
 "Enregistreu i feu el seguiment de les reclamacions dels vostres clients.\n"
 "                 Les reclamacions poden estar relacionades amb una comanda "
@@ -809,16 +807,6 @@ msgid "Unassigned Claims"
 msgstr "Reclamacions no assignades"
 
 #. module: crm_claim
-#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_unread
-msgid "Unread Messages"
-msgstr "Missatges no llegits"
-
-#. module: crm_claim
-#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_unread_counter
-msgid "Unread Messages Counter"
-msgstr "Comptador de missatges no llegits"
-
-#. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__write_date
 msgid "Update Date"
 msgstr "Data d'actualització"
@@ -854,11 +842,6 @@ msgid "Website communication history"
 msgstr "Historial de comunicacions del lloc web"
 
 #. module: crm_claim
-#: model:ir.filters,name:crm_claim.filter_report_crm_claim_workload
-msgid "Workload"
-msgstr "Càrrega de treball"
-
-#. module: crm_claim
 #: model_terms:ir.actions.act_window,help:crm_claim.crm_claim_stage_act
 msgid ""
 "You can create claim stages to categorize the status of every\n"
@@ -868,3 +851,15 @@ msgstr ""
 "Podeu crear etapes de reclamació per categoritzar-ne l'estat\n"
 "             al sistema. Les etapes defineixen tots els passos\n"
 "             necessaris per a la resolució d'una reclamació."
+
+#~ msgid "Number of unread messages"
+#~ msgstr "Nombre de missatges no llegits"
+
+#~ msgid "Unread Messages"
+#~ msgstr "Missatges no llegits"
+
+#~ msgid "Unread Messages Counter"
+#~ msgstr "Comptador de missatges no llegits"
+
+#~ msgid "Workload"
+#~ msgstr "Càrrega de treball"

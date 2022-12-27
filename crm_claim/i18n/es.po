@@ -37,6 +37,7 @@ msgid "# of Claims"
 msgstr "Nº de reclamaciones"
 
 #. module: crm_claim
+#. odoo-python
 #: code:addons/crm_claim/models/crm_claim.py:0
 #, python-format
 msgid "%s (copy)"
@@ -245,7 +246,7 @@ msgid "Contact"
 msgstr "Contacto"
 
 #. module: crm_claim
-#: model:utm.campaign,name:crm_claim.claim_source1
+#: model:utm.campaign,title:crm_claim.claim_source1
 msgid "Corrective"
 msgstr "Correctivo"
 
@@ -416,7 +417,6 @@ msgstr "Icono para indicar una actividad de excepción."
 
 #. module: crm_claim
 #: model:ir.model.fields,help:crm_claim.field_crm_claim__message_needaction
-#: model:ir.model.fields,help:crm_claim.field_crm_claim__message_unread
 msgid "If checked, new messages require your attention."
 msgstr "Si está marcado, hay nuevos mensajes que requieren su atención."
 
@@ -552,6 +552,7 @@ msgid "Next Activity Type"
 msgstr "Siguiente →"
 
 #. module: crm_claim
+#. odoo-python
 #: code:addons/crm_claim/models/crm_claim.py:0
 #, python-format
 msgid "No Subject"
@@ -589,11 +590,6 @@ msgid "Number of messages with delivery error"
 msgstr "Número de mensajes con error de entrega"
 
 #. module: crm_claim
-#: model:ir.model.fields,help:crm_claim.field_crm_claim__message_unread_counter
-msgid "Number of unread messages"
-msgstr "Número de mensajes no leídos"
-
-#. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__delay_expected
 msgid "Overpassed Deadline"
 msgstr "Fecha límite excedida"
@@ -618,7 +614,7 @@ msgid "Policy Claims"
 msgstr "Política de reclamaciones"
 
 #. module: crm_claim
-#: model:utm.campaign,name:crm_claim.claim_source2
+#: model:utm.campaign,title:crm_claim.claim_source2
 msgid "Preventive"
 msgstr "Preventivo"
 
@@ -813,16 +809,6 @@ msgid "Unassigned Claims"
 msgstr "Reclamaciones no asignadas"
 
 #. module: crm_claim
-#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_unread
-msgid "Unread Messages"
-msgstr "Mensajes no leídos"
-
-#. module: crm_claim
-#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_unread_counter
-msgid "Unread Messages Counter"
-msgstr "Contador de mensajes no leídos"
-
-#. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__write_date
 msgid "Update Date"
 msgstr "Fecha de actualización"
@@ -858,11 +844,6 @@ msgid "Website communication history"
 msgstr "Historial de comunicación del sitio web"
 
 #. module: crm_claim
-#: model:ir.filters,name:crm_claim.filter_report_crm_claim_workload
-msgid "Workload"
-msgstr "Carga de trabajo"
-
-#. module: crm_claim
 #: model_terms:ir.actions.act_window,help:crm_claim.crm_claim_stage_act
 msgid ""
 "You can create claim stages to categorize the status of every\n"
@@ -872,6 +853,18 @@ msgstr ""
 "Puede crear etapas de reclamaciones para categorizar el estado de cada "
 "reclamación introducida en el sistema. Las etapas definen todos los pasos "
 "requeridos para la resolución de la reclamación."
+
+#~ msgid "Number of unread messages"
+#~ msgstr "Número de mensajes no leídos"
+
+#~ msgid "Unread Messages"
+#~ msgstr "Mensajes no leídos"
+
+#~ msgid "Unread Messages Counter"
+#~ msgstr "Contador de mensajes no leídos"
+
+#~ msgid "Workload"
+#~ msgstr "Carga de trabajo"
 
 #~ msgid ""
 #~ "Create claim categories to better manage and classify your\n"
