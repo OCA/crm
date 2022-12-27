@@ -1,0 +1,870 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* crm_claim
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2022-10-01 00:07+0000\n"
+"Last-Translator: pere-aquarian <pere@aquarian.tech>\n"
+"Language-Team: none\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.3.2\n"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_res_partner__claim_count
+#: model:ir.model.fields,field_description:crm_claim.field_res_users__claim_count
+msgid "# Claims"
+msgstr "# Reclamacions"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__email
+msgid "# Emails"
+msgstr "# Correus electrònics"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__nbr_claims
+msgid "# of Claims"
+msgstr "# de reclamacions"
+
+#. module: crm_claim
+#: code:addons/crm_claim/models/crm_claim.py:0
+#, python-format
+msgid "%s (copy)"
+msgstr "%s (còpia)"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
+msgid "Action Description..."
+msgstr "Descripció de l'acció..."
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_needaction
+msgid "Action Needed"
+msgstr "Acció necessària"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__type_action
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__type_action
+msgid "Action Type"
+msgstr "Tipus d'acció"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__active
+msgid "Active"
+msgstr "Actiu"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__activity_ids
+msgid "Activities"
+msgstr "Activitats"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Decorador de l'excepció d'activitat"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__activity_state
+msgid "Activity State"
+msgstr "Estat de l'activitat"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Icona del tipus d'activitat"
+
+#. module: crm_claim
+#: model:ir.ui.menu,name:crm_claim.menu_aftersale
+msgid "After Sale"
+msgstr "Després de la venda"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_attachment_count
+msgid "Attachment Count"
+msgstr "Nombre d'annexes"
+
+#. module: crm_claim
+#: model:ir.model,name:crm_claim.model_crm_claim_report
+msgid "CRM Claim Report"
+msgstr "Informe de reclamacions CRM"
+
+#. module: crm_claim
+#: model:ir.ui.menu,name:crm_claim.menu_crm_case_claim-act
+msgid "Categories"
+msgstr "Categories"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__categ_id
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__categ_id
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
+msgid "Category"
+msgstr "Categoria"
+
+#. module: crm_claim
+#: model:ir.model,name:crm_claim.model_crm_claim_category
+msgid "Category of claim"
+msgstr "Categoria de la reclamació"
+
+#. module: crm_claim
+#: model:ir.model,name:crm_claim.model_crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_res_partner__claim_ids
+#: model:ir.model.fields,field_description:crm_claim.field_res_users__claim_ids
+#: model:ir.ui.menu,name:crm_claim.menu_config_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
+msgid "Claim"
+msgstr "Reclamació"
+
+#. module: crm_claim
+#: model:ir.actions.act_window,name:crm_claim.crm_claim_categ_action
+#: model_terms:ir.ui.view,arch_db:crm_claim.crm_claim_category_form
+msgid "Claim Categories"
+msgstr "Categories de reclamació"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__date
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__claim_date
+msgid "Claim Date"
+msgstr "Data de la reclamació"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
+msgid "Claim Date by Month"
+msgstr "Data de reclamació per mes"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
+msgid "Claim Description"
+msgstr "Descripció de la reclamació"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
+msgid "Claim Month"
+msgstr "Mes de la reclamació"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
+msgid "Claim Reporter"
+msgstr "Persona que informa la reclamació"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.crm_claim_stage_form
+msgid "Claim Stage"
+msgstr "Etapa de la reclamació"
+
+#. module: crm_claim
+#: model:ir.actions.act_window,name:crm_claim.crm_claim_stage_act
+msgid "Claim Stages"
+msgstr "Etapes de les reclamacions"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__name
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__subject
+msgid "Claim Subject"
+msgstr "Assumpte de la reclamació"
+
+#. module: crm_claim
+#: model:ir.model,name:crm_claim.model_crm_claim_stage
+msgid "Claim stages"
+msgstr "Etapes de les reclamacions"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
+msgid "Claim/Action Description"
+msgstr "Descripció de la reclamació/acció"
+
+#. module: crm_claim
+#: model:ir.actions.act_window,name:crm_claim.crm_claim_category_claim0
+#: model:ir.ui.menu,name:crm_claim.menu_crm_case_claims
+#: model:ir.ui.menu,name:crm_claim.menu_report_crm_claim_tree
+#: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_calendar_view
+#: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_claim_res_partner_info_form
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_graph
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_pivot
+msgid "Claims"
+msgstr "Reclamacions"
+
+#. module: crm_claim
+#: model:ir.actions.act_window,name:crm_claim.action_report_crm_claim
+msgid "Claims Analysis"
+msgstr "Anàlisi de les reclamacions"
+
+#. module: crm_claim
+#: model_terms:ir.actions.act_window,help:crm_claim.crm_claim_categ_action
+msgid "Click to create a claim category."
+msgstr "Feu clic per crear una categoria de reclamació."
+
+#. module: crm_claim
+#: model_terms:ir.actions.act_window,help:crm_claim.crm_claim_stage_act
+msgid "Click to setup a new stage in the processing of the claims."
+msgstr "Feu clic per configurar una nova etapa en el procés de reclamacions."
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__date_closed
+msgid "Close Date"
+msgstr "Data de tancament"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__date_closed
+msgid "Closed"
+msgstr "Tancada"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
+msgid "Closure"
+msgstr "Tancament"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage__case_default
+msgid "Common to All Teams"
+msgstr "Comú a tots els equips"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__company_id
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__company_id
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
+msgid "Company"
+msgstr "Companyia"
+
+#. module: crm_claim
+#: model:ir.model,name:crm_claim.model_res_partner
+msgid "Contact"
+msgstr "Contacte"
+
+#. module: crm_claim
+#: model:utm.campaign,name:crm_claim.claim_source1
+msgid "Corrective"
+msgstr "Correctiva"
+
+#. module: crm_claim
+#: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim__type_action__correction
+#: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim_report__type_action__correction
+msgid "Corrective Action"
+msgstr "Acció correctiva"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__create_date
+msgid "Create Date"
+msgstr "Data de creació"
+
+#. module: crm_claim
+#: model_terms:ir.actions.act_window,help:crm_claim.crm_claim_categ_action
+msgid ""
+"Create claim categories to better manage and classify your\n"
+"            claims. Some examples of claims can be: preventive action,\n"
+"            corrective action."
+msgstr ""
+"Creeu categories de reclamació per gestionar i classificar millor les "
+"vostres\n"
+"            reclamacions. Alguns exemples de reclamacions poden ser: acció "
+"preventiva,\n"
+"             acció correctiva."
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__create_uid
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category__create_uid
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage__create_uid
+msgid "Created by"
+msgstr "Creat per"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category__create_date
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage__create_date
+msgid "Created on"
+msgstr "Creat el"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__create_date
+msgid "Creation Date"
+msgstr "Data de creació"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
+msgid "Creation Month"
+msgstr "Mes de creació"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
+msgid "Date Closed"
+msgstr "Data de tancament"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
+msgid "Dates"
+msgstr "Dates"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__date_deadline
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__date_deadline
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
+msgid "Deadline"
+msgstr "Data límit"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__delay_close
+msgid "Delay to close"
+msgstr "Retràs en el tancament"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__description
+msgid "Description"
+msgstr "Descripció"
+
+#. module: crm_claim
+#: model:ir.model.fields,help:crm_claim.field_crm_claim__email_from
+msgid "Destination email for email gateway."
+msgstr ""
+"Correu electrònic de destinació per a la passarel·la de correu electrònic."
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__display_name
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category__display_name
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__display_name
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage__display_name
+msgid "Display Name"
+msgstr "Nom a mostrar"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__email_from
+msgid "Email"
+msgstr "Correu electrònic"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
+msgid "Extended Filters..."
+msgstr "Filtres extesos..."
+
+#. module: crm_claim
+#: model:crm.claim.category,name:crm_claim.categ_claim1
+msgid "Factual Claims"
+msgstr "Reclamacions de fets"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
+msgid "Follow Up"
+msgstr "Seguimen"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_follower_ids
+msgid "Followers"
+msgstr "Seguidors/res"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidors/es (contactes)"
+
+#. module: crm_claim
+#: model:ir.model.fields,help:crm_claim.field_crm_claim__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Icona Font aewsome p.e. fa-tasks"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
+msgid "Group By"
+msgstr "Agrupar per"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__has_message
+msgid "Has Message"
+msgstr "Té un missatge"
+
+#. module: crm_claim
+#: model_terms:ir.actions.act_window,help:crm_claim.action_report_crm_claim
+msgid ""
+"Have a general overview of all claims processed in the system by sorting "
+"them with specific criteria."
+msgstr ""
+"Tenir una visió general de totes les reclamacions processades al sistema "
+"ordenant-les amb criteris específics."
+
+#. module: crm_claim
+#: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim__priority__2
+#: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim_report__priority__2
+msgid "High"
+msgstr "Alta"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__id
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category__id
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__id
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage__id
+msgid "ID"
+msgstr "ID"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__activity_exception_icon
+msgid "Icon"
+msgstr "Icona"
+
+#. module: crm_claim
+#: model:ir.model.fields,help:crm_claim.field_crm_claim__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Icona per a indicar una excepció d'activitat."
+
+#. module: crm_claim
+#: model:ir.model.fields,help:crm_claim.field_crm_claim__message_needaction
+#: model:ir.model.fields,help:crm_claim.field_crm_claim__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Si està marcat, els missatges nous requereixen la vostra atenció."
+
+#. module: crm_claim
+#: model:ir.model.fields,help:crm_claim.field_crm_claim__message_has_error
+#: model:ir.model.fields,help:crm_claim.field_crm_claim__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si està marcat, alguns missatges tenen un error d'entrega."
+
+#. module: crm_claim
+#: model:ir.model.fields,help:crm_claim.field_crm_claim_stage__case_default
+msgid ""
+"If you check this field, this stage will be proposed by default on each "
+"sales team. It will not assign this stage to existing teams."
+msgstr ""
+"Si marqueu aquest camp, aquesta etapa es proposarà per defecte a cada equip "
+"de vendes. No assignarà aquesta etapa als equips existents."
+
+#. module: crm_claim
+#: model:crm.claim.stage,name:crm_claim.stage_claim5
+msgid "In Progress"
+msgstr "En curs"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_is_follower
+msgid "Is Follower"
+msgstr "És seguidor/a"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim____last_update
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category____last_update
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report____last_update
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage____last_update
+msgid "Last Modified on"
+msgstr "Última modificació el"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__write_uid
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category__write_uid
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage__write_uid
+msgid "Last Updated by"
+msgstr "Última modificació per"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category__write_date
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage__write_date
+msgid "Last Updated on"
+msgstr "Última modificació el"
+
+#. module: crm_claim
+#: model:ir.model.fields,help:crm_claim.field_crm_claim_stage__team_ids
+msgid ""
+"Link between stages and sales teams. When set, this limitate the current "
+"stage to the selected sales teams."
+msgstr ""
+"Vincle entre les etapes i els equips de vendes. Quan s'estableix, això "
+"limita l'etapa actual als equips de vendes seleccionats."
+
+#. module: crm_claim
+#: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim__priority__0
+#: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim_report__priority__0
+msgid "Low"
+msgstr "Baixa"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Annexe principal"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_has_error
+msgid "Message Delivery error"
+msgstr "Error d'entrega del missatge"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_ids
+msgid "Messages"
+msgstr "Missatges"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__model_ref_id
+msgid "Model Reference"
+msgstr "Referència del model"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
+msgid "Month of claim"
+msgstr "Mes de la reclamació"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Data límit de la meva activitat"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
+msgid "My Company"
+msgstr "La meva companyia"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
+msgid "My Sales Team(s)"
+msgstr "El/s meu/s equip/s de venda"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: crm_claim
+#: model:crm.claim.stage,name:crm_claim.stage_claim1
+msgid "New"
+msgstr "Nova"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "Propera activitat d'entrada del calendari"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Data límit de la propera activitat"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__activity_summary
+msgid "Next Activity Summary"
+msgstr "Resum de la propera activitat"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__activity_type_id
+msgid "Next Activity Type"
+msgstr "Tipus de la propera activitat"
+
+#. module: crm_claim
+#: code:addons/crm_claim/models/crm_claim.py:0
+#, python-format
+msgid "No Subject"
+msgstr "Sense assumpte"
+
+#. module: crm_claim
+#: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim__priority__1
+#: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim_report__priority__1
+msgid "Normal"
+msgstr "Normal"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Número d'accions"
+
+#. module: crm_claim
+#: model:ir.model.fields,help:crm_claim.field_crm_claim_report__delay_close
+msgid "Number of Days to close the case"
+msgstr "Número de dies per tancar el cas"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_has_error_counter
+msgid "Number of errors"
+msgstr "Número d'errors"
+
+#. module: crm_claim
+#: model:ir.model.fields,help:crm_claim.field_crm_claim__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Número de missatges que requereixen una acció"
+
+#. module: crm_claim
+#: model:ir.model.fields,help:crm_claim.field_crm_claim__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Nombre de missatges amb error de lliurament"
+
+#. module: crm_claim
+#: model:ir.model.fields,help:crm_claim.field_crm_claim__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Nombre de missatges no llegits"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__delay_expected
+msgid "Overpassed Deadline"
+msgstr "Termini superat"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__partner_id
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__partner_id
+#: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
+msgid "Partner"
+msgstr "Contacte"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__partner_phone
+msgid "Phone"
+msgstr "Telèfon"
+
+#. module: crm_claim
+#: model:crm.claim.category,name:crm_claim.categ_claim3
+msgid "Policy Claims"
+msgstr "Polítiques de reclamacions"
+
+#. module: crm_claim
+#: model:utm.campaign,name:crm_claim.claim_source2
+msgid "Preventive"
+msgstr "Preventiva"
+
+#. module: crm_claim
+#: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim__type_action__prevention
+#: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim_report__type_action__prevention
+msgid "Preventive Action"
+msgstr "Acció preventiva"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__priority
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__priority
+msgid "Priority"
+msgstr "Prioritat"
+
+#. module: crm_claim
+#: model_terms:ir.actions.act_window,help:crm_claim.crm_claim_category_claim0
+msgid ""
+"Record and track your customers' claims.\n"
+"                Claims may be linked to a sales order or a lot.\n"
+"                You can send emails with attachments and keep the full history for a claim (emails sent, intervention type and so on).\n"
+"                Claims may automatically be linked to an email address using the mail gateway module."
+msgstr ""
+"Enregistreu i feu el seguiment de les reclamacions dels vostres clients.\n"
+"                 Les reclamacions poden estar relacionades amb una comanda "
+"de venda o un lot.\n"
+"                 Podeu enviar correus electrònics amb fitxers adjunts i "
+"conservar l'historial complet d'una reclamació (correus electrònics enviats, "
+"tipus d'intervenció, etc.).\n"
+"                 Les reclamacions es poden enllaçar automàticament a una "
+"adreça de correu electrònic mitjançant el mòdul de passarel·la de correu."
+
+#. module: crm_claim
+#: model:crm.claim.stage,name:crm_claim.stage_claim3
+msgid "Rejected"
+msgstr "Refusada"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__resolution
+msgid "Resolution"
+msgstr "Resolució"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
+msgid "Resolution Actions"
+msgstr "Accions de resolució"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
+msgid "Responsibilities"
+msgstr "Responsabilitats"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__user_id
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
+msgid "Responsible"
+msgstr "Responsable"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__activity_user_id
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
+msgid "Responsible User"
+msgstr "Usuari/ària responsable"
+
+#. module: crm_claim
+#: model:ir.model.fields,help:crm_claim.field_crm_claim__team_id
+msgid ""
+"Responsible sales team. Define Responsible user and Email account for mail "
+"gateway."
+msgstr ""
+"Equip de vendes responsable. Definiu l'usuari responsable i el compte de "
+"correu electrònic per a la passarel·la de correu."
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__cause
+msgid "Root Cause"
+msgstr "Causa principal"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
+msgid "Root Causes"
+msgstr "Causes principals"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Error d'entrega de SMS"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__team_id
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category__team_id
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
+msgid "Sales Team"
+msgstr "Equip de vendes"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
+msgid "Salesperson"
+msgstr "Comercial"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
+msgid "Search"
+msgstr "Cerca"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
+msgid "Search Claims"
+msgstr "Cercar reclamacions"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage__sequence
+msgid "Sequence"
+msgstr "Seqüència"
+
+#. module: crm_claim
+#: model:crm.claim.stage,name:crm_claim.stage_claim2
+msgid "Settled"
+msgstr "Assentada"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__stage_id
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__stage_id
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
+msgid "Stage"
+msgstr "Etapa"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage__name
+msgid "Stage Name"
+msgstr "Nom de l'etapa"
+
+#. module: crm_claim
+#: model:ir.ui.menu,name:crm_claim.menu_claim_stage_view
+msgid "Stages"
+msgstr "Etapes"
+
+#. module: crm_claim
+#: model:ir.model.fields,help:crm_claim.field_crm_claim__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Estat basat en activitats\n"
+"Vençut: la data de venciment ja ha superat\n"
+"Avui: la data de l'activitat és avui\n"
+"Planificades: Activitats futures."
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__team_id
+msgid "Team"
+msgstr "Equip"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage__team_ids
+msgid "Teams"
+msgstr "Equips"
+
+#. module: crm_claim
+#: model:ir.model.fields,help:crm_claim.field_crm_claim__email_cc
+msgid ""
+"These email addresses will be added to the CC field of all inbound and "
+"outbound emails for this record before being sent. Separate multiple email "
+"addresses with a comma"
+msgstr ""
+"Aquestes adreces de correu electrònic s'afegiran al camp CC de tots els "
+"correus electrònics entrants i sortints d'aquest registre abans de ser "
+"enviats. Separeu les adreces de correu electrònic amb una coma"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__user_fault
+msgid "Trouble Responsible"
+msgstr "Responsable del problema"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_tree_view
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
+msgid "Type"
+msgstr "Tipus"
+
+#. module: crm_claim
+#: model:ir.model.fields,help:crm_claim.field_crm_claim__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Tipus de l'excepció de l'activitat al registre."
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
+msgid "Unassigned Claims"
+msgstr "Reclamacions no assignades"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_unread
+msgid "Unread Messages"
+msgstr "Missatges no llegits"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Comptador de missatges no llegits"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__write_date
+msgid "Update Date"
+msgstr "Data d'actualització"
+
+#. module: crm_claim
+#: model:ir.model.fields,help:crm_claim.field_crm_claim_stage__sequence
+msgid "Used to order stages. Lower is better."
+msgstr "S'utilitza per ordenar etapes. Més baix és millor."
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__user_id
+msgid "User"
+msgstr "Usuari/ària"
+
+#. module: crm_claim
+#: model:crm.claim.category,name:crm_claim.categ_claim2
+msgid "Value Claims"
+msgstr "Reclamacions de valor"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__email_cc
+msgid "Watchers Emails"
+msgstr "Correus electrònics dels observadors"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__website_message_ids
+msgid "Website Messages"
+msgstr "Missatges del lloc web"
+
+#. module: crm_claim
+#: model:ir.model.fields,help:crm_claim.field_crm_claim__website_message_ids
+msgid "Website communication history"
+msgstr "Historial de comunicacions del lloc web"
+
+#. module: crm_claim
+#: model:ir.filters,name:crm_claim.filter_report_crm_claim_workload
+msgid "Workload"
+msgstr "Càrrega de treball"
+
+#. module: crm_claim
+#: model_terms:ir.actions.act_window,help:crm_claim.crm_claim_stage_act
+msgid ""
+"You can create claim stages to categorize the status of every\n"
+"            claim entered in the system. The stages define all the steps\n"
+"            required for the resolution of a claim."
+msgstr ""
+"Podeu crear etapes de reclamació per categoritzar-ne l'estat\n"
+"             al sistema. Les etapes defineixen tots els passos\n"
+"             necessaris per a la resolució d'una reclamació."
