@@ -8,7 +8,7 @@ from odoo.tests import common
 class TestCrmLocation(common.TransactionCase):
     @classmethod
     def setUpClass(cls):
-        super(TestCrmLocation, cls).setUpClass()
+        super().setUpClass()
         cls.env = cls.env(context=dict(cls.env.context, tracking_disable=True))
         cls.country = cls.env["res.country"].create({"name": "Test country"})
         cls.state = cls.env["res.country.state"].create(
@@ -38,16 +38,16 @@ class TestCrmLocation(common.TransactionCase):
             }
         )
 
-    def test_on_change_city(self):
+    def test_compute_partner_address_values(self):
         self.lead.location_id = self.location.id
-        self.lead.on_change_city()
+        self.lead._compute_partner_address_values()
         self.assertEqual(self.lead.zip, "12345")
         self.assertEqual(self.lead.city, "Test city")
         self.assertEqual(self.lead.state_id.name, "Test state")
         self.assertEqual(self.lead.country_id.name, "Test country")
 
-    def test_onchange_partner_id_crm_location(self):
+    def test_compute_location_id(self):
         self.partner.zip_id = self.location.id
         self.lead.partner_id = self.partner.id
-        self.lead.onchange_partner_id_crm_location()
+        self.lead._compute_location_id()
         self.assertEqual(self.lead.location_id.name, "12345")
