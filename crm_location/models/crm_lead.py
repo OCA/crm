@@ -9,8 +9,19 @@ from odoo import api, fields, models
 class CrmLead(models.Model):
     _inherit = "crm.lead"
 
-    @api.onchange("location_id")
-    def on_change_city(self):
+    location_id = fields.Many2one(
+        comodel_name="res.city.zip",
+        string="Location",
+        index="btree",
+        help="Use the city name or the zip code to search the location",
+        compute="_compute_location_id",
+        readonly=False,
+        store=True,
+    )
+
+    @api.depends("location_id")
+    def _compute_partner_address_values(self):
+        res = super()._compute_partner_address_values()
         if self.location_id:
             self.update(
                 {
@@ -20,15 +31,11 @@ class CrmLead(models.Model):
                     "country_id": self.location_id.city_id.country_id,
                 }
             )
+        return res
 
-    location_id = fields.Many2one(
-        comodel_name="res.city.zip",
-        string="Location",
-        index=True,
-        help="Use the city name or the zip code to search the location",
-    )
-
-    @api.onchange("partner_id")
-    def onchange_partner_id_crm_location(self):
-        if self.partner_id:
-            self.location_id = self.partner_id.zip_id
+    @api.depends("partner_id")
+    def _compute_location_id(self):
+        if self.partner_id.zip_id:
+            self.location_id = self.partner_id.zip_id.id
+        elif self.location_id:
+            self.location_id = self.location_id.id
