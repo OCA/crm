@@ -30,7 +30,12 @@ class CrmLeadLine(models.Model):
     product_tmpl_id = fields.Many2one(
         "product.template", string="Product Template", index=True
     )
-    product_qty = fields.Integer(string="Product Quantity", default=1, required=True)
+    product_qty = fields.Float(
+        string="Product Quantity",
+        digits='Product Unit of Measure',
+        default=1.0,
+        required=True
+    )
     uom_id = fields.Many2one("uom.uom", string="Unit of Measure", readonly=True)
     price_unit = fields.Float(string="Price Unit")
     planned_revenue = fields.Float(
