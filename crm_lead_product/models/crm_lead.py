@@ -17,7 +17,7 @@ class CrmLead(models.Model):
         for lead_line in self.lead_line_ids:
             if lead_line.planned_revenue != 0:
                 planned_revenue += lead_line.planned_revenue
-                self.planned_revenue = planned_revenue
+        self.planned_revenue = planned_revenue
 
     def _convert_opportunity_data(self, customer, team_id=False):
         res = super(CrmLead, self)._convert_opportunity_data(customer, team_id)
