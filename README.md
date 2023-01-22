@@ -22,6 +22,7 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [crm_claim](crm_claim/) | 16.0.1.0.0 |  | Track your customers/vendors claims and grievances.
+[crm_location](crm_location/) | 16.0.1.0.0 |  | CRM location
 
 [//]: # (end addons)
 
