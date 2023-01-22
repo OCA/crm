@@ -9,6 +9,7 @@ setuptools.setup(
     version=version,
     install_requires=[
         'odoo-addon-crm_claim>=16.0dev,<16.1dev',
+        'odoo-addon-crm_location>=16.0dev,<16.1dev',
     ],
     classifiers=[
         'Programming Language :: Python',
