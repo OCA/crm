@@ -79,5 +79,5 @@ class CrmLead(models.Model):
             if record.company_currency == record.multicompany_reporting_currency_id:
                 to_amount = record.expected_revenue
             else:
-                to_amount = record.expected_revenue / record.currency_rate
+                to_amount = record.expected_revenue * record.currency_rate
             record.amount_multicompany_reporting_currency = to_amount
