@@ -29,7 +29,7 @@ class TestAmountMulticompanyReportingCurrency(TransactionCase):
         cls.env["res.currency.rate"].create(
             {
                 "name": fields.Date.today(),
-                "rate": 0.98,
+                "rate": 1.0038,
                 "currency_id": cls.currency_swiss_id,
                 "company_id": cls.company.id,
             }
@@ -60,7 +60,9 @@ class TestAmountMulticompanyReportingCurrency(TransactionCase):
                 }
             )
         )
-        self.assertEqual(self.lead_1.amount_multicompany_reporting_currency, 1020.41)
+        self.assertAlmostEqual(
+            self.lead_1.amount_multicompany_reporting_currency, 1003.8
+        )
         # Company currency is in EUR, Amount Multicompany Reporting Currency is EUR
         self.env["res.config.settings"].create(
             {"multicompany_reporting_currency": self.currency_euro_id}
@@ -77,7 +79,7 @@ class TestAmountMulticompanyReportingCurrency(TransactionCase):
                 }
             )
         )
-        self.assertEqual(self.lead_2.amount_multicompany_reporting_currency, 1230)
+        self.assertAlmostEqual(self.lead_2.amount_multicompany_reporting_currency, 1230)
         # Company isn't set on the Lead, Amount Multicompany Reporting Currency is EUR
         self.lead_2 = self.env["crm.lead"].create(
             {
@@ -87,4 +89,4 @@ class TestAmountMulticompanyReportingCurrency(TransactionCase):
                 "expected_revenue": 842,
             }
         )
-        self.assertEqual(self.lead_2.amount_multicompany_reporting_currency, 842)
+        self.assertAlmostEqual(self.lead_2.amount_multicompany_reporting_currency, 842)

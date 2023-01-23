@@ -11,4 +11,5 @@
     "website": "https://github.com/OCA/crm",
     "data": ["views/crm_lead_views.xml"],
     "installable": True,
+    "maintainers": ["yankinmax"],
 }
