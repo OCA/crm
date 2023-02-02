@@ -3,7 +3,7 @@
 {
     "name": "CRM Multicompany Reporting Currency",
     "summary": "Adds Amount in multicompany reporting currency to CRM Lead",
-    "version": "15.0.1.0.2",
+    "version": "15.0.1.0.3",
     "category": "Sales",
     "author": "Camptocamp SA, Odoo Community Association (OCA)",
     "license": "AGPL-3",
