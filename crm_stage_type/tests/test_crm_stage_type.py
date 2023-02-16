@@ -1,10 +1,10 @@
 # Copyright 2018 ForgeFlow, S.L.
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
 
-from odoo.tests.common import SavepointCase
+from odoo.tests.common import TransactionCase
 
 
-class TestCrmStageType(SavepointCase):
+class TestCrmStageType(TransactionCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
@@ -48,7 +48,7 @@ class TestCrmStageType(SavepointCase):
 
         cls.lead = (
             cls.env["crm.lead"]
-            .with_context({"default_type": "lead"})
+            .with_context(default_type="lead")
             .create(
                 {
                     "type": "lead",
@@ -78,7 +78,7 @@ class TestCrmStageType(SavepointCase):
 
     def test_find_stage(self):
         self.assertEqual(self.lead.stage_id, self.lead_stage_a)
-        self.lead.convert_opportunity(self.env.ref("base.res_partner_2").id)
+        self.lead.convert_opportunity(self.env.ref("base.res_partner_2"))
         self.assertEqual(
             self.lead.stage_id,
             self.env.ref("crm.stage_lead1"),
@@ -100,7 +100,7 @@ class TestCrmStageType(SavepointCase):
         self.assertEqual(test_crm_opp_01.stage_id, self.env.ref("crm.stage_lead3"))
 
         self.lead_salesmanager = self.lead_salesmanager.with_context(
-            {"default_type": "lead"}
+            default_type="lead"
         )
 
         test_crm_lead_01 = self.lead_salesmanager.create(
@@ -119,6 +119,7 @@ class TestCrmStageType(SavepointCase):
                 "name": "Test lead second",
                 "partner_id": self.env.ref("base.res_partner_1").id,
                 "description": "This is the description of the test lead second.",
+                "probability": 55.0,
             }
         )
 

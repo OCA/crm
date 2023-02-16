@@ -15,7 +15,7 @@ class Lead(models.Model):
     @api.model
     def _read_group_stage_ids(self, stages, domain, order):
         ctx_type = self.env.context.get("default_type")
-        stages = super(Lead, self)._read_group_stage_ids(stages, domain, order)
+        stages = super()._read_group_stage_ids(stages, domain, order)
         search_domain = [("id", "in", stages.ids)]
         if ctx_type:
             search_domain += [("lead_type", "in", [ctx_type, "both"])]
@@ -24,21 +24,24 @@ class Lead(models.Model):
         )
         return stages.browse(stage_ids)
 
-    def _stage_find(self, team_id=False, domain=None, order="sequence"):
+    def _stage_find(self, team_id=False, domain=None, order="sequence, id", limit=1):
         # check whether we should try to add a condition on type
         domain = domain or []
         if not any(
             [term for term in domain if len(term) == 3 and term[0] == "lead_type"]
         ):
             types = ["both"]
-            ctx_type = self.env.context.get("default_type")
-            if ctx_type:
-                types += [ctx_type]
+            if len(self) == 1:
+                types += [self.type]
+            else:
+                ctx_type = self.env.context.get("default_type")
+                if ctx_type:
+                    types += [ctx_type]
             domain.append(("lead_type", "in", types))
-        return super(Lead, self)._stage_find(team_id, domain, order)
+        return super()._stage_find(team_id, domain, order, limit)
 
-    def merge_opportunity(self, user_id=False, team_id=False):
-        opportunities_head = super(Lead, self).merge_opportunity(user_id, team_id)
+    def merge_opportunity(self, user_id=False, team_id=False, auto_unlink=True):
+        opportunities_head = super().merge_opportunity(user_id, team_id, auto_unlink)
         if opportunities_head.team_id:
             team_stage_ids = self.env["crm.stage"].search(
                 [
@@ -54,7 +57,7 @@ class Lead(models.Model):
         return opportunities_head
 
     def _convert_opportunity_data(self, customer, team_id=False):
-        value = super(Lead, self)._convert_opportunity_data(customer, team_id)
+        value = super()._convert_opportunity_data(customer, team_id)
         if not self.stage_id or self.stage_id.lead_type == "lead":
             stage = self._stage_find(
                 team_id=team_id, domain=[("lead_type", "in", ["opportunity", "both"])]
