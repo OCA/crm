@@ -23,7 +23,7 @@ addon | version | maintainers | summary
 --- | --- | --- | ---
 [crm_claim](crm_claim/) | 15.0.1.1.0 |  | Track your customers/vendors claims and grievances.
 [crm_claim_type](crm_claim_type/) | 15.0.1.0.0 |  | Claim types for CRM
-[crm_industry](crm_industry/) | 15.0.1.1.0 |  | Link leads/opportunities to industries
+[crm_industry](crm_industry/) | 15.0.1.1.1 |  | Link leads/opportunities to industries
 [crm_lead_code](crm_lead_code/) | 15.0.1.0.0 |  | Sequential Code for Leads / Opportunities
 [crm_lead_firstname](crm_lead_firstname/) | 15.0.1.0.1 |  | Specify split names for contacts in leads
 [crm_location](crm_location/) | 15.0.1.0.2 |  | CRM location
