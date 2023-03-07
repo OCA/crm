@@ -7,7 +7,7 @@ from odoo.tests import common
 from odoo.tools import mute_logger
 
 
-class TestCrmPhoneCallSummaryPredefined(common.SavepointCase):
+class TestCrmPhoneCallSummaryPredefined(common.TransactionCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()

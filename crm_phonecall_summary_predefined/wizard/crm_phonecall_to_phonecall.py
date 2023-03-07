@@ -27,7 +27,7 @@ class CrmPhonecall2phonecall(models.TransientModel):
         model = self.env.context.get("active_model")
         if model == "crm.phonecall":
             phonecall = self.env[model].browse(self.env.context.get("active_id"))
-            res["summary_id"] = getattr(phonecall, "summary_id").id
+            res["summary_id"] = phonecall.summary_id.id
         return res
 
     def get_vals_action_schedule(self):
