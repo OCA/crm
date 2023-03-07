@@ -1,2 +1,2 @@
-#. Go to *CRM > Configuration > Pipelines > Phone Calls > Summaries*.
+#. Go to *CRM > Phone Calls > Logged Calls*.
 #. There you can use the new *Summary* field
