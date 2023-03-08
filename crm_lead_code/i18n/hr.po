@@ -1,0 +1,37 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * crm_lead_code
+#
+# Translators:
+# OCA Transbot <transbot@odoo-community.org>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-04 15:47+0000\n"
+"PO-Revision-Date: 2017-12-04 15:47+0000\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
+"Language-Team: Croatian (https://www.transifex.com/oca/teams/23907/hr/)\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#. module: crm_lead_code
+#: model:ir.model.fields,field_description:crm_lead_code.field_crm_lead__code
+msgid "Lead Number"
+msgstr ""
+
+#. module: crm_lead_code
+#: model:ir.model,name:crm_lead_code.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Potencijalni klijent"
+
+#. module: crm_lead_code
+#: code:addons/crm_lead_code/models/crm_lead.py:0
+#: model:ir.model.constraint,message:crm_lead_code.constraint_crm_lead_crm_lead_unique_code
+#, python-format
+msgid "The code must be unique!"
+msgstr ""
