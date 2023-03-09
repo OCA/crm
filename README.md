@@ -25,6 +25,7 @@ addon | version | maintainers | summary
 [crm_claim_code](crm_claim_code/) | 12.0.1.0.0 |  | Sequential Code for Claims
 [crm_claim_type](crm_claim_type/) | 12.0.1.0.0 |  | Claim types for CRM
 [crm_industry](crm_industry/) | 12.0.1.0.0 |  | Link leads/opportunities to industries
+[crm_klaviyo](crm_klaviyo/) | 12.0.1.0.0 |  | Manage Klaviyo API keys
 [crm_l10n_eu_nace](crm_l10n_eu_nace/) | 12.0.1.0.0 |  | European NACE categories in CRM
 [crm_lead_code](crm_lead_code/) | 12.0.1.0.1 |  | Sequential Code for Leads / Opportunities
 [crm_lead_currency](crm_lead_currency/) | 12.0.1.0.1 |  | On leads/opportunities, add the amount in the customer's currency.
