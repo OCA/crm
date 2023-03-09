@@ -23,7 +23,7 @@ addon | version | maintainers | summary
 --- | --- | --- | ---
 [crm_claim](crm_claim/) | 16.0.1.0.0 |  | Track your customers/vendors claims and grievances.
 [crm_lead_code](crm_lead_code/) | 16.0.1.0.1 |  | Sequential Code for Leads / Opportunities
-[crm_lead_firstname](crm_lead_firstname/) | 16.0.1.0.0 |  | Specify split names for contacts in leads
+[crm_lead_firstname](crm_lead_firstname/) | 16.0.1.0.1 |  | Specify split names for contacts in leads
 [crm_location](crm_location/) | 16.0.1.0.0 |  | CRM location
 
 [//]: # (end addons)
