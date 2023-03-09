@@ -1,7 +1,7 @@
 {
     "name": "Crm Lead Search in Archive",
     "summary": "Add a filter to search both in active/archive lead",
-    "version": "16.0.1.0.0",
+    "version": "16.0.1.0.1",
     "category": "Customer Relationship Management",
     "author": "Akretion, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/crm",
