@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="crm_lead_view_form" model="ir.ui.view">
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//group/group[1]/field[@name='partner_id']" position="after">
+                <field name="vat" />
+            </xpath>
+            <xpath expr="//group/group[2]/field[@name='partner_id']" position="after">
+                <field name="vat" />
+            </xpath>
+        </field>
+    </record>
+</odoo>
