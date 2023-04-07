@@ -10,15 +10,16 @@ msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-16 11:11+0000\n"
-"PO-Revision-Date: 2016-05-01 07:08+0000\n"
-"Last-Translator: Paolo Valier\n"
-"Language-Team: Italian (http://www.transifex.com/oca/OCA-crm-8-0/language/"
-"it/)\n"
+"PO-Revision-Date: 2023-04-07 14:24+0000\n"
+"Last-Translator: Francesco Foresti <francesco.foresti@ooops404.com>\n"
+"Language-Team: Italian (http://www.transifex.com/oca/OCA-crm-8-0/language/it/"
+")\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.14.1\n"
 
 #. module: crm_sector
 #: model:ir.model,name:crm_sector.model_crm_lead
@@ -34,7 +35,7 @@ msgstr "Settore principale"
 #: view:crm.lead:crm_sector.view_crm_case_leads_filter
 #: view:crm.lead:crm_sector.view_crm_case_opportunities_filter
 msgid "Sales Team"
-msgstr "Team di Vendita"
+msgstr "Team di vendita"
 
 #. module: crm_sector
 #: field:crm.lead,secondary_sector_ids:0
