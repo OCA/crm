@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-09-21 00:47+0000\n"
-"PO-Revision-Date: 2022-12-28 22:50+0000\n"
-"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
+"PO-Revision-Date: 2023-04-07 14:24+0000\n"
+"Last-Translator: Francesco Foresti <francesco.foresti@ooops404.com>\n"
 "Language-Team: Italian (https://www.transifex.com/oca/teams/23907/it/)\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
@@ -658,7 +658,7 @@ msgstr "Responsabile"
 #: model:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
 #: model:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
 msgid "Sales Team"
-msgstr "Team di Vendita"
+msgstr "Team di vendita"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall_team_id
@@ -668,7 +668,7 @@ msgstr ""
 #. module: crm_phonecall
 #: model:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
 msgid "Salesperson"
-msgstr "Commerciale"
+msgstr "Addetto vendite"
 
 #. module: crm_phonecall
 #: model:ir.ui.view,arch_db:crm_phonecall.phonecall_to_phonecall_view
