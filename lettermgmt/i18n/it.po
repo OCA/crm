@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-02 14:15+0000\n"
-"PO-Revision-Date: 2023-01-02 12:49+0000\n"
+"PO-Revision-Date: 2023-04-07 18:28+0000\n"
 "Last-Translator: Francesco Foresti <francesco.foresti@ooops404.com>\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-crm-8-0/language/it/"
 ")\n"
@@ -244,7 +244,7 @@ msgstr ""
 #. module: lettermgmt
 #: field:res.letter,message_is_follower:0
 msgid "Is a Follower"
-msgstr "È un Follower"
+msgstr "Sta seguendo"
 
 #. module: lettermgmt
 #: field:res.letter,message_last_post:0
