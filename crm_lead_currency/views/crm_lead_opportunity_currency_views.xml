@@ -1,5 +1,4 @@
-<?xml version="1.0"?>
-
+<?xml version="1.0" ?>
 <odoo>
 
     <record id="crm_case_form_view_oppor" model="ir.ui.view">

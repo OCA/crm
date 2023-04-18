@@ -5,23 +5,23 @@ from odoo import api, fields, models
 
 
 class CrmLead(models.Model):
-    _inherit = 'crm.lead'
+    _inherit = "crm.lead"
 
     customer_currency_id = fields.Many2one(
-        string='Customer currency',
-        comodel_name='res.currency',
+        string="Customer currency",
+        comodel_name="res.currency",
         default=lambda self: self.env.user.company_id.currency_id,
     )
     amount_customer_currency = fields.Monetary(
-        string='Customer amount',
-        currency_field='customer_currency_id',
+        string="Customer amount",
+        currency_field="customer_currency_id",
     )
     is_same_currency = fields.Boolean(
-        string='Same currency',
-        compute='_compute_is_same_currency',
+        string="Same currency",
+        compute="_compute_is_same_currency",
     )
 
-    @api.onchange('customer_currency_id', 'amount_customer_currency')
+    @api.onchange("customer_currency_id", "amount_customer_currency")
     def _onchange_currency(self):
         self.planned_revenue = self.get_revenue_in_company_currency()
 
@@ -43,12 +43,9 @@ class CrmLead(models.Model):
         )
 
     @api.multi
-    @api.depends('customer_currency_id', 'company_id.currency_id')
+    @api.depends("customer_currency_id", "company_id.currency_id")
     def _compute_is_same_currency(self):
         for lead in self:
-            lead.is_same_currency = (
-                lead.customer_currency_id == (
-                    lead.company_currency or
-                    self.env.user.company_id.currency_id
-                )
+            lead.is_same_currency = lead.customer_currency_id == (
+                lead.company_currency or self.env.user.company_id.currency_id
             )
