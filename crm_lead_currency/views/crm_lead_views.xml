@@ -1,10 +1,10 @@
 <?xml version="1.0" ?>
 <odoo>
 
-    <record id="crm_case_form_view_oppor" model="ir.ui.view">
-        <field name="name">crm.lead.form.oppor</field>
+    <record id="crm_lead_view_form" model="ir.ui.view">
+        <field name="name">crm.lead.form</field>
         <field name="model">crm.lead</field>
-        <field name="inherit_id" ref="crm.crm_case_form_view_oppor" />
+        <field name="inherit_id" ref="crm.crm_lead_view_form" />
         <field name="arch" type="xml">
             <field name="partner_id" position="before">
                 <field name="customer_currency_id" />
@@ -14,7 +14,7 @@
                     attrs="{'invisible': [('is_same_currency', '=', True)]}"
                 />
             </field>
-            <field name="planned_revenue" position="attributes">
+            <field name="expected_revenue" position="attributes">
                 <attribute name="attrs">
                     {'readonly': [('is_same_currency', '=', False)]}
                 </attribute>
@@ -30,17 +30,18 @@
         <field name="inherit_id" ref="crm.crm_case_kanban_view_leads" />
         <field name="priority">99</field>
         <field name="arch" type="xml">
-
-            <field name="planned_revenue" position="after">
+            <field name="expected_revenue" position="after">
                 <field name="is_same_currency" />
                 <field name="amount_customer_currency" />
                 <field name="customer_currency_id" />
             </field>
-
-            <xpath expr="//templates//field[@name='planned_revenue']" position="replace">
+            <xpath
+                expr="//templates//field[@name='expected_revenue']"
+                position="replace"
+            >
                 <t t-if="record.is_same_currency.raw_value">
                     <field
-                        name="planned_revenue"
+                        name="expected_revenue"
                         widget="monetary"
                         options="{'currency_field': 'company_currency'}"
                     />
