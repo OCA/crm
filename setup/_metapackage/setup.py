@@ -16,6 +16,7 @@ setuptools.setup(
         'odoo-addon-crm_lead_vat>=15.0dev,<15.1dev',
         'odoo-addon-crm_location>=15.0dev,<15.1dev',
         'odoo-addon-crm_multicompany_reporting_currency>=15.0dev,<15.1dev',
+        'odoo-addon-crm_partner_assign>=15.0dev,<15.1dev',
         'odoo-addon-crm_phonecall>=15.0dev,<15.1dev',
         'odoo-addon-crm_phonecall_planner>=15.0dev,<15.1dev',
         'odoo-addon-crm_phonecall_summary_predefined>=15.0dev,<15.1dev',
