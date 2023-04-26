@@ -13,6 +13,7 @@ setuptools.setup(
         'odoo14-addon-crm_industry',
         'odoo14-addon-crm_l10n_eu_nace',
         'odoo14-addon-crm_lead_code',
+        'odoo14-addon-crm_lead_currency',
         'odoo14-addon-crm_lead_firstname',
         'odoo14-addon-crm_lead_search_archive',
         'odoo14-addon-crm_lead_vat',
