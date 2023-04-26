@@ -41,13 +41,11 @@ Installation
 
 Just install the module.
 
-
 Configuration
 =============
 
 No specific configuration is needed but multi-currency should be enabled for the module
 to make sense.
-
 
 Usage
 =====
@@ -73,6 +71,7 @@ Authors
 ~~~~~~~
 
 * Camptocamp SA
+* Vauxoo
 
 Contributors
 ~~~~~~~~~~~~
@@ -91,6 +90,14 @@ This module is maintained by the OCA.
 OCA, or the Odoo Community Association, is a nonprofit organization whose
 mission is to support the collaborative development of Odoo features and
 promote its widespread use.
+
+.. |maintainer-luisg123v| image:: https://github.com/luisg123v.png?size=40px
+    :target: https://github.com/luisg123v
+    :alt: luisg123v
+
+Current `maintainer <https://odoo-community.org/page/maintainer-role>`__:
+
+|maintainer-luisg123v| 
 
 This module is part of the `OCA/crm <https://github.com/OCA/crm/tree/14.0/crm_lead_currency>`_ project on GitHub.
 
