@@ -217,3 +217,15 @@ class CrmPhonecall(models.Model):
         opportunity_id = opportunity.create(self._prepare_opportunity_vals())
         self.write({"opportunity_id": opportunity_id.id, "state": "done"})
         return opportunity_id.redirect_lead_opportunity_view()
+
+    def _get_view(self, view_id=None, view_type="form", **options):
+        """Inject group check to make the tree editable or not. Apparently it can't be done
+        by pure view inheritance and attribute overriding"""
+        arch, view = super()._get_view(view_id, view_type, **options)
+        if view_type == "tree" and self.env.user.has_group(
+            "crm_phonecall.group_show_form_view"
+        ):
+            node = arch.xpath("//tree")
+            if node:
+                node[0].set("editable", "")
+        return arch, view
