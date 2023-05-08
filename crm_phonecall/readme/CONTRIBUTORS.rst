@@ -5,6 +5,7 @@
   * Jairo Llopis
   * David Vidal
   * Alexandre Díaz
+  * Stefan Ungureanu
 
 * RIDA YAHLA <mireda2012@gmail.com>
 
