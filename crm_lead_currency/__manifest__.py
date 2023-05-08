@@ -8,7 +8,7 @@
     "maintainers": [
         "luisg123v",
     ],
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.0.1",
     "license": "AGPL-3",
     "author": "Camptocamp SA,Odoo Community Association (OCA),Vauxoo",
     "website": "https://github.com/OCA/crm",
