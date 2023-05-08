@@ -4,7 +4,7 @@
 from odoo.tests import Form, common
 
 
-class TestCrmPhoneCall(common.SavepointCase):
+class TestCrmPhoneCall(common.TransactionCase):
     """Unit test case of the Crm Phonecall module."""
 
     @classmethod
