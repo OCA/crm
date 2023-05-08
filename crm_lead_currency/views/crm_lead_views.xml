@@ -6,14 +6,17 @@
         <field name="model">crm.lead</field>
         <field name="inherit_id" ref="crm.crm_lead_view_form" />
         <field name="arch" type="xml">
-            <field name="partner_id" position="before">
+            <xpath
+                expr="//group[@name='opportunity_partner']//field[@name='partner_id']"
+                position="before"
+            >
                 <field name="customer_currency_id" />
                 <field name="is_same_currency" invisible="1" />
                 <field
                     name="amount_customer_currency"
                     attrs="{'invisible': [('is_same_currency', '=', True)]}"
                 />
-            </field>
+            </xpath>
             <field name="expected_revenue" position="attributes">
                 <attribute name="attrs">
                     {'readonly': [('is_same_currency', '=', False)]}
