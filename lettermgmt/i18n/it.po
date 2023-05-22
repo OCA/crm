@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-02 14:15+0000\n"
-"PO-Revision-Date: 2023-05-18 16:42+0000\n"
+"PO-Revision-Date: 2023-05-22 15:12+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-crm-8-0/language/it/"
 ")\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.16.4\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: lettermgmt
 #: help:res.letter,state:0
@@ -438,7 +438,7 @@ msgstr ""
 #. module: lettermgmt
 #: view:res.letter:lettermgmt.res_letter_filter
 msgid "Pending"
-msgstr "Attesa"
+msgstr "In attesa"
 
 #. module: lettermgmt
 #: view:letter.reassignment:lettermgmt.letter_reassignment_form_view
