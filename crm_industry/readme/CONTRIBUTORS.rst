@@ -5,3 +5,7 @@
 * Miquel Raïch <miquel.raich@forgeflow.com>
 * Alexandre Díaz <alexandre.diaz@tecnativa.com>
 * Manuel Marquez <manuel@getmadeit.io>
+
+* `Pesol <https://www.pesol.es>`__:
+
+  * Jonathan Oscategui Taza <info@pesol.es>
