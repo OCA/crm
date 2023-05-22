@@ -4,3 +4,7 @@
 * Martin Wilderoth <martin.wilderoth@linserv.se>
 * Alexandre Díaz <alexandre.diaz@tecnativa.com>
 * Manuel Marquez <buzondemam@gmail.com>
+
+* `Pesol <https://www.pesol.es>`__:
+
+  * Jonathan Oscategui Taza <info@pesol.es>
