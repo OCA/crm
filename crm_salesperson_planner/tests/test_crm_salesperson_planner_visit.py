@@ -1,9 +1,12 @@
 # Copyright 2021 Sygel - Valentin Vinagre
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html)
 
+from datetime import datetime, timedelta
+
 from dateutil.relativedelta import relativedelta
 
-from odoo import fields
+from odoo import _, fields
+from odoo.exceptions import ValidationError
 from odoo.tests import common
 
 
@@ -147,3 +150,191 @@ class TestCrmSalespersonPlannerVisit(TestCrmSalespersonPlannerVisitBase):
         self.assertEqual(self.visit1.state, "confirm")
         self.config_close_wiz("incident", {"reason_id": self.incident.id})
         self.assertEqual(self.visit1.state, "incident")
+
+    def test_write_method_updates_calendar_event_user_id(self):
+        partner = self.env["res.partner"].create(
+            {
+                "name": "Test Partner",
+            }
+        )
+
+        visit = self.env["crm.salesperson.planner.visit"].create(
+            {
+                "name": "Test Visit",
+                "user_id": self.env.ref("base.user_demo").id,
+                "partner_id": partner.id,
+            }
+        )
+        calendar_event = self.env["calendar.event"].create(
+            {
+                "name": "Test Event",
+                "user_id": self.env.ref("base.user_demo").id,
+                "partner_id": partner.id,
+            }
+        )
+        visit.write({"calendar_event_id": calendar_event.id})
+
+        new_user = self.env.ref("base.user_admin")
+        visit.write({"user_id": new_user.id})
+
+        self.assertEqual(calendar_event.user_id, new_user)
+
+    def test_action_done(self):
+        partner = self.env["res.partner"].create(
+            {
+                "name": "Ejemplo de partner",
+            }
+        )
+        visit = self.env["crm.salesperson.planner.visit"].create(
+            {
+                "state": "confirm",
+                "partner_id": partner.id,
+            }
+        )
+
+        visit.action_done()
+
+        self.assertEqual(visit.state, "done")
+
+        with self.assertRaises(ValidationError):
+            visit.action_done()
+
+        visit.state = "draft"
+        with self.assertRaises(ValidationError):
+            visit.action_done()
+
+
+class TestResPartner(common.TransactionCase):
+    def test_action_view_salesperson_planner_visit(self):
+        partner = self.env["res.partner"].create(
+            {"name": "Test Partner", "is_company": True}
+        )
+
+        action = partner.action_view_salesperson_planner_visit()
+
+        self.assertEqual(action["domain"], [("partner_id", "child_of", partner.id)])
+        self.assertEqual(action["res_model"], "crm.salesperson.planner.visit")
+        self.assertIn("tree", action["view_mode"])
+        self.assertIn("form", action["view_mode"])
+        self.assertIn("pivot", action["view_mode"])
+
+
+class TestCalendarEvent(common.TransactionCase):
+    def test_write_user_id(self):
+        event = self.env["calendar.event"].create({"name": "Test Event"})
+
+        values = {"user_id": 1}
+
+        event.write(values)
+
+        self.assertIn("user_id", values)
+        self.assertEqual(values["user_id"], 1)
+
+
+class TestCrmSalespersonPlannerVisitTemplate(common.TransactionCase):
+    def test_partner_ids_constraint(self):
+        template = self.env["crm.salesperson.planner.visit.template"].create(
+            {
+                "name": "Test Visit Template",
+                "partner_ids": [(0, 0, {"name": "Customer 1"})],
+            }
+        )
+
+        with self.assertRaises(ValidationError) as context:
+            template.partner_ids = [
+                (0, 0, {"name": "Customer 2"}),
+                (0, 0, {"name": "Customer 3"}),
+            ]
+
+        error_msg = _("Only one customer is allowed")
+        self.assertEqual(str(context.exception), error_msg)
+
+    def test_increase_date(self):
+        template = self.env["crm.salesperson.planner.visit.template"].create({})
+
+        template.rrule_type = "daily"
+        initial_date = datetime(2023, 1, 1)
+        expected_date = initial_date + timedelta(days=3)
+        result_date = template._increase_date(initial_date, 3)
+        self.assertEqual(result_date, expected_date)
+        self.assertTrue(template.rrule_type == "daily")
+
+        template.rrule_type = "weekly"
+        expected_date1 = initial_date + relativedelta(weeks=2)
+        result_date1 = template._increase_date(initial_date, 2)
+        self.assertEqual(result_date1.date(), expected_date1.date())
+        self.assertTrue(template.rrule_type == "weekly")
+
+        template.rrule_type = "monthly"
+        expected_date2 = initial_date + relativedelta(months=1)
+        result_date2 = template._increase_date(initial_date, 1)
+        self.assertEqual(result_date2.date(), expected_date2.date())
+        self.assertTrue(template.rrule_type == "monthly")
+
+        template.rrule_type = "yearly"
+        expected_date3 = initial_date + relativedelta(years=1)
+        result_date3 = template._increase_date(initial_date, 1)
+        self.assertEqual(result_date3.date(), expected_date3.date())
+        self.assertTrue(template.rrule_type == "yearly")
+
+    def test_action_view_salesperson_planner_visit(self):
+        template = self.env["crm.salesperson.planner.visit.template"].create(
+            {
+                "partner_id": 1,
+                "description": "Ejemplo de descripción",
+            }
+        )
+
+        action = template.action_view_salesperson_planner_visit()
+
+        self.assertIsInstance(action, dict)
+        self.assertEqual(action.get("type"), "ir.actions.act_window")
+
+        expected_domain = [("id", "=", template.visit_ids.ids)]
+        self.assertEqual(action.get("domain"), expected_domain)
+
+        expected_context = {
+            "default_partner_id": template.partner_id.id,
+            "default_visit_template_id": template.id,
+            "default_description": template.description,
+        }
+        self.assertEqual(action.get("context"), expected_context)
+
+    def test_action_cancel(self):
+        template = self.env["crm.salesperson.planner.visit.template"].create(
+            {
+                "state": "in-progress",
+            }
+        )
+
+        template.action_cancel()
+
+        self.assertEqual(template.state, "cancel")
+
+    def test_action_draft(self):
+        template = self.env["crm.salesperson.planner.visit.template"].create(
+            {
+                "state": "cancel",
+            }
+        )
+
+        template.action_draft()
+
+        self.assertEqual(template.state, "draft")
+
+
+class TestCrmSalespersonPlannerVisitTemplateCreate(common.TransactionCase):
+    def test_default_date_to(self):
+        wizard = self.env["crm.salesperson.planner.visit.template.create"].create({})
+
+        template = self.env["crm.salesperson.planner.visit.template"].create(
+            {
+                "last_visit_date": fields.Date.today(),
+            }
+        )
+        wizard = wizard.with_context(active_id=template.id)
+
+        default_date_to = wizard._default_date_to()
+
+        expected_date = template.last_visit_date + timedelta(days=7)
+        self.assertEqual(default_date_to, expected_date)

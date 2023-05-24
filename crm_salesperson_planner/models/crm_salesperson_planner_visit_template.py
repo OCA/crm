@@ -4,6 +4,8 @@
 
 from datetime import timedelta
 
+from dateutil.relativedelta import relativedelta
+
 from odoo import _, api, fields, models
 from odoo.exceptions import ValidationError
 
@@ -169,9 +171,9 @@ class CrmSalespersonPlannerVisitTemplate(models.Model):
         elif self.rrule_type == "weekly":
             date += timedelta(weeks=value)
         elif self.rrule_type == "monthly":
-            date += timedelta(months=value)
+            date += relativedelta(months=value)
         elif self.rrule_type == "yearly":
-            date += timedelta(years=value)
+            date += relativedelta(years=value)
         return date
 
     def _get_recurrence_dates(self, items):
