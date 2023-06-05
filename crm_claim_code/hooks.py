@@ -22,11 +22,11 @@ def assign_old_sequences(cr, registry):
     if not new_field_code_added:
         # the field was already existing before the installation of the addon
         return
-    with Environment.manage():
-        env = Environment(cr, SUPERUSER_ID, {})
 
-        sequence_model = env["ir.sequence"]
+    env = Environment(cr, SUPERUSER_ID, {})
 
-        claims = env["crm.claim"].search([], order="id")
-        for claim in claims:
-            claim.code = sequence_model.next_by_code("crm.claim")
+    sequence_model = env["ir.sequence"]
+
+    claims = env["crm.claim"].search([], order="id")
+    for claim in claims:
+        claim.code = sequence_model.next_by_code("crm.claim")

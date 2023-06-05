@@ -4,8 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 14.0\n"
+"Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-05 08:34+0000\n"
+"PO-Revision-Date: 2023-06-05 08:34+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -21,21 +23,6 @@ msgstr ""
 #. module: crm_claim_code
 #: model:ir.model.fields,field_description:crm_claim_code.field_crm_claim__code
 msgid "Claim Number"
-msgstr ""
-
-#. module: crm_claim_code
-#: model:ir.model.fields,field_description:crm_claim_code.field_crm_claim__display_name
-msgid "Display Name"
-msgstr ""
-
-#. module: crm_claim_code
-#: model:ir.model.fields,field_description:crm_claim_code.field_crm_claim__id
-msgid "ID"
-msgstr ""
-
-#. module: crm_claim_code
-#: model:ir.model.fields,field_description:crm_claim_code.field_crm_claim____last_update
-msgid "Last Modified on"
 msgstr ""
 
 #. module: crm_claim_code
