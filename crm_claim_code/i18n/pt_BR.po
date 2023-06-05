@@ -4,23 +4,21 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 10.0\n"
+"Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-09-05 16:00+0000\n"
-"PO-Revision-Date: 2019-09-03 03:23+0000\n"
-"Last-Translator: Rodrigo Macedo <rmsolucoeseminformatic4@gmail.com>\n"
+"POT-Creation-Date: 2023-06-05 08:36+0000\n"
+"PO-Revision-Date: 2023-06-05 08:36+0000\n"
+"Last-Translator: \n"
 "Language-Team: \n"
-"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.8\n"
+"Plural-Forms: \n"
 
 #. module: crm_claim_code
 #: model:ir.model,name:crm_claim_code.model_crm_claim
 msgid "Claim"
-msgstr "Reclamação"
+msgstr "Requisição"
 
 #. module: crm_claim_code
 #: model:ir.model.fields,field_description:crm_claim_code.field_crm_claim__code
@@ -28,6 +26,6 @@ msgid "Claim Number"
 msgstr "Número de reclamação"
 
 #. module: crm_claim_code
-#: sql_constraint:crm.claim:0
+#: model:ir.model.constraint,message:crm_claim_code.constraint_crm_claim_crm_claim_unique_code
 msgid "The code must be unique!"
 msgstr "O código deve ser único!"
