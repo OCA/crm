@@ -9,15 +9,15 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-04 15:47+0000\n"
-"PO-Revision-Date: 2019-02-04 19:50+0000\n"
-"Last-Translator: Marta Vázquez Rodríguez <vazrodmar@gmail.com>\n"
+"PO-Revision-Date: 2023-06-06 14:10+0000\n"
+"Last-Translator: luis-ron <luis.ron@sygel.es>\n"
 "Language-Team: Spanish (https://www.transifex.com/oca/teams/23907/es/)\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.4\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__nbr_cases
@@ -62,7 +62,7 @@ msgstr "Activa"
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
 msgid "Additional Info"
-msgstr ""
+msgstr "Información adicional"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__user_id
@@ -83,6 +83,8 @@ msgstr "Por equipo de ventas"
 #: model:ir.model.fields,help:crm_phonecall.field_res_config_settings__group_show_form_view
 msgid "By default form is disabled for calls, with this group it is enabled."
 msgstr ""
+"Por defecto el formulario está descactivado para llamadas, con este grupo "
+"está habilitado."
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.res_config_settings_view_form
@@ -90,11 +92,13 @@ msgid ""
 "By default form view is disabled for calls, with this setting it is enabled "
 "for all users."
 msgstr ""
+"Por defecto la vista formulario está deshabilitada para llamadas, con este "
+"ajuste se habilita para todo los usuarios."
 
 #. module: crm_phonecall
 #: model:ir.model,name:crm_phonecall.model_calendar_event
 msgid "Calendar Event"
-msgstr ""
+msgstr "Calendario de eventos"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__name
@@ -120,7 +124,7 @@ msgstr "Fechas de las llamadas por mes"
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
 msgid "Calls by status"
-msgstr ""
+msgstr "Llamadas por estados"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__campaign_id
@@ -172,7 +176,7 @@ msgstr "Compañía"
 #. module: crm_phonecall
 #: model:ir.model,name:crm_phonecall.model_res_config_settings
 msgid "Config Settings"
-msgstr ""
+msgstr "Configuración"
 
 #. module: crm_phonecall
 #: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall__state__open
@@ -277,9 +281,8 @@ msgstr "Descripción..."
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__direction
-#, fuzzy
 msgid "Direction"
-msgstr "Creación"
+msgstr "Dirección"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__display_name
@@ -314,7 +317,7 @@ msgstr "Email"
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.res_config_settings_view_form
 #: model:res.groups,name:crm_phonecall.group_show_form_view
 msgid "Enable form view for phone calls"
-msgstr ""
+msgstr "Habilitar la vista formulario para llamadas telefónicas"
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
@@ -377,7 +380,7 @@ msgstr "Si está marccado, algunos mensajes tienen error de entrega."
 #. module: crm_phonecall
 #: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall__direction__in
 msgid "In"
-msgstr ""
+msgstr "En"
 
 #. module: crm_phonecall
 #: model_terms:ir.actions.act_window,help:crm_phonecall.crm_case_categ_phone_incoming0
@@ -390,9 +393,8 @@ msgstr ""
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
-#, fuzzy
 msgid "Incoming Calls"
-msgstr "Llamadas"
+msgstr "Llamadas entrantes"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_is_follower
@@ -550,9 +552,8 @@ msgstr "Número de días para abrir el caso"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_has_error_counter
-#, fuzzy
 msgid "Number of errors"
-msgstr "Número de error"
+msgstr "Número de errores"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__message_needaction_counter
@@ -607,9 +608,8 @@ msgstr ""
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
-#, fuzzy
 msgid "Outgoing Calls"
-msgstr "Llamadas"
+msgstr "Llamadas salientes"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__partner_id
@@ -748,9 +748,8 @@ msgstr "Responsable"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_has_sms_error
-#, fuzzy
 msgid "SMS Delivery error"
-msgstr "Error de entrega de mensaje"
+msgstr "Error de entrega de SMS"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__team_id
