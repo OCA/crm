@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-02 14:15+0000\n"
-"PO-Revision-Date: 2023-05-31 15:09+0000\n"
-"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
+"PO-Revision-Date: 2023-06-06 14:14+0000\n"
+"Last-Translator: Francesco Foresti <francesco.foresti@ooops404.com>\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-crm-8-0/language/it/"
 ")\n"
 "Language: it\n"
@@ -98,7 +98,7 @@ msgstr ""
 #. module: lettermgmt
 #: view:res.letter:lettermgmt.res_letter_form_view
 msgid "Back to Draft"
-msgstr "Reimposta a bozza"
+msgstr "Ritorna a bozza"
 
 #. module: lettermgmt
 #: view:res.letter:lettermgmt.res_letter_form_view
