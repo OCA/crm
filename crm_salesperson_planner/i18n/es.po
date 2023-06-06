@@ -7,14 +7,15 @@ msgstr ""
 "Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-12 14:00+0000\n"
-"PO-Revision-Date: 2022-01-12 14:00+0000\n"
-"Last-Translator: \n"
+"PO-Revision-Date: 2023-06-06 12:08+0000\n"
+"Last-Translator: luis-ron <luis.ron@sygel.es>\n"
 "Language-Team: \n"
-"Language: \n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit__message_needaction
@@ -86,8 +87,9 @@ msgstr "Auto validar"
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__byday
+#, fuzzy
 msgid "Byday"
-msgstr ""
+msgstr "A diario"
 
 #. module: crm_salesperson_planner
 #: model:ir.actions.server,name:crm_salesperson_planner.ir_cron_create_visits_ir_actions_server
@@ -131,6 +133,8 @@ msgid ""
 "Choose what to do with other events in the recurrence. Updating All Events "
 "is not allowed when dates or time is modified"
 msgstr ""
+"Elija qué hacer con otros eventos en la recurrencia. No se permite "
+"actualizar todos los eventos cuando se modifican las fechas o la hora"
 
 #. module: crm_salesperson_planner
 #: model_terms:ir.ui.view,arch_db:crm_salesperson_planner.crm_salesperson_planner_visit_form_view
@@ -253,8 +257,9 @@ msgstr "Descripción"
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__display_description
+#, fuzzy
 msgid "Display Description"
-msgstr ""
+msgstr "Visualización de descripción"
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit__display_name
@@ -310,6 +315,8 @@ msgid ""
 "Event %(event_name)s is related to salesperson visit %(partner_name)s. "
 "Cancel it to delete this event.\n"
 msgstr ""
+"El evento %(event_name)s está relacionado con la visita del vendedor "
+"%(partner_name)s. Cancélelo para eliminar este evento\n"
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__display_time
@@ -319,7 +326,7 @@ msgstr "Hora del evento"
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__follow_recurrence
 msgid "Follow Recurrence"
-msgstr ""
+msgstr "Seguir recurrencia"
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit__message_follower_ids
@@ -362,7 +369,7 @@ msgstr "Agrupar por"
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit__has_message
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__has_message
 msgid "Has Message"
-msgstr ""
+msgstr "Tiene mensaje"
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit__id
@@ -455,7 +462,7 @@ msgstr "Es el Evento Resaltado"
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__is_organizer_alone
 msgid "Is the Organizer Alone"
-msgstr ""
+msgstr "¿Está solo el organizador?"
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit____last_update
@@ -528,7 +535,7 @@ msgstr "Creación manual de visitas"
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__videocall_location
 msgid "Meeting URL"
-msgstr ""
+msgstr "URL de la reunión"
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit__message_has_error
@@ -570,8 +577,9 @@ msgstr "Nueva fecha"
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit__activity_calendar_event_id
+#, fuzzy
 msgid "Next Activity Calendar Event"
-msgstr ""
+msgstr "Próxima actividad del calendario"
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit__activity_date_deadline
@@ -597,6 +605,7 @@ msgstr "Notas"
 #: model:ir.model.fields,help:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__alarm_ids
 msgid "Notifications sent to all attendees to remind of the meeting."
 msgstr ""
+"Envío de notificaciones a todos los asistentes para recordarles la reunión."
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit__message_needaction_counter
@@ -679,7 +688,7 @@ msgstr "Datos del usuario relativos a la empresa"
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,help:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__privacy
 msgid "People to whom this event will be visible."
-msgstr ""
+msgstr "Personas a las que será visible este evento."
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit__partner_phone
@@ -688,9 +697,8 @@ msgstr "Teléfono"
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__phonecall_id
-#, fuzzy
 msgid "Phonecall"
-msgstr "Teléfono"
+msgstr "Llamada telefónica"
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__privacy
@@ -725,7 +733,7 @@ msgstr "Recurrencia"
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__recurrence_id
 msgid "Recurrence Rule"
-msgstr ""
+msgstr "Regla de recurrencia"
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__end_type
@@ -735,7 +743,7 @@ msgstr "Finalizar recurrencia"
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__recurrence_update
 msgid "Recurrence Update"
-msgstr ""
+msgstr "Actualización de recurrencia"
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__recurrency
@@ -844,7 +852,7 @@ msgstr "Sabado"
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__partner_id
 msgid "Scheduled by"
-msgstr ""
+msgstr "Programado por"
 
 #. module: crm_salesperson_planner
 #: model_terms:ir.ui.view,arch_db:crm_salesperson_planner.crm_salesperson_planner_visit_filter
@@ -866,7 +874,7 @@ msgstr "Secuencia"
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__show_as
 msgid "Show as"
-msgstr ""
+msgstr "Mostrar como"
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__start
@@ -1095,9 +1103,9 @@ msgstr "Visitas"
 
 #. module: crm_salesperson_planner
 #: code:addons/crm_salesperson_planner/models/crm_salesperson_planner_visit.py:0
-#, fuzzy, python-format
+#, python-format
 msgid "Visits must be in cancelled state"
-msgstr "La visita debe estar en estado cancelado"
+msgstr "Las visitas debe estar en estado cancelado"
 
 #. module: crm_salesperson_planner
 #: model_terms:ir.ui.view,arch_db:crm_salesperson_planner.crm_salesperson_planner_visit_filter
