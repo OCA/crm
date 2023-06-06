@@ -1,0 +1,196 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* crm_stage_probability
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2023-09-26 14:18+0000\n"
+"Last-Translator: Ivorra78 <informatica@totmaterial.es>\n"
+"Language-Team: none\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17\n"
+
+#. module: crm_stage_probability
+#: model_terms:ir.ui.view,arch_db:crm_stage_probability.crm_lead_view_form_inherit
+msgid "% (According to stage)"
+msgstr "% (de acuerdo a la etapa)"
+
+#. module: crm_stage_probability
+#: model_terms:ir.ui.view,arch_db:crm_stage_probability.crm_lead_view_form_inherit
+msgid ""
+"<i class=\"fa fa-gear\" role=\"img\" title=\"Switch to stage probability\" "
+"aria-label=\"Switch to stage probability\"/>"
+msgstr ""
+"<i class=\"fa fa-gear\" role=\"img\" title=\"Switch to stage probability\" "
+"aria-label=\"Switch to stage probability\"/>"
+
+#. module: crm_stage_probability
+#: model_terms:ir.ui.view,arch_db:crm_stage_probability.view_crm_lead_stage_probability_update
+msgid "All the Leads and opportunities on following stages will be updated."
+msgstr "Todas las iniciativas y oportunidades en esta etapa serán actualizadas."
+
+#. module: crm_stage_probability
+#: model:ir.model,name:crm_stage_probability.model_crm_stage
+msgid "CRM Stages"
+msgstr "Etapas de CRM"
+
+#. module: crm_stage_probability
+#: model:ir.model,name:crm_stage_probability.model_crm_lead_stage_probability_update_line
+msgid "CRM leads stages to updates"
+msgstr "CRM lidera las etapas hacia las actualizaciones"
+
+#. module: crm_stage_probability
+#: model_terms:ir.ui.view,arch_db:crm_stage_probability.view_crm_lead_stage_probability_update
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: crm_stage_probability
+#: model:ir.model.fields,field_description:crm_stage_probability.field_crm_stage__on_change
+msgid "Change Probability Automatically"
+msgstr "Cambio automático de probabilidad"
+
+#. module: crm_stage_probability
+#: model:ir.model.fields,field_description:crm_stage_probability.field_crm_lead_stage_probability_update__create_uid
+#: model:ir.model.fields,field_description:crm_stage_probability.field_crm_lead_stage_probability_update_line__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: crm_stage_probability
+#: model:ir.model.fields,field_description:crm_stage_probability.field_crm_lead_stage_probability_update__create_date
+#: model:ir.model.fields,field_description:crm_stage_probability.field_crm_lead_stage_probability_update_line__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: crm_stage_probability
+#: model:ir.model.fields,field_description:crm_stage_probability.field_crm_lead_stage_probability_update__crm_stage_update_ids
+msgid "Crm Stage Update"
+msgstr "Actualización de la etapa CRM"
+
+#. module: crm_stage_probability
+#: model:ir.model.fields,field_description:crm_stage_probability.field_crm_lead_stage_probability_update__display_name
+#: model:ir.model.fields,field_description:crm_stage_probability.field_crm_lead_stage_probability_update_line__display_name
+msgid "Display Name"
+msgstr "Mostrar Nombre"
+
+#. module: crm_stage_probability
+#: code:addons/crm_stage_probability/wizard/crm_lead_stage_probability_update.py:0
+#, python-format
+msgid ""
+"Following stages must be set as 'Change Probability Automatically' in order to update their related leads:\n"
+"\n"
+"%s"
+msgstr ""
+"Las siguientes etapas deben configurarse como \"Cambiar probabilidad "
+"automáticamente\" para actualizar sus clientes potenciales relacionados:\n"
+"\n"
+"%s"
+
+#. module: crm_stage_probability
+#: model:ir.model.fields,field_description:crm_stage_probability.field_crm_lead_stage_probability_update__id
+#: model:ir.model.fields,field_description:crm_stage_probability.field_crm_lead_stage_probability_update_line__id
+msgid "ID"
+msgstr "ID (identificación)"
+
+#. module: crm_stage_probability
+#: model:ir.model.fields,field_description:crm_stage_probability.field_crm_lead__is_stage_probability
+msgid "Is Stage Probability"
+msgstr "Es Probabilidad de Etapa"
+
+#. module: crm_stage_probability
+#: model:ir.model.fields,field_description:crm_stage_probability.field_crm_lead_stage_probability_update____last_update
+#: model:ir.model.fields,field_description:crm_stage_probability.field_crm_lead_stage_probability_update_line____last_update
+msgid "Last Modified on"
+msgstr "Última Modificación el"
+
+#. module: crm_stage_probability
+#: model:ir.model.fields,field_description:crm_stage_probability.field_crm_lead_stage_probability_update__write_uid
+#: model:ir.model.fields,field_description:crm_stage_probability.field_crm_lead_stage_probability_update_line__write_uid
+msgid "Last Updated by"
+msgstr "Última Actualzacíón por"
+
+#. module: crm_stage_probability
+#: model:ir.model.fields,field_description:crm_stage_probability.field_crm_lead_stage_probability_update__write_date
+#: model:ir.model.fields,field_description:crm_stage_probability.field_crm_lead_stage_probability_update_line__write_date
+msgid "Last Updated on"
+msgstr "Última Actualización el"
+
+#. module: crm_stage_probability
+#: model:ir.model,name:crm_stage_probability.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Iniciativa/Oportunidad"
+
+#. module: crm_stage_probability
+#: model_terms:ir.ui.view,arch_db:crm_stage_probability.view_crm_lead_stage_probability_update
+msgid "Leads probability mass update"
+msgstr "Actualización masiva de la probabilidad de clientes potenciales"
+
+#. module: crm_stage_probability
+#: model:ir.model,name:crm_stage_probability.model_crm_lead_stage_probability_update
+msgid "Mass update of crm lead probability according to stage"
+msgstr "Actualización masiva de la probabilidad de iniciativas según la etapa"
+
+#. module: crm_stage_probability
+#: model:ir.model.fields,field_description:crm_stage_probability.field_crm_lead_stage_probability_update_line__lead_count
+msgid "No of leads"
+msgstr "Nº de iniciativas"
+
+#. module: crm_stage_probability
+#: model:ir.model.fields,field_description:crm_stage_probability.field_crm_lead__probability
+msgid "Probability"
+msgstr "Probabilidad"
+
+#. module: crm_stage_probability
+#: model:ir.model.fields,field_description:crm_stage_probability.field_crm_lead__stage_probability
+#: model:ir.model.fields,field_description:crm_stage_probability.field_crm_stage__probability
+msgid "Probability (%)"
+msgstr "Probabilidad (%)"
+
+#. module: crm_stage_probability
+#: model:ir.model.fields,help:crm_stage_probability.field_crm_stage__on_change
+msgid ""
+"Setting this stage will change the probability automatically on the "
+"opportunity."
+msgstr ""
+"Al establecer esta etapa, la probabilidad de la oportunidad cambiará "
+"automáticamente."
+
+#. module: crm_stage_probability
+#: model:ir.model.fields,field_description:crm_stage_probability.field_crm_lead_stage_probability_update_line__stage_id
+msgid "Stage"
+msgstr "Etapa"
+
+#. module: crm_stage_probability
+#: model:ir.model.constraint,message:crm_stage_probability.constraint_crm_stage_check_probability
+msgid "The probability should be between 0% and 100%!"
+msgstr "¡La probabilidad debe estar entre 0% y 100%!"
+
+#. module: crm_stage_probability
+#: model:ir.model.fields,help:crm_stage_probability.field_crm_lead__stage_probability
+#: model:ir.model.fields,help:crm_stage_probability.field_crm_stage__probability
+msgid ""
+"This percentage depicts the default/average probability of the Case for this"
+" stage to be a success"
+msgstr ""
+"Este porcentaje representa la probabilidad por defecto/media del caso para "
+"que esta etapa sea un éxito"
+
+#. module: crm_stage_probability
+#: model:ir.actions.act_window,name:crm_stage_probability.action_crm_lead_stage_probability_update
+msgid "Update leads probability"
+msgstr "Actualizar probabilidad de iniciativas"
+
+#. module: crm_stage_probability
+#: model_terms:ir.ui.view,arch_db:crm_stage_probability.view_crm_lead_stage_probability_update
+msgid "Update probabilities"
+msgstr "Actualizar probabilidades"
+
+#. module: crm_stage_probability
+#: model:ir.model.fields,field_description:crm_stage_probability.field_crm_lead_stage_probability_update_line__wizard_id
+msgid "Wizard"
+msgstr "Asistente"
