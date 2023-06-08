@@ -1,0 +1,46 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* crm_industry
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2019-12-27 14:13+0000\n"
+"Last-Translator: Carles Antoli <carlesantoli@hotmail.com>\n"
+"Language-Team: none\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.10\n"
+
+#. module: crm_industry
+#: model_terms:ir.ui.view,arch_db:crm_industry.crm_lead_view_form
+#: model_terms:ir.ui.view,arch_db:crm_industry.view_crm_case_leads_filter
+#: model_terms:ir.ui.view,arch_db:crm_industry.view_crm_case_opportunities_filter
+msgid "Industry"
+msgstr "Indústria"
+
+#. module: crm_industry
+#: model:ir.model,name:crm_industry.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Iniciativa/Oportunitat"
+
+#. module: crm_industry
+#: model:ir.model.fields,field_description:crm_industry.field_crm_lead__industry_id
+msgid "Main Industry"
+msgstr "Indústria principal"
+
+#. module: crm_industry
+#: model:ir.model.fields,field_description:crm_industry.field_crm_lead__secondary_industry_ids
+msgid "Secondary Industries"
+msgstr "Indústries secundàries"
+
+#. module: crm_industry
+#: code:addons/crm_industry/models/crm_lead.py:0
+#, python-format
+msgid "The secondary industries must be different from the main industry."
+msgstr ""
+"Les indústries secundàries han de ser diferents de la indústria principal."

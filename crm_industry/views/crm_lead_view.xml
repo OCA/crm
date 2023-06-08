@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2015 Antiun Ingenieria S.L. - Javier Iniesta
+     Copyright 2018 ForgeFlow, S.L.
+     Copyright 2019 Tecnativa - Alexandre Díaz <alexandre.diaz@tecnativa.com>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html). -->
+<odoo>
+    <record id="crm_lead_view_form" model="ir.ui.view">
+        <field name="name">Add industry field</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form" />
+        <field name="arch" type="xml">
+            <group name="lead_priority" position="before">
+                <group>
+                    <field
+                        name="industry_id"
+                        placeholder="Industry"
+                        options='{"no_open": True}'
+                    />
+                    <field name="secondary_industry_ids" widget="many2many_tags" />
+                </group>
+            </group>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="crm_case_tree_view_leads">
+        <field name="name">Add industry field as tree column</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_tree_view_leads" />
+        <field name="arch" type="xml">
+            <field name="partner_id" position="after">
+                <field name="industry_id" />
+            </field>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="view_crm_case_leads_filter">
+        <field name="name">Add industry field for searching and grouping</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.view_crm_case_leads_filter" />
+        <field name="arch" type="xml">
+            <field name="country_id" position="after">
+                <field name="industry_id" />
+            </field>
+            <filter name="assigned_to_me" position="after">
+                <filter
+                    name="industry"
+                    string="Industry"
+                    domain="[]"
+                    context="{'group_by': 'industry_id'}"
+                />
+            </filter>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="crm_case_tree_view_oppor">
+        <field name="name">Add industry field as tree column</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_tree_view_oppor" />
+        <field name="arch" type="xml">
+            <field name="partner_id" position="after">
+                <field name="industry_id" />
+            </field>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="view_crm_case_opportunities_filter">
+        <field name="name">Add industry field for searching and grouping</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.view_crm_case_opportunities_filter" />
+        <field name="arch" type="xml">
+            <field name="partner_id" position="after">
+                <field name="industry_id" />
+            </field>
+            <filter name="stage" position="after">
+                <filter
+                    name="industry"
+                    string="Industry"
+                    domain="[]"
+                    context="{'group_by': 'industry_id'}"
+                />
+            </filter>
+        </field>
+    </record>
+</odoo>

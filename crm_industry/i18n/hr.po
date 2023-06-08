@@ -1,0 +1,55 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * crm_sector
+#
+# Translators:
+# OCA Transbot <transbot@odoo-community.org>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-06-09 08:00+0000\n"
+"PO-Revision-Date: 2017-06-09 08:00+0000\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
+"Language-Team: Croatian (https://www.transifex.com/oca/teams/23907/hr/)\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#. module: crm_industry
+#: model_terms:ir.ui.view,arch_db:crm_industry.crm_lead_view_form
+#: model_terms:ir.ui.view,arch_db:crm_industry.view_crm_case_leads_filter
+#: model_terms:ir.ui.view,arch_db:crm_industry.view_crm_case_opportunities_filter
+msgid "Industry"
+msgstr ""
+
+#. module: crm_industry
+#: model:ir.model,name:crm_industry.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Potencijalni klijent"
+
+#. module: crm_industry
+#: model:ir.model.fields,field_description:crm_industry.field_crm_lead__industry_id
+msgid "Main Industry"
+msgstr ""
+
+#. module: crm_industry
+#: model:ir.model.fields,field_description:crm_industry.field_crm_lead__secondary_industry_ids
+#, fuzzy
+msgid "Secondary Industries"
+msgstr "Sekundarni sektor"
+
+#. module: crm_industry
+#: code:addons/crm_industry/models/crm_lead.py:0
+#, fuzzy, python-format
+msgid "The secondary industries must be different from the main industry."
+msgstr "Sekundarni sektor mora biti različiti od primarnog sektora."
+
+#~ msgid "Main Sector"
+#~ msgstr "Glavni sektor"
+
+#~ msgid "Sector"
+#~ msgstr "Sektor"
