@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-07 11:40+0000\n"
-"PO-Revision-Date: 2023-05-31 15:09+0000\n"
+"PO-Revision-Date: 2023-06-12 16:09+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-crm-8-0/language/it/"
 ")\n"
@@ -99,7 +99,7 @@ msgstr "Ultimo aggiornamento il"
 #. module: crm_lead_lost_reason
 #: model:ir.model,name:crm_lead_lost_reason.model_crm_lead
 msgid "Lead/Opportunity"
-msgstr "Lead/Opportunità"
+msgstr "Contatto/Opportunità"
 
 #. module: crm_lead_lost_reason
 #: model:ir.actions.act_window,name:crm_lead_lost_reason.action_crm_lead_lost_reason
