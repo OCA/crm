@@ -82,7 +82,8 @@ msgstr "Schermnaam"
 #: code:addons/crm_stage_probability/wizard/crm_lead_stage_probability_update.py:0
 #, python-format
 msgid ""
-"Following stages must be set as 'Change Probability Automatically' in order to update their related leads:\n"
+"Following stages must be set as 'Change Probability Automatically' in order "
+"to update their related leads:\n"
 "\n"
 "%s"
 msgstr ""
@@ -176,8 +177,8 @@ msgstr "De slagingskans moet tussen 0% en 100% liggen!"
 #: model:ir.model.fields,help:crm_stage_probability.field_crm_lead__stage_probability
 #: model:ir.model.fields,help:crm_stage_probability.field_crm_stage__probability
 msgid ""
-"This percentage depicts the default/average probability of the Case for this"
-" stage to be a success"
+"This percentage depicts the default/average probability of the Case for this "
+"stage to be a success"
 msgstr ""
 "Dit percentage geeft de standaard/gemiddelde slagingskans aan voor deze fase "
 "om de verkoopkans te winnen"

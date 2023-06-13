@@ -33,7 +33,8 @@ msgstr ""
 #. module: crm_stage_probability
 #: model_terms:ir.ui.view,arch_db:crm_stage_probability.view_crm_lead_stage_probability_update
 msgid "All the Leads and opportunities on following stages will be updated."
-msgstr "Todas las iniciativas y oportunidades en esta etapa serán actualizadas."
+msgstr ""
+"Todas las iniciativas y oportunidades en esta etapa serán actualizadas."
 
 #. module: crm_stage_probability
 #: model:ir.model,name:crm_stage_probability.model_crm_stage
@@ -82,7 +83,8 @@ msgstr "Mostrar Nombre"
 #: code:addons/crm_stage_probability/wizard/crm_lead_stage_probability_update.py:0
 #, python-format
 msgid ""
-"Following stages must be set as 'Change Probability Automatically' in order to update their related leads:\n"
+"Following stages must be set as 'Change Probability Automatically' in order "
+"to update their related leads:\n"
 "\n"
 "%s"
 msgstr ""
@@ -174,8 +176,8 @@ msgstr "¡La probabilidad debe estar entre 0% y 100%!"
 #: model:ir.model.fields,help:crm_stage_probability.field_crm_lead__stage_probability
 #: model:ir.model.fields,help:crm_stage_probability.field_crm_stage__probability
 msgid ""
-"This percentage depicts the default/average probability of the Case for this"
-" stage to be a success"
+"This percentage depicts the default/average probability of the Case for this "
+"stage to be a success"
 msgstr ""
 "Este porcentaje representa la probabilidad por defecto/media del caso para "
 "que esta etapa sea un éxito"
