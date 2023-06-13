@@ -6,15 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2023-02-01 16:48+0000\n"
-"Last-Translator: Francesco Foresti <francesco.foresti@ooops404.com>\n"
+"PO-Revision-Date: 2023-06-13 16:09+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: crm_lead_product
 #: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__active
@@ -24,7 +24,7 @@ msgstr "Attivo"
 #. module: crm_lead_product
 #: model:ir.model,name:crm_lead_product.model_crm_product_report
 msgid "CRM Pipeline by Product Analysis"
-msgstr ""
+msgstr "Flusso per analisi prodotto CRM"
 
 #. module: crm_lead_product
 #: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__campaign_id
@@ -40,7 +40,7 @@ msgstr "Categoria"
 #: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__date_closed
 #: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_search
 msgid "Closed Date"
-msgstr ""
+msgstr "Data chiusura"
 
 #. module: crm_lead_product
 #: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__company_id
@@ -73,17 +73,17 @@ msgstr "Nazione"
 #. module: crm_lead_product
 #: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__create_date
 msgid "Create Date"
-msgstr ""
+msgstr "Data creazione"
 
 #. module: crm_lead_product
 #: model:ir.model.fields,field_description:crm_lead_product.field_crm_lead_line__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "Creato da"
 
 #. module: crm_lead_product
 #: model:ir.model.fields,field_description:crm_lead_product.field_crm_lead_line__create_date
 msgid "Created on"
-msgstr ""
+msgstr "Creato il"
 
 #. module: crm_lead_product
 #: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_search
@@ -93,7 +93,7 @@ msgstr "Data creazione"
 #. module: crm_lead_product
 #: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_search
 msgid "Date Closed"
-msgstr ""
+msgstr "Data di chiusura"
 
 #. module: crm_lead_product
 #: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__date_deadline
@@ -195,7 +195,7 @@ msgstr "Persa"
 #: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__lost_reason
 #: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_search
 msgid "Lost Reason"
-msgstr ""
+msgstr "Motivo dell'insuccesso"
 
 #. module: crm_lead_product
 #: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_search
@@ -243,6 +243,14 @@ msgid "Pipeline Analysis gives you an instant access to\n"
 "mainly used by the sales manager in order to do the periodic review with the\n"
 "teams of the sales pipeline."
 msgstr ""
+"L'analisi del flusso consente un accesso istantaneo\n"
+"alle proprie opportunità con informazioni come il ricavo previsto, costi "
+"pianificati,\n"
+"scadenze superate o il numero delle interazioni per opportunità. Questo "
+"resoconto\n"
+"è usato principalmente dal responsabile vendite per effettuare la revisione "
+"periodica\n"
+"con il team del flusso delle vendite."
 
 #. module: crm_lead_product
 #: model:ir.actions.act_window,name:crm_lead_product.crm_product_report_action
@@ -342,12 +350,12 @@ msgstr "Fase"
 #. module: crm_lead_product
 #: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__type
 msgid "Type"
-msgstr ""
+msgstr "Tipo"
 
 #. module: crm_lead_product
 #: model:ir.model.fields,help:crm_lead_product.field_crm_product_report__type
 msgid "Type is used to separate Leads and Opportunities"
-msgstr ""
+msgstr "Il tipo è utilizzato per separare contatti da opportunità"
 
 #. module: crm_lead_product
 #: model:ir.model.fields,field_description:crm_lead_product.field_crm_lead_line__uom_id
