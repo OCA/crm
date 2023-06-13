@@ -6,20 +6,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2020-05-29 22:19+0000\n"
-"Last-Translator: Sergio Zanchetta <primes2h@gmail.com>\n"
+"PO-Revision-Date: 2023-06-13 16:09+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.10\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: crm_stage_type
 #: selection:crm.stage,lead_type:0
 msgid "Both"
-msgstr ""
+msgstr "Entrambi"
 
 #. module: crm_stage_type
 #: model:ir.model,name:crm_stage_type.model_crm_stage
@@ -50,8 +50,10 @@ msgstr "Fase"
 #: model:ir.model.fields,help:crm_stage_type.field_crm_stage__lead_type
 msgid "This field is used to distinguish stages related to Leadsfrom stages related to Opportunities, or to specify stagesavailable for both types."
 msgstr ""
+"Questo campo è utilizzato per distinguere le fasi relative ai contatti dalle "
+"fasi relative alle opportunità, o disponibili per entrambi i tipi."
 
 #. module: crm_stage_type
 #: model:ir.model.fields,field_description:crm_stage_type.field_crm_stage__lead_type
 msgid "Type"
-msgstr ""
+msgstr "Tipo"
