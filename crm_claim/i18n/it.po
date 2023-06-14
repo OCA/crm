@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2023-04-21 14:34+0000\n"
+"PO-Revision-Date: 2023-06-14 14:09+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -14,13 +14,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_res_partner__claim_count
 #: model:ir.model.fields,field_description:crm_claim.field_res_users__claim_count
 msgid "# Claims"
-msgstr "N. richieste"
+msgstr "N° reclami"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__email
@@ -30,7 +30,7 @@ msgstr "N. e-mail"
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__nbr_claims
 msgid "# of Claims"
-msgstr "N. di richieste"
+msgstr "N° di reclami"
 
 #. module: crm_claim
 #: code:addons/crm_claim/models/crm_claim.py:208
@@ -87,7 +87,7 @@ msgstr "Numero allegati"
 #. module: crm_claim
 #: model:ir.model,name:crm_claim.model_crm_claim_report
 msgid "CRM Claim Report"
-msgstr "Resoconto richieste CRM"
+msgstr "Resoconto reclami CRM"
 
 #. module: crm_claim
 #: model:ir.ui.menu,name:crm_claim.menu_crm_case_claim-act
@@ -104,7 +104,7 @@ msgstr "Categoria"
 #. module: crm_claim
 #: model:ir.model,name:crm_claim.model_crm_claim_category
 msgid "Category of claim"
-msgstr "Categoria della richiesta"
+msgstr "Categoria reclamo"
 
 #. module: crm_claim
 #: model:ir.model,name:crm_claim.model_crm_claim
@@ -113,67 +113,67 @@ msgstr "Categoria della richiesta"
 #: model:ir.ui.menu,name:crm_claim.menu_config_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
 msgid "Claim"
-msgstr "Richiesta"
+msgstr "Reclamo"
 
 #. module: crm_claim
 #: model:ir.actions.act_window,name:crm_claim.crm_claim_categ_action
 #: model_terms:ir.ui.view,arch_db:crm_claim.crm_claim_category_form
 #: model_terms:ir.ui.view,arch_db:crm_claim.crm_claim_category_tree
 msgid "Claim Categories"
-msgstr "Categorie richiesta"
+msgstr "Categorie reclamo"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__date
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__claim_date
 msgid "Claim Date"
-msgstr "Data richiesta"
+msgstr "Data reclamo"
 
 #. module: crm_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
 msgid "Claim Date by Month"
-msgstr "Data richiesta per mese"
+msgstr "Data reclamo per mese"
 
 #. module: crm_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
 msgid "Claim Description"
-msgstr "Descrizione richiesta"
+msgstr "Descrizione reclamo"
 
 #. module: crm_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
 msgid "Claim Month"
-msgstr "Mese richiesta"
+msgstr "Mese reclamo"
 
 #. module: crm_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
 msgid "Claim Reporter"
-msgstr "Richiedente"
+msgstr "Referente reclamo"
 
 #. module: crm_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.crm_claim_stage_form
 msgid "Claim Stage"
-msgstr "Fase richiesta"
+msgstr "Fase reclamo"
 
 #. module: crm_claim
 #: model:ir.actions.act_window,name:crm_claim.crm_claim_stage_act
 #: model_terms:ir.ui.view,arch_db:crm_claim.crm_claim_stage_tree
 msgid "Claim Stages"
-msgstr "Fasi richiesta"
+msgstr "Fasi reclamo"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__name
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__subject
 msgid "Claim Subject"
-msgstr "Oggetto richiesta"
+msgstr "Soggetto reclamo"
 
 #. module: crm_claim
 #: model:ir.model,name:crm_claim.model_crm_claim_stage
 msgid "Claim stages"
-msgstr "Fasi richiesta"
+msgstr "Fasi del reclamo"
 
 #. module: crm_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
 msgid "Claim/Action Description"
-msgstr "Descrizione richiesta/azione"
+msgstr "Descrizione reclamo/azione"
 
 #. module: crm_claim
 #: model:ir.actions.act_window,name:crm_claim.crm_claim_category_claim0
@@ -187,23 +187,22 @@ msgstr "Descrizione richiesta/azione"
 #: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_graph
 #: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_pivot
 msgid "Claims"
-msgstr "Richieste"
+msgstr "Reclami"
 
 #. module: crm_claim
 #: model:ir.actions.act_window,name:crm_claim.action_report_crm_claim
 msgid "Claims Analysis"
-msgstr "Analisi richieste"
+msgstr "Analisi reclami"
 
 #. module: crm_claim
 #: model_terms:ir.actions.act_window,help:crm_claim.crm_claim_categ_action
 msgid "Click to create a claim category."
-msgstr "Fai clic per creare una categoria per le richieste."
+msgstr "Fare clic per creare una categoria per i reclami."
 
 #. module: crm_claim
 #: model_terms:ir.actions.act_window,help:crm_claim.crm_claim_stage_act
 msgid "Click to setup a new stage in the processing of the claims."
-msgstr ""
-"Fai clic per impostare una nuova fase per l'elaborazione delle richieste."
+msgstr "Fare clic per impostare una nuova fase per l'elaborazione dei reclami."
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__date_closed
@@ -240,7 +239,7 @@ msgstr "Contatto"
 #. module: crm_claim
 #: model:utm.campaign,name:crm_claim.claim_source1
 msgid "Corrective"
-msgstr ""
+msgstr "Correttiva"
 
 #. module: crm_claim
 #: selection:crm.claim,type_action:0 selection:crm.claim.report,type_action:0
@@ -250,7 +249,7 @@ msgstr "Azione correttiva"
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__create_date
 msgid "Create Date"
-msgstr ""
+msgstr "Data creazione"
 
 #. module: crm_claim
 #: model_terms:ir.actions.act_window,help:crm_claim.crm_claim_categ_action
@@ -259,6 +258,9 @@ msgid ""
 "            claims. Some example of claims can be: preventive action,\n"
 "            corrective action."
 msgstr ""
+"Creare le categorie reclami per gestire e classificare meglio i reclami\n"
+"            Alcuni esempi possono essere: azione preventiva,\n"
+"            azione correttiva."
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__create_uid
@@ -313,7 +315,7 @@ msgstr "Descrizione"
 #. module: crm_claim
 #: model:ir.model.fields,help:crm_claim.field_crm_claim__email_from
 msgid "Destination email for email gateway."
-msgstr ""
+msgstr "Email destinazione per il gateway email."
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__display_name
@@ -336,17 +338,17 @@ msgstr "Filtri estesi..."
 #. module: crm_claim
 #: model:crm.claim.category,name:crm_claim.categ_claim1
 msgid "Factual Claims"
-msgstr "Richieste concrete"
+msgstr "Reclami concreti"
 
 #. module: crm_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
 msgid "Follow Up"
-msgstr "Ulteriori informazioni"
+msgstr "Proseguimento"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_follower_ids
 msgid "Followers"
-msgstr ""
+msgstr "Seguito da"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_channel_ids
@@ -370,6 +372,8 @@ msgid ""
 "Have a general overview of all claims processed in the system by sorting "
 "them with specific criteria."
 msgstr ""
+"Panoramica dei reclami elaborati nel sistema ordinandoli con criteri "
+"specifici."
 
 #. module: crm_claim
 #: selection:crm.claim,priority:0 selection:crm.claim.report,priority:0
@@ -405,11 +409,13 @@ msgid ""
 "If you check this field, this stage will be proposed by default on each "
 "sales team. It will not assign this stage to existing teams."
 msgstr ""
+"Se si spunta questo campo, la fase verrà proposta come predefinita ad ogni "
+"team vendita. Questa fase non verrà assegnata ai team esistenti."
 
 #. module: crm_claim
 #: model:crm.claim.stage,name:crm_claim.stage_claim5
 msgid "In Progress"
-msgstr "In lavorazione"
+msgstr "In corso"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_is_follower
@@ -443,6 +449,8 @@ msgid ""
 "Link between stages and sales teams. When set, this limitate the current "
 "stage to the selected sales teams."
 msgstr ""
+"Collegamento tra fasi e team vendite. Quando impostato, limita la fase "
+"attuale ai team di vendita selezionati."
 
 #. module: crm_claim
 #: selection:crm.claim,priority:0 selection:crm.claim.report,priority:0
@@ -467,12 +475,12 @@ msgstr "Messaggi"
 #. module: crm_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
 msgid "Month of claim"
-msgstr "Mese della richiesta"
+msgstr "Mese del reclamo"
 
 #. module: crm_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
 msgid "My Company"
-msgstr "Azienda"
+msgstr "La mia azienda"
 
 #. module: crm_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
@@ -523,7 +531,7 @@ msgstr "Numero di azioni"
 #. module: crm_claim
 #: model:ir.model.fields,help:crm_claim.field_crm_claim_report__delay_close
 msgid "Number of Days to close the case"
-msgstr ""
+msgstr "Numero di giorni per chiudere l'argomento"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_has_error_counter
@@ -577,12 +585,12 @@ msgstr "Pianificata"
 #. module: crm_claim
 #: model:crm.claim.category,name:crm_claim.categ_claim3
 msgid "Policy Claims"
-msgstr ""
+msgstr "Politica reclami"
 
 #. module: crm_claim
 #: model:utm.campaign,name:crm_claim.claim_source2
 msgid "Preventive"
-msgstr ""
+msgstr "Preventivo"
 
 #. module: crm_claim
 #: selection:crm.claim,type_action:0 selection:crm.claim.report,type_action:0
@@ -605,13 +613,12 @@ msgid ""
 "                Claims may automatically be linked to an email address using "
 "the mail gateway module."
 msgstr ""
-"Registra e tiene traccia delle richieste dei clienti,\n"
+"Registra e tiene traccia dei reclami dei clienti,\n"
 "                che possono essere collegate a un ordine di vendita o a un "
 "lotto.\n"
 "                È possibile inviare e-mail con allegati mantenendo l'intera "
-"cronologia di una richiesta (e-mail inviate, tipo di intervento e così "
-"via).\n"
-"                Le richieste possono essere automaticamente collegate a un "
+"cronologia di un reclamo (e-mail inviate, tipo di intervento e così via).\n"
+"                I reclami possono essere automaticamente collegate a un "
 "indirizzo e-mail utilizzando il modulo per il gateway di posta."
 
 #. module: crm_claim
@@ -622,17 +629,17 @@ msgstr "Riferimento"
 #. module: crm_claim
 #: model:crm.claim.stage,name:crm_claim.stage_claim3
 msgid "Rejected"
-msgstr ""
+msgstr "Respinto"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__resolution
 msgid "Resolution"
-msgstr ""
+msgstr "Risoluzione"
 
 #. module: crm_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
 msgid "Resolution Actions"
-msgstr "Azioni risolutive"
+msgstr "Azioni risoluzione"
 
 #. module: crm_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
@@ -663,7 +670,7 @@ msgstr ""
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__cause
 msgid "Root Cause"
-msgstr "Causa principale"
+msgstr "Causa radice"
 
 #. module: crm_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
@@ -690,7 +697,7 @@ msgstr "Ricerca"
 #. module: crm_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
 msgid "Search Claims"
-msgstr "Ricerca richieste"
+msgstr "Cerca reclami"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage__sequence
@@ -700,7 +707,7 @@ msgstr "Sequenza"
 #. module: crm_claim
 #: model:crm.claim.stage,name:crm_claim.stage_claim2
 msgid "Settled"
-msgstr ""
+msgstr "Risolto"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__stage_id
@@ -728,6 +735,10 @@ msgid ""
 "Today: Activity date is today\n"
 "Planned: Future activities."
 msgstr ""
+"Stato in base alle attività\n"
+"Scaduto: la data richiesta è trascorsa\n"
+"Oggi: la data attività è oggi\n"
+"Pianificato: attività future."
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__team_id
@@ -746,6 +757,9 @@ msgid ""
 "outbound emails for this record before being sent. Separate multiple email "
 "addresses with a comma"
 msgstr ""
+"Questo indirizzo email verrà aggiunto nel campo CC di tutte le email in "
+"entrata e uscita per questo record prima di essere spedito. Separare "
+"indirizzi multipli con una virgola"
 
 #. module: crm_claim
 #: selection:crm.claim,activity_state:0
@@ -755,7 +769,7 @@ msgstr "Oggi"
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__user_fault
 msgid "Trouble Responsible"
-msgstr "Responsabile problemi"
+msgstr "Responsabile problema"
 
 #. module: crm_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_tree_view
@@ -766,7 +780,7 @@ msgstr "Tipo"
 #. module: crm_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
 msgid "Unassigned Claims"
-msgstr "Richieste non assegnate"
+msgstr "Reclami non assegnati"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_unread
@@ -786,7 +800,7 @@ msgstr "Data aggiornamento"
 #. module: crm_claim
 #: model:ir.model.fields,help:crm_claim.field_crm_claim_stage__sequence
 msgid "Used to order stages. Lower is better."
-msgstr "Usato per ordinare le fasi. Più basso indica maggiore priorità."
+msgstr "Utilizzato per ordinare le fasi. Prima il più basso."
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__user_id
@@ -796,12 +810,12 @@ msgstr "Utente"
 #. module: crm_claim
 #: model:crm.claim.category,name:crm_claim.categ_claim2
 msgid "Value Claims"
-msgstr ""
+msgstr "Importanza reclami"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__email_cc
 msgid "Watchers Emails"
-msgstr ""
+msgstr "Email osservatori"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__website_message_ids
@@ -825,3 +839,7 @@ msgid ""
 "            claim entered in the system. The stages define all the steps\n"
 "            required for the resolution of a claim."
 msgstr ""
+"Si possono creare fasi dei reclami per classificare lo stato di ogni\n"
+"                reclamo inserito nel sistema. Le fasi definiscono tutti i "
+"passi richiesti\n"
+"                per la soluzione di un reclamo."
