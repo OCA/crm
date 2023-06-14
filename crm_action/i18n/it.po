@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-09-17 09:43+0000\n"
-"PO-Revision-Date: 2023-06-12 16:09+0000\n"
+"PO-Revision-Date: 2023-06-14 13:11+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-crm-8-0/language/it/"
 ")\n"
@@ -81,7 +81,7 @@ msgstr ""
 #: model:ir.actions.act_window,name:crm_action.action_crm_action_type_view
 #: model:ir.ui.menu,name:crm_action.menu_crm_action_type_act
 msgid "Action Types"
-msgstr "Tipi di Azione"
+msgstr "Tipi di azione"
 
 #. module: crm_action
 #: view:crm.action:crm_action.view_action_form
@@ -210,7 +210,7 @@ msgstr "Ultimo aggiornamento il"
 #. module: crm_action
 #: field:crm.action,lead_id:0
 msgid "Lead"
-msgstr "Lead"
+msgstr "Contatto"
 
 #. module: crm_action
 #: model:ir.model,name:crm_action.model_crm_lead
