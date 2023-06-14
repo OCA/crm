@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2023-06-13 16:09+0000\n"
+"PO-Revision-Date: 2023-06-14 14:09+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -189,7 +189,7 @@ msgstr "Riga contatto CRM"
 #. module: crm_lead_product
 #: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_search
 msgid "Lost"
-msgstr "Persa"
+msgstr "Insuccesso"
 
 #. module: crm_lead_product
 #: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__lost_reason
@@ -365,4 +365,4 @@ msgstr "Unità di misura"
 #. module: crm_lead_product
 #: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_search
 msgid "Won"
-msgstr "Vinta"
+msgstr "Successo"
