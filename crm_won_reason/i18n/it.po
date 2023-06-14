@@ -6,113 +6,115 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2023-06-14 14:09+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: crm_won_reason
 #: model_terms:ir.ui.view,arch_db:crm_won_reason.crm_lead_win_view_form
 msgid "Cancel"
-msgstr ""
+msgstr "Annulla"
 
 #. module: crm_won_reason
 #: model:ir.model.fields,field_description:crm_won_reason.field_crm_lead_won__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "Creato da"
 
 #. module: crm_won_reason
 #: model:ir.model.fields,field_description:crm_won_reason.field_crm_lead_won__create_date
 msgid "Created on"
-msgstr ""
+msgstr "Creato il"
 
 #. module: crm_won_reason
 #: model:ir.model.fields,field_description:crm_won_reason.field_crm_lead_won__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Nome visualizzato"
 
 #. module: crm_won_reason
 #: model:ir.model,name:crm_won_reason.model_crm_lead_lost
 msgid "Get Lost Reason"
-msgstr ""
+msgstr "Seleziona motivo perdita"
 
 #. module: crm_won_reason
 #: model:ir.model,name:crm_won_reason.model_crm_lead_won
 msgid "Get Won Reason"
-msgstr ""
+msgstr "Seleziona motivo vincita"
 
 #. module: crm_won_reason
 #: model:ir.model.fields,field_description:crm_won_reason.field_crm_lead_won__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: crm_won_reason
 #: model:ir.model.fields,field_description:crm_won_reason.field_crm_lead_won____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Ultima modifica il"
 
 #. module: crm_won_reason
 #: model:ir.model.fields,field_description:crm_won_reason.field_crm_lead_won__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "Ultimo aggiornamento di"
 
 #. module: crm_won_reason
 #: model:ir.model.fields,field_description:crm_won_reason.field_crm_lead_won__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "Ultimo aggiornamento il"
 
 #. module: crm_won_reason
 #: model:ir.model,name:crm_won_reason.model_crm_lead
 msgid "Lead/Opportunity"
-msgstr ""
+msgstr "Contatto/Opportunità"
 
 #. module: crm_won_reason
 #: model:ir.model.fields.selection,name:crm_won_reason.selection__crm_lost_reason__reason_type__lost
 msgid "Lost"
-msgstr ""
+msgstr "Persa"
 
 #. module: crm_won_reason
 #: model:ir.model.fields,field_description:crm_won_reason.field_crm_lead_lost__lost_reason_id
 msgid "Lost Reason"
-msgstr ""
+msgstr "Motivo dell'insuccesso"
 
 #. module: crm_won_reason
 #: model_terms:ir.ui.view,arch_db:crm_won_reason.crm_lead_view_form
 msgid "Mark as won"
-msgstr ""
+msgstr "Segna come successo"
 
 #. module: crm_won_reason
 #: model:ir.model,name:crm_won_reason.model_crm_lost_reason
 msgid "Opp. Lost Reason"
-msgstr ""
+msgstr "Motivo insuccesso opportunità"
 
 #. module: crm_won_reason
 #: model:ir.model.fields,field_description:crm_won_reason.field_crm_lost_reason__reason_type
 msgid "Reason Type"
-msgstr ""
+msgstr "Tipo motivo"
 
 #. module: crm_won_reason
 #: model_terms:ir.ui.view,arch_db:crm_won_reason.crm_lead_win_view_form
 msgid "Submit"
-msgstr ""
+msgstr "Invia"
 
 #. module: crm_won_reason
 #: model:ir.actions.act_window,name:crm_won_reason.crm_lead_win_action
 msgid "Win Reason"
-msgstr ""
+msgstr "Morivo successo"
 
 #. module: crm_won_reason
 #: model:ir.model.fields.selection,name:crm_won_reason.selection__crm_lost_reason__reason_type__won
 #: model_terms:ir.ui.view,arch_db:crm_won_reason.crm_lead_view_form
 msgid "Won"
-msgstr ""
+msgstr "Successo"
 
 #. module: crm_won_reason
 #: model:ir.model.fields,field_description:crm_won_reason.field_crm_lead__won_reason_id
 #: model:ir.model.fields,field_description:crm_won_reason.field_crm_lead_won__won_reason_id
 #: model_terms:ir.ui.view,arch_db:crm_won_reason.crm_lead_win_view_form
 msgid "Won Reason"
-msgstr ""
+msgstr "Morivo successo"
