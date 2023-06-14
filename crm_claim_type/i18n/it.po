@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-06-01 03:16+0000\n"
-"PO-Revision-Date: 2023-05-31 15:09+0000\n"
+"PO-Revision-Date: 2023-06-14 13:11+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-crm-8-0/language/it/"
 ")\n"
@@ -44,13 +44,13 @@ msgstr "Reclamo"
 #. module: crm_claim_type
 #: view:crm.claim.stage:crm_claim_type.crm_stage_claim_type_search
 msgid "Claim Type"
-msgstr "Tipo di Reclamo"
+msgstr "Tipo di reclamo"
 
 #. module: crm_claim_type
 #: model:ir.actions.act_window,name:crm_claim_type.crm_claim_type_act
 #: model:ir.ui.menu,name:crm_claim_type.menu_crm_claim_type_act
 msgid "Claim Types"
-msgstr "Tipi di Reclami"
+msgstr "Tipi di reclamo"
 
 #. module: crm_claim_type
 #: help:crm.claim,claim_type:0 help:crm.claim.stage,claim_type:0
