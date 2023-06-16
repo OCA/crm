@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2023-06-14 14:09+0000\n"
+"PO-Revision-Date: 2023-06-16 14:10+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -145,7 +145,7 @@ msgstr "Descrizione reclamo"
 #. module: crm_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
 msgid "Claim Month"
-msgstr "Mese del reclamo"
+msgstr "Mese reclamo"
 
 #. module: crm_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
@@ -166,7 +166,7 @@ msgstr "Fasi reclamo"
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__name
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__subject
 msgid "Claim Subject"
-msgstr "Soggetto reclamo"
+msgstr "Oggetto reclamo"
 
 #. module: crm_claim
 #: model:ir.model,name:crm_claim.model_crm_claim_stage
@@ -214,7 +214,7 @@ msgstr "Data chiusura"
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__date_closed
 msgid "Closed"
-msgstr "Chiusa"
+msgstr "Chiuso"
 
 #. module: crm_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
@@ -346,7 +346,7 @@ msgstr "Reclami concreti"
 #. module: crm_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
 msgid "Follow Up"
-msgstr "Proseguimento"
+msgstr "Approfondimento"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_follower_ids
