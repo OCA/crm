@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-02 14:15+0000\n"
-"PO-Revision-Date: 2023-06-06 14:14+0000\n"
-"Last-Translator: Francesco Foresti <francesco.foresti@ooops404.com>\n"
+"PO-Revision-Date: 2023-06-16 13:09+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-crm-8-0/language/it/"
 ")\n"
 "Language: it\n"
@@ -223,7 +223,7 @@ msgstr ""
 #. module: lettermgmt
 #: help:res.letter,message_unread:0
 msgid "If checked new messages require your attention."
-msgstr "If checked new messages require your attention."
+msgstr "Se selezionata, nuovi messaggi richiedono attenzione."
 
 #. module: lettermgmt
 #: model:ir.actions.act_window,name:lettermgmt.action_res_letter_in_tree_view
