@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-16 11:11+0000\n"
-"PO-Revision-Date: 2023-06-12 16:09+0000\n"
+"PO-Revision-Date: 2023-06-16 16:08+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-crm-8-0/language/it/"
 ")\n"
@@ -25,7 +25,7 @@ msgstr ""
 #: view:crm.lead:crm_lead_firstname.crm_case_form_view_leads
 #: view:crm.lead:crm_lead_firstname.crm_case_form_view_oppor
 msgid "Contact Name"
-msgstr "Nome del Contatto"
+msgstr "Nome contatto"
 
 #. module: crm_lead_firstname
 #: view:crm.lead:crm_lead_firstname.crm_case_form_view_leads
