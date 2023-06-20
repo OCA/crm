@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2023-06-14 14:09+0000\n"
+"PO-Revision-Date: 2023-06-20 11:10+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -55,7 +55,7 @@ msgstr "Ordine di vendita"
 #. module: crm_salesperson_planner_sale
 #: model:ir.model,name:crm_salesperson_planner_sale.model_crm_salesperson_planner_visit
 msgid "Salesperson Planner Visit"
-msgstr "Visita agenda venditore"
+msgstr "Visita agenda addetto vendite"
 
 #. module: crm_salesperson_planner_sale
 #: model:ir.model.fields,field_description:crm_salesperson_planner_sale.field_sale_order__visit_id
