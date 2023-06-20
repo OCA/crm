@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2023-06-14 14:09+0000\n"
+"PO-Revision-Date: 2023-06-20 13:08+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -277,7 +277,7 @@ msgstr "Ricavi pianificati"
 #: model:ir.model.fields,field_description:crm_lead_product.field_crm_lead_line__price_unit
 #: model_terms:ir.ui.view,arch_db:crm_lead_product.view_tree_lead_line
 msgid "Price Unit"
-msgstr "Unità di prezzo"
+msgstr "Prezzo unitario"
 
 #. module: crm_lead_product
 #: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__probability
