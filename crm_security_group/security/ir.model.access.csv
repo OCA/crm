@@ -7,3 +7,4 @@ access_crm_tag_own_leads,sale_team.crm.tag.own.leads,sales_team.model_crm_tag,cr
 access_crm_tag_manager,sale_team.crm.tag.manager,sales_team.model_crm_tag,crm_security_group.group_crm_manager,1,1,1,1
 access_crm_lead_scoring_frequency_user,crm.lead.scoring.frequency.user,crm.model_crm_lead_scoring_frequency,crm_security_group.group_crm_own_leads,1,0,0,0
 access_crm_lead_scoring_frequency_field_user,crm.lead.scoring.frequency.field.user,crm.model_crm_lead_scoring_frequency_field,crm_security_group.group_crm_own_leads,1,0,0,0
+access_crm_lead_lost_user,crm.lead.user,crm.model_crm_lead_lost,crm_security_group.group_crm_own_leads,1,1,1,0

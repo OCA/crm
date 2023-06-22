@@ -3,7 +3,7 @@
 {
     "name": "CRM Only Security Groups",
     "summary": "Add new group in Sales to show only CRM",
-    "version": "15.0.1.1.0",
+    "version": "15.0.1.2.0",
     "category": "Customer Relationship Management",
     "website": "https://github.com/OCA/crm",
     "author": "Tecnativa, Odoo Community Association (OCA)",
