@@ -578,8 +578,8 @@ msgstr "Anzahl Errors"
 
 #. module: crm_claim
 #: model:ir.model.fields,help:crm_claim.field_crm_claim__message_needaction_counter
-msgid "Number of messages which requires an action"
-msgstr "Anzahl Nachrichten, die eine Aktion erfordern"
+msgid "Number of messages requiring action"
+msgstr ""
 
 #. module: crm_claim
 #: model:ir.model.fields,help:crm_claim.field_crm_claim__message_has_error_counter
@@ -853,6 +853,9 @@ msgstr ""
 "            Reklamation im System zu kategorisieren. Die Stadien definieren "
 "alle Schritte, die\n"
 "            für die Lösung einer Reklamation erforderlich sind."
+
+#~ msgid "Number of messages which requires an action"
+#~ msgstr "Anzahl Nachrichten, die eine Aktion erfordern"
 
 #~ msgid "Number of unread messages"
 #~ msgstr "Anzahl der ungelesenen Nachrichten"
