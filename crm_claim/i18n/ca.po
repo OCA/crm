@@ -577,8 +577,8 @@ msgstr "Número d'errors"
 
 #. module: crm_claim
 #: model:ir.model.fields,help:crm_claim.field_crm_claim__message_needaction_counter
-msgid "Number of messages which requires an action"
-msgstr "Número de missatges que requereixen una acció"
+msgid "Number of messages requiring action"
+msgstr ""
 
 #. module: crm_claim
 #: model:ir.model.fields,help:crm_claim.field_crm_claim__message_has_error_counter
@@ -851,6 +851,9 @@ msgstr ""
 "Podeu crear etapes de reclamació per categoritzar-ne l'estat\n"
 "             al sistema. Les etapes defineixen tots els passos\n"
 "             necessaris per a la resolució d'una reclamació."
+
+#~ msgid "Number of messages which requires an action"
+#~ msgstr "Número de missatges que requereixen una acció"
 
 #~ msgid "Number of unread messages"
 #~ msgstr "Nombre de missatges no llegits"
