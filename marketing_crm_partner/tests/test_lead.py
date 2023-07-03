@@ -22,7 +22,7 @@ class LeadCase(TransactionCase):
 
     def test_transfered_values(self):
         """Fields get transfered when creating partner."""
-        self.lead.handle_partner_assignment()
+        self.lead._handle_partner_assignment()
         if self.lead.partner_id:
             for _key, field, _cookie in self.env["utm.mixin"].tracking_fields():
                 self.assertEqual(self.lead[field], self.lead.partner_id[field])
