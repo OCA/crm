@@ -21,6 +21,7 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
 #. module: marketing_crm_partner
+#: model:ir.model.fields,field_description:marketing_crm_partner.field_res_partner__campaign_id
 #: model_terms:ir.ui.view,arch_db:marketing_crm_partner.view_res_partner_filter
 msgid "Campaign"
 msgstr ""
@@ -41,13 +42,34 @@ msgid "Marketing"
 msgstr ""
 
 #. module: marketing_crm_partner
+#: model:ir.model.fields,field_description:marketing_crm_partner.field_res_partner__medium_id
 #: model_terms:ir.ui.view,arch_db:marketing_crm_partner.view_res_partner_filter
 msgid "Medium"
 msgstr ""
 
 #. module: marketing_crm_partner
+#: model:ir.model.fields,field_description:marketing_crm_partner.field_res_partner__source_id
 #: model_terms:ir.ui.view,arch_db:marketing_crm_partner.view_res_partner_filter
 msgid "Source"
+msgstr ""
+
+#. module: marketing_crm_partner
+#: model:ir.model.fields,help:marketing_crm_partner.field_res_partner__campaign_id
+msgid ""
+"This is a name that helps you keep track of your different campaign efforts, "
+"e.g. Fall_Drive, Christmas_Special"
+msgstr ""
+
+#. module: marketing_crm_partner
+#: model:ir.model.fields,help:marketing_crm_partner.field_res_partner__medium_id
+msgid "This is the method of delivery, e.g. Postcard, Email, or Banner Ad"
+msgstr ""
+
+#. module: marketing_crm_partner
+#: model:ir.model.fields,help:marketing_crm_partner.field_res_partner__source_id
+msgid ""
+"This is the source of the link, e.g. Search Engine, another domain, or name "
+"of email list"
 msgstr ""
 
 #~ msgid "Partner"
