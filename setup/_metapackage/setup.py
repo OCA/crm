@@ -26,6 +26,7 @@ setuptools.setup(
         'odoo-addon-crm_security_group>=15.0dev,<15.1dev',
         'odoo-addon-crm_stage_probability>=15.0dev,<15.1dev',
         'odoo-addon-crm_won_reason>=15.0dev,<15.1dev',
+        'odoo-addon-marketing_crm_partner>=15.0dev,<15.1dev',
     ],
     classifiers=[
         'Programming Language :: Python',
