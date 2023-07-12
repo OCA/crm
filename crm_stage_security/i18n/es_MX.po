@@ -1,0 +1,59 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* crm_stage_security
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-12 14:28+0000\n"
+"PO-Revision-Date: 2023-07-12 08:29-0600\n"
+"Last-Translator: Jesús Alan Ramos Rodríguez <alan.ramos@jarsa.com>\n"
+"Language-Team: \n"
+"Language: es_MX\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.3.2\n"
+
+#. module: crm_stage_security
+#: model:ir.model,name:crm_stage_security.model_crm_stage
+msgid "CRM Stages"
+msgstr "Etapas del CRM"
+
+#. module: crm_stage_security
+#: model:ir.model.fields,field_description:crm_stage_security.field_crm_stage__group_ids
+msgid "Groups"
+msgstr "Grupos"
+
+#. module: crm_stage_security
+#: model:ir.model.fields,help:crm_stage_security.field_crm_stage__group_ids
+msgid ""
+"If set, only the users of one of those groups will be able to move leads to "
+"this stage."
+msgstr ""
+"Si se establece, solo los usuarios de uno de esos grupos podrán mover "
+"oportunidades a esta etapa."
+
+#. module: crm_stage_security
+#: model:ir.model,name:crm_stage_security.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Lead/Oportunidad"
+
+#. module: crm_stage_security
+#: model_terms:ir.ui.view,arch_db:crm_stage_security.crm_stage_view_form
+msgid "Security"
+msgstr "Seguridad"
+
+#. module: crm_stage_security
+#: code:addons/crm_stage_security/models/crm_lead.py:0
+#, python-format
+msgid ""
+"You are not allowed to move a lead to this stage\n"
+"The only allowed groups are:\n"
+"%(groups)s"
+msgstr ""
+"No tienes permitido mover una oportunidad a esta etapa\n"
+"Los únicos grupos permitidos son:\n"
+"%(groups)s"
