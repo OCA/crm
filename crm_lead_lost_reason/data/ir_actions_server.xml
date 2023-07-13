@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="crm.action_mark_as_lost" model="ir.actions.server">
+        <field name="code">
+if records:
+    action_values = env.ref('crm.crm_lead_lost_action').sudo().read()[0]
+    action_values.update({'context': env.context})
+    action = action_values
+        </field>
+    </record>
+</odoo>
