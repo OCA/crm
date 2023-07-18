@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2023 Moduon Team S.L.
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl-3.0) -->
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field
+            name="name"
+        >res.config.settings.view.form.inherit.crm.project.task</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="crm.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <div data-string="CRM" position="inside">
+                <h2>Projects</h2>
+                <div class="row mt16 o_settings_container">
+                    <div class="col-lg-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                        </div>
+                        <div class="o_setting_right_pane" id="crm_default_project_id">
+                            <label
+                                for="crm_default_project_id"
+                                string="Default project"
+                            />
+                            <div class="text-muted">
+                                By default this project will be selected to create task from lead / opportunity
+                            </div>
+                            <field name="crm_default_project_id" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </field>
+    </record>
+</odoo>
