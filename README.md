@@ -34,6 +34,7 @@ addon | version | maintainers | summary
 [crm_phonecall_planner](crm_phonecall_planner/) | 15.0.1.0.0 |  | Schedule phone calls according to some criteria
 [crm_phonecall_summary_predefined](crm_phonecall_summary_predefined/) | 15.0.1.0.0 |  | Allows to choose from a defined summary list
 [crm_project](crm_project/) | 15.0.1.0.2 |  | Create Tasks from Leads/Opportunities
+[crm_project_task](crm_project_task/) | 15.0.1.0.0 | [![EmilioPascual](https://github.com/EmilioPascual.png?size=30px)](https://github.com/EmilioPascual) | Create tasks from lead or opportunity
 [crm_salesperson_planner](crm_salesperson_planner/) | 15.0.1.0.0 |  | Crm Salesperson Planner
 [crm_salesperson_planner_sale](crm_salesperson_planner_sale/) | 15.0.1.0.0 |  | Crm Salesperson Planner Sale
 [crm_security_group](crm_security_group/) | 15.0.1.2.0 | [![victoralmau](https://github.com/victoralmau.png?size=30px)](https://github.com/victoralmau) | Add new group in Sales to show only CRM
