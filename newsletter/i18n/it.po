@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-22 15:09+0000\n"
-"PO-Revision-Date: 2023-06-23 13:11+0000\n"
+"PO-Revision-Date: 2023-07-24 13:09+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-crm-8-0/language/it/"
 ")\n"
@@ -90,12 +90,12 @@ msgstr ""
 #. module: newsletter
 #: model:ir.model,name:newsletter.model_email_template
 msgid "Email Templates"
-msgstr "Template email"
+msgstr "Modelli e-mail"
 
 #. module: newsletter
 #: field:newsletter.type,email_template_id:0
 msgid "Email template"
-msgstr "Template email"
+msgstr "Modello e-mail"
 
 #. module: newsletter
 #: field:newsletter.type,email_from:0
