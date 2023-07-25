@@ -46,20 +46,23 @@ class TestCrmProjectTask(TransactionCase):
         self.company.crm_default_project_id = self.project
         task_name = "Task Test"
         task_description = "Line1</br>Line2"
-        prev_tasks = self.project.task_ids
-        self.env["crm.create.task"].with_user(self.user_salesman).create(
-            {
-                "lead_id": self.lead.id,
-                "task_name": task_name,
-                "description": task_description,
-            }
-        ).create_task()
-        tasks = self.project.task_ids
-        self.assertEqual(len(prev_tasks) + 1, len(tasks))
-        task = tasks - prev_tasks
+        action = (
+            self.env["crm.create.task"]
+            .with_user(self.user_salesman)
+            .create(
+                {
+                    "lead_id": self.lead.id,
+                    "task_name": task_name,
+                    "description": task_description,
+                }
+            )
+            .create_task()
+        )
+        task = self.env["project.task"].browse(action["res_id"])
         self.assertEqual(task.name, task_name)
         self.assertEqual(task.project_id, self.company.crm_default_project_id)
         self.assertEqual(task.partner_id, self.partner)
+        self.assertEqual(task.lead_id, self.lead)
 
     def test_create_task_no_project(self):
         self.company.crm_default_project_id = False
@@ -78,3 +81,17 @@ class TestCrmProjectTask(TransactionCase):
         )
         with self.assertRaises(UserError):
             wizard.create_task()
+
+    def test_action_tasks(self):
+        self.company.crm_default_project_id = self.project
+        self.env["crm.create.task"].with_user(self.user_salesman).create(
+            {
+                "lead_id": self.lead.id,
+                "task_name": "Task Test",
+                "description": "Line1</br>Line2",
+            }
+        ).create_task()
+        action = self.lead.action_tasks()
+        tasks = self.env["project.task"].search(action["domain"])
+        tasks_lead = tasks.mapped("lead_id")
+        self.assertEqual(self.lead, tasks_lead)
