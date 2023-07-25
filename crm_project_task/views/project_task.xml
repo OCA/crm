@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2023 Moduon Team S.L.
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl-3.0) -->
+<odoo>
+    <record id="view_task_form2_inherit_crm_project_task" model="ir.ui.view">
+        <field name="name">project.task.form.inherit</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2" />
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='extra_info']" position="inside">
+                <group name="crm" string="Lead/Opportunity">
+                    <field name="lead_id" />
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
