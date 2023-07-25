@@ -14,6 +14,11 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: crm_project_task
+#: model:ir.model.fields,field_description:crm_project_task.field_crm_lead__task_count
+msgid "#Task"
+msgstr ""
+
+#. module: crm_project_task
 #: model_terms:ir.ui.view,arch_db:crm_project_task.res_config_settings_view_form
 msgid ""
 "By default this project will be selected to create task from lead / "
@@ -95,7 +100,14 @@ msgstr ""
 
 #. module: crm_project_task
 #: model:ir.model.fields,field_description:crm_project_task.field_crm_create_task__lead_id
+#: model:ir.model.fields,field_description:crm_project_task.field_project_task__lead_id
 msgid "Lead"
+msgstr ""
+
+#. module: crm_project_task
+#: model:ir.model,name:crm_project_task.model_crm_lead
+#: model_terms:ir.ui.view,arch_db:crm_project_task.view_task_form2_inherit_crm_project_task
+msgid "Lead/Opportunity"
 msgstr ""
 
 #. module: crm_project_task
@@ -108,6 +120,12 @@ msgstr ""
 #. module: crm_project_task
 #: model_terms:ir.ui.view,arch_db:crm_project_task.res_config_settings_view_form
 msgid "Projects"
+msgstr ""
+
+#. module: crm_project_task
+#: model:ir.model,name:crm_project_task.model_project_task
+#: model:ir.model.fields,field_description:crm_project_task.field_crm_lead__task_ids
+msgid "Task"
 msgstr ""
 
 #. module: crm_project_task
@@ -129,6 +147,11 @@ msgstr ""
 msgid ""
 "Task created from lead/opportunity <a href=# data-oe-model=crm.lead data-oe-"
 "id=%(lead)d>%(name)s</a>."
+msgstr ""
+
+#. module: crm_project_task
+#: model_terms:ir.ui.view,arch_db:crm_project_task.inherit_crm_lead_view_form_crm_project_task
+msgid "Task(s)"
 msgstr ""
 
 #. module: crm_project_task

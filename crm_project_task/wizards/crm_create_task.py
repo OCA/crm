@@ -56,10 +56,12 @@ class CrmCreateTAsk(models.TransientModel):
         }
 
     def _get_data_create(self, project):
+        """Get dict to create task"""
         return {
             "name": self.task_name,
             "project_id": project.id,
             "partner_id": self.lead_id.partner_id.id,
+            "lead_id": self.lead_id.id,
             "description": self.description,
             "user_ids": [(6, 0, [])],
         }
