@@ -1,0 +1,45 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* base_crm_project
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-27 13:28+0000\n"
+"PO-Revision-Date: 2023-07-27 15:30+0200\n"
+"Last-Translator: Emilio Pascual <emilio@moduom.team>\n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.3.1\n"
+
+#. module: base_crm_project
+#: model:ir.model.fields,field_description:base_crm_project.field_crm_lead__task_count
+msgid "#Task"
+msgstr "#Task"
+
+#. module: base_crm_project
+#: model:ir.model.fields,field_description:base_crm_project.field_project_task__lead_id
+msgid "Lead"
+msgstr "Iniciativa/Oportunidad"
+
+#. module: base_crm_project
+#: model:ir.model,name:base_crm_project.model_crm_lead
+#: model_terms:ir.ui.view,arch_db:base_crm_project.view_task_form2_inherit_base_crm_project
+msgid "Lead/Opportunity"
+msgstr "Iniciativa/Oportunidad"
+
+#. module: base_crm_project
+#: model:ir.model,name:base_crm_project.model_project_task
+#: model:ir.model.fields,field_description:base_crm_project.field_crm_lead__task_ids
+msgid "Task"
+msgstr "Tarea"
+
+#. module: base_crm_project
+#: model_terms:ir.ui.view,arch_db:base_crm_project.inherit_crm_lead_view_form_base_crm_project
+msgid "Task(s)"
+msgstr "Tareas"
