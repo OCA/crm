@@ -5,3 +5,5 @@
 * `Tecnativa <https://www.tecnativa.com>`_:
 
   * Stefan Ungureanu
+
+* Emilio Pascual (`Moduon <https://www.moduon.team/>`__)
