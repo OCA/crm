@@ -12,6 +12,7 @@ class LeadCase(TransactionCase):
         )
         self.partner = self.env["res.partner"].create({"name": __file__})
         self.test_field = "ES98765432M"
+        self.test2_field = "11111111H"
 
     def test_transfered_values(self):
         """Field gets transfered when creating partner."""
@@ -27,3 +28,11 @@ class LeadCase(TransactionCase):
         self.lead.partner_id = self.partner
         result = self.lead._prepare_values_from_partner(self.lead.partner_id)
         self.assertEqual(result["vat"], self.test_field)
+
+    def test_onchange_vat(self):
+        """First change vat in partner, after it change in lead"""
+        self.lead.partner_id = self.partner
+        self.partner.vat = self.test_field
+        self.assertEqual(self.partner.vat, self.lead.vat)
+        self.lead.vat = self.test2_field
+        self.assertEqual(self.partner.vat, self.lead.vat)

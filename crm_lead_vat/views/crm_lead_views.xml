@@ -4,11 +4,35 @@
         <field name="model">crm.lead</field>
         <field name="inherit_id" ref="crm.crm_lead_view_form" />
         <field name="arch" type="xml">
-            <xpath expr="//group/group[1]/field[@name='partner_id']" position="after">
-                <field name="vat" />
+            <xpath
+                expr="//group/group[@name='lead_partner']/field[@name='partner_id']"
+                position="after"
+            >
+                <label for="vat" class="oe_inline" />
+                <div class="o_row o_row_readonly">
+                    <field name="partner_vat_update" invisible="1" />
+                    <field name="vat" />
+                    <span
+                        class="fa fa-exclamation-triangle text-warning oe_edit_only"
+                        title="By saving this change, the customer vat number will also be updated."
+                        attrs="{'invisible': [('partner_vat_update', '=', False)]}"
+                    />
+                </div>
             </xpath>
-            <xpath expr="//group/group[2]/field[@name='partner_id']" position="after">
-                <field name="vat" />
+            <xpath
+                expr="//group/group[@name='opportunity_partner']/field[@name='partner_id']"
+                position="after"
+            >
+                <label for="vat" class="oe_inline" />
+                <div class="o_row o_row_readonly">
+                    <field name="partner_vat_update" invisible="1" />
+                    <field name="vat" />
+                    <span
+                        class="fa fa-exclamation-triangle text-warning oe_edit_only"
+                        title="By saving this change, the customer vat number will also be updated."
+                        attrs="{'invisible': [('partner_vat_update', '=', False)]}"
+                    />
+                </div>
             </xpath>
         </field>
     </record>
