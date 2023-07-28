@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-02 14:15+0000\n"
-"PO-Revision-Date: 2023-05-31 15:09+0000\n"
+"PO-Revision-Date: 2023-07-28 13:09+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-crm-8-0/language/it/"
 ")\n"
@@ -87,7 +87,7 @@ msgstr "Ultimo aggiornamento il"
 #: field:partner.mail.list.wizard,mail_list_id:0
 #: view:res.partner:mass_mailing_partner.view_res_partner_filter
 msgid "Mailing List"
-msgstr "Mailing List"
+msgstr "Mailing list"
 
 #. module: mass_mailing_partner
 #: field:res.partner,mass_mailing_contacts_count:0
