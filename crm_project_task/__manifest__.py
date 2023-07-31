@@ -22,5 +22,6 @@
         "views/res_config_settings.xml",
         "wizards/crm_create_task.xml",
         "views/crm_lead.xml",
+        "views/project_task.xml",
     ],
 }
