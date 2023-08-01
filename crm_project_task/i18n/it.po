@@ -6,18 +6,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"Last-Translator: Automatically generated\n"
+"PO-Revision-Date: 2023-08-01 12:11+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: crm_project_task
 #: model:ir.model.fields,field_description:crm_project_task.field_crm_lead__task_count
 msgid "#Task"
-msgstr ""
+msgstr "N. lavoro"
 
 #. module: crm_project_task
 #: model_terms:ir.ui.view,arch_db:crm_project_task.res_config_settings_view_form
@@ -25,91 +27,93 @@ msgid ""
 "By default this project will be selected to create task from lead / "
 "opportunity"
 msgstr ""
+"Questo progetto verrà selezionato in modo predefinito per creare lavori da "
+"contatti / opportunità"
 
 #. module: crm_project_task
 #: model_terms:ir.ui.view,arch_db:crm_project_task.wizard_crm_create_task_view_form
 msgid "Cancel"
-msgstr ""
+msgstr "Annulla"
 
 #. module: crm_project_task
 #: model:ir.model,name:crm_project_task.model_res_company
 msgid "Companies"
-msgstr ""
+msgstr "Aziende"
 
 #. module: crm_project_task
 #: model:ir.model,name:crm_project_task.model_res_config_settings
 msgid "Config Settings"
-msgstr ""
+msgstr "Impostazioni configurazione"
 
 #. module: crm_project_task
 #: model:ir.actions.act_window,name:crm_project_task.wizard_crm_create_task_action
 #: model_terms:ir.ui.view,arch_db:crm_project_task.inherit_crm_lead_view_form_crm_project_task
 #: model_terms:ir.ui.view,arch_db:crm_project_task.wizard_crm_create_task_view_form
 msgid "Create Task"
-msgstr ""
+msgstr "Crea lavoro"
 
 #. module: crm_project_task
 #: model:ir.model.fields,field_description:crm_project_task.field_crm_create_task__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "Creato da"
 
 #. module: crm_project_task
 #: model:ir.model.fields,field_description:crm_project_task.field_crm_create_task__create_date
 msgid "Created on"
-msgstr ""
+msgstr "Creato il"
 
 #. module: crm_project_task
 #: model:ir.model.fields,field_description:crm_project_task.field_res_company__crm_default_project_id
 #: model:ir.model.fields,field_description:crm_project_task.field_res_config_settings__crm_default_project_id
 msgid "Crm Default Project"
-msgstr ""
+msgstr "Progetto predefinito"
 
 #. module: crm_project_task
 #: model_terms:ir.ui.view,arch_db:crm_project_task.res_config_settings_view_form
 msgid "Default project"
-msgstr ""
+msgstr "Progetto predefinito"
 
 #. module: crm_project_task
 #: model:ir.model.fields,field_description:crm_project_task.field_crm_create_task__description
 msgid "Description"
-msgstr ""
+msgstr "Descrizione"
 
 #. module: crm_project_task
 #: model:ir.model.fields,field_description:crm_project_task.field_crm_create_task__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Nome visualizzato"
 
 #. module: crm_project_task
 #: model:ir.model.fields,field_description:crm_project_task.field_crm_create_task__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: crm_project_task
 #: model:ir.model.fields,field_description:crm_project_task.field_crm_create_task____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Ultima modifica il"
 
 #. module: crm_project_task
 #: model:ir.model.fields,field_description:crm_project_task.field_crm_create_task__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "Ultimo aggiornamento di"
 
 #. module: crm_project_task
 #: model:ir.model.fields,field_description:crm_project_task.field_crm_create_task__write_date
 msgid "Last Updated on"
-msgstr ""
+msgstr "Ultimo aggiornamento il"
 
 #. module: crm_project_task
 #: model:ir.model.fields,field_description:crm_project_task.field_crm_create_task__lead_id
 #: model:ir.model.fields,field_description:crm_project_task.field_project_task__lead_id
 msgid "Lead"
-msgstr ""
+msgstr "Contatto"
 
 #. module: crm_project_task
 #: model:ir.model,name:crm_project_task.model_crm_lead
 #: model_terms:ir.ui.view,arch_db:crm_project_task.view_task_form2_inherit_crm_project_task
 msgid "Lead/Opportunity"
-msgstr ""
+msgstr "Contatto/Opportunità"
 
 #. module: crm_project_task
 #: code:addons/crm_project_task/wizards/crm_create_task.py:0
@@ -117,17 +121,19 @@ msgstr ""
 msgid ""
 "Project not configured in settings, please contact with your administrator."
 msgstr ""
+"Manca la configurazione dei progetti nelle impostazioni, contattare "
+"l'amministratore."
 
 #. module: crm_project_task
 #: model_terms:ir.ui.view,arch_db:crm_project_task.res_config_settings_view_form
 msgid "Projects"
-msgstr ""
+msgstr "Progetti"
 
 #. module: crm_project_task
 #: model:ir.model,name:crm_project_task.model_project_task
 #: model:ir.model.fields,field_description:crm_project_task.field_crm_lead__task_ids
 msgid "Task"
-msgstr ""
+msgstr "Lavoro"
 
 #. module: crm_project_task
 #: code:addons/crm_project_task/wizards/crm_create_task.py:0
@@ -136,11 +142,13 @@ msgid ""
 "Task <a href=# data-oe-model=project.task data-oe-id=%(task)d>%(name)s</a> "
 "created."
 msgstr ""
+"Creato lavoro <a href=# data-oe-model=project.task data-oe-"
+"id=%(task)d>%(name)s</a>."
 
 #. module: crm_project_task
 #: model:ir.model.fields,field_description:crm_project_task.field_crm_create_task__task_name
 msgid "Task Name"
-msgstr ""
+msgstr "Nome lavoro"
 
 #. module: crm_project_task
 #: code:addons/crm_project_task/wizards/crm_create_task.py:0
@@ -149,13 +157,15 @@ msgid ""
 "Task created from lead/opportunity <a href=# data-oe-model=crm.lead data-oe-"
 "id=%(lead)d>%(name)s</a>."
 msgstr ""
+"Lavoro creato da contatto/opportunità <a href=# data-oe-model=crm.lead data-"
+"oe-id=%(lead)d>%(name)s</a>."
 
 #. module: crm_project_task
 #: model_terms:ir.ui.view,arch_db:crm_project_task.inherit_crm_lead_view_form_crm_project_task
 msgid "Task(s)"
-msgstr ""
+msgstr "Lavoro(i)"
 
 #. module: crm_project_task
 #: model:ir.model,name:crm_project_task.model_crm_create_task
 msgid "Wizard to create task"
-msgstr ""
+msgstr "Procedura guidata per creare un lavoro"
