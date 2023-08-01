@@ -9,7 +9,7 @@
         <field name="arch" type="xml">
             <xpath expr="header" position="inside">
                 <button
-                    string="Create Task"
+                    string="PRE VENTA"
                     name="%(wizard_crm_create_task_action)d"
                     type="action"
                     class="oe_highlight"
