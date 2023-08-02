@@ -12,8 +12,8 @@ msgstr ""
 "POT-Creation-Date: 2017-12-14 05:51+0000\n"
 "PO-Revision-Date: 2020-09-10 08:00+0000\n"
 "Last-Translator: Ignacio Buioli <ibuioli@gmail.com>\n"
-"Language-Team: Spanish (Argentina) (https://www.transifex.com/oca/teams/"
-"23907/es_AR/)\n"
+"Language-Team: Spanish (Argentina) (https://www.transifex.com/oca/"
+"teams/23907/es_AR/)\n"
 "Language: es_AR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,23 +28,38 @@ msgstr "# de Casos"
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
-msgid "<b> min(s)</b>"
-msgstr "<b> minuto(s)</b>"
+msgid "<b>min(s)</b>"
+msgstr ""
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
-msgid "<span>Convert<br/>To Opportunity</span>"
-msgstr "<span>Convertir<br/>A Oportunidad</span>"
+msgid ""
+"<span>\n"
+"                                Convert\n"
+"                                <br/>\n"
+"                                To Opportunity\n"
+"                            </span>"
+msgstr ""
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
-msgid "<span>Schedule<br/>A Meeting</span>"
-msgstr "<span>Programar<br/>Una Reunión</span>"
+msgid ""
+"<span>\n"
+"                                Schedule\n"
+"                                <br/>\n"
+"                                A Meeting\n"
+"                            </span>"
+msgstr ""
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
-msgid "<span>Schedule<br/>Other Call</span>"
-msgstr "<span>Programar<br/>Otra Llamada</span>"
+msgid ""
+"<span>\n"
+"                                Schedule\n"
+"                                <br/>\n"
+"                                Other Call\n"
+"                            </span>"
+msgstr ""
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__action
@@ -77,11 +92,6 @@ msgid "Attachment Count"
 msgstr "Cuenta del Adjunto"
 
 #. module: crm_phonecall
-#: model:ir.filters,name:crm_phonecall.filter_crm_phonecall_sales_team
-msgid "By Sales Team"
-msgstr "Por Equipo de Ventas"
-
-#. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_res_config_settings__group_show_form_view
 msgid "By default form is disabled for calls, with this group it is enabled."
 msgstr ""
@@ -91,11 +101,9 @@ msgstr ""
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.res_config_settings_view_form
 msgid ""
-"By default form view is disabled for calls, with this setting it is enabled "
-"for all users."
+"By default form view is disabled for calls, with this\n"
+"                                setting it is enabled for all users."
 msgstr ""
-"La vista de formulario está desactivado para llamadas por defecto, con esta "
-"configuración estará activado para todos los usuarios."
 
 #. module: crm_phonecall
 #: model:ir.model,name:crm_phonecall.model_calendar_event
@@ -258,11 +266,6 @@ msgid "Date"
 msgstr "Fecha"
 
 #. module: crm_phonecall
-#: model:ir.filters,name:crm_phonecall.filter_crm_phonecall_delay_to_close
-msgid "Delay To Close"
-msgstr "Demorar Al Cerrar"
-
-#. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__delay_close
 msgid "Delay to close"
 msgstr "Demora al cerrar"
@@ -317,8 +320,8 @@ msgstr "Correo Electrónico"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_res_config_settings__group_show_form_view
-#: model_terms:ir.ui.view,arch_db:crm_phonecall.res_config_settings_view_form
 #: model:res.groups,name:crm_phonecall.group_show_form_view
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.res_config_settings_view_form
 msgid "Enable form view for phone calls"
 msgstr "Habilitar vista formulario para llamadas telefónicas"
 
@@ -333,11 +336,6 @@ msgid "Followers"
 msgstr "Seguidores"
 
 #. module: crm_phonecall
-#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_channel_ids
-msgid "Followers (Channels)"
-msgstr "Seguidores (Canales)"
-
-#. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_partner_ids
 msgid "Followers (Partners)"
 msgstr "Seguidores (Socios)"
@@ -347,6 +345,11 @@ msgstr "Seguidores (Socios)"
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
 msgid "Group By"
 msgstr "Agrupar Por"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__has_message
+msgid "Has Message"
+msgstr ""
 
 #. module: crm_phonecall
 #: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall__state__done
@@ -370,7 +373,6 @@ msgstr "ID"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__message_needaction
-#: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__message_unread
 msgid "If checked, new messages require your attention."
 msgstr "Si está marcado, los nuevos mensajes requieren su atención."
 
@@ -560,18 +562,13 @@ msgstr "Número de errores"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__message_needaction_counter
-msgid "Number of messages which requires an action"
-msgstr "Número de mensajes que requieren una acción"
+msgid "Number of messages requiring action"
+msgstr ""
 
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__message_has_error_counter
 msgid "Number of messages with delivery error"
 msgstr "Número de mensajes con error de entrega"
-
-#. module: crm_phonecall
-#: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__message_unread_counter
-msgid "Number of unread messages"
-msgstr "Número de mensajes sin leer"
 
 #. module: crm_phonecall
 #: model_terms:ir.actions.act_window,help:crm_phonecall.crm_case_categ_phone_outgoing0
@@ -636,6 +633,7 @@ msgid "Phone"
 msgstr "Teléfono"
 
 #. module: crm_phonecall
+#. odoo-python
 #: code:addons/crm_phonecall/models/crm_phonecall.py:0
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
 #, python-format
@@ -646,9 +644,7 @@ msgstr "Llamada Telefónica"
 #: model:ir.actions.act_window,name:crm_phonecall.crm_case_categ_phone0
 #: model:ir.ui.menu,name:crm_phonecall.menu_crm_case_phone
 #: model:ir.ui.menu,name:crm_phonecall.menu_crm_config_phonecall
-#: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_inbound_phone_tree_view
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_calendar_view
-#: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_tree_view
 msgid "Phone Calls"
 msgstr "Llamadas Telefónicas"
 
@@ -658,11 +654,6 @@ msgstr "Llamadas Telefónicas"
 #: model:ir.ui.menu,name:crm_phonecall.menu_report_crm_phonecalls_tree
 msgid "Phone Calls Analysis"
 msgstr "Análisis de las Llamadas Telefónicas"
-
-#. module: crm_phonecall
-#: model:ir.filters,name:crm_phonecall.filter_crm_phonecall_phone_call_to_do
-msgid "Phone Calls To Do"
-msgstr "Llamadas Telefónicas por Hacer"
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
@@ -907,16 +898,6 @@ msgid "Unassigned"
 msgstr "Sin asignar"
 
 #. module: crm_phonecall
-#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_unread
-msgid "Unread Messages"
-msgstr "Mensajes sin Leer"
-
-#. module: crm_phonecall
-#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_unread_counter
-msgid "Unread Messages Counter"
-msgstr "Contador de Mensajes sin Leer"
-
-#. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__user_id
 msgid "User"
 msgstr "Usuario"
@@ -940,6 +921,49 @@ msgstr ""
 "Puede utilizar la característica de importación para importar masivamente "
 "una nueva lista de\n"
 "              prospectos para calificar."
+
+#~ msgid "<b> min(s)</b>"
+#~ msgstr "<b> minuto(s)</b>"
+
+#~ msgid "<span>Convert<br/>To Opportunity</span>"
+#~ msgstr "<span>Convertir<br/>A Oportunidad</span>"
+
+#~ msgid "<span>Schedule<br/>A Meeting</span>"
+#~ msgstr "<span>Programar<br/>Una Reunión</span>"
+
+#~ msgid "<span>Schedule<br/>Other Call</span>"
+#~ msgstr "<span>Programar<br/>Otra Llamada</span>"
+
+#~ msgid "By Sales Team"
+#~ msgstr "Por Equipo de Ventas"
+
+#~ msgid ""
+#~ "By default form view is disabled for calls, with this setting it is "
+#~ "enabled for all users."
+#~ msgstr ""
+#~ "La vista de formulario está desactivado para llamadas por defecto, con "
+#~ "esta configuración estará activado para todos los usuarios."
+
+#~ msgid "Delay To Close"
+#~ msgstr "Demorar Al Cerrar"
+
+#~ msgid "Followers (Channels)"
+#~ msgstr "Seguidores (Canales)"
+
+#~ msgid "Number of messages which requires an action"
+#~ msgstr "Número de mensajes que requieren una acción"
+
+#~ msgid "Number of unread messages"
+#~ msgstr "Número de mensajes sin leer"
+
+#~ msgid "Phone Calls To Do"
+#~ msgstr "Llamadas Telefónicas por Hacer"
+
+#~ msgid "Unread Messages"
+#~ msgstr "Mensajes sin Leer"
+
+#~ msgid "Unread Messages Counter"
+#~ msgstr "Contador de Mensajes sin Leer"
 
 #~ msgid "Event"
 #~ msgstr "Evento"
