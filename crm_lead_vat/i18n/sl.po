@@ -21,9 +21,22 @@ msgstr ""
 "%100==4 ? 2 : 3);\n"
 
 #. module: crm_lead_vat
+#: model_terms:ir.ui.view,arch_db:crm_lead_vat.crm_lead_view_form
+msgid ""
+"<span class=\"fa fa-exclamation-triangle text-warning oe_edit_only\" title="
+"\"By saving this change, the customer vat number will also be updated.\" "
+"attrs=\"{'invisible': [('partner_vat_update', '=', False)]}\"/>"
+msgstr ""
+
+#. module: crm_lead_vat
 #: model:ir.model,name:crm_lead_vat.model_crm_lead
 msgid "Lead/Opportunity"
 msgstr "Indic/priložnost"
+
+#. module: crm_lead_vat
+#: model:ir.model.fields,field_description:crm_lead_vat.field_crm_lead__partner_vat_update
+msgid "Partner VAT will Update"
+msgstr ""
 
 #. module: crm_lead_vat
 #: model:ir.model.fields,field_description:crm_lead_vat.field_crm_lead__vat

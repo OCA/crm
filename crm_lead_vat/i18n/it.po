@@ -10,8 +10,8 @@ msgstr ""
 "POT-Creation-Date: 2016-04-16 11:11+0000\n"
 "PO-Revision-Date: 2020-01-08 19:13+0000\n"
 "Last-Translator: Sergio Zanchetta <primes2h@gmail.com>\n"
-"Language-Team: Italian (http://www.transifex.com/oca/OCA-crm-8-0/language/it/"
-")\n"
+"Language-Team: Italian (http://www.transifex.com/oca/OCA-crm-8-0/language/"
+"it/)\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,9 +20,22 @@ msgstr ""
 "X-Generator: Weblate 3.10\n"
 
 #. module: crm_lead_vat
+#: model_terms:ir.ui.view,arch_db:crm_lead_vat.crm_lead_view_form
+msgid ""
+"<span class=\"fa fa-exclamation-triangle text-warning oe_edit_only\" title="
+"\"By saving this change, the customer vat number will also be updated.\" "
+"attrs=\"{'invisible': [('partner_vat_update', '=', False)]}\"/>"
+msgstr ""
+
+#. module: crm_lead_vat
 #: model:ir.model,name:crm_lead_vat.model_crm_lead
 msgid "Lead/Opportunity"
 msgstr "Contatto/Opportunità"
+
+#. module: crm_lead_vat
+#: model:ir.model.fields,field_description:crm_lead_vat.field_crm_lead__partner_vat_update
+msgid "Partner VAT will Update"
+msgstr ""
 
 #. module: crm_lead_vat
 #: model:ir.model.fields,field_description:crm_lead_vat.field_crm_lead__vat
