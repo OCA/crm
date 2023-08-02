@@ -1,0 +1,175 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* crm_project_task
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-02 11:46+0000\n"
+"PO-Revision-Date: 2023-08-02 13:51+0200\n"
+"Last-Translator: Emilio Pascual <emilio@moduom.team>\n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.3.1\n"
+
+#. module: crm_project_task
+#: model:ir.model.fields,field_description:crm_project_task.field_crm_lead__task_count
+msgid "#Task"
+msgstr "#Tarea"
+
+#. module: crm_project_task
+#: model_terms:ir.ui.view,arch_db:crm_project_task.res_config_settings_view_form
+msgid ""
+"By default this project will be selected to create task from lead / "
+"opportunity"
+msgstr ""
+"Por defecto este proyecto será seleccionado para crear la tarea desde la "
+"iniciativa/oportunidad"
+
+#. module: crm_project_task
+#: model_terms:ir.ui.view,arch_db:crm_project_task.wizard_crm_create_task_view_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: crm_project_task
+#: model:ir.model,name:crm_project_task.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: crm_project_task
+#: model:ir.model,name:crm_project_task.model_res_config_settings
+msgid "Config Settings"
+msgstr "Opciones de configuración"
+
+#. module: crm_project_task
+#: model:ir.actions.act_window,name:crm_project_task.wizard_crm_create_task_action
+#: model_terms:ir.ui.view,arch_db:crm_project_task.inherit_crm_lead_view_form_crm_project_task
+#: model_terms:ir.ui.view,arch_db:crm_project_task.wizard_crm_create_task_view_form
+msgid "Create Task"
+msgstr "Crear tarea"
+
+#. module: crm_project_task
+#: model:ir.model.fields,field_description:crm_project_task.field_crm_create_task__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: crm_project_task
+#: model:ir.model.fields,field_description:crm_project_task.field_crm_create_task__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: crm_project_task
+#: model:ir.model.fields,field_description:crm_project_task.field_res_company__crm_default_project_id
+#: model:ir.model.fields,field_description:crm_project_task.field_res_config_settings__crm_default_project_id
+msgid "Crm Default Project"
+msgstr "Proyecto por defecto en CRM"
+
+#. module: crm_project_task
+#: model_terms:ir.ui.view,arch_db:crm_project_task.res_config_settings_view_form
+msgid "Default project"
+msgstr "Proyecto por defecto"
+
+#. module: crm_project_task
+#: model:ir.model.fields,field_description:crm_project_task.field_crm_create_task__description
+msgid "Description"
+msgstr "Descripción"
+
+#. module: crm_project_task
+#: model:ir.model.fields,field_description:crm_project_task.field_crm_create_task__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: crm_project_task
+#: model:ir.model.fields,field_description:crm_project_task.field_crm_create_task__id
+msgid "ID"
+msgstr "Identificación"
+
+#. module: crm_project_task
+#: model:ir.model.fields,field_description:crm_project_task.field_crm_create_task____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: crm_project_task
+#: model:ir.model.fields,field_description:crm_project_task.field_crm_create_task__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: crm_project_task
+#: model:ir.model.fields,field_description:crm_project_task.field_crm_create_task__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: crm_project_task
+#: model:ir.model.fields,field_description:crm_project_task.field_crm_create_task__lead_id
+#: model:ir.model.fields,field_description:crm_project_task.field_project_task__lead_id
+msgid "Lead"
+msgstr "Iniciativa"
+
+#. module: crm_project_task
+#: model:ir.model,name:crm_project_task.model_crm_lead
+#: model_terms:ir.ui.view,arch_db:crm_project_task.view_task_form2_inherit_crm_project_task
+msgid "Lead/Opportunity"
+msgstr "Iniciativa/Oportundad"
+
+#. module: crm_project_task
+#. odoo-python
+#: code:addons/crm_project_task/wizards/crm_create_task.py:0
+#, python-format
+msgid ""
+"Project not configured in settings, please contact with your administrator."
+msgstr ""
+"No hay un proyecto configurado en ajustes, por favor contacte con su "
+"administrador."
+
+#. module: crm_project_task
+#: model_terms:ir.ui.view,arch_db:crm_project_task.res_config_settings_view_form
+msgid "Projects"
+msgstr "Proyectos"
+
+#. module: crm_project_task
+#: model:ir.model,name:crm_project_task.model_project_task
+#: model:ir.model.fields,field_description:crm_project_task.field_crm_lead__task_ids
+msgid "Task"
+msgstr "Tarea"
+
+#. module: crm_project_task
+#. odoo-python
+#: code:addons/crm_project_task/wizards/crm_create_task.py:0
+#, python-format
+msgid ""
+"Task <a href=# data-oe-model=project.task data-oe-id=%(task)d>%(name)s</a> "
+"created."
+msgstr ""
+"Tarea <a href=# data-oe-model=project.task data-oe-id=%(task)d>%(name)s</a> "
+"creada."
+
+#. module: crm_project_task
+#: model:ir.model.fields,field_description:crm_project_task.field_crm_create_task__task_name
+msgid "Task Name"
+msgstr "Nombre de tarea"
+
+#. module: crm_project_task
+#. odoo-python
+#: code:addons/crm_project_task/wizards/crm_create_task.py:0
+#, python-format
+msgid ""
+"Task created from lead/opportunity <a href=# data-oe-model=crm.lead data-oe-"
+"id=%(lead)d>%(name)s</a>."
+msgstr ""
+"Tarea creada desde la iniciativa/oportunidad <a href=# data-oe-model=crm."
+"lead data-oe-id=%(lead)d>%(name)s</a>."
+
+#. module: crm_project_task
+#: model_terms:ir.ui.view,arch_db:crm_project_task.inherit_crm_lead_view_form_crm_project_task
+msgid "Task(s)"
+msgstr "Tarea(s)"
+
+#. module: crm_project_task
+#: model:ir.model,name:crm_project_task.model_crm_create_task
+msgid "Wizard to create task"
+msgstr "Asistente para crear tarea"
