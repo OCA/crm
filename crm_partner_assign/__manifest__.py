@@ -4,7 +4,7 @@
 {
     "name": "CRM Partner Assign",
     "summary": "Assign a Partner to an Opportunity/Lead/Partner to indicate Partnership",
-    "version": "15.0.0.1.1",
+    "version": "15.0.0.2.0",
     "development_status": "Alpha",
     "category": "Sales/CRM",
     "website": "https://github.com/OCA/crm",
