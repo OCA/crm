@@ -26,7 +26,7 @@ addon | version | maintainers | summary
 [crm_industry](crm_industry/) | 15.0.1.1.1 |  | Link leads/opportunities to industries
 [crm_lead_code](crm_lead_code/) | 15.0.1.0.0 |  | Sequential Code for Leads / Opportunities
 [crm_lead_firstname](crm_lead_firstname/) | 15.0.1.0.1 |  | Specify split names for contacts in leads
-[crm_lead_vat](crm_lead_vat/) | 15.0.1.0.0 |  | Add VAT field to leads
+[crm_lead_vat](crm_lead_vat/) | 15.0.1.1.0 |  | Add VAT field to leads
 [crm_location](crm_location/) | 15.0.1.0.2 |  | CRM location
 [crm_multicompany_reporting_currency](crm_multicompany_reporting_currency/) | 15.0.1.0.3 | [![yankinmax](https://github.com/yankinmax.png?size=30px)](https://github.com/yankinmax) | Adds Amount in multicompany reporting currency to CRM Lead
 [crm_partner_assign](crm_partner_assign/) | 15.0.0.2.0 | [![Shide](https://github.com/Shide.png?size=30px)](https://github.com/Shide) | Assign a Partner to an Opportunity/Lead/Partner to indicate Partnership
