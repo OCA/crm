@@ -116,6 +116,7 @@ msgid "Lead/Opportunity"
 msgstr "Contatto/Opportunità"
 
 #. module: crm_project_task
+#. odoo-python
 #: code:addons/crm_project_task/wizards/crm_create_task.py:0
 #, python-format
 msgid ""
@@ -136,14 +137,15 @@ msgid "Task"
 msgstr "Lavoro"
 
 #. module: crm_project_task
+#. odoo-python
 #: code:addons/crm_project_task/wizards/crm_create_task.py:0
 #, python-format
 msgid ""
 "Task <a href=# data-oe-model=project.task data-oe-id=%(task)d>%(name)s</a> "
 "created."
 msgstr ""
-"Creato lavoro <a href=# data-oe-model=project.task data-oe-"
-"id=%(task)d>%(name)s</a>."
+"Creato lavoro <a href=# data-oe-model=project.task data-oe-id=%(task)d>"
+"%(name)s</a>."
 
 #. module: crm_project_task
 #: model:ir.model.fields,field_description:crm_project_task.field_crm_create_task__task_name
@@ -151,6 +153,7 @@ msgid "Task Name"
 msgstr "Nome lavoro"
 
 #. module: crm_project_task
+#. odoo-python
 #: code:addons/crm_project_task/wizards/crm_create_task.py:0
 #, python-format
 msgid ""
