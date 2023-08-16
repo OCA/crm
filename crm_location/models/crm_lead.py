@@ -22,20 +22,21 @@ class CrmLead(models.Model):
     @api.depends("location_id")
     def _compute_partner_address_values(self):
         res = super()._compute_partner_address_values()
-        if self.location_id:
-            self.update(
+        for lead in self.filtered("location_id"):
+            lead.update(
                 {
-                    "zip": self.location_id.name,
-                    "city": self.location_id.city_id.name,
-                    "state_id": self.location_id.city_id.state_id,
-                    "country_id": self.location_id.city_id.country_id,
+                    "zip": lead.location_id.name,
+                    "city": lead.location_id.city_id.name,
+                    "state_id": lead.location_id.city_id.state_id,
+                    "country_id": lead.location_id.city_id.country_id,
                 }
             )
         return res
 
     @api.depends("partner_id")
     def _compute_location_id(self):
-        if self.partner_id.zip_id:
-            self.location_id = self.partner_id.zip_id.id
-        elif self.location_id:
-            self.location_id = self.location_id.id
+        for lead in self:
+            if lead.partner_id.zip_id:
+                lead.location_id = lead.partner_id.zip_id.id
+            elif lead.location_id:
+                lead.location_id = lead.location_id.id
