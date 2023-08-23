@@ -31,7 +31,7 @@ addon | version | maintainers | summary
 [crm_lead_search_archive](crm_lead_search_archive/) | 14.0.1.0.1 | [![bealdav](https://github.com/bealdav.png?size=30px)](https://github.com/bealdav) | Add a filter to search both in active/archive lead
 [crm_lead_vat](crm_lead_vat/) | 14.0.1.1.0 |  | Add VAT field to leads
 [crm_location](crm_location/) | 14.0.1.0.0 |  | CRM location
-[crm_location_nuts](crm_location_nuts/) | 14.0.1.0.0 |  | NUTS Regions in CRM
+[crm_location_nuts](crm_location_nuts/) | 14.0.1.0.1 |  | NUTS Regions in CRM
 [crm_phone_extension](crm_phone_extension/) | 14.0.1.0.1 | [![bizzappdev](https://github.com/bizzappdev.png?size=30px)](https://github.com/bizzappdev) | CRM Phone Number Extension
 [crm_phonecall](crm_phonecall/) | 14.0.1.1.0 |  | CRM Phone Calls
 [crm_phonecall_summary_predefined](crm_phonecall_summary_predefined/) | 14.0.1.0.0 |  | Allows to choose from a defined summary list
