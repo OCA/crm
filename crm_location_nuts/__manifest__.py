@@ -5,7 +5,7 @@
 {
     "name": "NUTS Regions in CRM",
     "category": "Customer Relationship Management",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.0.1",
     "depends": [
         "crm",
         "sales_team",
