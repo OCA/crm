@@ -574,8 +574,8 @@ msgstr "Numero di errori"
 
 #. module: crm_claim
 #: model:ir.model.fields,help:crm_claim.field_crm_claim__message_needaction_counter
-msgid "Number of messages which requires an action"
-msgstr "Numero di messaggi che richiedono un'azione"
+msgid "Number of messages requiring action"
+msgstr ""
 
 #. module: crm_claim
 #: model:ir.model.fields,help:crm_claim.field_crm_claim__message_has_error_counter
@@ -628,8 +628,10 @@ msgstr "Priorità"
 msgid ""
 "Record and track your customers' claims.\n"
 "                Claims may be linked to a sales order or a lot.\n"
-"                You can send emails with attachments and keep the full history for a claim (emails sent, intervention type and so on).\n"
-"                Claims may automatically be linked to an email address using the mail gateway module."
+"                You can send emails with attachments and keep the full "
+"history for a claim (emails sent, intervention type and so on).\n"
+"                Claims may automatically be linked to an email address using "
+"the mail gateway module."
 msgstr ""
 "Registra e tiene traccia dei reclami dei clienti,\n"
 "                che possono essere collegate a un ordine di vendita o a un "
@@ -846,3 +848,6 @@ msgstr ""
 "                reclamo inserito nel sistema. Le fasi definiscono tutti i "
 "passi richiesti\n"
 "                per la soluzione di un reclamo."
+
+#~ msgid "Number of messages which requires an action"
+#~ msgstr "Numero di messaggi che richiedono un'azione"
