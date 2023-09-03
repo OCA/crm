@@ -28,23 +28,38 @@ msgstr "# Slučajeva"
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
-msgid "<b> min(s)</b>"
-msgstr "<b> min(a)</b>"
+msgid "<b>min(s)</b>"
+msgstr ""
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
-msgid "<span>Convert<br/>To Opportunity</span>"
-msgstr "<span>Pretvori<br/> u Priliku</span>"
+msgid ""
+"<span>\n"
+"                                Convert\n"
+"                                <br/>\n"
+"                                To Opportunity\n"
+"                            </span>"
+msgstr ""
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
-msgid "<span>Schedule<br/>A Meeting</span>"
-msgstr "<span>Zakaži<br/>Sastanak</span>"
+msgid ""
+"<span>\n"
+"                                Schedule\n"
+"                                <br/>\n"
+"                                A Meeting\n"
+"                            </span>"
+msgstr ""
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
-msgid "<span>Schedule<br/>Other Call</span>"
-msgstr "<span>Zakaži<br/>Tel poziv</span>"
+msgid ""
+"<span>\n"
+"                                Schedule\n"
+"                                <br/>\n"
+"                                Other Call\n"
+"                            </span>"
+msgstr ""
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__action
@@ -77,11 +92,6 @@ msgid "Attachment Count"
 msgstr "Broj priloga"
 
 #. module: crm_phonecall
-#: model:ir.filters,name:crm_phonecall.filter_crm_phonecall_sales_team
-msgid "By Sales Team"
-msgstr "Po prodajnom timu"
-
-#. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_res_config_settings__group_show_form_view
 msgid "By default form is disabled for calls, with this group it is enabled."
 msgstr ""
@@ -89,8 +99,8 @@ msgstr ""
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.res_config_settings_view_form
 msgid ""
-"By default form view is disabled for calls, with this setting it is enabled "
-"for all users."
+"By default form view is disabled for calls, with this\n"
+"                                setting it is enabled for all users."
 msgstr ""
 
 #. module: crm_phonecall
@@ -251,11 +261,6 @@ msgid "Date"
 msgstr "Datum"
 
 #. module: crm_phonecall
-#: model:ir.filters,name:crm_phonecall.filter_crm_phonecall_delay_to_close
-msgid "Delay To Close"
-msgstr "Odgodi do zatvaranja"
-
-#. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__delay_close
 msgid "Delay to close"
 msgstr "Odgodi do zatvaranja"
@@ -311,8 +316,8 @@ msgstr "Email"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_res_config_settings__group_show_form_view
-#: model_terms:ir.ui.view,arch_db:crm_phonecall.res_config_settings_view_form
 #: model:res.groups,name:crm_phonecall.group_show_form_view
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.res_config_settings_view_form
 msgid "Enable form view for phone calls"
 msgstr ""
 
@@ -327,11 +332,6 @@ msgid "Followers"
 msgstr "Pratitelji"
 
 #. module: crm_phonecall
-#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_channel_ids
-msgid "Followers (Channels)"
-msgstr "Pratitelji (kanali)"
-
-#. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_partner_ids
 msgid "Followers (Partners)"
 msgstr "Pratitelji (partneri)"
@@ -341,6 +341,11 @@ msgstr "Pratitelji (partneri)"
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
 msgid "Group By"
 msgstr "Grupiraj po"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__has_message
+msgid "Has Message"
+msgstr ""
 
 #. module: crm_phonecall
 #: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall__state__done
@@ -364,7 +369,6 @@ msgstr "ID"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__message_needaction
-#: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__message_unread
 msgid "If checked, new messages require your attention."
 msgstr ""
 
@@ -552,17 +556,12 @@ msgstr ""
 
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__message_needaction_counter
-msgid "Number of messages which requires an action"
+msgid "Number of messages requiring action"
 msgstr ""
 
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__message_has_error_counter
 msgid "Number of messages with delivery error"
-msgstr ""
-
-#. module: crm_phonecall
-#: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__message_unread_counter
-msgid "Number of unread messages"
 msgstr ""
 
 #. module: crm_phonecall
@@ -622,6 +621,7 @@ msgid "Phone"
 msgstr ""
 
 #. module: crm_phonecall
+#. odoo-python
 #: code:addons/crm_phonecall/models/crm_phonecall.py:0
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
 #, python-format
@@ -632,9 +632,7 @@ msgstr ""
 #: model:ir.actions.act_window,name:crm_phonecall.crm_case_categ_phone0
 #: model:ir.ui.menu,name:crm_phonecall.menu_crm_case_phone
 #: model:ir.ui.menu,name:crm_phonecall.menu_crm_config_phonecall
-#: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_inbound_phone_tree_view
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_calendar_view
-#: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_tree_view
 msgid "Phone Calls"
 msgstr ""
 
@@ -643,11 +641,6 @@ msgstr ""
 #: model:ir.actions.act_window,name:crm_phonecall.crm_phonecall_report_action_team
 #: model:ir.ui.menu,name:crm_phonecall.menu_report_crm_phonecalls_tree
 msgid "Phone Calls Analysis"
-msgstr ""
-
-#. module: crm_phonecall
-#: model:ir.filters,name:crm_phonecall.filter_crm_phonecall_phone_call_to_do
-msgid "Phone Calls To Do"
 msgstr ""
 
 #. module: crm_phonecall
@@ -883,16 +876,6 @@ msgid "Unassigned"
 msgstr ""
 
 #. module: crm_phonecall
-#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_unread
-msgid "Unread Messages"
-msgstr ""
-
-#. module: crm_phonecall
-#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_unread_counter
-msgid "Unread Messages Counter"
-msgstr ""
-
-#. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__user_id
 msgid "User"
 msgstr ""
@@ -913,6 +896,27 @@ msgid ""
 "You can use the import feature to massively import a new list of\n"
 "            prospects to qualify."
 msgstr ""
+
+#~ msgid "<b> min(s)</b>"
+#~ msgstr "<b> min(a)</b>"
+
+#~ msgid "<span>Convert<br/>To Opportunity</span>"
+#~ msgstr "<span>Pretvori<br/> u Priliku</span>"
+
+#~ msgid "<span>Schedule<br/>A Meeting</span>"
+#~ msgstr "<span>Zakaži<br/>Sastanak</span>"
+
+#~ msgid "<span>Schedule<br/>Other Call</span>"
+#~ msgstr "<span>Zakaži<br/>Tel poziv</span>"
+
+#~ msgid "By Sales Team"
+#~ msgstr "Po prodajnom timu"
+
+#~ msgid "Delay To Close"
+#~ msgstr "Odgodi do zatvaranja"
+
+#~ msgid "Followers (Channels)"
+#~ msgstr "Pratitelji (kanali)"
 
 #~ msgid "Event"
 #~ msgstr "Događaj"
