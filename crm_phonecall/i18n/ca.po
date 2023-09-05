@@ -376,7 +376,6 @@ msgstr "Si està marcat, els missatges nous requereixen la vostra atenció."
 
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__message_has_error
-#: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
 msgstr "Si està marcat, alguns missatges tenen un error d'entrega."
 
@@ -742,11 +741,6 @@ msgid "Responsible"
 msgstr "Responsable"
 
 #. module: crm_phonecall
-#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_has_sms_error
-msgid "SMS Delivery error"
-msgstr "Error d'entrega SMS"
-
-#. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__team_id
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__team_id
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
@@ -918,6 +912,9 @@ msgstr ""
 "Podeu utilitzar la funció d'importació per importar massivament una llista "
 "nova de\n"
 "             prospectes per qualificar."
+
+#~ msgid "SMS Delivery error"
+#~ msgstr "Error d'entrega SMS"
 
 #~ msgid "<b> min(s)</b>"
 #~ msgstr "<b> min(s)</b>"
