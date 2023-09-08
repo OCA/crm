@@ -28,7 +28,7 @@ addon | version | maintainers | summary
 [crm_lead_firstname](crm_lead_firstname/) | 16.0.1.0.1 |  | Specify split names for contacts in leads
 [crm_lead_search_archive](crm_lead_search_archive/) | 16.0.1.0.1 | [![bealdav](https://github.com/bealdav.png?size=30px)](https://github.com/bealdav) | Add a filter to search both in active/archive lead
 [crm_lead_vat](crm_lead_vat/) | 16.0.1.0.1 | [![EmilioPascual](https://github.com/EmilioPascual.png?size=30px)](https://github.com/EmilioPascual) | Add VAT field to leads
-[crm_location](crm_location/) | 16.0.1.0.0 |  | CRM location
+[crm_location](crm_location/) | 16.0.1.0.1 |  | CRM location
 [crm_partner_assign](crm_partner_assign/) | 16.0.0.1.2 | [![Shide](https://github.com/Shide.png?size=30px)](https://github.com/Shide) | Assign a Partner to an Opportunity/Lead/Partner to indicate Partnership
 [crm_phonecall](crm_phonecall/) | 16.0.1.1.0 |  | CRM Phone Calls
 [crm_project_task](crm_project_task/) | 16.0.1.0.1 | [![EmilioPascual](https://github.com/EmilioPascual.png?size=30px)](https://github.com/EmilioPascual) | Create tasks from lead or opportunity
