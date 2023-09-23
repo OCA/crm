@@ -8,3 +8,7 @@
   * Ernesto Tejeda
   * Pedro M. Baeza
   * Vicent Cubells
+
+* `Trey Kilobytes de Soluciones SL <https://www.trey.es>`_:
+
+  * Vicent Cubells
