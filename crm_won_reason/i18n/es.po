@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2023-06-06 12:08+0000\n"
-"Last-Translator: luis-ron <luis.ron@sygel.es>\n"
+"PO-Revision-Date: 2023-09-26 14:18+0000\n"
+"Last-Translator: Ivorra78 <informatica@totmaterial.es>\n"
 "Language-Team: none\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
@@ -38,14 +38,13 @@ msgstr "Nombre mostrado"
 
 #. module: crm_won_reason
 #: model:ir.model,name:crm_won_reason.model_crm_lead_lost
-#, fuzzy
 msgid "Get Lost Reason"
-msgstr "Razón de pérdida"
+msgstr "Razón de la pérdida"
 
 #. module: crm_won_reason
 #: model:ir.model,name:crm_won_reason.model_crm_lead_won
 msgid "Get Won Reason"
-msgstr ""
+msgstr "Obtener Razón de la Ganancia"
 
 #. module: crm_won_reason
 #: model:ir.model.fields,field_description:crm_won_reason.field_crm_lead_won__id
@@ -90,7 +89,7 @@ msgstr "Marcar como ganada"
 #. module: crm_won_reason
 #: model:ir.model,name:crm_won_reason.model_crm_lost_reason
 msgid "Opp. Lost Reason"
-msgstr ""
+msgstr "Opp. Razón Perdida"
 
 #. module: crm_won_reason
 #: model:ir.model.fields,field_description:crm_won_reason.field_crm_lost_reason__reason_type
@@ -105,7 +104,7 @@ msgstr "Enviar"
 #. module: crm_won_reason
 #: model:ir.actions.act_window,name:crm_won_reason.crm_lead_win_action
 msgid "Win Reason"
-msgstr ""
+msgstr "Razón de ganar"
 
 #. module: crm_won_reason
 #: model:ir.model.fields.selection,name:crm_won_reason.selection__crm_lost_reason__reason_type__won
@@ -118,4 +117,4 @@ msgstr "Ganado"
 #: model:ir.model.fields,field_description:crm_won_reason.field_crm_lead_won__won_reason_id
 #: model_terms:ir.ui.view,arch_db:crm_won_reason.crm_lead_win_view_form
 msgid "Won Reason"
-msgstr ""
+msgstr "Razón Ganada"
