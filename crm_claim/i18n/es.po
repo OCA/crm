@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-06 08:33+0000\n"
-"PO-Revision-Date: 2023-09-20 21:26+0000\n"
+"PO-Revision-Date: 2023-10-09 09:10+0000\n"
 "Last-Translator: Ivorra78 <informatica@totmaterial.es>\n"
 "Language-Team: Spanish (https://www.transifex.com/oca/teams/23907/es/)\n"
 "Language: es\n"
@@ -539,7 +539,7 @@ msgstr "Propera activitat de l'entrada del calendari"
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__activity_date_deadline
 msgid "Next Activity Deadline"
-msgstr "Siguiente →"
+msgstr "Fecha Límite para la siguiente Actividad"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__activity_summary
