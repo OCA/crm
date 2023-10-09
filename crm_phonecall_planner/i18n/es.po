@@ -23,8 +23,8 @@ msgid ""
 "Allow repeated calls for the same partner, campaign, medium and source "
 "combination?"
 msgstr ""
-"¿Permitir llamadas repetidas para la misma combinación de contacto, campaña,"
-" medio y fuente?"
+"¿Permitir llamadas repetidas para la misma combinación de contacto, campaña, "
+"medio y fuente?"
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__name
@@ -178,8 +178,7 @@ msgid ""
 "plan ending time for each day in the range."
 msgstr ""
 "Planificar llamadas hasta este momento. La hora que seleccione será usada "
-"como hora de finalización de la planificación para cada día dentro del "
-"rango."
+"como hora de finalización de la planificación para cada día dentro del rango."
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner__days_gap
@@ -215,8 +214,8 @@ msgstr "Etiquetas"
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner__campaign_id
 msgid ""
-"This is a name that helps you keep track of your different campaign efforts,"
-" e.g. Fall_Drive, Christmas_Special"
+"This is a name that helps you keep track of your different campaign efforts, "
+"e.g. Fall_Drive, Christmas_Special"
 msgstr ""
 "Éste es un nombre que facilita la búsqueda de los diferentes esfuerzos de "
 "campañas. Por ejemplo: campaña de Navidad, rebajas de otoño"
@@ -234,8 +233,8 @@ msgid ""
 "This is the source of the link, e.g. Search Engine, another domain, or name "
 "of email list"
 msgstr ""
-"Ésta es la fuente del enlace. Por ejemplo: motor de búsqueda, otro dominio o"
-" nombre de una lista de correo"
+"Ésta es la fuente del enlace. Por ejemplo: motor de búsqueda, otro dominio o "
+"nombre de una lista de correo"
 
 #. module: crm_phonecall_planner
 #: model_terms:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
