@@ -49,8 +49,8 @@ msgstr "Fase"
 #. module: crm_stage_type
 #: model:ir.model.fields,help:crm_stage_type.field_crm_stage__lead_type
 msgid ""
-"This field is used to distinguish stages related to Leadsfrom stages related"
-" to Opportunities, or to specify stagesavailable for both types."
+"This field is used to distinguish stages related to Leadsfrom stages related "
+"to Opportunities, or to specify stagesavailable for both types."
 msgstr ""
 "Questo campo è utilizzato per distinguere le fasi relative ai contatti dalle "
 "fasi relative alle opportunità, o disponibili per entrambi i tipi."
