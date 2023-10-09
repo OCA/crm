@@ -11,8 +11,8 @@ msgstr ""
 "POT-Creation-Date: 2017-12-04 15:47+0000\n"
 "PO-Revision-Date: 2020-07-19 21:19+0000\n"
 "Last-Translator: Ignacio Buioli <ibuioli@gmail.com>\n"
-"Language-Team: Spanish (Argentina) (https://www.transifex.com/oca/teams/"
-"23907/es_AR/)\n"
+"Language-Team: Spanish (Argentina) (https://www.transifex.com/oca/"
+"teams/23907/es_AR/)\n"
 "Language: es_AR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -64,11 +64,6 @@ msgstr "Etapas de reclamo"
 #: model_terms:ir.ui.view,arch_db:crm_claim_type.crm_claim_type_form
 msgid "Claim type"
 msgstr "Tipo de reclamo"
-
-#. module: crm_claim_type
-#: model_terms:ir.ui.view,arch_db:crm_claim_type.crm_claim_type_tree
-msgid "Claim types"
-msgstr "Tipos de reclamo"
 
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_stage__claim_common
@@ -163,3 +158,6 @@ msgstr "Etapa"
 #: model:crm.claim.type,name:crm_claim_type.crm_claim_type_supplier
 msgid "Supplier"
 msgstr "Proveedor"
+
+#~ msgid "Claim types"
+#~ msgstr "Tipos de reclamo"

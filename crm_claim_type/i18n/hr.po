@@ -17,8 +17,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
-"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 3.8\n"
 
 #. module: crm_claim_type
@@ -65,11 +65,6 @@ msgstr "Faze zahtjeva"
 #: model_terms:ir.ui.view,arch_db:crm_claim_type.crm_claim_type_form
 msgid "Claim type"
 msgstr "Tip zahtjeva"
-
-#. module: crm_claim_type
-#: model_terms:ir.ui.view,arch_db:crm_claim_type.crm_claim_type_tree
-msgid "Claim types"
-msgstr "Tipovi zahtjeva"
 
 #. module: crm_claim_type
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_stage__claim_common
@@ -162,3 +157,6 @@ msgstr "Faza"
 #: model:crm.claim.type,name:crm_claim_type.crm_claim_type_supplier
 msgid "Supplier"
 msgstr "Dobavljač"
+
+#~ msgid "Claim types"
+#~ msgstr "Tipovi zahtjeva"
