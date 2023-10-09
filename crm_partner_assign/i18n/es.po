@@ -23,6 +23,11 @@ msgid "Assigned Partner"
 msgstr "Partner asignado"
 
 #. module: crm_partner_assign
+#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead__partner_contact_assigned_id
+msgid "Assigned Partner Contact"
+msgstr "Contacto de Partner"
+
+#. module: crm_partner_assign
 #: model_terms:ir.ui.view,arch_db:crm_partner_assign.view_crm_case_leads_filter
 #: model_terms:ir.ui.view,arch_db:crm_partner_assign.view_crm_case_opportunities_filter
 #: model_terms:ir.ui.view,arch_db:crm_partner_assign.view_res_partner_filter
@@ -66,11 +71,6 @@ msgstr "Lead/Oportunidad"
 #: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead__date_partner_assign
 msgid "Partner Assignment Date"
 msgstr "Fecha de asignación del Partner"
-
-#. module: crm_partner_assign
-#: model:ir.model.fields,field_description:crm_partner_assign.field_crm_lead__partner_contact_assigned_id
-msgid "Assigned Partner Contact"
-msgstr "Contacto de Partner"
 
 #. module: crm_partner_assign
 #: model:ir.model.fields,help:crm_partner_assign.field_crm_lead__partner_contact_assigned_id
