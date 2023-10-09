@@ -912,7 +912,6 @@ msgstr "La visita deve essere in stato confermato"
 
 #. module: crm_salesperson_planner
 #: code:addons/crm_salesperson_planner/models/crm_salesperson_planner_visit.py:0
-#: code:addons/crm_salesperson_planner/models/crm_salesperson_planner_visit.py:0
 #, python-format
 msgid "The visit must be in draft or validated state"
 msgstr "La visita deve essere in stato bozza o validata"
