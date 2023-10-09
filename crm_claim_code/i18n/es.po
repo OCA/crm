@@ -30,6 +30,6 @@ msgid "Claim Number"
 msgstr "Número de reclamación"
 
 #. module: crm_claim_code
-#: sql_constraint:crm.claim:0
+#: model:ir.model.constraint,message:crm_claim_code.constraint_crm_claim_crm_claim_unique_code
 msgid "The code must be unique!"
 msgstr "El código debe ser único."

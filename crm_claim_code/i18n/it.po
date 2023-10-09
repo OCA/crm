@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* crm_claim_code
+# 	* crm_claim_code
 #
 msgid ""
 msgstr ""
@@ -27,6 +27,6 @@ msgid "Claim Number"
 msgstr "Numero reclamo"
 
 #. module: crm_claim_code
-#: sql_constraint:crm.claim:0
+#: model:ir.model.constraint,message:crm_claim_code.constraint_crm_claim_crm_claim_unique_code
 msgid "The code must be unique!"
 msgstr "Il codice deve essere univoco!"
