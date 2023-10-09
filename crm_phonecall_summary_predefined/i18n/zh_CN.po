@@ -45,16 +45,22 @@ msgid "Crm Phonecall Summary"
 msgstr ""
 
 #. module: crm_phonecall_summary_predefined
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall2phonecall__display_name
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall__display_name
 #: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary__display_name
 msgid "Display Name"
 msgstr "显示名称"
 
 #. module: crm_phonecall_summary_predefined
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall2phonecall__id
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall__id
 #: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary__id
 msgid "ID"
 msgstr "ID"
 
 #. module: crm_phonecall_summary_predefined
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall2phonecall____last_update
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall____last_update
 #: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary____last_update
 msgid "Last Modified on"
 msgstr "最后修改时间"
