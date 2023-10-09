@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * crm_project
-# 
+#
 # Translators:
 # Martin Trigaux, 2018
 # Hamid Darabi, 2018
@@ -14,20 +14,11 @@ msgstr ""
 "PO-Revision-Date: 2018-09-21 13:17+0000\n"
 "Last-Translator: Hamed Mohammadi <hamed@dehongi.com>, 2018\n"
 "Language-Team: Persian (https://www.transifex.com/odoo/teams/41243/fa/)\n"
+"Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: fa\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-
-#. module: crm_project
-#: model_terms:ir.ui.view,arch_db:crm_project.crm_lead_view_form
-msgid ""
-"<span class=\"o_stat_text\">Convert To</span>\n"
-"                            <span class=\"o_stat_text\">Task</span>"
-msgstr ""
-"<span class=\"o_stat_text\">تبدیل به</span>\n"
-"                            <span class=\"o_stat_text\">تکلیف</span>"
 
 #. module: crm_project
 #: model_terms:ir.ui.view,arch_db:crm_project.crm_lead_convert2task_view_form
@@ -45,11 +36,6 @@ msgstr "تبدیل به تکلیف"
 #: model_terms:ir.ui.view,arch_db:crm_project.crm_lead_convert2task_view_form
 msgid "Create Task"
 msgstr "ایجاد تکلیف"
-
-#. module: crm_project
-#: selection:crm.lead.convert2task,action:0
-msgid "Create a new customer"
-msgstr "ایجاد مشتری جدید"
 
 #. module: crm_project
 #: model:ir.model.fields,field_description:crm_project.field_crm_lead_convert2task__create_uid
@@ -70,11 +56,6 @@ msgstr "مشتری"
 #: model:ir.model.fields,field_description:crm_project.field_crm_lead_convert2task__display_name
 msgid "Display Name"
 msgstr "نام نمایشی"
-
-#. module: crm_project
-#: selection:crm.lead.convert2task,action:0
-msgid "Do not link to a customer"
-msgstr "به مشتری انتساب نشود"
 
 #. module: crm_project
 #: model:ir.model.fields,field_description:crm_project.field_crm_lead_convert2task__id
@@ -107,11 +88,6 @@ msgid "Lead convert to Task"
 msgstr ""
 
 #. module: crm_project
-#: selection:crm.lead.convert2task,action:0
-msgid "Link to an existing customer"
-msgstr "انتساب به یک مشتری موجود"
-
-#. module: crm_project
 #: model:ir.model.fields,field_description:crm_project.field_crm_lead_convert2task__project_id
 msgid "Project"
 msgstr "پروژه"
@@ -120,3 +96,19 @@ msgstr "پروژه"
 #: model:ir.model.fields,field_description:crm_project.field_crm_lead_convert2task__action
 msgid "Related Customer"
 msgstr "مشتری مرتبط"
+
+#~ msgid ""
+#~ "<span class=\"o_stat_text\">Convert To</span>\n"
+#~ "                            <span class=\"o_stat_text\">Task</span>"
+#~ msgstr ""
+#~ "<span class=\"o_stat_text\">تبدیل به</span>\n"
+#~ "                            <span class=\"o_stat_text\">تکلیف</span>"
+
+#~ msgid "Create a new customer"
+#~ msgstr "ایجاد مشتری جدید"
+
+#~ msgid "Do not link to a customer"
+#~ msgstr "به مشتری انتساب نشود"
+
+#~ msgid "Link to an existing customer"
+#~ msgstr "انتساب به یک مشتری موجود"
