@@ -28,7 +28,7 @@ msgid "Secondary Salesperson"
 msgstr "Vendedor Secundário"
 
 #. module: crm_secondary_salesperson
-#: sql_constraint:crm.lead:0
+#: model:ir.model.constraint,message:crm_secondary_salesperson.constraint_crm_lead_secondary_user_id
 msgid ""
 "The secondary salesperson must be different from the primary salesperson!"
 msgstr "O vendedor secundário deve ser diferente do vendedor principal!"
