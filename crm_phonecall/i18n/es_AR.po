@@ -12,8 +12,8 @@ msgstr ""
 "POT-Creation-Date: 2017-12-14 05:51+0000\n"
 "PO-Revision-Date: 2020-09-10 08:00+0000\n"
 "Last-Translator: Ignacio Buioli <ibuioli@gmail.com>\n"
-"Language-Team: Spanish (Argentina) (https://www.transifex.com/oca/teams/"
-"23907/es_AR/)\n"
+"Language-Team: Spanish (Argentina) (https://www.transifex.com/oca/"
+"teams/23907/es_AR/)\n"
 "Language: es_AR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -28,23 +28,38 @@ msgstr "# de Casos"
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
-msgid "<b> min(s)</b>"
-msgstr "<b> minuto(s)</b>"
+msgid "<b>min(s)</b>"
+msgstr ""
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
-msgid "<span>Convert<br/>To Opportunity</span>"
-msgstr "<span>Convertir<br/>A Oportunidad</span>"
+msgid ""
+"<span>\n"
+"                                Convert\n"
+"                                <br/>\n"
+"                                To Opportunity\n"
+"                            </span>"
+msgstr ""
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
-msgid "<span>Schedule<br/>A Meeting</span>"
-msgstr "<span>Programar<br/>Una Reunión</span>"
+msgid ""
+"<span>\n"
+"                                Schedule\n"
+"                                <br/>\n"
+"                                A Meeting\n"
+"                            </span>"
+msgstr ""
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
-msgid "<span>Schedule<br/>Other Call</span>"
-msgstr "<span>Programar<br/>Otra Llamada</span>"
+msgid ""
+"<span>\n"
+"                                Schedule\n"
+"                                <br/>\n"
+"                                Other Call\n"
+"                            </span>"
+msgstr ""
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__action
@@ -91,11 +106,9 @@ msgstr ""
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.res_config_settings_view_form
 msgid ""
-"By default form view is disabled for calls, with this setting it is enabled "
-"for all users."
+"By default form view is disabled for calls, with this\n"
+"                                setting it is enabled for all users."
 msgstr ""
-"La vista de formulario está desactivado para llamadas por defecto, con esta "
-"configuración estará activado para todos los usuarios."
 
 #. module: crm_phonecall
 #: model:ir.model,name:crm_phonecall.model_calendar_event
@@ -288,9 +301,13 @@ msgid "Direction"
 msgstr "Dirección"
 
 #. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_calendar_event__display_name
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_lead__display_name
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__display_name
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__display_name
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__display_name
+#: model:ir.model.fields,field_description:crm_phonecall.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:crm_phonecall.field_res_partner__display_name
 msgid "Display Name"
 msgstr "Mostrar Nombre"
 
@@ -317,8 +334,8 @@ msgstr "Correo Electrónico"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_res_config_settings__group_show_form_view
-#: model_terms:ir.ui.view,arch_db:crm_phonecall.res_config_settings_view_form
 #: model:res.groups,name:crm_phonecall.group_show_form_view
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.res_config_settings_view_form
 msgid "Enable form view for phone calls"
 msgstr "Habilitar vista formulario para llamadas telefónicas"
 
@@ -362,9 +379,13 @@ msgid "High"
 msgstr "Alto"
 
 #. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_calendar_event__id
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_lead__id
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__id
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__id
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__id
+#: model:ir.model.fields,field_description:crm_phonecall.field_res_config_settings__id
+#: model:ir.model.fields,field_description:crm_phonecall.field_res_partner__id
 msgid "ID"
 msgstr "ID"
 
@@ -410,9 +431,13 @@ msgid "Last Action"
 msgstr "Última Acción"
 
 #. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_calendar_event____last_update
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_lead____last_update
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall____last_update
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall____last_update
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report____last_update
+#: model:ir.model.fields,field_description:crm_phonecall.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:crm_phonecall.field_res_partner____last_update
 msgid "Last Modified on"
 msgstr "Última modificación en"
 
@@ -940,6 +965,25 @@ msgstr ""
 "Puede utilizar la característica de importación para importar masivamente "
 "una nueva lista de\n"
 "              prospectos para calificar."
+
+#~ msgid "<b> min(s)</b>"
+#~ msgstr "<b> minuto(s)</b>"
+
+#~ msgid "<span>Convert<br/>To Opportunity</span>"
+#~ msgstr "<span>Convertir<br/>A Oportunidad</span>"
+
+#~ msgid "<span>Schedule<br/>A Meeting</span>"
+#~ msgstr "<span>Programar<br/>Una Reunión</span>"
+
+#~ msgid "<span>Schedule<br/>Other Call</span>"
+#~ msgstr "<span>Programar<br/>Otra Llamada</span>"
+
+#~ msgid ""
+#~ "By default form view is disabled for calls, with this setting it is "
+#~ "enabled for all users."
+#~ msgstr ""
+#~ "La vista de formulario está desactivado para llamadas por defecto, con "
+#~ "esta configuración estará activado para todos los usuarios."
 
 #~ msgid "Event"
 #~ msgstr "Evento"
