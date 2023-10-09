@@ -18,6 +18,21 @@ msgstr ""
 "X-Generator: Poedit 1.8.7.1\n"
 
 #. module: crm_l10n_eu_nace
+#: model:ir.model.fields,field_description:crm_l10n_eu_nace.field_crm_lead__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: crm_l10n_eu_nace
+#: model:ir.model.fields,field_description:crm_l10n_eu_nace.field_crm_lead__id
+msgid "ID"
+msgstr ""
+
+#. module: crm_l10n_eu_nace
+#: model:ir.model.fields,field_description:crm_l10n_eu_nace.field_crm_lead____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: crm_l10n_eu_nace
 #: model:ir.model,name:crm_l10n_eu_nace.model_crm_lead
 msgid "Lead/Opportunity"
 msgstr "Iniciativa/Oportunidad"
