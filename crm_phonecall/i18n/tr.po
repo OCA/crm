@@ -84,7 +84,8 @@ msgstr "Satış Ekibi Tarafından"
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_res_config_settings__group_show_form_view
 msgid "By default form is disabled for calls, with this group it is enabled."
-msgstr "Çağrılar için varsayılan olarak form devre dışıdır, bu grupla etkindir."
+msgstr ""
+"Çağrılar için varsayılan olarak form devre dışıdır, bu grupla etkindir."
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.res_config_settings_view_form
