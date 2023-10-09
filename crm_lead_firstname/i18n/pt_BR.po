@@ -25,6 +25,11 @@ msgid "Contact Name"
 msgstr "Nome de Contato"
 
 #. module: crm_lead_firstname
+#: model:ir.model.fields,field_description:crm_lead_firstname.field_crm_lead__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: crm_lead_firstname
 #: model:ir.model.fields,field_description:crm_lead_firstname.field_crm_lead__contact_name
 msgid "First name"
 msgstr "Primeiro Nome"
@@ -33,6 +38,16 @@ msgstr "Primeiro Nome"
 #: model_terms:ir.ui.view,arch_db:crm_lead_firstname.crm_lead_view_form
 msgid "Firstname"
 msgstr "Primeironome"
+
+#. module: crm_lead_firstname
+#: model:ir.model.fields,field_description:crm_lead_firstname.field_crm_lead__id
+msgid "ID"
+msgstr ""
+
+#. module: crm_lead_firstname
+#: model:ir.model.fields,field_description:crm_lead_firstname.field_crm_lead____last_update
+msgid "Last Modified on"
+msgstr ""
 
 #. module: crm_lead_firstname
 #: model:ir.model.fields,field_description:crm_lead_firstname.field_crm_lead__contact_lastname
