@@ -17,21 +17,6 @@ msgstr ""
 "X-Generator: Weblate 4.3.2\n"
 
 #. module: crm_lead_code
-#: model:ir.model.fields,field_description:crm_lead_code.field_crm_lead__display_name
-msgid "Display Name"
-msgstr "Mostrar Nombre"
-
-#. module: crm_lead_code
-#: model:ir.model.fields,field_description:crm_lead_code.field_crm_lead__id
-msgid "ID"
-msgstr "ID"
-
-#. module: crm_lead_code
-#: model:ir.model.fields,field_description:crm_lead_code.field_crm_lead____last_update
-msgid "Last Modified on"
-msgstr "Última Modificación el"
-
-#. module: crm_lead_code
 #: model:ir.model.fields,field_description:crm_lead_code.field_crm_lead__code
 msgid "Lead Number"
 msgstr "Número de Iniciativa"
@@ -47,3 +32,12 @@ msgstr "Iniciativa/Oportunidad"
 #, python-format
 msgid "The code must be unique!"
 msgstr "¡El código debe ser único!"
+
+#~ msgid "Display Name"
+#~ msgstr "Mostrar Nombre"
+
+#~ msgid "ID"
+#~ msgstr "ID"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Última Modificación el"
