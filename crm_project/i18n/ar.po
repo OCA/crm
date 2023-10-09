@@ -53,11 +53,6 @@ msgid "Created on"
 msgstr "أنشئ في"
 
 #. module: crm_project
-#: model:ir.model.fields,field_description:crm_project.field_crm_lead_convert2task__partner_id
-msgid "Customer"
-msgstr "العميل"
-
-#. module: crm_project
 #: model:ir.model.fields,field_description:crm_project.field_crm_lead_convert2task__display_name
 msgid "Display Name"
 msgstr "الاسم المعروض"
@@ -97,10 +92,11 @@ msgstr "تحويل الترشيح لمهمة"
 msgid "Project"
 msgstr "المشروع"
 
-#. module: crm_project
-#: model:ir.model.fields,field_description:crm_project.field_crm_lead_convert2task__action
-msgid "Related Customer"
-msgstr "العميل المقترن"
+#~ msgid "Customer"
+#~ msgstr "العميل"
+
+#~ msgid "Related Customer"
+#~ msgstr "العميل المقترن"
 
 #~ msgid ""
 #~ "<span class=\"o_stat_text\">Convert To</span>\n"
