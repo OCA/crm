@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* crm_secondary_salesperson
+# 	* crm_secondary_salesperson
 #
 msgid ""
 msgstr ""
@@ -28,5 +28,6 @@ msgstr "Comercial secundario"
 
 #. module: crm_secondary_salesperson
 #: sql_constraint:crm.lead:0
-msgid "The secondary salesperson must be different from the primary salesperson!"
+msgid ""
+"The secondary salesperson must be different from the primary salesperson!"
 msgstr "¡El comercial secundario debe ser diferente del comercial principal!"
