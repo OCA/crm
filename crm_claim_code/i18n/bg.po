@@ -27,6 +27,21 @@ msgid "Claim Number"
 msgstr "Жалба Номер"
 
 #. module: crm_claim_code
-#: sql_constraint:crm.claim:0
+#: model:ir.model.fields,field_description:crm_claim_code.field_crm_claim__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: crm_claim_code
+#: model:ir.model.fields,field_description:crm_claim_code.field_crm_claim__id
+msgid "ID"
+msgstr ""
+
+#. module: crm_claim_code
+#: model:ir.model.fields,field_description:crm_claim_code.field_crm_claim____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: crm_claim_code
+#: model:ir.model.constraint,message:crm_claim_code.constraint_crm_claim_crm_claim_unique_code
 msgid "The code must be unique!"
 msgstr "Номерът трябва да е уникален!"
