@@ -1,14 +1,14 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * crm_project
-# 
+#
 # Translators:
 # Martin Trigaux, 2018
 # Wanradt Koell <wanradt@gmail.com>, 2018
 # Eneli Õigus <enelioigus@gmail.com>, 2018
 # Martin Aavastik <martin@avalah.ee>, 2018
 # Helen Sulaoja <helen@avalah.ee>, 2018
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server saas~11.5\n"
@@ -17,20 +17,11 @@ msgstr ""
 "PO-Revision-Date: 2018-08-24 09:17+0000\n"
 "Last-Translator: Helen Sulaoja <helen@avalah.ee>, 2018\n"
 "Language-Team: Estonian (https://www.transifex.com/odoo/teams/41243/et/)\n"
+"Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Language: et\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
-#. module: crm_project
-#: model_terms:ir.ui.view,arch_db:crm_project.crm_lead_view_form
-msgid ""
-"<span class=\"o_stat_text\">Convert To</span>\n"
-"                            <span class=\"o_stat_text\">Task</span>"
-msgstr ""
-"<span class=\"o_stat_text\">Muuda</span>\n"
-"                            <span class=\"o_stat_text\">ülesandeks</span>"
 
 #. module: crm_project
 #: model_terms:ir.ui.view,arch_db:crm_project.crm_lead_convert2task_view_form
@@ -50,11 +41,6 @@ msgid "Create Task"
 msgstr "Loo ülesanne"
 
 #. module: crm_project
-#: selection:crm.lead.convert2task,action:0
-msgid "Create a new customer"
-msgstr "Loo uus klient"
-
-#. module: crm_project
 #: model:ir.model.fields,field_description:crm_project.field_crm_lead_convert2task__create_uid
 msgid "Created by"
 msgstr "Loonud"
@@ -65,19 +51,9 @@ msgid "Created on"
 msgstr "Loomise kuupäev"
 
 #. module: crm_project
-#: model:ir.model.fields,field_description:crm_project.field_crm_lead_convert2task__partner_id
-msgid "Customer"
-msgstr "Klient"
-
-#. module: crm_project
 #: model:ir.model.fields,field_description:crm_project.field_crm_lead_convert2task__display_name
 msgid "Display Name"
 msgstr "Näidatav nimi"
-
-#. module: crm_project
-#: selection:crm.lead.convert2task,action:0
-msgid "Do not link to a customer"
-msgstr "Ära seo kliendiga"
 
 #. module: crm_project
 #: model:ir.model.fields,field_description:crm_project.field_crm_lead_convert2task__id
@@ -110,16 +86,28 @@ msgid "Lead convert to Task"
 msgstr ""
 
 #. module: crm_project
-#: selection:crm.lead.convert2task,action:0
-msgid "Link to an existing customer"
-msgstr "Seo olemasoleva kliendiga"
-
-#. module: crm_project
 #: model:ir.model.fields,field_description:crm_project.field_crm_lead_convert2task__project_id
 msgid "Project"
 msgstr "Projektid"
 
-#. module: crm_project
-#: model:ir.model.fields,field_description:crm_project.field_crm_lead_convert2task__action
-msgid "Related Customer"
-msgstr "Related Customer"
+#~ msgid ""
+#~ "<span class=\"o_stat_text\">Convert To</span>\n"
+#~ "                            <span class=\"o_stat_text\">Task</span>"
+#~ msgstr ""
+#~ "<span class=\"o_stat_text\">Muuda</span>\n"
+#~ "                            <span class=\"o_stat_text\">ülesandeks</span>"
+
+#~ msgid "Create a new customer"
+#~ msgstr "Loo uus klient"
+
+#~ msgid "Customer"
+#~ msgstr "Klient"
+
+#~ msgid "Do not link to a customer"
+#~ msgstr "Ära seo kliendiga"
+
+#~ msgid "Link to an existing customer"
+#~ msgstr "Seo olemasoleva kliendiga"
+
+#~ msgid "Related Customer"
+#~ msgstr "Related Customer"

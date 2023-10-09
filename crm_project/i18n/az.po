@@ -43,11 +43,6 @@ msgid "Created on"
 msgstr ""
 
 #. module: crm_project
-#: model:ir.model.fields,field_description:crm_project.field_crm_lead_convert2task__partner_id
-msgid "Customer"
-msgstr ""
-
-#. module: crm_project
 #: model:ir.model.fields,field_description:crm_project.field_crm_lead_convert2task__display_name
 msgid "Display Name"
 msgstr ""
@@ -85,9 +80,4 @@ msgstr ""
 #. module: crm_project
 #: model:ir.model.fields,field_description:crm_project.field_crm_lead_convert2task__project_id
 msgid "Project"
-msgstr ""
-
-#. module: crm_project
-#: model:ir.model.fields,field_description:crm_project.field_crm_lead_convert2task__action
-msgid "Related Customer"
 msgstr ""
