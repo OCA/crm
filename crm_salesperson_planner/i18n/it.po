@@ -120,7 +120,8 @@ msgstr "Annullata"
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,help:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__is_organizer_alone
 msgid ""
-"Check if the organizer is alone in the event, i.e. if the organizer is the only one that hasn't declined\n"
+"Check if the organizer is alone in the event, i.e. if the organizer is the "
+"only one that hasn't declined\n"
 "        the event (only if the organizer is not the only attendee)"
 msgstr ""
 "Controlla se l'organizzatore è l'unico nell'evento, cioè se l'organizzatore "
@@ -417,8 +418,12 @@ msgstr ""
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,help:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__show_as
 msgid ""
-"If the time is shown as 'busy', this event will be visible to other people with either the full         information or simply 'busy' written depending on its privacy. Use this option to let other people know         that you are unavailable during that period of time. \n"
-" If the event is shown as 'free', other users know         that you are available during that period of time."
+"If the time is shown as 'busy', this event will be visible to other people "
+"with either the full         information or simply 'busy' written depending "
+"on its privacy. Use this option to let other people know         that you "
+"are unavailable during that period of time. \n"
+" If the event is shown as 'free', other users know         that you are "
+"available during that period of time."
 msgstr ""
 "Se l'ora è visualizzata come \"occupata\", questo evento sarà visibile ad "
 "altre persone con tutte          le informazioni o semplicemente con la "
@@ -972,7 +977,6 @@ msgid "The visit must be in confirmed state"
 msgstr "La visita deve essere in stato confermato"
 
 #. module: crm_salesperson_planner
-#: code:addons/crm_salesperson_planner/models/crm_salesperson_planner_visit.py:0
 #: code:addons/crm_salesperson_planner/models/crm_salesperson_planner_visit.py:0
 #, python-format
 msgid "The visit must be in draft or validated state"
