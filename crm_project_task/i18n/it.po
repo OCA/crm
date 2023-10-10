@@ -142,8 +142,8 @@ msgid ""
 "Task <a href=# data-oe-model=project.task data-oe-id=%(task)d>%(name)s</a> "
 "created."
 msgstr ""
-"Creato lavoro <a href=# data-oe-model=project.task data-oe-"
-"id=%(task)d>%(name)s</a>."
+"Creato lavoro <a href=# data-oe-model=project.task data-oe-id=%(task)d>"
+"%(name)s</a>."
 
 #. module: crm_project_task
 #: model:ir.model.fields,field_description:crm_project_task.field_crm_create_task__task_name

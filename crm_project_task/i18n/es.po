@@ -157,8 +157,8 @@ msgid ""
 "Task created from lead/opportunity <a href=# data-oe-model=crm.lead data-oe-"
 "id=%(lead)d>%(name)s</a>."
 msgstr ""
-"Tarea creada desde la iniciativa/oportunidad <a href=# data-oe-"
-"model=crm.lead data-oe-id=%(lead)d>%(name)s</a>."
+"Tarea creada desde la iniciativa/oportunidad <a href=# data-oe-model=crm."
+"lead data-oe-id=%(lead)d>%(name)s</a>."
 
 #. module: crm_project_task
 #: model_terms:ir.ui.view,arch_db:crm_project_task.inherit_crm_lead_view_form_crm_project_task
