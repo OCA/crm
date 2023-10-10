@@ -9,15 +9,15 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-04 15:47+0000\n"
-"PO-Revision-Date: 2019-12-27 14:13+0000\n"
-"Last-Translator: Carles Antoli <carlesantoli@hotmail.com>\n"
+"PO-Revision-Date: 2023-10-10 22:55+0000\n"
+"Last-Translator: Ivorra78 <informatica@totmaterial.es>\n"
 "Language-Team: Spanish (https://www.transifex.com/oca/teams/23907/es/)\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.10\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: marketing_crm_partner
 #: model:ir.model.fields,field_description:marketing_crm_partner.field_res_partner__campaign_id
@@ -38,7 +38,7 @@ msgstr "Iniciativa/Oportunidad"
 #. module: marketing_crm_partner
 #: model_terms:ir.ui.view,arch_db:marketing_crm_partner.view_partner_form
 msgid "Marketing"
-msgstr "Marketing"
+msgstr "Comercialización"
 
 #. module: marketing_crm_partner
 #: model:ir.model.fields,field_description:marketing_crm_partner.field_res_partner__medium_id
@@ -58,11 +58,16 @@ msgid ""
 "This is a name that helps you keep track of your different campaign efforts, "
 "e.g. Fall_Drive, Christmas_Special"
 msgstr ""
+"Se trata de un nombre que le ayuda a realizar un seguimiento de los "
+"esfuerzos de sus diferentes campañas, por ejemplo, Fall_Drive, "
+"Christmas_Special"
 
 #. module: marketing_crm_partner
 #: model:ir.model.fields,help:marketing_crm_partner.field_res_partner__medium_id
 msgid "This is the method of delivery, e.g. Postcard, Email, or Banner Ad"
 msgstr ""
+"Es el método de entrega, por ejemplo, tarjeta postal, correo electrónico o "
+"anuncio en banner"
 
 #. module: marketing_crm_partner
 #: model:ir.model.fields,help:marketing_crm_partner.field_res_partner__source_id
@@ -70,6 +75,8 @@ msgid ""
 "This is the source of the link, e.g. Search Engine, another domain, or name "
 "of email list"
 msgstr ""
+"Es la fuente del enlace, por ejemplo, un motor de búsqueda, otro dominio o "
+"el nombre de una lista de correo electrónico"
 
 #~ msgid "Partner"
 #~ msgstr "Cliente"
