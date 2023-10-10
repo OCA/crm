@@ -43,6 +43,7 @@ msgid "Secondary Industries"
 msgstr "Indústrias Secundárias"
 
 #. module: crm_industry
+#. odoo-python
 #: code:addons/crm_industry/models/crm_lead.py:0
 #, python-format
 msgid "The secondary industries must be different from the main industry."
