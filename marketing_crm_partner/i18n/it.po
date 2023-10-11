@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-04 15:47+0000\n"
-"PO-Revision-Date: 2023-06-12 16:09+0000\n"
+"PO-Revision-Date: 2023-10-11 08:38+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: Italian (https://www.transifex.com/oca/teams/23907/it/)\n"
 "Language: it\n"
@@ -58,11 +58,13 @@ msgid ""
 "This is a name that helps you keep track of your different campaign efforts, "
 "e.g. Fall_Drive, Christmas_Special"
 msgstr ""
+"Questo è un nome che aiuta a tenere traccia dell'impegno nelle diverse "
+"campagne, es. Fall_drive, Christmas_special"
 
 #. module: marketing_crm_partner
 #: model:ir.model.fields,help:marketing_crm_partner.field_res_partner__medium_id
 msgid "This is the method of delivery, e.g. Postcard, Email, or Banner Ad"
-msgstr ""
+msgstr "Metodo di consegna: es. lettera, e-mail o banner pubblicitario"
 
 #. module: marketing_crm_partner
 #: model:ir.model.fields,help:marketing_crm_partner.field_res_partner__source_id
@@ -70,3 +72,5 @@ msgid ""
 "This is the source of the link, e.g. Search Engine, another domain, or name "
 "of email list"
 msgstr ""
+"Questa è l'origine del collegamento, es. motore di ricerca, altro dominio o "
+"il nome di una mailing list"
