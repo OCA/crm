@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-06 08:33+0000\n"
-"PO-Revision-Date: 2023-10-09 09:10+0000\n"
-"Last-Translator: Ivorra78 <informatica@totmaterial.es>\n"
+"PO-Revision-Date: 2023-10-29 07:04+0000\n"
+"Last-Translator: kikopeiro <francisco.peiro@factorlibre.com>\n"
 "Language-Team: Spanish (https://www.transifex.com/oca/teams/23907/es/)\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
@@ -171,7 +171,7 @@ msgstr "Etapas reclamaciones"
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__name
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__subject
 msgid "Claim Subject"
-msgstr "Objeto de la reclamación"
+msgstr "Asunto de la reclamación"
 
 #. module: crm_claim
 #: model:ir.model,name:crm_claim.model_crm_claim_stage
@@ -422,7 +422,6 @@ msgstr "Si está marcado, hay nuevos mensajes que requieren su atención."
 
 #. module: crm_claim
 #: model:ir.model.fields,help:crm_claim.field_crm_claim__message_has_error
-#: model:ir.model.fields,help:crm_claim.field_crm_claim__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
 msgstr "Si está marcado, algún mensaje tiene error de envío."
 
@@ -701,11 +700,6 @@ msgid "Root Causes"
 msgstr "Causas principales"
 
 #. module: crm_claim
-#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_has_sms_error
-msgid "SMS Delivery error"
-msgstr "Error de entrega de SMS"
-
-#. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__team_id
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category__team_id
 #: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
@@ -856,6 +850,9 @@ msgstr ""
 "            reclamación introducida en el sistema. Las etapas definen todos "
 "los pasos\n"
 "            necesarios para la resolución de una reclamación."
+
+#~ msgid "SMS Delivery error"
+#~ msgstr "Error de entrega de SMS"
 
 #~ msgid "Number of messages which requires an action"
 #~ msgstr "Número de mensajes que requieren una acción"
