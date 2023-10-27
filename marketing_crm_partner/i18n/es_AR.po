@@ -9,16 +9,16 @@ msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-26 03:41+0000\n"
-"PO-Revision-Date: 2021-07-09 21:49+0000\n"
+"PO-Revision-Date: 2023-10-29 08:26+0000\n"
 "Last-Translator: Ignacio Buioli <ibuioli@gmail.com>\n"
-"Language-Team: Spanish (Argentina) (https://www.transifex.com/oca/"
-"teams/23907/es_AR/)\n"
+"Language-Team: Spanish (Argentina) (https://www.transifex.com/oca/teams/"
+"23907/es_AR/)\n"
 "Language: es_AR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.3.2\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: marketing_crm_partner
 #: model:ir.model.fields,field_description:marketing_crm_partner.field_res_partner__campaign_id
@@ -35,19 +35,19 @@ msgstr "Contacto"
 #: model:ir.model.fields,field_description:marketing_crm_partner.field_crm_lead__display_name
 #: model:ir.model.fields,field_description:marketing_crm_partner.field_res_partner__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Mostrar Nombre"
 
 #. module: marketing_crm_partner
 #: model:ir.model.fields,field_description:marketing_crm_partner.field_crm_lead__id
 #: model:ir.model.fields,field_description:marketing_crm_partner.field_res_partner__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: marketing_crm_partner
 #: model:ir.model.fields,field_description:marketing_crm_partner.field_crm_lead____last_update
 #: model:ir.model.fields,field_description:marketing_crm_partner.field_res_partner____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Última Modificación el"
 
 #. module: marketing_crm_partner
 #: model:ir.model,name:marketing_crm_partner.model_crm_lead
@@ -77,11 +77,15 @@ msgid ""
 "This is a name that helps you keep track of your different campaign efforts, "
 "e.g. Fall_Drive, Christmas_Special"
 msgstr ""
+"Este es un nombre que lo ayuda a realizar un seguimiento de sus diferentes "
+"esfuerzos de campaña, ej. Liquidación_Otoño, Especial_Navidad"
 
 #. module: marketing_crm_partner
 #: model:ir.model.fields,help:marketing_crm_partner.field_res_partner__medium_id
 msgid "This is the method of delivery, e.g. Postcard, Email, or Banner Ad"
 msgstr ""
+"Este es el método de entrega, ej. Tarjeta Postal, Correo Electrónico o "
+"Banner Publicitario"
 
 #. module: marketing_crm_partner
 #: model:ir.model.fields,help:marketing_crm_partner.field_res_partner__source_id
@@ -89,3 +93,5 @@ msgid ""
 "This is the source of the link, e.g. Search Engine, another domain, or name "
 "of email list"
 msgstr ""
+"Este es el origen del enlace, ej. Motor de Búsqueda, Otro Dominio o el "
+"Nombre de la lista de correo electrónico"
