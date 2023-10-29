@@ -401,9 +401,7 @@ msgstr "Si está marcado, hay nuevos mensajes que requieren su atención."
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,help:crm_salesperson_planner.field_crm_salesperson_planner_visit__message_has_error
-#: model:ir.model.fields,help:crm_salesperson_planner.field_crm_salesperson_planner_visit__message_has_sms_error
 #: model:ir.model.fields,help:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__message_has_error
-#: model:ir.model.fields,help:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
 msgstr "Si se encuentra marcado, algunos mensajes tienen error de envío."
 
@@ -811,12 +809,6 @@ msgid "Responsible User"
 msgstr "Usuario responsable"
 
 #. module: crm_salesperson_planner
-#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit__message_has_sms_error
-#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__message_has_sms_error
-msgid "SMS Delivery error"
-msgstr "SMS de error en la entrega"
-
-#. module: crm_salesperson_planner
 #: model_terms:ir.ui.view,arch_db:crm_salesperson_planner.crm_salesperson_planner_visit_template_form_view
 #: model_terms:ir.ui.view,arch_db:crm_salesperson_planner.partner_view_crm_salesperson_planner
 msgid "Sales Visits"
@@ -1146,6 +1138,9 @@ msgstr "Día de la semana"
 #: model:ir.model,name:crm_salesperson_planner.model_crm_salesperson_planner_visit_template_create
 msgid "crm salesperson planner visit template create"
 msgstr "Crear plantilla de visita al planificador de vendedores de CRM"
+
+#~ msgid "SMS Delivery error"
+#~ msgstr "SMS de error en la entrega"
 
 #~ msgid "Attendee"
 #~ msgstr "Asistente"
