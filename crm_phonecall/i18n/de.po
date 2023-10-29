@@ -375,7 +375,6 @@ msgstr "Wenn es gesetzt ist, erfordern neue Nachrichten Ihre Aufmerksamkeit."
 
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__message_has_error
-#: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
 msgstr ""
 "Wenn es gesetzt ist, gibt es einige Nachrichten mit einem Übertragungsfehler."
@@ -739,12 +738,6 @@ msgid "Responsible"
 msgstr "Verantwortlich"
 
 #. module: crm_phonecall
-#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_has_sms_error
-#, fuzzy
-msgid "SMS Delivery error"
-msgstr "Nachrichten-Übertragungsfehler"
-
-#. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__team_id
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__team_id
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
@@ -913,6 +906,10 @@ msgid ""
 msgstr ""
 "Sie können die Import-Funktion verwenden, um eine Liste von zu prüfenden "
 "Chancen zu importieren."
+
+#, fuzzy
+#~ msgid "SMS Delivery error"
+#~ msgstr "Nachrichten-Übertragungsfehler"
 
 #~ msgid "<b> min(s)</b>"
 #~ msgstr "<b> Min.</b>"
