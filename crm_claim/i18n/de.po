@@ -416,7 +416,6 @@ msgstr ""
 
 #. module: crm_claim
 #: model:ir.model.fields,help:crm_claim.field_crm_claim__message_has_error
-#: model:ir.model.fields,help:crm_claim.field_crm_claim__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
 msgstr ""
 "Wenn dieses Kontrollkästchen aktiviert ist, weisen einige Nachrichten einen "
@@ -702,11 +701,6 @@ msgid "Root Causes"
 msgstr "Grundursachen"
 
 #. module: crm_claim
-#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_has_sms_error
-msgid "SMS Delivery error"
-msgstr "SMS Zustellfehler"
-
-#. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__team_id
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category__team_id
 #: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
@@ -872,6 +866,9 @@ msgstr ""
 "            Reklamation im System zu kategorisieren. Die Stadien definieren "
 "alle Schritte, die\n"
 "            für die Lösung einer Reklamation erforderlich sind."
+
+#~ msgid "SMS Delivery error"
+#~ msgstr "SMS Zustellfehler"
 
 #~ msgid "Actions"
 #~ msgstr "Aktionen"

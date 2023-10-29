@@ -422,7 +422,6 @@ msgstr "Si está marcado, hay nuevos mensajes que requieren su atención."
 
 #. module: crm_claim
 #: model:ir.model.fields,help:crm_claim.field_crm_claim__message_has_error
-#: model:ir.model.fields,help:crm_claim.field_crm_claim__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
 msgstr "Si está marcado, algún mensaje tiene error de envío."
 
@@ -703,11 +702,6 @@ msgid "Root Causes"
 msgstr "Causas principales"
 
 #. module: crm_claim
-#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_has_sms_error
-msgid "SMS Delivery error"
-msgstr "Error de entrega de SMS"
-
-#. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__team_id
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category__team_id
 #: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
@@ -872,6 +866,9 @@ msgstr ""
 "Puede crear etapas de reclamaciones para categorizar el estado de cada "
 "reclamación introducida en el sistema. Las etapas definen todos los pasos "
 "requeridos para la resolución de la reclamación."
+
+#~ msgid "SMS Delivery error"
+#~ msgstr "Error de entrega de SMS"
 
 #~ msgid ""
 #~ "Create claim categories to better manage and classify your\n"

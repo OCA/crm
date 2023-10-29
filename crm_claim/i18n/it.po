@@ -415,7 +415,6 @@ msgstr "Se selezionata, nuovi messaggi richiedono attenzione."
 
 #. module: crm_claim
 #: model:ir.model.fields,help:crm_claim.field_crm_claim__message_has_error
-#: model:ir.model.fields,help:crm_claim.field_crm_claim__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
 msgstr "Se selezionata, alcuni messaggi hanno un errore di consegna."
 
@@ -697,11 +696,6 @@ msgid "Root Causes"
 msgstr "Cause radice"
 
 #. module: crm_claim
-#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_has_sms_error
-msgid "SMS Delivery error"
-msgstr "Errore consegna SMS"
-
-#. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__team_id
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category__team_id
 #: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
@@ -867,3 +861,6 @@ msgstr ""
 "                reclamo inserito nel sistema. Le fasi definiscono tutti i "
 "passi richiesti\n"
 "                per la soluzione di un reclamo."
+
+#~ msgid "SMS Delivery error"
+#~ msgstr "Errore consegna SMS"
