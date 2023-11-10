@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="sales_team_crm_team_view_kanban_dashboard" model="ir.ui.view">
+        <field name="name">sales_team.team.view.kanban.dashboard.inherit.sale</field>
+        <field name="model">crm.team</field>
+        <field name="inherit_id" ref="sales_team.crm_team_view_kanban_dashboard" />
+        <field name="arch" type="xml">
+            <button name="action_primary_channel_button" position="attributes">
+                <attribute
+                    name="groups"
+                >crm_security_group.group_crm_own_leads</attribute>
+            </button>
+        </field>
+    </record>
+    <record id="sale_crm_team_view_kanban_dashboard" model="ir.ui.view">
+        <field name="name">sale_crm.team.view.kanban.dashboard.inherit.sale</field>
+        <field name="model">crm.team</field>
+        <field name="inherit_id" ref="sale.crm_team_view_kanban_dashboard" />
+        <field name="arch" type="xml">
+            <field name="use_quotations" position="attributes">
+                <attribute name="groups">sales_team.group_sale_salesman</attribute>
+            </field>
+            <field name="invoiced_target" position="attributes">
+                <attribute name="groups">sales_team.group_sale_salesman</attribute>
+            </field>
+            <xpath
+                expr="//div[@t-if='record.quotations_count.raw_value']"
+                position="attributes"
+            >
+                <attribute name="groups">sales_team.group_sale_salesman</attribute>
+            </xpath>
+            <xpath expr="//div[@name='orders_to_invoice']" position="attributes">
+                <attribute name="groups">sales_team.group_sale_salesman</attribute>
+            </xpath>
+            <xpath
+                expr="//div[@t-if='record.use_quotations.raw_value']"
+                position="attributes"
+            >
+                <attribute name="groups">sales_team.group_sale_salesman</attribute>
+            </xpath>
+            <xpath expr="//div[@name='sales_report']" position="attributes">
+                <attribute name="groups">sales_team.group_sale_salesman</attribute>
+            </xpath>
+        </field>
+    </record>
+    <record id="crm_team_view_kanban_dashboard" model="ir.ui.view">
+        <field name="name">crm.team.view.kanban.dashboard.inherit.sale</field>
+        <field name="model">crm.team</field>
+        <field name="inherit_id" ref="crm.crm_team_view_kanban_dashboard" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//div[@t-if='record.lead_unassigned_count.raw_value']"
+                position="attributes"
+            >
+                <attribute
+                    name="groups"
+                >crm_security_group.group_crm_own_leads</attribute>
+            </xpath>
+            <xpath
+                expr="//div[@t-if='record.opportunities_count.raw_value']"
+                position="attributes"
+            >
+                <attribute
+                    name="groups"
+                >crm_security_group.group_crm_own_leads</attribute>
+            </xpath>
+            <xpath
+                expr="//div[@t-if='record.opportunities_overdue_count.raw_value']"
+                position="attributes"
+            >
+                <attribute
+                    name="groups"
+                >crm_security_group.group_crm_own_leads</attribute>
+            </xpath>
+            <xpath
+                expr="//div[@t-if='record.use_opportunities.raw_value']"
+                position="attributes"
+            >
+                <attribute
+                    name="groups"
+                >crm_security_group.group_crm_own_leads</attribute>
+            </xpath>
+            <xpath expr="//div[@name='activity_report']" position="attributes">
+                <attribute
+                    name="groups"
+                >crm_security_group.group_crm_own_leads</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>
