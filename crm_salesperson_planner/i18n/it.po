@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2023-10-13 11:39+0000\n"
-"Last-Translator: Francesco Foresti <francesco.foresti@ooops404.com>\n"
+"PO-Revision-Date: 2023-11-12 16:39+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
@@ -152,19 +152,19 @@ msgstr "Motivo chiusura"
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit__close_reason_image
 msgid "Close Reason Image"
-msgstr "Chiudi immagine motivo"
+msgstr "Immagine motivo chiusura"
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit__close_reason_notes
 msgid "Close Reason Notes"
-msgstr "Chiudi note motivo"
+msgstr "Note motivo chiusura"
 
 #. module: crm_salesperson_planner
 #: model:ir.actions.act_window,name:crm_salesperson_planner.crm_salesperson_planner_visit_close_reason_action
 #: model:ir.actions.act_window,name:crm_salesperson_planner.crm_salesperson_planner_visit_close_wiz_action
 #: model:ir.ui.menu,name:crm_salesperson_planner.menu_crm_config_salesperson_planner_close_reason
 msgid "Close Reasons"
-msgstr "Chiudi motivi"
+msgstr "Motivi chiusura"
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit__company_id
@@ -259,7 +259,7 @@ msgstr "Descrizione"
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__display_description
 msgid "Display Description"
-msgstr "Descrizione visualizzata"
+msgstr "Visualizza descrizione"
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit__display_name
@@ -701,7 +701,7 @@ msgstr "Telefono"
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__phonecall_id
 msgid "Phonecall"
-msgstr "Telefonata"
+msgstr "Chiamata telefonica"
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__privacy
