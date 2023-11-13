@@ -143,7 +143,7 @@ class CrmClaim(models.Model):
         if self.stage_id:
             self.team_id = self.categ_id.team_id
 
-    @api.model
+    @api.model_create_multi
     def create(self, values):
         ctx = self.env.context.copy()
         if values.get("team_id") and not ctx.get("default_team_id"):
