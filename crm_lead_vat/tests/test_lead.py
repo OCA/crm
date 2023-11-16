@@ -5,14 +5,13 @@ from odoo.tests.common import TransactionCase
 
 
 class LeadCase(TransactionCase):
-    def setUp(self):
-        super(LeadCase, self).setUp()
-        self.lead = self.env["crm.lead"].create(
-            {"name": __file__, "partner_name": "HÎ"}
-        )
-        self.partner = self.env["res.partner"].create({"name": __file__})
-        self.test_field = "ES98765432M"
-        self.test2_field = "11111111H"
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        cls.lead = cls.env["crm.lead"].create({"name": __file__, "partner_name": "HÎ"})
+        cls.partner = cls.env["res.partner"].create({"name": __file__})
+        cls.test_field = "ES98765432M"
+        cls.test2_field = "11111111H"
 
     def test_transfered_values(self):
         """Field gets transfered when creating partner."""
