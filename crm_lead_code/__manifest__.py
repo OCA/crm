@@ -21,7 +21,7 @@
 
 {
     "name": "Sequential Code for Leads / Opportunities",
-    "version": "16.0.1.0.1",
+    "version": "17.0.1.0.1",
     "category": "Customer Relationship Management",
     "author": "Tecnativa, AvanzOSC, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/crm",
