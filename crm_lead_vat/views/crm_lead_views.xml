@@ -15,7 +15,7 @@
                     <span
                         class="fa fa-exclamation-triangle text-warning oe_edit_only"
                         title="By saving this change, the customer vat number will also be updated."
-                        attrs="{'invisible': [('partner_vat_update', '=', False)]}"
+                        invisible="partner_vat_update == False"
                     />
                 </div>
             </xpath>
@@ -30,7 +30,7 @@
                     <span
                         class="fa fa-exclamation-triangle text-warning oe_edit_only"
                         title="By saving this change, the customer vat number will also be updated."
-                        attrs="{'invisible': [('partner_vat_update', '=', False)]}"
+                        invisible="partner_vat_update == False"
                     />
                 </div>
             </xpath>

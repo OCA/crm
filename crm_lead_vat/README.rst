@@ -17,19 +17,20 @@ VAT in leads
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fcrm-lightgray.png?logo=github
-    :target: https://github.com/OCA/crm/tree/16.0/crm_lead_vat
+    :target: https://github.com/OCA/crm/tree/17.0/crm_lead_vat
     :alt: OCA/crm
 .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
-    :target: https://translation.odoo-community.org/projects/crm-16-0/crm-16-0-crm_lead_vat
+    :target: https://translation.odoo-community.org/projects/crm-17-0/crm-17-0-crm_lead_vat
     :alt: Translate me on Weblate
 .. |badge5| image:: https://img.shields.io/badge/runboat-Try%20me-875A7B.png
-    :target: https://runboat.odoo-community.org/builds?repo=OCA/crm&target_branch=16.0
+    :target: https://runboat.odoo-community.org/builds?repo=OCA/crm&target_branch=17.0
     :alt: Try me on Runboat
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
-This module was written to extend the functionality of CRM leads to support
-setting the VAT identification number (https://en.wikipedia.org/wiki/VAT_identification_number).
+This module was written to extend the functionality of CRM leads to
+support setting the VAT identification number
+(https://en.wikipedia.org/wiki/VAT_identification_number).
 
 **Table of contents**
 
@@ -41,11 +42,12 @@ Usage
 
 To use this module, you need to:
 
-* Go to *CRM > Leads*.
-* Open a lead.
-* You will see the new field.
-* If you change vat in partner, it change in lead.
-* If you change vat in lead, a warning will show informing you that if you save, vat change in partner.
+-  Go to *CRM > Leads*.
+-  Open a lead.
+-  You will see the new field.
+-  If you change vat in partner, it change in lead.
+-  If you change vat in lead, a warning will show informing you that if
+   you save, vat change in partner.
 
 Bug Tracker
 ===========
@@ -53,7 +55,7 @@ Bug Tracker
 Bugs are tracked on `GitHub Issues <https://github.com/OCA/crm/issues>`_.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-`feedback <https://github.com/OCA/crm/issues/new?body=module:%20crm_lead_vat%0Aversion:%2016.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+`feedback <https://github.com/OCA/crm/issues/new?body=module:%20crm_lead_vat%0Aversion:%2017.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
 Do not contact contributors directly about support or help with technical issues.
 
@@ -61,25 +63,27 @@ Credits
 =======
 
 Authors
-~~~~~~~
+-------
 
 * Antiun Ingeniería S.L.
 
 Contributors
-~~~~~~~~~~~~
+------------
 
-* Rafael Blasco <rafaelbn@antiun.com>
-* Jairo Llopis <yajo.sk8@gmail.com>
-* Tharathip Chaweewongphan <tharathipc@ecosoft.co.th>
+-  Rafael Blasco <rafaelbn@antiun.com>
+-  Jairo Llopis <yajo.sk8@gmail.com>
+-  Tharathip Chaweewongphan <tharathipc@ecosoft.co.th>
+-  `Tecnativa <https://www.tecnativa.com>`__:
 
-* `Tecnativa <https://www.tecnativa.com>`_:
+   -  Stefan Ungureanu
 
-  * Stefan Ungureanu
+-  Emilio Pascual (`Moduon <https://www.moduon.team/>`__)
+-  `APSL <https://apsl.tech>`__:
 
-* Emilio Pascual (`Moduon <https://www.moduon.team/>`__)
+   -  Antoni Marroig
 
 Maintainers
-~~~~~~~~~~~
+-----------
 
 This module is maintained by the OCA.
 
@@ -99,6 +103,6 @@ Current `maintainer <https://odoo-community.org/page/maintainer-role>`__:
 
 |maintainer-EmilioPascual| 
 
-This module is part of the `OCA/crm <https://github.com/OCA/crm/tree/16.0/crm_lead_vat>`_ project on GitHub.
+This module is part of the `OCA/crm <https://github.com/OCA/crm/tree/17.0/crm_lead_vat>`_ project on GitHub.
 
 You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.
