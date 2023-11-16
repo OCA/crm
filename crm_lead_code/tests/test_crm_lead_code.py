@@ -6,12 +6,13 @@ from odoo.tests.common import TransactionCase
 
 
 class TestCrmLeadCode(TransactionCase):
-    def setUp(self):
-        super(TestCrmLeadCode, self).setUp()
-        self.crm_lead_model = self.env["crm.lead"]
-        self.ir_sequence_model = self.env["ir.sequence"]
-        self.crm_sequence = self.env.ref("crm_lead_code.sequence_lead")
-        self.crm_lead = self.env.ref("crm.crm_case_1")
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
+        cls.crm_lead_model = cls.env["crm.lead"]
+        cls.ir_sequence_model = cls.env["ir.sequence"]
+        cls.crm_sequence = cls.env.ref("crm_lead_code.sequence_lead")
+        cls.crm_lead = cls.env.ref("crm.crm_case_1")
 
     def test_old_lead_code_assign(self):
         crm_leads = self.crm_lead_model.search([])
