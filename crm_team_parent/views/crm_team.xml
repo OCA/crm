@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <!-- Copyright 2018 ACSONE SA/NV
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
 
@@ -7,10 +7,10 @@
     <record model="ir.ui.view" id="crm_team_tree_view">
         <field name="name">crm.team.tree (in crm_team_parent)</field>
         <field name="model">crm.team</field>
-        <field name="inherit_id" ref="sales_team.crm_team_view_tree"/>
+        <field name="inherit_id" ref="sales_team.crm_team_view_tree" />
         <field name="arch" type="xml">
             <xpath expr="//field[@name='user_id']" position="after">
-                <field name="parent_id"/>
+                <field name="parent_id" />
             </xpath>
         </field>
     </record>
@@ -18,18 +18,18 @@
     <record model="ir.ui.view" id="crm_team_form_view">
         <field name="name">crm.team.form (in crm_team_parent)</field>
         <field name="model">crm.team</field>
-        <field name="inherit_id" ref="sales_team.crm_team_view_form"/>
+        <field name="inherit_id" ref="sales_team.crm_team_view_form" />
         <field name="arch" type="xml">
             <field name="user_id" position="after">
-                <field name="parent_id" domain="[('id', '!=', id)]"/>
-                <field name="id" invisible="1"/>
+                <field name="parent_id" domain="[('id', '!=', id)]" />
+                <field name="id" invisible="1" />
             </field>
             <xpath expr="//notebook/page[@name='members']" position="after">
                 <page string="Children Teams" name="children">
                     <field name="child_ids">
                         <tree delete="false" create="false">
-                            <field name="name"/>
-                            <field name="user_id"/>
+                            <field name="name" />
+                            <field name="user_id" />
                         </tree>
                     </field>
                 </page>

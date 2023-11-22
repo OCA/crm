@@ -1,7 +1,7 @@
 # Copyright 2018 ACSONE SA/NV
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo import api, fields, models, _
+from odoo import _, api, fields, models
 from odoo.exceptions import ValidationError
 
 
@@ -33,8 +33,5 @@ class CrmTeam(models.Model):
         for rec in self.filtered("parent_id"):
             if not _check_for_loop(rec, rec):
                 raise ParentLoopError(
-                    _(
-                        "Wrong Parent Team: "
-                        "No loop allowed in the teams' hierarchy."
-                    )
+                    _("Wrong Parent Team: " "No loop allowed in the teams' hierarchy.")
                 )
