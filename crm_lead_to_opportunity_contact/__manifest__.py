@@ -4,7 +4,7 @@
 
 {
     "name": "CRM Lead to opportunity - Contact",
-    "version": "14.0.1.0.0",
+    "version": "16.0.1.0.0",
     "category": "CRM",
     "license": "AGPL-3",
     "summary": "Lead to opportunity: option to create a contact on an existing "
