@@ -27,4 +27,4 @@ class CrmLead2OpportunityPartner(models.TransientModel):
             partner = lead._create_child_partner(self.create_child_partner_id.id)
             lead.write({"partner_id": partner.id})
         else:
-            super()._convert_handle_partner(lead, action, partner_id)
+            return super()._convert_handle_partner(lead, action, partner_id)
