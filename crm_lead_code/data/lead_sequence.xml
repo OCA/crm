@@ -1,0 +1,8 @@
+<odoo noupdate="1">
+    <record id="sequence_lead" model="ir.sequence">
+        <field name="name">Lead Code</field>
+        <field name="code">crm.lead</field>
+        <field eval="4" name="padding" />
+        <field name="prefix">LD</field>
+    </record>
+</odoo>
