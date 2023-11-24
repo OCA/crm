@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 16.0\n"
+"Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -18,7 +18,7 @@ msgstr ""
 msgid ""
 "<span class=\"fa fa-exclamation-triangle text-warning oe_edit_only\" "
 "title=\"By saving this change, the customer vat number will also be "
-"updated.\" attrs=\"{'invisible': [('partner_vat_update', '=', False)]}\"/>"
+"updated.\" invisible=\"partner_vat_update == False\"/>"
 msgstr ""
 
 #. module: crm_lead_vat
