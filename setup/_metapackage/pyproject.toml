@@ -1,7 +1,8 @@
 [project]
 name = "odoo-addons-oca-crm"
-version = "17.0.20231124.0"
+version = "17.0.20231124.1"
 dependencies = [
+    "odoo-addon-crm_lead_code>=17.0dev,<17.1dev",
     "odoo-addon-crm_lead_vat>=17.0dev,<17.1dev",
 ]
 classifiers=[
