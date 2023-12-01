@@ -41,23 +41,22 @@
                 <button
                     icon="fa-calendar"
                     name="action_make_meeting"
-                    states="open,pending"
+                    invisible="state not in ['open', 'pending']"
                     string="Meeting"
                     type="object"
                 />
                 <button
-                    attrs="{'invisible':[('opportunity_id','!=',False)]}"
+                    invisible="opportunity_id or state not in ['open', 'pending']"
                     icon="fa-hand-pointer-o"
                     name="action_button_convert2opportunity"
-                    states="open,pending"
                     string="Convert to Opportunity"
                     type="object"
                 />
                 <field name="partner_phone" />
                 <field name="user_id" />
-                <field invisible="1" name="tag_ids" />
-                <field invisible="1" name="create_date" />
-                <field invisible="1" name="opportunity_id" />
+                <field column_invisible="1" name="tag_ids" />
+                <field column_invisible="1" name="create_date" />
+                <field column_invisible="1" name="opportunity_id" />
                 <field name="state" />
             </tree>
         </field>
@@ -78,7 +77,7 @@
                 <sheet string="Phone Call">
                     <div class="oe_button_box" name="button_box">
                         <button
-                            attrs="{'invisible':[ '|', ('opportunity_id','!=',False), ('state', 'not in', ('open', 'done'))]}"
+                            invisible="opportunity_id or state not in ['open', 'done']"
                             class="oe_stat_button"
                             help="Convert To Opportunity"
                             icon="fa-star"
@@ -194,17 +193,17 @@
                 <field name="date" />
                 <field name="name" />
                 <field name="partner_id" />
-                <field invisible="1" name="partner_phone" />
-                <field invisible="1" name="partner_mobile" />
+                <field column_invisible="1" name="partner_phone" />
+                <field column_invisible="1" name="partner_mobile" />
                 <field
                     context="{'default_groups_ref': ['base.group_user', 'base.group_partner_manager', 'sales_team.group_sale_salesman']}"
                     name="user_id"
                 />
-                <field invisible="1" name="tag_ids" widget="many2many_tags" />
+                <field column_invisible="1" name="tag_ids" widget="many2many_tags" />
                 <field name="direction" />
                 <field name="state" />
-                <field invisible="1" name="create_date" />
-                <field invisible="1" name="opportunity_id" />
+                <field column_invisible="1" name="create_date" />
+                <field column_invisible="1" name="opportunity_id" />
                 <field groups="base.group_no_one" name="campaign_id" />
                 <field groups="base.group_no_one" name="source_id" />
                 <field groups="base.group_no_one" name="medium_id" />
@@ -221,10 +220,9 @@
                     type="object"
                 />
                 <button
-                    attrs="{'invisible':[('opportunity_id','!=',False)]}"
+                    invisible="opportunity_id or state != 'open' or state != 'pending'"
                     icon="fa-hand-pointer-o"
                     name="action_button_convert2opportunity"
-                    states="open,pending"
                     string="Convert to Opportunity"
                     type="object"
                 />

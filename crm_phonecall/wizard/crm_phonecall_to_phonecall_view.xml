@@ -8,13 +8,13 @@
                 <group>
                     <group>
                         <field name="action" />
-                        <field attrs="{'readonly': [(1,'=',1)]}" name="partner_id" />
+                        <field readonly="1" name="partner_id" />
                         <field groups="sales_team.group_sale_salesman" name="team_id" />
                     </group>
                     <group>
                         <field name="name" />
                         <field
-                            attrs="{'invisible': [('action','=','log')]}"
+                            invisible="action == 'log'"
                             name="date"
                             string="Planned Date"
                         />
@@ -27,14 +27,14 @@
                 </group>
                 <footer>
                     <button
-                        attrs="{'invisible' : [('action', '!=', 'log')]}"
+                        invisible="action != 'log'"
                         class="oe_highlight"
                         name="action_schedule"
                         string="Log Call"
                         type="object"
                     />
                     <button
-                        attrs="{'invisible' : [('action', '!=', 'schedule')]}"
+                        invisible="action != 'schedule'"
                         class="oe_highlight"
                         name="action_schedule"
                         string="Schedule Call"
