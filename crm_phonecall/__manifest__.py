@@ -3,7 +3,7 @@
 
 {
     "name": "CRM Phone Calls",
-    "version": "16.0.1.1.0",
+    "version": "17.0.1.0.0",
     "category": "Customer Relationship Management",
     "author": "Odoo S.A., Tecnativa, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/crm",

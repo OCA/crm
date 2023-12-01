@@ -11,3 +11,5 @@
   - Iván Todorovich \<<ivan.todorovich@druidoo.io>\>
   - Manuel Marquez \<<manuel.marquez@druidoo.io>\>
 - Ruchir Shukla \<<ruchir@bizzappdev.com>\>
+- [APSL-Nagarro](https://apsl.tech):
+  - Antoni Marroig  \<<amarroig@apsl.net>\>
