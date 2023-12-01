@@ -89,6 +89,9 @@ Contributors
 
 -  Eduardo de Miguel (`Moduon <https://www.moduon.team/>`__)
 -  Rafael Blasco (`Moduon <https://www.moduon.team/>`__)
+-  `APSL <https://apsl.tech>`__:
+
+   -  Antoni Marroig <amarroig@apsl.net>
 
 Other credits
 -------------
