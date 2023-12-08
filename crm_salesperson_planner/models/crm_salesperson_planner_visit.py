@@ -160,6 +160,11 @@ class CrmSalespersonPlannerVisit(models.Model):
                 item._prepare_calendar_event_vals()
             )
             if event:
+                # Since this commit https://github.com/odoo/odoo/commit/
+                # 71dc58acfcc4589bc5996b48e157aea6b0f8a609 Odoo remove the event
+                # calendar linked to a mail activity. To avoid Odoo remove the calendar
+                # event we disassociate the event and activity.
+                event.activity_ids.calendar_event_id = False
                 event.activity_ids.unlink()
                 item.calendar_event_id = event
             events += event
