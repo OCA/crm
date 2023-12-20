@@ -11,7 +11,7 @@
             >
                 <field name="is_stage_probability" invisible="1" />
                 <button
-                    class="btn btn-link"
+                    class="ps-0 ps-md-2 btn btn-link"
                     name="action_set_stage_probability"
                     type="object"
                     attrs="{'invisible': [('is_stage_probability', '=', True)]}"
