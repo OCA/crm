@@ -25,6 +25,7 @@ setuptools.setup(
         'odoo-addon-crm_salesperson_planner>=16.0dev,<16.1dev',
         'odoo-addon-crm_salesperson_planner_sale>=16.0dev,<16.1dev',
         'odoo-addon-crm_security_group>=16.0dev,<16.1dev',
+        'odoo-addon-crm_stage_probability>=16.0dev,<16.1dev',
     ],
     classifiers=[
         'Programming Language :: Python',
