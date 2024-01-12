@@ -7,7 +7,7 @@ from odoo.tests.common import Form, TransactionCase
 class FirstNameCase(TransactionCase):
     @classmethod
     def setUpClass(cls):
-        super(FirstNameCase, cls).setUpClass()
+        super().setUpClass()
         cls.env = cls.env(context=dict(cls.env.context, tracking_disable=True))
         cls.lead_model = cls.env["crm.lead"]
         cls.partner_model = cls.env["res.partner"]
