@@ -12,7 +12,7 @@ class CrmLead(models.Model):
 
     def _prepare_customer_values(self, partner_name, is_company, parent_id=False):
         """Ensure first and last names of contact match those in lead."""
-        lead_partner_data = super(CrmLead, self)._prepare_customer_values(
+        lead_partner_data = super()._prepare_customer_values(
             partner_name, is_company, parent_id
         )
         if not is_company:
@@ -28,7 +28,7 @@ class CrmLead(models.Model):
 
     def _prepare_values_from_partner(self, partner):
         """Recover first and last names from partner if available."""
-        result = super(CrmLead, self)._prepare_values_from_partner(partner)
+        result = super()._prepare_values_from_partner(partner)
 
         if partner:
             if not partner.is_company:

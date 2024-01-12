@@ -4,7 +4,7 @@
 {
     "name": "Firstname and Lastname in Leads",
     "summary": "Specify split names for contacts in leads",
-    "version": "16.0.1.0.1",
+    "version": "17.0.1.0.0",
     "category": "Customer Relationship Management",
     "website": "https://github.com/OCA/crm",
     "author": "Tecnativa, Odoo Community Association (OCA)",
