@@ -65,7 +65,7 @@ Credits
 Authors
 -------
 
-* Antiun Ingeniería S.L.
+* Antiun IngenierÃ­a S.L.
 
 Contributors
 ------------
