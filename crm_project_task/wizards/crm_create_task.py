@@ -2,6 +2,8 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl-3.0)
 
 
+from markupsafe import Markup
+
 from odoo import _, fields, models
 from odoo.exceptions import UserError
 
@@ -28,18 +30,16 @@ class CrmCreateTAsk(models.TransientModel):
         # Messages in chatter
         task.message_post(
             body=_(
-                "Task created from lead/opportunity "
-                "<a href=# data-oe-model=crm.lead data-oe-id=%(lead)d>%(name)s</a>.",
-                lead=self.lead_id,
-                name=self.lead_id.name,
+                "Task created from lead/opportunity %s",
+                Markup("<a href=# data-oe-model=crm.lead data-oe-id=" "%s>%s</a>.")
+                % (self.lead_id.id, self.lead_id.name),
             )
         )
         self.lead_id.message_post(
             body=_(
-                "Task <a href=# data-oe-model=project.task "
-                "data-oe-id=%(task)d>%(name)s</a> created.",
-                task=task,
-                name=task.display_name,
+                "Task %s created.",
+                Markup("<a href=# data-oe-model=project.task data-oe-id=" "%s>%s</a>")
+                % (task.id, task.display_name),
             )
         )
         # Return action go to created task

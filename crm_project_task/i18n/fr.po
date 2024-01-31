@@ -4,17 +4,16 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 16.0\n"
+"Project-Id-Version: Odoo Server 17.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2023-12-19 20:35+0000\n"
-"Last-Translator: mde-spring <79934758+mde-spring@users.noreply.github.com>\n"
-"Language-Team: none\n"
-"Language: fr\n"
+"POT-Creation-Date: 2025-01-15 08:59+0000\n"
+"PO-Revision-Date: 2025-01-15 08:59+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.17\n"
+"Plural-Forms: \n"
 
 #. module: crm_project_task
 #: model:ir.model.fields,field_description:crm_project_task.field_crm_lead__task_count
@@ -27,8 +26,8 @@ msgid ""
 "By default this project will be selected to create task from lead / "
 "opportunity"
 msgstr ""
-"Par défaut, ce projet sera sélectionné pour créer la tâche depuis la piste/"
-"opportunité"
+"Par défaut, ce projet sera sélectionné pour créer la tâche depuis la "
+"piste/opportunité"
 
 #. module: crm_project_task
 #: model_terms:ir.ui.view,arch_db:crm_project_task.wizard_crm_create_task_view_form
@@ -69,14 +68,9 @@ msgid "Crm Default Project"
 msgstr "Projet par défaut CRM"
 
 #. module: crm_project_task
-#: model_terms:ir.ui.view,arch_db:crm_project_task.res_config_settings_view_form
-msgid "Default project"
-msgstr "Projet par défaut"
-
-#. module: crm_project_task
 #: model:ir.model.fields,field_description:crm_project_task.field_crm_create_task__description
 msgid "Description"
-msgstr "Description"
+msgstr ""
 
 #. module: crm_project_task
 #: model:ir.model.fields,field_description:crm_project_task.field_crm_create_task__display_name
@@ -86,12 +80,7 @@ msgstr "Nom afficher"
 #. module: crm_project_task
 #: model:ir.model.fields,field_description:crm_project_task.field_crm_create_task__id
 msgid "ID"
-msgstr "ID"
-
-#. module: crm_project_task
-#: model:ir.model.fields,field_description:crm_project_task.field_crm_create_task____last_update
-msgid "Last Modified on"
-msgstr "Dernière modification le"
+msgstr ""
 
 #. module: crm_project_task
 #: model:ir.model.fields,field_description:crm_project_task.field_crm_create_task__write_uid
@@ -113,7 +102,7 @@ msgstr "Piste"
 #: model:ir.model,name:crm_project_task.model_crm_lead
 #: model_terms:ir.ui.view,arch_db:crm_project_task.view_task_form2_inherit_crm_project_task
 msgid "Lead/Opportunity"
-msgstr "Piste/Opportunité"
+msgstr "Piste/opportunité"
 
 #. module: crm_project_task
 #. odoo-python
@@ -140,12 +129,8 @@ msgstr "Tâche"
 #. odoo-python
 #: code:addons/crm_project_task/wizards/crm_create_task.py:0
 #, python-format
-msgid ""
-"Task <a href=# data-oe-model=project.task data-oe-id=%(task)d>%(name)s</a> "
-"created."
-msgstr ""
-"Tâche <a href=# data-oe-model=project.task data-oe-id=%(task)d>%(name)s</a> "
-"créée."
+msgid "Task %s created."
+msgstr "Tâche %s crée."
 
 #. module: crm_project_task
 #: model:ir.model.fields,field_description:crm_project_task.field_crm_create_task__task_name
@@ -156,12 +141,8 @@ msgstr "Nome de la tâche"
 #. odoo-python
 #: code:addons/crm_project_task/wizards/crm_create_task.py:0
 #, python-format
-msgid ""
-"Task created from lead/opportunity <a href=# data-oe-model=crm.lead data-oe-"
-"id=%(lead)d>%(name)s</a>."
-msgstr ""
-"Tâche créée depuis la piste/opportunité <a href=# data-oe-model=crm.lead "
-"data-oe-id=%(lead)d>%(name)s</a>."
+msgid "Task created from lead/opportunity %s"
+msgstr "Tâche créée depuis la piste/opportunité %s"
 
 #. module: crm_project_task
 #: model_terms:ir.ui.view,arch_db:crm_project_task.inherit_crm_lead_view_form_crm_project_task
