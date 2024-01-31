@@ -5,7 +5,7 @@
 
 {
     "name": "Claims Management",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.0.1",
     "category": "Customer Relationship Management",
     "author": "Odoo S.A., Tecnativa, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/crm",
