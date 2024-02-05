@@ -6,15 +6,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2023-09-26 14:18+0000\n"
-"Last-Translator: Ivorra78 <informatica@totmaterial.es>\n"
+"POT-Creation-Date: 2024-02-05 11:11+0000\n"
+"PO-Revision-Date: 2024-02-05 12:12+0100\n"
+"Last-Translator: Emilio Pascual <emilio@moduom.team>\n"
 "Language-Team: none\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.17\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #. module: crm_project_task
 #: model:ir.model.fields,field_description:crm_project_task.field_crm_lead__task_count
@@ -104,7 +105,6 @@ msgid "Last Updated on"
 msgstr "Última Actualización el"
 
 #. module: crm_project_task
-#: model:ir.model.fields,field_description:crm_project_task.field_crm_create_task__lead_id
 #: model:ir.model.fields,field_description:crm_project_task.field_project_task__lead_id
 msgid "Lead"
 msgstr "Iniciativa"
@@ -114,6 +114,14 @@ msgstr "Iniciativa"
 #: model_terms:ir.ui.view,arch_db:crm_project_task.view_task_form2_inherit_crm_project_task
 msgid "Lead/Opportunity"
 msgstr "Iniciativa/Oportundad"
+
+#. module: crm_project_task
+#: code:addons/crm_project_task/wizards/crm_create_task.py:0
+#, python-format
+msgid "Lead/Opportunity not found. Please, create task from lead/opportunity."
+msgstr ""
+"Iniciativa/Oportunidad no encontrada. Por favor, cree la tarea desde una "
+"iniciativa/Oportunidad."
 
 #. module: crm_project_task
 #: code:addons/crm_project_task/wizards/crm_create_task.py:0
