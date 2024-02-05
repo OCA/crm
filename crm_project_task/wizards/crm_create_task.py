@@ -10,7 +10,6 @@ class CrmCreateTAsk(models.TransientModel):
     _name = "crm.create.task"
     _description = "Wizard to create task"
 
-    lead_id = fields.Many2one("crm.lead")
     task_name = fields.Char()
     description = fields.Html()
 
@@ -23,18 +22,33 @@ class CrmCreateTAsk(models.TransientModel):
                     "please contact with your administrator."
                 )
             )
+        lead = (
+            self.env["crm.lead"].browse(self._context.get("active_id", False))
+            if self._context.get("active_model") == "crm.lead"
+            and self._context.get("active_id", False)
+            else False
+        )
+        if not lead:
+            raise UserError(
+                _(
+                    "Lead/Opportunity not found. Please, create task from lead/opportunity."
+                )
+            )
+
         # Create task
-        task = self.env["project.task"].sudo().create(self._get_data_create(project))
+        task = (
+            self.env["project.task"].sudo().create(self._get_data_create(lead, project))
+        )
         # Messages in chatter
         task.message_post(
             body=_(
                 "Task created from lead/opportunity "
                 "<a href=# data-oe-model=crm.lead data-oe-id=%(lead)d>%(name)s</a>.",
-                lead=self.lead_id,
-                name=self.lead_id.name,
+                lead=lead,
+                name=lead.name,
             )
         )
-        self.lead_id.message_post(
+        lead.message_post(
             body=_(
                 "Task <a href=# data-oe-model=project.task "
                 "data-oe-id=%(task)d>%(name)s</a> created.",
@@ -55,13 +69,13 @@ class CrmCreateTAsk(models.TransientModel):
             "context": self.env.context,
         }
 
-    def _get_data_create(self, project):
+    def _get_data_create(self, lead, project):
         """Get dict to create task"""
         return {
             "name": self.task_name,
             "project_id": project.id,
-            "partner_id": self.lead_id.partner_id.id,
-            "lead_id": self.lead_id.id,
+            "partner_id": lead.partner_id.id or False,
+            "lead_id": lead.id,
             "description": self.description,
             "user_ids": [(6, 0, [])],
         }
