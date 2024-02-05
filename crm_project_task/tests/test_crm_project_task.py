@@ -2,13 +2,11 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl-3.0)
 
 from odoo.exceptions import UserError
-from odoo.tests import tagged
 from odoo.tests.common import TransactionCase
 
 from odoo.addons.mail.tests.common import mail_new_test_user
 
 
-@tagged("post_install", "-at_install")
 class TestCrmProjectTask(TransactionCase):
     @classmethod
     def setUpClass(cls):
@@ -41,57 +39,36 @@ class TestCrmProjectTask(TransactionCase):
                 "description": "Test Description",
             }
         )
+        cls.task_name = "Task Test"
+        cls.task_description = "Line1</br>Line2"
 
-    def test_create_task(self):
-        self.company.crm_default_project_id = self.project
-        task_name = "Task Test"
-        task_description = "Line1</br>Line2"
-        action = (
-            self.env["crm.create.task"]
-            .with_user(self.user_salesman)
-            .create(
-                {
-                    "lead_id": self.lead.id,
-                    "task_name": task_name,
-                    "description": task_description,
-                }
-            )
-            .create_task()
-        )
-        task = self.env["project.task"].browse(action["res_id"])
-        self.assertEqual(task.name, task_name)
-        self.assertEqual(task.project_id, self.company.crm_default_project_id)
-        self.assertEqual(task.partner_id, self.partner)
-        self.assertEqual(task.lead_id, self.lead)
-
-    def test_create_task_no_project(self):
+    def test_crm_create_task(self):
+        # Error without project default
         self.company.crm_default_project_id = False
-        task_name = "Task Test"
-        task_description = "Line1</br>Line2"
         wizard = (
             self.env["crm.create.task"]
             .with_user(self.user_salesman)
+            .with_context(active_model="crm.lead", active_id=self.lead.id)
             .create(
                 {
-                    "lead_id": self.lead.id,
-                    "task_name": task_name,
-                    "description": task_description,
+                    "task_name": self.task_name,
+                    "description": self.task_description,
                 }
             )
         )
         with self.assertRaises(UserError):
             wizard.create_task()
-
-    def test_action_tasks(self):
+        # Set project default
         self.company.crm_default_project_id = self.project
-        self.env["crm.create.task"].with_user(self.user_salesman).create(
-            {
-                "lead_id": self.lead.id,
-                "task_name": "Task Test",
-                "description": "Line1</br>Line2",
-            }
-        ).create_task()
+        action = wizard.create_task()
+        task = self.env["project.task"].browse(action["res_id"])
+        self.assertEqual(task.name, self.task_name)
+        self.assertEqual(task.project_id, self.company.crm_default_project_id)
+        self.assertEqual(task.partner_id, self.partner)
+        self.assertEqual(task.lead_id, self.lead)
+        # Check action tasks
         action = self.lead.action_tasks()
         tasks = self.env["project.task"].search(action["domain"])
         tasks_lead = tasks.mapped("lead_id")
         self.assertEqual(self.lead, tasks_lead)
+        self.assertEqual(len(tasks), self.lead.task_count)

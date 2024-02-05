@@ -13,7 +13,7 @@
                     name="%(wizard_crm_create_task_action)d"
                     type="action"
                     class="oe_highlight"
-                    context="{'default_lead_id': active_id, 'default_task_name': name}"
+                    context="{'default_task_name': name}"
                     attrs="{'invisible': ['|', ('active','=',False), ('task_count', '!=', 0)]}"
                 />
             </xpath>
