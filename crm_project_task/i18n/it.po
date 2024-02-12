@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2023-08-01 12:11+0000\n"
+"PO-Revision-Date: 2024-02-12 10:36+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -119,6 +119,7 @@ msgstr "Contatto/Opportunità"
 #, python-format
 msgid "Lead/Opportunity not found. Please, create task from lead/opportunity."
 msgstr ""
+"Contatto/opportunità non trovato. Creare un lavoro dal contatto/opportunità."
 
 #. module: crm_project_task
 #: code:addons/crm_project_task/wizards/crm_create_task.py:0
