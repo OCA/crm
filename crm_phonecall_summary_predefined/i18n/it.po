@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-07 11:40+0000\n"
-"PO-Revision-Date: 2023-05-31 15:09+0000\n"
+"PO-Revision-Date: 2024-02-12 10:35+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-crm-8-0/language/it/"
 ")\n"
@@ -44,7 +44,7 @@ msgstr "ID"
 #. module: crm_phonecall_summary_predefined
 #: field:crm.phonecall.summary,__last_update:0
 msgid "Last Modified on"
-msgstr "Ultima Modifica il"
+msgstr "Ultima modifica il"
 
 #. module: crm_phonecall_summary_predefined
 #: field:crm.phonecall.summary,write_uid:0
