@@ -104,7 +104,6 @@ msgid "Last Updated on"
 msgstr "Dernière mise à jour le"
 
 #. module: crm_project_task
-#: model:ir.model.fields,field_description:crm_project_task.field_crm_create_task__lead_id
 #: model:ir.model.fields,field_description:crm_project_task.field_project_task__lead_id
 msgid "Lead"
 msgstr "Piste"
@@ -114,6 +113,13 @@ msgstr "Piste"
 #: model_terms:ir.ui.view,arch_db:crm_project_task.view_task_form2_inherit_crm_project_task
 msgid "Lead/Opportunity"
 msgstr "Piste/Opportunité"
+
+#. module: crm_project_task
+#. odoo-python
+#: code:addons/crm_project_task/wizards/crm_create_task.py:0
+#, python-format
+msgid "Lead/Opportunity not found. Please, create task from lead/opportunity."
+msgstr ""
 
 #. module: crm_project_task
 #. odoo-python

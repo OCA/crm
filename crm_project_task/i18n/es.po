@@ -125,6 +125,7 @@ msgstr ""
 "iniciativa/Oportunidad."
 
 #. module: crm_project_task
+#. odoo-python
 #: code:addons/crm_project_task/wizards/crm_create_task.py:0
 #, python-format
 msgid ""
