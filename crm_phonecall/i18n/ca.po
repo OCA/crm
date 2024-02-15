@@ -1,0 +1,960 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * crm_phonecall
+#
+# Translators:
+# OCA Transbot <transbot@odoo-community.org>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-06-01 02:38+0000\n"
+"PO-Revision-Date: 2022-10-01 00:07+0000\n"
+"Last-Translator: pere-aquarian <pere@aquarian.tech>\n"
+"Language-Team: Catalan (https://www.transifex.com/oca/teams/23907/ca/)\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.3.2\n"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__nbr_cases
+msgid "# of Cases"
+msgstr "# de casos"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
+msgid "<b>min(s)</b>"
+msgstr ""
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
+msgid ""
+"<span>\n"
+"                                Convert\n"
+"                                <br/>\n"
+"                                To Opportunity\n"
+"                            </span>"
+msgstr ""
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
+msgid ""
+"<span>\n"
+"                                Schedule\n"
+"                                <br/>\n"
+"                                A Meeting\n"
+"                            </span>"
+msgstr ""
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
+msgid ""
+"<span>\n"
+"                                Schedule\n"
+"                                <br/>\n"
+"                                Other Call\n"
+"                            </span>"
+msgstr ""
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__action
+msgid "Action"
+msgstr "Acció"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_needaction
+msgid "Action Needed"
+msgstr "Acció necessària"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__active
+msgid "Active"
+msgstr "Activa"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
+msgid "Additional Info"
+msgstr "Informació addicional"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__user_id
+msgid "Assign To"
+msgstr "Assignada a"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_attachment_count
+msgid "Attachment Count"
+msgstr "Nombre d'annexes"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,help:crm_phonecall.field_res_config_settings__group_show_form_view
+msgid "By default form is disabled for calls, with this group it is enabled."
+msgstr ""
+"Per defecte, el formulari està desactivat per a trucades, amb aquest grup "
+"està habilitat."
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.res_config_settings_view_form
+msgid ""
+"By default form view is disabled for calls, with this\n"
+"                                setting it is enabled for all users."
+msgstr ""
+
+#. module: crm_phonecall
+#: model:ir.model,name:crm_phonecall.model_calendar_event
+msgid "Calendar Event"
+msgstr "Entrada del calendari"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__name
+msgid "Call Summary"
+msgstr "Resum de la trucada"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__name
+msgid "Call summary"
+msgstr "Resum de la trucada"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_form_view_leads_inherit
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_partners_form_crm_calls_inherit
+msgid "Calls"
+msgstr "Trucades"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+msgid "Calls Date by Month"
+msgstr "Data de les trucades per mes"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+msgid "Calls by status"
+msgstr "Trucades per estat"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__campaign_id
+msgid "Campaign"
+msgstr "Campanya"
+
+#. module: crm_phonecall
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall__state__cancel
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall_report__state__cancel
+msgid "Cancelled"
+msgstr "Cencel·lada"
+
+#. module: crm_phonecall
+#: model:ir.ui.menu,name:crm_phonecall.menu_crm_case_phonecall-act
+msgid "Categories"
+msgstr "Categories"
+
+#. module: crm_phonecall
+#: model_terms:ir.actions.act_window,help:crm_phonecall.crm_phonecall_categ_action
+msgid "Click to add a new category."
+msgstr "Feu clic per a afegir una nova categoria."
+
+#. module: crm_phonecall
+#: model_terms:ir.actions.act_window,help:crm_phonecall.crm_case_categ_phone_incoming0
+msgid "Click to log the summary of a phone call."
+msgstr "Feu clic per registrar el resum d'una trucada telefònica."
+
+#. module: crm_phonecall
+#: model_terms:ir.actions.act_window,help:crm_phonecall.crm_case_categ_phone_outgoing0
+msgid "Click to schedule a call"
+msgstr "Feu clic per a planificar una trucada"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__date_closed
+msgid "Close Date"
+msgstr "Data de tancament"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__date_closed
+msgid "Closed"
+msgstr "Tancada"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__company_id
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__company_id
+msgid "Company"
+msgstr "Companyia"
+
+#. module: crm_phonecall
+#: model:ir.model,name:crm_phonecall.model_res_config_settings
+msgid "Config Settings"
+msgstr "Configuració"
+
+#. module: crm_phonecall
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall__state__open
+msgid "Confirmed"
+msgstr "Confirmada"
+
+#. module: crm_phonecall
+#: model:ir.model,name:crm_phonecall.model_res_partner
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__contact_name
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__partner_id
+msgid "Contact"
+msgstr "Contacte"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
+msgid "Convert To Opportunity"
+msgstr "Convertir a oportunitat"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_inbound_phone_tree_view
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_tree_view
+msgid "Convert to Opportunity"
+msgstr "Convertir a oportunitat"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__create_date
+msgid "Create Date"
+msgstr "Data de creació"
+
+#. module: crm_phonecall
+#: model_terms:ir.actions.act_window,help:crm_phonecall.crm_phonecall_categ_action
+msgid ""
+"Create specific phone call categories to better define the type of\n"
+"            calls tracked in the system."
+msgstr ""
+"Creeu categories de trucades telefòniques específiques per definir millor el "
+"tipus de trucades\n"
+"             rastrejades al sistema."
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__create_uid
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__create_uid
+msgid "Created by"
+msgstr "Creat per"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__create_date
+msgid "Created on"
+msgstr "Creat el"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+msgid "Creation"
+msgstr "Creació"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__create_date
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+msgid "Creation Date"
+msgstr "Data de creació"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
+msgid "Creation Month"
+msgstr "Mes de creació"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
+msgid "Customer"
+msgstr "Client/a"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__date
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__date
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+msgid "Date"
+msgstr "Data"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__delay_close
+msgid "Delay to close"
+msgstr "Retard per tancar"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__delay_open
+msgid "Delay to open"
+msgstr "Retard per obrir"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__description
+msgid "Description"
+msgstr "Descripció"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
+msgid "Description..."
+msgstr "Descripció..."
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__direction
+msgid "Direction"
+msgstr "Direcció"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__display_name
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__display_name
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__display_name
+msgid "Display Name"
+msgstr "Veure el nom"
+
+#. module: crm_phonecall
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall_report__state__draft
+msgid "Draft"
+msgstr "Esborrany"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__duration
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__duration
+msgid "Duration"
+msgstr "Durada"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__duration
+msgid "Duration in minutes and seconds."
+msgstr "Durada en minuts i segons."
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__email_from
+msgid "Email"
+msgstr "Correu electrònic"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_res_config_settings__group_show_form_view
+#: model:res.groups,name:crm_phonecall.group_show_form_view
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.res_config_settings_view_form
+msgid "Enable form view for phone calls"
+msgstr "Activa la vista formulari per a trucades telefòniques"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
+msgid "Extended Filters..."
+msgstr "Filtres extesos..."
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_follower_ids
+msgid "Followers"
+msgstr "Seguidors/res"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidors/res (Contactes)"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
+msgid "Group By"
+msgstr "Agrupar per"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: crm_phonecall
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall__state__done
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall_report__state__done
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
+msgid "Held"
+msgstr "Retinguda"
+
+#. module: crm_phonecall
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall__priority__2
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall_report__priority__2
+msgid "High"
+msgstr "Alta"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__id
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__id
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__id
+msgid "ID"
+msgstr "ID"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Si està marcat, els missatges nous requereixen la vostra atenció."
+
+#. module: crm_phonecall
+#: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si està marcat, alguns missatges tenen un error d'entrega."
+
+#. module: crm_phonecall
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall__direction__in
+msgid "In"
+msgstr "en"
+
+#. module: crm_phonecall
+#: model_terms:ir.actions.act_window,help:crm_phonecall.crm_case_categ_phone_incoming0
+msgid ""
+"In order to follow up on the call, you can trigger a request for\n"
+"            another call, a meeting or an opportunity."
+msgstr ""
+"Per fer un seguiment de la trucada, podeu activar una sol·licitud\n"
+"             d'una altra convocatòria, una reunió o una oportunitat."
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+msgid "Incoming Calls"
+msgstr "Trucades entrants"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_is_follower
+msgid "Is Follower"
+msgstr "És un/a seguidor/a"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__date_action_last
+msgid "Last Action"
+msgstr "Última acció"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall____last_update
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall____last_update
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report____last_update
+msgid "Last Modified on"
+msgstr "Darrera modificació el"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__write_uid
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__write_uid
+msgid "Last Updated by"
+msgstr "Darrera Actualització per"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__write_date
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__write_date
+msgid "Last Updated on"
+msgstr "Darrera Actualització el"
+
+#. module: crm_phonecall
+#: model:ir.model,name:crm_phonecall.model_crm_lead
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__opportunity_id
+msgid "Lead/Opportunity"
+msgstr "Iniciativa/oportunitat"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.phonecall_to_phonecall_view
+msgid "Log Call"
+msgstr "Enregistra trucada"
+
+#. module: crm_phonecall
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall2phonecall__action__log
+msgid "Log a call"
+msgstr "Enregistrar una trucada"
+
+#. module: crm_phonecall
+#: model:ir.actions.act_window,name:crm_phonecall.crm_case_categ_phone_incoming0
+#: model:ir.ui.menu,name:crm_phonecall.menu_crm_case_phone_inbound
+msgid "Logged Calls"
+msgstr "Trucades enregistrades"
+
+#. module: crm_phonecall
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall__priority__0
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall_report__priority__0
+msgid "Low"
+msgstr "Baixa"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Annexe principal"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__medium_id
+msgid "Medium"
+msgstr "Mitjana"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_inbound_phone_tree_view
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_tree_view
+msgid "Meeting"
+msgstr "Reunió"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_has_error
+msgid "Message Delivery error"
+msgstr "Error d'entrega"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_ids
+msgid "Messages"
+msgstr "Missatges"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__partner_mobile
+msgid "Mobile"
+msgstr "Mòbil"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+msgid "Month"
+msgstr "Mes"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
+msgid "Month of call"
+msgstr "Mes de la trucada"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
+msgid "My Phone Calls"
+msgstr "Les meves trucades"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+msgid "My Phonecalls"
+msgstr "Les meves trucades"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
+msgid "My Sales Team(s)"
+msgstr "El/s meu/s equip/s de venda"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+msgid "My Team"
+msgstr "El meu equip"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__date_action_next
+msgid "Next Action"
+msgstr "Propera acció"
+
+#. module: crm_phonecall
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall__priority__1
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall_report__priority__1
+msgid "Normal"
+msgstr "Normal"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
+msgid "Not Held"
+msgstr "No retingudes"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__note
+msgid "Note"
+msgstr "Nota"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Nombre d'accions"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall_report__delay_close
+msgid "Number of Days to close the case"
+msgstr "Nombre de dies per tancar el cas"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall_report__delay_open
+msgid "Number of Days to open the case"
+msgstr "Nombre de dies per obrir el cas"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_has_error_counter
+msgid "Number of errors"
+msgstr "Nombre d'errors"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr ""
+
+#. module: crm_phonecall
+#: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Nombre de missatges amb error d'entrega"
+
+#. module: crm_phonecall
+#: model_terms:ir.actions.act_window,help:crm_phonecall.crm_case_categ_phone_outgoing0
+msgid ""
+"Odoo allows you to easily define all the calls to be done\n"
+"            by your sales team and follow up based on their summary."
+msgstr ""
+"Odoo us permet definir fàcilment totes les trucades a fer\n"
+"             pel vostre equip de vendes i fer un seguiment basat en el seu "
+"resum."
+
+#. module: crm_phonecall
+#: model_terms:ir.actions.act_window,help:crm_phonecall.crm_case_categ_phone_incoming0
+msgid ""
+"Odoo allows you to log inbound calls on the fly to track the\n"
+"            history of the communication with a customer or to inform "
+"another\n"
+"            team member."
+msgstr ""
+"Odoo us permet registrar les trucades entrants sobre la marxa per fer-ne un "
+"seguiment\n"
+"             historial de la comunicació amb un client o per informar un "
+"altre\n"
+"             membre de l'equip."
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__date_open
+msgid "Opened"
+msgstr "Oberta"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__opening_date
+msgid "Opening Date"
+msgstr "Data d'apertura"
+
+#. module: crm_phonecall
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall__direction__out
+msgid "Out"
+msgstr "Fora"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+msgid "Outgoing Calls"
+msgstr "Trucades realitzades"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__partner_id
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__partner_id
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+msgid "Partner"
+msgstr "Contacte"
+
+#. module: crm_phonecall
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall__state__pending
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall_report__state__pending
+msgid "Pending"
+msgstr "Pendent"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__phone
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__partner_phone
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
+msgid "Phone"
+msgstr "Telèfon"
+
+#. module: crm_phonecall
+#. odoo-python
+#: code:addons/crm_phonecall/models/crm_phonecall.py:0
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
+#, python-format
+msgid "Phone Call"
+msgstr "Trucada de telèfon"
+
+#. module: crm_phonecall
+#: model:ir.actions.act_window,name:crm_phonecall.crm_case_categ_phone0
+#: model:ir.ui.menu,name:crm_phonecall.menu_crm_case_phone
+#: model:ir.ui.menu,name:crm_phonecall.menu_crm_config_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_calendar_view
+msgid "Phone Calls"
+msgstr "Trucades de telèfon"
+
+#. module: crm_phonecall
+#: model:ir.actions.act_window,name:crm_phonecall.crm_phonecall_report_action
+#: model:ir.actions.act_window,name:crm_phonecall.crm_phonecall_report_action_team
+#: model:ir.ui.menu,name:crm_phonecall.menu_report_crm_phonecalls_tree
+msgid "Phone Calls Analysis"
+msgstr "Anàlisi de trucades"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
+msgid "Phone Calls that are assigned to me"
+msgstr "Trucades assignades a mi"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_graph
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_pivot
+msgid "Phone calls"
+msgstr "Trucades"
+
+#. module: crm_phonecall
+#: model:ir.model,name:crm_phonecall.model_crm_phonecall_report
+msgid "Phone calls by user"
+msgstr "Trucades per usuari/ària"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
+msgid "Phone calls that are assigned to one of the sale teams I manage"
+msgstr ""
+"Trucades telefòniques assignades a un dels equips de vendes que gestiono"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
+msgid "Phone calls which are in closed state"
+msgstr "Trucades telefòniques que estan en estat tancat"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
+msgid "Phone calls which are in draft and open state"
+msgstr "Trucades telefòniques en estat d'esborrany i obertes"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
+msgid "Phone calls which are in pending state"
+msgstr "Trucades telefòniques que estan en estat pendent"
+
+#. module: crm_phonecall
+#: model:ir.model,name:crm_phonecall.model_crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_calendar_event__phonecall_id
+msgid "Phonecall"
+msgstr "Trucada"
+
+#. module: crm_phonecall
+#: model:ir.actions.act_window,name:crm_phonecall.crm_phonecall_categ_action
+msgid "Phonecall Categories"
+msgstr "Categories de trucada"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_lead__phonecall_count
+#: model:ir.model.fields,field_description:crm_phonecall.field_res_partner__phonecall_count
+#: model:ir.model.fields,field_description:crm_phonecall.field_res_users__phonecall_count
+msgid "Phonecall Count"
+msgstr "Compte de trucades"
+
+#. module: crm_phonecall
+#: model:ir.model,name:crm_phonecall.model_crm_phonecall2phonecall
+msgid "Phonecall To Phonecall"
+msgstr "Trucada a trucada"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_lead__phonecall_ids
+#: model:ir.model.fields,field_description:crm_phonecall.field_res_partner__phonecall_ids
+#: model:ir.model.fields,field_description:crm_phonecall.field_res_users__phonecall_ids
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+msgid "Phonecalls"
+msgstr "Trucades"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.phonecall_to_phonecall_view
+msgid "Planned Date"
+msgstr "Data planificada"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__priority
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__priority
+msgid "Priority"
+msgstr "Prioritat"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__user_id
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+msgid "Responsible"
+msgstr "Responsable"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__team_id
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__team_id
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
+msgid "Sales Team"
+msgstr "Equip de vendes"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__team_id
+msgid "Sales team to which Case belongs to."
+msgstr "Equip de vendes al qual pertany el cas."
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
+msgid "Salesperson"
+msgstr "Comercial"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.phonecall_to_phonecall_view
+msgid "Schedule Call"
+msgstr "Planificar una trucada"
+
+#. module: crm_phonecall
+#: model:ir.actions.act_window,name:crm_phonecall.phonecall_to_phonecall_act
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_inbound_phone_tree_view
+msgid "Schedule Other Call"
+msgstr "Planificar una altra trucada"
+
+#. module: crm_phonecall
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall2phonecall__action__schedule
+msgid "Schedule a call"
+msgstr "Planificar una trucada"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.phonecall_to_phonecall_view
+msgid "Schedule/Log a Call"
+msgstr "Planificad/enregistrar una trucada"
+
+#. module: crm_phonecall
+#: model:ir.actions.act_window,name:crm_phonecall.crm_case_categ_phone_outgoing0
+#: model:ir.ui.menu,name:crm_phonecall.menu_crm_case_phone_outbound
+msgid "Scheduled Calls"
+msgstr "Trucades planificades"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
+msgid "Search"
+msgstr "Cercar"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+msgid "Search Phonecalls"
+msgstr "Cercar trucades"
+
+#. module: crm_phonecall
+#: model:res.groups,name:crm_phonecall.group_scheduled_calls
+msgid "Show Scheduled Calls Menu"
+msgstr "Mostrar el menú de trucades programades"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__source_id
+msgid "Source"
+msgstr "Origen"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+msgid "State"
+msgstr "Estat"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__state
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__state
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
+msgid "Status"
+msgstr "Estat"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__tag_ids
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__tag_ids
+msgid "Tags"
+msgstr "Etiquetes"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__team_id
+msgid "Team"
+msgstr "Equip"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__state
+msgid ""
+"The status is set to Confirmed, when a case is created.\n"
+"When the call is over, the status is set to Held.\n"
+"If the callis not applicable anymore, the status can be set to Cancelled."
+msgstr ""
+"L'estat s'estableix en Confirmat quan es crea un cas.\n"
+"Quan la trucada s'ha acabat, l'estat es defineix en Retingut.\n"
+"Si la trucada ja no és aplicable, l'estat es pot establir en Cancel·lat."
+
+#. module: crm_phonecall
+#: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__email_from
+msgid "These people will receive email."
+msgstr "Aquestes persones rebran correu electrònic."
+
+#. module: crm_phonecall
+#: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__campaign_id
+msgid ""
+"This is a name that helps you keep track of your different campaign efforts, "
+"e.g. Fall_Drive, Christmas_Special"
+msgstr ""
+"Aquest és un nom que us ajuda a fer un seguiment dels diferents esforços de "
+"la vostra campanya, p.e Tardor, especial de Nadal"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__medium_id
+msgid "This is the method of delivery, e.g. Postcard, Email, or Banner Ad"
+msgstr "Aquest és el mètode d'enviament, p.e postal, email, banner"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__source_id
+msgid ""
+"This is the source of the link, e.g. Search Engine, another domain, or name "
+"of email list"
+msgstr ""
+"Aquest és l'origen de l'enllaç, p.e. Un cercador, un altre domini, o un nom "
+"d'una llista de correu"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+msgid "To Do"
+msgstr "Per a fer"
+
+#. module: crm_phonecall
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall_report__state__open
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
+msgid "Todo"
+msgstr "Per a fer"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
+msgid "Tracking"
+msgstr "Seguiment"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+msgid "Unassigned"
+msgstr "No assignada"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__user_id
+msgid "User"
+msgstr "Usuari/ària"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__website_message_ids
+msgid "Website Messages"
+msgstr "Missatges del lloc web"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__website_message_ids
+msgid "Website communication history"
+msgstr "Historial de comunicació del lloc web"
+
+#. module: crm_phonecall
+#: model_terms:ir.actions.act_window,help:crm_phonecall.crm_case_categ_phone_outgoing0
+msgid ""
+"You can use the import feature to massively import a new list of\n"
+"            prospects to qualify."
+msgstr ""
+"Podeu utilitzar la funció d'importació per importar massivament una llista "
+"nova de\n"
+"             prospectes per qualificar."
+
+#~ msgid "SMS Delivery error"
+#~ msgstr "Error d'entrega SMS"
+
+#~ msgid "<b> min(s)</b>"
+#~ msgstr "<b> min(s)</b>"
+
+#~ msgid "<span>Convert<br/>To Opportunity</span>"
+#~ msgstr "<span>Convertir<br/>a oportunitat</span>"
+
+#~ msgid "<span>Schedule<br/>A Meeting</span>"
+#~ msgstr "<span>Planificar<br/>una reunió</span>"
+
+#~ msgid "<span>Schedule<br/>Other Call</span>"
+#~ msgstr "<span>Planificar<br/>una altra trucada</span>"
+
+#~ msgid "By Sales Team"
+#~ msgstr "Per equip de treball"
+
+#~ msgid ""
+#~ "By default form view is disabled for calls, with this setting it is "
+#~ "enabled for all users."
+#~ msgstr ""
+#~ "Per defecte, la vista de formulari està desactivada per a les trucades, "
+#~ "amb aquesta configuració s'habilita per a tots els usuaris."
+
+#~ msgid "Delay To Close"
+#~ msgstr "Retard per tancar"
+
+#~ msgid "Followers (Channels)"
+#~ msgstr "Seguidors/res (Canals)"
+
+#~ msgid "Number of messages which requires an action"
+#~ msgstr "Nombre de missatges que requereixen una acció"
+
+#~ msgid "Number of unread messages"
+#~ msgstr "Nombre de missatges no llegits"
+
+#~ msgid "Phone Calls To Do"
+#~ msgstr "Trucades per a fer"
+
+#~ msgid "Unread Messages"
+#~ msgstr "Missatges no llegits"
+
+#~ msgid "Unread Messages Counter"
+#~ msgstr "Comptador de missatges no llegits"

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- This view is there, but it is not used in the CRM Menus -->
+    <record id="crm_case_form_view_leads_inherit" model="ir.ui.view">
+        <field name="name">CRM - Leads Form</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button
+                    class="oe_stat_button"
+                    icon="fa-phone"
+                    name="button_open_phonecall"
+                    type="object"
+                >
+                    <field name="phonecall_count" string="Calls" widget="statinfo" />
+                </button>
+            </xpath>
+        </field>
+    </record>
+</odoo>

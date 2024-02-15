@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="group_scheduled_calls" model="res.groups">
+        <field name="name">Show Scheduled Calls Menu</field>
+        <field name="category_id" ref="base.module_category_hidden" />
+    </record>
+    <record id="group_show_form_view" model="res.groups">
+        <field name="name">Enable form view for phone calls</field>
+        <field name="category_id" ref="base.module_category_hidden" />
+    </record>
+</odoo>
