@@ -9,25 +9,25 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-04 15:47+0000\n"
-"PO-Revision-Date: 2019-02-04 10:50+0000\n"
-"Last-Translator: Marta Vázquez Rodríguez <vazrodmar@gmail.com>\n"
+"PO-Revision-Date: 2024-02-17 10:33+0000\n"
+"Last-Translator: Ivorra78 <informatica@totmaterial.es>\n"
 "Language-Team: Spanish (https://www.transifex.com/oca/teams/23907/es/)\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.4\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: crm_industry
 #: model:ir.model.fields,field_description:crm_industry.field_crm_lead__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Mostrar Nombre"
 
 #. module: crm_industry
 #: model:ir.model.fields,field_description:crm_industry.field_crm_lead__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: crm_industry
 #: model_terms:ir.ui.view,arch_db:crm_industry.crm_lead_view_form
@@ -39,7 +39,7 @@ msgstr "Industria"
 #. module: crm_industry
 #: model:ir.model.fields,field_description:crm_industry.field_crm_lead____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Última Modificación el"
 
 #. module: crm_industry
 #: model:ir.model,name:crm_industry.model_crm_lead
