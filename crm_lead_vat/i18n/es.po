@@ -9,30 +9,31 @@ msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-04-14 03:55+0000\n"
-"PO-Revision-Date: 2016-04-07 15:49+0000\n"
-"Last-Translator: Carles Antoli <carlesantoli@hotmail.com>\n"
-"Language-Team: Spanish (http://www.transifex.com/oca/OCA-crm-8-0/language/"
-"es/)\n"
+"PO-Revision-Date: 2024-02-17 10:33+0000\n"
+"Last-Translator: Ivorra78 <informatica@totmaterial.es>\n"
+"Language-Team: Spanish (http://www.transifex.com/oca/OCA-crm-8-0/language/es/"
+")\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: crm_lead_vat
 #: model:ir.model.fields,field_description:crm_lead_vat.field_crm_lead__display_name
 msgid "Display Name"
-msgstr ""
+msgstr "Mostrar Nombre"
 
 #. module: crm_lead_vat
 #: model:ir.model.fields,field_description:crm_lead_vat.field_crm_lead__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: crm_lead_vat
 #: model:ir.model.fields,field_description:crm_lead_vat.field_crm_lead____last_update
 msgid "Last Modified on"
-msgstr ""
+msgstr "Última Modificación el"
 
 #. module: crm_lead_vat
 #: model:ir.model,name:crm_lead_vat.model_crm_lead
