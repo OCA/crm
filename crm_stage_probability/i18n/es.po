@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2023-06-06 11:08+0000\n"
-"Last-Translator: luis-ron <luis.ron@sygel.es>\n"
+"PO-Revision-Date: 2024-02-17 10:33+0000\n"
+"Last-Translator: Ivorra78 <informatica@totmaterial.es>\n"
 "Language-Team: none\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
@@ -27,6 +27,8 @@ msgid ""
 "<i class=\"fa fa-gear\" role=\"img\" title=\"Switch to stage probability\" "
 "aria-label=\"Switch to stage probability\"/>"
 msgstr ""
+"<i class=\"fa fa-gear\" role=\"img\" title=\"Switch to stage probability\" "
+"aria-label=\"Switch to stage probability\"/>"
 
 #. module: crm_stage_probability
 #: model_terms:ir.ui.view,arch_db:crm_stage_probability.view_crm_lead_stage_probability_update
@@ -43,7 +45,7 @@ msgstr "Etapas CRM"
 #. module: crm_stage_probability
 #: model:ir.model,name:crm_stage_probability.model_crm_lead_stage_probability_update_line
 msgid "CRM leads stages to updates"
-msgstr ""
+msgstr "CRM lidera las etapas hacia las actualizaciones"
 
 #. module: crm_stage_probability
 #: model_terms:ir.ui.view,arch_db:crm_stage_probability.view_crm_lead_stage_probability_update
@@ -89,6 +91,10 @@ msgid ""
 "\n"
 "%s"
 msgstr ""
+"Las siguientes etapas deben configurarse como \"Cambiar probabilidad "
+"automáticamente\" para actualizar sus clientes potenciales relacionados:\n"
+"\n"
+"%s"
 
 #. module: crm_stage_probability
 #: model:ir.model.fields,field_description:crm_stage_probability.field_crm_lead__id
@@ -101,7 +107,7 @@ msgstr "ID"
 #. module: crm_stage_probability
 #: model:ir.model.fields,field_description:crm_stage_probability.field_crm_lead__is_stage_probability
 msgid "Is Stage Probability"
-msgstr ""
+msgstr "Es Probabilidad de Etapa"
 
 #. module: crm_stage_probability
 #: model:ir.model.fields,field_description:crm_stage_probability.field_crm_lead____last_update
@@ -135,10 +141,8 @@ msgstr "Actualización masiva de probabilidad de iniciativas"
 
 #. module: crm_stage_probability
 #: model:ir.model,name:crm_stage_probability.model_crm_lead_stage_probability_update
-#, fuzzy
 msgid "Mass update of crm lead probability according to stage"
-msgstr ""
-"Actualización masiva de probabilidad de iniciativas en CRM según el estado"
+msgstr "Actualización masiva de la probabilidad de iniciativas según la etapa"
 
 #. module: crm_stage_probability
 #: model:ir.model.fields,field_description:crm_stage_probability.field_crm_lead_stage_probability_update_line__lead_count
