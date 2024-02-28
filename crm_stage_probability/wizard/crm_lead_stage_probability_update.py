@@ -5,7 +5,6 @@ from odoo.exceptions import UserError
 
 
 class CrmLeadStageProbabilityUpdate(models.TransientModel):
-
     _name = "crm.lead.stage.probability.update"
     _description = "Mass update of crm lead probability according to stage"
 
@@ -58,7 +57,6 @@ class CrmLeadStageProbabilityUpdate(models.TransientModel):
 
 
 class CrmLeadStageProbabilityUpdateStage(models.TransientModel):
-
     _name = "crm.lead.stage.probability.update.line"
     _description = "CRM leads stages to updates"
 

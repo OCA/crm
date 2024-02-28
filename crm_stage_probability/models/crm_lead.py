@@ -4,7 +4,6 @@ from odoo import api, fields, models, tools
 
 
 class CrmLead(models.Model):
-
     _inherit = "crm.lead"
 
     is_stage_probability = fields.Boolean(
