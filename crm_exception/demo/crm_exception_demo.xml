@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+    <record id="crm_excep_no_partner" model="exception.rule">
+        <field name="name">No Customer</field>
+        <field name="description">No Customer</field>
+        <field name="sequence">80</field>
+        <field name="model">crm.lead</field>
+        <field name="code">if not self.partner_id:
+            failed=True</field>
+        <field name="active" eval="False" />
+    </record>
+</odoo>
