@@ -1,0 +1,53 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* crm_multicompany_reporting_currency
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2023-06-12 16:10+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
+"Language-Team: none\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17\n"
+
+#. module: crm_multicompany_reporting_currency
+#: model:ir.model.fields,field_description:crm_multicompany_reporting_currency.field_crm_lead__amount_multicompany_reporting_currency
+msgid "Amount Multicompany Reporting Currency"
+msgstr "Valuta resoconto valore multiazienda"
+
+#. module: crm_multicompany_reporting_currency
+#: model:ir.model,name:crm_multicompany_reporting_currency.model_res_config_settings
+msgid "Config Settings"
+msgstr "Impostazioni configurazione"
+
+#. module: crm_multicompany_reporting_currency
+#: model:ir.model.fields,field_description:crm_multicompany_reporting_currency.field_crm_lead__currency_rate
+msgid "Currency Rate"
+msgstr "Tariffa valuta"
+
+#. module: crm_multicompany_reporting_currency
+#: model:ir.model,name:crm_multicompany_reporting_currency.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Contatto/Opportunità"
+
+#. module: crm_multicompany_reporting_currency
+#: model:ir.model.fields,field_description:crm_multicompany_reporting_currency.field_crm_lead__multicompany_reporting_currency_id
+msgid "Multicompany Reporting Currency"
+msgstr "Valuta resoconto multi azienda"
+
+#. module: crm_multicompany_reporting_currency
+#: model_terms:ir.ui.view,arch_db:crm_multicompany_reporting_currency.crm_case_tree_view_oppor
+msgid "Total"
+msgstr "Totale"
+
+#. module: crm_multicompany_reporting_currency
+#: model_terms:ir.ui.view,arch_db:crm_multicompany_reporting_currency.crm_case_tree_view_oppor
+#: model_terms:ir.ui.view,arch_db:crm_multicompany_reporting_currency.crm_lead_view_form
+msgid "Total (Multicompany Reporting Currency)"
+msgstr "Totale (valuta resoconto multi azienda)"

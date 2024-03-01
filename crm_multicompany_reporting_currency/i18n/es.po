@@ -1,0 +1,53 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* crm_multicompany_reporting_currency
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2023-09-26 14:18+0000\n"
+"Last-Translator: Ivorra78 <informatica@totmaterial.es>\n"
+"Language-Team: none\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17\n"
+
+#. module: crm_multicompany_reporting_currency
+#: model:ir.model.fields,field_description:crm_multicompany_reporting_currency.field_crm_lead__amount_multicompany_reporting_currency
+msgid "Amount Multicompany Reporting Currency"
+msgstr "Importe Divisa de referencia multicompañía"
+
+#. module: crm_multicompany_reporting_currency
+#: model:ir.model,name:crm_multicompany_reporting_currency.model_res_config_settings
+msgid "Config Settings"
+msgstr "Configuración de Ajustes"
+
+#. module: crm_multicompany_reporting_currency
+#: model:ir.model.fields,field_description:crm_multicompany_reporting_currency.field_crm_lead__currency_rate
+msgid "Currency Rate"
+msgstr "Tipo de divisa"
+
+#. module: crm_multicompany_reporting_currency
+#: model:ir.model,name:crm_multicompany_reporting_currency.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Iniciativa/Oportundad"
+
+#. module: crm_multicompany_reporting_currency
+#: model:ir.model.fields,field_description:crm_multicompany_reporting_currency.field_crm_lead__multicompany_reporting_currency_id
+msgid "Multicompany Reporting Currency"
+msgstr "Divisa de referencia de varias compañías"
+
+#. module: crm_multicompany_reporting_currency
+#: model_terms:ir.ui.view,arch_db:crm_multicompany_reporting_currency.crm_case_tree_view_oppor
+msgid "Total"
+msgstr "Total"
+
+#. module: crm_multicompany_reporting_currency
+#: model_terms:ir.ui.view,arch_db:crm_multicompany_reporting_currency.crm_case_tree_view_oppor
+#: model_terms:ir.ui.view,arch_db:crm_multicompany_reporting_currency.crm_lead_view_form
+msgid "Total (Multicompany Reporting Currency)"
+msgstr "Total (divisa de referencia de varias compañías)"
