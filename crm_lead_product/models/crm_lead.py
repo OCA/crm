@@ -13,20 +13,20 @@ class CrmLead(models.Model):
 
     @api.onchange("lead_line_ids")
     def _onchange_lead_line_ids(self):
-        planned_revenue = 0
+        expected_revenue = 0
         for lead_line in self.lead_line_ids:
-            if lead_line.planned_revenue != 0:
-                planned_revenue += lead_line.planned_revenue
-                self.planned_revenue = planned_revenue
+            if lead_line.expected_revenue != 0:
+                expected_revenue += lead_line.expected_revenue
+                self.expected_revenue = expected_revenue
 
     def _convert_opportunity_data(self, customer, team_id=False):
         res = super(CrmLead, self)._convert_opportunity_data(customer, team_id)
 
-        # Update planned_revenue
-        planned_revenue = 0
+        # Update expected_revenue
+        expected_revenue = 0
         for lead_line in self.lead_line_ids:
-            planned_revenue += lead_line.planned_revenue
+            expected_revenue += lead_line.expected_revenue
 
-        res["planned_revenue"] = planned_revenue
+        res["expected_revenue"] = expected_revenue
 
         return res

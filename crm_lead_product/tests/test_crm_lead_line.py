@@ -4,46 +4,45 @@
 from odoo.tests import common
 
 
-@common.at_install(False)
-@common.post_install(True)
 class TestCrmLeadLine(common.TransactionCase):
-    def setUp(self):
-        super(TestCrmLeadLine, self).setUp()
-        self.product_obj = self.env["product.product"]
-        self.lead_line_obj = self.env["crm.lead.line"]
-        self.lead = self.env["crm.lead"].create(
+    @classmethod
+    def setUpClass(cls):
+        super(TestCrmLeadLine, cls).setUpClass()
+        cls.product_obj = cls.env["product.product"]
+        cls.lead_line_obj = cls.env["crm.lead.line"]
+        cls.lead = cls.env["crm.lead"].create(
             {
                 "type": "lead",
                 "name": "Test lead new",
-                "partner_id": self.env.ref("base.res_partner_1").id,
+                "partner_id": cls.env.ref("base.res_partner_1").id,
                 "description": "This is the description of the test new lead.",
-                "team_id": self.env.ref("sales_team.team_sales_department").id,
+                "team_id": cls.env.ref("sales_team.team_sales_department").id,
             }
         )
 
         # Products
-        self.product_1 = self.product_obj.create(
+        cls.product_1 = cls.product_obj.create(
             {
                 "name": "Product 1",
-                "categ_id": self.env.ref("product.product_category_1").id,
-                "price": 142.0,
+                "categ_id": cls.env.ref("product.product_category_1").id,
+                "lst_price": 142.0,
             }
         )
-        self.product_2 = self.product_obj.create(
+        cls.product_2 = cls.product_obj.create(
             {
                 "name": "Product 2",
-                "categ_id": self.env.ref("product.product_category_2").id,
-                "price": 1420.0,
+                "categ_id": cls.env.ref("product.product_category_2").id,
+                "lst_price": 1420.0,
             }
         )
-        self.product_3 = self.product_obj.create(
+        cls.product_3 = cls.product_obj.create(
             {
                 "name": "Product 3",
-                "categ_id": self.env.ref("product.product_category_3").id,
-                "price": 14200.0,
+                "categ_id": cls.env.ref("product.product_category_3").id,
+                "lst_price": 14200.0,
             }
         )
-        self.product_4 = self.env.ref("product.product_product_25")
+        cls.product_4 = cls.env.ref("product.product_product_25")
 
     def test_01_lead_lines(self):
         """Tests for Crm Lead Line"""
@@ -55,7 +54,7 @@ class TestCrmLeadLine(common.TransactionCase):
                 "name": self.product_1.name,
                 "product_id": self.product_1.id,
                 "uom_id": self.product_1.uom_id.id,
-                "price_unit": self.product_1.price,
+                "price_unit": self.product_1.lst_price,
             }
         )
         # Create new lead line with category id
@@ -149,7 +148,7 @@ class TestCrmLeadLine(common.TransactionCase):
             "Planned revenue should be equal " "to the product standard price",
         )
 
-        self.lead.convert_opportunity(self.env.ref("base.res_partner_1").id)
+        self.lead.convert_opportunity(self.env.ref("base.res_partner_1"))
 
         lead_line_1 = self.lead.lead_line_ids[0]
 
