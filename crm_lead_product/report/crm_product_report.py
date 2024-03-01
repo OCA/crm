@@ -30,7 +30,7 @@ class ActivityReport(models.Model):
     probability = fields.Float(group_operator="avg", readonly=True)
     stage_id = fields.Many2one("crm.stage", "Stage", readonly=True)
     team_id = fields.Many2one("crm.team", "Sales Team", readonly=True)
-    type = fields.Char(
+    type = fields.Selection(
         selection=[("lead", "Lead"), ("opportunity", "Opportunity")],
         help="Type is used to separate Leads and Opportunities",
     )
@@ -49,7 +49,6 @@ class ActivityReport(models.Model):
             SELECT
                 l.id,
                 l.active,
-                l.id as lead_id,
                 l.campaign_id,
                 l.country_id,
                 l.company_id,
@@ -58,7 +57,7 @@ class ActivityReport(models.Model):
                 l.date_conversion,
                 l.date_deadline,
                 l.date_open,
-                l.lost_reason,
+                l.lost_reason_id as lost_reason,
                 l.name,
                 l.partner_id,
                 l.partner_name,

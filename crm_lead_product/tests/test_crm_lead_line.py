@@ -1,12 +1,11 @@
 # Copyright 2017-19 ForgeFlow S.L. (https://www.forgeflow.com)
 # License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl.html)
 
-from odoo.tests import common
+from odoo.tests import TransactionCase, tagged
 
 
-@common.at_install(False)
-@common.post_install(True)
-class TestCrmLeadLine(common.TransactionCase):
+@tagged("-at_install", "post_install")
+class TestCrmLeadLine(TransactionCase):
     def setUp(self):
         super(TestCrmLeadLine, self).setUp()
         self.product_obj = self.env["product.product"]
@@ -26,21 +25,21 @@ class TestCrmLeadLine(common.TransactionCase):
             {
                 "name": "Product 1",
                 "categ_id": self.env.ref("product.product_category_1").id,
-                "price": 142.0,
+                # "price": 142.0,
             }
         )
         self.product_2 = self.product_obj.create(
             {
                 "name": "Product 2",
                 "categ_id": self.env.ref("product.product_category_2").id,
-                "price": 1420.0,
+                # "price": 1420.0,
             }
         )
         self.product_3 = self.product_obj.create(
             {
                 "name": "Product 3",
                 "categ_id": self.env.ref("product.product_category_3").id,
-                "price": 14200.0,
+                # "price": 14200.0,
             }
         )
         self.product_4 = self.env.ref("product.product_product_25")
@@ -55,7 +54,7 @@ class TestCrmLeadLine(common.TransactionCase):
                 "name": self.product_1.name,
                 "product_id": self.product_1.id,
                 "uom_id": self.product_1.uom_id.id,
-                "price_unit": self.product_1.price,
+                "price_unit": self.product_1.get_contextual_price(),
             }
         )
         # Create new lead line with category id
@@ -149,7 +148,7 @@ class TestCrmLeadLine(common.TransactionCase):
             "Planned revenue should be equal " "to the product standard price",
         )
 
-        self.lead.convert_opportunity(self.env.ref("base.res_partner_1").id)
+        self.lead.convert_opportunity(self.env.ref("base.res_partner_1"))
 
         lead_line_1 = self.lead.lead_line_ids[0]
 
