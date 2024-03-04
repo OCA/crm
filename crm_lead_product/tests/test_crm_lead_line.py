@@ -24,19 +24,19 @@ class TestCrmLeadLine(TransactionCase):
         self.product_1 = self.product_obj.create(
             {
                 "name": "Product 1",
-                "categ_id": self.env.ref("product.product_category_1").id
+                "categ_id": self.env.ref("product.product_category_1").id,
             }
         )
         self.product_2 = self.product_obj.create(
             {
                 "name": "Product 2",
-                "categ_id": self.env.ref("product.product_category_2").id
+                "categ_id": self.env.ref("product.product_category_2").id,
             }
         )
         self.product_3 = self.product_obj.create(
             {
                 "name": "Product 3",
-                "categ_id": self.env.ref("product.product_category_3").id
+                "categ_id": self.env.ref("product.product_category_3").id,
             }
         )
         self.product_4 = self.env.ref("product.product_product_25")
