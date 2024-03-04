@@ -147,6 +147,24 @@ class TestCrmLeadLine(TransactionCase):
             "Lead line price unit should be equal to computed price",
         )
 
+        lead_line_6 = self.lead_line_obj.create(
+            {
+                "lead_id": self.lead.id,
+                "name": self.product_3.name,
+                "product_id": self.product_2.id,
+                "product_tmpl_id": self.product_3.product_tmpl_id.id,
+            }
+        )
+
+        lead_line_6._onchange_product_tmpl_id()
+
+        # Check if there are already defined product and remove if it does not match
+        self.assertNotEqual(
+            lead_line_6.product_id,
+            self.product_2.id,
+            "Lead line product id should be equal to None",
+        )
+
     def test_02_lead_to_opportunity(self):
         # Write one lead line to CRM Lead
         self.lead.write(
