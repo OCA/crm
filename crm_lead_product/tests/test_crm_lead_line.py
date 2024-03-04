@@ -117,16 +117,18 @@ class TestCrmLeadLine(TransactionCase):
             "Lead line product template should be equal " "to None",
         )
 
-        # Don't define lead id and shouldn't be defined product template neither price unit
+        # Don't define lead id and shouldn't be defined product template neither
         lead_line_5 = self.lead_line_obj.create(
             {
                 "name": self.product_1.name,
                 "product_id": self.product_1.id,
+                "uom_id": self.product_1.uom_id.id,
             }
         )
 
         lead_line_5._onchange_product_id()
         lead_line_5._onchange_product_tmpl_id()
+        lead_line_5._onchange_uom_id()
 
         self.assertNotEqual(
             lead_line_5.product_tmpl_id,
@@ -134,10 +136,15 @@ class TestCrmLeadLine(TransactionCase):
             "Lead line product template should be equal to None",
         )
 
+        # Computes lead line price unit
+        computed_price = self.product_1.uom_id._compute_price(
+            self.product_1.list_price, self.product_1.uom_id
+        )
+
         self.assertEqual(
             lead_line_5.price_unit,
-            0.0,
-            "Lead line price unit should be equal to 0",
+            computed_price,
+            "Lead line price unit should be equal to computed price",
         )
 
     def test_02_lead_to_opportunity(self):
