@@ -24,22 +24,19 @@ class TestCrmLeadLine(TransactionCase):
         self.product_1 = self.product_obj.create(
             {
                 "name": "Product 1",
-                "categ_id": self.env.ref("product.product_category_1").id,
-                # "price": 142.0,
+                "categ_id": self.env.ref("product.product_category_1").id
             }
         )
         self.product_2 = self.product_obj.create(
             {
                 "name": "Product 2",
-                "categ_id": self.env.ref("product.product_category_2").id,
-                # "price": 1420.0,
+                "categ_id": self.env.ref("product.product_category_2").id
             }
         )
         self.product_3 = self.product_obj.create(
             {
                 "name": "Product 3",
-                "categ_id": self.env.ref("product.product_category_3").id,
-                # "price": 14200.0,
+                "categ_id": self.env.ref("product.product_category_3").id
             }
         )
         self.product_4 = self.env.ref("product.product_product_25")
@@ -118,6 +115,29 @@ class TestCrmLeadLine(TransactionCase):
             lead_line_4.product_tmpl_id,
             self.product_1.product_tmpl_id,
             "Lead line product template should be equal " "to None",
+        )
+
+        # Don't define lead id and shouldn't be defined product template neither price unit
+        lead_line_5 = self.lead_line_obj.create(
+            {
+                "name": self.product_1.name,
+                "product_id": self.product_1.id,
+            }
+        )
+
+        lead_line_5._onchange_product_id()
+        lead_line_5._onchange_product_tmpl_id()
+
+        self.assertNotEqual(
+            lead_line_5.product_tmpl_id,
+            self.product_1.product_tmpl_id,
+            "Lead line product template should be equal to None",
+        )
+
+        self.assertEqual(
+            lead_line_5.price_unit,
+            0.0,
+            "Lead line price unit should be equal to 0",
         )
 
     def test_02_lead_to_opportunity(self):
