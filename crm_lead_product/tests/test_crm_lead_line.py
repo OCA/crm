@@ -128,6 +128,7 @@ class TestCrmLeadLine(TransactionCase):
 
         lead_line_5._onchange_product_id()
         lead_line_5._onchange_product_tmpl_id()
+        lead_line_5._onchange_category_id()
         lead_line_5._onchange_uom_id()
 
         self.assertNotEqual(
@@ -150,7 +151,8 @@ class TestCrmLeadLine(TransactionCase):
         lead_line_6 = self.lead_line_obj.create(
             {
                 "lead_id": self.lead.id,
-                "name": self.product_3.name,
+                "name": "",
+                "category_id": self.product_3.categ_id.id,
                 "product_id": self.product_2.id,
                 "product_tmpl_id": self.product_3.product_tmpl_id.id,
             }
