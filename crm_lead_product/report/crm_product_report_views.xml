@@ -9,7 +9,7 @@
             <pivot string="Pipeline Analysis">
                 <field name="stage_id" type="col" />
                 <field name="product_id" type="row" />
-                <field name="planned_revenue" type="measure" />
+                <field name="expected_revenue" type="measure" />
             </pivot>
         </field>
     </record>
@@ -21,7 +21,7 @@
             <graph string="Pipeline Analysis" stacked="True">
                 <field name="product_id" type="row" />
                 <field name="stage_id" type="row" />
-                <field name="expected_revenue" type="measure" />
+                <field name="prorated_revenue" type="measure" />
             </graph>
         </field>
     </record>
@@ -40,7 +40,7 @@
                 <field name="partner_name" />
                 <field name="country_id" />
                 <field name="stage_id" />
-                <field name="expected_revenue" />
+                <field name="prorated_revenue" />
                 <field name="team_id" />
             </tree>
         </field>

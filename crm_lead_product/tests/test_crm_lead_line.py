@@ -1,12 +1,11 @@
-# Copyright 2017-19 ForgeFlow S.L. (https://www.forgeflow.com)
+# Copyright 2017-2024 ForgeFlow S.L. (https://www.forgeflow.com)
 # License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl.html)
 
-from odoo.tests import common
+from odoo.tests.common import TransactionCase, tagged
 
 
-@common.at_install(False)
-@common.post_install(True)
-class TestCrmLeadLine(common.TransactionCase):
+@tagged("post_install", "-at_install")
+class TestCrmLeadLine(TransactionCase):
     def setUp(self):
         super(TestCrmLeadLine, self).setUp()
         self.product_obj = self.env["product.product"]
@@ -144,7 +143,7 @@ class TestCrmLeadLine(common.TransactionCase):
 
         # Check if planned revenue is correctly set for lead line 1
         self.assertEqual(
-            self.lead.lead_line_ids[0].planned_revenue,
+            self.lead.lead_line_ids[0].expected_revenue,
             self.product_4.list_price,
             "Planned revenue should be equal " "to the product standard price",
         )
@@ -154,15 +153,15 @@ class TestCrmLeadLine(common.TransactionCase):
         lead_line_1 = self.lead.lead_line_ids[0]
 
         self.assertEqual(
-            lead_line_1.expected_revenue,
-            lead_line_1.planned_revenue * self.lead.probability * (1 / 100),
+            lead_line_1.prorated_revenue,
+            lead_line_1.expected_revenue * self.lead.probability * (1 / 100),
             "Expected revenue should be planned " "revenue times the probability",
         )
 
         self.lead.write({"probability": 30})
 
         self.assertEqual(
-            lead_line_1.expected_revenue,
-            round(lead_line_1.planned_revenue * self.lead.probability * (1 / 100), 5),
+            lead_line_1.prorated_revenue,
+            round(lead_line_1.expected_revenue * self.lead.probability * (1 / 100), 5),
             "Expected revenue should be planned " "revenue times the probability",
         )
