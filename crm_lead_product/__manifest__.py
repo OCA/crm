@@ -1,12 +1,11 @@
-# Copyright (C) 2017-19 ForgeFlow S.L. (https://www.forgeflow.com).
-# License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl).
-
+# Copyright (C) 2017-2024 ForgeFlow S.L. (https://www.forgeflow.com)
+# License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl.html)
 {
-    "name": "Lead Line Product",
-    "version": "13.0.1.0.1",
+    "name": "CRM Lead Product",
+    "version": "14.0.1.0.0",
     "category": "Customer Relationship Management",
     "license": "LGPL-3",
-    "summary": "Adds a lead line in the lead/opportunity model " "in odoo",
+    "summary": "Adds a lead line in the lead/opportunity model in odoo",
     "author": "ForgeFlow, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/crm",
     "depends": ["crm", "product"],

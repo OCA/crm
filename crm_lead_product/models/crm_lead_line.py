@@ -1,5 +1,5 @@
-# Copyright (C) 2017-19 ForgeFlow S.L. (https://www.forgeflow.com)
-# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
+# Copyright (C) 2017-2024 ForgeFlow S.L. (https://www.forgeflow.com)
+# License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl.html)
 
 from odoo import api, fields, models
 
@@ -9,16 +9,16 @@ class CrmLeadLine(models.Model):
     _description = "Line in CRM Lead"
 
     @api.depends("price_unit", "product_qty")
-    def _compute_planned_revenue(self):
-        for rec in self:
-            rec.planned_revenue = rec.product_qty * rec.price_unit
-
-    @api.depends("lead_id.probability", "planned_revenue")
     def _compute_expected_revenue(self):
         for rec in self:
+            rec.expected_revenue = rec.product_qty * rec.price_unit
+
+    @api.depends("lead_id.probability", "expected_revenue")
+    def _compute_prorated_revenue(self):
+        for rec in self:
             if rec.lead_id and rec.lead_id.type != "lead":
-                rec.expected_revenue = (
-                    rec.planned_revenue * rec.lead_id.probability * (1 / 100)
+                rec.prorated_revenue = (
+                    rec.expected_revenue * rec.lead_id.probability * (1 / 100)
                 )
 
     lead_id = fields.Many2one("crm.lead", string="Lead")
@@ -32,16 +32,24 @@ class CrmLeadLine(models.Model):
     )
     product_qty = fields.Integer(string="Product Quantity", default=1, required=True)
     uom_id = fields.Many2one("uom.uom", string="Unit of Measure", readonly=True)
-    price_unit = fields.Float(string="Price Unit")
-    planned_revenue = fields.Float(
-        compute="_compute_planned_revenue",
-        string="Planned revenue",
+    price_unit = fields.Float(string="Price Unit", digits="Product Price")
+    company_currency = fields.Many2one(
+        "res.currency",
+        string="Currency",
+        related="lead_id.company_currency",
+        readonly=True,
+    )
+    expected_revenue = fields.Monetary(
+        compute="_compute_expected_revenue",
+        string="Expected revenue",
+        currency_field="company_currency",
         compute_sudo=True,
         store=True,
     )
-    expected_revenue = fields.Float(
-        compute="_compute_expected_revenue",
-        string="Expected revenue",
+    prorated_revenue = fields.Monetary(
+        compute="_compute_prorated_revenue",
+        string="Prorated revenue",
+        currency_field="company_currency",
         compute_sudo=True,
         store=True,
     )
@@ -51,7 +59,6 @@ class CrmLeadLine(models.Model):
         domain = {}
         if not self.lead_id:
             return
-
         if not self.product_id:
             self.price_unit = 0.0
             domain["uom_id"] = []
@@ -62,22 +69,18 @@ class CrmLeadLine(models.Model):
             self.category_id = product.categ_id.id
             self.product_tmpl_id = product.product_tmpl_id.id
             self.price_unit = product.list_price
-
             if product.name:
                 self.name = product.name
-
             if (
                 not self.uom_id
                 or product.uom_id.category_id.id != self.uom_id.category_id.id
             ):
                 self.uom_id = product.uom_id.id
             domain["uom_id"] = [("category_id", "=", product.uom_id.category_id.id)]
-
             if self.uom_id and self.uom_id.id != product.uom_id.id:
                 self.price_unit = product.uom_id._compute_price(
                     self.price_unit, self.uom_id
                 )
-
         return {"domain": domain}
 
     @api.onchange("category_id")
@@ -89,7 +92,6 @@ class CrmLeadLine(models.Model):
             categ_id = self.category_id
             if categ_id.name and not self.name:
                 self.name = categ_id.name
-
             # Check if there are already defined product and product template
             # and remove them if categories do not match
             if self.product_id and self.product_id.categ_id != categ_id:
@@ -97,7 +99,6 @@ class CrmLeadLine(models.Model):
                 self.name = categ_id.name
             if self.product_tmpl_id and self.product_tmpl_id.categ_id != categ_id:
                 self.product_tmpl_id = None
-
         return {"domain": domain}
 
     @api.onchange("product_tmpl_id")
@@ -110,14 +111,12 @@ class CrmLeadLine(models.Model):
             if product_tmpl.name and not self.name:
                 self.name = product_tmpl.name
             self.category_id = product_tmpl.categ_id
-
             if self.product_id:
                 # Check if there are already defined product and remove
                 # if it does not match
                 if self.product_id.product_tmpl_id != product_tmpl:
                     self.product_id = None
                     self.name = product_tmpl.name
-
         return {"domain": domain}
 
     @api.onchange("uom_id")
@@ -125,11 +124,9 @@ class CrmLeadLine(models.Model):
         result = {}
         if not self.uom_id:
             self.price_unit = 0.0
-
         if self.product_id and self.uom_id:
             price_unit = self.product_id.list_price
             self.price_unit = self.product_id.uom_id._compute_price(
                 price_unit, self.uom_id
             )
-
         return result
