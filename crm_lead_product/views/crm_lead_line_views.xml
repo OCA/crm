@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <odoo>
     <record id="view_tree_lead_line" model="ir.ui.view">
-        <field name="name">crm.lead.form.lead</field>
+        <field name="name">crm.lead.line.tree - crm_lead_product</field>
         <field name="model">crm.lead.line</field>
         <field name="arch" type="xml">
             <tree string="Products" editable="bottom">
@@ -11,8 +11,8 @@
                 <field name="name" widget="section_and_note_text" />
                 <field name="product_qty" string="Quantity" />
                 <field name="price_unit" string="Price Unit" />
-                <field name="planned_revenue" string="Planned revenue" />
-                <field name="expected_revenue" string="Expected revenue" />
+                <field name="expected_revenue" />
+                <field name="prorated_revenue" />
             </tree>
         </field>
     </record>

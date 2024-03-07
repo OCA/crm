@@ -1,2 +1,2 @@
-
 * Adria Gil Sorribes <adria.gil@forgeflow.com>
+* Guillem Casassas <guillem.casassas@forgeflow.com>
