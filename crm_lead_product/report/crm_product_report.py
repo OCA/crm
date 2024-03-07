@@ -1,6 +1,5 @@
-# Copyright (C) 2017-19 ForgeFlow S.L. (https://www.forgeflow.com)
-# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
-
+# Copyright (C) 2017-2024 ForgeFlow S.L. (https://www.forgeflow.com)
+# License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl.html)
 from psycopg2.extensions import AsIs
 
 from odoo import fields, models, tools
@@ -38,7 +37,7 @@ class ActivityReport(models.Model):
     user_id = fields.Many2one("res.users", "Salesperson", readonly=True)
     category_id = fields.Many2one("product.category", "Category", readonly=True)
     expected_revenue = fields.Float("Expected Revenue", readonly=True)
-    planned_revenue = fields.Float("Planned Revenue", readonly=True)
+    prorated_revenue = fields.Float("Prorated Revenue", readonly=True)
     product_id = fields.Many2one("product.product", "Product", readonly=True)
     product_qty = fields.Integer("Product Quantity", readonly=True)
     product_tmpl_id = fields.Many2one(
@@ -70,7 +69,7 @@ class ActivityReport(models.Model):
                 l.user_id,
                 ll.category_id,
                 ll.expected_revenue,
-                ll.planned_revenue,
+                ll.prorated_revenue,
                 ll.product_id,
                 ll.product_qty,
                 ll.product_tmpl_id
