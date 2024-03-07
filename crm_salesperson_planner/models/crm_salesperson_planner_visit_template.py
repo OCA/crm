@@ -1,5 +1,6 @@
 # Copyright 2021 Sygel - Valentin Vinagre
 # Copyright 2021 Sygel - Manuel Regidor
+# Copyright 2024 Tecnativa - Víctor Martínez
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html)
 
 from datetime import timedelta
@@ -70,14 +71,31 @@ class CrmSalespersonPlannerVisitTemplate(models.Model):
         string="Number of Sales Person Visits", compute="_compute_visit_ids_count"
     )
     auto_validate = fields.Boolean(default=True)
-    rrule_type = fields.Selection(
-        default="daily",
-        required=True,
-    )
     last_visit_date = fields.Date(compute="_compute_last_visit_date", store=True)
     final_date = fields.Date(string="Repeat Until")
     allday = fields.Boolean(default=True)
-    recurrency = fields.Boolean(default=True)
+    # Set all compute=_compute_recurrence fields of calendar.event as store=True.
+    # We want to manage the value of the fields manually and we don't want to depend
+    # on recurrence_id field (only possible with calendar.event).
+    # We don't use the recurrency field either because it is unnecessary.
+    rrule = fields.Char(store=True)
+    rrule_type = fields.Selection(store=True, default="daily", required=True)
+    event_tz = fields.Selection(store=True)
+    end_type = fields.Selection(store=True)
+    interval = fields.Integer(store=True)
+    count = fields.Integer(store=True)
+    mon = fields.Boolean(store=True)
+    tue = fields.Boolean(store=True)
+    wed = fields.Boolean(store=True)
+    thu = fields.Boolean(store=True)
+    fri = fields.Boolean(store=True)
+    sat = fields.Boolean(store=True)
+    sun = fields.Boolean(store=True)
+    month_by = fields.Selection(store=True)
+    day = fields.Integer(store=True)
+    weekday = fields.Selection(store=True)
+    byday = fields.Selection(store=True)
+    until = fields.Date(store=True)
 
     _sql_constraints = [
         (
@@ -109,6 +127,17 @@ class CrmSalespersonPlannerVisitTemplate(models.Model):
         for item in self:
             if len(item.partner_ids) > 1:
                 raise ValidationError(_("Only one customer is allowed"))
+
+    @api.onchange("end_type")
+    def _onchange_end_type(self):
+        """Avoid inconsistent data if you switch from one thing to another."""
+        if self.end_type == "count":
+            self.until = False
+        elif self.end_type == "end_date":
+            self.count = 0
+        elif self.end_type == "forever":
+            self.count = 0
+            self.until = False
 
     @api.model_create_multi
     def create(self, vals_list):
@@ -163,7 +192,7 @@ class CrmSalespersonPlannerVisitTemplate(models.Model):
         ]
 
     def _get_max_date(self):
-        return self._increase_date(self.start_date, self.count)
+        return self.until or self._increase_date(self.start_date, self.count)
 
     def _increase_date(self, date, value):
         if self.rrule_type == "daily":
