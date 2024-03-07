@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<odoo>
+    <record id="crm_lead_view_form" model="ir.ui.view">
+        <field name="name">crm.lead.form.inherit</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form" />
+        <field name="arch" type="xml">
+            <field name="partner_id" position="after">
+                <field name="show_won_button" invisible="1" />
+            </field>
+            <button name="action_set_won_rainbowman" position="attributes">
+                <attribute
+                    name="attrs"
+                >{'invisible':[('show_won_button','=',False)]}</attribute>
+            </button>
+        </field>
+    </record>
+</odoo>

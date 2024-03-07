@@ -1,0 +1,39 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* crm_won_restrict_per_stage
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-07 20:40+0000\n"
+"PO-Revision-Date: 2024-03-07 20:40+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: crm_won_restrict_per_stage
+#: model:ir.model,name:crm_won_restrict_per_stage.model_crm_stage
+msgid "CRM Stages"
+msgstr "Etapas del CRM"
+
+#. module: crm_won_restrict_per_stage
+#: model:ir.model,name:crm_won_restrict_per_stage.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Lead/Oportunidad"
+
+#. module: crm_won_restrict_per_stage
+#: model:ir.model.fields,field_description:crm_won_restrict_per_stage.field_crm_lead__show_won_button
+#: model:ir.model.fields,field_description:crm_won_restrict_per_stage.field_crm_stage__show_won_button
+msgid "Show Won Button"
+msgstr "Mostrar botón Ganado"
+
+#. module: crm_won_restrict_per_stage
+#: code:addons/crm_won_restrict_per_stage/models/crm_lead.py:0
+#, python-format
+msgid "You can't change to this stage from the current stage."
+msgstr "No puede cambiar a esta etapa desde la etapa actual."
