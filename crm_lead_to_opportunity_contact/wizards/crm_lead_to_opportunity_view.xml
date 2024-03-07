@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+  Copyright 2023 Akretion France (http://www.akretion.com/)
+  @author: Alexis de Lattre <alexis.delattre@akretion.com>
+  License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+
+<record id="view_crm_lead2opportunity_partner" model="ir.ui.view">
+    <field name="model">crm.lead2opportunity.partner</field>
+    <field name="inherit_id" ref="crm.view_crm_lead2opportunity_partner" />
+    <field name="arch" type="xml">
+        <field name="partner_id" position="after">
+            <field
+                    name="create_child_partner_id"
+                    widget="res_partner_many2one"
+                    context="{'res_partner_search_mode': 'customer', 'show_vat': True}"
+                    attrs="{'required': [('action', '=', 'create_child')], 'invisible': [('action', '!=', 'create_child')]}"
+                />
+        </field>
+    </field>
+</record>
+
+</odoo>
