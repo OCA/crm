@@ -29,9 +29,6 @@ class CrmSalespersonPlannerVisitTemplateCreate(models.TransientModel):
         days = (self.date_to - fields.Date.context_today(self)).days
         if days < 0:
             raise ValidationError(_("The date can't be earlier than today"))
-        visits = self.env["crm.salesperson.planner.visit"].create(
-            template._create_visits(days=days)
-        )
-        if visits and template.auto_validate:
-            visits.action_confirm()
+        # Create visits + auto-confirm + auto-done
+        template.create_visits(days=days)
         return {"type": "ir.actions.act_window_close"}
