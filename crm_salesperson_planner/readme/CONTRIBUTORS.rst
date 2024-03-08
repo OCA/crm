@@ -2,3 +2,6 @@
 
   * Valentin Vinagre
   * Manuel Regidor
+* `Tecnativa <https://www.tecnativa.com>`_:
+
+  * Víctor Martínez
