@@ -1,17 +1,28 @@
 # Copyright 2021 Sygel - Valentin Vinagre
 # Copyright 2021 Sygel - Manuel Regidor
+# Copyright 2024 Tecnativa - Víctor Martínez
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html)
-
 from datetime import timedelta
 
 from odoo import exceptions, fields
 from odoo.tests import common
+from odoo.tools import mute_logger
 
 
 class TestCrmSalespersonPlannerVisitTemplate(common.TransactionCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
+        cls.env = cls.env(
+            context=dict(
+                cls.env.context,
+                mail_create_nolog=True,
+                mail_create_nosubscribe=True,
+                mail_notrack=True,
+                no_reset_password=True,
+                tracking_disable=True,
+            )
+        )
         cls.visit_template_model = cls.env["crm.salesperson.planner.visit.template"]
         cls.partner_model = cls.env["res.partner"]
         cls.close_reason_mode = cls.env["crm.salesperson.planner.visit.close.reason"]
@@ -47,7 +58,7 @@ class TestCrmSalespersonPlannerVisitTemplate(common.TransactionCase):
         )
         self.visit_template_base.action_validate()
         self.visit_template_base.create_visits(days=4)
-        self.assertEqual(self.visit_template_base.visit_ids_count, 4)
+        self.assertEqual(len(self.visit_template_base.visit_ids), 4)
         self.assertEqual(
             len(
                 self.visit_template_base.visit_ids.filtered(
@@ -65,9 +76,8 @@ class TestCrmSalespersonPlannerVisitTemplate(common.TransactionCase):
             0,
         )
         self.assertEqual(self.visit_template_base.state, "in-progress")
-        self.visit_template_base.create_visits(days=9)
-        self.visit_template_base._compute_visit_ids_count()
-        self.assertEqual(self.visit_template_base.visit_ids_count, 10)
+        self.visit_template_base.create_visits(days=10)
+        self.assertEqual(len(self.visit_template_base.visit_ids), 10)
         self.assertEqual(
             len(
                 self.visit_template_base.visit_ids.filtered(
@@ -98,7 +108,7 @@ class TestCrmSalespersonPlannerVisitTemplate(common.TransactionCase):
         )
         self.visit_template_base.action_validate()
         self.visit_template_base.create_visits(days=4)
-        self.assertEqual(self.visit_template_base.visit_ids_count, 4)
+        self.assertEqual(len(self.visit_template_base.visit_ids), 4)
         self.assertEqual(
             len(
                 self.visit_template_base.visit_ids.filtered(
@@ -116,9 +126,8 @@ class TestCrmSalespersonPlannerVisitTemplate(common.TransactionCase):
             4,
         )
         self.assertEqual(self.visit_template_base.state, "in-progress")
-        self.visit_template_base.create_visits(days=9)
-        self.visit_template_base._compute_visit_ids_count()
-        self.assertEqual(self.visit_template_base.visit_ids_count, 10)
+        self.visit_template_base.create_visits(days=10)
+        self.assertEqual(len(self.visit_template_base.visit_ids), 10)
         self.assertEqual(
             len(
                 self.visit_template_base.visit_ids.filtered(
@@ -162,6 +171,7 @@ class TestCrmSalespersonPlannerVisitTemplate(common.TransactionCase):
         )
         self.assertEqual(visit_0.date, fields.Date.today() + timedelta(days=14))
 
+    @mute_logger("odoo.models.unlink")
     def test_04_cancel_visit(self):
         visit_template = self.visit_template_base.copy()
         visit_template.write(
@@ -183,3 +193,140 @@ class TestCrmSalespersonPlannerVisitTemplate(common.TransactionCase):
         self.assertFalse(first_visit.calendar_event_id)
         first_visit.unlink()
         self.assertEqual(len(visit_template.visit_ids), 9)
+
+    def test_05_repeat_weeks(self):
+        self.visit_template_base.write(
+            {
+                "start_date": "2024-03-08",
+                "interval": 1,
+                "rrule_type": "weekly",
+                "tue": True,
+                "end_type": "end_date",
+                "until": "2024-07-02",
+            }
+        )
+        self.visit_template_base.action_validate()
+        self.assertFalse(self.visit_template_base.visit_ids)
+        create_model = self.env["crm.salesperson.planner.visit.template.create"]
+        create_item = create_model.with_context(
+            active_id=self.visit_template_base.id
+        ).create({"date_to": "2024-07-02"})
+        create_item.create_visits()
+        self.assertEqual(self.visit_template_base.state, "done")
+        visit_dates = self.visit_template_base.visit_ids.mapped("date")
+        self.assertIn(fields.Date.from_string("2024-03-19"), visit_dates)
+        self.assertEqual(
+            self.visit_template_base.last_visit_date,
+            fields.Date.from_string("2024-07-02"),
+        )
+
+    def test_06_repeat_months_count_01(self):
+        self.visit_template_base.write(
+            {
+                "start_date": "2024-03-08",
+                "interval": 1,
+                "rrule_type": "monthly",
+                "end_type": "count",
+                "count": 2,
+                "month_by": "date",
+                "day": 1,
+            }
+        )
+        self.visit_template_base.action_validate()
+        self.assertFalse(self.visit_template_base.visit_ids)
+        create_model = self.env["crm.salesperson.planner.visit.template.create"]
+        create_item = create_model.with_context(
+            active_id=self.visit_template_base.id
+        ).create({"date_to": "2024-12-13"})
+        create_item.create_visits()
+        self.assertEqual(self.visit_template_base.state, "done")
+        self.assertEqual(len(self.visit_template_base.visit_ids), 2)
+        visit_dates = self.visit_template_base.visit_ids.mapped("date")
+        self.assertIn(fields.Date.from_string("2024-04-01"), visit_dates)
+        self.assertEqual(
+            self.visit_template_base.last_visit_date,
+            fields.Date.from_string("2024-05-01"),
+        )
+
+    def test_06_repeat_months_count_02(self):
+        self.visit_template_base.write(
+            {
+                "start_date": "2024-03-08",
+                "interval": 1,
+                "rrule_type": "monthly",
+                "end_type": "count",
+                "count": 2,
+                "month_by": "date",
+                "day": 1,
+            }
+        )
+        self.visit_template_base.action_validate()
+        self.assertFalse(self.visit_template_base.visit_ids)
+        create_model = self.env["crm.salesperson.planner.visit.template.create"]
+        create_item = create_model.with_context(
+            active_id=self.visit_template_base.id
+        ).create({"date_to": "2024-12-13"})
+        create_item.create_visits()
+        self.assertEqual(self.visit_template_base.state, "done")
+        self.assertEqual(len(self.visit_template_base.visit_ids), 2)
+        visit_dates = self.visit_template_base.visit_ids.mapped("date")
+        self.assertIn(fields.Date.from_string("2024-04-01"), visit_dates)
+        self.assertEqual(
+            self.visit_template_base.last_visit_date,
+            fields.Date.from_string("2024-05-01"),
+        )
+
+    def test_06_repeat_months_count_03(self):
+        self.visit_template_base.write(
+            {
+                "start_date": "2024-03-08",
+                "interval": 1,
+                "rrule_type": "monthly",
+                "end_type": "count",
+                "count": 2,
+                "month_by": "day",
+                "byday": "1",
+                "weekday": "MON",
+            }
+        )
+        self.visit_template_base.action_validate()
+        self.assertFalse(self.visit_template_base.visit_ids)
+        create_model = self.env["crm.salesperson.planner.visit.template.create"]
+        create_item = create_model.with_context(
+            active_id=self.visit_template_base.id
+        ).create({"date_to": "2024-12-13"})
+        create_item.create_visits()
+        self.assertEqual(self.visit_template_base.state, "done")
+        self.assertEqual(len(self.visit_template_base.visit_ids), 2)
+        visit_dates = self.visit_template_base.visit_ids.mapped("date")
+        self.assertIn(fields.Date.from_string("2024-04-01"), visit_dates)
+        self.assertEqual(
+            self.visit_template_base.last_visit_date,
+            fields.Date.from_string("2024-05-06"),
+        )
+
+    def test_07_repeat_yearly_count_01(self):
+        self.visit_template_base.write(
+            {
+                "start_date": "2024-03-08",
+                "interval": 1,
+                "rrule_type": "yearly",
+                "end_type": "count",
+                "count": 2,
+            }
+        )
+        self.visit_template_base.action_validate()
+        self.assertFalse(self.visit_template_base.visit_ids)
+        create_model = self.env["crm.salesperson.planner.visit.template.create"]
+        create_item = create_model.with_context(
+            active_id=self.visit_template_base.id
+        ).create({"date_to": "2030-01-01"})
+        create_item.create_visits()
+        self.assertEqual(self.visit_template_base.state, "done")
+        self.assertEqual(len(self.visit_template_base.visit_ids), 2)
+        visit_dates = self.visit_template_base.visit_ids.mapped("date")
+        self.assertIn(fields.Date.from_string("2024-03-08"), visit_dates)
+        self.assertEqual(
+            self.visit_template_base.last_visit_date,
+            fields.Date.from_string("2025-03-08"),
+        )

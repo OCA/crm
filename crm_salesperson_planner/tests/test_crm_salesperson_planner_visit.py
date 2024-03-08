@@ -1,19 +1,30 @@
 # Copyright 2021 Sygel - Valentin Vinagre
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html)
 
-from datetime import datetime, timedelta
+from datetime import timedelta
 
 from dateutil.relativedelta import relativedelta
 
 from odoo import _, fields
 from odoo.exceptions import ValidationError
 from odoo.tests import common
+from odoo.tools import mute_logger
 
 
 class TestCrmSalespersonPlannerVisitBase(common.TransactionCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
+        cls.env = cls.env(
+            context=dict(
+                cls.env.context,
+                mail_create_nolog=True,
+                mail_create_nosubscribe=True,
+                mail_notrack=True,
+                no_reset_password=True,
+                tracking_disable=True,
+            )
+        )
         cls.visit_model = cls.env["crm.salesperson.planner.visit"]
         cls.partner_model = cls.env["res.partner"]
         cls.close_model = cls.env["crm.salesperson.planner.visit.close.reason"]
@@ -97,6 +108,7 @@ class TestCrmSalespersonPlannerVisit(TestCrmSalespersonPlannerVisitBase):
         )
         close_wiz.action_close_reason_apply()
 
+    @mute_logger("odoo.models.unlink")
     def test_crm_salesperson_close_wiz_cancel(self):
         self.visit1.action_confirm()
         self.assertEqual(self.visit1.state, "confirm")
@@ -111,6 +123,7 @@ class TestCrmSalespersonPlannerVisit(TestCrmSalespersonPlannerVisitBase):
             2,
         )
 
+    @mute_logger("odoo.models.unlink")
     def test_crm_salesperson_close_wiz_cancel_resch(self):
         self.visit1.action_confirm()
         self.assertEqual(self.visit1.state, "confirm")
@@ -135,6 +148,7 @@ class TestCrmSalespersonPlannerVisit(TestCrmSalespersonPlannerVisitBase):
             1,
         )
 
+    @mute_logger("odoo.models.unlink")
     def test_crm_salesperson_close_wiz_cancel_img(self):
         self.visit1.action_confirm()
         self.assertEqual(self.visit1.state, "confirm")
@@ -248,34 +262,6 @@ class TestCrmSalespersonPlannerVisitTemplate(common.TransactionCase):
 
         error_msg = _("Only one customer is allowed")
         self.assertEqual(str(context.exception), error_msg)
-
-    def test_increase_date(self):
-        template = self.env["crm.salesperson.planner.visit.template"].create({})
-
-        template.rrule_type = "daily"
-        initial_date = datetime(2023, 1, 1)
-        expected_date = initial_date + timedelta(days=3)
-        result_date = template._increase_date(initial_date, 3)
-        self.assertEqual(result_date, expected_date)
-        self.assertTrue(template.rrule_type == "daily")
-
-        template.rrule_type = "weekly"
-        expected_date1 = initial_date + relativedelta(weeks=2)
-        result_date1 = template._increase_date(initial_date, 2)
-        self.assertEqual(result_date1.date(), expected_date1.date())
-        self.assertTrue(template.rrule_type == "weekly")
-
-        template.rrule_type = "monthly"
-        expected_date2 = initial_date + relativedelta(months=1)
-        result_date2 = template._increase_date(initial_date, 1)
-        self.assertEqual(result_date2.date(), expected_date2.date())
-        self.assertTrue(template.rrule_type == "monthly")
-
-        template.rrule_type = "yearly"
-        expected_date3 = initial_date + relativedelta(years=1)
-        result_date3 = template._increase_date(initial_date, 1)
-        self.assertEqual(result_date3.date(), expected_date3.date())
-        self.assertTrue(template.rrule_type == "yearly")
 
     def test_action_view_salesperson_planner_visit(self):
         template = self.env["crm.salesperson.planner.visit.template"].create(
