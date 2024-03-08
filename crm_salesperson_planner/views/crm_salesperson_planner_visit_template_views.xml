@@ -91,8 +91,6 @@
                             />
                             <field name="last_visit_date" />
                             <field name="auto_validate" />
-                            <field name="recurrence_update" invisible="1" />
-                            <field name="recurrence_id" invisible="1" />
                             <field name="event_tz" invisible="1" />
                             <field name="allday" force_save="1" />
                             <field name="rrule" invisible="1" />
