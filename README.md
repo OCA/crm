@@ -40,6 +40,7 @@ addon | version | maintainers | summary
 [crm_security_group](crm_security_group/) | 15.0.1.2.0 | [![victoralmau](https://github.com/victoralmau.png?size=30px)](https://github.com/victoralmau) | Add new group in Sales to show only CRM
 [crm_stage_probability](crm_stage_probability/) | 15.0.1.0.0 |  | Define fixed probability on the stages
 [crm_won_reason](crm_won_reason/) | 15.0.1.0.0 | [![ajaniszewska-dev](https://github.com/ajaniszewska-dev.png?size=30px)](https://github.com/ajaniszewska-dev) | CRM won reason
+[crm_won_restrict_per_stage](crm_won_restrict_per_stage/) | 15.0.1.0.0 | [![carolina-fernandez](https://github.com/carolina-fernandez.png?size=30px)](https://github.com/carolina-fernandez) | CRM Won Restrict Per Stage
 [marketing_crm_partner](marketing_crm_partner/) | 15.0.1.0.0 |  | Copy tracking fields from leads to partners
 
 [//]: # (end addons)
