@@ -5,12 +5,23 @@ from dateutil.relativedelta import relativedelta
 
 from odoo import fields
 from odoo.tests import common
+from odoo.tools import mute_logger
 
 
 class TestCrmSalespersonPlannerVisitBase(common.TransactionCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
+        cls.env = cls.env(
+            context=dict(
+                cls.env.context,
+                mail_create_nolog=True,
+                mail_create_nosubscribe=True,
+                mail_notrack=True,
+                no_reset_password=True,
+                tracking_disable=True,
+            )
+        )
         cls.visit_model = cls.env["crm.salesperson.planner.visit"]
         cls.partner_model = cls.env["res.partner"]
         cls.close_model = cls.env["crm.salesperson.planner.visit.close.reason"]
@@ -94,6 +105,7 @@ class TestCrmSalespersonPlannerVisit(TestCrmSalespersonPlannerVisitBase):
         )
         close_wiz.action_close_reason_apply()
 
+    @mute_logger("odoo.models.unlink")
     def test_crm_salesperson_close_wiz_cancel(self):
         self.visit1.action_confirm()
         self.assertEqual(self.visit1.state, "confirm")
@@ -108,6 +120,7 @@ class TestCrmSalespersonPlannerVisit(TestCrmSalespersonPlannerVisitBase):
             2,
         )
 
+    @mute_logger("odoo.models.unlink")
     def test_crm_salesperson_close_wiz_cancel_resch(self):
         self.visit1.action_confirm()
         self.assertEqual(self.visit1.state, "confirm")
@@ -132,6 +145,7 @@ class TestCrmSalespersonPlannerVisit(TestCrmSalespersonPlannerVisitBase):
             1,
         )
 
+    @mute_logger("odoo.models.unlink")
     def test_crm_salesperson_close_wiz_cancel_img(self):
         self.visit1.action_confirm()
         self.assertEqual(self.visit1.state, "confirm")
