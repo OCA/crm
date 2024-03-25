@@ -43,6 +43,7 @@
                     icon="fa-ban text-danger"
                     attrs="{'invisible': [('state', 'in', ['cancel','incident', 'done'])]}"
                     context="{'att_close_type':'cancel'}"
+                    title="Close Reasons"
                 />
                 <button
                     name="%(crm_salesperson_planner_visit_close_wiz_action)d"
@@ -50,6 +51,7 @@
                     icon="fa-exclamation-triangle"
                     attrs="{'invisible': [('state', '!=', 'confirm')]}"
                     context="{'att_close_type':'incident'}"
+                    title="Close Reasons"
                 />
             </tree>
         </field>
