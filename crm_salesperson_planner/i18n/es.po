@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 13.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-12 14:00+0000\n"
-"PO-Revision-Date: 2023-10-29 17:38+0000\n"
+"PO-Revision-Date: 2024-03-25 20:37+0000\n"
 "Last-Translator: Ivorra78 <informatica@totmaterial.es>\n"
 "Language-Team: \n"
 "Language: es\n"
@@ -222,12 +222,12 @@ msgstr "Día del mes"
 #. module: crm_salesperson_planner
 #: model:ir.model.fields.selection,name:crm_salesperson_planner.selection__crm_salesperson_planner_visit_template__month_by__day
 msgid "Day of month"
-msgstr ""
+msgstr "Día del mes"
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields.selection,name:crm_salesperson_planner.selection__crm_salesperson_planner_visit_template__rrule_type__daily
 msgid "Days"
-msgstr ""
+msgstr "Días"
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit__description
@@ -272,7 +272,7 @@ msgstr "Fecha de finalización"
 #. module: crm_salesperson_planner
 #: model:ir.model.fields.selection,name:crm_salesperson_planner.selection__crm_salesperson_planner_visit_template__end_type__end_date
 msgid "End date"
-msgstr ""
+msgstr "Fecha final"
 
 #. module: crm_salesperson_planner
 #. odoo-python
@@ -288,7 +288,7 @@ msgstr ""
 #. module: crm_salesperson_planner
 #: model:ir.model.fields.selection,name:crm_salesperson_planner.selection__crm_salesperson_planner_visit_template__byday__1
 msgid "First"
-msgstr ""
+msgstr "Primer"
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit__message_follower_ids
@@ -310,12 +310,12 @@ msgstr "Icono de fuente impresionante, por ejemplo fa-tasks"
 #. module: crm_salesperson_planner
 #: model:ir.model.fields.selection,name:crm_salesperson_planner.selection__crm_salesperson_planner_visit_template__end_type__forever
 msgid "Forever"
-msgstr ""
+msgstr "Para Siempre"
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields.selection,name:crm_salesperson_planner.selection__crm_salesperson_planner_visit_template__byday__4
 msgid "Fourth"
-msgstr ""
+msgstr "Cuarto"
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__fri
@@ -325,7 +325,7 @@ msgstr "Viernes"
 #. module: crm_salesperson_planner
 #: model:ir.model.fields.selection,name:crm_salesperson_planner.selection__crm_salesperson_planner_visit_template__weekday__fri
 msgid "Friday"
-msgstr ""
+msgstr "Viernes"
 
 #. module: crm_salesperson_planner
 #: model_terms:ir.ui.view,arch_db:crm_salesperson_planner.crm_salesperson_planner_visit_filter
@@ -410,7 +410,7 @@ msgstr "És seguidor"
 #. module: crm_salesperson_planner
 #: model:ir.model.fields.selection,name:crm_salesperson_planner.selection__crm_salesperson_planner_visit_template__byday__-1
 msgid "Last"
-msgstr ""
+msgstr "Último"
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit____last_update
@@ -495,12 +495,12 @@ msgstr "Lunes"
 #. module: crm_salesperson_planner
 #: model:ir.model.fields.selection,name:crm_salesperson_planner.selection__crm_salesperson_planner_visit_template__weekday__mon
 msgid "Monday"
-msgstr ""
+msgstr "Lunes"
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields.selection,name:crm_salesperson_planner.selection__crm_salesperson_planner_visit_template__rrule_type__monthly
 msgid "Months"
-msgstr ""
+msgstr "Meses"
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit__my_activity_date_deadline
@@ -576,7 +576,7 @@ msgstr "Número de errores"
 #: model:ir.model.fields,help:crm_salesperson_planner.field_crm_salesperson_planner_visit__message_needaction_counter
 #: model:ir.model.fields,help:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__message_needaction_counter
 msgid "Number of messages requiring action"
-msgstr ""
+msgstr "Número de mensajes que requieren una acción"
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,help:crm_salesperson_planner.field_crm_salesperson_planner_visit__message_has_error_counter
@@ -587,7 +587,7 @@ msgstr "Número de mensajes con error de envío"
 #. module: crm_salesperson_planner
 #: model:ir.model.fields.selection,name:crm_salesperson_planner.selection__crm_salesperson_planner_visit_template__end_type__count
 msgid "Number of repetitions"
-msgstr ""
+msgstr "Número de repeticiones"
 
 #. module: crm_salesperson_planner
 #. odoo-python
@@ -748,7 +748,7 @@ msgstr "Sabado"
 #. module: crm_salesperson_planner
 #: model:ir.model.fields.selection,name:crm_salesperson_planner.selection__crm_salesperson_planner_visit_template__weekday__sat
 msgid "Saturday"
-msgstr ""
+msgstr "Sábado"
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__partner_id
@@ -763,7 +763,7 @@ msgstr "Búsqueda de visitas"
 #. module: crm_salesperson_planner
 #: model:ir.model.fields.selection,name:crm_salesperson_planner.selection__crm_salesperson_planner_visit_template__byday__2
 msgid "Second"
-msgstr ""
+msgstr "Segundo"
 
 #. module: crm_salesperson_planner
 #: model_terms:ir.ui.view,arch_db:crm_salesperson_planner.crm_salesperson_planner_visit_template_form_view
@@ -839,7 +839,7 @@ msgstr "Domingo"
 #. module: crm_salesperson_planner
 #: model:ir.model.fields.selection,name:crm_salesperson_planner.selection__crm_salesperson_planner_visit_template__weekday__sun
 msgid "Sunday"
-msgstr ""
+msgstr "Domingo"
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__categ_ids
@@ -906,7 +906,7 @@ msgstr "¡El número de plantilla de visita debe ser único!"
 #. module: crm_salesperson_planner
 #: model:ir.model.fields.selection,name:crm_salesperson_planner.selection__crm_salesperson_planner_visit_template__byday__3
 msgid "Third"
-msgstr ""
+msgstr "Tercer"
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__thu
@@ -916,7 +916,7 @@ msgstr "Jueves"
 #. module: crm_salesperson_planner
 #: model:ir.model.fields.selection,name:crm_salesperson_planner.selection__crm_salesperson_planner_visit_template__weekday__thu
 msgid "Thursday"
-msgstr ""
+msgstr "Jueves"
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__event_tz
@@ -936,7 +936,7 @@ msgstr "Martes"
 #. module: crm_salesperson_planner
 #: model:ir.model.fields.selection,name:crm_salesperson_planner.selection__crm_salesperson_planner_visit_template__weekday__tue
 msgid "Tuesday"
-msgstr ""
+msgstr "Martes"
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_close_reason__close_type
@@ -1048,7 +1048,7 @@ msgstr "Miercoles"
 #. module: crm_salesperson_planner
 #: model:ir.model.fields.selection,name:crm_salesperson_planner.selection__crm_salesperson_planner_visit_template__weekday__wed
 msgid "Wednesday"
-msgstr ""
+msgstr "Miércoles"
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__weekday
@@ -1058,12 +1058,12 @@ msgstr "Día de la semana"
 #. module: crm_salesperson_planner
 #: model:ir.model.fields.selection,name:crm_salesperson_planner.selection__crm_salesperson_planner_visit_template__rrule_type__weekly
 msgid "Weeks"
-msgstr ""
+msgstr "Semanas"
 
 #. module: crm_salesperson_planner
 #: model:ir.model.fields.selection,name:crm_salesperson_planner.selection__crm_salesperson_planner_visit_template__rrule_type__yearly
 msgid "Years"
-msgstr ""
+msgstr "Años"
 
 #. module: crm_salesperson_planner
 #: model:ir.model,name:crm_salesperson_planner.model_crm_salesperson_planner_visit_template_create
