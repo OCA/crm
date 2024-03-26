@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2017 Jairo Llopis <jairo.llopis@tecnativa.com>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="crm_phonecall_plan_view_form" model="ir.ui.view">
+        <field name="name">Phonecalls planner</field>
+        <field name="model">crm.phonecall.planner</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group name="details" string="Call details">
+                        <field name="name" />
+                        <field name="user_id" />
+                        <field name="team_id" />
+                        <field name="tag_ids" widget="many2many_tags" />
+                    </group>
+                    <group name="scheduling" string="Scheduling">
+                        <group name="criteria" string="Criteria" colspan="4">
+                            <field
+                                name="res_partner_domain"
+                                widget="domain"
+                                options='{"model": "res.partner"}'
+                            />
+                            <field name="campaign_id" />
+                            <field name="source_id" />
+                            <field name="medium_id" />
+                        </group>
+                        <group name="times" string="Times">
+                            <field name="start" />
+                            <field name="end" />
+                            <field name="duration" widget="float_time" />
+                        </group>
+                        <group name="repetition" string="Repetition">
+                            <field name="repeat_calls" />
+                            <field
+                                name="days_gap"
+                                attrs='{"required": [("repeat_calls", "=", True)], "invisible": [("repeat_calls", "=", False)]}'
+                            />
+                        </group>
+                    </group>
+                </sheet>
+                <footer>
+                    <button
+                        name="action_accept"
+                        type="object"
+                        string="Generate planning"
+                        class="oe_highlight"
+                    />
+                    <button special="cancel" string="Cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="crm_phonecall_planner_open" model="ir.actions.act_window">
+        <field name="name">Planner</field>
+        <field name="res_model">crm.phonecall.planner</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+    <menuitem
+        id="crm_phonecall_planner_menu"
+        parent="crm_phonecall.menu_crm_case_phone"
+        action="crm_phonecall_planner_open"
+    />
+</odoo>
