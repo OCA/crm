@@ -1,0 +1,1 @@
+odoo-addon-base_multicompany_reporting_currency @ git+https://github.com/OCA/sale-reporting.git@refs/pull/261/head#subdirectory=setup/base_multicompany_reporting_currency
