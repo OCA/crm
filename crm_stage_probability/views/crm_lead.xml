@@ -11,10 +11,10 @@
             >
                 <field name="is_stage_probability" invisible="1" />
                 <button
-                    class="ps-0 ps-md-2 btn btn-link"
+                    class="btn d-inline-block px-2 py-0 btn-link"
                     name="action_set_stage_probability"
                     type="object"
-                    attrs="{'invisible': [('is_stage_probability', '=', True)]}"
+                    invisible="is_stage_probability"
                 >
                     <i
                         class="fa fa-gear"
@@ -23,10 +23,9 @@
                         aria-label="Switch to stage probability"
                     />
                 </button>
-                <small
-                    class="oe_grey"
-                    attrs="{'invisible': [('is_stage_probability', '=', True)]}"
-                ><field name="stage_probability" /> %% (According to stage)</small>
+                <small class="oe_grey" invisible="is_stage_probability"><field
+                        name="stage_probability"
+                    /> %% (According to stage)</small>
             </xpath>
         </field>
     </record>
