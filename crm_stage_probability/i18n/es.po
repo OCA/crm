@@ -80,6 +80,7 @@ msgid "Display Name"
 msgstr "Mostrar Nombre"
 
 #. module: crm_stage_probability
+#. odoo-python
 #: code:addons/crm_stage_probability/wizard/crm_lead_stage_probability_update.py:0
 #, python-format
 msgid ""
@@ -103,12 +104,6 @@ msgstr "ID (identificación)"
 #: model:ir.model.fields,field_description:crm_stage_probability.field_crm_lead__is_stage_probability
 msgid "Is Stage Probability"
 msgstr "Es Probabilidad de Etapa"
-
-#. module: crm_stage_probability
-#: model:ir.model.fields,field_description:crm_stage_probability.field_crm_lead_stage_probability_update____last_update
-#: model:ir.model.fields,field_description:crm_stage_probability.field_crm_lead_stage_probability_update_line____last_update
-msgid "Last Modified on"
-msgstr "Última Modificación el"
 
 #. module: crm_stage_probability
 #: model:ir.model.fields,field_description:crm_stage_probability.field_crm_lead_stage_probability_update__write_uid
@@ -196,3 +191,6 @@ msgstr "Actualizar probabilidades"
 #: model:ir.model.fields,field_description:crm_stage_probability.field_crm_lead_stage_probability_update_line__wizard_id
 msgid "Wizard"
 msgstr "Asistente"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Última Modificación el"

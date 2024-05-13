@@ -28,10 +28,7 @@
             <field name="team_count" position="after">
                 <group name="probability">
                     <field name="on_change" />
-                    <field
-                        name="probability"
-                        attrs="{'invisible': [('on_change', '=', False)]}"
-                    />
+                    <field name="probability" invisible="not on_change" />
                 </group>
             </field>
         </field>
