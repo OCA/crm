@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 16.0\n"
+"Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -92,12 +92,6 @@ msgstr ""
 #. module: crm_stage_probability
 #: model:ir.model.fields,field_description:crm_stage_probability.field_crm_lead__is_stage_probability
 msgid "Is Stage Probability"
-msgstr ""
-
-#. module: crm_stage_probability
-#: model:ir.model.fields,field_description:crm_stage_probability.field_crm_lead_stage_probability_update____last_update
-#: model:ir.model.fields,field_description:crm_stage_probability.field_crm_lead_stage_probability_update_line____last_update
-msgid "Last Modified on"
 msgstr ""
 
 #. module: crm_stage_probability
