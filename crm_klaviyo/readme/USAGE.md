@@ -1,5 +1,6 @@
-To use this module, you can ie create an automated action on partner creation,
-filtered by the customer flag, and add code similar to the following::
+To use this module, you can ie create an automated action on partner
+creation, filtered by the customer flag, and add code similar to the
+following:
 
     client = env['klaviyo.account'].get_api()
     client.Profiles.create_profile({

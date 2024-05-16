@@ -12,8 +12,8 @@
     "external_dependencies": {
         "python": [
             # this is for compatibility with py3.6
-            'dataclasses',
-            'klaviyo_api',
+            "dataclasses",
+            "klaviyo_api",
         ],
     },
     "depends": [
