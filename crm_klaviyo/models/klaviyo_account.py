@@ -17,13 +17,13 @@ class KlaviyoAccount(models.Model):
     def get_api(self, company=None):
         """Return an initialized API client for the current or given company"""
         if company is None:
-            company = self.env.user._get_company()
+            company = self.env.company
         return (
             self.sudo()
             .search(
                 [
                     "|",
-                    ("company_id", "=", (company or self.env["res.company"]).id),
+                    ("company_id", "=", company.id),
                     ("company_id", "=", False),
                 ],
                 limit=1,
@@ -32,7 +32,6 @@ class KlaviyoAccount(models.Model):
             ._get_api()
         )
 
-    @api.multi
     def _get_api(self):
         """Return an initialized API client for the current record"""
         self.ensure_one()

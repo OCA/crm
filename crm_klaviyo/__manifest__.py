@@ -3,7 +3,7 @@
 {
     "name": "Klaviyo API",
     "summary": "Manage Klaviyo API keys",
-    "version": "12.0.1.0.0",
+    "version": "17.0.1.0.0",
     "development_status": "Alpha",
     "category": "Customer Relationship Management",
     "website": "https://github.com/OCA/crm",
@@ -11,8 +11,6 @@
     "license": "AGPL-3",
     "external_dependencies": {
         "python": [
-            # this is for compatibility with py3.6
-            "dataclasses",
             "klaviyo_api",
         ],
     },
