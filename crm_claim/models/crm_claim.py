@@ -156,7 +156,7 @@ class CrmClaim(models.Model):
             stage_id=self._get_default_stage_id(),
             name=_("%s (copy)") % self.name,
         )
-        return super(CrmClaim, self).copy(default)
+        return super().copy(default)
 
     # -------------------------------------------------------
     # Mail gateway
@@ -180,4 +180,4 @@ class CrmClaim(models.Model):
         if msg.get("priority"):
             defaults["priority"] = msg.get("priority")
         defaults.update(custom_values)
-        return super(CrmClaim, self).message_new(msg, custom_values=defaults)
+        return super().message_new(msg, custom_values=defaults)
