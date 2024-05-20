@@ -11,8 +11,8 @@
                 <field name="date" />
                 <field name="stage_id" groups="base.group_user" />
                 <field name="categ_id" string="Type" />
-                <field name="date_deadline" invisible="1" />
-                <field name="date_closed" invisible="1" />
+                <field name="date_deadline" column_invisible="1" />
+                <field name="date_closed" column_invisible="1" />
                 <field name="company_id" groups="base.group_multi_company" />
             </tree>
         </field>
