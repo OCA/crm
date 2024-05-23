@@ -10,15 +10,16 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-07 02:39+0000\n"
-"PO-Revision-Date: 2017-07-07 02:39+0000\n"
-"Last-Translator: falexandresilva <falexandresilva@gmail.com>, 2017\n"
-"Language-Team: Portuguese (Brazil) (https://www.transifex.com/oca/"
-"teams/23907/pt_BR/)\n"
+"PO-Revision-Date: 2024-05-23 16:58+0000\n"
+"Last-Translator: Marcel Savegnago <marcel.savegnago@gmail.com>\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/oca/teams/"
+"23907/pt_BR/)\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__nbr_cases
@@ -305,7 +306,7 @@ msgstr "Descrição"
 #: model:ir.model.fields,field_description:crm_phonecall.field_res_config_settings__display_name
 #: model:ir.model.fields,field_description:crm_phonecall.field_res_partner__display_name
 msgid "Display Name"
-msgstr "Nome para Mostrar"
+msgstr "Nome Exibido"
 
 #. module: crm_phonecall
 #: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall_report__state__draft
@@ -343,12 +344,12 @@ msgstr ""
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_follower_ids
 msgid "Followers"
-msgstr ""
+msgstr "Seguidores"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_channel_ids
 msgid "Followers (Channels)"
-msgstr ""
+msgstr "Seguidores (Canais)"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_partner_ids
@@ -359,7 +360,7 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
 msgid "Group By"
-msgstr ""
+msgstr "Agrupar por"
 
 #. module: crm_phonecall
 #: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall__state__done
@@ -372,7 +373,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall__priority__2
 #: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall_report__priority__2
 msgid "High"
-msgstr ""
+msgstr "Alta"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_calendar_event__id
