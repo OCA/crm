@@ -21,8 +21,9 @@ class CrmClaim(models.Model):
         ("crm_claim_unique_code", "UNIQUE (code)", "The code must be unique!"),
     ]
 
-    @api.model
-    def create(self, values):
-        if values.get("code", "/") == "/":
-            values["code"] = self.env["ir.sequence"].next_by_code("crm.claim")
-        return super().create(values)
+    @api.model_create_multi
+    def create(self, vals_list):
+        for values in vals_list:
+            if values.get("code", "/") == "/":
+                values["code"] = self.env["ir.sequence"].next_by_code("crm.claim")
+        return super().create(vals_list)
