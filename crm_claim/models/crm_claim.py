@@ -143,13 +143,6 @@ class CrmClaim(models.Model):
         if self.stage_id:
             self.team_id = self.categ_id.team_id
 
-    @api.model
-    def create(self, values):
-        ctx = self.env.context.copy()
-        if values.get("team_id") and not ctx.get("default_team_id"):
-            ctx["default_team_id"] = values.get("team_id")
-        return super(CrmClaim, self.with_context(context=ctx)).create(values)
-
     def copy(self, default=None):
         default = dict(
             default or {},
