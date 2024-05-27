@@ -5,7 +5,7 @@
 
 {
     "name": "Sequential Code for Claims",
-    "version": "16.0.1.0.0",
+    "version": "16.0.1.0.1",
     "category": "Customer Relationship Management",
     "author": "AvanzOSC, Tecnativa, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/crm",
