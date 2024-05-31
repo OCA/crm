@@ -5,7 +5,7 @@
 {
     "name": "NUTS Regions in CRM",
     "category": "Customer Relationship Management",
-    "version": "14.0.1.0.1",
+    "version": "16.0.1.0.0",
     "depends": [
         "crm",
         "sales_team",
@@ -18,4 +18,5 @@
     "website": "https://github.com/OCA/crm",
     "license": "AGPL-3",
     "installable": True,
+    "maintainers": ["rafaelbn", "edlopen"],
 }

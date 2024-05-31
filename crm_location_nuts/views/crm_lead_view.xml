@@ -6,7 +6,7 @@
     <field name="model">crm.lead</field>
     <field name="inherit_id" ref="crm.crm_lead_view_form" />
     <field name="arch" type="xml">
-        <field name="country_id" position="before">
+        <field name="website" position="before">
             <field
                     name="nuts1_id"
                     placeholder="NUTS L1"
@@ -28,7 +28,7 @@
                     options='{"no_open": True, "no_create": True}'
                 />
         </field>
-        <xpath expr="//page[@name='lead']//field[@name='country_id']" position="before">
+        <xpath expr="//page[@name='lead']//field[@name='website']" position="before">
             <field
                     name="nuts1_id"
                     placeholder="NUTS L1"
