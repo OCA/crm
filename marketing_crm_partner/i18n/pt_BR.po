@@ -9,16 +9,17 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-04 15:47+0000\n"
-"PO-Revision-Date: 2019-09-02 14:23+0000\n"
-"Last-Translator: Rodrigo Macedo <rmsolucoeseminformatic4@gmail.com>\n"
-"Language-Team: Portuguese (Brazil) (https://www.transifex.com/oca/"
-"teams/23907/pt_BR/)\n"
+"PO-Revision-Date: 2024-06-04 17:37+0000\n"
+"Last-Translator: Rodrigo Macedo <sottomaiormacedotec@users.noreply."
+"translation.odoo-community.org>\n"
+"Language-Team: Portuguese (Brazil) (https://www.transifex.com/oca/teams/"
+"23907/pt_BR/)\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.8\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: marketing_crm_partner
 #: model:ir.model.fields,field_description:marketing_crm_partner.field_res_partner__campaign_id
@@ -59,11 +60,13 @@ msgid ""
 "This is a name that helps you keep track of your different campaign efforts, "
 "e.g. Fall_Drive, Christmas_Special"
 msgstr ""
+"Este é um nome que ajuda você a acompanhar seus diferentes esforços de "
+"campanha, por exemplo. Fall_Drive, Natal_Especial"
 
 #. module: marketing_crm_partner
 #: model:ir.model.fields,help:marketing_crm_partner.field_res_partner__medium_id
 msgid "This is the method of delivery, e.g. Postcard, Email, or Banner Ad"
-msgstr ""
+msgstr "Este é o método de entrega, por ex. Cartão postal, e-mail ou banner"
 
 #. module: marketing_crm_partner
 #: model:ir.model.fields,help:marketing_crm_partner.field_res_partner__source_id
@@ -71,3 +74,5 @@ msgid ""
 "This is the source of the link, e.g. Search Engine, another domain, or name "
 "of email list"
 msgstr ""
+"Esta é a fonte do link, por ex. Mecanismo de pesquisa, outro domínio ou nome "
+"da lista de e-mail"
