@@ -13,31 +13,30 @@ class ActivityReport(models.Model):
     _description = "CRM Pipeline by Product Analysis"
     _rec_name = "id"
 
-    active = fields.Boolean("Active", readonly=True)
+    active = fields.Boolean(readonly=True)
     campaign_id = fields.Many2one("utm.campaign", "Campaing", readonly=True)
     country_id = fields.Many2one("res.country", "Country", readonly=True)
     company_id = fields.Many2one("res.company", "Company", readonly=True)
-    create_date = fields.Datetime("Create Date", readonly=True)
+    create_date = fields.Datetime(readonly=True)
     date_closed = fields.Datetime("Closed Date", readonly=True)
     date_conversion = fields.Datetime("Conversion Date", readonly=True)
     date_deadline = fields.Datetime("Deadline Date", readonly=True)
     date_open = fields.Datetime("Open Date", readonly=True)
-    lost_reason = fields.Many2one("crm.lost.reason", "Lost Reason", readonly=True)
+    lost_reason_id = fields.Many2one("crm.lost.reason", readonly=True)
     name = fields.Char("Lead Name", readonly=True)
     partner_id = fields.Many2one("res.partner", "Partner/Customer", readonly=True)
     partner_name = fields.Char("Contact Name", readonly=True)
-    probability = fields.Float("Probability", group_operator="avg", readonly=True)
+    probability = fields.Float(group_operator="avg", readonly=True)
     stage_id = fields.Many2one("crm.stage", "Stage", readonly=True)
     team_id = fields.Many2one("crm.team", "Sales Team", readonly=True)
-    type = fields.Char(
-        string="Type",
-        selection=[("lead", "Lead"), ("opportunity", "Opportunity")],
+    type = fields.Selection(
+        [("lead", "Lead"), ("opportunity", "Opportunity")],
         help="Type is used to separate Leads and Opportunities",
     )
     user_id = fields.Many2one("res.users", "Salesperson", readonly=True)
     category_id = fields.Many2one("product.category", "Category", readonly=True)
-    expected_revenue = fields.Float("Expected Revenue", readonly=True)
-    prorated_revenue = fields.Float("Prorated Revenue", readonly=True)
+    expected_revenue = fields.Float(readonly=True)
+    prorated_revenue = fields.Float(readonly=True)
     product_id = fields.Many2one("product.product", "Product", readonly=True)
     product_qty = fields.Integer("Product Quantity", readonly=True)
     product_tmpl_id = fields.Many2one(
@@ -58,7 +57,7 @@ class ActivityReport(models.Model):
                 l.date_conversion,
                 l.date_deadline,
                 l.date_open,
-                l.lost_reason,
+                l.lost_reason_id,
                 l.name,
                 l.partner_id,
                 l.partner_name,

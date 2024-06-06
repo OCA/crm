@@ -2,7 +2,7 @@
 # License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl.html)
 {
     "name": "CRM Lead Product",
-    "version": "14.0.1.0.0",
+    "version": "17.0.1.0.0",
     "category": "Customer Relationship Management",
     "license": "LGPL-3",
     "summary": "Adds a lead line in the lead/opportunity model in odoo",
