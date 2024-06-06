@@ -4,7 +4,7 @@
         <field name="name">crm.lead.line.tree - crm_lead_product</field>
         <field name="model">crm.lead.line</field>
         <field name="arch" type="xml">
-            <tree string="Products" editable="bottom">
+            <tree editable="bottom">
                 <field name="product_id" />
                 <field name="category_id" />
                 <field name="product_tmpl_id" />

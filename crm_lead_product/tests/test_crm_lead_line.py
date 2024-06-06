@@ -7,7 +7,7 @@ from odoo.tests.common import TransactionCase, tagged
 @tagged("post_install", "-at_install")
 class TestCrmLeadLine(TransactionCase):
     def setUp(self):
-        super(TestCrmLeadLine, self).setUp()
+        super().setUp()
         self.product_obj = self.env["product.product"]
         self.lead_line_obj = self.env["crm.lead.line"]
         self.lead = self.env["crm.lead"].create(
@@ -25,21 +25,21 @@ class TestCrmLeadLine(TransactionCase):
             {
                 "name": "Product 1",
                 "categ_id": self.env.ref("product.product_category_1").id,
-                "price": 142.0,
+                "list_price": 142.0,
             }
         )
         self.product_2 = self.product_obj.create(
             {
                 "name": "Product 2",
                 "categ_id": self.env.ref("product.product_category_2").id,
-                "price": 1420.0,
+                "list_price": 1420.0,
             }
         )
         self.product_3 = self.product_obj.create(
             {
                 "name": "Product 3",
                 "categ_id": self.env.ref("product.product_category_3").id,
-                "price": 14200.0,
+                "list_price": 14200.0,
             }
         )
         self.product_4 = self.env.ref("product.product_product_25")
@@ -54,7 +54,7 @@ class TestCrmLeadLine(TransactionCase):
                 "name": self.product_1.name,
                 "product_id": self.product_1.id,
                 "uom_id": self.product_1.uom_id.id,
-                "price_unit": self.product_1.price,
+                "price_unit": self.product_1.list_price,
             }
         )
         # Create new lead line with category id
@@ -148,13 +148,13 @@ class TestCrmLeadLine(TransactionCase):
             "Planned revenue should be equal " "to the product standard price",
         )
 
-        self.lead.convert_opportunity(self.env.ref("base.res_partner_1").id)
+        self.lead.convert_opportunity(self.env.ref("base.res_partner_1"))
 
         lead_line_1 = self.lead.lead_line_ids[0]
 
         self.assertEqual(
             lead_line_1.prorated_revenue,
-            lead_line_1.expected_revenue * self.lead.probability * (1 / 100),
+            round(lead_line_1.expected_revenue * self.lead.probability * (1 / 100), 2),
             "Expected revenue should be planned " "revenue times the probability",
         )
 
