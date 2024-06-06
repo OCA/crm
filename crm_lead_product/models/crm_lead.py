@@ -19,7 +19,7 @@ class CrmLead(models.Model):
         self.expected_revenue = expected_revenue
 
     def _convert_opportunity_data(self, customer, team_id=False):
-        res = super(CrmLead, self)._convert_opportunity_data(customer, team_id)
+        res = super()._convert_opportunity_data(customer, team_id)
         expected_revenue = 0
         for lead_line in self.lead_line_ids:
             expected_revenue += lead_line.expected_revenue
