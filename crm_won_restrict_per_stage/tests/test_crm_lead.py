@@ -2,6 +2,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html)
 
 from odoo.exceptions import ValidationError
+from odoo.tests import Form
 from odoo.tests.common import TransactionCase
 
 
@@ -13,10 +14,16 @@ class TestCrmStage(TransactionCase):
         cls.stage_new = cls.env.ref("crm.stage_lead1")
         cls.stage_won = cls.env.ref("crm.stage_lead4")
 
-    def test_change_crm_stage_won_without_show_button(self):
+    def test_change_crm_stage_won_without_show_button_01(self):
         self.stage_new.show_won_button = False
         with self.assertRaises(ValidationError):
             self.crm_lead.stage_id = self.stage_won
+
+    def test_change_crm_stage_won_without_show_button_02(self):
+        self.stage_new.show_won_button = False
+        lead_form = Form(self.crm_lead)
+        with self.assertRaises(ValidationError):
+            lead_form.stage_id = self.stage_won
 
     def test_change_crm_stage_to_won_with_show_button(self):
         self.stage_new.show_won_button = True
