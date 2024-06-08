@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 13.0\n"
+"Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -88,6 +88,11 @@ msgid "Creation Date"
 msgstr ""
 
 #. module: crm_lead_product
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_lead_line__company_currency
+msgid "Currency"
+msgstr ""
+
+#. module: crm_lead_product
 #: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_search
 msgid "Date Closed"
 msgstr ""
@@ -120,7 +125,6 @@ msgstr ""
 
 #. module: crm_lead_product
 #: model:ir.model.fields,field_description:crm_lead_product.field_crm_lead_line__expected_revenue
-#: model_terms:ir.ui.view,arch_db:crm_lead_product.view_tree_lead_line
 msgid "Expected revenue"
 msgstr ""
 
@@ -141,12 +145,6 @@ msgid "ID"
 msgstr ""
 
 #. module: crm_lead_product
-#: model:ir.model.fields,field_description:crm_lead_product.field_crm_lead_line____last_update
-#: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report____last_update
-msgid "Last Modified on"
-msgstr ""
-
-#. module: crm_lead_product
 #: model:ir.model.fields,field_description:crm_lead_product.field_crm_lead_line__write_uid
 msgid "Last Updated by"
 msgstr ""
@@ -158,6 +156,7 @@ msgstr ""
 
 #. module: crm_lead_product
 #: model:ir.model.fields,field_description:crm_lead_product.field_crm_lead_line__lead_id
+#: model:ir.model.fields.selection,name:crm_lead_product.selection__crm_product_report__type__lead
 #: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_search
 msgid "Lead"
 msgstr ""
@@ -188,7 +187,7 @@ msgid "Lost"
 msgstr ""
 
 #. module: crm_lead_product
-#: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__lost_reason
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__lost_reason_id
 #: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_search
 msgid "Lost Reason"
 msgstr ""
@@ -214,6 +213,7 @@ msgid "Opportunities Analysis"
 msgstr ""
 
 #. module: crm_lead_product
+#: model:ir.model.fields.selection,name:crm_lead_product.selection__crm_product_report__type__opportunity
 #: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_search
 msgid "Opportunity"
 msgstr ""
@@ -226,7 +226,6 @@ msgstr ""
 #. module: crm_lead_product
 #: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_graph
 #: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_pivot
-#: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_tree
 msgid "Pipeline Analysis"
 msgstr ""
 
@@ -248,17 +247,6 @@ msgstr ""
 #. module: crm_lead_product
 #: model:ir.ui.menu,name:crm_lead_product.crm_product_report_menu
 msgid "Pipeline by product"
-msgstr ""
-
-#. module: crm_lead_product
-#: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__planned_revenue
-msgid "Planned Revenue"
-msgstr ""
-
-#. module: crm_lead_product
-#: model:ir.model.fields,field_description:crm_lead_product.field_crm_lead_line__planned_revenue
-#: model_terms:ir.ui.view,arch_db:crm_lead_product.view_tree_lead_line
-msgid "Planned revenue"
 msgstr ""
 
 #. module: crm_lead_product
@@ -297,8 +285,17 @@ msgstr ""
 
 #. module: crm_lead_product
 #: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_lead_view_form
-#: model_terms:ir.ui.view,arch_db:crm_lead_product.view_tree_lead_line
 msgid "Products"
+msgstr ""
+
+#. module: crm_lead_product
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__prorated_revenue
+msgid "Prorated Revenue"
+msgstr ""
+
+#. module: crm_lead_product
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_lead_line__prorated_revenue
+msgid "Prorated revenue"
 msgstr ""
 
 #. module: crm_lead_product
