@@ -3,7 +3,7 @@
 
 {
     "name": "CRM Won Restrict Per Stage",
-    "version": "16.0.1.0.0",
+    "version": "16.0.1.0.1",
     "category": "Customer Relationship Management",
     "author": "Tecnativa, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/crm",
@@ -11,5 +11,5 @@
     "depends": ["crm"],
     "data": ["views/crm_lead_views.xml", "views/crm_stage_views.xml"],
     "installable": True,
-    "maintainers": ["carolina-fernandez"],
+    "maintainers": ["carolinafernandez-tecnativa"],
 }

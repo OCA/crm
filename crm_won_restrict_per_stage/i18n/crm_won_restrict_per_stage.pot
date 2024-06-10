@@ -32,6 +32,7 @@ msgstr ""
 #. module: crm_won_restrict_per_stage
 #. odoo-python
 #: code:addons/crm_won_restrict_per_stage/models/crm_lead.py:0
+#: code:addons/crm_won_restrict_per_stage/models/crm_lead.py:0
 #, python-format
 msgid "You can't change to this stage from the current stage."
 msgstr ""
