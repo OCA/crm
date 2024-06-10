@@ -8,4 +8,12 @@
         <field name="name">Enable form view for phone calls</field>
         <field name="category_id" ref="base.module_category_hidden" />
     </record>
+    <record model="ir.rule" id="crm_phonecall_shared_company_rule">
+        <field name="name">Shared Record: multi-company</field>
+        <field name="model_id" ref="crm_phonecall.model_crm_phonecall"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">
+            ['|', ('company_id', '=', False), ('company_id', 'in', company_ids)]
+        </field>
+    </record>
 </odoo>
