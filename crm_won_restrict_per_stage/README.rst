@@ -90,13 +90,13 @@ OCA, or the Odoo Community Association, is a nonprofit organization whose
 mission is to support the collaborative development of Odoo features and
 promote its widespread use.
 
-.. |maintainer-carolina-fernandez| image:: https://github.com/carolina-fernandez.png?size=40px
-    :target: https://github.com/carolina-fernandez
-    :alt: carolina-fernandez
+.. |maintainer-carolinafernandez-tecnativa| image:: https://github.com/carolinafernandez-tecnativa.png?size=40px
+    :target: https://github.com/carolinafernandez-tecnativa
+    :alt: carolinafernandez-tecnativa
 
 Current `maintainer <https://odoo-community.org/page/maintainer-role>`__:
 
-|maintainer-carolina-fernandez| 
+|maintainer-carolinafernandez-tecnativa| 
 
 This module is part of the `OCA/crm <https://github.com/OCA/crm/tree/16.0/crm_won_restrict_per_stage>`_ project on GitHub.
 
