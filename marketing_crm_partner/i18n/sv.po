@@ -9,35 +9,36 @@ msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-11-26 03:41+0000\n"
-"PO-Revision-Date: 2016-11-26 03:41+0000\n"
-"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2016\n"
+"PO-Revision-Date: 2024-06-19 12:51+0000\n"
+"Last-Translator: jakobkrabbe <jakob@syscare.se>\n"
 "Language-Team: Swedish (https://www.transifex.com/oca/teams/23907/sv/)\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: marketing_crm_partner
 #: model:ir.model.fields,field_description:marketing_crm_partner.field_res_partner__campaign_id
 #: model_terms:ir.ui.view,arch_db:marketing_crm_partner.view_res_partner_filter
 msgid "Campaign"
-msgstr ""
+msgstr "Kampanj"
 
 #. module: marketing_crm_partner
 #: model:ir.model,name:marketing_crm_partner.model_res_partner
 msgid "Contact"
-msgstr ""
+msgstr "Kontakt"
 
 #. module: marketing_crm_partner
 #: model:ir.model,name:marketing_crm_partner.model_crm_lead
 msgid "Lead/Opportunity"
-msgstr ""
+msgstr "Ledning/Möjlighet"
 
 #. module: marketing_crm_partner
 #: model_terms:ir.ui.view,arch_db:marketing_crm_partner.view_partner_form
 msgid "Marketing"
-msgstr ""
+msgstr "Marknadsföring"
 
 #. module: marketing_crm_partner
 #: model:ir.model.fields,field_description:marketing_crm_partner.field_res_partner__medium_id
@@ -49,7 +50,7 @@ msgstr "Medel"
 #: model:ir.model.fields,field_description:marketing_crm_partner.field_res_partner__source_id
 #: model_terms:ir.ui.view,arch_db:marketing_crm_partner.view_res_partner_filter
 msgid "Source"
-msgstr ""
+msgstr "Källa"
 
 #. module: marketing_crm_partner
 #: model:ir.model.fields,help:marketing_crm_partner.field_res_partner__campaign_id
@@ -57,11 +58,13 @@ msgid ""
 "This is a name that helps you keep track of your different campaign efforts, "
 "e.g. Fall_Drive, Christmas_Special"
 msgstr ""
+"Detta är ett namn som hjälper dig att hålla reda på dina olika "
+"kampanjinsatser, t.ex. Fall_Drive, Christmas_Special"
 
 #. module: marketing_crm_partner
 #: model:ir.model.fields,help:marketing_crm_partner.field_res_partner__medium_id
 msgid "This is the method of delivery, e.g. Postcard, Email, or Banner Ad"
-msgstr ""
+msgstr "Detta är leveranssättet, t.ex. vykort, e-post eller bannerannons"
 
 #. module: marketing_crm_partner
 #: model:ir.model.fields,help:marketing_crm_partner.field_res_partner__source_id
@@ -69,6 +72,8 @@ msgid ""
 "This is the source of the link, e.g. Search Engine, another domain, or name "
 "of email list"
 msgstr ""
+"Detta är källan till länken, t.ex. en sökmotor, en annan domän eller namnet "
+"på en e-postlista"
 
 #~ msgid "Partner"
 #~ msgstr "Företag"
