@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-06-01 02:38+0000\n"
-"PO-Revision-Date: 2024-02-23 12:36+0000\n"
+"PO-Revision-Date: 2024-06-19 12:50+0000\n"
 "Last-Translator: jakobkrabbe <jakob@syscare.se>\n"
 "Language-Team: Swedish (https://www.transifex.com/oca/teams/23907/sv/)\n"
 "Language: sv\n"
@@ -27,7 +27,7 @@ msgstr "# Antal fall"
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
 msgid "<b>min(s)</b>"
-msgstr "<b>min(s)</b>"
+msgstr "<b>min(uter)</b>"
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
@@ -38,11 +38,11 @@ msgid ""
 "                                To Opportunity\n"
 "                            </span>"
 msgstr ""
-"<span> <span>.\n"
+"<span>\n"
 "                                Konvertera\n"
-"                                <br/> Till\n"
+"                                <br/>\n"
 "                                Till möjlighet\n"
-"                            <span> </span>"
+"                            </span>"
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
@@ -55,9 +55,9 @@ msgid ""
 msgstr ""
 "<span> Tidsplan\n"
 "                                Schema\n"
-"                                <br/> Tidsplan\n"
+"                                <br/>\n"
 "                                Ett möte\n"
-"                            <span> </span>"
+"                            </span>"
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
@@ -70,9 +70,9 @@ msgid ""
 msgstr ""
 "<span> Tidsplan\n"
 "                                Schema\n"
-"                                <br/> Andra\n"
+"                                <br/>\n"
 "                                Annat samtal\n"
-"                            <span> </span>"
+"                            </span>"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__action
@@ -603,7 +603,7 @@ msgid ""
 "            team member."
 msgstr ""
 "Med Odoo kan du logga inkommande samtal i farten för att spåra\n"
-"            kommunikationen med en kund eller för att informera en annan\n"
+"            kommunikationen med en kund eller för att informera en\n"
 "            annan teammedlem."
 
 #. module: crm_phonecall
@@ -631,7 +631,7 @@ msgstr "Utgående samtal"
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__partner_id
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
 msgid "Partner"
-msgstr "Partner"
+msgstr "Kontakt"
 
 #. module: crm_phonecall
 #: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall__state__pending
