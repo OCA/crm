@@ -6,7 +6,7 @@
 from odoo.tests import common
 
 
-class TestCrmClaimCode(common.SavepointCase):
+class TestCrmClaimCode(common.TransactionCase):
     @classmethod
     def setUpClass(cls):
         super(TestCrmClaimCode, cls).setUpClass()
