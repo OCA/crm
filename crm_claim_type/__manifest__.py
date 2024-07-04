@@ -11,7 +11,7 @@
     "Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/crm",
     "license": "AGPL-3",
-    "version": "13.0.1.0.0",
+    "version": "14.0.1.0.0",
     "depends": ["crm_claim"],
     "data": [
         "data/crm_claim_type.xml",
