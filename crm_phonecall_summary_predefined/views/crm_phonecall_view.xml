@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!-- Copyright 2016 Antiun Ingeniería S.L. - Jairo Llopis
      Copyright 2017 Tecnativa - Vicent Cubells
+     Copyright 2024 Tecnativa - Carolina Fernandez
      License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html). -->
 <odoo>
     <record id="crm_case_inbound_phone_tree_view" model="ir.ui.view">
@@ -9,7 +10,7 @@
         <field name="inherit_id" ref="crm_phonecall.crm_case_inbound_phone_tree_view" />
         <field name="arch" type="xml">
             <xpath expr="//field[@name='name']" position="attributes">
-                <attribute name="invisible">True</attribute>
+                <attribute name="column_invisible">True</attribute>
             </xpath>
             <xpath expr="//field[@name='name']" position="after">
                 <field name="summary_id" />
