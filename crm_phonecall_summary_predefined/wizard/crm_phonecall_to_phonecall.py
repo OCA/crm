@@ -4,7 +4,6 @@ from odoo import api, fields, models
 
 
 class CrmPhonecall2phonecall(models.TransientModel):
-
     _inherit = "crm.phonecall2phonecall"
 
     name = fields.Char(
