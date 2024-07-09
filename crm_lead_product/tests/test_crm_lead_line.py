@@ -154,16 +154,16 @@ class TestCrmLeadLine(TransactionCase):
                 "name": "",
                 "category_id": self.product_3.categ_id.id,
                 "product_id": self.product_2.id,
-                "product_tmpl_id": self.product_3.product_tmpl_id.id,
+                "product_tmpl_id": self.product_1.product_tmpl_id.id,
             }
         )
 
         lead_line_6._onchange_product_tmpl_id()
 
         # Check if there are already defined product and remove if it does not match
-        self.assertNotEqual(
-            lead_line_6.product_id,
-            self.product_2.id,
+        self.assertEqual(
+            lead_line_6.product_id.id,
+            False,
             "Lead line product id should be equal to None",
         )
 
