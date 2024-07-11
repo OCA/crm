@@ -1,0 +1,15 @@
+- Odoo S.A.
+- [Tecnativa](https://www.tecnativa.com)
+  - Vicent Cubells
+  - Jairo Llopis
+  - David Vidal
+  - Alexandre Díaz
+  - Stefan Ungureanu
+- RIDA YAHLA \<<mireda2012@gmail.com>\>
+- Anand Kansagra \<<kansagraanand@hotmail.com>\>
+- [Druidoo](https://www.druidoo.io)
+  - Iván Todorovich \<<ivan.todorovich@druidoo.io>\>
+  - Manuel Marquez \<<manuel.marquez@druidoo.io>\>
+- Ruchir Shukla \<<ruchir@bizzappdev.com>\>
+- [APSL-Nagarro](https://apsl.tech):
+  - Antoni Marroig  \<<amarroig@apsl.net>\>
