@@ -114,13 +114,11 @@ msgstr ""
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.res_config_settings_view_form
 msgid ""
-"By default form view is disabled for calls, with this\n"
-"                                setting it is enabled for all users."
+"By default form view is disabled for calls, with this setting it is enabled "
+"for all users."
 msgstr ""
-"La vista modulo è disabilitata in modo predefinito per le chiamate, con "
-"questa\n"
-"                                impostazione è abilitata per tutti gli "
-"utenti."
+"Per le chiamate la vista è disabilitata in modo predefinito, con questa "
+"impostazione è abilitata per tutti gli utenti."
 
 #. module: crm_phonecall
 #: model:ir.model,name:crm_phonecall.model_calendar_event
@@ -337,7 +335,6 @@ msgstr "E-mail"
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_res_config_settings__group_show_form_view
 #: model:res.groups,name:crm_phonecall.group_show_form_view
-#: model_terms:ir.ui.view,arch_db:crm_phonecall.res_config_settings_view_form
 msgid "Enable form view for phone calls"
 msgstr "Abilita la vista per le chiamate"
 
@@ -427,13 +424,6 @@ msgid "Last Action"
 msgstr "Ultima azione"
 
 #. module: crm_phonecall
-#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall____last_update
-#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall____last_update
-#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report____last_update
-msgid "Last Modified on"
-msgstr "Ultima modifica il"
-
-#. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__write_uid
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__write_uid
 msgid "Last Updated by"
@@ -472,11 +462,6 @@ msgstr "Chiamate registrate"
 #: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall_report__priority__0
 msgid "Low"
 msgstr "Basso"
-
-#. module: crm_phonecall
-#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_main_attachment_id
-msgid "Main Attachment"
-msgstr "Allegato principale"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__medium_id
@@ -929,6 +914,21 @@ msgstr ""
 "nuova lista\n"
 "            di prospettive di qualificazione."
 
+#~ msgid ""
+#~ "By default form view is disabled for calls, with this\n"
+#~ "                                setting it is enabled for all users."
+#~ msgstr ""
+#~ "La vista modulo è disabilitata in modo predefinito per le chiamate, con "
+#~ "questa\n"
+#~ "                                impostazione è abilitata per tutti gli "
+#~ "utenti."
+
+#~ msgid "Last Modified on"
+#~ msgstr "Ultima modifica il"
+
+#~ msgid "Main Attachment"
+#~ msgstr "Allegato principale"
+
 #~ msgid "SMS Delivery error"
 #~ msgstr "Errore consegna SMS"
 
@@ -946,13 +946,6 @@ msgstr ""
 
 #~ msgid "By Sales Team"
 #~ msgstr "Dal team vendite"
-
-#~ msgid ""
-#~ "By default form view is disabled for calls, with this setting it is "
-#~ "enabled for all users."
-#~ msgstr ""
-#~ "Per le chiamate la vista è disabilitata in modo predefinito, con questa "
-#~ "impostazione è abilitata per tutti gli utenti."
 
 #~ msgid "Delay To Close"
 #~ msgstr "Ritardo chiusura"

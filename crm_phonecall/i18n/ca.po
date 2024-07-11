@@ -99,9 +99,11 @@ msgstr ""
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.res_config_settings_view_form
 msgid ""
-"By default form view is disabled for calls, with this\n"
-"                                setting it is enabled for all users."
+"By default form view is disabled for calls, with this setting it is enabled "
+"for all users."
 msgstr ""
+"Per defecte, la vista de formulari està desactivada per a les trucades, amb "
+"aquesta configuració s'habilita per a tots els usuaris."
 
 #. module: crm_phonecall
 #: model:ir.model,name:crm_phonecall.model_calendar_event
@@ -319,7 +321,6 @@ msgstr "Correu electrònic"
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_res_config_settings__group_show_form_view
 #: model:res.groups,name:crm_phonecall.group_show_form_view
-#: model_terms:ir.ui.view,arch_db:crm_phonecall.res_config_settings_view_form
 msgid "Enable form view for phone calls"
 msgstr "Activa la vista formulari per a trucades telefòniques"
 
@@ -409,13 +410,6 @@ msgid "Last Action"
 msgstr "Última acció"
 
 #. module: crm_phonecall
-#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall____last_update
-#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall____last_update
-#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report____last_update
-msgid "Last Modified on"
-msgstr "Darrera modificació el"
-
-#. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__write_uid
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__write_uid
 msgid "Last Updated by"
@@ -454,11 +448,6 @@ msgstr "Trucades enregistrades"
 #: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall_report__priority__0
 msgid "Low"
 msgstr "Baixa"
-
-#. module: crm_phonecall
-#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_main_attachment_id
-msgid "Main Attachment"
-msgstr "Annexe principal"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__medium_id
@@ -913,6 +902,12 @@ msgstr ""
 "nova de\n"
 "             prospectes per qualificar."
 
+#~ msgid "Last Modified on"
+#~ msgstr "Darrera modificació el"
+
+#~ msgid "Main Attachment"
+#~ msgstr "Annexe principal"
+
 #~ msgid "SMS Delivery error"
 #~ msgstr "Error d'entrega SMS"
 
@@ -930,13 +925,6 @@ msgstr ""
 
 #~ msgid "By Sales Team"
 #~ msgstr "Per equip de treball"
-
-#~ msgid ""
-#~ "By default form view is disabled for calls, with this setting it is "
-#~ "enabled for all users."
-#~ msgstr ""
-#~ "Per defecte, la vista de formulari està desactivada per a les trucades, "
-#~ "amb aquesta configuració s'habilita per a tots els usuaris."
 
 #~ msgid "Delay To Close"
 #~ msgstr "Retard per tancar"
