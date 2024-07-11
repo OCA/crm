@@ -1,0 +1,112 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * crm_phonecall_summary_predefined
+#
+# Translators:
+# OCA Transbot <transbot@odoo-community.org>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-04-28 12:23+0000\n"
+"PO-Revision-Date: 2018-04-28 12:23+0000\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
+"Language-Team: Chinese (China) (https://www.transifex.com/oca/teams/23907/"
+"zh_CN/)\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: crm_phonecall_summary_predefined
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall__name
+msgid "Call Summary"
+msgstr ""
+
+#. module: crm_phonecall_summary_predefined
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall2phonecall__name
+msgid "Call summary"
+msgstr ""
+
+#. module: crm_phonecall_summary_predefined
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary__create_uid
+msgid "Created by"
+msgstr "创建者"
+
+#. module: crm_phonecall_summary_predefined
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary__create_date
+msgid "Created on"
+msgstr "创建时间"
+
+#. module: crm_phonecall_summary_predefined
+#: model:ir.model,name:crm_phonecall_summary_predefined.model_crm_phonecall_summary
+msgid "Crm Phonecall Summary"
+msgstr ""
+
+#. module: crm_phonecall_summary_predefined
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary__display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: crm_phonecall_summary_predefined
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary__id
+msgid "ID"
+msgstr "ID"
+
+#. module: crm_phonecall_summary_predefined
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary____last_update
+msgid "Last Modified on"
+msgstr "最后修改时间"
+
+#. module: crm_phonecall_summary_predefined
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary__write_uid
+msgid "Last Updated by"
+msgstr "最后更新者"
+
+#. module: crm_phonecall_summary_predefined
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary__write_date
+msgid "Last Updated on"
+msgstr "上次更新日期"
+
+#. module: crm_phonecall_summary_predefined
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary__name
+msgid "Name"
+msgstr "名称"
+
+#. module: crm_phonecall_summary_predefined
+#: model:ir.model.constraint,message:crm_phonecall_summary_predefined.constraint_crm_phonecall_summary_name_unique
+msgid "Name must be unique"
+msgstr ""
+
+#. module: crm_phonecall_summary_predefined
+#: model:ir.model,name:crm_phonecall_summary_predefined.model_crm_phonecall
+msgid "Phonecall"
+msgstr ""
+
+#. module: crm_phonecall_summary_predefined
+#: model:ir.model,name:crm_phonecall_summary_predefined.model_crm_phonecall2phonecall
+msgid "Phonecall To Phonecall"
+msgstr ""
+
+#. module: crm_phonecall_summary_predefined
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary__phonecall_ids
+msgid "Phonecalls"
+msgstr ""
+
+#. module: crm_phonecall_summary_predefined
+#: model:ir.model.fields,help:crm_phonecall_summary_predefined.field_crm_phonecall_summary__phonecall_ids
+msgid "Phonecalls with this summary."
+msgstr ""
+
+#. module: crm_phonecall_summary_predefined
+#: model:ir.actions.act_window,name:crm_phonecall_summary_predefined.crm_phonecall_summary_action
+#: model:ir.ui.menu,name:crm_phonecall_summary_predefined.crm_phonecall_summary_menu
+msgid "Summaries"
+msgstr ""
+
+#. module: crm_phonecall_summary_predefined
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall2phonecall__summary_id
+#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall__summary_id
+msgid "Summary"
+msgstr ""
