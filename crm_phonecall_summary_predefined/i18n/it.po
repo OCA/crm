@@ -55,11 +55,6 @@ msgid "ID"
 msgstr "ID"
 
 #. module: crm_phonecall_summary_predefined
-#: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary____last_update
-msgid "Last Modified on"
-msgstr "Ultima modifica il"
-
-#. module: crm_phonecall_summary_predefined
 #: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall_summary__write_uid
 msgid "Last Updated by"
 msgstr "Ultimo aggiornamento di"
@@ -110,3 +105,6 @@ msgstr "Riepiloghi"
 #: model:ir.model.fields,field_description:crm_phonecall_summary_predefined.field_crm_phonecall__summary_id
 msgid "Summary"
 msgstr "Riepilogo"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Ultima modifica il"
