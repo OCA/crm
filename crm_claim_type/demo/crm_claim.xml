@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<odoo>
+    <record id="crm_claim.crm_claim_1" model="crm.claim">
+        <field name="claim_type" ref="crm_claim_type.crm_claim_type_customer" />
+    </record>
+    <record id="crm_claim.crm_claim_2" model="crm.claim">
+        <field name="claim_type" ref="crm_claim_type.crm_claim_type_customer" />
+    </record>
+    <record id="crm_claim.crm_claim_3" model="crm.claim">
+        <field name="claim_type" ref="crm_claim_type.crm_claim_type_customer" />
+    </record>
+    <record id="crm_claim.crm_claim_4" model="crm.claim">
+        <field name="claim_type" ref="crm_claim_type.crm_claim_type_customer" />
+    </record>
+    <record id="crm_claim.crm_claim_5" model="crm.claim">
+        <field name="claim_type" ref="crm_claim_type.crm_claim_type_customer" />
+    </record>
+    <record id="crm_claim.crm_claim_6" model="crm.claim">
+        <field name="claim_type" ref="crm_claim_type.crm_claim_type_customer" />
+    </record>
+    <record id="crm_claim.crm_claim_7" model="crm.claim">
+        <field name="claim_type" ref="crm_claim_type.crm_claim_type_customer" />
+    </record>
+</odoo>

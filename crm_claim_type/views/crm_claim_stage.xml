@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="crm_claim.crm_claim_category_claim0" model="ir.actions.act_window">
+        <field name="context">
+            {"search_default_user_id":uid, "stage_type":'claim'}
+        </field>
+    </record>
+    <record id="crm_stage_claim_type_form" model="ir.ui.view">
+        <field name="name">crm.claim.stage.type.form</field>
+        <field name="model">crm.claim.stage</field>
+        <field name="inherit_id" ref="crm_claim.crm_claim_stage_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='sequence']" position="after">
+                <newline />
+                <field name="claim_common" />
+                <field
+                    name="claim_type"
+                    attrs="{'required':[('claim_common','=',False)],
+                     'invisible':[('claim_common','=',True)]}"
+                />
+            </xpath>
+        </field>
+    </record>
+    <record id="crm_stage_claim_type_tree" model="ir.ui.view">
+        <field name="name">crm.claim.stage.type.tree</field>
+        <field name="model">crm.claim.stage</field>
+        <field name="inherit_id" ref="crm_claim.crm_claim_stage_tree" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="claim_common" />
+                <field
+                    name="claim_type"
+                    attrs="{'invisible':[('claim_common','=',True)]}"
+                />
+            </xpath>
+        </field>
+    </record>
+    <record id="crm_stage_claim_type_search" model="ir.ui.view">
+        <field name="name">crm.claim.stage.type.search</field>
+        <field name="model">crm.claim.stage</field>
+        <field name="arch" type="xml">
+            <search string="Search Stages">
+                <group expand="0" string="Group By">
+                    <filter
+                        string="Claim Type"
+                        domain="[]"
+                        name="claim_type"
+                        context="{'group_by':'claim_type'}"
+                    />
+                </group>
+            </search>
+        </field>
+    </record>
+    <menuitem
+        id="crm_claim.menu_claim_stage_view"
+        name="Stages"
+        groups="base.group_no_one"
+        action="crm_claim.crm_claim_stage_act"
+        parent="crm_claim.menu_config_claim"
+        sequence="20"
+    />
+</odoo>

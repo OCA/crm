@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<odoo>
+    <record id="crm_claim_type_tree" model="ir.ui.view">
+        <field name="name">crm.claim.type.tree</field>
+        <field name="model">crm.claim.type</field>
+        <field name="arch" type="xml">
+            <tree string="Claim types">
+                <field name="name" />
+                <field name="active" />
+            </tree>
+        </field>
+    </record>
+    <record id="crm_claim_type_form" model="ir.ui.view">
+        <field name="name">crm.claim.type.form</field>
+        <field name="model">crm.claim.type</field>
+        <field name="arch" type="xml">
+            <form string="Claim type">
+                <group col="4">
+                    <field name="name" />
+                    <field name="active" />
+                    <field name="description" />
+                </group>
+            </form>
+        </field>
+    </record>
+    <record id="crm_claim_type_act" model="ir.actions.act_window">
+        <field name="name">Claim Types</field>
+        <field name="res_model">crm.claim.type</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem
+        action="crm_claim_type_act"
+        name="Claim Types"
+        id="menu_crm_claim_type_act"
+        parent="crm_claim.menu_config_claim"
+        groups="base.group_no_one"
+    />
+</odoo>
