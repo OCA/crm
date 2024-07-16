@@ -94,6 +94,8 @@ msgid "Description"
 msgstr ""
 
 #. module: crm_claim_type
+#: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim__display_name
+#: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_stage__display_name
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type__display_name
 msgid "Display Name"
 msgstr "نام نمایشی"
@@ -109,6 +111,8 @@ msgid "Group By"
 msgstr ""
 
 #. module: crm_claim_type
+#: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim__id
+#: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_stage__id
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type__id
 msgid "ID"
 msgstr "شناسه"
@@ -121,6 +125,8 @@ msgid ""
 msgstr ""
 
 #. module: crm_claim_type
+#: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim____last_update
+#: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_stage____last_update
 #: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type____last_update
 msgid "Last Modified on"
 msgstr "تاریخ آخرین به‌روزرسانی"
