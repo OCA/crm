@@ -82,6 +82,9 @@ Contributors
 ------------
 
 -  Thierry Ducrest <thierry.ducrest@camptocamp.com>
+-  `APSL-Nagarro <https://apsl.tech>`__:
+
+   -  Bernat Obrador <bobrador@apsl.net>
 
 Maintainers
 -----------

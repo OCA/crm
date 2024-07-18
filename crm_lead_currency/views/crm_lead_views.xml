@@ -12,15 +12,10 @@
             >
                 <field name="customer_currency_id" />
                 <field name="is_same_currency" invisible="1" />
-                <field
-                    name="amount_customer_currency"
-                    attrs="{'invisible': [('is_same_currency', '=', True)]}"
-                />
+                <field name="amount_customer_currency" invisible="is_same_currency" />
             </xpath>
             <field name="expected_revenue" position="attributes">
-                <attribute name="attrs">
-                    {'readonly': [('is_same_currency', '=', False)]}
-                </attribute>
+                <attribute name="readonly">not is_same_currency</attribute>
                 <attribute name="force_save">1</attribute>
             </field>
         </field>
