@@ -9,7 +9,7 @@ from odoo.tests import common
 class TestCrmClaimCode(common.TransactionCase):
     @classmethod
     def setUpClass(cls):
-        super(TestCrmClaimCode, cls).setUpClass()
+        super().setUpClass()
         cls.crm_claim_model = cls.env["crm.claim"]
         cls.ir_sequence_model = cls.env["ir.sequence"]
         cls.crm_sequence = cls.env.ref("crm_claim_code.sequence_claim")
