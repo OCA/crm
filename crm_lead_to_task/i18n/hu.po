@@ -61,11 +61,6 @@ msgid "ID"
 msgstr "Azonosító"
 
 #. module: crm_lead_to_task
-#: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task____last_update
-msgid "Last Modified on"
-msgstr "Legutóbb frissítve"
-
-#. module: crm_lead_to_task
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task__write_uid
 msgid "Last Updated by"
 msgstr "Legutóbb frissítette"
@@ -89,6 +84,9 @@ msgstr ""
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task__project_id
 msgid "Project"
 msgstr "Projekt"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Legutóbb frissítve"
 
 #~ msgid "Create a new customer"
 #~ msgstr "Új vevő létrehozása"

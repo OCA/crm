@@ -60,11 +60,6 @@ msgid "ID"
 msgstr "ID"
 
 #. module: crm_lead_to_task
-#: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task____last_update
-msgid "Last Modified on"
-msgstr "修改时间"
-
-#. module: crm_lead_to_task
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task__write_uid
 msgid "Last Updated by"
 msgstr "修改人员"
@@ -88,6 +83,9 @@ msgstr "线索转换到任务"
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task__project_id
 msgid "Project"
 msgstr "项目"
+
+#~ msgid "Last Modified on"
+#~ msgstr "修改时间"
 
 #~ msgid ""
 #~ "<span class=\"o_stat_text\">Convert To</span>\n"

@@ -36,7 +36,6 @@ class CrmLeadConvert2Task(models.TransientModel):
         vals = {
             "name": lead.name,
             "description": lead.description,
-            "email_from": lead.email_from,
             "project_id": self.project_id.id,
             "partner_id": partner.id,
             "email_cc": lead.email_cc,
@@ -49,8 +48,8 @@ class CrmLeadConvert2Task(models.TransientModel):
             [("res_model", "=", "crm.lead"), ("res_id", "=", lead.id)]
         )
         attachments.write({"res_model": "project.task", "res_id": task.id})
-        # remove the lead
-        lead.unlink()
+        # archive the lead (can't be unlinked by plain salesmen)
+        lead.active = False
         # return the action to go to the form view of the new Task
         view = self.env.ref("project.view_task_form2")
         return {

@@ -58,11 +58,6 @@ msgid "ID"
 msgstr "ID"
 
 #. module: crm_lead_to_task
-#: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task____last_update
-msgid "Last Modified on"
-msgstr "Sửa lần cuối vào"
-
-#. module: crm_lead_to_task
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task__write_uid
 msgid "Last Updated by"
 msgstr "Cập nhật lần cuối bởi"
@@ -86,6 +81,9 @@ msgstr ""
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task__project_id
 msgid "Project"
 msgstr "Dự án"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Sửa lần cuối vào"
 
 #~ msgid ""
 #~ "<span class=\"o_stat_text\">Convert To</span>\n"

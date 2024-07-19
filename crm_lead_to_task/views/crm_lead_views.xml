@@ -11,7 +11,7 @@
                     type="action"
                     name="%(crm_lead_convert2task_action)d"
                     string="Convert to Task"
-                    context="{'default_lead_id': active_id}"
+                    context="{'default_lead_id': id}"
                     groups="project.group_project_user"
                 />
             </field>

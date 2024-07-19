@@ -58,11 +58,6 @@ msgid "ID"
 msgstr "ID (identificación)"
 
 #. module: crm_lead_to_task
-#: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task____last_update
-msgid "Last Modified on"
-msgstr "Última modificación en"
-
-#. module: crm_lead_to_task
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task__write_uid
 msgid "Last Updated by"
 msgstr "Última actualización por"
@@ -86,6 +81,9 @@ msgstr "Convertir Iniciativa a Tarea"
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task__project_id
 msgid "Project"
 msgstr "Proyecto"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Última modificación en"
 
 #~ msgid "Customer"
 #~ msgstr "Cliente"
