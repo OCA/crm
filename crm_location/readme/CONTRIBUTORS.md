@@ -4,3 +4,5 @@
 - Alexandre Díaz \<<alexandre.diaz@tecnativa.com>\>
 - Tharathip Chaweewongphan \<<tharathipc@ecosoft.co.th>\>
 - Ruchir Shukla \<<ruchir@bizzappdev.com>\>
+- [APSL-Nagarro](<https://apsl.tech>):
+  - Patryk Pyczko \<<ppyczko@apsl.net>\>
