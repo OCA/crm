@@ -2,15 +2,16 @@
 # Copyright 2019 Tecnativa - Alexandre Díaz
 # License AGPL-3 - See https://www.gnu.org/licenses/agpl-3.0
 
-from odoo.tests import common
+from odoo.addons.base.tests.common import BaseCommon
 
 
-class TestCrmLocation(common.TransactionCase):
+class TestCrmLocation(BaseCommon):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
-        cls.env = cls.env(context=dict(cls.env.context, tracking_disable=True))
-        cls.country = cls.env["res.country"].create({"name": "Test country"})
+        cls.country = cls.env["res.country"].create(
+            {"name": "Test country", "code": "AA"}
+        )
         cls.state = cls.env["res.country.state"].create(
             {
                 "name": "Test state",
