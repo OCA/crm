@@ -45,4 +45,4 @@ class TestCrmProject(common.TransactionCase):
         self.assertEqual(task.email_cc, "cc@example.org")
         self.assertEqual(task.partner_id.name, "Test partner")
         self.assertEqual(task.project_id, self.project)
-        self.assertFalse(self.lead.exists())
+        self.assertFalse(self.lead.active)
