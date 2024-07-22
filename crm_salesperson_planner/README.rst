@@ -100,6 +100,10 @@ Contributors
 
    -  Víctor Martínez
 
+-  `APSL-Nagarro <https://apsl.tech>`__:
+
+   -  Bernat Obrador <bobrador@apsl.net>
+
 Maintainers
 -----------
 

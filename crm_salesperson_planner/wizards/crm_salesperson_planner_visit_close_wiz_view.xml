@@ -15,23 +15,21 @@
                     />
                     <field name="notes" />
                     <field name="allow_reschedule" invisible="1" />
-                    <field
-                        name="reschedule"
-                        attrs="{'invisible': [('allow_reschedule', '=', False)]}"
-                    />
+                    <field name="reschedule" invisible="not allow_reschedule" />
                     <field
                         name="new_date"
-                        attrs="{'invisible': ['|', ('allow_reschedule', '=', False), ('reschedule', '=', False)]}"
+                        invisible="not allow_reschedule and not reschedule"
                     />
                     <field
                         name="new_sequence"
-                        attrs="{'invisible': ['|', ('allow_reschedule', '=', False), ('reschedule', '=', False)]}"
+                        invisible="not allow_reschedule and not reschedule"
                     />
                     <field name="require_image" invisible="1" />
                     <field
                         name="image"
                         widget="image"
-                        attrs="{'invisible': [('require_image', '=', False)], 'required': [('require_image', '=', True)]}"
+                        invisible="not require_image"
+                        required="require_image"
                     />
                 </group>
                 <footer>

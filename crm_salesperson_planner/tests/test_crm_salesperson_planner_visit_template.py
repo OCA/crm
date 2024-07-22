@@ -197,27 +197,33 @@ class TestCrmSalespersonPlannerVisitTemplate(common.TransactionCase):
     def test_05_repeat_weeks(self):
         self.visit_template_base.write(
             {
-                "start_date": "2024-03-08",
+                "start_date": fields.Date.today(),
                 "interval": 1,
                 "rrule_type": "weekly",
                 "tue": True,
                 "end_type": "end_date",
-                "until": "2024-07-02",
+                "until": fields.Date.today() + timedelta(days=90),
             }
         )
+
+        dates = [
+            self.visit_template_base.start_date + timedelta(days=i) for i in range(91)
+        ]
+        filtered_tue_dates = [d for d in dates if d.weekday() == 1]
+
         self.visit_template_base.action_validate()
         self.assertFalse(self.visit_template_base.visit_ids)
         create_model = self.env["crm.salesperson.planner.visit.template.create"]
         create_item = create_model.with_context(
             active_id=self.visit_template_base.id
-        ).create({"date_to": "2024-07-02"})
+        ).create({"date_to": filtered_tue_dates[2]})
         create_item.create_visits()
         self.assertEqual(self.visit_template_base.state, "done")
         visit_dates = self.visit_template_base.visit_ids.mapped("date")
-        self.assertIn(fields.Date.from_string("2024-03-19"), visit_dates)
+        self.assertIn(fields.Date.from_string(filtered_tue_dates[4]), visit_dates)
         self.assertEqual(
             self.visit_template_base.last_visit_date,
-            fields.Date.from_string("2024-07-02"),
+            fields.Date.from_string(filtered_tue_dates[len(filtered_tue_dates) - 1]),
         )
 
     def test_06_repeat_months_count_01(self):

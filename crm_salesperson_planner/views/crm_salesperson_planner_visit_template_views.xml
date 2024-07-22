@@ -8,8 +8,8 @@
         <field name="model">crm.salesperson.planner.visit.template</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="name" />
-                <field name="partner_id" />
+                <field name="name" readonly="1" />
+                <field name="partner_id" readonly="1" />
                 <field name="start_date" />
                 <field name="sequence" />
                 <field name="user_id" />
@@ -28,25 +28,25 @@
                         name="action_validate"
                         string="Validate"
                         type="object"
-                        attrs="{'invisible': [('state', '!=', 'draft')]}"
+                        invisible="state != 'draft'"
                     />
                     <button
                         name="%(crm_salesperson_planner_visit_template_create_action)d"
                         string="Manually Create Visits"
                         type="action"
-                        attrs="{'invisible': [('state', '!=', 'in-progress')]}"
+                        invisible="state != 'in-progress'"
                     />
                     <button
                         name="action_cancel"
                         string="Cancel"
                         type="object"
-                        attrs="{'invisible': [('state', '!=', 'in-progress')]}"
+                        invisible="state != 'in-progress'"
                     />
                     <button
                         name="action_draft"
                         string="Send to Draft"
                         type="object"
-                        attrs="{'invisible': [('state', '!=', 'cancel')]}"
+                        invisible="state != 'cancel'"
                     />
                     <field
                         name="state"
@@ -76,11 +76,11 @@
                     </div>
                     <group>
                         <group>
-                            <field name="partner_id" invisible="1" />
+                            <field name="partner_id" invisible="1" readonly="1" />
                             <field name="partner_ids" widget="many2many_tags" />
                             <field name="start_date" required="1" />
                             <field name="start" invisible="1" />
-                            <field name="stop" invisible="1" />
+                            <field name="stop" invisible="1" readonly="1" />
                             <field name="stop_date" invisible="1" />
                             <field name="start" invisible="1" />
                             <field name="sequence" />
@@ -109,7 +109,7 @@
                                 </div>
                                 <widget
                                     name="week_days"
-                                    attrs="{'invisible': [('rrule_type', '!=', 'weekly')]}"
+                                    invisible="rrule_type != 'weekly'"
                                 />
                             </div>
                             <label string="Until" for="end_type" />
@@ -118,31 +118,35 @@
                                 <field
                                     name="count"
                                     required="1"
-                                    attrs="{'invisible': [('end_type', '!=', 'count')]}"
+                                    invisible="end_type != 'count'"
                                 />
                                 <field
                                     name="until"
-                                    attrs="{'invisible': [('end_type', '!=', 'end_date')], 'required': [('end_type', '=', 'end_date')]}"
+                                    invisible="end_type != 'end_date'"
+                                    required="end_type == 'end_date'"
                                 />
                             </div>
                         </group>
-                        <group attrs="{'invisible': [('rrule_type', '!=', 'monthly')]}">
+                        <group invisible="rrule_type != 'monthly'">
                             <label string="Day of Month" for="month_by" />
                             <div class="o_row">
                                 <field name="month_by" />
                                 <field
                                     name="day"
-                                    attrs="{'required': [('month_by', '=', 'date'), ('rrule_type', '=', 'monthly')], 'invisible': [('month_by', '!=', 'date')]}"
+                                    required="month_by == 'date' and rrule_type == 'monthly'"
+                                    invisible="month_by != 'date'"
                                 />
                                 <field
                                     name="byday"
                                     string="The"
-                                    attrs="{'required': [('month_by', '=', 'day'), ('rrule_type', '=', 'monthly')], 'invisible': [('month_by', '!=', 'day')]}"
+                                    required="month_by == 'day' and rrule_type == 'monthly'"
+                                    invisible="month_by != 'day'"
                                 />
                                 <field
                                     name="weekday"
                                     nolabel="1"
-                                    attrs="{'required': [('month_by', '=', 'day'), ('rrule_type', '=', 'monthly')], 'invisible': [('month_by', '!=', 'day')]}"
+                                    required="month_by == 'day' and rrule_type == 'monthly'"
+                                    invisible="month_by != 'day'"
                                 />
                             </div>
                         </group>

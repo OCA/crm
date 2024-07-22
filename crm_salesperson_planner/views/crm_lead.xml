@@ -9,9 +9,7 @@
         <field name="arch" type="xml">
             <notebook position="inside">
                 <page string="Salesperson Visits">
-                    <group>
-                        <field name="crm_salesperson_planner_visit_ids" nolabel="1" />
-                    </group>
+                    <field name="crm_salesperson_planner_visit_ids" nolabel="1" />
                 </page>
             </notebook>
         </field>
