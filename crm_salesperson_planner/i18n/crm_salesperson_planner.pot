@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 16.0\n"
+"Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -77,7 +77,6 @@ msgstr ""
 
 #. module: crm_salesperson_planner
 #: model:ir.actions.server,name:crm_salesperson_planner.ir_cron_create_visits_ir_actions_server
-#: model:ir.cron,cron_name:crm_salesperson_planner.ir_cron_create_visits
 msgid "CRM: Create salesperson visits"
 msgstr ""
 
@@ -407,15 +406,6 @@ msgid "Last"
 msgstr ""
 
 #. module: crm_salesperson_planner
-#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit____last_update
-#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_close_reason____last_update
-#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_close_wiz____last_update
-#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template____last_update
-#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template_create____last_update
-msgid "Last Modified on"
-msgstr ""
-
-#. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit__write_uid
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_close_reason__write_uid
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_close_wiz__write_uid
@@ -451,12 +441,6 @@ msgstr ""
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,help:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__rrule_type
 msgid "Let the event automatically repeat at that interval"
-msgstr ""
-
-#. module: crm_salesperson_planner
-#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit__message_main_attachment_id
-#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__message_main_attachment_id
-msgid "Main Attachment"
 msgstr ""
 
 #. module: crm_salesperson_planner
@@ -614,6 +598,12 @@ msgstr ""
 #. module: crm_salesperson_planner
 #: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit__partner_phone
 msgid "Phone"
+msgstr ""
+
+#. module: crm_salesperson_planner
+#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit__rating_ids
+#: model:ir.model.fields,field_description:crm_salesperson_planner.field_crm_salesperson_planner_visit_template__rating_ids
+msgid "Ratings"
 msgstr ""
 
 #. module: crm_salesperson_planner

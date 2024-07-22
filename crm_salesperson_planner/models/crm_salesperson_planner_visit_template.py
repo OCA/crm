@@ -31,7 +31,6 @@ class CrmSalespersonPlannerVisitTemplate(models.Model):
     name = fields.Char(
         string="Visit Template Number",
         default="/",
-        readonly=True,
         copy=False,
     )
     description = fields.Html()
@@ -48,7 +47,6 @@ class CrmSalespersonPlannerVisitTemplate(models.Model):
         comodel_name="res.partner",
         string="Scheduled by",
         related="user_id.partner_id",
-        readonly=True,
     )
     partner_ids = fields.Many2many(
         comodel_name="res.partner",
@@ -107,7 +105,6 @@ class CrmSalespersonPlannerVisitTemplate(models.Model):
         tracking=True,
         default=lambda self: fields.Datetime.today() + timedelta(hours=1),
         compute="_compute_stop",
-        readonly=False,
         store=True,
         help="Stop date of an event, without time for full days events",
     )

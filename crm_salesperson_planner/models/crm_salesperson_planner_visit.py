@@ -16,7 +16,6 @@ class CrmSalespersonPlannerVisit(models.Model):
         string="Visit Number",
         required=True,
         default="/",
-        readonly=True,
         copy=False,
     )
     partner_id = fields.Many2one(
@@ -60,7 +59,6 @@ class CrmSalespersonPlannerVisit(models.Model):
     state = fields.Selection(
         string="Status",
         required=True,
-        readonly=True,
         copy=False,
         tracking=True,
         selection=[

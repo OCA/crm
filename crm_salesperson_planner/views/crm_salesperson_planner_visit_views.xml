@@ -12,36 +12,36 @@
                 decoration-warning="state == 'incident'"
                 decoration-muted="state == 'cancel'"
             >
-                <field name="name" />
+                <field name="name" readonly="1" />
                 <field name="sequence" />
                 <field name="date" />
                 <field name="partner_id" />
                 <field name="user_id" />
                 <field name="company_id" groups="base.group_multi_company" />
-                <field name="state" />
+                <field name="state" readonly="1" />
                 <button
                     name="action_draft"
                     type="object"
-                    attrs="{'invisible': [('state', 'not in', ['cancel','incident', 'done'])]}"
+                    invisible="state not in ['cancel','incident', 'done']"
                     icon="fa-undo"
                 />
                 <button
                     name="action_confirm"
                     type="object"
                     icon="fa-calendar text-success"
-                    attrs="{'invisible': [('state', '!=', 'draft')]}"
+                    invisible="state != 'draft'"
                 />
                 <button
                     name="action_done"
                     type="object"
                     icon="fa-check"
-                    attrs="{'invisible': [('state', '!=', 'confirm')]}"
+                    invisible="state != 'confirm'"
                 />
                 <button
                     name="%(crm_salesperson_planner_visit_close_wiz_action)d"
                     type="action"
                     icon="fa-ban text-danger"
-                    attrs="{'invisible': [('state', 'in', ['cancel','incident', 'done'])]}"
+                    invisible="state in ['cancel','incident', 'done']"
                     context="{'att_close_type':'cancel'}"
                     title="Close Reasons"
                 />
@@ -49,7 +49,7 @@
                     name="%(crm_salesperson_planner_visit_close_wiz_action)d"
                     type="action"
                     icon="fa-exclamation-triangle"
-                    attrs="{'invisible': [('state', '!=', 'confirm')]}"
+                    invisible="state != 'confirm'"
                     context="{'att_close_type':'incident'}"
                     title="Close Reasons"
                 />
@@ -67,7 +67,7 @@
                         id="action_draft"
                         string="Draft"
                         type="object"
-                        attrs="{'invisible': [('state', 'not in', ['cancel','incident', 'done'])]}"
+                        invisible="state not in ['cancel','incident', 'done']"
                     />
                     <button
                         name="action_confirm"
@@ -75,7 +75,7 @@
                         string="Confirm"
                         class="btn-primary"
                         type="object"
-                        attrs="{'invisible': [('state', '!=', 'draft')]}"
+                        invisible="state != 'draft'"
                     />
                     <button
                         name="action_done"
@@ -83,14 +83,14 @@
                         string="Done"
                         class="btn-primary"
                         type="object"
-                        attrs="{'invisible': [('state', '!=', 'confirm')]}"
+                        invisible="state != 'confirm'"
                     />
                     <button
                         name="%(crm_salesperson_planner_visit_close_wiz_action)d"
                         id="action_cancel"
                         string="Cancel"
                         type="action"
-                        attrs="{'invisible': [('state', 'in', ['cancel','incident', 'done'])]}"
+                        invisible="state in ['cancel','incident', 'done']"
                         context="{'att_close_type':'cancel'}"
                     />
                     <button
@@ -98,13 +98,14 @@
                         id="action_incident"
                         string="Incident"
                         type="action"
-                        attrs="{'invisible': [('state', '!=', 'confirm')]}"
+                        invisible="state != 'confirm'"
                         context="{'att_close_type':'incident'}"
                     />
                     <field
                         name="state"
                         widget="statusbar"
                         statusbar_visible="draft,confirm,done,cancel"
+                        readonly="1"
                     />
                 </header>
                 <sheet string="Visit">
@@ -126,12 +127,12 @@
                             <field
                                 name="partner_phone"
                                 widget="phone"
-                                attrs="{'invisible': [('partner_id', '=', False)]}"
+                                invisible="not partner_id"
                             />
                             <field
                                 name="partner_mobile"
                                 widget="phone"
-                                attrs="{'invisible': [('partner_id', '=', False)]}"
+                                invisible="not partner_id"
                             />
                         </group>
                         <group>
@@ -148,7 +149,7 @@
                     <notebook>
                         <page
                             string="Close Info"
-                            attrs="{'invisible': [('state', 'not in', ['cancel', 'incident'])]}"
+                            invisible="state not in ['cancel', 'incident']"
                         >
                             <group>
                                 <field
@@ -161,7 +162,7 @@
                                     name="close_reason_image"
                                     widget="image"
                                     readonly="1"
-                                    attrs="{'invisible': [('close_reason_image', '=', False)]}"
+                                    invisible="not close_reason_image"
                                 />
                             </group>
                         </page>
@@ -172,13 +173,11 @@
                             />
                         </page>
                         <page string="Opportunities">
-                            <group>
                                 <field
-                                    name="opportunity_ids"
-                                    nolabel="1"
-                                    options="{'no_create': True}"
-                                />
-                            </group>
+                                name="opportunity_ids"
+                                nolabel="1"
+                                options="{'no_create': True}"
+                            />
                         </page>
                     </notebook>
                 </sheet>
@@ -199,7 +198,7 @@
         <field name="model">crm.salesperson.planner.visit</field>
         <field name="arch" type="xml">
             <search string="Search Visits">
-                <field name="name" />
+                <field name="name" readonly="1" />
                 <field
                     name="partner_id"
                     filter_domain="[('partner_id','child_of',self)]"
