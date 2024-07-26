@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2024 Moduon Team S.L.
+     License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl-3.0) -->
+<odoo>
+    <record id="crm_lead_view_form_inherit_crm_referred" model="ir.ui.view">
+        <field name="name">CRM Lead Form Inherit</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//notebook/page[@name='extra']/group/group[@name='categorization']/field[@name='referred']"
+                position="after"
+            >
+                <field name="referred_id" />
+            </xpath>
+            <xpath
+                expr="//notebook/page[@name='lead']/group/group[3]/field[@name='referred']"
+                position="after"
+            >
+                <field name="referred_id" />
+            </xpath>
+        </field>
+    </record>
+</odoo>

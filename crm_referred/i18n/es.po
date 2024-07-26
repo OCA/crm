@@ -1,0 +1,94 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* crm_referred
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-26 09:08+0000\n"
+"PO-Revision-Date: 2024-07-26 11:11+0200\n"
+"Last-Translator: Emilio Pascual <emilio@moduom.team>\n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.4.4\n"
+
+#. module: crm_referred
+#: model:ir.ui.menu,name:crm_referred.crm_referred_menu
+msgid "CRM Referred"
+msgstr "CRM Recomendado"
+
+#. module: crm_referred
+#: model:ir.actions.act_window,name:crm_referred.crm_referred_action
+msgid "CRM Referred by Categorized"
+msgstr "CRM Recomendado por categorizado"
+
+#. module: crm_referred
+#: model:ir.model,name:crm_referred.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: crm_referred
+#: model:ir.model.fields,field_description:crm_referred.field_crm_referred__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: crm_referred
+#: model:ir.model.fields,field_description:crm_referred.field_crm_referred__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: crm_referred
+#: model:ir.model.fields,field_description:crm_referred.field_crm_referred__display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: crm_referred
+#: model:ir.model.fields,field_description:crm_referred.field_crm_referred__id
+msgid "ID"
+msgstr ""
+
+#. module: crm_referred
+#: model:ir.model.fields,field_description:crm_referred.field_crm_referred____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: crm_referred
+#: model:ir.model.fields,field_description:crm_referred.field_crm_referred__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: crm_referred
+#: model:ir.model.fields,field_description:crm_referred.field_crm_referred__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: crm_referred
+#: model:ir.model,name:crm_referred.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Iniciativa/Oportundad"
+
+#. module: crm_referred
+#: model:ir.model,name:crm_referred.model_crm_referred
+msgid "Lead/opportunity referred by categorized"
+msgstr "Iniciativa/opportunidad referenciado por categorizado"
+
+#. module: crm_referred
+#: model:ir.model.fields,field_description:crm_referred.field_crm_referred__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: crm_referred
+#: model:ir.model.fields,field_description:crm_referred.field_res_partner__referred_id
+#: model:ir.model.fields,field_description:crm_referred.field_res_users__referred_id
+msgid "Referred by"
+msgstr "Recomendado por"
+
+#. module: crm_referred
+#: model:ir.model.fields,field_description:crm_referred.field_crm_lead__referred_id
+msgid "Referred by Categorized"
+msgstr "Recomendado por categorizado"

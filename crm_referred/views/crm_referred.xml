@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2024 Moduon Team S.L.
+     License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl-3.0) -->
+<odoo>
+    <record id="crm_referred_view_tree" model="ir.ui.view">
+        <field name="name">CRM Referred Tree</field>
+        <field name="model">crm.referred</field>
+        <field name="arch" type="xml">
+            <tree editable="top">
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+    <record id="crm_referred_action" model="ir.actions.act_window">
+        <field name="name">CRM Referred by Categorized</field>
+        <field name="res_model">crm.referred</field>
+        <field name="view_mode">tree</field>
+    </record>
+    <menuitem
+        id="crm_referred_menu"
+        name="CRM Referred"
+        action="crm_referred_action"
+        parent="crm.crm_menu_config"
+        sequence="50"
+    />
+
+</odoo>
