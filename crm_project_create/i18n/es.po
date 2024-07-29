@@ -94,10 +94,23 @@ msgstr "Nombre del proyecto"
 msgid "Wizart to create Project from Lead/Opportunity"
 msgstr "Asistente para crear un proyecto desde la iniciativa/oportunidad"
 
-#, python-format
-#~ msgid "Project <a href=# data-oe-model=project.project data-oe-id=%(project)d>%(name)s</a> created."
-#~ msgstr "Proyecto <a href=# data-oe-model=project.project data-oe-id=%(project)d>%(name)s</a> creado."
+#. module: crm_project_create
+#: model_terms:ir.ui.view,arch_db:crm_project_create.crm_create_project_view_form
+msgid "You won't be able to edit this project after creating it"
+msgstr ""
 
 #, python-format
-#~ msgid "Project created from lead/opportunity <a href=# data-oe-model=crm.lead data-oe-id=%(lead)d>%(name)s</a>."
-#~ msgstr "Proyecto creado desde la iniciativa/oportunidad <a href=# data-oe-model=crm.lead data-oe-id=%(lead)d>%(name)s</a>."
+#~ msgid ""
+#~ "Project <a href=# data-oe-model=project.project data-oe-"
+#~ "id=%(project)d>%(name)s</a> created."
+#~ msgstr ""
+#~ "Proyecto <a href=# data-oe-model=project.project data-oe-"
+#~ "id=%(project)d>%(name)s</a> creado."
+
+#, python-format
+#~ msgid ""
+#~ "Project created from lead/opportunity <a href=# data-oe-model=crm.lead "
+#~ "data-oe-id=%(lead)d>%(name)s</a>."
+#~ msgstr ""
+#~ "Proyecto creado desde la iniciativa/oportunidad <a href=# data-oe-"
+#~ "model=crm.lead data-oe-id=%(lead)d>%(name)s</a>."
