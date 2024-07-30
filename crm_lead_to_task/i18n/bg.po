@@ -61,11 +61,6 @@ msgid "ID"
 msgstr "ИН"
 
 #. module: crm_lead_to_task
-#: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task____last_update
-msgid "Last Modified on"
-msgstr "Последно коригирано на"
-
-#. module: crm_lead_to_task
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task__write_uid
 msgid "Last Updated by"
 msgstr "Последно актуализирано от"
@@ -89,6 +84,9 @@ msgstr ""
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task__project_id
 msgid "Project"
 msgstr "Проект"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Последно коригирано на"
 
 #~ msgid ""
 #~ "<span class=\"o_stat_text\">Convert To</span>\n"

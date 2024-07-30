@@ -63,11 +63,6 @@ msgid "ID"
 msgstr "Tunniste (ID)"
 
 #. module: crm_lead_to_task
-#: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task____last_update
-msgid "Last Modified on"
-msgstr "Viimeksi muokattu"
-
-#. module: crm_lead_to_task
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task__write_uid
 msgid "Last Updated by"
 msgstr "Viimeksi päivittänyt"
@@ -91,6 +86,9 @@ msgstr "Muunna liidi tehtäväksi"
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task__project_id
 msgid "Project"
 msgstr "Projektit"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Viimeksi muokattu"
 
 #~ msgid ""
 #~ "<span class=\"o_stat_text\">Convert To</span>\n"

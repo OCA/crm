@@ -59,11 +59,6 @@ msgid "ID"
 msgstr "ID"
 
 #. module: crm_lead_to_task
-#: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task____last_update
-msgid "Last Modified on"
-msgstr "Ultima modifica il"
-
-#. module: crm_lead_to_task
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task__write_uid
 msgid "Last Updated by"
 msgstr "Ultimo aggiornamento di"
@@ -87,6 +82,9 @@ msgstr "Contatto convertito in lavoro"
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task__project_id
 msgid "Project"
 msgstr "Progetto"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Ultima modifica il"
 
 #~ msgid ""
 #~ "<span class=\"o_stat_text\">Convert To</span>\n"

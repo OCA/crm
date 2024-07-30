@@ -59,11 +59,6 @@ msgid "ID"
 msgstr "ID"
 
 #. module: crm_lead_to_task
-#: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task____last_update
-msgid "Last Modified on"
-msgstr "கடைசியாக திருத்திய"
-
-#. module: crm_lead_to_task
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task__write_uid
 msgid "Last Updated by"
 msgstr "கடைசியாக புதுப்பிக்கப்பட்டவர்"
@@ -87,6 +82,9 @@ msgstr ""
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task__project_id
 msgid "Project"
 msgstr ""
+
+#~ msgid "Last Modified on"
+#~ msgstr "கடைசியாக திருத்திய"
 
 #~ msgid "Create a new customer"
 #~ msgstr "புதிய வாடிக்கையாளரை உருவாக்கவும்"

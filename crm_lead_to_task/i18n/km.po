@@ -59,11 +59,6 @@ msgid "ID"
 msgstr "ID"
 
 #. module: crm_lead_to_task
-#: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task____last_update
-msgid "Last Modified on"
-msgstr "កាលបរិច្ឆេតកែប្រែចុងក្រោយ"
-
-#. module: crm_lead_to_task
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task__write_uid
 msgid "Last Updated by"
 msgstr "ផ្លាស់ប្តូរចុងក្រោយ"
@@ -88,12 +83,15 @@ msgstr "នាំមុខក្លាយទៅជាភារកិច្ច"
 msgid "Project"
 msgstr "គំរោង"
 
+#~ msgid "Last Modified on"
+#~ msgstr "កាលបរិច្ឆេតកែប្រែចុងក្រោយ"
+
 #~ msgid ""
 #~ "<span class=\"o_stat_text\">Convert To</span>\n"
 #~ "                            <span class=\"o_stat_text\">Task</span>"
 #~ msgstr ""
-#~ "<span class=\"o_stat_text\">បន្លែងទៅ</span><span class=\"o_stat_text"
-#~ "\">សាល្បង</span>"
+#~ "<span class=\"o_stat_text\">បន្លែងទៅ</span><span "
+#~ "class=\"o_stat_text\">សាល្បង</span>"
 
 #~ msgid "Create a new customer"
 #~ msgstr "ការបង្កើតអតិថិជនថ្មី"

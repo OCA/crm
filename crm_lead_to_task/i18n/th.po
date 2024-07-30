@@ -58,11 +58,6 @@ msgid "ID"
 msgstr "รหัส"
 
 #. module: crm_lead_to_task
-#: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task____last_update
-msgid "Last Modified on"
-msgstr "แก้ไขครั้งสุดท้ายเมื่อ"
-
-#. module: crm_lead_to_task
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task__write_uid
 msgid "Last Updated by"
 msgstr "อัพเดทครั้งสุดท้ายโดย"
@@ -86,6 +81,9 @@ msgstr ""
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task__project_id
 msgid "Project"
 msgstr "โปรเจค"
+
+#~ msgid "Last Modified on"
+#~ msgstr "แก้ไขครั้งสุดท้ายเมื่อ"
 
 #~ msgid "Create a new customer"
 #~ msgstr "สร้างลูกค้าใหม่"
