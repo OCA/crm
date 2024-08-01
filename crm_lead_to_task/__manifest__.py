@@ -18,5 +18,6 @@
         "security/ir.model.access.csv",
         "wizard/crm_lead_convert2task_views.xml",
         "views/crm_lead_views.xml",
+        "views/project_task_views.xml",
     ],
 }
