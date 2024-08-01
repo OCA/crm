@@ -39,6 +39,7 @@ class CrmLeadConvert2Task(models.TransientModel):
             "project_id": self.project_id.id,
             "partner_id": partner.id,
             "email_cc": lead.email_cc,
+            "lead_id": lead.id,
         }
         task = self.env["project.task"].create(vals)
         # move the mail thread
