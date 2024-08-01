@@ -3,7 +3,7 @@
     <!-- inherit view of Lead Form : adding the "convert to task" button -->
     <record id="crm_lead_view_form" model="ir.ui.view">
         <field name="model">crm.lead</field>
-        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="inherit_id" ref="crm.crm_lead_view_form" />
         <field name="arch" type="xml">
             <field name="stage_id" position="before">
                 <button
@@ -17,12 +17,24 @@
             </field>
             <!-- Add a smart button to the tasks created from this lead -->
             <xpath expr="//div[@name='button_box']" position="inside">
-                <field name="task_count" invisible="1"/>
-                <button name="action_view_tasks" type="object" class="oe_stat_button" icon="fa-pencil" invisible="task_count &lt; 1">
+                <field name="task_count" invisible="1" />
+                <button
+                    name="action_view_tasks"
+                    type="object"
+                    class="oe_stat_button"
+                    icon="fa-pencil"
+                    invisible="task_count &lt; 1"
+                >
                     <div class="o_stat_info">
-                        <field name="task_count" class="o_stat_value"/>
-                        <span class="o_stat_text" invisible="task_count &lt; 2">Tasks</span>
-                        <span class="o_stat_text" invisible="task_count &gt; 1">Task</span>
+                        <field name="task_count" class="o_stat_value" />
+                        <span
+                            class="o_stat_text"
+                            invisible="task_count &lt; 2"
+                        >Tasks</span>
+                        <span
+                            class="o_stat_text"
+                            invisible="task_count &gt; 1"
+                        >Task</span>
                     </div>
                 </button>
             </xpath>

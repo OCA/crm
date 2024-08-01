@@ -3,11 +3,17 @@
     <record id="view_task_form2" model="ir.ui.view">
         <field name="name">project.task.view.form.inherit.crm.lead.to.task</field>
         <field name="model">project.task</field>
-        <field name="inherit_id" ref="project.view_task_form2"/>
+        <field name="inherit_id" ref="project.view_task_form2" />
         <field name="arch" type="xml">
             <xpath expr="//div[@name='button_box']" position="inside">
                 <field name="lead_id" invisible="1" />
-                <button name="action_view_lead" type="object" class="oe_stat_button" icon="fa-star" invisible="not lead_id">
+                <button
+                    name="action_view_lead"
+                    type="object"
+                    class="oe_stat_button"
+                    icon="fa-star"
+                    invisible="not lead_id"
+                >
                     <div class="o_stat_info">
                         <span class="o_stat_text">CRM Lead</span>
                     </div>
