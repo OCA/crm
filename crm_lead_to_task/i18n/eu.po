@@ -25,6 +25,19 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: crm_lead_to_task
+#: model_terms:ir.ui.view,arch_db:crm_lead_to_task.crm_lead_view_form
+msgid ""
+"<span class=\"o_stat_text\" invisible=\"task_count &lt; 2\">Tasks</span>\n"
+"                        <span class=\"o_stat_text\" invisible=\"task_count "
+"&gt; 1\">Task</span>"
+msgstr ""
+
+#. module: crm_lead_to_task
+#: model_terms:ir.ui.view,arch_db:crm_lead_to_task.view_task_form2
+msgid "<span class=\"o_stat_text\">CRM Lead</span>"
+msgstr ""
+
+#. module: crm_lead_to_task
 #: model_terms:ir.ui.view,arch_db:crm_lead_to_task.crm_lead_convert2task_view_form
 msgid "Cancel"
 msgstr "Utzi"
@@ -73,6 +86,7 @@ msgstr "Azken eguneraketa noiz"
 
 #. module: crm_lead_to_task
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task__lead_id
+#: model:ir.model.fields,field_description:crm_lead_to_task.field_project_task__lead_id
 msgid "Lead"
 msgstr "Ekimena"
 
@@ -82,9 +96,41 @@ msgid "Lead convert to Task"
 msgstr ""
 
 #. module: crm_lead_to_task
+#: model:ir.model,name:crm_lead_to_task.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr ""
+
+#. module: crm_lead_to_task
+#. odoo-python
+#: code:addons/crm_lead_to_task/models/project_task.py:0
+#: code:addons/crm_lead_to_task/tests/test_crm_lead_task.py:0
+#, python-format
+msgid "Lead: %s"
+msgstr ""
+
+#. module: crm_lead_to_task
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task__project_id
 msgid "Project"
 msgstr "Proiektua"
+
+#. module: crm_lead_to_task
+#: model:ir.model,name:crm_lead_to_task.model_project_task
+#: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead__task_ids
+msgid "Task"
+msgstr ""
+
+#. module: crm_lead_to_task
+#: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead__task_count
+msgid "Task Count"
+msgstr ""
+
+#. module: crm_lead_to_task
+#. odoo-python
+#: code:addons/crm_lead_to_task/models/crm_lead.py:0
+#: code:addons/crm_lead_to_task/tests/test_crm_lead_task.py:0
+#, python-format
+msgid "Tasks from crm lead %s"
+msgstr ""
 
 #~ msgid "Last Modified on"
 #~ msgstr "Azken aldaketa"
