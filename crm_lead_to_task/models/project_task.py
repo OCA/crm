@@ -7,7 +7,7 @@ from odoo import _, fields, models
 class ProjectTask(models.Model):
     _inherit = "project.task"
 
-    lead_id = fields.Many2one("project.task")
+    lead_id = fields.Many2one("crm.lead")
 
     def action_view_lead(self):
         self.ensure_one()
