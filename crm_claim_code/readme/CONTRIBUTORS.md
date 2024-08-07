@@ -7,3 +7,5 @@
   - Ernesto Tejeda
   - Pedro M. Baeza
   - Vicent Cubells
+- [APSL-Nagarro](<https://apsl.tech>):
+  - Bernat Obrador \<<bobrador@apsl.net>\>

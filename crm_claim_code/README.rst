@@ -77,6 +77,10 @@ Contributors
    -  Pedro M. Baeza
    -  Vicent Cubells
 
+-  `APSL-Nagarro <https://apsl.tech>`__:
+
+   -  Bernat Obrador <bobrador@apsl.net>
+
 Maintainers
 -----------
 
