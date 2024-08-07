@@ -6,7 +6,7 @@
         <field name="inherit_id" ref="crm_claim.crm_case_claims_form_view" />
         <field name="arch" type="xml">
             <field name="name" position="before">
-                <field name="code" />
+                <field name="code" readonly="1" />
             </field>
         </field>
     </record>
@@ -16,7 +16,7 @@
         <field name="inherit_id" ref="crm_claim.crm_case_claims_tree_view" />
         <field name="arch" type="xml">
             <field name="name" position="before">
-                <field name="code" />
+                <field name="code" readonly="1" />
             </field>
         </field>
     </record>
