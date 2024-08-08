@@ -11,8 +11,8 @@
                 <field name="date" />
                 <field name="stage_id" groups="base.group_user" />
                 <field name="categ_id" string="Type" />
-                <field name="date_deadline" invisible="1" />
-                <field name="date_closed" invisible="1" />
+                <field name="date_deadline" column_invisible="1" />
+                <field name="date_closed" column_invisible="1" readonly="1" />
                 <field name="company_id" groups="base.group_multi_company" />
             </tree>
         </field>
@@ -73,9 +73,9 @@
                         <page string="Follow Up" groups="base.group_user">
                             <group colspan="2" col="2" groups="base.group_no_one">
                                 <separator colspan="2" string="Dates" />
-                                <field name="create_date" />
-                                <field name="date_closed" invisible="1" />
-                                <field name="write_date" />
+                                <field name="create_date" readonly="1" />
+                                <field name="date_closed" invisible="1" readonly="1" />
+                                <field name="write_date" readonly="1" />
                             </group>
                             <group colspan="2" col="2">
                                 <separator colspan="2" string="Root Causes" />

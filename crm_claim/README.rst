@@ -93,6 +93,10 @@ Contributors
 
    -  Fernando La Chica <fernando.lachica@guadaltech.es>
 
+-  `APSL-Nagarro <https://apsl.tech>`__:
+
+   -  Bernat Obrador <bobrador@apsl.net>
+
 Maintainers
 -----------
 
