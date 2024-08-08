@@ -44,10 +44,10 @@ class CrmClaim(models.Model):
     active = fields.Boolean(default=True)
     description = fields.Text()
     resolution = fields.Text()
-    create_date = fields.Datetime(string="Creation Date", readonly=True)
-    write_date = fields.Datetime(string="Update Date", readonly=True)
+    create_date = fields.Datetime(string="Creation Date")
+    write_date = fields.Datetime(string="Update Date")
     date_deadline = fields.Date(string="Deadline")
-    date_closed = fields.Datetime(string="Closed", readonly=True)
+    date_closed = fields.Datetime(string="Closed")
     date = fields.Datetime(string="Claim Date", index=True, default=fields.Datetime.now)
     model_ref_id = fields.Reference(
         selection="_selection_model", string="Model Reference"

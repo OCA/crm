@@ -15,32 +15,35 @@ class CrmClaimReport(models.Model):
     _auto = False
     _description = "CRM Claim Report"
 
-    user_id = fields.Many2one(comodel_name="res.users", string="User", readonly=True)
-    team_id = fields.Many2one(comodel_name="crm.team", string="Team", readonly=True)
-    nbr_claims = fields.Integer(string="# of Claims", readonly=True)
-    company_id = fields.Many2one(
-        comodel_name="res.company", string="Company", readonly=True
+    user_id = fields.Many2one(comodel_name="res.users", string="User")
+    team_id = fields.Many2one(comodel_name="crm.team", string="Team")
+    nbr_claims = fields.Integer(
+        string="# of Claims",
     )
-    create_date = fields.Datetime(readonly=True, index=True)
-    claim_date = fields.Datetime(readonly=True)
+    company_id = fields.Many2one(
+        comodel_name="res.company",
+        string="Company",
+    )
+    create_date = fields.Datetime(index=True)
+    claim_date = fields.Datetime()
     delay_close = fields.Float(
         string="Delay to close",
         digits=(16, 2),
-        readonly=True,
         group_operator="avg",
         help="Number of Days to close the case",
     )
     stage_id = fields.Many2one(
         comodel_name="crm.claim.stage",
         string="Stage",
-        readonly=True,
         domain="[('team_ids','=',team_id)]",
     )
     categ_id = fields.Many2one(
-        comodel_name="crm.claim.category", string="Category", readonly=True
+        comodel_name="crm.claim.category",
+        string="Category",
     )
     partner_id = fields.Many2one(
-        comodel_name="res.partner", string="Partner", readonly=True
+        comodel_name="res.partner",
+        string="Partner",
     )
     priority = fields.Selection(
         selection=[("0", "Low"), ("1", "Normal"), ("2", "High")]
@@ -52,16 +55,19 @@ class CrmClaimReport(models.Model):
         ],
         string="Action Type",
     )
-    date_closed = fields.Datetime(string="Close Date", readonly=True, index=True)
-    date_deadline = fields.Date(string="Deadline", readonly=True, index=True)
+    date_closed = fields.Datetime(string="Close Date", index=True)
+    date_deadline = fields.Date(string="Deadline", index=True)
     delay_expected = fields.Float(
         string="Overpassed Deadline",
         digits=(16, 2),
-        readonly=True,
         group_operator="avg",
     )
-    email = fields.Integer(string="# Emails", readonly=True)
-    subject = fields.Char(string="Claim Subject", readonly=True)
+    email = fields.Integer(
+        string="# Emails",
+    )
+    subject = fields.Char(
+        string="Claim Subject",
+    )
 
     def _select(self):
         select_str = """
