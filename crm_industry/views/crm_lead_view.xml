@@ -28,6 +28,11 @@
         <field name="arch" type="xml">
             <field name="partner_id" position="after">
                 <field name="industry_id" />
+                <field
+                    name="secondary_industry_ids"
+                    widget="many2many_tags"
+                    optional="hide"
+                />
             </field>
         </field>
     </record>
@@ -56,6 +61,11 @@
         <field name="arch" type="xml">
             <field name="partner_id" position="after">
                 <field name="industry_id" />
+                <field
+                    name="secondary_industry_ids"
+                    widget="many2many_tags"
+                    optional="hide"
+                />
             </field>
         </field>
     </record>

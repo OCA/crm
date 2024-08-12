@@ -1,0 +1,7 @@
+- Go to CRM configuration and enable "Leads"
+- Create a new Lead (or edit an existing one):
+- Set a contact name or a company name.
+- Set NUTS values as desired.
+- Save it an convert to opportunity.
+- In the dialog, choose **Create a new customer** and click create.
+- If you browse the new customer, the NUTS values should have been propagated.
