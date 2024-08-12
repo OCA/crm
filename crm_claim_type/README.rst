@@ -89,6 +89,10 @@ Contributors
 
    -  Jonathan Oscategui Taza <info@pesol.es>
 
+-  `APSL-Nagarro <https://apsl.tech>`__:
+
+   -  Bernat Obrador <bobrador@apsl.net>
+
 Maintainers
 -----------
 
