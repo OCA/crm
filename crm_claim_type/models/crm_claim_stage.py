@@ -8,7 +8,6 @@ from odoo import fields, models
 
 
 class CrmClaimStage(models.Model):
-
     _inherit = "crm.claim.stage"
 
     claim_type = fields.Many2one("crm.claim.type", help="Claim classification")
