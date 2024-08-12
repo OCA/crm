@@ -12,14 +12,15 @@ msgstr ""
 "Project-Id-Version: Odoo Server saas~11.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-09-21 13:17+0000\n"
-"PO-Revision-Date: 2018-08-24 09:17+0000\n"
-"Last-Translator: Sergio Zanchetta <primes2h@gmail.com>, 2019\n"
+"PO-Revision-Date: 2024-08-12 08:58+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: Italian (https://www.transifex.com/odoo/teams/41243/it/)\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #. module: crm_lead_to_task
 #: model_terms:ir.ui.view,arch_db:crm_lead_to_task.crm_lead_view_form
@@ -28,11 +29,14 @@ msgid ""
 "                        <span class=\"o_stat_text\" invisible=\"task_count "
 "&gt; 1\">Task</span>"
 msgstr ""
+"<span class=\"o_stat_text\" invisible=\"task_count &lt; 2\">Lavori</span>\n"
+"                        <span class=\"o_stat_text\" invisible=\"task_count "
+"&gt; 1\">Lavoro</span>"
 
 #. module: crm_lead_to_task
 #: model_terms:ir.ui.view,arch_db:crm_lead_to_task.view_task_form2
 msgid "<span class=\"o_stat_text\">CRM Lead</span>"
-msgstr ""
+msgstr "<span class=\"o_stat_text\">Contatto CRM</span>"
 
 #. module: crm_lead_to_task
 #: model_terms:ir.ui.view,arch_db:crm_lead_to_task.crm_lead_convert2task_view_form
@@ -95,7 +99,7 @@ msgstr "Contatto convertito in lavoro"
 #. module: crm_lead_to_task
 #: model:ir.model,name:crm_lead_to_task.model_crm_lead
 msgid "Lead/Opportunity"
-msgstr ""
+msgstr "Contatto/Opportunità"
 
 #. module: crm_lead_to_task
 #. odoo-python
@@ -103,7 +107,7 @@ msgstr ""
 #: code:addons/crm_lead_to_task/tests/test_crm_lead_task.py:0
 #, python-format
 msgid "Lead: %s"
-msgstr ""
+msgstr "Contatto: %s"
 
 #. module: crm_lead_to_task
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task__project_id
@@ -114,12 +118,12 @@ msgstr "Progetto"
 #: model:ir.model,name:crm_lead_to_task.model_project_task
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead__task_ids
 msgid "Task"
-msgstr ""
+msgstr "Lavoro"
 
 #. module: crm_lead_to_task
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead__task_count
 msgid "Task Count"
-msgstr ""
+msgstr "Numero lavori"
 
 #. module: crm_lead_to_task
 #. odoo-python
@@ -127,7 +131,7 @@ msgstr ""
 #: code:addons/crm_lead_to_task/tests/test_crm_lead_task.py:0
 #, python-format
 msgid "Tasks from crm lead %s"
-msgstr ""
+msgstr "Lavori cal contatto CRM %s"
 
 #~ msgid "Last Modified on"
 #~ msgstr "Ultima modifica il"
