@@ -23,6 +23,7 @@ addon | version | maintainers | summary
 --- | --- | --- | ---
 [crm_lead_code](crm_lead_code/) | 17.0.1.0.1 |  | Sequential Code for Leads / Opportunities
 [crm_lead_currency](crm_lead_currency/) | 17.0.1.0.0 | [![luisg123v](https://github.com/luisg123v.png?size=30px)](https://github.com/luisg123v) | On leads/opportunities, add the amount in the customer's currency.
+[crm_lead_firstname](crm_lead_firstname/) | 17.0.1.0.0 |  | Specify split names for contacts in leads
 [crm_lead_product](crm_lead_product/) | 17.0.1.0.0 |  | Adds a lead line in the lead/opportunity model in odoo
 [crm_lead_to_task](crm_lead_to_task/) | 17.0.1.1.0 |  | Create Tasks from Leads/Opportunities
 [crm_lead_vat](crm_lead_vat/) | 17.0.1.0.1 | [![EmilioPascual](https://github.com/EmilioPascual.png?size=30px)](https://github.com/EmilioPascual) | Add VAT field to leads
