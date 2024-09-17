@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2022 Hunki Enterprises BV
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record id="view_klaviyo_account_tree" model="ir.ui.view">
+        <field name="model">klaviyo.account</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="api_key" />
+                <field name="company_id" groups="base.group_multi_company" />
+                <field name="active" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_klaviyo_account" model="ir.actions.act_window">
+        <field name="name">Klaviyo</field>
+        <field name="res_model">klaviyo.account</field>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="view_klaviyo_account_tree" />
+    </record>
+
+    <menuitem
+        id="menu_klaviyo_account"
+        action="action_klaviyo_account"
+        parent="base.menu_administration"
+    />
+
+</odoo>
