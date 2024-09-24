@@ -61,64 +61,64 @@ class TestCrmSecurity(SavepointCase):
         )
 
     def test_user_crm_only(self):
-        model = self.model_ir_ui_menu.with_user(self.crm_user)
+        model = self.model_ir_ui_menu.sudo(self.crm_user)
         items = model._visible_menu_ids()
         self.assertTrue(self.crm_menu.id in items)
         self.assertFalse(self.sale_menu.id in items)
         # Crm lead checks
-        crm_lead_model = self.env["crm.lead"].with_user(self.crm_user)
+        crm_lead_model = self.env["crm.lead"].sudo(self.crm_user)
         crm_lead = crm_lead_model.browse(self.crm_lead.id)
         self.assertEqual(crm_lead, self.crm_lead)
         with self.assertRaises(AccessError):
-            self.crm_lead.with_user(self.crm_user).unlink()
+            self.crm_lead.sudo(self.crm_user).unlink()
         crm_lead_form = Form(crm_lead_model)
         crm_lead_form.name = "Lead"
         crm_lead_form.save()
 
     def test_user_sale(self):
-        model = self.model_ir_ui_menu.with_user(self.sale_user)
+        model = self.model_ir_ui_menu.sudo(self.sale_user)
         items = model._visible_menu_ids()
         self.assertFalse(self.crm_menu.id in items)
         self.assertTrue(self.sale_menu.id in items)
         # Crm lead checks
-        crm_lead_model = self.env["crm.lead"].with_user(self.sale_user)
+        crm_lead_model = self.env["crm.lead"].sudo(self.sale_user)
         crm_lead = crm_lead_model.browse(self.crm_lead.id)
         self.assertEqual(crm_lead, self.crm_lead)
         with self.assertRaises(AccessError):
-            self.crm_lead.with_user(self.sale_user).unlink()
+            self.crm_lead.sudo(self.sale_user).unlink()
         crm_lead_form = Form(crm_lead_model)
         crm_lead_form.name = "Lead"
         crm_lead_form.save()
         # Sale order checks
-        sale_order_model = self.env["sale.order"].with_user(self.sale_user)
+        sale_order_model = self.env["sale.order"].sudo(self.sale_user)
         sale_order = sale_order_model.browse(self.sale_order.id)
         self.assertEqual(sale_order, self.sale_order)
         with self.assertRaises(AccessError):
-            self.sale_order.with_user(self.sale_user).unlink()
+            self.sale_order.sudo(self.sale_user).unlink()
         sale_order_form = Form(sale_order_model)
         sale_order_form.partner_id = self.partner
         sale_order_form.save()
 
     def test_user_crm_sale(self):
-        model = self.model_ir_ui_menu.with_user(self.crm_sale_user)
+        model = self.model_ir_ui_menu.sudo(self.crm_sale_user)
         items = model._visible_menu_ids()
         self.assertTrue(self.crm_menu.id in items)
         self.assertTrue(self.sale_menu.id in items)
         # Crm lead checks
-        crm_lead_model = self.env["crm.lead"].with_user(self.crm_sale_user)
+        crm_lead_model = self.env["crm.lead"].sudo(self.crm_sale_user)
         crm_lead = crm_lead_model.browse(self.crm_lead.id)
         self.assertEqual(crm_lead, self.crm_lead)
         with self.assertRaises(AccessError):
-            self.crm_lead.with_user(self.crm_sale_user).unlink()
+            self.crm_lead.sudo(self.crm_sale_user).unlink()
         crm_lead_form = Form(crm_lead_model)
         crm_lead_form.name = "Lead"
         crm_lead_form.save()
         # Sale order checks
-        sale_order_model = self.env["sale.order"].with_user(self.crm_sale_user)
+        sale_order_model = self.env["sale.order"].sudo(self.crm_sale_user)
         sale_order = sale_order_model.browse(self.sale_order.id)
         self.assertEqual(sale_order, self.sale_order)
         with self.assertRaises(AccessError):
-            self.sale_order.with_user(self.crm_sale_user).unlink()
+            self.sale_order.sudo(self.crm_sale_user).unlink()
         sale_order_form = Form(sale_order_model)
         sale_order_form.partner_id = self.partner
         sale_order_form.save()
