@@ -4,7 +4,7 @@
 {
     "name": "Required Fields by Stage in CRM",
     "summary": "Define required fields by stage in CRM leads",
-    "version": "17.0.1.0.0",
+    "version": "16.0.1.0.0",
     "category": "Customer Relationship Management",
     "website": "https://github.com/OCA/crm",
     "author": "Jarsa, Odoo Community Association (OCA)",
