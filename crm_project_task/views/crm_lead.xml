@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2023 Moduon Team S.L.
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl-3.0) -->
+<odoo>
+    <record id="inherit_crm_lead_view_form_crm_project_task" model="ir.ui.view">
+        <field name="name">crm.lead.view.form.inherit.crm.project.task</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="header" position="inside">
+                <button
+                    class="oe_highlight"
+                    context="{'default_lead_id': id, 'default_task_name': name}"
+                    invisible="active == False or task_count != 0"
+                    name="%(wizard_crm_create_task_action)d"
+                    string="Create Task"
+                    type="action"
+                />
+            </xpath>
+            <xpath expr="//div[hasclass('oe_button_box')]" position="inside">
+                <button
+                    class="oe_stat_button"
+                    icon="fa-tasks"
+                    name="action_tasks"
+                    type="object"
+                >
+                    <field name="task_count" string="Task(s)" widget="statinfo" />
+                </button>
+            </xpath></field>
+    </record>
+</odoo>
