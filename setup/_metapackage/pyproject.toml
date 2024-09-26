@@ -1,6 +1,6 @@
 [project]
 name = "odoo-addons-oca-crm"
-version = "17.0.20240829.0"
+version = "17.0.20240926.0"
 dependencies = [
     "odoo-addon-crm_lead_code>=17.0dev,<17.1dev",
     "odoo-addon-crm_lead_currency>=17.0dev,<17.1dev",
@@ -10,6 +10,7 @@ dependencies = [
     "odoo-addon-crm_lead_vat>=17.0dev,<17.1dev",
     "odoo-addon-crm_phonecall>=17.0dev,<17.1dev",
     "odoo-addon-crm_phonecall_summary_predefined>=17.0dev,<17.1dev",
+    "odoo-addon-crm_salesperson_planner>=17.0dev,<17.1dev",
     "odoo-addon-crm_stage_probability>=17.0dev,<17.1dev",
 ]
 classifiers=[
