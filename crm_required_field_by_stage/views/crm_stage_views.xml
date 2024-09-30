@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="crm_stage_view_form" model="ir.ui.view">
+        <field name="name">crm.stage.view.form</field>
+        <field name="model">crm.stage</field>
+        <field name="inherit_id" ref="crm.crm_stage_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='team_id']" position="after">
+                <field
+                    name="required_field_ids"
+                    widget="many2many_tags"
+                    options="{'no_create': True}"
+                />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
