@@ -25,8 +25,7 @@ class CrmLead(models.Model):
 
     def button_open_phonecall(self):
         self.ensure_one()
-        action = self.env.ref("crm_phonecall.crm_case_categ_phone_incoming0")
-        action_dict = action.read()[0] if action else {}
+        action_dict = self.env["ir.actions.actions"]._for_xml_id("crm_phonecall.crm_case_categ_phone_incoming0")
         action_dict["context"] = safe_eval(action_dict.get("context", "{}"))
         action_dict["context"].update(
             {
