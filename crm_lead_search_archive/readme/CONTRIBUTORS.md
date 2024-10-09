@@ -1,0 +1,4 @@
+- Akretion  
+  - David Béal \<<david.beal@akretion.com>\>
+- \[APSL-Nagarro\](<https://apsl.tech>):
+  - Patryk Pyczko \<<ppyczko@apsl.net>\>
