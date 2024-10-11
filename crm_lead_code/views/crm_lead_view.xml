@@ -48,7 +48,7 @@
         <field name="inherit_id" ref="crm.crm_case_kanban_view_leads" />
         <field name="arch" type="xml">
             <field name="name" position="before">
-                <field name="code" />&amp;nbsp;
+                <field name="code" /><span class="p-1" />
             </field>
         </field>
     </record>

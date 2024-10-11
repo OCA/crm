@@ -20,11 +20,6 @@ msgstr ""
 "X-Generator: Weblate 4.17\n"
 
 #. module: crm_lead_code
-#: model_terms:ir.ui.view,arch_db:crm_lead_code.crm_case_kanban_view_leads_inherit
-msgid "&amp;nbsp;"
-msgstr "&amp;nbsp;"
-
-#. module: crm_lead_code
 #: model:ir.model.fields,field_description:crm_lead_code.field_crm_lead__code
 msgid "Lead Number"
 msgstr "Numero contatto"
@@ -41,3 +36,6 @@ msgstr "Contatto/Opportunità"
 #, python-format
 msgid "The code must be unique!"
 msgstr "Il codice deve essere univoco!"
+
+#~ msgid "&amp;nbsp;"
+#~ msgstr "&amp;nbsp;"
