@@ -73,7 +73,7 @@ Credits
 Authors
 ~~~~~~~
 
-* Camptocamp SA
+* Camptocamp
 * Vauxoo
 
 Contributors
