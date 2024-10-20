@@ -14,7 +14,7 @@
                     type="action"
                     class="oe_highlight"
                     context="{'default_project_name': name, 'default_lead_id': id}"
-                    attrs="{'invisible': ['|', ('active','=',False), ('project_id', '!=', False)]}"
+                    invisible="not  active or project_id"
                 />
             </xpath>
             <xpath expr="//group[@name='Misc']" position="inside">
