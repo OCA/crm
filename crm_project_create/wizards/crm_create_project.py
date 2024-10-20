@@ -25,12 +25,7 @@ class CrmCreateProject(models.TransientModel):
             subtype_id=self.env.ref("mail.mt_note").id,
             author_id=self.env.user.partner_id.id,
         )
-        self.lead_id.message_post_with_view(
-            "mail_message_destiny_link_template.message_destiny_link",
-            values={"self": self.lead_id, "destiny": self.lead_id.project_id},
-            subtype_id=self.env.ref("mail.mt_note").id,
-            author_id=self.env.user.partner_id.id,
-        )
+
 
     def _prepare_create_project_values(self):
         return {

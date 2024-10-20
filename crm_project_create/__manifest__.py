@@ -13,7 +13,10 @@
     "license": "LGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["crm", "sale_project", "mail_message_destiny_link_template"],
+    "depends": [
+        "crm", 
+        "sale_project", 
+    ],
     "data": [
         "security/ir.model.access.csv",
         "wizards/crm_create_project.xml",
