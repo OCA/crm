@@ -14,8 +14,8 @@
     "application": False,
     "installable": True,
     "depends": [
-        "crm", 
-        "sale_project", 
+        "crm",
+        "sale_project",
     ],
     "data": [
         "security/ir.model.access.csv",
