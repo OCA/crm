@@ -23,9 +23,9 @@
         <field name="inherit_id" ref="base.view_partner_tree" />
         <field name="arch" type="xml">
             <xpath expr="/tree">
-                <field name="medium_id" invisible="True" />
-                <field name="campaign_id" invisible="True" />
-                <field name="source_id" invisible="True" />
+                <field name="medium_id" column_invisible="True" />
+                <field name="campaign_id" column_invisible="True" />
+                <field name="source_id" column_invisible="True" />
             </xpath>
         </field>
     </record>

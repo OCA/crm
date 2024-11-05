@@ -1,12 +1,18 @@
-To use this module, you need to:
+To use this module, here are the steps:
 
-1.  Go to **CRM \> Leads \> Create**.
-2.  Fill the required fields.
-3.  Go to **Extra Info \> Tracking** and fill those 3 fields.
-4.  **Save**.
-5.  **Convert to Opportunity**.
-6.  Choose the option **Customer \> Create a new customer**.
-7.  **Create Opportunity**.
-8.  Click on the name of the newly linked partner.
-9.  Go to tab **Sales & Purchases**.
-10. There you have the new fulfilled fields.
+1. If you don't have the "Leads" tab at the top menu in the crm app, go to **Settings \> CRM** and check the box **Leads**.
+    ![crm settings](../static/description/crm_settings.png)
+2.  Go to **CRM \> Leads \> Create**.
+3.  Fill the required fields.
+4.  Go to **Extra Info \> Marketing** and fill those fields:
+    ![lead view](../static/description/lead_marketing.png)
+5.  **Save**.
+6.  Click **Convert to Opportunity**.
+7.  Choose the option **Customer \> Create a new customer**.
+8.  Click **Create Opportunity**.
+    ![choose customer](../static/description/convert_to_opportunity.png)
+9.  Click on the name of the newly linked partner.
+    ![new linked partner](../static/description/new_linked_partner.png)
+10.  Go to tab **Sales & Purchases**.
+11. There you have the new fulfilled fields in the marketing section.
+    ![partner marketing](../static/description/marketing_fields.png)
