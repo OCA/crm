@@ -24,8 +24,8 @@
                     />
                 </button>
                 <small class="oe_grey" invisible="is_stage_probability"><field
-                        name="stage_probability"
-                    /> %% (According to stage)</small>
+                    name="stage_probability"
+                /> %% (According to stage)</small>
             </xpath>
         </field>
     </record>

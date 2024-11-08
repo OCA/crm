@@ -51,7 +51,7 @@ class CrmLeadStageProbabilityUpdate(models.TransientModel):
             leads.write({"probability": stage_line.stage_id.probability})
             updated_leads_ids += leads.ids
         action = self.env.ref("crm.crm_lead_all_leads").read()[0]
-        action["domain"] = "[('id', 'in', %s)]" % updated_leads_ids
+        action["domain"] = f"[('id', 'in', {updated_leads_ids})]"
         action.pop("context")
         return action
 
