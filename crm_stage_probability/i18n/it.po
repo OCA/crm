@@ -82,7 +82,6 @@ msgstr "Nome visualizzato"
 #. module: crm_stage_probability
 #. odoo-python
 #: code:addons/crm_stage_probability/wizard/crm_lead_stage_probability_update.py:0
-#, python-format
 msgid ""
 "Following stages must be set as 'Change Probability Automatically' in order "
 "to update their related leads:\n"

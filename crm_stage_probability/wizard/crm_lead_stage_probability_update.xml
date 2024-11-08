@@ -11,10 +11,10 @@
                 </div>
                 <group name="stages">
                     <field name="crm_stage_update_ids">
-                        <tree>
+                        <list>
                             <field name="stage_id" />
                             <field name="lead_count" />
-                        </tree>
+                        </list>
                     </field>
                 </group>
                 <footer>
