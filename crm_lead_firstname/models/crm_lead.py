@@ -10,7 +10,7 @@ class CrmLead(models.Model):
     contact_name = fields.Char("First name")
     contact_lastname = fields.Char("Last name")
 
-    def _prepare_customer_values(self, partner_name, is_company, parent_id=False):
+    def _prepare_customer_values(self, partner_name, is_company=False, parent_id=False):
         """Ensure first and last names of contact match those in lead."""
         lead_partner_data = super()._prepare_customer_values(
             partner_name, is_company, parent_id
