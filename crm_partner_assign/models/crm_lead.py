@@ -21,13 +21,11 @@ class CRMLead(models.Model):
         help="Partner this case has been assigned to.",
         related="partner_contact_assigned_id.commercial_partner_id",
         store=True,
-        readonly=True,
         check_company=True,
     )
     date_partner_assign = fields.Date(
         compute="_compute_date_partner_assign",
         string="Partner Assignment Date",
-        readonly=False,
         store=True,
         copy=True,
         help="Last date this case was assigned to a partner",

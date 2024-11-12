@@ -13,14 +13,14 @@
                 position="before"
             >
                 <field name="partner_contact_assigned_id" />
-                <field name="partner_assigned_id" />
+                <field name="partner_assigned_id" readonly="True" />
             </xpath>
             <xpath
                 expr="//group[@name='opportunity_partner']/label[@for='email_from']"
                 position="before"
             >
                 <field name="partner_contact_assigned_id" />
-                <field name="partner_assigned_id" />
+                <field name="partner_assigned_id" readonly="True" />
             </xpath>
         </field>
     </record>
@@ -31,7 +31,7 @@
         <field name="inherit_id" ref="crm.crm_case_tree_view_leads" />
         <field name="arch" type="xml">
             <xpath expr="//tree/field[@name='country_id']" position="after">
-                <field name="partner_assigned_id" optional="hide" />
+                <field name="partner_assigned_id" readonly="True" optional="hide" />
                 <field name="partner_contact_assigned_id" optional="hide" />
             </xpath>
         </field>
@@ -43,7 +43,7 @@
         <field name="inherit_id" ref="crm.crm_case_tree_view_oppor" />
         <field name="arch" type="xml">
             <xpath expr="//tree/field[@name='country_id']" position="after">
-                <field name="partner_assigned_id" optional="hide" />
+                <field name="partner_assigned_id" readonly="True" optional="hide" />
                 <field name="partner_contact_assigned_id" optional="hide" />
             </xpath>
         </field>

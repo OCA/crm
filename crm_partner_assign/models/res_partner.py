@@ -16,12 +16,18 @@ class ResPartner(models.Model):
         inverse_name="assigned_partner_id",
         string="Implementation References",
     )
-    implemented_count = fields.Integer(
+    implemented_partner_count = fields.Integer(
         compute="_compute_implemented_partner_count",
         store=True,
     )
 
-    @api.depends("implemented_partner_ids", "implemented_partner_ids.active")
+    @api.depends("implemented_partner_ids.active")
     def _compute_implemented_partner_count(self):
+        rg_result = self.env["res.partner"]._read_group(
+            [("assigned_partner_id", "in", self.ids)],
+            ["assigned_partner_id"],
+            ["__count"],
+        )
+        rg_data = {assigned_partner.id: count for assigned_partner, count in rg_result}
         for partner in self:
-            partner.implemented_count = len(partner.implemented_partner_ids)
+            partner.implemented_partner_count = rg_data.get(partner.id, 0)

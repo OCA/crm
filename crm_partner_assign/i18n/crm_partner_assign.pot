@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 16.0\n"
+"Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -42,9 +42,9 @@ msgid "Implementation References"
 msgstr ""
 
 #. module: crm_partner_assign
-#: model:ir.model.fields,field_description:crm_partner_assign.field_res_partner__implemented_count
-#: model:ir.model.fields,field_description:crm_partner_assign.field_res_users__implemented_count
-msgid "Implemented Count"
+#: model:ir.model.fields,field_description:crm_partner_assign.field_res_partner__implemented_partner_count
+#: model:ir.model.fields,field_description:crm_partner_assign.field_res_users__implemented_partner_count
+msgid "Implemented Partner Count"
 msgstr ""
 
 #. module: crm_partner_assign
