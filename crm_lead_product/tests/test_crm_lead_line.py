@@ -46,7 +46,6 @@ class TestCrmLeadLine(TransactionCase):
 
     def test_01_lead_lines(self):
         """Tests for Crm Lead Line"""
-
         # Create new lead line with product id
         self.lead_line_1 = self.lead_line_obj.create(
             {

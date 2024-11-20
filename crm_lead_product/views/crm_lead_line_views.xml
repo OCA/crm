@@ -4,7 +4,7 @@
         <field name="name">crm.lead.line.tree - crm_lead_product</field>
         <field name="model">crm.lead.line</field>
         <field name="arch" type="xml">
-            <tree editable="bottom">
+            <list editable="bottom">
                 <field name="product_id" />
                 <field name="category_id" />
                 <field name="product_tmpl_id" />
@@ -13,7 +13,7 @@
                 <field name="price_unit" string="Price Unit" />
                 <field name="expected_revenue" />
                 <field name="prorated_revenue" />
-            </tree>
+            </list>
         </field>
     </record>
 </odoo>
