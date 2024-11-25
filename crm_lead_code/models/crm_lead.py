@@ -2,7 +2,7 @@
 # For copyright and license notices, see __manifest__.py file in root directory
 ##############################################################################
 
-from odoo import _, api, fields, models
+from odoo import api, fields, models
 
 
 class CrmLead(models.Model):
@@ -13,7 +13,7 @@ class CrmLead(models.Model):
     )
 
     _sql_constraints = [
-        ("crm_lead_unique_code", "UNIQUE (code)", _("The code must be unique!")),
+        ("crm_lead_unique_code", "UNIQUE (code)", "The code must be unique!"),
     ]
 
     @api.model_create_multi

@@ -7,3 +7,4 @@
 - Tharathip Chaweewongphan \<<tharathipc@ecosoft.co.th>\>
 - [APSL](https://apsl.tech):
   - Antoni Marroig
+- `Heliconia Solutions Pvt. Ltd. <https://www.heliconia.io>`_
