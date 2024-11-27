@@ -27,7 +27,7 @@
         <field name="inherit_id" ref="crm.crm_case_kanban_view_leads" />
         <field name="priority">99</field>
         <field name="arch" type="xml">
-            <field name="expected_revenue" position="after">
+            <field name="team_id" position="after">
                 <field name="is_same_currency" />
                 <field name="amount_customer_currency" />
                 <field name="customer_currency_id" />
