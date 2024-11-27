@@ -20,7 +20,7 @@ class CrmLead(models.Model):
         return {
             "type": "ir.actions.act_window",
             "res_model": "project.task",
-            "view_mode": "tree,form",
+            "view_mode": "list,form",
             "domain": [("lead_id", "=", self.id)],
             "context": {"default_search_lead_id": self.id},
             "name": _("Tasks from crm lead %s") % self.name,

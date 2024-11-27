@@ -2,15 +2,17 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from odoo import _
-from odoo.tests.common import TransactionCase
+
+from odoo.addons.base.tests.common import BaseCommon
 
 
-class TestCrmLeadTask(TransactionCase):
-    def setUp(self):
-        super().setUp()
+class TestCrmLeadTask(BaseCommon):
+    @classmethod
+    def setUpClass(cls):
+        super().setUpClass()
 
         # Create a CRM lead
-        self.lead = self.env["crm.lead"].create(
+        cls.lead = cls.env["crm.lead"].create(
             {
                 "name": "Test Lead",
                 "description": "Description",
@@ -18,16 +20,16 @@ class TestCrmLeadTask(TransactionCase):
         )
 
         # Create tasks related to the lead
-        self.task1 = self.env["project.task"].create(
+        cls.task1 = cls.env["project.task"].create(
             {
                 "name": "Test Task 1",
-                "lead_id": self.lead.id,
+                "lead_id": cls.lead.id,
             }
         )
-        self.task2 = self.env["project.task"].create(
+        cls.task2 = cls.env["project.task"].create(
             {
                 "name": "Test Task 2",
-                "lead_id": self.lead.id,
+                "lead_id": cls.lead.id,
             }
         )
 
@@ -43,7 +45,7 @@ class TestCrmLeadTask(TransactionCase):
         expected_domain = [("lead_id", "=", self.lead.id)]
         self.assertEqual(action["type"], "ir.actions.act_window")
         self.assertEqual(action["res_model"], "project.task")
-        self.assertEqual(action["view_mode"], "tree,form")
+        self.assertEqual(action["view_mode"], "list,form")
         self.assertEqual(action["domain"], expected_domain)
         self.assertEqual(action["context"]["default_search_lead_id"], self.lead.id)
         self.assertEqual(action["name"], _("Tasks from crm lead %s") % self.lead.name)
