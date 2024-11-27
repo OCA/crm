@@ -1,5 +1,4 @@
 <odoo>
-
     <record id="view_task_form2" model="ir.ui.view">
         <field name="name">project.task.view.form.inherit.crm.lead.to.task</field>
         <field name="model">project.task</field>
@@ -21,5 +20,4 @@
             </xpath>
         </field>
     </record>
-
 </odoo>
