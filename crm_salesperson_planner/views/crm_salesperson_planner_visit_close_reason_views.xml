@@ -37,8 +37,7 @@
                             <field name="require_image" />
                             <field name="reschedule" />
                         </group>
-                        <group>
-                        </group>
+                        <group />
                     </group>
                 </sheet>
             </form>

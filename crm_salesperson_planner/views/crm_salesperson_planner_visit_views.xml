@@ -109,8 +109,7 @@
                     />
                 </header>
                 <sheet string="Visit">
-                    <div class="oe_button_box" name="button_box">
-                    </div>
+                    <div class="oe_button_box" name="button_box" />
                     <div class="oe_title">
                         <h1>
                             <field name="name" readonly="1" />
@@ -173,7 +172,7 @@
                             />
                         </page>
                         <page string="Opportunities">
-                                <field
+                            <field
                                 name="opportunity_ids"
                                 nolabel="1"
                                 options="{'no_create': True}"
