@@ -1,7 +1,7 @@
 # Copyright 2021 Sygel - Valentin Vinagre
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html)
 
-from odoo import _, fields, models
+from odoo import fields, models
 
 
 class CrmSalespersonPlannerVisitCloseWiz(models.TransientModel):
@@ -45,7 +45,7 @@ class CrmSalespersonPlannerVisitCloseWiz(models.TransientModel):
         visits = self.env["crm.salesperson.planner.visit"].browse(
             self.env.context.get("active_id")
         )
-        visit_close_find_method_name = "action_%s" % self.reason_id.close_type
+        visit_close_find_method_name = f"action_{self.reason_id.close_type}"
         if hasattr(visits, visit_close_find_method_name):
             getattr(visits, visit_close_find_method_name)(
                 self.reason_id, self.image, self.notes
@@ -59,5 +59,5 @@ class CrmSalespersonPlannerVisitCloseWiz(models.TransientModel):
                     }
                 ).action_confirm()
         else:
-            raise ValueError(_("The close reason type haven't a function."))
+            raise ValueError(self.env._("The close reason type haven't a function."))
         return {"type": "ir.actions.act_window_close"}

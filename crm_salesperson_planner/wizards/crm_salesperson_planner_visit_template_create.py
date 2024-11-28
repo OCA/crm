@@ -3,7 +3,7 @@
 
 from datetime import timedelta
 
-from odoo import _, fields, models
+from odoo import fields, models
 from odoo.exceptions import ValidationError
 
 
@@ -28,7 +28,7 @@ class CrmSalespersonPlannerVisitTemplateCreate(models.TransientModel):
         )
         days = (self.date_to - fields.Date.context_today(self)).days
         if days < 0:
-            raise ValidationError(_("The date can't be earlier than today"))
+            raise ValidationError(self.env._("The date can't be earlier than today"))
         # Create visits + auto-confirm + auto-done
         template.create_visits(days=days)
         return {"type": "ir.actions.act_window_close"}

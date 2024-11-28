@@ -17,27 +17,30 @@ Crm Salesperson Planner
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fcrm-lightgray.png?logo=github
-    :target: https://github.com/OCA/crm/tree/17.0/crm_salesperson_planner
+    :target: https://github.com/OCA/crm/tree/18.0/crm_salesperson_planner
     :alt: OCA/crm
 .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
-    :target: https://translation.odoo-community.org/projects/crm-17-0/crm-17-0-crm_salesperson_planner
+    :target: https://translation.odoo-community.org/projects/crm-18-0/crm-18-0-crm_salesperson_planner
     :alt: Translate me on Weblate
 .. |badge5| image:: https://img.shields.io/badge/runboat-Try%20me-875A7B.png
-    :target: https://runboat.odoo-community.org/builds?repo=OCA/crm&target_branch=17.0
+    :target: https://runboat.odoo-community.org/builds?repo=OCA/crm&target_branch=18.0
     :alt: Try me on Runboat
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
 This application allows you to track and schedule salespeople visits to
 your customers, allowing you to determine which opportunities are going
-to be dealt on each visit. Visits create an all day event in calendar,
-and they can be easily rescheduled. Visits can be automatically created
-from a template, in which it is possible to select the frequency of
-visits, as well as the start and end dates. The last visit can also be
-calculated by selecting the total number of repetitions. This module
-creates a cron that generates visits from templates, but an option to
-create them manually is available from the template form view when the
-template is validated.
+to be dealt on each visit.
+
+Visits create an all-day event in the calendar and they can be easily
+rescheduled. Visits can be automatically created from a template, in
+which it is possible to select the frequency of visits, as well as the
+start and end dates. The last visit can also be calculated by selecting
+the total number of repetitions.
+
+This module creates a cron job that generates visits from templates, but
+an option to create them manually is available from the template form
+view when the template is validated.
 
 **Table of contents**
 
@@ -49,22 +52,24 @@ Configuration
 
 To configure this module, you need to:
 
--  Go to new menu **CRM > Configuration > Salesperson Planner > Close
-   Reasons** and create a close reason for 'Cancel' and 'Incident'
-   types.
+- Go to new menu **CRM > Configuration > Salesperson Planner > Close
+  Reasons** and create a close reason for 'Cancel' and 'Incident' types.
 
 Usage
 =====
 
-Go to new menu **CRM > Salesperson Planner > My Visits or All Visits**
-and create a new visit. or Go to **CRM > Salesperson Planner > Visit
-Templates** and create a new recurring template for create periodical
-visits. In this case, it is necessary to select a start date. The date
-of the last repetition can be calculated by selection the total number
-of repetitions or an end date. There are two options available to
-reschedule visits that is already validated: \* Change the date from the
-visit. \* Change the date straight from the event automatically created
-in the calendar.
+1. Go to **CRM > Salesperson Planner > My Visits** or **All Visits**.
+2. Create a new visit.
+3. Or go to **CRM > Salesperson Planner > Visit Templates** and create a
+   new recurring template to create periodical visits.
+4. For templates, select a Start Date.
+5. Set either a total number of repetitions or an End Date to calculate
+   the last repetition.
+6. To reschedule a validated visit, either:
+
+   - Change the date from the visit record.
+   - Change the date from the calendar event automatically created for
+     the visit.
 
 Bug Tracker
 ===========
@@ -72,7 +77,7 @@ Bug Tracker
 Bugs are tracked on `GitHub Issues <https://github.com/OCA/crm/issues>`_.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-`feedback <https://github.com/OCA/crm/issues/new?body=module:%20crm_salesperson_planner%0Aversion:%2017.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
+`feedback <https://github.com/OCA/crm/issues/new?body=module:%20crm_salesperson_planner%0Aversion:%2018.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.
 
 Do not contact contributors directly about support or help with technical issues.
 
@@ -87,22 +92,24 @@ Authors
 Contributors
 ------------
 
--  `Sygel <https://www.sygel.es>`__:
+- `Sygel <https://www.sygel.es>`__:
 
-   -  Valentin Vinagre
-   -  Manuel Regidor
+  - Valentin Vinagre
+  - Manuel Regidor
 
--  `Pesol <https://www.pesol.es>`__:
+- `Pesol <https://www.pesol.es>`__:
 
-   -  Gerardo Marin Parra <info@pesol.es>
+  - Gerardo Marin Parra <info@pesol.es>
 
--  `Tecnativa <https://www.tecnativa.com>`__:
+- `Tecnativa <https://www.tecnativa.com>`__:
 
-   -  Víctor Martínez
+  - Víctor Martínez
 
--  `APSL-Nagarro <https://apsl.tech>`__:
+- `APSL-Nagarro <https://apsl.tech>`__:
 
-   -  Bernat Obrador <bobrador@apsl.net>
+  - Bernat Obrador <bobrador@apsl.net>
+
+- Heliconia Solutions Pvt. Ltd. <https://www.heliconia.io>
 
 Maintainers
 -----------
@@ -117,6 +124,6 @@ OCA, or the Odoo Community Association, is a nonprofit organization whose
 mission is to support the collaborative development of Odoo features and
 promote its widespread use.
 
-This module is part of the `OCA/crm <https://github.com/OCA/crm/tree/17.0/crm_salesperson_planner>`_ project on GitHub.
+This module is part of the `OCA/crm <https://github.com/OCA/crm/tree/18.0/crm_salesperson_planner>`_ project on GitHub.
 
 You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.

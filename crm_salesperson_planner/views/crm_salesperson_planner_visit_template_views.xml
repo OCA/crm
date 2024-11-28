@@ -7,7 +7,7 @@
         <field name="name">CRM - Salesperson Planner Visit Template Tree</field>
         <field name="model">crm.salesperson.planner.visit.template</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="name" readonly="1" />
                 <field name="partner_id" readonly="1" />
                 <field name="start_date" />
@@ -15,7 +15,7 @@
                 <field name="user_id" />
                 <field name="company_id" groups="base.group_multi_company" />
                 <field name="state" />
-            </tree>
+            </list>
         </field>
     </record>
     <record model="ir.ui.view" id="crm_salesperson_planner_visit_template_form_view">
@@ -76,13 +76,8 @@
                     </div>
                     <group>
                         <group>
-                            <field name="partner_id" invisible="1" readonly="1" />
                             <field name="partner_ids" widget="many2many_tags" />
                             <field name="start_date" required="1" />
-                            <field name="start" invisible="1" />
-                            <field name="stop" invisible="1" readonly="1" />
-                            <field name="stop_date" invisible="1" />
-                            <field name="start" invisible="1" />
                             <field name="sequence" />
                             <field name="user_id" />
                             <field
@@ -91,9 +86,7 @@
                             />
                             <field name="last_visit_date" />
                             <field name="auto_validate" />
-                            <field name="event_tz" invisible="1" />
                             <field name="allday" force_save="1" />
-                            <field name="rrule" invisible="1" />
                         </group>
                         <!-- Display fields similar to calendar.event (Display data similar to calendar.event (for UX is better)). -->
                         <group>
@@ -166,7 +159,7 @@
     >
         <field name="name">Visit Templates</field>
         <field name="res_model">crm.salesperson.planner.visit.template</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
         <field name="help" type="html">
             <p class="oe_view_nocontent_create">
                 Create and plan commercial visit templates

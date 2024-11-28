@@ -5,13 +5,14 @@ from datetime import timedelta
 
 from dateutil.relativedelta import relativedelta
 
-from odoo import _, fields
+from odoo import Command, fields
 from odoo.exceptions import ValidationError
-from odoo.tests import common
 from odoo.tools import mute_logger
 
+from odoo.addons.base.tests.common import BaseCommon
 
-class TestCrmSalespersonPlannerVisitBase(common.TransactionCase):
+
+class TestCrmSalespersonPlannerVisitBase(BaseCommon):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
@@ -218,7 +219,7 @@ class TestCrmSalespersonPlannerVisit(TestCrmSalespersonPlannerVisitBase):
             visit.action_done()
 
 
-class TestResPartner(common.TransactionCase):
+class TestResPartner(BaseCommon):
     def test_action_view_salesperson_planner_visit(self):
         partner = self.env["res.partner"].create(
             {"name": "Test Partner", "is_company": True}
@@ -228,12 +229,12 @@ class TestResPartner(common.TransactionCase):
 
         self.assertEqual(action["domain"], [("partner_id", "child_of", partner.id)])
         self.assertEqual(action["res_model"], "crm.salesperson.planner.visit")
-        self.assertIn("tree", action["view_mode"])
+        self.assertIn("list", action["view_mode"])
         self.assertIn("form", action["view_mode"])
         self.assertIn("pivot", action["view_mode"])
 
 
-class TestCalendarEvent(common.TransactionCase):
+class TestCalendarEvent(BaseCommon):
     def test_write_user_id(self):
         event = self.env["calendar.event"].create({"name": "Test Event"})
 
@@ -245,22 +246,22 @@ class TestCalendarEvent(common.TransactionCase):
         self.assertEqual(values["user_id"], 1)
 
 
-class TestCrmSalespersonPlannerVisitTemplate(common.TransactionCase):
+class TestCrmSalespersonPlannerVisitTemplate(BaseCommon):
     def test_partner_ids_constraint(self):
         template = self.env["crm.salesperson.planner.visit.template"].create(
             {
                 "name": "Test Visit Template",
-                "partner_ids": [(0, 0, {"name": "Customer 1"})],
+                "partner_ids": [Command.create({"name": "Customer 1"})],
             }
         )
 
         with self.assertRaises(ValidationError) as context:
             template.partner_ids = [
-                (0, 0, {"name": "Customer 2"}),
-                (0, 0, {"name": "Customer 3"}),
+                Command.create({"name": "Customer 2"}),
+                Command.create({"name": "Customer 3"}),
             ]
 
-        error_msg = _("Only one customer is allowed")
+        error_msg = self.env._("Only one customer is allowed")
         self.assertEqual(str(context.exception), error_msg)
 
     def test_action_view_salesperson_planner_visit(self):
@@ -309,7 +310,7 @@ class TestCrmSalespersonPlannerVisitTemplate(common.TransactionCase):
         self.assertEqual(template.state, "draft")
 
 
-class TestCrmSalespersonPlannerVisitTemplateCreate(common.TransactionCase):
+class TestCrmSalespersonPlannerVisitTemplateCreate(BaseCommon):
     def test_default_date_to(self):
         wizard = self.env["crm.salesperson.planner.visit.template.create"].create({})
 

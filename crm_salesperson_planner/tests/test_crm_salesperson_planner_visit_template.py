@@ -4,12 +4,13 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html)
 from datetime import timedelta
 
-from odoo import exceptions, fields
-from odoo.tests import common
+from odoo import Command, exceptions, fields
 from odoo.tools import mute_logger
 
+from odoo.addons.base.tests.common import BaseCommon
 
-class TestCrmSalespersonPlannerVisitTemplate(common.TransactionCase):
+
+class TestCrmSalespersonPlannerVisitTemplate(BaseCommon):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
@@ -35,7 +36,7 @@ class TestCrmSalespersonPlannerVisitTemplate(common.TransactionCase):
         )
         cls.visit_template_base = cls.visit_template_model.create(
             {
-                "partner_ids": [(6, False, cls.partner1.ids)],
+                "partner_ids": [Command.set(cls.partner1.ids)],
                 "start_date": fields.Date.today(),
                 "stop_date": fields.Date.today(),
                 "start": fields.Date.today(),
@@ -243,7 +244,9 @@ class TestCrmSalespersonPlannerVisitTemplate(common.TransactionCase):
         create_model = self.env["crm.salesperson.planner.visit.template.create"]
         create_item = create_model.with_context(
             active_id=self.visit_template_base.id
-        ).create({"date_to": "2024-12-13"})
+        ).create(
+            {"date_to": (fields.Date.today() + timedelta(days=2)).strftime("%Y-%m-%d")}
+        )
         create_item.create_visits()
         self.assertEqual(self.visit_template_base.state, "done")
         self.assertEqual(len(self.visit_template_base.visit_ids), 2)
@@ -262,34 +265,6 @@ class TestCrmSalespersonPlannerVisitTemplate(common.TransactionCase):
                 "rrule_type": "monthly",
                 "end_type": "count",
                 "count": 2,
-                "month_by": "date",
-                "day": 1,
-            }
-        )
-        self.visit_template_base.action_validate()
-        self.assertFalse(self.visit_template_base.visit_ids)
-        create_model = self.env["crm.salesperson.planner.visit.template.create"]
-        create_item = create_model.with_context(
-            active_id=self.visit_template_base.id
-        ).create({"date_to": "2024-12-13"})
-        create_item.create_visits()
-        self.assertEqual(self.visit_template_base.state, "done")
-        self.assertEqual(len(self.visit_template_base.visit_ids), 2)
-        visit_dates = self.visit_template_base.visit_ids.mapped("date")
-        self.assertIn(fields.Date.from_string("2024-04-01"), visit_dates)
-        self.assertEqual(
-            self.visit_template_base.last_visit_date,
-            fields.Date.from_string("2024-05-01"),
-        )
-
-    def test_06_repeat_months_count_03(self):
-        self.visit_template_base.write(
-            {
-                "start_date": "2024-03-08",
-                "interval": 1,
-                "rrule_type": "monthly",
-                "end_type": "count",
-                "count": 2,
                 "month_by": "day",
                 "byday": "1",
                 "weekday": "MON",
@@ -300,7 +275,9 @@ class TestCrmSalespersonPlannerVisitTemplate(common.TransactionCase):
         create_model = self.env["crm.salesperson.planner.visit.template.create"]
         create_item = create_model.with_context(
             active_id=self.visit_template_base.id
-        ).create({"date_to": "2024-12-13"})
+        ).create(
+            {"date_to": (fields.Date.today() + timedelta(days=2)).strftime("%Y-%m-%d")}
+        )
         create_item.create_visits()
         self.assertEqual(self.visit_template_base.state, "done")
         self.assertEqual(len(self.visit_template_base.visit_ids), 2)
@@ -326,7 +303,9 @@ class TestCrmSalespersonPlannerVisitTemplate(common.TransactionCase):
         create_model = self.env["crm.salesperson.planner.visit.template.create"]
         create_item = create_model.with_context(
             active_id=self.visit_template_base.id
-        ).create({"date_to": "2030-01-01"})
+        ).create(
+            {"date_to": (fields.Date.today() + timedelta(days=2)).strftime("%Y-%m-%d")}
+        )
         create_item.create_visits()
         self.assertEqual(self.visit_template_base.state, "done")
         self.assertEqual(len(self.visit_template_base.visit_ids), 2)

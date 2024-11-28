@@ -1,7 +1,7 @@
 # Copyright 2021 Sygel - Manuel Regidor
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html)
 
-from odoo import _, fields, models
+from odoo import fields, models
 from odoo.exceptions import ValidationError
 
 
@@ -46,7 +46,7 @@ class CalendarEvent(models.Model):
             if salesperson_visit_events:
                 error_msg = ""
                 for event in salesperson_visit_events:
-                    error_msg += _(
+                    error_msg += self.env._(
                         "Event %(event_name)s is related to salesperson visit "
                         "%(partner_name)s. Cancel it to delete this event.\n"
                     ) % {

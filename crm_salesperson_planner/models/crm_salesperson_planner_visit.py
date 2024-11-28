@@ -2,7 +2,7 @@
 # Copyright 2021 Sygel - Manuel Regidor
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html)
 
-from odoo import _, api, fields, models
+from odoo import api, fields, models
 from odoo.exceptions import ValidationError
 
 
@@ -102,7 +102,7 @@ class CrmSalespersonPlannerVisit(models.Model):
     def action_draft(self):
         if self.state not in ["cancel", "incident", "done"]:
             raise ValidationError(
-                _("The visit must be in cancelled, incident or visited state")
+                self.env._("The visit must be in cancelled, incident or visited state")
             )
         if self.calendar_event_id:
             self.calendar_event_id.with_context(bypass_cancel_visit=True).unlink()
@@ -110,19 +110,21 @@ class CrmSalespersonPlannerVisit(models.Model):
 
     def action_confirm(self):
         if self.filtered(lambda a: not a.state == "draft"):
-            raise ValidationError(_("The visit must be in draft state"))
+            raise ValidationError(self.env._("The visit must be in draft state"))
         events = self.create_calendar_event()
         if events:
             self.browse(events.mapped("res_id")).write({"state": "confirm"})
 
     def action_done(self):
         if not self.state == "confirm":
-            raise ValidationError(_("The visit must be in confirmed state"))
+            raise ValidationError(self.env._("The visit must be in confirmed state"))
         self.write({"state": "done"})
 
     def action_cancel(self, reason_id, image=None, notes=None):
         if self.state not in ["draft", "confirm"]:
-            raise ValidationError(_("The visit must be in draft or validated state"))
+            raise ValidationError(
+                self.env._("The visit must be in draft or validated state")
+            )
         if self.calendar_event_id:
             self.calendar_event_id.with_context(bypass_cancel_visit=True).unlink()
         self.write(
@@ -165,7 +167,9 @@ class CrmSalespersonPlannerVisit(models.Model):
 
     def action_incident(self, reason_id, image=None, notes=None):
         if self.state not in ["draft", "confirm"]:
-            raise ValidationError(_("The visit must be in draft or validated state"))
+            raise ValidationError(
+                self.env._("The visit must be in draft or validated state")
+            )
         self.write(
             {
                 "state": "incident",
@@ -177,7 +181,7 @@ class CrmSalespersonPlannerVisit(models.Model):
 
     def unlink(self):
         if any(sel.state not in ["draft", "cancel"] for sel in self):
-            raise ValidationError(_("Visits must be in cancelled state"))
+            raise ValidationError(self.env._("Visits must be in cancelled state"))
         return super().unlink()
 
     def write(self, values):
