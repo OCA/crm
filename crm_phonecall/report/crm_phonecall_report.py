@@ -33,15 +33,15 @@ class CrmPhonecallReport(models.Model):
         string="Delay to close",
         digits=(16, 2),
         readonly=True,
-        group_operator="avg",
+        aggregator="avg",
         help="Number of Days to close the case",
     )
-    duration = fields.Float(digits=(16, 2), readonly=True, group_operator="avg")
+    duration = fields.Float(digits=(16, 2), readonly=True, aggregator="avg")
     delay_open = fields.Float(
         string="Delay to open",
         digits=(16, 2),
         readonly=True,
-        group_operator="avg",
+        aggregator="avg",
         help="Number of Days to open the case",
     )
     partner_id = fields.Many2one(

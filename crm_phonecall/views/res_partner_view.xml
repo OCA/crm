@@ -9,7 +9,7 @@
             <div name="button_box" position="inside">
                 <button
                     class="oe_stat_button"
-                    context="{'search_default_partner_id': active_id}"
+                    context="{'search_default_partner_id': id}"
                     icon="fa-phone"
                     name="%(crm_phonecall.crm_case_categ_phone_incoming0)d"
                     type="action"

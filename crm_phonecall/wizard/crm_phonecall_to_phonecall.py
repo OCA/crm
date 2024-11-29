@@ -4,7 +4,7 @@
 
 import time
 
-from odoo import api, fields, models
+from odoo import Command, api, fields, models
 
 
 class CrmPhonecall2phonecall(models.TransientModel):
@@ -63,7 +63,7 @@ class CrmPhonecall2phonecall(models.TransientModel):
             self.env.context.get("active_id")
         ):
             if "tag_ids" in fields:
-                res.update({"tag_ids": phonecall.tag_ids.ids})
+                res.update({"tag_ids": [Command.set(phonecall.tag_ids.ids)]})
             if "user_id" in fields:
                 res.update({"user_id": phonecall.user_id.id})
             if "team_id" in fields:
