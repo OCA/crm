@@ -4,7 +4,7 @@
 
 from functools import reduce
 
-from odoo import _, api, fields, models
+from odoo import api, fields, models
 
 
 class CrmPhonecall(models.Model):
@@ -159,14 +159,14 @@ class CrmPhonecall(models.Model):
         value = {}
         for call in self:
             value = {
-                "name": _("Phone Call"),
+                "name": self.env._("Phone Call"),
                 "view_type": "form",
-                "view_mode": "tree,form",
+                "view_mode": "list,form",
                 "res_model": "crm.phonecall",
                 "res_id": call.id,
                 "views": [
                     (form_view_id or False, "form"),
-                    (tree_view_id or False, "tree"),
+                    (tree_view_id or False, "list"),
                     (False, "calendar"),
                 ],
                 "type": "ir.actions.act_window",
@@ -224,10 +224,10 @@ class CrmPhonecall(models.Model):
         by pure view inheritance and attribute overriding
         """
         arch, view = super()._get_view(view_id, view_type, **options)
-        if view_type == "tree" and self.env.user.has_group(
+        if view_type == "list" and self.env.user.has_group(
             "crm_phonecall.group_show_form_view"
         ):
-            node = arch.xpath("//tree")
+            node = arch.xpath("//list")
             if node:
                 node[0].set("editable", "")
         return arch, view

@@ -31,7 +31,7 @@
         <field name="name">CRM - Phone Calls Tree</field>
         <field name="model">crm.phonecall</field>
         <field name="arch" type="xml">
-            <tree
+            <list
                 decoration-info="state in ('pending',)"
                 decoration-muted="state in ('cancel','done')"
             >
@@ -58,7 +58,7 @@
                 <field column_invisible="1" name="create_date" />
                 <field column_invisible="1" name="opportunity_id" />
                 <field name="state" />
-            </tree>
+            </list>
         </field>
     </record>
     <record id="crm_case_phone_form_view" model="ir.ui.view">
@@ -178,10 +178,7 @@
                     </group>
                     <field name="description" placeholder="Description..." />
                 </sheet>
-                <div class="oe_chatter">
-                    <field name="message_follower_ids" widget="mail_followers" />
-                    <field name="message_ids" widget="mail_thread" />
-                </div>
+                <chatter />
             </form>
         </field>
     </record>
@@ -189,7 +186,7 @@
         <field name="name">CRM - Logged Phone Calls Tree</field>
         <field name="model">crm.phonecall</field>
         <field name="arch" type="xml">
-            <tree editable="top">
+            <list editable="top">
                 <field name="date" />
                 <field name="name" />
                 <field name="partner_id" />
@@ -226,7 +223,7 @@
                     string="Convert to Opportunity"
                     type="object"
                 />
-            </tree>
+            </list>
         </field>
     </record>
     <record id="crm_case_phone_calendar_view" model="ir.ui.view">
@@ -332,14 +329,14 @@
     <record id="crm_case_categ_phone0" model="ir.actions.act_window">
         <field name="name">Phone Calls</field>
         <field name="res_model">crm.phonecall</field>
-        <field name="view_mode">tree,form,calendar</field>
+        <field name="view_mode">list,form,calendar</field>
         <field name="view_id" ref="crm_case_phone_tree_view" />
         <field name="context">{&quot;search_default_user_id&quot;:uid}</field>
         <field name="search_view_id" ref="view_crm_case_phonecalls_filter" />
     </record>
     <record id="action_crm_tag_tree_phone0" model="ir.actions.act_window.view">
         <field eval="1" name="sequence" />
-        <field name="view_mode">tree</field>
+        <field name="view_mode">list</field>
         <field name="view_id" ref="crm_case_phone_tree_view" />
         <field name="act_window_id" ref="crm_case_categ_phone0" />
     </record>
@@ -365,7 +362,7 @@
     <record id="crm_case_categ_phone_incoming0" model="ir.actions.act_window">
         <field name="name">Logged Calls</field>
         <field name="res_model">crm.phonecall</field>
-        <field name="view_mode">tree,calendar</field>
+        <field name="view_mode">list,calendar</field>
         <field name="view_id" ref="crm_case_inbound_phone_tree_view" />
         <field name="domain">[]</field>
         <field name="context">
@@ -389,7 +386,7 @@
     </record>
     <record id="action_crm_tag_tree_phone_incoming0" model="ir.actions.act_window.view">
         <field eval="1" name="sequence" />
-        <field name="view_mode">tree</field>
+        <field name="view_mode">list</field>
         <field name="view_id" ref="crm_case_inbound_phone_tree_view" />
         <field name="act_window_id" ref="crm_case_categ_phone_incoming0" />
     </record>
@@ -417,7 +414,7 @@
     <record id="crm_case_categ_phone_outgoing0" model="ir.actions.act_window">
         <field name="name">Scheduled Calls</field>
         <field name="res_model">crm.phonecall</field>
-        <field name="view_mode">tree,form,calendar</field>
+        <field name="view_mode">list,form,calendar</field>
         <field name="view_id" ref="crm_case_phone_tree_view" />
         <field name="domain">[('state','!=','done')]</field>
         <field name="search_view_id" ref="view_crm_case_phonecalls_filter" />
@@ -435,7 +432,7 @@
     </record>
     <record id="action_crm_tag_tree_phone_outgoing0" model="ir.actions.act_window.view">
         <field eval="1" name="sequence" />
-        <field name="view_mode">tree</field>
+        <field name="view_mode">list</field>
         <field name="view_id" ref="crm_case_phone_tree_view" />
         <field name="act_window_id" ref="crm_case_categ_phone_outgoing0" />
     </record>

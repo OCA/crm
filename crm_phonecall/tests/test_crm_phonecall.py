@@ -13,9 +13,9 @@ class TestCrmPhoneCall(common.TransactionCase):
         super().setUpClass()
         cls.company = cls.env.ref("base.main_company")
         partner_obj = cls.env["res.partner"]
-        cls.campaign1 = cls.env["utm.campaign"].create({"name": "campaign 1"})
-        cls.source1 = cls.env["utm.source"].create({"name": "source 1"})
-        cls.medium1 = cls.env["utm.medium"].create({"name": "medium 1"})
+        cls.campaign1 = cls.env["utm.campaign"].create([{"name": "campaign 1"}])
+        cls.source1 = cls.env["utm.source"].create([{"name": "source 1"}])
+        cls.medium1 = cls.env["utm.medium"].create([{"name": "medium 1"}])
         cls.partner1 = partner_obj.create(
             {
                 "name": "Partner1",
@@ -168,7 +168,7 @@ class TestCrmPhoneCall(common.TransactionCase):
         wizard = (
             self.env["crm.phonecall2phonecall"]
             .with_context(active_ids=self.phonecall1.ids, active_id=self.phonecall1.id)
-            .create({})
+            .create([{}])
         )
         result = wizard.action_schedule()
         search_view_id = self.env.ref(
