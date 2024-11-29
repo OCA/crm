@@ -4,5 +4,6 @@
   - Vicent Cubells \<<vicent.cubells@tecnativa.com>\>
   - David Vidal \<<david.vidal@tecnativa.com>\>
   - Cristina Martin R. \<<cristina.martin@tecnativa.com>\>
-  - Marcel Savegnago \<<marcel.savegnago@escodoo.com.br>\>
-  - Ahmet Yiğit Budak \<<yigit@altinkaya.com.tr>\>
+- Marcel Savegnago \<<marcel.savegnago@escodoo.com.br>\>
+- Ahmet Yiğit Budak \<<yigit@altinkaya.com.tr>\>
+- Heliconia Solutions Pvt. Ltd. \<<https://www.heliconia.io>\>
