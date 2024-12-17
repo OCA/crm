@@ -22,7 +22,7 @@ class CrmLead(models.Model):
         for lead in self:
             if lead.industry_id in lead.secondary_industry_ids:
                 raise exceptions.UserError(
-                    _(
+                    self.env._(
                         "The secondary industries must be different from the"
                         " main industry."
                     )
