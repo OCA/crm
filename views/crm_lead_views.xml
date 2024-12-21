@@ -6,6 +6,11 @@
         <field name="inherit_id" ref="crm.crm_lead_view_form"/>
         <field name="priority" eval="100"/>
         <field name="arch" type="xml">
+           <field name="tag_ids" position="attributes">
+                <attribute name="domain">
+                    ['|', ('sales_team_ids', '=', False),('sales_team_ids', 'in', team_id)]
+                </attribute>
+            </field>
             <xpath expr="//group[@name='lead_priority']/field[@name='tag_ids']" position="attributes">
                 <attribute name="domain">
                     ['|', ('sales_team_ids', '=', False),('sales_team_ids', 'in', team_id)]
