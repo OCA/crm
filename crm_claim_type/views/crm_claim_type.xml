@@ -1,4 +1,4 @@
-<?xml version="1.0" ?>
+<?xml version="1.0"?>
 <odoo>
     <record id="crm_claim_type_tree" model="ir.ui.view">
         <field name="name">crm.claim.type.tree</field>
@@ -10,6 +10,7 @@
             </tree>
         </field>
     </record>
+
     <record id="crm_claim_type_form" model="ir.ui.view">
         <field name="name">crm.claim.type.form</field>
         <field name="model">crm.claim.type</field>
@@ -23,11 +24,29 @@
             </form>
         </field>
     </record>
+
+    <record id="crm_claim_search_view" model="ir.ui.view">
+        <field name="name">crm.claim.search</field>
+        <field name="model">crm.claim</field>
+        <field name="arch" type="xml">
+            <search string="Claims">
+                <field name="claim_type" />
+                <filter string="Open Claims" domain="[('stage_id.is_close', '=', False)]" />
+                <group expand="1" string="Group By">
+                    <filter string="Claim Type" context="{'group_by': 'claim_type'}" />
+                    <filter string="Stage" context="{'group_by': 'stage_id'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+
     <record id="crm_claim_type_act" model="ir.actions.act_window">
         <field name="name">Claim Types</field>
         <field name="res_model">crm.claim.type</field>
         <field name="view_mode">tree,form</field>
     </record>
+
     <menuitem
         action="crm_claim_type_act"
         name="Claim Types"
