@@ -14,4 +14,26 @@
             </xpath>
         </field>
     </record>
+
+    <record id="crm_claim_type_search_view" model="ir.ui.view">
+        <field name="name">CRM - Claims Search</field>
+        <field name="model">crm.claim</field>
+        <field name="inherit_id" ref="crm_claim.view_crm_case_claims_filter" />
+        <field name="arch" type="xml">
+            <xpath expr="//search" position="inside">
+                <filter
+                    string="Claim Type"
+                    name="claim_type"
+                    domain="[('claim_type', '!=', False)]"
+                />
+            </xpath>
+            <xpath expr="//group" position="inside">
+                <filter
+                    name="claim_type_group"
+                    string="Claim Type"
+                    context="{'group_by': 'claim_type'}"
+                />
+            </xpath>
+        </field>
+    </record>
 </odoo>
