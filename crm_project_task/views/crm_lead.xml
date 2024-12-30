@@ -14,7 +14,7 @@
                     type="action"
                     class="oe_highlight"
                     context="{'default_task_name': name}"
-                    attrs="{'invisible': ['|', ('active','=',False), ('task_count', '!=', 0)]}"
+                    invisible="not active or task_count != 0"
                 />
             </xpath>
             <xpath expr="//div[hasclass('oe_button_box')]" position="inside">

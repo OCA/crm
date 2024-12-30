@@ -23,15 +23,16 @@ class CrmCreateTAsk(models.TransientModel):
                 )
             )
         lead = (
-            self.env["crm.lead"].browse(self._context.get("active_id", False))
-            if self._context.get("active_model") == "crm.lead"
-            and self._context.get("active_id", False)
+            self.env["crm.lead"].browse(self.env.context.get("active_id", False))
+            if self.env.context.get("active_model") == "crm.lead"
+            and self.env.context.get("active_id", False)
             else False
         )
         if not lead:
             raise UserError(
                 _(
-                    "Lead/Opportunity not found. Please, create task from lead/opportunity."
+                    "Lead/Opportunity not found. "
+                    "Please, create task from lead/opportunity."
                 )
             )
 

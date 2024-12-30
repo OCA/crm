@@ -11,6 +11,7 @@ class TestCrmProjectTask(TransactionCase):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
+        cls.env = cls.env(context=dict(cls.env.context, tracking_disable=True))
         cls.company = cls.env.user.company_id
         cls.user_salesman = mail_new_test_user(
             cls.env,
