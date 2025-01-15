@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="res_config_settings_approved_teams" model="ir.ui.view">
+        <field name="name">res.config.settings.view.approved.teams</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="100" />
+        <field name="inherit_id" ref="base.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//block[@name='convert_visitor_setting_container']"
+                position="before"
+            >
+                <block>
+                    <setting
+                        help="Enable these Sales Teams to provide their approval in the opportunities assigned to them."
+                    >
+                            <field name="approval_team_ids" widget="many2many_tags" />
+                        </setting>
+                        <setting
+                        help="Allow opportunities to proceed through the approval process with these CRM Tags."
+                    >
+                            <field name="approval_tag_ids" widget="many2many_tags" />
+                        </setting>
+                    </block>
+            </xpath>
+        </field>
+    </record>
+</odoo>

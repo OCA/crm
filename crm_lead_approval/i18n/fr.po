@@ -1,0 +1,203 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* crm_lead_approval
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-11 01:32+0000\n"
+"PO-Revision-Date: 2025-02-11 01:32+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: crm_lead_approval
+#: model_terms:ir.ui.view,arch_db:crm_lead_approval.res_config_settings_approved_teams
+msgid ""
+"Allow opportunities to proceed through the approval process with these CRM "
+"Tags."
+msgstr ""
+"Permettre aux opportunités de passer dans le processus d'approbation grâce à"
+" ces étiquettes."
+
+#. module: crm_lead_approval
+#: model:ir.actions.act_window,name:crm_lead_approval.action_crm_approval_wizard
+#: model:ir.model.fields,field_description:crm_lead_approval.field_crm_lead__approval
+msgid "Approval"
+msgstr "Avis"
+
+#. module: crm_lead_approval
+#: model:ir.model.fields,field_description:crm_lead_approval.field_res_company__approval_tag_ids
+msgid "Approval Tag"
+msgstr ""
+
+#. module: crm_lead_approval
+#: model:ir.model.fields,field_description:crm_lead_approval.field_res_company__approval_team_ids
+msgid "Approval Team"
+msgstr ""
+
+#. module: crm_lead_approval
+#: model_terms:ir.ui.view,arch_db:crm_lead_approval.view_crm_approval_wizard_form
+msgid "Approval wizard"
+msgstr ""
+
+#. module: crm_lead_approval
+#: model:ir.model.fields.selection,name:crm_lead_approval.selection__crm_lead__approval__done
+#: model_terms:ir.ui.view,arch_db:crm_lead_approval.view_crm_approval_wizard_form
+msgid "Approve"
+msgstr "Favorable"
+
+#. module: crm_lead_approval
+#: model_terms:ir.ui.view,arch_db:crm_lead_approval.view_crm_lead_form_approval
+msgid "Approve/Refuse"
+msgstr "Approuver/Refuser"
+
+#. module: crm_lead_approval
+#: model_terms:ir.ui.view,arch_db:crm_lead_approval.view_crm_case_opportunity_approval_filter
+msgid "Approved"
+msgstr "Approuvé"
+
+#. module: crm_lead_approval
+#: model:ir.model,name:crm_lead_approval.model_crm_approval_wizard
+msgid "CRM Approval Wizard"
+msgstr ""
+
+#. module: crm_lead_approval
+#: model:ir.model.fields,field_description:crm_lead_approval.field_res_config_settings__approval_tag_ids
+msgid "CRM Tags opportunities approval"
+msgstr ""
+
+#. module: crm_lead_approval
+#: model_terms:ir.ui.view,arch_db:crm_lead_approval.view_crm_approval_wizard_form
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: crm_lead_approval
+#: model:ir.model.fields,help:crm_lead_approval.field_res_config_settings__approval_tag_ids
+msgid "Choose CRM tags for which you want opportunity approval"
+msgstr ""
+
+#. module: crm_lead_approval
+#: model:ir.model.fields,help:crm_lead_approval.field_res_config_settings__approval_team_ids
+msgid "Choose Sales Teams for which you want opportunity approval"
+msgstr ""
+
+#. module: crm_lead_approval
+#: model:ir.model,name:crm_lead_approval.model_res_company
+msgid "Companies"
+msgstr "Sociétés"
+
+#. module: crm_lead_approval
+#: model:ir.model,name:crm_lead_approval.model_res_config_settings
+msgid "Config Settings"
+msgstr "Paramètres de configuration"
+
+#. module: crm_lead_approval
+#: model:ir.model.fields,field_description:crm_lead_approval.field_crm_approval_wizard__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: crm_lead_approval
+#: model:ir.model.fields,field_description:crm_lead_approval.field_crm_approval_wizard__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: crm_lead_approval
+#: model:ir.model.fields.selection,name:crm_lead_approval.selection__crm_lead__approval__blocked
+#: model_terms:ir.ui.view,arch_db:crm_lead_approval.view_crm_approval_wizard_form
+msgid "Disapprove"
+msgstr "Défavorable"
+
+#. module: crm_lead_approval
+#: model:ir.model.fields,field_description:crm_lead_approval.field_crm_approval_wizard__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: crm_lead_approval
+#: model_terms:ir.ui.view,arch_db:crm_lead_approval.res_config_settings_approved_teams
+msgid ""
+"Enable these Sales Teams to provide their approval in the opportunities "
+"assigned to them."
+msgstr ""
+"Permettre à ces équipes commerciales de donner leur approbation dans les "
+"opportunités qui leur sont assignées."
+
+#. module: crm_lead_approval
+#: model:ir.model.fields,field_description:crm_lead_approval.field_crm_approval_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: crm_lead_approval
+#: model:ir.model.fields,help:crm_lead_approval.field_crm_lead__to_be_approved
+msgid "Indicates whether the record required approval or not"
+msgstr "Indique si l'enregistrement nécessite une approbation ou pas"
+
+#. module: crm_lead_approval
+#: model:ir.model.fields,field_description:crm_lead_approval.field_crm_approval_wizard__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: crm_lead_approval
+#: model:ir.model.fields,field_description:crm_lead_approval.field_crm_approval_wizard__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: crm_lead_approval
+#: model:ir.model,name:crm_lead_approval.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Piste/Demande"
+
+#. module: crm_lead_approval
+#: model:ir.model.fields.selection,name:crm_lead_approval.selection__crm_lead__approval__none
+msgid "None"
+msgstr "Aucun"
+
+#. module: crm_lead_approval
+#: model:ir.model.fields,field_description:crm_lead_approval.field_crm_approval_wizard__approval_comment
+msgid "Observation"
+msgstr ""
+
+#. module: crm_lead_approval
+#: model_terms:ir.ui.view,arch_db:crm_lead_approval.view_crm_case_opportunity_approval_filter
+msgid "Opportunities that are not yet reviewed"
+msgstr ""
+
+#. module: crm_lead_approval
+#: model_terms:ir.ui.view,arch_db:crm_lead_approval.view_crm_case_opportunity_approval_filter
+msgid "Opportunities that are refused"
+msgstr ""
+
+#. module: crm_lead_approval
+#: model:ir.model.fields,field_description:crm_lead_approval.field_crm_approval_wizard__lead_id
+msgid "Opportunity"
+msgstr "Demande"
+
+#. module: crm_lead_approval
+#: model_terms:ir.ui.view,arch_db:crm_lead_approval.view_crm_case_opportunity_approval_filter
+msgid "Refused"
+msgstr "Refusé"
+
+#. module: crm_lead_approval
+#: model:ir.model.fields.selection,name:crm_lead_approval.selection__crm_lead__approval__normal
+#: model_terms:ir.ui.view,arch_db:crm_lead_approval.view_crm_approval_wizard_form
+msgid "Reserved"
+msgstr "Réservé"
+
+#. module: crm_lead_approval
+#: model:ir.model.fields,field_description:crm_lead_approval.field_res_config_settings__approval_team_ids
+msgid "Sales Teams opportunities approval"
+msgstr ""
+
+#. module: crm_lead_approval
+#: model:ir.model.fields,field_description:crm_lead_approval.field_crm_lead__to_be_approved
+msgid "To be approved"
+msgstr "À approuver"
+
+#. module: crm_lead_approval
+#: model_terms:ir.ui.view,arch_db:crm_lead_approval.view_crm_case_opportunity_approval_filter
+msgid "Unreviewed"
+msgstr "Pas encore d'avis"
