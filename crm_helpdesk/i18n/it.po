@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Odoo 8.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-01-21 14:07+0000\n"
-"PO-Revision-Date: 2023-06-20 13:09+0000\n"
+"PO-Revision-Date: 2025-01-20 17:06+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: Italian (http://www.transifex.com/odoo/odoo-8/language/it/)\n"
 "Language: it\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.17\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #. module: crm_helpdesk
 #: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_email
@@ -203,38 +203,38 @@ msgstr ""
 #: model:ir.model,name:crm_helpdesk.model_crm_helpdesk
 #: model:ir.ui.view,arch_db:crm_helpdesk.view_report_crm_helpdesk_graph
 msgid "Helpdesk"
-msgstr "Helpdesk"
+msgstr "Assistenza clienti"
 
 #. module: crm_helpdesk
 #: model:ir.actions.act_window,name:crm_helpdesk.action_report_crm_helpdesk
 #: model:ir.ui.menu,name:crm_helpdesk.menu_report_crm_helpdesks_tree
 msgid "Helpdesk Analysis"
-msgstr "Analisi Helpdesk"
+msgstr "Analisi assistenza clienti"
 
 #. module: crm_helpdesk
 #: model:ir.actions.act_window,name:crm_helpdesk.crm_case_helpdesk_act111
 msgid "Helpdesk Requests"
-msgstr "Richieste Helpdesk"
+msgstr "Richieste assistenza clienti"
 
 #. module: crm_helpdesk
 #: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_form_view_helpdesk
 msgid "Helpdesk Support"
-msgstr "Supporto Helpdesk"
+msgstr "Supporto assistenza clienti"
 
 #. module: crm_helpdesk
 #: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_tree_view_helpdesk
 msgid "Helpdesk Support Tree"
-msgstr "Albero Gestione supporto helpdesk"
+msgstr "Albero Gestione supporto assistenza clienti"
 
 #. module: crm_helpdesk
 #: model:ir.ui.view,arch_db:crm_helpdesk.crm_case_helpdesk_calendar_view
 msgid "Helpdesk Supports"
-msgstr "Supporti helpdesk"
+msgstr "Supporti assistenza clienti"
 
 #. module: crm_helpdesk
 #: model:ir.ui.menu,name:crm_helpdesk.menu_help_support_main
 msgid "Helpdesk and Support"
-msgstr "Helpdesk e supporto"
+msgstr "Assistenza clienti e supporto"
 
 #. module: crm_helpdesk
 #: model:ir.actions.act_window,help:crm_helpdesk.crm_case_helpdesk_act111
@@ -244,7 +244,7 @@ msgstr ""
 #. module: crm_helpdesk
 #: model:ir.model,name:crm_helpdesk.model_crm_helpdesk_report
 msgid "Helpdesk report after Sales Services"
-msgstr "Report helpdesk dopo servizi di vendite"
+msgstr "Report assistenza clienti dopo servizi di vendite"
 
 #. module: crm_helpdesk
 #: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
@@ -252,8 +252,8 @@ msgid ""
 "Helpdesk requests that are assigned to me or to one of the sale teams I "
 "manage"
 msgstr ""
-"Richieste di helpdesk che sono assegnate a me o ad uno del team di vendita "
-"che gestisco"
+"Richieste di assistenza clienti che sono assegnate a me o ad uno del team di "
+"vendita che gestisco"
 
 #. module: crm_helpdesk
 #: selection:crm.helpdesk,priority:0 selection:crm.helpdesk.report,priority:0
@@ -386,7 +386,7 @@ msgstr "Apri"
 #. module: crm_helpdesk
 #: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "Open Helpdesk Request"
-msgstr "Apri richiesta helpdesk"
+msgstr "Apri richiesta assistenza clienti"
 
 #. module: crm_helpdesk
 #: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_delay_expected
@@ -483,7 +483,7 @@ msgstr "Cerca"
 #. module: crm_helpdesk
 #: model:ir.ui.view,arch_db:crm_helpdesk.view_crm_case_helpdesk_filter
 msgid "Search Helpdesk"
-msgstr "Ricerca Helpdesk"
+msgstr "Ricerca assistenza clienti"
 
 #. module: crm_helpdesk
 #: model:ir.model.fields,field_description:crm_helpdesk.field_crm_helpdesk_report_state
