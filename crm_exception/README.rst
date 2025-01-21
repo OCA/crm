@@ -87,6 +87,8 @@ Contributors
 
   - Aung Ko Ko Lin
 
+- `Heliconia Solutions Pvt. Ltd. <https://www.heliconia.io>`__
+
 Maintainers
 -----------
 

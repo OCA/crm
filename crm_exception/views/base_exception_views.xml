@@ -9,7 +9,7 @@
                 <field
                     name="stage_ids"
                     widget="many2many_tags"
-                    attrs="{'invisible': [('model', '!=', 'crm.lead')]}"
+                    invisible="model != 'crm.lead'"
                 />
             </xpath>
         </field>

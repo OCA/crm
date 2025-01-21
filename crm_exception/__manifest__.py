@@ -2,7 +2,7 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 {
     "name": "CRM Exception",
-    "version": "16.0.1.0.0",
+    "version": "17.0.1.0.0",
     "category": "Customer Relationship Management",
     "author": "Quartile Limited, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/crm",
