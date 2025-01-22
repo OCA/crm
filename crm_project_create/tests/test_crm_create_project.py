@@ -3,7 +3,8 @@
 
 from markupsafe import Markup
 
-from odoo.tests.common import Form, TransactionCase, users
+from odoo.tests import Form
+from odoo.tests.common import TransactionCase, users
 
 from odoo.addons.mail.tests.common import mail_new_test_user
 

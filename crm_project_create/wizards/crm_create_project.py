@@ -19,15 +19,15 @@ class CrmCreateProject(models.TransientModel):
             .create(self._prepare_create_project_values())
         )
         self.lead_id.project_id = project
-        project.message_post_with_view(
+        project.message_post_with_source(
             "mail.message_origin_link",
-            values={"self": self.lead_id.project_id, "origin": self.lead_id},
+            render_values={"self": self.lead_id.project_id, "origin": self.lead_id},
             subtype_id=self.env.ref("mail.mt_note").id,
             author_id=self.env.user.partner_id.id,
         )
-        self.lead_id.message_post_with_view(
+        self.lead_id.message_post_with_source(
             "mail_message_destiny_link_template.message_destiny_link",
-            values={"self": self.lead_id, "destiny": self.lead_id.project_id},
+            render_values={"self": self.lead_id, "destiny": self.lead_id.project_id},
             subtype_id=self.env.ref("mail.mt_note").id,
             author_id=self.env.user.partner_id.id,
         )

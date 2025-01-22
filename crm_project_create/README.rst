@@ -63,7 +63,7 @@ To use this module, you need to:
 4. A wizard is shown to fill project name and/or project description.
 5. Click on **Create project**.
 6. You can see project created in page **Extra Information**, inside
-   group **Misc**.
+   group **TRACKING**.
 7. Is you have *Project: Administrator* permissions, you can edit the
    project after creating it.
 
