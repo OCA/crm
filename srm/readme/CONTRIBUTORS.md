@@ -1,0 +1,2 @@
+- Telmo Santos \<<telmo.santos@camptocamp.com>\>
+- Vincent Van Rossem \<<vincent.vanrossem@camptocamp.com>\>

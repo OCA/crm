@@ -11,13 +11,12 @@
                         <field name="lead_id" invisible="1" />
                     </group>
                 </group>
-                <group
-                    attrs="{'invisible': [('action','!=','exist')], 'required':[('action', '=','exist')]}"
-                >
+                <group invisible="action != 'exist'" required="action == 'exist'">
                     <group>
                         <field
                             name="partner_id"
-                            attrs="{'invisible': [('action','!=','exist')], 'required':[('action', '=','exist')]}"
+                            invisible="action != 'exist'"
+                            required="action == 'exist'"
                             context="{'res_partner_search_mode': 'supplier'}"
                         />
                     </group>

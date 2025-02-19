@@ -16,44 +16,18 @@
                 position='before'
             >
                 <field name="request_type" invisible="1" />
-            </xpath>
-            <xpath
-                expr='//group[@name="opportunity_partner"]//field[@name="request_type"]'
-                position='after'
-            >
                 <field
                     name="partner_id"
                     string="Supplier"
-                    attrs="{'invisible': [('request_type','=','customer')]}"
+                    invisible="request_type == 'customer'"
                 />
-            </xpath>
-            <xpath
-                expr='//group[@name="opportunity_partner"]//field[@name="request_type"]'
-                position='after'
-            >
                 <field
                     name="partner_id"
                     string="Customer"
-                    attrs="{'invisible': [('request_type','!=','customer')]}"
+                    invisible="request_type != 'customer'"
                 />
             </xpath>
-            <field name="user_id" position="attributes">
-                <attribute name="string">Responsible</attribute>
-            </field>
-            <field name="team_id" position="attributes">
-                <attribute name="string">Team</attribute>
-            </field>
         </field>
-    </record>
-
-    <record id="action_lead_rfq_new" model="ir.actions.act_window">
-        <field name="name">Lead RFQ new</field>
-        <field name="res_model">purchase.order</field>
-        <field name="view_mode">form</field>
-        <field
-            name="context"
-        >{'search_default_partner_id': active_id, 'default_partner_id': active_id}</field>
-        <field name="groups_id" eval="[(4, ref('purchase.group_purchase_user'))]" />
     </record>
 
     <record id="crm_case_form_view_oppor" model="ir.ui.view">
@@ -65,9 +39,12 @@
                 expr="//button[@name='action_sale_quotations_new']"
                 position="attributes"
             >
+                <!-- addition to `type == 'lead' or probability == 0 and not active` -->
                 <attribute
-                    name="attrs"
-                >{'invisible': ['|', ('request_type', '=', 'supplier'), '|', ('type', '=', 'lead'), '&amp;', ('probability', '=', 0), ('active', '=', False)]}</attribute>
+                    name="invisible"
+                    add="request_type == 'supplier'"
+                    separator="or"
+                />
             </xpath>
             <xpath expr="//button[@name='action_set_won_rainbowman']" position="before">
                 <button
@@ -75,24 +52,31 @@
                     name="action_lead_rfq_new"
                     type="object"
                     class="oe_highlight"
-                    attrs="{'invisible': ['|', ('request_type', '!=', 'supplier'), '|', ('type', '=', 'lead'), '&amp;', ('probability', '=', 0), ('active', '=', False)]}"
+                    invisible="request_type != 'supplier' or type == 'lead' or (probability == 0 and not active)"
+                    groups="purchase.group_purchase_user"
                 />
             </xpath>
             <xpath
                 expr="//button[@name='action_view_sale_quotation']"
                 position="attributes"
             >
+                <!-- addition to `type == 'lead'` -->
                 <attribute
-                    name="attrs"
-                >{'invisible': ['|', ('request_type', '=', 'supplier'), ('type', '=', 'lead')]}</attribute>
+                    name="invisible"
+                    add="request_type == 'supplier'"
+                    separator="or"
+                />
             </xpath>
             <xpath
                 expr="//button[@name='action_view_sale_order']"
                 position="attributes"
             >
+                <!-- addition to `sale_order_count == 0 or type == 'lead'` -->
                 <attribute
-                    name="attrs"
-                >{'invisible': ['|', '|', ('request_type', '=', 'supplier'), ('sale_order_count', '=', 0), ('type', '=', 'lead')]}</attribute>
+                    name="invisible"
+                    add="request_type == 'supplier'"
+                    separator="or"
+                />
             </xpath>
 
             <button name="action_schedule_meeting" position="after">
@@ -101,7 +85,7 @@
                     type="object"
                     name="action_view_sale_quotation"
                     icon="fa-pencil-square-o"
-                    attrs="{'invisible': [('type', '=', 'lead')]}"
+                    invisible="type == 'lead'"
                 >
                     <field
                         name="request_for_quotation_count"
@@ -112,7 +96,7 @@
                 <button
                     class="oe_stat_button"
                     type="object"
-                    attrs="{'invisible': ['|', ('purchase_amount_total', '=', 0), ('type', '=', 'lead')]}"
+                    invisible="purchase_amount_total == 0 or type == 'lead'"
                     name="action_view_sale_order"
                     icon="fa-usd"
                 >
@@ -124,7 +108,7 @@
                                 options="{'currency_field': 'company_currency'}"
                             />
                         </span>
-                        <span class="o_stat_text"> Purchase Orders</span>
+                        <span class="o_stat_text">Purchase Orders</span>
                         <field name="purchase_order_count" invisible="1" />
                     </div>
                 </button>
@@ -146,15 +130,17 @@
     <record id="srm_lead_action_pipeline" model="ir.actions.act_window">
         <field name="name">Srm: Pipeline</field>
         <field name="res_model">crm.lead</field>
-        <field name="view_mode">kanban,tree,graph,pivot,form,calendar,activity</field>
+        <field name="view_mode">kanban,list,graph,pivot,form,calendar,activity</field>
         <field
             name="domain"
         >[('type','=','opportunity'), ('request_type','=', 'supplier')]</field>
-        <field name="context">{
+        <field name="context">
+            {
                 'default_type': 'opportunity',
                 'search_default_assigned_to_me': 1,
                 'default_request_type': 'supplier',
-        }</field>
+            }
+        </field>
         <field name="search_view_id" ref="crm.view_crm_case_opportunities_filter" />
     </record>
 
@@ -162,7 +148,6 @@
         <field name="name">Srm: My Pipeline</field>
         <field name="model_id" ref="crm.model_crm_team" />
         <field name="state">code</field>
-        <field name="groups_id" eval="[(4, ref('base.group_user'))]" />
         <field
             name="code"
         >action = model.with_context(request_type='supplier').action_your_pipeline()</field>
@@ -172,12 +157,13 @@
     <record id="srm_lead_all_leads" model="ir.actions.act_window">
         <field name="name">Leads</field>
         <field name="res_model">crm.lead</field>
-        <field name="view_mode">tree,kanban,graph,pivot,calendar,form,activity</field>
+        <field name="view_mode">list,kanban,graph,pivot,calendar,form,activity</field>
         <field
             name="domain"
         >['&amp;','|', ('type','=','lead'), ('type','=',False), ('request_type', '=', 'supplier')]</field>
         <field name="search_view_id" ref="crm.view_crm_case_leads_filter" />
-        <field name="context">{
+        <field name="context">
+            {
                 'default_type':'lead',
                 'default_request_type': 'supplier',
                 'search_default_type': 'lead',
@@ -190,10 +176,10 @@
     <record id="srm_lead_action_dashboard" model="ir.actions.act_window">
         <field name="name">Srm Leads Analysis</field>
         <field name="res_model">crm.lead</field>
-        <field name="view_mode">dashboard,pivot,graph,tree</field>
+        <field name="view_mode">pivot,graph,list</field>
         <field
             name="domain"
-        >['&amp;', ('request_type','=', 'supplier'),  '|', ('active','=',True), ('active','=',False)]</field>
+        >['&amp;', ('request_type','=', 'supplier'), '|', ('active','=',True), ('active','=',False)]</field>
         <field name="search_view_id" ref="crm.view_crm_case_leads_filter" />
         <field name="context" eval="{'search_default_filter_creation_date': 1}" />
     </record>
@@ -201,17 +187,18 @@
     <record id="srm_opportunity_action_dashboard" model="ir.actions.act_window">
         <field name="name">Pipeline Analysis</field>
         <field name="res_model">crm.lead</field>
-        <field name="view_mode">dashboard,pivot,graph,tree,form,cohort</field>
+        <field name="view_mode">pivot,graph,list,form,cohort</field>
         <field name="domain">[('request_type','=', 'supplier')]</field>
         <field
             name="context"
             eval="{
-            'tree_view_ref': 'crm.crm_case_tree_view_oppor',
-            'default_type': 'opportunity',
-            'search_default_opportunity': True,
-            'search_default_filter_create_date': 1}"
+                   'list_view_ref': 'crm.crm_case_tree_view_oppor',
+                   'default_type': 'opportunity',
+                   'search_default_opportunity': True,
+                   'search_default_filter_create_date': 1
+               }"
         />
-        <field name="search_view_id" ref="crm_enterprise.crm_opportunity_view_search" />
+        <field name="search_view_id" ref="crm.crm_opportunity_report_view_search" />
     </record>
 
     <!-- menuitem -->
@@ -233,5 +220,6 @@
 
     <record id="menu_srm_opportunities" model="ir.ui.menu">
         <field name="action" ref="srm.action_your_pipeline" />
+        <field name="groups_id" eval="[Command.link(ref('base.group_user'))]" />
     </record>
 </odoo>
