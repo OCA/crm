@@ -5,44 +5,44 @@
         <field name="model">crm.lead</field>
         <field name="inherit_id" ref="crm.crm_lead_view_form" />
         <field name="arch" type="xml">
-                <xpath
+            <xpath
                 expr='//group[@name="opportunity_partner"]//field[@name="partner_id"]'
                 position='attributes'
             >
-                    <attribute name="invisible">1</attribute>
-                </xpath>
-                <xpath
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath
                 expr='//group[@name="opportunity_partner"]//field[@name="partner_id"]'
                 position='before'
             >
-                    <field name="request_type" invisible="1" />
-                </xpath>
-                <xpath
+                <field name="request_type" invisible="1" />
+            </xpath>
+            <xpath
                 expr='//group[@name="opportunity_partner"]//field[@name="request_type"]'
                 position='after'
             >
-                    <field
+                <field
                     name="partner_id"
                     string="Supplier"
                     attrs="{'invisible': [('request_type','=','customer')]}"
                 />
-                </xpath>
-                <xpath
+            </xpath>
+            <xpath
                 expr='//group[@name="opportunity_partner"]//field[@name="request_type"]'
                 position='after'
             >
-                    <field
+                <field
                     name="partner_id"
                     string="Customer"
                     attrs="{'invisible': [('request_type','!=','customer')]}"
                 />
-                </xpath>
-                <field name="user_id" position="attributes">
-                    <attribute name="string">Responsible</attribute>
-                </field>
-                <field name="team_id" position="attributes">
-                    <attribute name="string">Team</attribute>
-                </field>
+            </xpath>
+            <field name="user_id" position="attributes">
+                <attribute name="string">Responsible</attribute>
+            </field>
+            <field name="team_id" position="attributes">
+                <attribute name="string">Team</attribute>
+            </field>
         </field>
     </record>
 
@@ -55,7 +55,6 @@
         >{'search_default_partner_id': active_id, 'default_partner_id': active_id}</field>
         <field name="groups_id" eval="[(4, ref('purchase.group_purchase_user'))]" />
     </record>
-
 
     <record id="crm_case_form_view_oppor" model="ir.ui.view">
         <field name="name">crm.lead.oppor.inherited.crm</field>
@@ -118,17 +117,18 @@
                     icon="fa-usd"
                 >
                     <div class="o_field_widget o_stat_info">
-                        <span class="o_stat_value"><field
+                        <span class="o_stat_value">
+                            <field
                                 name="purchase_amount_total"
                                 widget="monetary"
                                 options="{'currency_field': 'company_currency'}"
-                            /></span>
+                            />
+                        </span>
                         <span class="o_stat_text"> Purchase Orders</span>
                         <field name="purchase_order_count" invisible="1" />
                     </div>
                 </button>
             </button>
-
         </field>
     </record>
     <record id="quick_create_opportunity_form" model="ir.ui.view">
@@ -213,7 +213,6 @@
         />
         <field name="search_view_id" ref="crm_enterprise.crm_opportunity_view_search" />
     </record>
-
 
     <!-- menuitem -->
     <record id="srm_menu_root" model="ir.ui.menu">

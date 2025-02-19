@@ -11,7 +11,7 @@ class Opportunity2Rfq(models.TransientModel):
 
     @api.model
     def default_get(self, fields):
-        result = super(Opportunity2Rfq, self).default_get(fields)
+        result = super().default_get(fields)
 
         active_model = self._context.get("active_model")
         if active_model != "crm.lead":

@@ -60,7 +60,7 @@ class CrmLead(models.Model):
     def _create_customer(self):
         """It can be a customer or supplier depending on lead request type"""
         self = self.with_context(res_partner_search_mode=self.request_type)
-        return super(CrmLead, self)._create_customer()
+        return super()._create_customer()
 
     def action_lead_rfq_new(self):
         if not self.partner_id:
