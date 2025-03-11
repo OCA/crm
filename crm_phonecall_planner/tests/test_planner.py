@@ -1,7 +1,6 @@
 # Copyright 2017 Jairo Llopis <jairo.llopis@tecnativa.com>
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
-from __future__ import division
 
 from datetime import datetime, timedelta
 
@@ -14,7 +13,7 @@ from odoo.tools import float_compare
 class PlannerCase(TransactionCase):
     @classmethod
     def setUpClass(cls):
-        super(PlannerCase, cls).setUpClass()
+        super().setUpClass()
         cls.env = cls.env(
             context=dict(
                 cls.env.context,
