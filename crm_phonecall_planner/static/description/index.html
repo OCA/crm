@@ -8,10 +8,11 @@
 
 /*
 :Author: David Goodger (goodger@python.org)
-:Id: $Id: html4css1.css 8954 2022-01-20 10:10:25Z milde $
+:Id: $Id: html4css1.css 9511 2024-01-13 09:50:07Z milde $
 :Copyright: This stylesheet has been placed in the public domain.
 
 Default cascading style sheet for the HTML output of Docutils.
+Despite the name, some widely supported CSS2 features are used.
 
 See https://docutils.sourceforge.io/docs/howto/html-stylesheets.html for how to
 customize this style sheet.
@@ -274,7 +275,7 @@ pre.literal-block, pre.doctest-block, pre.math, pre.code {
   margin-left: 2em ;
   margin-right: 2em }
 
-pre.code .ln { color: grey; } /* line numbers */
+pre.code .ln { color: gray; } /* line numbers */
 pre.code, code { background-color: #eeeeee }
 pre.code .comment, code .comment { color: #5C6576 }
 pre.code .keyword, code .keyword { color: #3B0D06; font-weight: bold }
@@ -300,7 +301,7 @@ span.option {
 span.pre {
   white-space: pre }
 
-span.problematic {
+span.problematic, pre.problematic {
   color: red }
 
 span.section-subtitle {
@@ -368,9 +369,9 @@ ul.auto-toc {
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !! source digest: sha256:5206693db83e1c3aad3345beee1aad8081e6d85db0e8ceaebc07692867d39055
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-<p><a class="reference external image-reference" href="https://odoo-community.org/page/development-status"><img alt="Beta" src="https://img.shields.io/badge/maturity-Beta-yellow.png" /></a> <a class="reference external image-reference" href="http://www.gnu.org/licenses/agpl-3.0-standalone.html"><img alt="License: AGPL-3" src="https://img.shields.io/badge/licence-AGPL--3-blue.png" /></a> <a class="reference external image-reference" href="https://github.com/OCA/crm/tree/15.0/crm_phonecall_planner"><img alt="OCA/crm" src="https://img.shields.io/badge/github-OCA%2Fcrm-lightgray.png?logo=github" /></a> <a class="reference external image-reference" href="https://translation.odoo-community.org/projects/crm-15-0/crm-15-0-crm_phonecall_planner"><img alt="Translate me on Weblate" src="https://img.shields.io/badge/weblate-Translate%20me-F47D42.png" /></a> <a class="reference external image-reference" href="https://runboat.odoo-community.org/builds?repo=OCA/crm&amp;target_branch=15.0"><img alt="Try me on Runboat" src="https://img.shields.io/badge/runboat-Try%20me-875A7B.png" /></a></p>
-<p>Use this module to plan a phone calls schedule for your partners, assuming you
-have specified the ideal time to call them.</p>
+<p><a class="reference external image-reference" href="https://odoo-community.org/page/development-status"><img alt="Beta" src="https://img.shields.io/badge/maturity-Beta-yellow.png" /></a> <a class="reference external image-reference" href="http://www.gnu.org/licenses/agpl-3.0-standalone.html"><img alt="License: AGPL-3" src="https://img.shields.io/badge/licence-AGPL--3-blue.png" /></a> <a class="reference external image-reference" href="https://github.com/OCA/crm/tree/18.0/crm_phonecall_planner"><img alt="OCA/crm" src="https://img.shields.io/badge/github-OCA%2Fcrm-lightgray.png?logo=github" /></a> <a class="reference external image-reference" href="https://translation.odoo-community.org/projects/crm-18-0/crm-18-0-crm_phonecall_planner"><img alt="Translate me on Weblate" src="https://img.shields.io/badge/weblate-Translate%20me-F47D42.png" /></a> <a class="reference external image-reference" href="https://runboat.odoo-community.org/builds?repo=OCA/crm&amp;target_branch=18.0"><img alt="Try me on Runboat" src="https://img.shields.io/badge/runboat-Try%20me-875A7B.png" /></a></p>
+<p>Use this module to plan a phone calls schedule for your partners,
+assuming you have specified the ideal time to call them.</p>
 <p><strong>Table of contents</strong></p>
 <div class="contents local topic" id="contents">
 <ul class="simple">
@@ -392,8 +393,8 @@ have specified the ideal time to call them.</p>
 </div>
 <div class="section" id="configuration">
 <h1><a class="toc-backref" href="#toc-entry-1">Configuration</a></h1>
-<p>To use this module, you need to specify your partners’ preferred phone call
-schedule:</p>
+<p>To use this module, you need to specify your partners’ preferred phone
+call schedule:</p>
 <ol class="arabic simple">
 <li>Go to any partner’s form &gt; <em>Phone Calls</em>.</li>
 <li>Set the preferred phone calling schedule for the partner.</li>
@@ -405,8 +406,8 @@ schedule:</p>
 <p>Now, to actually generate the phone call planning:</p>
 <ol class="arabic simple">
 <li>Go to <em>Sales &gt; Phone Calls &gt; Planner</em>.</li>
-<li>Fill the fields under <em>Call details</em>. Those fields will be saved literally
-in the generated phone calls.</li>
+<li>Fill the fields under <em>Call details</em>. Those fields will be saved
+literally in the generated phone calls.</li>
 <li>Fill the fields under <em>Criteria</em>. Those fields are used to filter the
 partners and the preexisting calls. The UTM fields will also be saved
 literally in the generated phone calls.</li>
@@ -420,15 +421,16 @@ literally in the generated phone calls.</li>
 <h2><a class="toc-backref" href="#toc-entry-3">Note about <em>Times</em> section</a></h2>
 <p>The <em>Start</em> and <em>End</em> times behave in a special way:</p>
 <ul class="simple">
-<li>Their <em>date</em> part is used to know the start and end dates for the planning.</li>
-<li>Their <em>time</em> part is used to know the time at which we will plan calls <em>each
-day under the date range</em>.</li>
+<li>Their <em>date</em> part is used to know the start and end dates for the
+planning.</li>
+<li>Their <em>time</em> part is used to know the time at which we will plan calls
+<em>each day under the date range</em>.</li>
 </ul>
-<p>The <em>Call duration</em> field indicates the time spacing you want to leave between
-one call and the next one.</p>
+<p>The <em>Call duration</em> field indicates the time spacing you want to leave
+between one call and the next one.</p>
 <p>So, for instance, if you select start on <em>2017-09-01 09:00:00</em>, end on
-<em>2017-09-03 10:00:00</em> and duration of <em>1:00</em>, it will try to generate these
-phone calls:</p>
+<em>2017-09-03 10:00:00</em> and duration of <em>1:00</em>, it will try to generate
+these phone calls:</p>
 <ul class="simple">
 <li>2017-09-01 09:00:00</li>
 <li>2017-09-01 10:00:00</li>
@@ -440,17 +442,19 @@ phone calls:</p>
 </div>
 <div class="section" id="note-about-repetition-section">
 <h2><a class="toc-backref" href="#toc-entry-4">Note about <em>Repetition</em> section</a></h2>
-<p>If you choose not to repeat calls, the planner will try to schedule one single
-phone call for each <strong>criteria combination</strong> (<em>Partner + Campaign + Source +
-Medium</em>) under the specified conditions in the <em>Times</em> section (see note above).</p>
-<p>If you choose instead to repeat calls after some amount of days (<em>Days gap</em>),
-the planner will:</p>
+<p>If you choose not to repeat calls, the planner will try to schedule one
+single phone call for each <strong>criteria combination</strong> (<em>Partner + Campaign
++ Source + Medium</em>) under the specified conditions in the <em>Times</em>
+section (see note above).</p>
+<p>If you choose instead to repeat calls after some amount of days (<em>Days
+gap</em>), the planner will:</p>
 <ol class="arabic simple">
-<li>Try to find a partner that matches the <strong>criteria combination</strong> and has never
-been called; then schedule a call for him.</li>
-<li>If all matching partners have already been called, then search for matching
-partners that have not been called in the specified <em>Days gap</em>; then schedule a
-call for the one with least total scheduled calls.</li>
+<li>Try to find a partner that matches the <strong>criteria combination</strong> and
+has never been called; then schedule a call for him.</li>
+<li>If all matching partners have already been called, then search for
+matching partners that have not been called in the specified <em>Days
+gap</em>; then schedule a call for the one with least total scheduled
+calls.</li>
 <li>If there is still no match, then schedule nothing and continue.</li>
 </ol>
 </div>
@@ -466,7 +470,7 @@ call for the one with least total scheduled calls.</li>
 <p>Bugs are tracked on <a class="reference external" href="https://github.com/OCA/crm/issues">GitHub Issues</a>.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
-<a class="reference external" href="https://github.com/OCA/crm/issues/new?body=module:%20crm_phonecall_planner%0Aversion:%2015.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**">feedback</a>.</p>
+<a class="reference external" href="https://github.com/OCA/crm/issues/new?body=module:%20crm_phonecall_planner%0Aversion:%2018.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**">feedback</a>.</p>
 <p>Do not contact contributors directly about support or help with technical issues.</p>
 </div>
 <div class="section" id="credits">
@@ -491,11 +495,13 @@ If you spotted it first, help us to smash it by providing a detailed and welcome
 <div class="section" id="maintainers">
 <h2><a class="toc-backref" href="#toc-entry-10">Maintainers</a></h2>
 <p>This module is maintained by the OCA.</p>
-<a class="reference external image-reference" href="https://odoo-community.org"><img alt="Odoo Community Association" src="https://odoo-community.org/logo.png" /></a>
+<a class="reference external image-reference" href="https://odoo-community.org">
+<img alt="Odoo Community Association" src="https://odoo-community.org/logo.png" />
+</a>
 <p>OCA, or the Odoo Community Association, is a nonprofit organization whose
 mission is to support the collaborative development of Odoo features and
 promote its widespread use.</p>
-<p>This module is part of the <a class="reference external" href="https://github.com/OCA/crm/tree/15.0/crm_phonecall_planner">OCA/crm</a> project on GitHub.</p>
+<p>This module is part of the <a class="reference external" href="https://github.com/OCA/crm/tree/18.0/crm_phonecall_planner">OCA/crm</a> project on GitHub.</p>
 <p>You are welcome to contribute. To learn how please visit <a class="reference external" href="https://odoo-community.org/page/Contribute">https://odoo-community.org/page/Contribute</a>.</p>
 </div>
 </div>
