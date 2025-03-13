@@ -217,7 +217,7 @@
                     type="object"
                 />
                 <button
-                    invisible="opportunity_id or state != 'open' or state != 'pending'"
+                    invisible="opportunity_id or state not in ['open', 'pending']"
                     icon="fa-hand-pointer-o"
                     name="action_button_convert2opportunity"
                     string="Convert to Opportunity"
