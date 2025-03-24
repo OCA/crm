@@ -9,6 +9,12 @@
     <record id="sale_crm.sale_order_menu_quotations_crm" model="ir.ui.menu">
         <field name="groups_id" eval="[(4, ref('sales_team.group_sale_salesman'))]" />
     </record>
+    <record id="crm.crm_lead_menu_my_activities" model="ir.ui.menu">
+        <field
+            name="groups_id"
+            eval="[(4, ref('crm_security_group.group_crm_own_leads'))]"
+        />
+    </record>
     <record id="crm.sales_team_menu_team_pipeline" model="ir.ui.menu">
         <field
             name="groups_id"
@@ -25,6 +31,18 @@
         <field
             name="groups_id"
             eval="[(4, ref('crm_security_group.group_crm_manager'))]"
+        />
+    </record>
+    <record id="crm.mail_activity_plan_menu_config_lead" model="ir.ui.menu">
+        <field
+            name="groups_id"
+            eval="[(6,0,[ref('crm_security_group.group_crm_manager')])]"
+        />
+    </record>
+    <record id="crm.menu_crm_config_lead" model="ir.ui.menu">
+        <field
+            name="groups_id"
+            eval="[(6,0,[ref('crm_security_group.group_crm_manager')])]"
         />
     </record>
 </odoo>

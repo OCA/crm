@@ -1,18 +1,17 @@
-# Copyright 2021-2023 Tecnativa - Víctor Martínez
+# Copyright 2021-2025 Tecnativa - Víctor Martínez
 # License LGPL-3 - See https://www.gnu.org/licenses/lgpl-3.0.html
 
 from odoo.exceptions import AccessError
-from odoo.tests import Form, common, new_test_user
+from odoo.tests import Form, new_test_user
 from odoo.tests.common import users
 
-from odoo.addons.base.tests.common import DISABLED_MAIL_CONTEXT
+from odoo.addons.base.tests.common import BaseCommon
 
 
-class TestCrmSecurity(common.TransactionCase):
+class TestCrmSecurity(BaseCommon):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
-        cls.env = cls.env(context=dict(cls.env.context, **DISABLED_MAIL_CONTEXT))
         group_crm_all_leads = "crm_security_group.group_crm_all_leads"
         group_sale_salesman_all_leads = "sales_team.group_sale_salesman_all_leads"
         new_test_user(
@@ -28,7 +27,7 @@ class TestCrmSecurity(common.TransactionCase):
         new_test_user(
             cls.env,
             login="crm_sale_user",
-            groups="%s,%s" % (group_crm_all_leads, group_sale_salesman_all_leads),
+            groups=f"{group_crm_all_leads},{group_sale_salesman_all_leads}",
         )
         cls.crm_menu = cls.env.ref("crm.crm_menu_root")
         cls.sale_menu = cls.env.ref("sale.sale_menu_root")
