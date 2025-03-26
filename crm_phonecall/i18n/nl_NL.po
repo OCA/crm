@@ -614,7 +614,6 @@ msgstr "Telefoon"
 #. odoo-python
 #: code:addons/crm_phonecall/models/crm_phonecall.py:0
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
-#, python-format
 msgid "Phone Call"
 msgstr "Telefoongesprek"
 

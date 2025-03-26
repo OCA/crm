@@ -624,7 +624,6 @@ msgstr "Telèfon"
 #. odoo-python
 #: code:addons/crm_phonecall/models/crm_phonecall.py:0
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
-#, python-format
 msgid "Phone Call"
 msgstr "Trucada de telèfon"
 
@@ -907,14 +906,14 @@ msgstr ""
 "nova de\n"
 "             prospectes per qualificar."
 
+#~ msgid "SMS Delivery error"
+#~ msgstr "Error d'entrega SMS"
+
 #~ msgid "Last Modified on"
 #~ msgstr "Darrera modificació el"
 
 #~ msgid "Main Attachment"
 #~ msgstr "Annexe principal"
-
-#~ msgid "SMS Delivery error"
-#~ msgstr "Error d'entrega SMS"
 
 #~ msgid "<b> min(s)</b>"
 #~ msgstr "<b> min(s)</b>"
