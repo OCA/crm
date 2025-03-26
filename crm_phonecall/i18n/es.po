@@ -635,7 +635,6 @@ msgstr "Teléfono"
 #. odoo-python
 #: code:addons/crm_phonecall/models/crm_phonecall.py:0
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
-#, python-format
 msgid "Phone Call"
 msgstr "Llamada"
 
@@ -919,6 +918,9 @@ msgstr ""
 "Puede usar la característica de importación para importar\n"
 "            masivamente una nueva lista de prospectos a calificar."
 
+#~ msgid "SMS Delivery error"
+#~ msgstr "Error de entrega de SMS"
+
 #~ msgid ""
 #~ "By default form view is disabled for calls, with this\n"
 #~ "                                setting it is enabled for all users."
@@ -933,9 +935,6 @@ msgstr ""
 
 #~ msgid "Main Attachment"
 #~ msgstr "Adjunto principal"
-
-#~ msgid "SMS Delivery error"
-#~ msgstr "Error de entrega de SMS"
 
 #~ msgid "<b> min(s)</b>"
 #~ msgstr "<b> minuto(s)</b>"
