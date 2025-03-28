@@ -3,10 +3,11 @@
 
 from odoo.exceptions import ValidationError
 from odoo.tests import Form
-from odoo.tests.common import TransactionCase
+
+from odoo.addons.base.tests.common import BaseCommon
 
 
-class TestCrmStage(TransactionCase):
+class TestCrmStage(BaseCommon):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
