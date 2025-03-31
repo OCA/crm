@@ -850,33 +850,3 @@ msgstr ""
 "            reclamación introducida en el sistema. Las etapas definen todos "
 "los pasos\n"
 "            necesarios para la resolución de una reclamación."
-
-#~ msgid "SMS Delivery error"
-#~ msgstr "Error de entrega de SMS"
-
-#~ msgid "Number of messages which requires an action"
-#~ msgstr "Número de mensajes que requieren una acción"
-
-#~ msgid "Number of unread messages"
-#~ msgstr "Número de mensajes no leídos"
-
-#~ msgid "Unread Messages"
-#~ msgstr "Mensajes no leídos"
-
-#~ msgid "Unread Messages Counter"
-#~ msgstr "Contador de mensajes no leídos"
-
-#~ msgid "Workload"
-#~ msgstr "Carga de trabajo"
-
-#~ msgid ""
-#~ "Create claim categories to better manage and classify your\n"
-#~ "            claims. Some example of claims can be: preventive action,\n"
-#~ "            corrective action."
-#~ msgstr ""
-#~ "Cree categorías de reclamaciones para gestionar y clasificar mejor sus "
-#~ "reclamaciones. Algunos ejemplos de reclamaciones pueden ser: acción "
-#~ "preventiva, acción correctiva."
-
-#~ msgid "Followers (Channels)"
-#~ msgstr "Seguidores (Canales)"

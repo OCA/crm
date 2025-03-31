@@ -1,16 +1,16 @@
 # Copyright 2017 Tecnativa - Vicent Cubells
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html).
 
-from odoo.tests import common
+from odoo.tests import Form
+
+from odoo.addons.base.tests.common import BaseCommon
 
 
-class TestCrmClaim(common.TransactionCase):
+class TestCrmClaim(BaseCommon):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
-
-        Claims = cls.env["crm.claim"].with_context(mail_create_nosubscribe=True)
-        cls.claim = Claims.create(
+        cls.claim = cls.env["crm.claim"].create(
             {
                 "name": "Test Claim",
                 "team_id": cls.env.ref("sales_team.salesteam_website_sales").id,
@@ -26,19 +26,26 @@ class TestCrmClaim(common.TransactionCase):
         cls.claim_categ = cls.env.ref("crm_claim.categ_claim1")
         cls.sales_team = cls.claim_categ.team_id
 
-    def test_crm_claim(self):
+    def test_crm_claim_misc(self):
         self.assertNotEqual(self.claim.team_id, self.sales_team)
-        self.assertTrue(self.claim.stage_id.id)
-        self.claim.partner_id = self.partner
-        self.claim.onchange_partner_id()
-        self.assertEqual(self.claim.email_from, self.partner.email)
-        self.assertEqual(self.claim.partner_phone, self.partner.phone)
+        self.assertTrue(self.claim.stage_id)
+        claim_form = Form(self.claim)
+        claim_form.partner_id = self.partner
+        self.assertEqual(claim_form.email_from, self.partner.email)
+        self.assertEqual(claim_form.partner_phone, self.partner.phone)
+        claim_form.categ_id = self.claim_categ
+        self.assertEqual(claim_form.team_id, self.sales_team)
+        self.claim = claim_form.save()
         self.assertEqual(self.partner.claim_count, 1)
-        self.claim.categ_id = self.claim_categ
-        self.claim.onchange_categ_id()
-        self.assertEqual(self.claim.team_id, self.sales_team)
         new_claim = self.claim.copy()
-        self.assertEqual(new_claim.stage_id.id, 1)
+        self.assertEqual(new_claim.stage_id.id, self.claim._get_default_stage_id())
         self.assertIn("copy", new_claim.name)
-        self.assertTrue(new_claim.stage_id.id)
+        self.assertTrue(new_claim.stage_id)
         self.assertEqual(self.partner.claim_count, 2)
+
+    def test_crm_claim_report(self):
+        items = self.env["crm.claim.report"].search(
+            [("team_id", "=", self.claim.team_id.id)]
+        )
+        self.assertEqual(len(items), 1)
+        self.assertEqual(items.id, self.claim.id)

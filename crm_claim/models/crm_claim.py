@@ -2,7 +2,7 @@
 # Copyright 2017 Tecnativa - Vicent Cubells
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
-from odoo import _, api, fields, models
+from odoo import api, fields, models
 from odoo.tools import html2plaintext
 
 APPLICABLE_MODELS = [
@@ -37,7 +37,9 @@ class CrmClaim(models.Model):
     @api.model
     def _selection_model(self):
         return [
-            (x, _(self.env[x]._description)) for x in APPLICABLE_MODELS if x in self.env
+            (x, self.env._(self.env[x]._description))
+            for x in APPLICABLE_MODELS
+            if x in self.env
         ]
 
     name = fields.Char(string="Claim Subject", required=True)
@@ -144,12 +146,12 @@ class CrmClaim(models.Model):
             self.team_id = self.categ_id.team_id
 
     def copy(self, default=None):
-        default = dict(
-            default or {},
-            stage_id=self._get_default_stage_id(),
-            name=_("%s (copy)") % self.name,
-        )
-        return super().copy(default)
+        default = dict(default or {})
+        new_claims = super().copy(default)
+        for _old_claim, new_claim in zip(self, new_claims, strict=False):
+            new_claim.stage_id = self._get_default_stage_id()
+            new_claim.name = self.env._(f"{self.name} (copy)")
+        return new_claims
 
     # -------------------------------------------------------
     # Mail gateway
@@ -164,7 +166,7 @@ class CrmClaim(models.Model):
             custom_values = {}
         desc = html2plaintext(msg.get("body")) if msg.get("body") else ""
         defaults = {
-            "name": msg.get("subject") or _("No Subject"),
+            "name": msg.get("subject") or self.env._("No Subject"),
             "description": desc,
             "email_from": msg.get("from"),
             "email_cc": msg.get("cc"),

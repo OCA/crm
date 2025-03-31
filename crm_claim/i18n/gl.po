@@ -822,9 +822,3 @@ msgid ""
 "            claim entered in the system. The stages define all the steps\n"
 "            required for the resolution of a claim."
 msgstr ""
-
-#~ msgid "Workload"
-#~ msgstr "Carga de traballo"
-
-#~ msgid "Actions"
-#~ msgstr "Accións"

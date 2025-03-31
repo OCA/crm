@@ -29,7 +29,7 @@ class CrmClaimReport(models.Model):
     delay_close = fields.Float(
         string="Delay to close",
         digits=(16, 2),
-        group_operator="avg",
+        aggregator="avg",
         help="Number of Days to close the case",
     )
     stage_id = fields.Many2one(
@@ -60,7 +60,7 @@ class CrmClaimReport(models.Model):
     delay_expected = fields.Float(
         string="Overpassed Deadline",
         digits=(16, 2),
-        group_operator="avg",
+        aggregator="avg",
     )
     email = fields.Integer(
         string="# Emails",

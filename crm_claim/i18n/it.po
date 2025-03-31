@@ -842,9 +842,3 @@ msgstr ""
 "                reclamo inserito nel sistema. Le fasi definiscono tutti i "
 "passi richiesti\n"
 "                per la soluzione di un reclamo."
-
-#~ msgid "SMS Delivery error"
-#~ msgstr "Errore consegna SMS"
-
-#~ msgid "Number of messages which requires an action"
-#~ msgstr "Numero di messaggi che richiedono un'azione"

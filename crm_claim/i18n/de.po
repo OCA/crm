@@ -847,37 +847,3 @@ msgstr ""
 "            Reklamation im System zu kategorisieren. Die Stadien definieren "
 "alle Schritte, die\n"
 "            für die Lösung einer Reklamation erforderlich sind."
-
-#~ msgid "SMS Delivery error"
-#~ msgstr "SMS Zustellfehler"
-
-#~ msgid "Number of messages which requires an action"
-#~ msgstr "Anzahl Nachrichten, die eine Aktion erfordern"
-
-#~ msgid "Number of unread messages"
-#~ msgstr "Anzahl der ungelesenen Nachrichten"
-
-#~ msgid "Unread Messages"
-#~ msgstr "Ungelesene Nachrichten"
-
-#~ msgid "Unread Messages Counter"
-#~ msgstr "Anzahl ungelesener Nachrichten"
-
-#~ msgid "Workload"
-#~ msgstr "Arbeitsaufwand"
-
-#~ msgid "Actions"
-#~ msgstr "Aktionen"
-
-#~ msgid ""
-#~ "Create claim categories to better manage and classify your\n"
-#~ "            claims. Some example of claims can be: preventive action,\n"
-#~ "            corrective action."
-#~ msgstr ""
-#~ "Legen Sie Reklamationskategorien an, um Ihre Reklamationen\n"
-#~ "            besser verwalten und klassifizieren zu können. Beispiele für\n"
-#~ "            Reklamationskategorien: präventive Maßnahmen, korrektive "
-#~ "Maßnahmen."
-
-#~ msgid "Followers (Channels)"
-#~ msgstr "Abonnenten (Kanäle)"

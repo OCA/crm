@@ -845,21 +845,3 @@ msgstr ""
 "Podeu crear etapes de reclamació per categoritzar-ne l'estat\n"
 "             al sistema. Les etapes defineixen tots els passos\n"
 "             necessaris per a la resolució d'una reclamació."
-
-#~ msgid "SMS Delivery error"
-#~ msgstr "Error d'entrega de SMS"
-
-#~ msgid "Number of messages which requires an action"
-#~ msgstr "Número de missatges que requereixen una acció"
-
-#~ msgid "Number of unread messages"
-#~ msgstr "Nombre de missatges no llegits"
-
-#~ msgid "Unread Messages"
-#~ msgstr "Missatges no llegits"
-
-#~ msgid "Unread Messages Counter"
-#~ msgstr "Comptador de missatges no llegits"
-
-#~ msgid "Workload"
-#~ msgstr "Càrrega de treball"
