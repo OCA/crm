@@ -2,6 +2,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html)
 
 from odoo import api, fields, models
+from odoo.fields import Date
 
 
 class CrmLead(models.Model):
@@ -36,6 +37,15 @@ class CrmLead(models.Model):
         index=True,
         readonly=True,
     )
+
+    # technical field to be used in sum_field options on kanban
+    current_company_currency = fields.Many2one(
+        "res.currency", compute="_compute_current_company_currency", readonly=True
+    )
+
+    def _compute_current_company_currency(self):
+        for lead in self:
+            lead.current_company_currency = self.env.company.currency_id
 
     @api.depends("company_currency")
     def _compute_multicompany_reporting_currency_id(self):
@@ -81,3 +91,33 @@ class CrmLead(models.Model):
             else:
                 to_amount = record.expected_revenue * record.currency_rate
             record.amount_multicompany_reporting_currency = to_amount
+
+    @api.model
+    def read_group(self, domain, fields, groupby, **kwargs):
+        # Override read_group to calculate the sum of the
+        # expected revenue in current company currency
+        current_company = self.env.company
+        result = super().read_group(
+            domain,
+            fields,
+            groupby,
+            **kwargs,
+        )
+        opportunities = self.env["crm.lead"]
+        for line in result:
+            if "__domain" in line:
+                opportunities = self.search(line["__domain"])
+
+            if "expected_revenue" in fields:
+                global_revenue = sum(
+                    opportunities.mapped(
+                        lambda opp: opp.company_currency._convert(
+                            opp.expected_revenue,
+                            current_company.currency_id,
+                            current_company,
+                            Date.today(),
+                        )
+                    )
+                )
+                line["expected_revenue"] = global_revenue
+        return result

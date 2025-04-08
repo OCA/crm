@@ -52,4 +52,20 @@
         </field>
     </record>
 
+    <record id="crm_lead_view_kanban_multi_currency" model="ir.ui.view">
+        <field name="name">crm.lead.view.kanban.multi.currency</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_kanban_view_leads" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='company_currency']" position="after">
+                <field name="current_company_currency" />
+            </xpath>
+            <progressbar position="attributes">
+                <attribute
+                    name="company_currency_field"
+                >current_company_currency</attribute>
+            </progressbar>
+        </field>
+    </record>
+
 </odoo>

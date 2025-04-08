@@ -10,6 +10,11 @@
     "depends": ["crm", "base_multicompany_reporting_currency"],
     "website": "https://github.com/OCA/crm",
     "data": ["views/crm_lead_views.xml"],
+    "assets": {
+        "web.assets_backend": [
+            "crm_multicompany_reporting_currency/static/src/js/**/*.js",
+        ],
+    },
     "installable": True,
     "maintainers": ["yankinmax"],
 }
