@@ -5,7 +5,7 @@
 from datetime import datetime, timedelta
 from logging import getLogger
 
-from odoo import _, api, fields, models
+from odoo import api, fields, models
 from odoo.exceptions import ValidationError
 from odoo.tools.safe_eval import safe_eval
 
@@ -15,9 +15,7 @@ _logger = getLogger(__name__)
 class CrmPhonecallPlan(models.TransientModel):
     _name = "crm.phonecall.planner"
     _description = "Phonecall planner"
-    _inherit = [
-        "utm.mixin",
-    ]
+    _inherit = "utm.mixin"
 
     name = fields.Char(
         "Call Summary",
@@ -86,7 +84,9 @@ class CrmPhonecallPlan(models.TransientModel):
     def _constrains_plan_dates(self):
         for one in self:
             if one.start > one.end:
-                raise ValidationError(_("Starting date must be less than ending date"))
+                raise ValidationError(
+                    self.env._("Starting date must be less than ending date")
+                )
 
     def action_accept(self):
         """Generate phonecall plan according to given criteria."""
@@ -183,7 +183,7 @@ class CrmPhonecallPlan(models.TransientModel):
             "name": "Generated calls",
             "type": "ir.actions.act_window",
             "res_model": "crm.phonecall",
-            "views": [[False, "tree"], [False, "calendar"], [False, "form"]],
+            "views": [[False, "list"], [False, "calendar"], [False, "form"]],
             "domain": [("id", "in", self.planned_calls.ids)],
         }
 

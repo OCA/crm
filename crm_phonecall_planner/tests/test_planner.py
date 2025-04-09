@@ -6,31 +6,21 @@ from datetime import datetime, timedelta
 
 from odoo import fields
 from odoo.exceptions import ValidationError
-from odoo.tests.common import TransactionCase
+from odoo.fields import Command
 from odoo.tools import float_compare
 
+from odoo.addons.base.tests.common import BaseCommon
 
-class PlannerCase(TransactionCase):
+
+class PlannerCase(BaseCommon):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
-        cls.env = cls.env(
-            context=dict(
-                cls.env.context,
-                mail_create_nolog=True,
-                mail_create_nosubscribe=True,
-                mail_notrack=True,
-                no_reset_password=True,
-                tracking_disable=True,
-            )
-        )
         cls.mondays = cls.env["resource.calendar"].create(
             {
                 "name": "mondays",
                 "attendance_ids": [
-                    (
-                        0,
-                        0,
+                    Command.create(
                         {
                             "name": "Monday morning",
                             "dayofweek": "0",
@@ -38,9 +28,7 @@ class PlannerCase(TransactionCase):
                             "hour_to": 12,
                         },
                     ),
-                    (
-                        0,
-                        0,
+                    Command.create(
                         {
                             "name": "Monday evening",
                             "dayofweek": "0",

@@ -19,7 +19,7 @@
                             <field
                                 name="res_partner_domain"
                                 widget="domain"
-                                options='{"model": "res.partner"}'
+                                options='{"model": "res.partner", "in_dialog": true}'
                             />
                             <field name="campaign_id" />
                             <field name="source_id" />
@@ -34,7 +34,8 @@
                             <field name="repeat_calls" />
                             <field
                                 name="days_gap"
-                                attrs='{"required": [("repeat_calls", "=", True)], "invisible": [("repeat_calls", "=", False)]}'
+                                required="repeat_calls"
+                                invisible="not repeat_calls"
                             />
                         </group>
                     </group>
