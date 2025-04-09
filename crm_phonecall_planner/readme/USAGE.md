@@ -1,6 +1,6 @@
 Now, to actually generate the phone call planning:
 
-1.  Go to *Sales \> Phone Calls \> Planner*.
+1.  Go to *CRM \> Phone Calls \> Planner*.
 2.  Fill the fields under *Call details*. Those fields will be saved
     literally in the generated phone calls.
 3.  Fill the fields under *Criteria*. Those fields are used to filter
