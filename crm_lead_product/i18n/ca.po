@@ -123,7 +123,7 @@ msgstr "Ingressos esperats"
 
 #. module: crm_lead_product
 #: model:ir.model.fields,field_description:crm_lead_product.field_crm_lead_line__expected_revenue
-#: model_terms:ir.ui.view,arch_db:crm_lead_product.view_tree_lead_line
+#: model_terms:ir.ui.view,arch_db:crm_lead_product.view_list_lead_line
 msgid "Expected revenue"
 msgstr "Ingressos esperats"
 
@@ -229,7 +229,7 @@ msgstr "Empresa/Client"
 #. module: crm_lead_product
 #: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_graph
 #: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_pivot
-#: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_tree
+#: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_list
 msgid "Pipeline Analysis"
 msgstr "Anàlisi Flux"
 
@@ -268,13 +268,13 @@ msgstr "Ingressos previstos"
 
 #. module: crm_lead_product
 #: model:ir.model.fields,field_description:crm_lead_product.field_crm_lead_line__planned_revenue
-#: model_terms:ir.ui.view,arch_db:crm_lead_product.view_tree_lead_line
+#: model_terms:ir.ui.view,arch_db:crm_lead_product.view_list_lead_line
 msgid "Planned revenue"
 msgstr "Ingressos previstos"
 
 #. module: crm_lead_product
 #: model:ir.model.fields,field_description:crm_lead_product.field_crm_lead_line__price_unit
-#: model_terms:ir.ui.view,arch_db:crm_lead_product.view_tree_lead_line
+#: model_terms:ir.ui.view,arch_db:crm_lead_product.view_list_lead_line
 msgid "Price Unit"
 msgstr "Preu unitari"
 
@@ -308,12 +308,12 @@ msgstr "Plantilla de producte"
 
 #. module: crm_lead_product
 #: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_lead_view_form
-#: model_terms:ir.ui.view,arch_db:crm_lead_product.view_tree_lead_line
+#: model_terms:ir.ui.view,arch_db:crm_lead_product.view_list_lead_line
 msgid "Products"
 msgstr "Productes"
 
 #. module: crm_lead_product
-#: model_terms:ir.ui.view,arch_db:crm_lead_product.view_tree_lead_line
+#: model_terms:ir.ui.view,arch_db:crm_lead_product.view_list_lead_line
 msgid "Quantity"
 msgstr "Quantitat"
 

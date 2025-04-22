@@ -26,7 +26,7 @@ class ActivityReport(models.Model):
     name = fields.Char("Lead Name", readonly=True)
     partner_id = fields.Many2one("res.partner", "Partner/Customer", readonly=True)
     partner_name = fields.Char("Contact Name", readonly=True)
-    probability = fields.Float(group_operator="avg", readonly=True)
+    probability = fields.Float(aggregator="avg", readonly=True)
     stage_id = fields.Many2one("crm.stage", "Stage", readonly=True)
     team_id = fields.Many2one("crm.team", "Sales Team", readonly=True)
     type = fields.Selection(
