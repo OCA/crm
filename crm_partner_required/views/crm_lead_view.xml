@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2025 Moduon Team S.L.
+     License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl-3.0) -->
+<data>
+    <record id="crm_lead_view_form_inherit" model="ir.ui.view">
+        <field name="name">Partner required form</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form" />
+        <field name="arch" type="xml">
+            <!--
+                HACK: Necessary for tests. In the Form class of 16.0 it is not checked if the field is several times
+                in the view https://github.com/odoo/odoo/blob/16.0/odoo/tests/common.py#L2168-L2172.
+                From version 17.0 this is checked, https://github.com/odoo/odoo/blob/17.0/odoo/tests/form.py#L192-L203,
+                so it would not be necessary to declare it in the lead_partner group from version 17.0 onwards.
+            -->
+            <xpath
+                expr="//group[@name='lead_partner']//field[@name='partner_id']"
+                position="attributes"
+            >
+                <attribute
+                    name="attrs"
+                >{'required': [('type', '=', 'opportunity')]}</attribute>
+            </xpath>
+            <xpath
+                expr="//group[@name='opportunity_partner']//field[@name='partner_id']"
+                position="attributes"
+            >
+                <attribute
+                    name="attrs"
+                >{'required': [('type', '=', 'opportunity')]}</attribute>
+            </xpath>
+        </field>
+    </record>
+    <record id="quick_create_opportunity_form_inherit" model="ir.ui.view">
+        <field name="name">Partner required quick create form</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.quick_create_opportunity_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="attributes">
+                <attribute
+                    name="attrs"
+                >{'required': [('type', '=', 'opportunity')]}</attribute>
+            </xpath>
+        </field>
+    </record>
+</data>
