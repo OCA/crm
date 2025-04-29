@@ -36,14 +36,14 @@ class TestCrmLeadReason(TransactionCase):
 
     def test_lost_reason(self):
         crm_lead = self.crm_lead_model.create({"name": "Testing lead lost reason"})
-        crm_lead.action_set_lost(lost_reason=self.lost_reason)
+        crm_lead.action_set_lost(lost_reason_id=self.lost_reason.id)
         self.assertFalse(crm_lead.stage_id.is_won)
-        self.assertEqual(crm_lead.lost_reason.name, self.lost_reason.name)
+        self.assertEqual(crm_lead.lost_reason_id.name, self.lost_reason.name)
 
     def test_unspecified_reason(self):
         crm_lead = self.crm_lead_model.create(
             {"name": "Testing lead unspecified reason"}
         )
-        crm_lead.action_set_lost(lost_reason=self.unspecified_reason)
+        crm_lead.action_set_lost(lost_reason_id=self.unspecified_reason)
         self.assertFalse(crm_lead.stage_id.is_won)
-        self.assertEqual(crm_lead.lost_reason.name, self.unspecified_reason.name)
+        self.assertEqual(crm_lead.lost_reason_id.name, self.unspecified_reason.name)

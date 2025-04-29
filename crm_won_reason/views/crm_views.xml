@@ -40,7 +40,7 @@
                     class="oe_highlight"
                     data-hotkey="w"
                     title="Mark as won"
-                    attrs="{'invisible': ['|','|', ('active','=',False), ('probability', '=', 100), ('type', '=', 'lead')]}"
+                    invisible="active == False or probability == 100 or type == 'lead'"
                 />
             </xpath>
         </field>
