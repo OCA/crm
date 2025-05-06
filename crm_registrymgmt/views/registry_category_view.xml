@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+
+    <!-- Vista en árbol -->
+    <record id="registry_category_tree_view" model="ir.ui.view">
+      <field name="name">registry.category.tree.view</field>
+      <field name="model">registry.category</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- Vista en formulario -->
+    <record id="registry_category_form_view" model="ir.ui.view">
+      <field name="name">registry.category.form.view</field>
+      <field name="model">registry.category</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+              <field name="name"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- Acción -->
+    <record id="action_registry_category" model="ir.actions.act_window">
+      <field name="name">Registry Category</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">registry.category</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="o_view_nocontent_create">
+          Click to create a registry category.
+        </p>
+        <p>
+          Use categories to classify registries, e.g., Classified, Confidential, Personal.
+        </p>
+      </field>
+    </record>
+
+    <!-- Menú -->
+    <menuitem id="registry_category_menu"
+              name="Registry Category"
+              parent="registry_log_config_menu"
+              sequence="3"
+              action="action_registry_category"/>
+  </data>
+</odoo>

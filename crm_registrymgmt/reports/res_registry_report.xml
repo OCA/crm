@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_res_registry_report" model="ir.actions.report">
+        <field name="name">Registry Report</field>
+        <field name="model">res.registry</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">crm_registrymgmt.template_res_registry_report</field>
+        <field name="report_file">crm_registrymgmt.template_res_registry_report</field>
+        <field name="print_report_name" >'%s ' % (object.number.replace('/', '_'))</field>
+        <field name="binding_model_id" ref="model_res_registry"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="template_res_registry_report">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="crm_registrymgmt.res_registry_report_document" t-lang="o.recipient_partner_id.lang"/>
+                <p style="page-break-after:always;"></p>
+            </t>
+        </t>
+    </template>
+
+    <template id="res_registry_report_document">
+        <t t-call="web.external_layout">
+            <div class="page">
+                <div name="title" style="text-align: center; margin-bottom: 24px;">
+                    <strong>
+                        <span>R E G I S T R Y</span>
+                        <span> &#160;&#160;&#160;&#160;</span>
+                        <t t-if="o.move == 'out'"><span>O U T</span></t>
+                        <t t-if="o.move == 'in'"><span>I N</span></t>
+                        <span> &#160;&#160;&#160;&#160;</span>
+                        <span t-field="o.number"/>
+                    </strong>
+                </div>
+
+                <div name="registry_main_data_title" style="border-bottom: 1px solid black;">
+                    <b>M A I N &#160;&#160;&#160;&#160; D A T A</b>
+                </div>
+                <div name="issue" t-if="o.name" style="margin-top:16px;">
+                    <b>Issue: </b><span t-field="o.name"/>
+                </div>
+                <div name="registry_main_data" class="col-12" style="display:table; margin-top:8px; margin-bottom:24px;">
+                    <div style="width: 50%; display: table-cell; border-right: 1px solid black; padding-right: 24px;">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td><b>Recipient</b></td>
+                                    <td class="text-right">
+                                        <t t-esc="o.recipient_partner_id.name"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><b>Sender</b></td>
+                                    <td class="text-right">
+                                        <t t-esc="o.sender_partner_id.name"/>
+                                    </td>
+                                </tr>
+                                <tr t-if="o.state">
+                                    <td><b>State</b></td>
+                                    <td class="text-right">
+                                        <t t-esc="o.state"/>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div style="display: table-cell; padding-left: 24px;">
+                        <table class="table">
+                            <tbody>
+                                <tr t-if="o.date">
+                                    <td><b>registry Date</b></td>
+                                    <td class="text-right">
+                                        <t t-esc="o.date"/>
+                                    </td>
+                                </tr>
+                                <tr t-if="o.channel_id">
+                                    <td><b>Channel</b></td>
+                                    <td class="text-right">
+                                        <t t-esc="o.channel_id.name"/>
+                                    </td>
+                                </tr>
+                                <tr t-if="o.track_ref">
+                                    <td><b>Tracking Reference</b></td>
+                                    <td class="text-right">
+                                        <t t-esc="o.track_ref"/>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <t t-if="o.type_id or o.orig_ref or o.document_date or o.snd_date or o.rec_date or o.expeditor_ref">
+                    <div name="registry_additional_data_title" style="border-bottom: 1px solid black;">
+                        <b>A D D I T I O N A L &#160;&#160;&#160;&#160; D A T A</b>
+                    </div>
+                    <div name="registry_additional_data" class="col-12" style="display:table; margin-top:8px; margin-bottom:24px;">
+                        <div style="width: 50%; display: table-cell; border-right: 1px solid black; padding-right: 24px;">
+                            <table class="table">
+                                <tbody>
+                                    <tr t-if="o.type_id">
+                                        <td><b>Type</b></td>
+                                        <td class="text-right">
+                                            <t t-esc="o.type_id.name"/>
+                                        </td>
+                                    </tr>
+                                    <tr t-if="o.orig_ref">
+                                        <td><b>Original Reference</b></td>
+                                        <td class="text-right">
+                                            <t t-esc="o.orig_ref"/>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div style="display: table-cell; padding-left: 24px;">
+                            <table class="table">
+                                <tbody>
+                                    <tr t-if="o.document_date">
+                                        <td><b>Document Date</b></td>
+                                        <td class="text-right">
+                                            <t t-esc="o.document_date"/>
+                                        </td>
+                                    </tr>
+                                    <tr t-if="o.snd_date">
+                                        <td><b>Sent Date</b></td>
+                                        <td class="text-right">
+                                            <t t-esc="o.snd_date"/>
+                                        </td>
+                                    </tr>
+                                    <tr t-if="o.rec_date">
+                                        <td><b>Received Date</b></td>
+                                        <td class="text-right">
+                                            <t t-esc="o.rec_date"/>
+                                        </td>
+                                    </tr>
+                                    <tr t-if="o.expeditor_ref">
+                                        <td><b>Expeditor Reference</b></td>
+                                        <td class="text-right">
+                                            <t t-esc="o.expeditor_ref"/>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </t>
+
+                <t t-if="o.res_registry_attachment_ids" style="margin-bottom:16px;">
+                    <div name="attachments_title" style="border-bottom: 1px solid black;">
+                        <span><b>A T T A C H M E N T S</b></span>
+                    </div>
+                    <table style="width: 100%; margin-top: 8px; margin-bottom: 24px;">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Creation Date</th>
+                                <th>Mime Type</th>
+                                <th>Checksum</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="o.res_registry_attachment_ids" t-as="attachment">
+                                <tr>
+                                    <td><span t-field="attachment.name"/></td>
+                                    <td><span t-field="attachment.create_date"/></td>
+                                    <td><span t-field="attachment.mimetype"/></td>
+                                    <td>
+                                        <t t-set="hash_value" t-esc="attachment._compute_checksum(attachment.datas)"/>
+                                    </td>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
+                </t>
+
+                <t t-if="o.notes">
+                    <div name="notes_title" style="border-bottom: 1px solid black;">
+                        <b>N O T E S</b>
+                    </div>
+                    <div name="notes" class="col-12" style="margin-top:8px; margin-bottom:24px;">
+                        <span t-field="o.notes"/>
+                    </div>
+                </t>
+            </div>
+        </t>
+    </template>
+
+</odoo>

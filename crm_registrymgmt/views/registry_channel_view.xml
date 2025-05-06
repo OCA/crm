@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- © 2016 Iván Todorovich <ivan.todorovich@gmail.com>
+     © 2015 Holger Brunn <hbrunn@therp.nl>
+     © 2009 Sandy Carter <sandy.carter@savoirfairelinux.com>
+     © 2009 Parthiv Patel, Tech Receptives
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+  <data>
+
+    <!-- Views -->
+
+    <record model="ir.ui.view" id="registry_channel_tree_view">
+      <field name="model">registry.channel</field>
+      <field name="arch" type="xml">
+        <tree string="registry Channel">
+          <field name="name"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="registry_channel_form_view">
+      <field name="model">registry.channel</field>
+      <field name="arch" type="xml">
+        <form string="registry Channel">
+            <group>
+                <field name="name"/>
+            </group>
+        </form>
+      </field>
+    </record>
+
+    <!-- Actions -->
+
+    <record model="ir.actions.act_window" id="action_registry_channel_tree_view">
+      <field name="name">registry Channel</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">registry.channel</field>
+      <field name="view_mode">tree,form</field>
+      <field name="view_id" ref="registry_channel_tree_view"/>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+            Click to create a registry channel.
+        </p><p>
+            Use channels to specify the different ways a registry can be sent or received.
+            Eg: The Post, Fax, Email..
+        </p>
+      </field>
+    </record>
+
+    <!-- Menus -->
+
+    <menuitem id="registry_channel_menu"
+              name="Registry Channel"
+              parent="registry_log_config_menu"
+              sequence="5"
+              action="action_registry_channel_tree_view"/>
+
+  </data>
+</odoo>

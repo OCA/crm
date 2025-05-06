@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="module_category_registrymgmt" model="ir.module.category">
+            <field name="name">Registry Management</field>
+            <field name="sequence">10</field>
+        </record>
+
+        <record id="group_registry_portal" model="res.groups">
+            <field name="name">Portal</field>
+            <field name="category_id" ref="module_category_registrymgmt"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_portal'))]"/>
+        </record>
+
+        <record id="group_registry_user" model="res.groups">
+            <field name="name">User</field>
+            <field name="category_id" ref="module_category_registrymgmt"/>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="group_registry_manager" model="res.groups">
+            <field name="name">Manager</field>
+            <field name="category_id" ref="module_category_registrymgmt"/>
+            <field name="implied_ids" eval="[(4, ref('group_registry_user'))]"/>
+            <field name="users" eval="[(4, ref('base.user_admin'))]"/>
+        </record>
+
+    </data>
+</odoo>

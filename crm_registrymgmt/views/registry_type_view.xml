@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+
+    <!-- Views -->
+
+    <record id="registry_type_tree_view" model="ir.ui.view">
+      <field name="name">registry.type.tree.view</field>
+      <field name="model">registry.type</field>
+      <field name="arch" type="xml">
+        <tree string="Registry Type">
+          <field name="name"/>
+          <field name="code"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="registry_type_form_view" model="ir.ui.view">
+      <field name="name">registry.type.form.view</field>
+      <field name="model">registry.type</field>
+      <field name="arch" type="xml">
+        <form string="Registry Type">
+          <sheet>
+            <group>
+              <field name="name"/>
+              <field name="code"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- Actions -->
+
+    <record id="action_registry_type" model="ir.actions.act_window">
+      <field name="name">Registry Type</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">registry.type</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="o_view_nocontent_create">
+          Click to create a registry type.
+        </p>
+        <p>
+          Use types to specify the type of registry sent or received.
+          Eg: Envelope, Parcel, Package...
+        </p>
+      </field>
+    </record>
+
+    <!-- Menus -->
+
+    <menuitem id="registry_type_menu"
+              name="Registry Type"
+              parent="registry_log_config_menu"
+              sequence="4"
+              action="action_registry_type"/>
+
+  </data>
+</odoo>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_partner_form" model="ir.ui.view">
+        <field name="name">Partners (form view)</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="action_get_registers"
+                        type="object" class="oe_stat_button"
+                        icon="fa-filemgmt-files-register"
+                        attrs="{'invisible': [('number_of_total_registers', '=', 0)]}">
+                    <div class="o_stat_info">
+                        <span class="o_stat_value">
+                            <field name="number_of_total_registers"/>
+                            (→<field name="number_of_registers_as_recipent"/>)
+                            (←<field name="number_of_registers_as_sender"/>)
+                        </span>
+                        <span class="o_stat_text">
+                            <span attrs="{'invisible': [('number_of_total_registers', '>', 1)]}"> register</span>
+                            <span attrs="{'invisible': [('number_of_total_registers', '=', 1)]}"> registers</span>
+                        </span>
+                    </div>
+                </button>
+            </xpath>
+        </field>
+    </record>
+</odoo>

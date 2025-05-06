@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <record model="mail.template" id="email_template_res_registry">
+            <field name="name">Registre Mail</field>
+            <field name="model_id" ref="model_res_registry"/>
+            <field name="subject">
+                Registre {{ ctx.get('registre_number', '') }} - {{ ctx.get('company_name', '') }}
+            </field>
+            <field name="email_from">{{ ctx.get('sender_email', '')  }}</field>
+            <field name="email_to">{{ ctx.get('recipient_email', '') }}</field>
+            <field name="lang">{{ ctx.get('partner_lang', 'es_ES') }}</field>
+            <field name="body_html">
+                <![CDATA[
+                    <p>${object.optional_text}</p>
+                ]]>
+            </field>
+            <field name="auto_delete">True</field>
+        </record>
+    </data>
+</odoo>
+

@@ -1,0 +1,1009 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* crm_registrymgmt
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-26 15:40+0000\n"
+"PO-Revision-Date: 2025-03-26 15:40+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: crm_registrymgmt
+#: model:mail.template,body_html:crm_registrymgmt.email_template_res_registry
+msgid ""
+"\n"
+"                \n"
+"                    <p>${object.optional_text}</p>\n"
+"                \n"
+"            "
+msgstr ""
+
+#. module: crm_registrymgmt
+#: model:mail.template,subject:crm_registrymgmt.email_template_res_registry
+msgid ""
+"\n"
+"                Registre {{ ctx.get('registre_number', '') }} - {{ ctx.get('company_name', '') }}\n"
+"            "
+msgstr ""
+
+#. module: crm_registrymgmt
+#: model:ir.actions.report,print_report_name:crm_registrymgmt.action_res_registry_report
+msgid "'%s ' % (object.number.replace('/', '_'))"
+msgstr ""
+
+#. module: crm_registrymgmt
+#: model_terms:ir.ui.view,arch_db:crm_registrymgmt.res_registry_report_document
+msgid "<b>A D D I T I O N A L      D A T A</b>"
+msgstr "<b>D A T O S      A D I C I O N A L E S</b>"
+
+#. module: crm_registrymgmt
+#: model_terms:ir.ui.view,arch_db:crm_registrymgmt.res_registry_report_document
+msgid "<b>Channel</b>"
+msgstr "<b>Canal</b>"
+
+#. module: crm_registrymgmt
+#: model_terms:ir.ui.view,arch_db:crm_registrymgmt.res_registry_report_document
+msgid "<b>Document Date</b>"
+msgstr "<b>Fecha del Documento</b>"
+
+#. module: crm_registrymgmt
+#: model_terms:ir.ui.view,arch_db:crm_registrymgmt.res_registry_report_document
+msgid "<b>Expeditor Reference</b>"
+msgstr "<b>Referencia del Expedidor</b>"
+
+#. module: crm_registrymgmt
+#: model_terms:ir.ui.view,arch_db:crm_registrymgmt.res_registry_report_document
+msgid "<b>Issue: </b>"
+msgstr "<b>Problema: </b>"
+
+#. module: crm_registrymgmt
+#: model_terms:ir.ui.view,arch_db:crm_registrymgmt.res_registry_report_document
+msgid "<b>M A I N      D A T A</b>"
+msgstr "<b>D A T O S       P R I N C I P A L E S</b>"
+
+#. module: crm_registrymgmt
+#: model_terms:ir.ui.view,arch_db:crm_registrymgmt.res_registry_report_document
+msgid "<b>N O T E S</b>"
+msgstr "<b>N O T A S</b>"
+
+#. module: crm_registrymgmt
+#: model_terms:ir.ui.view,arch_db:crm_registrymgmt.res_registry_report_document
+msgid "<b>Original Reference</b>"
+msgstr "<b>Referencia Original</b>"
+
+#. module: crm_registrymgmt
+#: model_terms:ir.ui.view,arch_db:crm_registrymgmt.res_registry_report_document
+msgid "<b>Received Date</b>"
+msgstr "<b>Fecha de Recepción</b>"
+
+#. module: crm_registrymgmt
+#: model_terms:ir.ui.view,arch_db:crm_registrymgmt.res_registry_report_document
+msgid "<b>Recipient</b>"
+msgstr "<b>Destinatario</b>"
+
+#. module: crm_registrymgmt
+#: model_terms:ir.ui.view,arch_db:crm_registrymgmt.res_registry_report_document
+msgid "<b>Sender</b>"
+msgstr "<b>Remitente</b>"
+
+#. module: crm_registrymgmt
+#: model_terms:ir.ui.view,arch_db:crm_registrymgmt.res_registry_report_document
+msgid "<b>Sent Date</b>"
+msgstr "<b>Fecha de Envío</b>"
+
+#. module: crm_registrymgmt
+#: model_terms:ir.ui.view,arch_db:crm_registrymgmt.res_registry_report_document
+msgid "<b>State</b>"
+msgstr "<b>Estado</b>"
+
+#. module: crm_registrymgmt
+#: model_terms:ir.ui.view,arch_db:crm_registrymgmt.res_registry_report_document
+msgid "<b>Tracking Reference</b>"
+msgstr "<b>Referencia de Seguimiento</b>"
+
+#. module: crm_registrymgmt
+#: model_terms:ir.ui.view,arch_db:crm_registrymgmt.res_registry_report_document
+msgid "<b>Type</b>"
+msgstr "<b>Tipo</b>"
+
+#. module: crm_registrymgmt
+#: model_terms:ir.ui.view,arch_db:crm_registrymgmt.res_registry_report_document
+msgid "<b>registry Date</b>"
+msgstr "<b>Fecha del Registro</b>"
+
+#. module: crm_registrymgmt
+#: model_terms:ir.ui.view,arch_db:crm_registrymgmt.view_partner_form
+msgid ""
+"<span class=\"o_stat_text\">\n"
+"                            <span attrs=\"{'invisible': [('number_of_total_registers', '&gt;', 1)]}\"> register</span>\n"
+"                            <span attrs=\"{'invisible': [('number_of_total_registers', '=', 1)]}\"> registers</span>\n"
+"                        </span>"
+msgstr ""
+"<span class=\"o_stat_text\">\n"
+"                            <span attrs=\"{'invisible': [('number_of_total_registers', '&gt;', 1)]}\"> Registro</span>\n"
+"                            <span attrs=\"{'invisible': [('number_of_total_registers', '=', 1)]}\"> Registros</span>\n"
+"                        </span>"
+
+#. module: crm_registrymgmt
+#: model_terms:ir.ui.view,arch_db:crm_registrymgmt.res_registry_report_document
+msgid "<span><b>A T T A C H M E N T S</b></span>"
+msgstr "<span><b>A D J U N T O S</b></span>"
+
+#. module: crm_registrymgmt
+#: model_terms:ir.ui.view,arch_db:crm_registrymgmt.res_registry_report_document
+msgid "<span>I N</span>"
+msgstr "<span>E N T R A D A</span>"
+
+#. module: crm_registrymgmt
+#: model_terms:ir.ui.view,arch_db:crm_registrymgmt.res_registry_report_document
+msgid "<span>O U T</span>"
+msgstr "<span>S A L I D A</span>"
+
+#. module: crm_registrymgmt
+#: model_terms:ir.ui.view,arch_db:crm_registrymgmt.res_registry_report_document
+msgid ""
+"<span>R E G I S T R Y</span>\n"
+"                        <span>     </span>"
+msgstr ""
+"<span>R E G I S T R O</span>\n"
+"                        <span>     </span>"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry__message_needaction
+msgid "Action Needed"
+msgstr "Acción Necesaria"
+
+#. module: crm_registrymgmt
+#: model_terms:ir.ui.view,arch_db:crm_registrymgmt.res_registry_form_view
+msgid "Additional Information"
+msgstr "Información Adicional"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__alias_domain
+msgid "Alias Domain"
+msgstr "Dominio Alias"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__module_mail_plugin
+msgid "Allow integration with the mail plugins"
+msgstr "Permitir integración con los complementos de correo"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__allow_number_edition
+msgid "Allow number edition"
+msgstr "Permitir edición de número"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__module_google_calendar
+msgid "Allow the users to synchronize their calendar  with Google Calendar"
+msgstr "Permitir a los usuarios sincronizar su calendario con Google Calendar"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__module_microsoft_calendar
+msgid "Allow the users to synchronize their calendar with Outlook Calendar"
+msgstr ""
+"Permitir a los usuarios sincronizar su calendario con Outlook Calendar"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,help:crm_registrymgmt.field_res_registry_config_settings__allow_number_edition
+msgid "Allow to edit the register number during creation."
+msgstr "Permitir editar el número de registro durante la creación."
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__module_base_import
+msgid "Allow users to import data from CSV/XLS/XLSX/ODS files"
+msgstr ""
+"Permitir a los usuarios importar datos desde archivos CSV/XLS/XLSX/ODS"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,help:crm_registrymgmt.field_res_registry_config_settings__group_multi_currency
+msgid "Allows to work in a multi currency environment"
+msgstr "Permite trabajar en un entorno multimoneda"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__module_voip
+msgid "Asterisk (VoIP)"
+msgstr ""
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry__message_attachment_count
+msgid "Attachment Count"
+msgstr "Cantidad de Adjuntos"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry__res_registry_attachment_ids
+#: model_terms:ir.ui.view,arch_db:crm_registrymgmt.res_registry_form_view
+msgid "Attachments"
+msgstr "Adjuntos"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,help:crm_registrymgmt.field_res_registry__number
+msgid "Auto Generated Number of registry."
+msgstr "Número de registro generado automáticamente."
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__secondary_color
+msgid "Button Color"
+msgstr "Color del Botón"
+
+#. module: crm_registrymgmt
+#: model_terms:ir.ui.view,arch_db:crm_registrymgmt.registrymgmt_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:crm_registrymgmt.view_res_registry_mail_wizard_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_registry_category__name
+msgid "Category Name"
+msgstr "Nombre de la Categoría"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry__channel_id
+#: model_terms:ir.ui.view,arch_db:crm_registrymgmt.res_registry_form_view
+msgid "Channel"
+msgstr "Canal"
+
+#. module: crm_registrymgmt
+#: model_terms:ir.ui.view,arch_db:crm_registrymgmt.res_registry_report_document
+msgid "Checksum"
+msgstr "Suma de verificación"
+
+#. module: crm_registrymgmt
+#: model_terms:ir.actions.act_window,help:crm_registrymgmt.action_registry_category
+msgid "Click to create a registry category."
+msgstr "Haga clic para crear una categoría de registro."
+
+#. module: crm_registrymgmt
+#: model_terms:ir.actions.act_window,help:crm_registrymgmt.action_registry_channel_tree_view
+msgid "Click to create a registry channel."
+msgstr "Haga clic para crear un canal de registro."
+
+#. module: crm_registrymgmt
+#: model_terms:ir.actions.act_window,help:crm_registrymgmt.action_registry_type
+msgid "Click to create a registry type."
+msgstr "Haga clic para crear un tipo de registro."
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_registry_type__code
+msgid "Code"
+msgstr "Código"
+
+#. module: crm_registrymgmt
+#: model:ir.model.constraint,message:crm_registrymgmt.constraint_registry_type_code_uniq
+msgid "Code must be unique !"
+msgstr "¡El código debe ser único!"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__company_id
+msgid "Company"
+msgstr "Empresa"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__company_informations
+msgid "Company Informations"
+msgstr "Información de la Empresa"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__company_name
+msgid "Company Name"
+msgstr "Nombre de la Empresa"
+
+#. module: crm_registrymgmt
+#: model:ir.ui.menu,name:crm_registrymgmt.registry_log_config_menu
+msgid "Configuration"
+msgstr "Configuración"
+
+#. module: crm_registrymgmt
+#: model:ir.model,name:crm_registrymgmt.model_res_registry_config_settings
+msgid "Configuration of Register Management"
+msgstr "Configuración de la Gestión de Registros"
+
+#. module: crm_registrymgmt
+#: model:ir.model,name:crm_registrymgmt.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_registry_category__create_uid
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_registry_channel__create_uid
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_registry_type__create_uid
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry__create_uid
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__create_uid
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_mail_wizard__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_registry_category__create_date
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_registry_channel__create_date
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_registry_type__create_date
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry__create_date
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__create_date
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_mail_wizard__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: crm_registrymgmt
+#: model_terms:ir.ui.view,arch_db:crm_registrymgmt.res_registry_report_document
+msgid "Creation Date"
+msgstr "Fecha creación"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__external_email_server_default
+msgid "Custom Email Servers"
+msgstr "Servidores de Correo Personalizados"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__report_footer
+msgid "Custom Report Footer"
+msgstr "Pie de Informe Personalizado"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__auth_signup_uninvited
+msgid "Customer Account"
+msgstr "Cuenta de Cliente"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__user_default_rights
+msgid "Default Access Rights"
+msgstr "Derechos de Acceso Predeterminados"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_registry_category__display_name
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_registry_channel__display_name
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_registry_type__display_name
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry__display_name
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__display_name
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_mail_wizard__display_name
+msgid "Display Name"
+msgstr "Nombre para Mostrar"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry__document_date
+msgid "Document Date"
+msgstr "Fecha del Documento"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__external_report_layout_id
+msgid "Document Template"
+msgstr "Plantilla del Documento"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields.selection,name:crm_registrymgmt.selection__res_registry__state__draft
+#: model_terms:ir.ui.view,arch_db:crm_registrymgmt.res_registry_form_view
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__auth_signup_reset_password
+msgid "Enable password reset from Login page"
+msgstr ""
+"Permitir restablecimiento de contraseña desde la página de inicio de sesión"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry__expeditor_ref
+msgid "Expeditor Reference"
+msgstr "Referencia del Expedidor"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__fail_counter
+msgid "Fail Mail"
+msgstr "Correo Fallido"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (Socios)"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,help:crm_registrymgmt.field_res_registry_config_settings__report_footer
+msgid "Footer text displayed at the bottom of all reports."
+msgstr ""
+"Texto del pie de página mostrado en la parte inferior de todos los informes."
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__module_base_geolocalize
+msgid "GeoLocalize"
+msgstr "Geolocalizar"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__module_product_images
+msgid "Get product pictures using barcode"
+msgstr "Obtener imágenes de productos usando código de barras"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry__has_message
+msgid "Has Message"
+msgstr "Tiene Mensaje"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__primary_color
+msgid "Header Color"
+msgstr "Color del Encabezado"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_registry_category__id
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_registry_channel__id
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_registry_type__id
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry__id
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__id
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_mail_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields.selection,name:crm_registrymgmt.selection__res_registry__move__in
+msgid "IN"
+msgstr "ENTRADA"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,help:crm_registrymgmt.field_res_registry__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Si está marcado, los nuevos mensajes requieren su atención."
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,help:crm_registrymgmt.field_res_registry__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si está marcado, algunos mensajes tienen un error de entrega."
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,help:crm_registrymgmt.field_res_registry_config_settings__alias_domain
+msgid ""
+"If you have setup a catch-all email domain redirected to the Odoo server, "
+"enter the domain name here."
+msgstr ""
+"Si ha configurado un dominio de correo electrónico catch-all redirigido al "
+"servidor Odoo, ingrese el nombre del dominio aquí."
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,help:crm_registrymgmt.field_res_registry_config_settings__use_twilio_rtc_servers
+msgid "If you want to use twilio as TURN/STUN server provider"
+msgstr "Si desea usar Twilio como proveedor de servidores TURN/STUN"
+
+#. module: crm_registrymgmt
+#: model:ir.actions.act_window,name:crm_registrymgmt.action_res_registry_in_tree_view
+#: model:ir.ui.menu,name:crm_registrymgmt.res_registry_in_menu
+msgid "Inbound Registries"
+msgstr "Registros de Entrada"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,help:crm_registrymgmt.field_res_registry__move
+msgid "Incoming or Outgoing registry."
+msgstr "Registro de Entrada o Salida."
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry__message_is_follower
+msgid "Is Follower"
+msgstr "Es Seguidor"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__module_auth_ldap
+msgid "LDAP Authentication"
+msgstr "Autenticación LDAP"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_registry_category____last_update
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_registry_channel____last_update
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_registry_type____last_update
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry____last_update
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings____last_update
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_mail_wizard____last_update
+msgid "Last Modified on"
+msgstr "Última Modificación el"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_registry_category__write_uid
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_registry_channel__write_uid
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_registry_type__write_uid
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry__write_uid
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__write_uid
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_mail_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Última Actualización por"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_registry_category__write_date
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_registry_channel__write_date
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_registry_type__write_date
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry__write_date
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__write_date
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_mail_wizard__write_date
+msgid "Last Updated on"
+msgstr "Última Actualización el"
+
+#. module: crm_registrymgmt
+#: model:ir.module.category,name:crm_registrymgmt.res_registrymgmt_module_category
+msgid "Letter Management"
+msgstr "Gestión de Cartas"
+
+#. module: crm_registrymgmt
+#: model:ir.model,name:crm_registrymgmt.model_res_registry
+msgid "Log of Entry Movements"
+msgstr "Registro de Movimientos de Entrada"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Adjunto Principal"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__module_account_inter_company_rules
+msgid "Manage Inter Company"
+msgstr "Gestionar Interempresa"
+
+#. module: crm_registrymgmt
+#: model:res.groups,name:crm_registrymgmt.res_registrymgmt_group_manager
+msgid "Manager"
+msgstr "Gerente"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry__message_has_error
+msgid "Message Delivery error"
+msgstr "Error de Entrega de Mensaje"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry__message_ids
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: crm_registrymgmt
+#: model_terms:ir.ui.view,arch_db:crm_registrymgmt.res_registry_report_document
+msgid "Mime Type"
+msgstr "Tipo"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry__move
+msgid "Move"
+msgstr "Movimiento"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__group_multi_currency
+msgid "Multi-Currencies"
+msgstr "Multimonedas"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_registry_channel__name
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_registry_type__name
+#: model_terms:ir.ui.view,arch_db:crm_registrymgmt.res_registry_report_document
+msgid "Name"
+msgstr "Nombre"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry__notes
+#: model_terms:ir.ui.view,arch_db:crm_registrymgmt.res_registry_form_view
+msgid "Notes"
+msgstr "Notas"
+
+#. module: crm_registrymgmt
+#. odoo-python
+#: code:addons/crm_registrymgmt/wizards/res_registry_mail_wizard.py:0
+#, python-format
+msgid "Notice of registration. Report attached."
+msgstr "Aviso de registro. Informe adjunto."
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_partner__number_of_total_registers
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_users__number_of_total_registers
+msgid "Num. registers"
+msgstr "Núm. registros"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_partner__number_of_registers_as_recipent
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_users__number_of_registers_as_recipent
+msgid "Num. registers as recipient"
+msgstr "Núm. registros como destinatario"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_partner__number_of_registers_as_sender
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_users__number_of_registers_as_sender
+msgid "Num. registers as sender"
+msgstr "Núm. registros como remitente"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry__number
+msgid "Number"
+msgstr "Número"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Número de Acciones"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__active_user_count
+msgid "Number of Active Users"
+msgstr "Número de Usuarios Activos"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__company_count
+msgid "Number of Companies"
+msgstr "Número de Empresas"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__language_count
+msgid "Number of Languages"
+msgstr "Número de Idiomas"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry__message_has_error_counter
+msgid "Number of errors"
+msgstr "Número de errores"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,help:crm_registrymgmt.field_res_registry__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Número de mensajes que requieren acción"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,help:crm_registrymgmt.field_res_registry__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Número de mensajes con error de entrega"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields.selection,name:crm_registrymgmt.selection__res_registry__move__out
+msgid "OUT"
+msgstr "SALIDA"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_mail_wizard__optional_text
+msgid "Optional Text"
+msgstr "Texto Opcional"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry__orig_ref
+msgid "Original Reference"
+msgstr "Referencia Original"
+
+#. module: crm_registrymgmt
+#: model:ir.actions.act_window,name:crm_registrymgmt.action_res_registry_out_tree_view
+#: model:ir.ui.menu,name:crm_registrymgmt.res_registry_out_menu
+msgid "Outbound Registries"
+msgstr "Registros de Salida"
+
+#. module: crm_registrymgmt
+#: model:ir.ui.menu,name:crm_registrymgmt.register_parameters_menu
+msgid "Parameters"
+msgstr "Parámetros"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry__parent_id
+msgid "Parent"
+msgstr "Padre"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__module_partner_autocomplete
+msgid "Partner Autocomplete"
+msgstr "Autocompletar Socio"
+
+#. module: crm_registrymgmt
+#: model:res.groups,name:crm_registrymgmt.res_registrymgmt_group_portal
+msgid "Portal"
+msgstr ""
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__profiling_enabled_until
+msgid "Profiling enabled until"
+msgstr "Perfilado habilitado hasta"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry__rec_date
+msgid "Received Date"
+msgstr "Fecha de Recepción"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry__recipient_partner_id
+msgid "Recipient"
+msgstr "Destinatario"
+
+#. module: crm_registrymgmt
+#: model_terms:ir.ui.view,arch_db:crm_registrymgmt.registrymgmt_config_settings_view_form
+msgid "Register Management"
+msgstr "Gestión de Registros"
+
+#. module: crm_registrymgmt
+#: model:ir.actions.act_window,name:crm_registrymgmt.registrymgmt_configuration_action
+msgid "Register Management Configuration"
+msgstr "Configuración de la Gestión de Registros"
+
+#. module: crm_registrymgmt
+#: model_terms:ir.ui.view,arch_db:crm_registrymgmt.registrymgmt_config_settings_view_form
+msgid "Register Management Settings"
+msgstr "Configuración de la Gestión de Registros"
+
+#. module: crm_registrymgmt
+#. odoo-python
+#: code:addons/crm_registrymgmt/models/res_partner.py:0
+#, python-format
+msgid "Registers"
+msgstr "Registros"
+
+#. module: crm_registrymgmt
+#: model:mail.template,name:crm_registrymgmt.email_template_res_registry
+msgid "Registre Mail"
+msgstr ""
+
+#. module: crm_registrymgmt
+#: model:ir.ui.menu,name:crm_registrymgmt.res_registry_menu
+msgid "Registries"
+msgstr "Registros"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_partner__total_res_registry_ids
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_users__total_res_registry_ids
+msgid "Registry"
+msgstr "Registro"
+
+#. module: crm_registrymgmt
+#: model:ir.actions.act_window,name:crm_registrymgmt.action_registry_category
+#: model:ir.model,name:crm_registrymgmt.model_registry_category
+#: model:ir.ui.menu,name:crm_registrymgmt.registry_category_menu
+msgid "Registry Category"
+msgstr "Categoría de Registro"
+
+#. module: crm_registrymgmt
+#: model:ir.ui.menu,name:crm_registrymgmt.registry_channel_menu
+msgid "Registry Channel"
+msgstr "Canal de Registro"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry__date
+msgid "Registry Date"
+msgstr "Fecha del Registro"
+
+#. module: crm_registrymgmt
+#: model:ir.ui.menu,name:crm_registrymgmt.res_registry_log_menu
+msgid "Registry Management"
+msgstr "Gestión de Registros"
+
+#. module: crm_registrymgmt
+#: model:ir.actions.report,name:crm_registrymgmt.action_res_registry_report
+msgid "Registry Report"
+msgstr "Informe de Registro"
+
+#. module: crm_registrymgmt
+#: model:ir.actions.act_window,name:crm_registrymgmt.action_registry_type
+#: model:ir.model,name:crm_registrymgmt.model_registry_type
+#: model:ir.ui.menu,name:crm_registrymgmt.registry_type_menu
+#: model_terms:ir.ui.view,arch_db:crm_registrymgmt.registry_type_form_view
+#: model_terms:ir.ui.view,arch_db:crm_registrymgmt.registry_type_tree_view
+msgid "Registry Type"
+msgstr "Tipo de Registro"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_partner__recipient_res_registry_ids
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_users__recipient_res_registry_ids
+msgid "Registry as recipient"
+msgstr "Registro como destinatario"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_partner__sender_res_registry_ids
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_users__sender_res_registry_ids
+msgid "Registry as sender"
+msgstr "Registro como remitente"
+
+#. module: crm_registrymgmt
+#: model:ir.model,name:crm_registrymgmt.model_registry_channel
+msgid "Registry channel"
+msgstr "Canal de Registro"
+
+#. module: crm_registrymgmt
+#: model:ir.model,name:crm_registrymgmt.model_res_registry_mail_wizard
+msgid "Res Registry Mail Wizard"
+msgstr "Asistente de Correo de Registro"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__restrict_template_rendering
+msgid "Restrict Template Rendering"
+msgstr "Restringir Renderizado de Plantillas"
+
+#. module: crm_registrymgmt
+#: model_terms:ir.ui.view,arch_db:crm_registrymgmt.registrymgmt_config_settings_view_form
+msgid "Save"
+msgstr "Guardar"
+
+#. module: crm_registrymgmt
+#: model_terms:ir.ui.view,arch_db:crm_registrymgmt.view_res_registry_mail_wizard_form
+msgid "Send"
+msgstr "Enviar"
+
+#. module: crm_registrymgmt
+#: model:ir.actions.act_window,name:crm_registrymgmt.action_res_registry_mail_wizard
+#: model_terms:ir.ui.view,arch_db:crm_registrymgmt.res_registry_form_view
+#: model_terms:ir.ui.view,arch_db:crm_registrymgmt.view_res_registry_mail_wizard_form
+msgid "Send Email"
+msgstr "Enviar Correo"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry__sender_partner_id
+msgid "Sender"
+msgstr "Remitente"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry__snd_date
+msgid "Sent Date"
+msgstr "Fecha de Envío"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__show_effect
+msgid "Show Effect"
+msgstr "Mostrar Efecto"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry__state
+msgid "State"
+msgstr "Estado"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry__name
+msgid "Subject"
+msgstr "Asunto"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,help:crm_registrymgmt.field_res_registry__name
+msgid "Subject of registry."
+msgstr "Asunto del registro."
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__module_google_gmail
+msgid "Support Gmail Authentication"
+msgstr "Soporte para Autenticación de Gmail"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__module_microsoft_outlook
+msgid "Support Outlook Authentication"
+msgstr "Soporte para Autenticación de Outlook"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry__category_ids
+msgid "Tags"
+msgstr "Etiquetas"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__auth_signup_template_user_id
+msgid "Template user for new users created through signup"
+msgstr "Usuario plantilla para nuevos usuarios creados a través del registro"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,help:crm_registrymgmt.field_res_registry_mail_wizard__optional_text
+msgid "Text that will be included in the email."
+msgstr "Texto que se incluirá en el correo."
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,help:crm_registrymgmt.field_res_registry__document_date
+msgid "The date of the document itself."
+msgstr "La fecha del documento en sí."
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,help:crm_registrymgmt.field_res_registry__rec_date
+msgid "The date the registry was received."
+msgstr "La fecha en que se recibió el registro."
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,help:crm_registrymgmt.field_res_registry__snd_date
+msgid "The date the registry was sent."
+msgstr "La fecha en que se envió el registro."
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,help:crm_registrymgmt.field_res_registry__date
+msgid "The registry's date."
+msgstr "La fecha del registro."
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry__track_ref
+msgid "Tracking Reference"
+msgstr "Referencia de Seguimiento"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__module_base_gengo
+msgid "Translate Your Website with Gengo"
+msgstr "Traduce tu Sitio Web con Gengo"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__twilio_account_token
+msgid "Twilio Account Auth Token"
+msgstr "Token de Autenticación de Cuenta de Twilio"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__twilio_account_sid
+msgid "Twilio Account SID"
+msgstr "SID de Cuenta de Twilio"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry__type_id
+msgid "Type"
+msgstr "Tipo"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__module_web_unsplash
+msgid "Unsplash Image Library"
+msgstr "Biblioteca de Imágenes Unsplash"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__use_twilio_rtc_servers
+msgid "Use Twilio ICE servers"
+msgstr "Usar servidores ICE de Twilio"
+
+#. module: crm_registrymgmt
+#: model_terms:ir.actions.act_window,help:crm_registrymgmt.action_registry_category
+msgid ""
+"Use categories to classify registries, e.g., Classified, Confidential, "
+"Personal."
+msgstr ""
+"Utilice categorías para clasificar registros, por ejemplo, Clasificado, "
+"Confidencial, Personal."
+
+#. module: crm_registrymgmt
+#: model_terms:ir.actions.act_window,help:crm_registrymgmt.action_registry_channel_tree_view
+msgid ""
+"Use channels to specify the different ways a registry can be sent or received.\n"
+"            Eg: The Post, Fax, Email.."
+msgstr ""
+"Utilice canales para especificar las diferentes formas en que se puede enviar o recibir un registro.\n"
+"            Ej: El Correo, Fax, Correo Electrónico.."
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__module_auth_oauth
+msgid "Use external authentication providers (OAuth)"
+msgstr "Usar proveedores de autenticación externa (OAuth)"
+
+#. module: crm_registrymgmt
+#: model_terms:ir.actions.act_window,help:crm_registrymgmt.action_registry_type
+msgid ""
+"Use types to specify the type of registry sent or received.\n"
+"          Eg: Envelope, Parcel, Package..."
+msgstr ""
+"Utilice tipos para especificar el tipo de registro enviado o recibido.\n"
+"          Ej: Sobre, Paquete, Bulto..."
+
+#. module: crm_registrymgmt
+#: model:res.groups,name:crm_registrymgmt.res_registrymgmt_group_user
+msgid "User"
+msgstr "Usuario"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,help:crm_registrymgmt.field_res_registry_config_settings__restrict_template_rendering
+msgid ""
+"Users will still be able to render templates.\n"
+"However only Mail Template Editors will be able to create new dynamic templates or modify existing ones."
+msgstr ""
+"Los usuarios aún podrán renderizar plantillas.\n"
+"Sin embargo, solo los Editores de Plantillas de Correo podrán crear nuevas plantillas dinámicas o modificar las existentes."
+
+#. module: crm_registrymgmt
+#: model_terms:ir.ui.view,arch_db:crm_registrymgmt.res_registry_form_view
+msgid "Validate"
+msgstr "Validar"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields.selection,name:crm_registrymgmt.selection__res_registry__state__validated
+msgid "Validated"
+msgstr "Validado"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry_config_settings__module_google_recaptcha
+msgid "reCAPTCHA"
+msgstr ""
+
+#. module: crm_registrymgmt
+#: model:ir.actions.act_window,name:crm_registrymgmt.action_registry_channel_tree_view
+#: model_terms:ir.ui.view,arch_db:crm_registrymgmt.registry_channel_form_view
+#: model_terms:ir.ui.view,arch_db:crm_registrymgmt.registry_channel_tree_view
+msgid "registry Channel"
+msgstr "Canal de registro"
+
+#. module: crm_registrymgmt
+#: model:ir.model.fields,field_description:crm_registrymgmt.field_res_registry__child_line
+msgid "registry Lines"
+msgstr "Líneas de registro"

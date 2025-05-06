@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="registrymgmt_config_settings_view_form" model="ir.ui.view">
+        <field name="name">Register Management parameters</field>
+        <field name="model">res.registry.config.settings</field>
+        <field name="arch" type="xml">
+            <form string="Register Management Settings" class="oe_form_configuration">
+                <group string="Register Management">
+                    <field name="allow_number_edition"/>
+                </group>
+                <footer>
+                    <button string="Save" type="object" name="execute" class="oe_highlight"/>
+                    <button string="Cancel" class="oe_link" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="registrymgmt_configuration_action" model="ir.actions.act_window">
+        <field name="name">Register Management Configuration</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.registry.config.settings</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="register_parameters_menu"
+              name="Parameters"
+              parent="registry_log_config_menu"
+              sequence="1"
+              action="registrymgmt_configuration_action"/>
+</odoo>
