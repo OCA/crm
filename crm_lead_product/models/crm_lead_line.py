@@ -23,7 +23,9 @@ class CrmLeadLine(models.Model):
 
     lead_id = fields.Many2one("crm.lead", string="Lead")
     name = fields.Char("Description", required=True, translate=True)
-    product_id = fields.Many2one("product.product", string="Product", index=True)
+    product_id = fields.Many2one(
+        "product.product", string="Product", index=True, domain=[("sale_ok", "=", True)]
+    )
     category_id = fields.Many2one(
         "product.category", string="Product Category", index=True
     )
