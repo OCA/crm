@@ -3,7 +3,7 @@
         <field name="model">crm.lead</field>
         <field name="inherit_id" ref="crm.view_crm_case_opportunities_filter" />
         <field name="arch" type="xml">
-            <filter name="inactive" position="before">
+            <filter name="activities_upcoming_all" position="before">
                 <filter
                     string="Archived or Not"
                     name="any_active_flag"
