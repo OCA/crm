@@ -1,0 +1,1 @@
+odoo-addon-partner_phonecall_schedule @ git+https://github.com/OCA/partner-contact.git@refs/pull/2015/head#subdirectory=partner_phonecall_schedule
