@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="account_analytic_line_view_tree" model="ir.ui.view">
+        <field name="model">account.analytic.line</field>
+        <field name="inherit_id" ref="analytic.view_account_analytic_line_tree" />
+        <field name="arch" type="xml">
+            <field name="account_id" position="after">
+                <field name="claim_id" />
+            </field>
+        </field>
+    </record>
+
+    <record id="account_analytic_line_view_form" model="ir.ui.view">
+        <field name="model">account.analytic.line</field>
+        <field name="inherit_id" ref="analytic.view_account_analytic_line_form" />
+        <field name="arch" type="xml">
+            <group name="amount" position="after">
+                <group name="claim" string="Claim">
+                    <field name="claim_id" />
+                </group>
+            </group>
+        </field>
+    </record>
+    <record id="account_analytic_line_view_search" model="ir.ui.view">
+        <field name="model">account.analytic.line</field>
+        <field name="inherit_id" ref="analytic.view_account_analytic_line_filter" />
+        <field name="arch" type="xml">
+            <field name="plan_id" position="after">
+                <field name="claim_id" />
+            </field>
+            <group name="groupby" position="before">
+                <filter
+                    string="With Claim"
+                    name="with_claim"
+                    context="{}"
+                    domain="[('claim_id', '!=', False)]"
+                />
+                <filter
+                    string="Without Claim"
+                    name="without_claim"
+                    context="{}"
+                    domain="[('claim_id', '=', False)]"
+                />
+            </group>
+            <group name="groupby" position="inside">
+                <filter
+                    string="Claim"
+                    context="{'group_by': 'claim_id'}"
+                    name="group_claim"
+                />
+            </group>
+        </field>
+    </record>
+</odoo>
