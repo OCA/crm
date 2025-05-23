@@ -585,6 +585,11 @@ msgid "Priority"
 msgstr ""
 
 #. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__rating_ids
+msgid "Ratings"
+msgstr ""
+
+#. module: crm_claim
 #: model_terms:ir.actions.act_window,help:crm_claim.crm_claim_category_claim0
 msgid ""
 "Record and track your customers' claims.\n"
