@@ -33,13 +33,6 @@ msgid "# of Claims"
 msgstr "# Nombre de demandes"
 
 #. module: crm_claim
-#. odoo-python
-#: code:addons/crm_claim/models/crm_claim.py:0
-#, python-format
-msgid "%s (copy)"
-msgstr "%s (copie)"
-
-#. module: crm_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
 msgid "Action Description..."
 msgstr "Description de l'action..."
@@ -264,8 +257,8 @@ msgid ""
 "            claims. Some examples of claims can be: preventive action,\n"
 "            corrective action."
 msgstr ""
-"Créez des catégories de sinistres pour mieux gérer et classer vos sinistres."
-"\n"
+"Créez des catégories de sinistres pour mieux gérer et classer vos "
+"sinistres.\n"
 "            réclamations. Voici quelques exemples de réclamations : action "
 "préventive,\n"
 "            action corrective."
@@ -420,6 +413,7 @@ msgstr ""
 
 #. module: crm_claim
 #: model:ir.model.fields,help:crm_claim.field_crm_claim__message_has_error
+#: model:ir.model.fields,help:crm_claim.field_crm_claim__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
 msgstr ""
 "Si cette case est cochée, certains messages sont accompagnés d'une erreur de "
@@ -443,14 +437,6 @@ msgstr "En cours"
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_is_follower
 msgid "Is Follower"
 msgstr "Est un suiveur"
-
-#. module: crm_claim
-#: model:ir.model.fields,field_description:crm_claim.field_crm_claim____last_update
-#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category____last_update
-#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report____last_update
-#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage____last_update
-msgid "Last Modified on"
-msgstr ""
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__write_uid
@@ -479,11 +465,6 @@ msgstr ""
 #: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim_report__priority__0
 msgid "Low"
 msgstr "Bas"
-
-#. module: crm_claim
-#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_main_attachment_id
-msgid "Main Attachment"
-msgstr "Pièce jointe principale"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_has_error
@@ -549,13 +530,6 @@ msgstr "Résumé de l'activité suivante"
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__activity_type_id
 msgid "Next Activity Type"
 msgstr "Type d'activité suivante"
-
-#. module: crm_claim
-#. odoo-python
-#: code:addons/crm_claim/models/crm_claim.py:0
-#, python-format
-msgid "No Subject"
-msgstr "Pas de sujet"
 
 #. module: crm_claim
 #: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim__priority__1
@@ -630,12 +604,19 @@ msgid "Priority"
 msgstr "Priorités"
 
 #. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__rating_ids
+msgid "Ratings"
+msgstr ""
+
+#. module: crm_claim
 #: model_terms:ir.actions.act_window,help:crm_claim.crm_claim_category_claim0
 msgid ""
 "Record and track your customers' claims.\n"
 "                Claims may be linked to a sales order or a lot.\n"
-"                You can send emails with attachments and keep the full history for a claim (emails sent, intervention type and so on).\n"
-"                Claims may automatically be linked to an email address using the mail gateway module."
+"                You can send emails with attachments and keep the full "
+"history for a claim (emails sent, intervention type and so on).\n"
+"                Claims may automatically be linked to an email address using "
+"the mail gateway module."
 msgstr ""
 "Enregistrez et suivez les réclamations de vos clients.\n"
 "                Les réclamations peuvent être liées à une commande client ou "
@@ -696,6 +677,11 @@ msgstr "Cause première"
 #: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
 msgid "Root Causes"
 msgstr "Cause première"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__team_id
@@ -849,3 +835,14 @@ msgstr ""
 "            réclamation introduite dans le système. Les étapes définissent "
 "toutes les étapes\n"
 "            nécessaires à la résolution d'une réclamation."
+
+#, python-format
+#~ msgid "%s (copy)"
+#~ msgstr "%s (copie)"
+
+#~ msgid "Main Attachment"
+#~ msgstr "Pièce jointe principale"
+
+#, python-format
+#~ msgid "No Subject"
+#~ msgstr "Pas de sujet"

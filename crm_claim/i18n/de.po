@@ -33,13 +33,6 @@ msgid "# of Claims"
 msgstr "# Reklamationen"
 
 #. module: crm_claim
-#. odoo-python
-#: code:addons/crm_claim/models/crm_claim.py:0
-#, python-format
-msgid "%s (copy)"
-msgstr "%s (Kopie)"
-
-#. module: crm_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
 msgid "Action Description..."
 msgstr "Beschreibung der Aktion..."
@@ -416,6 +409,7 @@ msgstr ""
 
 #. module: crm_claim
 #: model:ir.model.fields,help:crm_claim.field_crm_claim__message_has_error
+#: model:ir.model.fields,help:crm_claim.field_crm_claim__message_has_sms_error
 msgid "If checked, some messages have a delivery error."
 msgstr ""
 "Wenn dieses Kontrollkästchen aktiviert ist, weisen einige Nachrichten einen "
@@ -440,14 +434,6 @@ msgstr "In Arbeit"
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_is_follower
 msgid "Is Follower"
 msgstr "Ist Follower"
-
-#. module: crm_claim
-#: model:ir.model.fields,field_description:crm_claim.field_crm_claim____last_update
-#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category____last_update
-#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report____last_update
-#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage____last_update
-msgid "Last Modified on"
-msgstr "Zuletzt bearbeitet am"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__write_uid
@@ -476,11 +462,6 @@ msgstr ""
 #: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim_report__priority__0
 msgid "Low"
 msgstr "Niedrig"
-
-#. module: crm_claim
-#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_main_attachment_id
-msgid "Main Attachment"
-msgstr "Hauptanhang"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_has_error
@@ -546,13 +527,6 @@ msgstr "Zusammenfassung der nächsten Aktivität"
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__activity_type_id
 msgid "Next Activity Type"
 msgstr "Typ der nächsten Aktivität"
-
-#. module: crm_claim
-#. odoo-python
-#: code:addons/crm_claim/models/crm_claim.py:0
-#, python-format
-msgid "No Subject"
-msgstr "Kein Betreff"
 
 #. module: crm_claim
 #: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim__priority__1
@@ -627,6 +601,11 @@ msgid "Priority"
 msgstr "Priorität"
 
 #. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__rating_ids
+msgid "Ratings"
+msgstr ""
+
+#. module: crm_claim
 #: model_terms:ir.actions.act_window,help:crm_claim.crm_claim_category_claim0
 msgid ""
 "Record and track your customers' claims.\n"
@@ -695,6 +674,11 @@ msgstr "Grundursache"
 #: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
 msgid "Root Causes"
 msgstr "Grundursachen"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__team_id
@@ -847,3 +831,17 @@ msgstr ""
 "            Reklamation im System zu kategorisieren. Die Stadien definieren "
 "alle Schritte, die\n"
 "            für die Lösung einer Reklamation erforderlich sind."
+
+#, python-format
+#~ msgid "%s (copy)"
+#~ msgstr "%s (Kopie)"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Zuletzt bearbeitet am"
+
+#~ msgid "Main Attachment"
+#~ msgstr "Hauptanhang"
+
+#, python-format
+#~ msgid "No Subject"
+#~ msgstr "Kein Betreff"
