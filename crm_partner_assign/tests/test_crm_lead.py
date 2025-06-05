@@ -1,10 +1,10 @@
 # Copyright 2023 Moduon Team S.L.
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl-3.0)
 
-from odoo.tests.common import TransactionCase
+from odoo.addons.base.tests.common import BaseCommon
 
 
-class CRMLead(TransactionCase):
+class CRMLead(BaseCommon):
     def test_crm_lead_date_partner_assign(self):
         """Test that `date_partner_assign` is set when assigning a partner."""
         lead = self.env["crm.lead"].create(
