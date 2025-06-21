@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: crm (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-22 15:09+0000\n"
-"PO-Revision-Date: 2024-11-13 10:06+0000\n"
+"PO-Revision-Date: 2025-06-21 13:25+0000\n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: Italian (http://www.transifex.com/oca/OCA-crm-8-0/language/it/"
 ")\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.6.2\n"
+"X-Generator: Weblate 5.10.4\n"
 
 #. module: newsletter
 #: model:email.template,subject:newsletter.email_template_newsletter_default
@@ -140,7 +140,7 @@ msgstr "Ultimo aggiornamento il"
 #. module: newsletter
 #: model:res.groups,name:newsletter.group_newsletter_manager
 msgid "Manager"
-msgstr "Responsabile"
+msgstr "Supervisore"
 
 #. module: newsletter
 #: field:newsletter.newsletter,may_send:0
