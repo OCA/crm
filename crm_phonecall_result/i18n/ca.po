@@ -80,6 +80,11 @@ msgid "Name must be unique"
 msgstr "El nom ha de ser únic"
 
 #. module: crm_phonecall_result
+#: model:crm.phonecall.result,name:crm_phonecall_result.phonecall_result_negative
+msgid "Negative"
+msgstr ""
+
+#. module: crm_phonecall_result
 #: model:ir.model.fields,field_description:crm_phonecall_result.field_crm_phonecall_report__phone_result_id
 msgid "Phone Result"
 msgstr "Resultat del telèfon"
@@ -115,7 +120,7 @@ msgid "Result call"
 msgstr "Resultat de la trucada"
 
 #. module: crm_phonecall_result
-#: model:crm.phonecall.result,name:crm_phonecall_result.phonecall_result_negative
+#: model:crm.phonecall.result,name:crm_phonecall_result.phonecall_result_wrong_number
 msgid "Wrong number"
 msgstr "Número incorrecte"
 

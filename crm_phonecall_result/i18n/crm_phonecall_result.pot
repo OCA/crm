@@ -4,18 +4,14 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 18.0+e\n"
+"Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-24 06:13+0000\n"
-"PO-Revision-Date: 2025-07-24 08:16+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.6\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
 
 #. module: crm_phonecall_result
 #. odoo-python
@@ -26,13 +22,13 @@ msgstr ""
 #. module: crm_phonecall_result
 #: model_terms:ir.ui.view,arch_db:crm_phonecall_result.view_crm_phonecall_search_inherit_result
 msgid "Call result"
-msgstr "Resultado de la llamada"
+msgstr ""
 
 #. module: crm_phonecall_result
 #: model:ir.actions.act_window,name:crm_phonecall_result.action_crm_phonecall_result
 #: model:ir.ui.menu,name:crm_phonecall_result.menu_crm_phonecall_result
 msgid "Call results"
-msgstr "Resultados de la llamada"
+msgstr ""
 
 #. module: crm_phonecall_result
 #: model:ir.model.fields,field_description:crm_phonecall_result.field_crm_phonecall_result__create_uid
@@ -87,22 +83,22 @@ msgstr ""
 #. module: crm_phonecall_result
 #: model:ir.model.fields,field_description:crm_phonecall_result.field_crm_phonecall_report__phone_result_id
 msgid "Phone Result"
-msgstr "Resultado del teléfono"
+msgstr ""
 
 #. module: crm_phonecall_result
 #: model:ir.model,name:crm_phonecall_result.model_crm_phonecall_report
 msgid "Phone calls by user"
-msgstr "Llamadas por usuario"
+msgstr ""
 
 #. module: crm_phonecall_result
 #: model:ir.model,name:crm_phonecall_result.model_crm_phonecall
 msgid "Phonecall"
-msgstr "Llamada telefónica"
+msgstr ""
 
 #. module: crm_phonecall_result
 #: model:ir.model,name:crm_phonecall_result.model_crm_phonecall_result
 msgid "Phonecall Result"
-msgstr "Resultado de la llamada telefónica"
+msgstr ""
 
 #. module: crm_phonecall_result
 #: model:crm.phonecall.result,name:crm_phonecall_result.phonecall_result_positive
@@ -112,12 +108,12 @@ msgstr ""
 #. module: crm_phonecall_result
 #: model:ir.model.fields,field_description:crm_phonecall_result.field_crm_phonecall_result__priority
 msgid "Priority"
-msgstr "Prioridad"
+msgstr ""
 
 #. module: crm_phonecall_result
 #: model:ir.model.fields,field_description:crm_phonecall_result.field_crm_phonecall__phone_result_id
 msgid "Result call"
-msgstr "Resultado de la llamada"
+msgstr ""
 
 #. module: crm_phonecall_result
 #: model:crm.phonecall.result,name:crm_phonecall_result.phonecall_result_wrong_number
