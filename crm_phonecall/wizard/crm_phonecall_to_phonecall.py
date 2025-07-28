@@ -31,6 +31,9 @@ class CrmPhonecall2phonecall(models.TransientModel):
         required=True,
     )
     partner_id = fields.Many2one(comodel_name="res.partner", string="Partner")
+    partner_zip = fields.Char("ZIP", readonly=True)
+    partner_state = fields.Char("State", readonly=True)
+    partner_city = fields.Char("City", readonly=True)
     note = fields.Text()
 
     def get_vals_action_schedule(self):
@@ -70,6 +73,19 @@ class CrmPhonecall2phonecall(models.TransientModel):
                 res.update({"team_id": phonecall.team_id.id})
             if "partner_id" in fields:
                 res.update({"partner_id": phonecall.partner_id.id})
+                if phonecall.partner_id:
+                    if "partner_city" in fields:
+                        res.update({"partner_city": phonecall.partner_id.city or ""})
+                    if "partner_state" in fields:
+                        res.update(
+                            {
+                                "partner_state": phonecall.partner_id.state_id.name
+                                if phonecall.partner_id.state_id
+                                else ""
+                            }
+                        )
+                    if "partner_zip" in fields:
+                        res.update({"partner_zip": phonecall.partner_id.zip or ""})
             for field in ("name", "date"):
                 if field in fields:
                     res[field] = getattr(phonecall, field)

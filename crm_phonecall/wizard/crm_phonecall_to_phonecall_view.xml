@@ -9,6 +9,17 @@
                     <group>
                         <field name="action" />
                         <field readonly="1" name="partner_id" />
+                        <span
+                            class="o_form_label o_td_label o_address_type"
+                            name="address_name"
+                        >
+                            <span>Address</span>
+                        </span>
+                        <div class="o_address_format">
+                            <field name="partner_city" />
+                            <field name="partner_state" />
+                            <field name="partner_zip" />
+                        </div>
                         <field groups="sales_team.group_sale_salesman" name="team_id" />
                     </group>
                     <group>

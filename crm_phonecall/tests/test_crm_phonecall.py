@@ -189,3 +189,29 @@ class TestCrmPhoneCall(common.TransactionCase):
         self.assertEqual(
             action_context.get("default_partner_id"), self.opportunity2.partner_id.id
         )
+
+    def test_wizard_default_get(self):
+        self.partner1.city = "Test City"
+        self.partner1.zip = "12345"
+        self.partner1.state_id = False
+        self.phonecall1.partner_id = self.partner1
+        fields_to_check = [
+            "tag_ids",
+            "user_id",
+            "team_id",
+            "partner_id",
+            "partner_city",
+            "partner_state",
+            "partner_zip",
+            "name",
+            "date",
+        ]
+        wizard_model = self.env["crm.phonecall2phonecall"].with_context(
+            active_ids=self.phonecall1.ids,
+            active_id=self.phonecall1.id,
+        )
+        defaults = wizard_model.default_get(fields_to_check)
+        wizard = wizard_model.create(defaults)
+        self.assertEqual(wizard.partner_city, "Test City")
+        self.assertEqual(wizard.partner_zip, "12345")
+        self.assertEqual(wizard.partner_state, "")

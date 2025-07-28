@@ -72,6 +72,24 @@ class CrmPhonecall(models.Model):
         [("in", "In"), ("out", "Out")], default="out", required=True
     )
 
+    partner_zip = fields.Char(
+        "ZIP", compute="_compute_partner_fields", readonly=True, store=True
+    )
+    partner_state = fields.Char(
+        "State", compute="_compute_partner_fields", readonly=True, store=True
+    )
+    partner_city = fields.Char(
+        "City", compute="_compute_partner_fields", readonly=True, store=True
+    )
+
+    @api.depends("partner_id")
+    def _compute_partner_fields(self):
+        for rec in self:
+            partner = rec.partner_id
+            rec.partner_city = partner.city or ""
+            rec.partner_zip = partner.zip or ""
+            rec.partner_state = partner.state_id.name or ""
+
     @api.onchange("partner_id")
     def _onchange_partner_id(self):
         """Contact number details should be change based on partner."""

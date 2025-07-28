@@ -144,6 +144,17 @@
                             </div>
                             <field name="partner_id" />
                             <field name="partner_mobile" />
+                            <span
+                                class="o_form_label o_td_label o_address_type"
+                                name="address_name"
+                            >
+                                <span>Address</span>
+                            </span>
+                            <div class="o_address_format">
+                                <field name="partner_city" class="o_address_city" />
+                                <field name="partner_state" class="o_address_state" />
+                                <field name="partner_zip" class="o_address_zip" />
+                            </div>
                             <field
                                 context="{'opportunity_id': opportunity_id}"
                                 name="opportunity_id"
@@ -190,6 +201,9 @@
                 <field name="date" />
                 <field name="name" />
                 <field name="partner_id" />
+                <field name="partner_state" optional="hide" />
+                <field name="partner_zip" optional="hide" />
+                <field name="partner_city" optional="hide" />
                 <field column_invisible="1" name="partner_phone" />
                 <field column_invisible="1" name="partner_mobile" />
                 <field
@@ -250,6 +264,9 @@
                 <field name="name" string="Phonecalls" />
                 <field name="date" />
                 <field name="state" />
+                <field name="partner_state" />
+                <field name="partner_city" />
+                <field name="partner_zip" />
                 <filter
                     domain="[('user_id', '=', uid)]"
                     name="my_phonecalls"
@@ -284,6 +301,22 @@
                 />
                 <separator />
                 <filter date="date" name="date" string="Date" />
+                <separator />
+                <filter
+                    domain="[('partner_city', '!=', False)]"
+                    name="has_city"
+                    string="City"
+                />
+                <filter
+                    domain="[('partner_state', '!=', False)]"
+                    name="has_state"
+                    string="State"
+                />
+                <filter
+                    domain="[('partner_zip', '!=', False)]"
+                    name="has_zip"
+                    string="ZIP"
+                />
                 <separator />
                 <field name="partner_id" operator="child_of" />
                 <field name="user_id" />
@@ -321,6 +354,21 @@
                         help="Calls by status"
                         name="groupby_state"
                         string="State"
+                    />
+                    <filter
+                        context="{'group_by': 'partner_city'}"
+                        name="groupby_city"
+                        string="City"
+                    />
+                    <filter
+                        context="{'group_by': 'partner_state'}"
+                        name="groupby_state2"
+                        string="State"
+                    />
+                    <filter
+                        context="{'group_by': 'partner_zip'}"
+                        name="groupby_zip"
+                        string="ZIP"
                     />
                 </group>
             </search>

@@ -47,6 +47,9 @@ class CrmPhonecallReport(models.Model):
     partner_id = fields.Many2one(
         comodel_name="res.partner", string="Partner", readonly=True
     )
+    partner_zip = fields.Char("ZIP", readonly=True)
+    partner_state = fields.Char("State", readonly=True)
+    partner_city = fields.Char("City", readonly=True)
     company_id = fields.Many2one(
         comodel_name="res.company", string="Company", readonly=True
     )
@@ -56,7 +59,7 @@ class CrmPhonecallReport(models.Model):
     def _select(self):
         select_str = """
             select
-                id,
+                c.id,
                 c.date_open as opening_date,
                 c.date_closed as date_closed,
                 c.state,
@@ -73,13 +76,18 @@ class CrmPhonecallReport(models.Model):
                   c.date_closed-c.create_date))/(3600*24) as delay_close,
                 extract(
                   'epoch' from (
-                  c.date_open-c.create_date))/(3600*24) as delay_open
+                  c.date_open-c.create_date))/(3600*24) as delay_open,
+                p.zip AS partner_zip,
+                p.city AS partner_city,
+                s.name AS partner_state
            """
         return select_str
 
     def _from(self):
         from_str = """
             from crm_phonecall c
+            LEFT JOIN res_partner p ON c.partner_id = p.id
+            LEFT JOIN res_country_state s ON p.state_id = s.id
         """
         return from_str
 
