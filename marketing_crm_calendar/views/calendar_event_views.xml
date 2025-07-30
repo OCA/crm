@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2025 Juan Alberto Raja <juan.raja@sygel.es>
+License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record
+        id="marketing_crm_calendar_view_calendar_event_tree_inherit"
+        model="ir.ui.view"
+    >
+        <field
+            name="name"
+        >marketing.crm.calendar.view.calendar.event.tree.inherit</field>
+        <field name="model">calendar.event</field>
+        <field name="inherit_id" ref="calendar.view_calendar_event_tree" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="campaign_id" />
+            </field>
+        </field>
+    </record>
+
+    <record
+        id="marketing_crm_calendar_view_calendar_event_form_inherit"
+        model="ir.ui.view"
+    >
+        <field
+            name="name"
+        >marketing.crm.calendar.view.calendar.event.form.inherit</field>
+        <field name="model">calendar.event</field>
+        <field name="inherit_id" ref="calendar.view_calendar_event_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//group" position="inside">
+                <group string="Marketing">
+                    <field name="campaign_id" />
+                    <field name="source_id" />
+                    <field name="medium_id" />
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
