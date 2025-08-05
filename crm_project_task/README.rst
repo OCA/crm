@@ -48,7 +48,7 @@ To configure this module, you need to:
 - Go to Project
 - Create a project with right configuration in order that all salesman
   have access (usually all employees)
-- Go to CRM > Configuration > Project
+- Go to CRM > Configuration > Settings > Projects
 - Set crm default project
 
 Usage
@@ -87,6 +87,7 @@ Contributors
 
 - Emilio Pascual (`Moduon <https://www.moduon.team/>`__)
 - Rafael Blasco (`Moduon <https://www.moduon.team/>`__)
+- Joel Estrada (`Moduon <https://www.moduon.team/>`__)
 
 Maintainers
 -----------
