@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo noupdate="1">
-
     <!-- Set Reasearch and Development as the default project for the main company -->
     <record id="base.main_company" model="res.company">
         <field name="crm_default_project_id" ref='project.project_project_2' />

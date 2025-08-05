@@ -26,6 +26,7 @@
                 >
                     <field name="task_count" string="Task(s)" widget="statinfo" />
                 </button>
-            </xpath></field>
+            </xpath>
+        </field>
     </record>
 </odoo>
