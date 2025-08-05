@@ -1,8 +1,5 @@
 # License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl).
 
-from odoo import SUPERUSER_ID
-from odoo.api import Environment
-
 
 def create_code_equal_to_id(env):
     env.cr.execute(
@@ -16,12 +13,12 @@ def create_code_equal_to_id(env):
 
 def assign_old_sequences(env):
     env.cr.execute("""
-        SELECT column_name 
-        FROM information_schema.columns 
+        SELECT column_name
+        FROM information_schema.columns
         WHERE table_name = 'crm_claim' AND column_name = 'code'
     """)
     if not env.cr.fetchone():
-        return  
+        return
     sequence_model = env["ir.sequence"]
     claims = env["crm.claim"].search([], order="id")
     for claim in claims:
