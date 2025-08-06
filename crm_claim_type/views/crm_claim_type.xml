@@ -4,10 +4,10 @@
         <field name="name">crm.claim.type.tree</field>
         <field name="model">crm.claim.type</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="name" />
                 <field name="active" />
-            </tree>
+            </list>
         </field>
     </record>
     <record id="crm_claim_type_form" model="ir.ui.view">
@@ -26,7 +26,7 @@
     <record id="crm_claim_type_act" model="ir.actions.act_window">
         <field name="name">Claim Types</field>
         <field name="res_model">crm.claim.type</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
     </record>
     <menuitem
         action="crm_claim_type_act"
