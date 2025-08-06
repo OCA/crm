@@ -17,8 +17,6 @@ def assign_old_sequences(env):
         FROM information_schema.columns
         WHERE table_name = 'crm_claim' AND column_name = 'code'
     """)
-    if not env.cr.fetchone():
-        return
     sequence_model = env["ir.sequence"]
     claims = env["crm.claim"].search([], order="id")
     for claim in claims:
