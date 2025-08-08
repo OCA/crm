@@ -33,9 +33,24 @@ msgid "<span class=\"o_stat_text\">CRM Lead</span>"
 msgstr ""
 
 #. module: crm_lead_to_task
+#: model_terms:ir.ui.view,arch_db:crm_lead_to_task.crm_lead_to_task_res_config_settings_view_form
+msgid "Archive lead"
+msgstr ""
+
+#. module: crm_lead_to_task
 #: model_terms:ir.ui.view,arch_db:crm_lead_to_task.crm_lead_convert2task_view_form
 msgid "Cancel"
 msgstr "Cancelar"
+
+#. module: crm_lead_to_task
+#: model:ir.model,name:crm_lead_to_task.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: crm_lead_to_task
+#: model:ir.model,name:crm_lead_to_task.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
 
 #. module: crm_lead_to_task
 #: model:ir.actions.act_window,name:crm_lead_to_task.crm_lead_convert2task_action
@@ -46,6 +61,7 @@ msgstr ""
 
 #. module: crm_lead_to_task
 #: model_terms:ir.ui.view,arch_db:crm_lead_to_task.crm_lead_convert2task_view_form
+#: model_terms:ir.ui.view,arch_db:crm_lead_to_task.crm_lead_view_form
 msgid "Create Task"
 msgstr ""
 
@@ -60,14 +76,39 @@ msgid "Created on"
 msgstr "Creado"
 
 #. module: crm_lead_to_task
+#: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead__crm_archive_lead_on_convert
+#: model:ir.model.fields,field_description:crm_lead_to_task.field_res_company__crm_archive_lead_on_convert
+#: model:ir.model.fields,field_description:crm_lead_to_task.field_res_config_settings__crm_archive_lead_on_convert
+msgid "Crm Archive Lead On Convert"
+msgstr ""
+
+#. module: crm_lead_to_task
+#: model_terms:ir.ui.view,arch_db:crm_lead_to_task.crm_lead_to_task_res_config_settings_view_form
+msgid "Default project to be used when creating a task from a lead."
+msgstr ""
+
+#. module: crm_lead_to_task
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task__display_name
 msgid "Display Name"
 msgstr "Nombre Público"
 
 #. module: crm_lead_to_task
+#: model:ir.model.fields,field_description:crm_lead_to_task.field_res_company__crm_force_project_id
+#: model:ir.model.fields,field_description:crm_lead_to_task.field_res_config_settings__crm_force_project_id
+msgid "Force Project"
+msgstr ""
+
+#. module: crm_lead_to_task
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task__id
 msgid "ID"
 msgstr "ID"
+
+#. module: crm_lead_to_task
+#: model_terms:ir.ui.view,arch_db:crm_lead_to_task.crm_lead_to_task_res_config_settings_view_form
+msgid ""
+"If enabled, leads will be archived automatically after converting it to a "
+"task."
+msgstr ""
 
 #. module: crm_lead_to_task
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task__write_uid
@@ -99,7 +140,6 @@ msgstr ""
 #. odoo-python
 #: code:addons/crm_lead_to_task/models/project_task.py:0
 #: code:addons/crm_lead_to_task/tests/test_crm_lead_task.py:0
-#, python-format
 msgid "Lead: %s"
 msgstr ""
 
@@ -120,10 +160,14 @@ msgid "Task Count"
 msgstr ""
 
 #. module: crm_lead_to_task
+#: model_terms:ir.ui.view,arch_db:crm_lead_to_task.crm_lead_to_task_res_config_settings_view_form
+msgid "Tasks"
+msgstr ""
+
+#. module: crm_lead_to_task
 #. odoo-python
 #: code:addons/crm_lead_to_task/models/crm_lead.py:0
 #: code:addons/crm_lead_to_task/tests/test_crm_lead_task.py:0
-#, python-format
 msgid "Tasks from crm lead %s"
 msgstr ""
 

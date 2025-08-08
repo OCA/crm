@@ -1,2 +1,5 @@
-1.  You need to have at least "Project User" and "Salesman" permissions
-    to be able to convert leads to tasks.
+1.  Ensure that your user has at least the following access rights:
+    - Project: Project User
+    - CRM: Salesperson
+
+These permissions are required to create tasks from leads.

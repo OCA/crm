@@ -11,7 +11,7 @@
     "author": "Odoo S.A., Odoo Community Association (OCA), Tecnativa",
     "website": "https://github.com/OCA/crm",
     "depends": ["crm", "project"],
-    "version": "18.0.1.0.0",
+    "version": "18.0.1.1.0",
     "license": "LGPL-3",
     "installable": True,
     "data": [
@@ -19,5 +19,6 @@
         "wizard/crm_lead_convert2task_views.xml",
         "views/crm_lead_views.xml",
         "views/project_task_views.xml",
+        "views/res_config_settings_views.xml",
     ],
 }

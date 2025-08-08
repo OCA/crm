@@ -1,0 +1,31 @@
+<!-- Copyright 2025 -->
+<!-- License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl-3.0) -->
+<!-- <?xml version="1.0" encoding="utf-8"?> -->
+<odoo>
+    <record id="crm_lead_to_task_res_config_settings_view_form" model="ir.ui.view">
+        <field
+            name="name"
+        >res.config.settings.view.form.inherit.crm.lead.to.task</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="crm.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//app[@name='crm']" position="inside">
+                <block title="Tasks" name="o_settings_container">
+                    <setting
+                        help="If enabled, leads will be archived automatically after converting it to a task."
+                    >
+                        <field
+                            name="crm_archive_lead_on_convert"
+                            string="Archive lead"
+                        />
+                    </setting>
+                    <setting
+                        help="Default project to be used when creating a task from a lead."
+                    >
+                        <field name="crm_force_project_id" />
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+</odoo>

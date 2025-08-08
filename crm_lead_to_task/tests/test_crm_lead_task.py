@@ -19,6 +19,9 @@ class TestCrmLeadTask(BaseCommon):
             }
         )
 
+        # Create Project
+        cls.project = cls.env["project.project"].create({"name": "Test Project"})
+
         # Create tasks related to the lead
         cls.task1 = cls.env["project.task"].create(
             {
@@ -59,3 +62,26 @@ class TestCrmLeadTask(BaseCommon):
         self.assertEqual(action["view_mode"], "form")
         self.assertEqual(action["res_id"], self.lead.id)
         self.assertEqual(action["name"], _("Lead: %s") % self.lead.name)
+
+    def test_create_task_from_lead(self):
+        task = self.lead._create_task_from_lead(self.project)
+
+        self.assertEqual(task.name, self.lead.name)
+        self.assertEqual(task.description, self.lead.description)
+        self.assertEqual(task.project_id, self.project)
+        self.assertEqual(task.partner_id, self.lead.partner_id)
+        self.assertEqual(task.lead_id, self.lead)
+        self.assertIn(task, self.lead.task_ids)
+
+    def test_action_create_and_open_task(self):
+        action = self.lead._action_create_and_open_task(self.project)
+
+        self.assertEqual(action["type"], "ir.actions.act_window")
+        self.assertEqual(action["res_model"], "project.task")
+        self.assertEqual(action["view_mode"], "form")
+        self.assertEqual(action["view_type"], "form")
+        self.assertTrue(action["res_id"])
+        self.assertEqual(action["name"], "Task created")
+        self.assertEqual(
+            action["view_id"], self.lead.env.ref("project.view_task_form2").id
+        )
