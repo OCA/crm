@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="crm_lead_project_task_form_view" model="ir.ui.view">
+        <field name="name">crm.lead.project.task.form.view</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form" />
+        <field name="arch" type="xml">
+            <page name="lead" position="before">
+                <page name="tasks" string="Tasks">
+                    <field name="task_ids" widget="one2many">
+                        <tree editable="bottom">
+                            <field name="lead_id" column_invisible="1" />
+                            <field
+                                name="state"
+                                widget="project_task_state_selection"
+                                nolabel="1"
+                                options="{'autosave':  False}"
+                            />
+                            <field name="name" string="Task Name" />
+                            <field name="lead_stage_id" readonly="1" />
+                            <field name="create_date" string="Start Date" />
+                            <field name="date_deadline" />
+                            <field name="user_ids" widget="many2many_tags" />
+                            <field name="child_ids" />
+                            <button
+                                name="action_open_project_task"
+                                type="object"
+                                string="Open"
+                                invisible="not id"
+                            />
+                        </tree>
+                    </field>
+                </page>
+            </page>
+        </field>
+    </record>
+
+</odoo>

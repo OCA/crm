@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="crm_stage_task_form_view" model="ir.ui.view">
+        <field name="name">crm.stage.task.form.view</field>
+        <field name="model">crm.stage</field>
+        <field name="inherit_id" ref="crm.crm_stage_form" />
+        <field name="arch" type="xml">
+            <field name="requirements" position="after">
+                <separator string="CRM Task Stage" />
+                <group invisible="not task_template_ids">
+                    <field name="check_task_state" />
+                </group>
+                <field name="task_template_ids" widget="one2many">
+                    <tree>
+                        <field name="stage_id" column_invisible="1" />
+                        <field name="name" />
+                        <field name="user_ids" widget="many2many_avatar_user" />
+                    </tree>
+                </field>
+            </field>
+        </field>
+    </record>
+
+</odoo>
