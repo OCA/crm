@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="crm_task_template_form_view" model="ir.ui.view">
+        <field name="name">crm.task.template.form.view</field>
+        <field name="model">crm.task.template</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <field name="active" invisible="1" />
+                    <widget
+                        name="web_ribbon"
+                        title="Archived"
+                        bg_color="text-bg-danger"
+                        invisible="active"
+                    />
+                    <div class="oe_title">
+                        <label for="name" />
+                        <h1>
+                            <field name="name" placeholder="Task Name" />
+                        </h1>
+                    </div>
+                    <group>
+                        <field name="stage_id" />
+                        <field
+                            name="user_ids"
+                            class="o_task_user_field"
+                            options="{'no_open': True, 'no_quick_create': True}"
+                            widget="many2many_avatar_user"
+                        />
+                    </group>
+                    <notebook>
+                        <page string="Description" name="description">
+                            <field name="description" />
+                        </page>
+                        <page
+                            string="Related Tasks"
+                            name="related_tasks"
+                            groups="base.group_no_one"
+                            invisible="not task_ids"
+                        >
+                            <field name="task_ids" />
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="crm_task_template_tree_view" model="ir.ui.view">
+        <field name="name">crm.task.template.tree.view</field>
+        <field name="model">crm.task.template</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="stage_id" />
+                <field name="user_ids" widget="many2many_avatar_user" />
+                <field name="task_ids" groups="base.group_no_one" />
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="action_crm_task_template" model="ir.actions.act_window">
+        <field name="name">Task Templates</field>
+        <field name="res_model">crm.task.template</field>
+        <field name="view_id" ref="crm_task_template_tree_view" />
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Set a new task template for crm stage
+            </p><p>
+                Task templates allow salespeople to easily configure
+                typical tasks that will be created when switching
+                to the CRM stage.
+            </p>
+        </field>
+    </record>
+
+
+    <menuitem
+        id="menu_crm_task_template"
+        name="Task Templates"
+        action="action_crm_task_template"
+        parent="crm.menu_crm_config_lead"
+        sequence="10"
+        groups="base.group_no_one"
+    />
+
+</odoo>
