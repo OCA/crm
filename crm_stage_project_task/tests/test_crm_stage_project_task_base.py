@@ -1,43 +1,43 @@
-from odoo.tests import TransactionCase
+from odoo import Command
+
+from odoo.addons.crm.tests.common import TestCrmCommon
+from odoo.addons.project.tests.test_project_base import TestProjectCommon
 
 
-class TestCrmStageProjectTaskCommon(TransactionCase):
+class TestCrmStageProjectTaskCommon(TestCrmCommon, TestProjectCommon):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
         cls.env = cls.env(context=dict(cls.env.context, tracking_disable=True))
+        cls.env.company.stage_project_id = cls.project_pigs
 
-        res_users_obj = cls.env["res.users"].with_context(no_reset_password=True)
-
-        cls.user_saleown = res_users_obj.create(
+        cls.stage_team1_2.write(
             {
-                "name": "User Bob",
-                "login": "bob",
-                "email": "bob@example.com",
-                "groups_id": [
-                    (
-                        6,
-                        0,
-                        [
-                            cls.env.ref("base.group_user").id,
-                            cls.env.ref("sales_team.group_sale_salesman").id,
-                        ],
-                    )
+                "check_task_state": True,
+                "task_template_ids": [
+                    Command.create({"name": "Test Task #1"}),
+                    Command.create({"name": "Test Task #2"}),
                 ],
             }
         )
-        cls.partner_project = cls.env["res.partner"].create(
-            {"name": "Valid Partner", "email": "valid.partner@exmaple.com"}
-        )
 
-        cls.project_default = (
-            cls.env["project.project"]
-            .with_context(mail_create_nolog=True)
-            .create(
-                {
-                    "name": "Default",
-                    "privacy_visibility": "followers",
-                    "partner_id": cls.partner_project.id,
-                }
-            )
+    def setUp(self):
+        super().setUp()
+        self.lead = self.env["crm.lead"].create(
+            {"name": "Lead With Tasks", "stage_id": self.stage_team1_1.id}
+        )
+        self.task_1, self.task_2 = self.env["project.task"].create(
+            [
+                {"name": "Task #1"},
+                {"name": "Task #2"},
+            ]
+        )
+        self.tasks = self.task_1 | self.task_2
+
+        self.template_1 = self.env["crm.task.template"].create(
+            {
+                "name": "Template #1",
+                "stage_id": self.stage_team1_1.id,
+                "description": "Test Template #1",
+            }
         )

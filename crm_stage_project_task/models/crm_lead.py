@@ -3,8 +3,6 @@ import logging
 from odoo import _, fields, models
 from odoo.exceptions import UserError
 
-from odoo.addons.project.models.project_task import CLOSED_STATES
-
 _logger = logging.getLogger(__name__)
 
 
@@ -13,22 +11,20 @@ class CRMLead(models.Model):
 
     task_ids = fields.One2many("project.task", "lead_id")
 
-    def _check_update_stage_id(self) -> bool:
+    def _can_change_stage(self) -> bool:
         """
         Check update stage with tasks
         """
         for record in self:
-            if record.stage_id.check_task_state and record.task_ids.filtered(
-                lambda task, lead=record: task.lead_stage_id == lead.stage_id
-                and task.state not in CLOSED_STATES
+            if (
+                record.stage_id.check_task_state
+                and not record.task_ids._has_closed_states()
             ):
                 return False
         return True
 
-    def _create_tasks_by_stage(self):
+    def _create_tasks_by_template(self):
         """Create tasks by stage"""
-        if not self.env.company.stage_project_id:
-            return
         for record in self:
             # Obtaining templates that have not yet been created
             template_to_create = (
@@ -46,7 +42,7 @@ class CRMLead(models.Model):
         stage_id = vals.get("stage_id")
         if stage_id:
             # Checking the possibility of changing stage_id
-            state = self._check_update_stage_id()
+            state = self._can_change_stage()
             if not state:
                 raise UserError(
                     _(
@@ -57,5 +53,5 @@ class CRMLead(models.Model):
         result = super().write(vals)
         if stage_id:
             # Creating tasks based on stage
-            self._create_tasks_by_stage()
+            self._create_tasks_by_template()
         return result

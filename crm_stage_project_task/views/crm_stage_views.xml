@@ -8,6 +8,20 @@
         <field name="arch" type="xml">
             <field name="requirements" position="after">
                 <separator string="CRM Task Stage" />
+                <field name="has_default_project" invisible="1" />
+                <div
+                    class="alert alert-warning"
+                    role="alert"
+                    invisible="has_default_project"
+                >
+                        Warning: Default project not set.
+                    <button
+                        name="%(crm.crm_config_settings_action)d"
+                        type="action"
+                        string="Set project"
+                        class="btn btn-link p-0"
+                    />
+                </div>
                 <group invisible="not task_template_ids">
                     <field name="check_task_state" />
                 </group>
