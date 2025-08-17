@@ -6,7 +6,5 @@ class ResCompany(models.Model):
 
     stage_project_id = fields.Many2one(
         "project.project",
-        required=True,
-        ondelete="cascade",
         string="CRM State Default Project",
     )

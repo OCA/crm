@@ -1,4 +1,8 @@
-from odoo import Command, fields, models
+from datetime import timedelta
+from typing import Any
+
+from odoo import Command, _, api, fields, models
+from odoo.exceptions import UserError
 
 
 class CrmTaskTemplate(models.Model):
@@ -19,8 +23,36 @@ class CrmTaskTemplate(models.Model):
         "project.task",
         "crm_task_template_id",
     )
+    delay_type = fields.Selection(
+        [
+            ("minutes", "Minutes"),
+            ("hours", "Hours"),
+            ("days", "Days"),
+            ("weeks", "Weeks"),
+        ],
+        default="days",
+        required=True,
+    )
+    delay = fields.Integer(
+        default=0, help="If the value is 0, then the current date will be used."
+    )
+    has_default_project = fields.Boolean(related="stage_id.has_default_project")
 
-    def _prepare_project_task_vals(self, lead) -> list[dict]:
+    @api.constrains("delay")
+    def _check_delay(self):
+        for record in self:
+            if record.delay < 0:
+                raise UserError(_("The delay must be greater than or equal to 0!"))
+
+    @property
+    def deadline(self):
+        self.ensure_one()
+        now = fields.Datetime.now()
+        if self.delay == 0:
+            return now
+        return now + timedelta(**{self.delay_type: self.delay})
+
+    def _prepare_project_task_vals(self, lead) -> list[dict[str, Any]]:
         """
         Prepare vals list for create project task
 
@@ -29,16 +61,17 @@ class CrmTaskTemplate(models.Model):
         Returns:
             list: list of project task vals
         """
-        company_id = self.env.company.stage_project_id.id
+        project_id = self.env.company.stage_project_id.id
         return [
             {
-                "name": "name",
+                "name": record.name,
                 "lead_id": lead.id,
-                "project_id": company_id,
+                "project_id": project_id,
                 "lead_stage_id": record.stage_id.id,
-                "description": "description",
+                "description": record.description,
                 "user_ids": [Command.set(record.user_ids.ids)],
                 "crm_task_template_id": record.id,
+                "date_deadline": record.deadline,
             }
             for record in self
         ]

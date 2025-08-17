@@ -1,5 +1,4 @@
-from odoo import _, api, fields, models
-from odoo.exceptions import ValidationError
+from odoo import fields, models
 
 
 class CrmStage(models.Model):
@@ -13,8 +12,7 @@ class CrmStage(models.Model):
         "crm.task.template",
         "stage_id",
     )
+    has_default_project = fields.Boolean(compute="_compute_has_default_project")
 
-    @api.constrains("task_template_ids")
-    def _check_task_template_ids(self):
-        if not self.env.company.stage_project_id:
-            raise ValidationError(_("'CRM State Default Project' value is not set!"))
+    def _compute_has_default_project(self):
+        self.write({"has_default_project": bool(self.env.company.stage_project_id)})

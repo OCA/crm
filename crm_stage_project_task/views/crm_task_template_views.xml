@@ -20,6 +20,20 @@
                             <field name="name" placeholder="Task Name" />
                         </h1>
                     </div>
+                    <field name="has_default_project" invisible="1" />
+                    <div
+                        class="alert alert-warning"
+                        role="alert"
+                        invisible="has_default_project"
+                    >
+                            Warning: Default project not set.
+                        <button
+                            name="%(crm.crm_config_settings_action)d"
+                            type="action"
+                            string="Set project"
+                            class="btn btn-link p-0"
+                        />
+                    </div>
                     <group>
                         <field name="stage_id" />
                         <field
@@ -29,17 +43,13 @@
                             widget="many2many_avatar_user"
                         />
                     </group>
+                    <group string="Deadline">
+                        <field name="delay_type" />
+                        <field name="delay" class="oe_inline" widget="integer" />
+                    </group>
                     <notebook>
                         <page string="Description" name="description">
                             <field name="description" />
-                        </page>
-                        <page
-                            string="Related Tasks"
-                            name="related_tasks"
-                            groups="base.group_no_one"
-                            invisible="not task_ids"
-                        >
-                            <field name="task_ids" />
                         </page>
                     </notebook>
                 </sheet>
@@ -68,7 +78,8 @@
         <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
                 Set a new task template for crm stage
-            </p><p>
+            </p>
+            <p>
                 Task templates allow salespeople to easily configure
                 typical tasks that will be created when switching
                 to the CRM stage.
