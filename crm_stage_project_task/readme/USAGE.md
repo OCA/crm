@@ -5,14 +5,14 @@ Go to the CRM module:
     - Move lead/opportunity between stages → auto-generates configured tasks
 
 2. Task Management:
-
+    
     - Open CRM record
-    - Navigate to "Tasks" tab
+    - Navigate to the "Tasks" tab
     - Click any task to view/edit
 
 3. Stage Transition Rules:
-
-    - If validation enabled:
-
+    
+    - If validation is enabled:
+        
         - System blocks progression until tasks are completed
-        - Shows clear error message
+        - Shows a clear error message

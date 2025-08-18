@@ -37,16 +37,18 @@ Core Functionality:
 
 - Configurable task templates per CRM stage
 
-- Optional stage transition validation (blocks progression if tasks
+- Optional stage transition validation (blocks progression if tasks are
   incomplete)
 
-- Integrated task management within CRM form view
+- Integrated task management within the CRM form view
 
 Key Features:
 
 - Default project configuration for tasks
 
 - Stage-specific task templates
+
+- Task Templates: Manageable Deadline delays
 
 - Task state validation system
 
@@ -65,31 +67,36 @@ workflow by automating process-driven tasks during lead progression.
 
 The Problem
 
-::
+1. Manual Task Creation
 
-   Manual Task Creation
-       Teams waste time recreating repetitive tasks (e.g., "Send proposal") for every lead
-       Inconsistent task naming/descriptions across stages
-   No Process Enforcement
-       Users can skip mandatory steps (e.g., contract reviews) by moving stages prematurely
-       Hard to track which stage-specific actions are pending
-   Disconnected Workflows
-       Tasks exist in Projects but lack visibility in CRM
-       No native link between pipeline stages and task templates
+   - Teams waste time recreating repetitive tasks (e.g., "Send
+     proposal") for every lead
+   - Inconsistent task naming/descriptions across stages
+
+2. No Process Enforcement
+
+   - Users can skip mandatory steps (e.g., contract reviews) by moving
+     stages prematurely
+   - Hard to track which stage-specific actions are pending
+
+3. Disconnected Workflows
+
+   - Tasks exist in Projects but lack visibility in CRM
+   - No native link between pipeline stages and task templates
 
 Real-World Impact
 
 Before
 
 - Sales rep forgets to collect client requirements before quoting
-- Manager can’t audit if compliance tasks were completed
+- The manager can’t audit if compliance tasks were completed
 - Support team wastes time recreating identical onboarding tasks
 
 After
 
 - Automated consistency – Stage transitions trigger predefined tasks
 - Process control – Optional validation prevents skipped steps
-- Unified view – All stage-related tasks accessible from CRM record
+- Unified view – All stage-related tasks accessible from the CRM record
 
 Configuration
 =============
@@ -101,19 +108,37 @@ To Configure Default Project for the Module
 - Select a default project for tasks in the "CRM State Project Task"
   field
 
-To Cofigure Tasks for the Stage
--------------------------------
+To Configure Tasks Templates
+----------------------------
 
-Go to CRM > Configuration > Pipeline > Stages
+Go to CRM > Configuration > Pipeline > Task Templates
+
+- Press the "New" button to create a new record
+- Enter a Name
+- Select a CRM Stage for the task to be applied
+- Select a Default User for the Task in the Assigned field
+
+Note: if the field is left blank, the current user will be applied by
+default
+
+- Set the default deadline delay
+- Select the delay type (minutes/hours/days/weeks)
+- Set the amount of the delay
+- Save the Record
+
+To Configure Tasks for the Stage
+--------------------------------
+
+Go to CRM > Configuration > Pipeline > Task Templates
 
 - Select a record
-- In the "Tasks" filed add a new record
-- In the Task form view write the task template
+- In the "Tasks" field, add a new record
+- In the Task form view, write the task template
 
 Optional:
 
 - Enable "Validate Task Completion" to enforce: All stage tasks must be
-  Done/Canceled before pipeline progression
+  Done/Cancelled before pipeline progression
 
 Usage
 =====
@@ -128,15 +153,15 @@ Go to the CRM module:
 2. Task Management:
 
    - Open CRM record
-   - Navigate to "Tasks" tab
+   - Navigate to the "Tasks" tab
    - Click any task to view/edit
 
 3. Stage Transition Rules:
 
-   - If validation enabled:
+   - If validation is enabled:
 
      - System blocks progression until tasks are completed
-     - Shows clear error message
+     - Shows a clear error message
 
 Bug Tracker
 ===========
@@ -155,6 +180,14 @@ Authors
 -------
 
 * XXP
+
+Contributors
+------------
+
+- ``XXP <xxp-odoo.com>``\ \_:
+
+  - Maksim Shurupov
+  - Mikhail Lapin
 
 Maintainers
 -----------

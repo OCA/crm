@@ -376,14 +376,15 @@ requiring task completion before stage progression.</p>
 <p>Core Functionality:</p>
 <ul class="simple">
 <li>Configurable task templates per CRM stage</li>
-<li>Optional stage transition validation (blocks progression if tasks
+<li>Optional stage transition validation (blocks progression if tasks are
 incomplete)</li>
-<li>Integrated task management within CRM form view</li>
+<li>Integrated task management within the CRM form view</li>
 </ul>
 <p>Key Features:</p>
 <ul class="simple">
 <li>Default project configuration for tasks</li>
 <li>Stage-specific task templates</li>
+<li>Task Templates: Manageable Deadline delays</li>
 <li>Task state validation system</li>
 </ul>
 <p><strong>Table of contents</strong></p>
@@ -392,14 +393,16 @@ incomplete)</li>
 <li><a class="reference internal" href="#use-cases-context" id="toc-entry-1">Use Cases / Context</a></li>
 <li><a class="reference internal" href="#configuration" id="toc-entry-2">Configuration</a><ul>
 <li><a class="reference internal" href="#to-configure-default-project-for-the-module" id="toc-entry-3">To Configure Default Project for the Module</a></li>
-<li><a class="reference internal" href="#to-cofigure-tasks-for-the-stage" id="toc-entry-4">To Cofigure Tasks for the Stage</a></li>
+<li><a class="reference internal" href="#to-configure-tasks-templates" id="toc-entry-4">To Configure Tasks Templates</a></li>
+<li><a class="reference internal" href="#to-configure-tasks-for-the-stage" id="toc-entry-5">To Configure Tasks for the Stage</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#usage" id="toc-entry-5">Usage</a></li>
-<li><a class="reference internal" href="#bug-tracker" id="toc-entry-6">Bug Tracker</a></li>
-<li><a class="reference internal" href="#credits" id="toc-entry-7">Credits</a><ul>
-<li><a class="reference internal" href="#authors" id="toc-entry-8">Authors</a></li>
-<li><a class="reference internal" href="#maintainers" id="toc-entry-9">Maintainers</a></li>
+<li><a class="reference internal" href="#usage" id="toc-entry-6">Usage</a></li>
+<li><a class="reference internal" href="#bug-tracker" id="toc-entry-7">Bug Tracker</a></li>
+<li><a class="reference internal" href="#credits" id="toc-entry-8">Credits</a><ul>
+<li><a class="reference internal" href="#authors" id="toc-entry-9">Authors</a></li>
+<li><a class="reference internal" href="#contributors" id="toc-entry-10">Contributors</a></li>
+<li><a class="reference internal" href="#maintainers" id="toc-entry-11">Maintainers</a></li>
 </ul>
 </li>
 </ul>
@@ -410,29 +413,37 @@ incomplete)</li>
 <p>crm_stage_project_task solves a critical gap in Odoo’s CRM-to-project
 workflow by automating process-driven tasks during lead progression.</p>
 <p>The Problem</p>
-<pre class="literal-block">
-Manual Task Creation
-    Teams waste time recreating repetitive tasks (e.g., &quot;Send proposal&quot;) for every lead
-    Inconsistent task naming/descriptions across stages
-No Process Enforcement
-    Users can skip mandatory steps (e.g., contract reviews) by moving stages prematurely
-    Hard to track which stage-specific actions are pending
-Disconnected Workflows
-    Tasks exist in Projects but lack visibility in CRM
-    No native link between pipeline stages and task templates
-</pre>
+<ol class="arabic simple">
+<li>Manual Task Creation<ul>
+<li>Teams waste time recreating repetitive tasks (e.g., “Send
+proposal”) for every lead</li>
+<li>Inconsistent task naming/descriptions across stages</li>
+</ul>
+</li>
+<li>No Process Enforcement<ul>
+<li>Users can skip mandatory steps (e.g., contract reviews) by moving
+stages prematurely</li>
+<li>Hard to track which stage-specific actions are pending</li>
+</ul>
+</li>
+<li>Disconnected Workflows<ul>
+<li>Tasks exist in Projects but lack visibility in CRM</li>
+<li>No native link between pipeline stages and task templates</li>
+</ul>
+</li>
+</ol>
 <p>Real-World Impact</p>
 <p>Before</p>
 <ul class="simple">
 <li>Sales rep forgets to collect client requirements before quoting</li>
-<li>Manager can’t audit if compliance tasks were completed</li>
+<li>The manager can’t audit if compliance tasks were completed</li>
 <li>Support team wastes time recreating identical onboarding tasks</li>
 </ul>
 <p>After</p>
 <ul class="simple">
 <li>Automated consistency – Stage transitions trigger predefined tasks</li>
 <li>Process control – Optional validation prevents skipped steps</li>
-<li>Unified view – All stage-related tasks accessible from CRM record</li>
+<li>Unified view – All stage-related tasks accessible from the CRM record</li>
 </ul>
 </div>
 <div class="section" id="configuration">
@@ -445,23 +456,41 @@ Disconnected Workflows
 field</li>
 </ul>
 </div>
-<div class="section" id="to-cofigure-tasks-for-the-stage">
-<h2><a class="toc-backref" href="#toc-entry-4">To Cofigure Tasks for the Stage</a></h2>
-<p>Go to CRM &gt; Configuration &gt; Pipeline &gt; Stages</p>
+<div class="section" id="to-configure-tasks-templates">
+<h2><a class="toc-backref" href="#toc-entry-4">To Configure Tasks Templates</a></h2>
+<p>Go to CRM &gt; Configuration &gt; Pipeline &gt; Task Templates</p>
+<ul class="simple">
+<li>Press the “New” button to create a new record</li>
+<li>Enter a Name</li>
+<li>Select a CRM Stage for the task to be applied</li>
+<li>Select a Default User for the Task in the Assigned field</li>
+</ul>
+<p>Note: if the field is left blank, the current user will be applied by
+default</p>
+<ul class="simple">
+<li>Set the default deadline delay</li>
+<li>Select the delay type (minutes/hours/days/weeks)</li>
+<li>Set the amount of the delay</li>
+<li>Save the Record</li>
+</ul>
+</div>
+<div class="section" id="to-configure-tasks-for-the-stage">
+<h2><a class="toc-backref" href="#toc-entry-5">To Configure Tasks for the Stage</a></h2>
+<p>Go to CRM &gt; Configuration &gt; Pipeline &gt; Task Templates</p>
 <ul class="simple">
 <li>Select a record</li>
-<li>In the “Tasks” filed add a new record</li>
-<li>In the Task form view write the task template</li>
+<li>In the “Tasks” field, add a new record</li>
+<li>In the Task form view, write the task template</li>
 </ul>
 <p>Optional:</p>
 <ul class="simple">
 <li>Enable “Validate Task Completion” to enforce: All stage tasks must be
-Done/Canceled before pipeline progression</li>
+Done/Cancelled before pipeline progression</li>
 </ul>
 </div>
 </div>
 <div class="section" id="usage">
-<h1><a class="toc-backref" href="#toc-entry-5">Usage</a></h1>
+<h1><a class="toc-backref" href="#toc-entry-6">Usage</a></h1>
 <p>Go to the CRM module:</p>
 <ol class="arabic simple">
 <li>Pipeline Navigation:<ul>
@@ -471,14 +500,14 @@ tasks</li>
 </li>
 <li>Task Management:<ul>
 <li>Open CRM record</li>
-<li>Navigate to “Tasks” tab</li>
+<li>Navigate to the “Tasks” tab</li>
 <li>Click any task to view/edit</li>
 </ul>
 </li>
 <li>Stage Transition Rules:<ul>
-<li>If validation enabled:<ul>
+<li>If validation is enabled:<ul>
 <li>System blocks progression until tasks are completed</li>
-<li>Shows clear error message</li>
+<li>Shows a clear error message</li>
 </ul>
 </li>
 </ul>
@@ -486,7 +515,7 @@ tasks</li>
 </ol>
 </div>
 <div class="section" id="bug-tracker">
-<h1><a class="toc-backref" href="#toc-entry-6">Bug Tracker</a></h1>
+<h1><a class="toc-backref" href="#toc-entry-7">Bug Tracker</a></h1>
 <p>Bugs are tracked on <a class="reference external" href="https://github.com/OCA/crm/issues">GitHub Issues</a>.
 In case of trouble, please check there if your issue has already been reported.
 If you spotted it first, help us to smash it by providing a detailed and welcomed
@@ -494,15 +523,25 @@ If you spotted it first, help us to smash it by providing a detailed and welcome
 <p>Do not contact contributors directly about support or help with technical issues.</p>
 </div>
 <div class="section" id="credits">
-<h1><a class="toc-backref" href="#toc-entry-7">Credits</a></h1>
+<h1><a class="toc-backref" href="#toc-entry-8">Credits</a></h1>
 <div class="section" id="authors">
-<h2><a class="toc-backref" href="#toc-entry-8">Authors</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-9">Authors</a></h2>
 <ul class="simple">
 <li>XXP</li>
 </ul>
 </div>
+<div class="section" id="contributors">
+<h2><a class="toc-backref" href="#toc-entry-10">Contributors</a></h2>
+<ul class="simple">
+<li><tt class="docutils literal">XXP <span class="pre">&lt;xxp-odoo.com&gt;</span></tt>_:<ul>
+<li>Maksim Shurupov</li>
+<li>Mikhail Lapin</li>
+</ul>
+</li>
+</ul>
+</div>
 <div class="section" id="maintainers">
-<h2><a class="toc-backref" href="#toc-entry-9">Maintainers</a></h2>
+<h2><a class="toc-backref" href="#toc-entry-11">Maintainers</a></h2>
 <p>This module is maintained by the OCA.</p>
 <a class="reference external image-reference" href="https://odoo-community.org"><img alt="Odoo Community Association" src="https://odoo-community.org/logo.png" /></a>
 <p>OCA, or the Odoo Community Association, is a nonprofit organization whose
