@@ -4,9 +4,9 @@ Core Functionality:
 
 - Configurable task templates per CRM stage
 
-- Optional stage transition validation (blocks progression if tasks incomplete)
+- Optional stage transition validation (blocks progression if tasks are incomplete)
 
-- Integrated task management within CRM form view
+- Integrated task management within the CRM form view
 
 
 Key Features:
@@ -14,5 +14,7 @@ Key Features:
 - Default project configuration for tasks
 
 - Stage-specific task templates
+
+- Task Templates: Manageable Deadline delays
 
 - Task state validation system
