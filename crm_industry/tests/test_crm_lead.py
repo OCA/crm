@@ -66,3 +66,59 @@ class TestCrmLead(TransactionCase):
         lead = lead_form.save()
         self.assertEqual(lead.industry_id, customer.industry_id)
         self.assertEqual(lead.secondary_industry_ids, customer.secondary_industry_ids)
+
+    def test_override_propagate_industries_from_contact(self):
+        res_partner_industry = self.env["res.partner.industry"]
+        industry_a = res_partner_industry.create(
+            {"name": "IT/Communications", "parent_id": res_partner_industry.id}
+        )
+        industry_b = res_partner_industry.create(
+            {"name": "AI/Machine Learning", "parent_id": res_partner_industry.id}
+        )
+
+        customer = self.env["res.partner"].create(
+            {
+                "name": "Test Customer",
+                "industry_id": res_partner_industry.id,
+                "secondary_industry_ids": [(6, 0, [industry_a.id, industry_b.id])],
+            }
+        )
+
+        lead = self.env["crm.lead"].create(
+            {
+                "name": "Lead from partner",
+                "partner_id": customer.id,
+            }
+        )
+
+        self.assertEqual(lead.industry_id, customer.industry_id)
+        self.assertEqual(lead.secondary_industry_ids, customer.secondary_industry_ids)
+
+    def test_create_with_partner_does_not_override_explicit_vals(self):
+        industry_test = self.env["res.partner.industry"].create({"name": "Test"})
+        industry_1 = self.env["res.partner.industry"].create(
+            {"name": "Test 01", "parent_id": industry_test.id}
+        )
+        industry_2 = self.env["res.partner.industry"].create(
+            {"name": "Test 02", "parent_id": industry_test.id}
+        )
+
+        customer = self.env["res.partner"].create(
+            {
+                "name": "Test Customer",
+                "industry_id": industry_1.id,
+                "secondary_industry_ids": [(6, 0, [industry_2.id])],
+            }
+        )
+
+        lead = self.env["crm.lead"].create(
+            {
+                "name": "Test lead",
+                "partner_id": customer.id,
+                "industry_id": industry_1.id,
+                "secondary_industry_ids": [(6, 0, [industry_2.id])],
+            }
+        )
+
+        self.assertEqual(lead.industry_id, industry_1)
+        self.assertEqual(lead.secondary_industry_ids.ids, [industry_2.id])
