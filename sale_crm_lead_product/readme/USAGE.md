@@ -1,0 +1,1 @@
+- When you create a quotation from a sales order you will see the button "Copy Products from Opportunity" in the top area.
