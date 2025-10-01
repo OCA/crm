@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-    <record id="module_category_crm_crm" model="ir.module.category">
+    <record id="module_privilege_crm_crm" model="res.groups.privilege">
         <field name="name">CRM</field>
-        <field name="parent_id" ref="base.module_category_sales" />
+        <field name="category_id" ref="base.module_category_sales" />
     </record>
     <record id="group_crm_own_leads" model="res.groups">
         <field name="name">User: Own Documents Only</field>
-        <field name="category_id" ref="crm_security_group.module_category_crm_crm" />
+        <field name="privilege_id" ref="crm_security_group.module_privilege_crm_crm" />
         <field name="implied_ids" eval="[(4, ref('base.group_user'))]" />
     </record>
     <record id="group_crm_all_leads" model="res.groups">
         <field name="name">User: All Documents</field>
-        <field name="category_id" ref="crm_security_group.module_category_crm_crm" />
+        <field name="privilege_id" ref="crm_security_group.module_privilege_crm_crm" />
         <field
             name="implied_ids"
             eval="[(4, ref('crm_security_group.group_crm_own_leads'))]"
@@ -19,13 +19,13 @@
     </record>
     <record id="group_crm_manager" model="res.groups">
         <field name="name">Administrator</field>
-        <field name="category_id" ref="crm_security_group.module_category_crm_crm" />
+        <field name="privilege_id" ref="crm_security_group.module_privilege_crm_crm" />
         <field
             name="implied_ids"
             eval="[(4, ref('crm_security_group.group_crm_all_leads'))]"
         />
         <field
-            name="users"
+            name="user_ids"
             eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"
         />
     </record>
