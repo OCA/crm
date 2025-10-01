@@ -1,7 +1,7 @@
 # Copyright (C) 2024 Open Source Integrators
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo import _, api, fields, models
+from odoo import api, fields, models
 
 
 class CrmLead(models.Model):
@@ -26,7 +26,7 @@ class CrmLead(models.Model):
             "view_mode": "list,form",
             "domain": [("lead_id", "=", self.id)],
             "context": {"default_search_lead_id": self.id},
-            "name": _("Tasks from crm lead %s") % self.name,
+            "name": self.env._("Tasks from crm lead %s", self.name),
         }
 
     def _get_values_task_from_lead(self, project):

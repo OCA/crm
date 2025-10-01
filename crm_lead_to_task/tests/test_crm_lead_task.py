@@ -1,7 +1,6 @@
 # Copyright (C) 2024 Open Source Integrators
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
-from odoo import _
 
 from odoo.addons.base.tests.common import BaseCommon
 
@@ -51,7 +50,9 @@ class TestCrmLeadTask(BaseCommon):
         self.assertEqual(action["view_mode"], "list,form")
         self.assertEqual(action["domain"], expected_domain)
         self.assertEqual(action["context"]["default_search_lead_id"], self.lead.id)
-        self.assertEqual(action["name"], _("Tasks from crm lead %s") % self.lead.name)
+        self.assertEqual(
+            action["name"], self.env._("Tasks from crm lead %s", self.lead.name)
+        )
 
     def test_action_view_leads(self):
         """Test that action_view_lead returns the correct action"""
@@ -61,7 +62,7 @@ class TestCrmLeadTask(BaseCommon):
         self.assertEqual(action["res_model"], "crm.lead")
         self.assertEqual(action["view_mode"], "form")
         self.assertEqual(action["res_id"], self.lead.id)
-        self.assertEqual(action["name"], _("Lead: %s") % self.lead.name)
+        self.assertEqual(action["name"], self.env._("Lead: %s", self.lead.name))
 
     def test_create_task_from_lead(self):
         task = self.lead._create_task_from_lead(self.project)

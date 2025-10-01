@@ -29,7 +29,6 @@
             </field>
             <!-- Add a smart button to the tasks created from this lead -->
             <xpath expr="//div[@name='button_box']" position="inside">
-                <field name="task_count" invisible="1" />
                 <button
                     name="action_view_tasks"
                     type="object"
