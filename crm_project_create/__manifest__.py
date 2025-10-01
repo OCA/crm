@@ -4,7 +4,7 @@
 {
     "name": "CRM Project Create",
     "summary": "Allow create projects from lead/opportunity",
-    "version": "18.0.1.0.1",
+    "version": "19.0.1.0.0",
     "category": "Sales/CRM",
     "website": "https://github.com/OCA/crm",
     "author": "Moduon, Odoo Community Association (OCA)",
