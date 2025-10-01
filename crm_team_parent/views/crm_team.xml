@@ -18,7 +18,6 @@
         <field name="arch" type="xml">
             <field name="user_id" position="after">
                 <field name="parent_id" domain="[('id', '!=', id)]" />
-                <field name="id" invisible="1" />
             </field>
             <xpath expr="//notebook" position="inside">
                 <page string="Children Teams" name="children">
