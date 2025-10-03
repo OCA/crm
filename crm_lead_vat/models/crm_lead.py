@@ -9,8 +9,7 @@ class Lead(models.Model):
 
     vat = fields.Char(
         string="TIN",
-        help="Tax Identification Number. The first 2 characters are the "
-        "country code.",
+        help="Tax Identification Number. The first 2 characters are the country code.",
         compute="_compute_vat",
         inverse="_inverse_vat",
         readonly=False,
