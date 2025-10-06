@@ -49,24 +49,9 @@ class CrmLead(models.Model):
     def _create_task_from_lead(self, project):
         vals = self._get_values_task_from_lead(project)
         task = self.env["project.task"].create(vals)
-
-        # Move mail thread + attachments
-        self.message_change_thread(task)
-
-        self.env["ir.attachment"].search(
-            [
-                ("res_model", "=", "crm.lead"),
-                ("res_id", "=", self.id),
-            ]
-        ).write({"res_model": "project.task", "res_id": task.id})
-
         return task
 
-    def _action_create_and_open_task(self, project):
-        task = self._create_task_from_lead(project)
-
-        if self.company_id.crm_archive_lead_on_convert:
-            self.active = False
+    def _action_open_task(self, project, task):
         view = self.env.ref("project.view_task_form2")
         return {
             "name": "Task created",
@@ -79,16 +64,36 @@ class CrmLead(models.Model):
             "target": "current",
         }
 
-    def action_crm_to_task(self):
+    def action_create_task(self):
+        """Open wizard to create task from lead"""
         self.ensure_one()
-        if self.company_id.crm_force_project_id:
-            action = self._action_create_and_open_task(
-                self.company_id.crm_force_project_id
-            )
-        else:
-            action = self.env.ref(
-                "crm_lead_to_task.crm_lead_convert2task_action"
-            ).read()[0]
-            action["context"] = {"default_lead_id": self.id}
+        action = self.env.ref("crm_lead_to_task.crm_lead_convert2task_action").read()[0]
 
+        context = {"default_lead_id": self.id}
+        if self.company_id.crm_force_project_id:
+            context["default_project_id"] = self.company_id.crm_force_project_id.id
+
+        action["context"] = context
         return action
+
+    def _move_chatter(self, task):
+        self.ensure_one()
+        # Move mail thread + attachments
+        self.message_change_thread(task)
+        self.env["ir.attachment"].search(
+            [
+                ("res_model", "=", "crm.lead"),
+                ("res_id", "=", self.id),
+            ]
+        ).write({"res_model": "project.task", "res_id": task.id})
+
+    def _convert_lead_to_task(self, project):
+        task = self._create_task_from_lead(project)
+        self._move_chatter(task)
+        if self.company_id.crm_archive_lead_on_convert:
+            self.active = False
+        return self._action_open_task(project, task)
+
+    def _link_task_to_lead(self, project):
+        task = self._create_task_from_lead(project)
+        return self._action_open_task(project, task)

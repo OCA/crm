@@ -10,13 +10,25 @@ class TestCrmProject(BaseCommon):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
-        cls.lead = cls.env["crm.lead"].create(
+        # Create a Company
+        cls.company = cls.env["res.company"].create(
             {
-                "name": "Test lead",
-                "description": "Description",
-                "partner_name": "Test partner crm_lead_to_task",
-                "email_cc": "cc@example.org",
+                "name": "Test Company",
+                "crm_archive_lead_on_convert": True,
             }
+        )
+        # Create a Lead
+        cls.lead = (
+            cls.env["crm.lead"]
+            .with_company(cls.company)
+            .create(
+                {
+                    "name": "Test lead",
+                    "description": "Description",
+                    "partner_name": "Test partner crm_lead_to_task",
+                    "email_cc": "cc@example.org",
+                }
+            )
         )
         cls.project = cls.env["project.project"].create({"name": "Test project"})
 
@@ -28,7 +40,7 @@ class TestCrmProject(BaseCommon):
             )
             .create({"project_id": self.project.id})
         )
-        action = wizard.action_lead_to_project_task()
+        action = wizard.action_convert_lead_to_task()
         task = self.env["project.task"].browse(action["res_id"])
         self.assertEqual(task.description, "<p>Description</p>")
         self.assertEqual(task.email_cc, "cc@example.org")

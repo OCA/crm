@@ -6,13 +6,22 @@
         <field name="arch" type="xml">
             <form string="Convert to Task">
                 <group>
-                    <field name="project_id" />
+                    <field
+                        name="project_id"
+                        readonly="context.get('default_project_id', False)"
+                    />
                 </group>
                 <footer>
                     <button
                         type="object"
-                        name="action_lead_to_project_task"
-                        string="Create Task"
+                        name="action_convert_lead_to_task"
+                        string="Convert to task"
+                        class="btn-primary"
+                    />
+                    <button
+                        type="object"
+                        name="action_link_task_to_lead"
+                        string="Create new task and link"
                         class="btn-primary"
                     />
                     <button string="Cancel" class="btn-secondary" special="cancel" />

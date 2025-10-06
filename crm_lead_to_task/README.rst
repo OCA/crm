@@ -1,7 +1,3 @@
-.. image:: https://odoo-community.org/readme-banner-image
-   :target: https://odoo-community.org/get-involved?utm_source=readme
-   :alt: Odoo Community Association
-
 ============
 Lead to Task
 ============
@@ -17,7 +13,7 @@ Lead to Task
 .. |badge1| image:: https://img.shields.io/badge/maturity-Beta-yellow.png
     :target: https://odoo-community.org/page/development-status
     :alt: Beta
-.. |badge2| image:: https://img.shields.io/badge/license-LGPL--3-blue.png
+.. |badge2| image:: https://img.shields.io/badge/licence-LGPL--3-blue.png
     :target: http://www.gnu.org/licenses/lgpl-3.0-standalone.html
     :alt: License: LGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fcrm-lightgray.png?logo=github
@@ -33,14 +29,20 @@ Lead to Task
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
 This module allows you to convert leads or opportunities into project
-tasks. It supports the following features:
+tasks or link a task with one. It supports the following features:
 
 - Optional automatic archiving of the lead after conversion.
 
-- Ability to configure a Force Project so tasks are created directly
-  without a popup.
+- Ability to convert a lead to task or create a task and link it to the
+  lead using the wizard.
 
-- Preserves attachments and messages from the lead.
+- Ability to configure a Force Project to have a preselected project on
+  the wizard.
+
+- Preserves attachments and messages from the lead when converting.
+
+- When linking a new task, attachments and messages are not passed and
+  lead/opportunities are not archived.
 
 **DISCLAIMER:** This module is a forward-port of a module from Odoo S.A.
 and as such, it is not included in the OCA CLA. That means we do not
@@ -66,8 +68,8 @@ Usage
 
 1. Open the CRM settings and configure:
 
-   - Force Project: If set, all tasks created from leads will be
-     assigned to this project without asking the user.
+   - Force Project: If set, "Project" field will be preselected on the
+     creation wizard and the field will be readonly.
    - Archive Lead: If enabled, the lead will be archived after
      converting it to a task.
 
@@ -77,31 +79,28 @@ Usage
 
 3. Open an existing lead or create a new one.
 
-4. Depending on the Archive Lead setting:
+4. Once in the lead, click to the "Create Task" button.
 
-   - Enabled → The button will be labeled "Convert to Task".
+   |crm_lead_button|
 
-   |convert_to_task|
+5. When clicking the button, a pop up will appear:
 
-   - Disabled → The button will be labeled "Create Task".
+   - It will have a "Project" field. This field will become preselected
+     if "Force Project" is configured.
+   - "Convert to task" button: This button will convert the lead to a
+     Task. This includes archive the lead if configured and pass the
+     chatter to the new task
+   - "Create new task and link" button: This button creates a new task
+     and link it to the current lead. This will ignore the archive
+     configuration and will not include the chatter in the new task.
 
-   |create_task|
+   |create_wizard|
 
-5. When clicking the button (either Create Task or Convert to Task), two
-   scenarios are possible:
-
-   - Force Project set → The task is created immediately and linked to
-     the configured project.
-   - No Force Project set → A popup appears allowing you to select a
-     project. Click Create Task in the popup to proceed.
-
-6. After creation, you will be redirected to the new task form view. All
-   relevant lead information, including attachments and messages, will
-   be copied to the task.
+6. After creation, you will be redirected to the new task form view.
 
 .. |crm_settings| image:: https://raw.githubusercontent.com/OCA/crm/18.0/crm_lead_to_task/static/description/crm_settings.png
-.. |convert_to_task| image:: https://raw.githubusercontent.com/OCA/crm/18.0/crm_lead_to_task/static/description/convert_to_task.png
-.. |create_task| image:: https://raw.githubusercontent.com/OCA/crm/18.0/crm_lead_to_task/static/description/create_task.png
+.. |crm_lead_button| image:: https://raw.githubusercontent.com/OCA/crm/18.0/crm_lead_to_task/static/description/crm_lead_button.png
+.. |create_wizard| image:: https://raw.githubusercontent.com/OCA/crm/18.0/crm_lead_to_task/static/description/create_wizard.png
 
 Bug Tracker
 ===========
@@ -131,6 +130,7 @@ Contributors
   - Carolina Fernandez
 
 - Ruchir Shukla <ruchir@bizzappdev.com>
+- Joel Estrada (`Moduon <https://www.moduon.team/>`__)
 
 Maintainers
 -----------

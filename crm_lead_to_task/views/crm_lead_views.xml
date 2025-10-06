@@ -6,25 +6,15 @@
         <field name="inherit_id" ref="crm.crm_lead_view_form" />
         <field name="arch" type="xml">
             <field name="stage_id" position="before">
-                <!--Create a Task button (no archive) -->
+                <!--Create a Task action-->
                 <button
-                    name="action_crm_to_task"
+                    name="action_create_task"
                     id="action_create_task_from_lead"
                     type="object"
                     string="Create Task"
                     class="oe_stat_button"
                     groups="project.group_project_user"
-                    invisible="not active or crm_archive_lead_on_convert"
-                />
-                <!-- Convert to Task button (archive) -->
-                <button
-                    name="action_crm_to_task"
-                    id="action_convert_task_from_lead"
-                    type="object"
-                    string="Convert to Task"
-                    class="oe_stat_button"
-                    groups="project.group_project_user"
-                    invisible="not active or not crm_archive_lead_on_convert"
+                    invisible="not active"
                 />
             </field>
             <!-- Add a smart button to the tasks created from this lead -->

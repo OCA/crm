@@ -1,42 +1,41 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * crm_project
+# 	* crm_lead_to_task
 #
-# Translators:
-# Martin Trigaux, 2018
-# Cristopher Cravioto <ccr@odoo.com>, 2018
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server saas~11.5\n"
+"Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-07 20:31+0000\n"
-"PO-Revision-Date: 2021-02-07 21:31+0100\n"
-"Last-Translator: Cristopher Cravioto <ccr@odoo.com>, 2018\n"
-"Language-Team: Spanish (https://www.transifex.com/odoo/teams/41243/es/)\n"
+"POT-Creation-Date: 2025-10-06 10:30+0000\n"
+"PO-Revision-Date: 2025-10-06 12:53+0200\n"
+"Last-Translator: Joel Estrada Castellano <joel@moduon.team>\n"
+"Language-Team: \n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Poedit 3.5\n"
 
 #. module: crm_lead_to_task
 #: model_terms:ir.ui.view,arch_db:crm_lead_to_task.crm_lead_view_form
 msgid ""
 "<span class=\"o_stat_text\" invisible=\"task_count &lt; 2\">Tasks</span>\n"
-"                        <span class=\"o_stat_text\" invisible=\"task_count "
-"&gt; 1\">Task</span>"
+"                        <span class=\"o_stat_text\" invisible=\"task_count &gt; 1\">Task</span>"
 msgstr ""
+"<span class=\"o_stat_text\" invisible=\"task_count &lt; 2\">Tareas</span>\r\n"
+"                        <span class=\"o_stat_text\" invisible=\"task_count &gt; 1\">Tareas</"
+"span>"
 
 #. module: crm_lead_to_task
 #: model_terms:ir.ui.view,arch_db:crm_lead_to_task.view_task_form2
 msgid "<span class=\"o_stat_text\">CRM Lead</span>"
-msgstr ""
+msgstr "<span class=\"o_stat_text\">Iniciativas</span>"
 
 #. module: crm_lead_to_task
 #: model_terms:ir.ui.view,arch_db:crm_lead_to_task.crm_lead_to_task_res_config_settings_view_form
 msgid "Archive lead"
-msgstr ""
+msgstr "Archivar iniciativa"
 
 #. module: crm_lead_to_task
 #: model_terms:ir.ui.view,arch_db:crm_lead_to_task.crm_lead_convert2task_view_form
@@ -46,25 +45,33 @@ msgstr "Cancelar"
 #. module: crm_lead_to_task
 #: model:ir.model,name:crm_lead_to_task.model_res_company
 msgid "Companies"
-msgstr ""
+msgstr "Compañías"
 
 #. module: crm_lead_to_task
 #: model:ir.model,name:crm_lead_to_task.model_res_config_settings
 msgid "Config Settings"
-msgstr ""
+msgstr "Ajustes de configuración"
 
 #. module: crm_lead_to_task
 #: model:ir.actions.act_window,name:crm_lead_to_task.crm_lead_convert2task_action
 #: model_terms:ir.ui.view,arch_db:crm_lead_to_task.crm_lead_convert2task_view_form
-#: model_terms:ir.ui.view,arch_db:crm_lead_to_task.crm_lead_view_form
 msgid "Convert to Task"
 msgstr "Convertir a tarea"
 
 #. module: crm_lead_to_task
 #: model_terms:ir.ui.view,arch_db:crm_lead_to_task.crm_lead_convert2task_view_form
+msgid "Convert to task"
+msgstr "Convertir a tarea"
+
+#. module: crm_lead_to_task
 #: model_terms:ir.ui.view,arch_db:crm_lead_to_task.crm_lead_view_form
 msgid "Create Task"
 msgstr "Crear tarea"
+
+#. module: crm_lead_to_task
+#: model_terms:ir.ui.view,arch_db:crm_lead_to_task.crm_lead_convert2task_view_form
+msgid "Create new task and link"
+msgstr "Crear nueva tarea y vincular"
 
 #. module: crm_lead_to_task
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task__create_uid
@@ -81,12 +88,12 @@ msgstr "Creado el"
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_res_company__crm_archive_lead_on_convert
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_res_config_settings__crm_archive_lead_on_convert
 msgid "Crm Archive Lead On Convert"
-msgstr ""
+msgstr "Archivar iniciativa tras convertir"
 
 #. module: crm_lead_to_task
 #: model_terms:ir.ui.view,arch_db:crm_lead_to_task.crm_lead_to_task_res_config_settings_view_form
 msgid "Default project to be used when creating a task from a lead."
-msgstr ""
+msgstr "Proyecto predeterminado que se utilizará al crear una tarea a partir de una iniciativa."
 
 #. module: crm_lead_to_task
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task__display_name
@@ -97,7 +104,7 @@ msgstr "Nombre a mostrar"
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_res_company__crm_force_project_id
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_res_config_settings__crm_force_project_id
 msgid "Force Project"
-msgstr ""
+msgstr "Forzar Proyecto"
 
 #. module: crm_lead_to_task
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task__id
@@ -106,10 +113,10 @@ msgstr "ID (identificación)"
 
 #. module: crm_lead_to_task
 #: model_terms:ir.ui.view,arch_db:crm_lead_to_task.crm_lead_to_task_res_config_settings_view_form
-msgid ""
-"If enabled, leads will be archived automatically after converting it to a "
-"task."
+msgid "If enabled, leads will be archived automatically after converting it to a task."
 msgstr ""
+"Si se habilita, las iniciativas se archivarán automáticamente después de convertirlas en una "
+"tarea."
 
 #. module: crm_lead_to_task
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task__write_uid
@@ -135,14 +142,14 @@ msgstr "Convertir Iniciativa a Tarea"
 #. module: crm_lead_to_task
 #: model:ir.model,name:crm_lead_to_task.model_crm_lead
 msgid "Lead/Opportunity"
-msgstr ""
+msgstr "Lead/Oportunidad"
 
 #. module: crm_lead_to_task
 #. odoo-python
 #: code:addons/crm_lead_to_task/models/project_task.py:0
 #: code:addons/crm_lead_to_task/tests/test_crm_lead_task.py:0
 msgid "Lead: %s"
-msgstr ""
+msgstr "Iniciativa: %s"
 
 #. module: crm_lead_to_task
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task__project_id
@@ -153,30 +160,21 @@ msgstr "Proyecto"
 #: model:ir.model,name:crm_lead_to_task.model_project_task
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead__task_ids
 msgid "Task"
-msgstr ""
+msgstr "Tarea"
 
 #. module: crm_lead_to_task
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead__task_count
 msgid "Task Count"
-msgstr ""
+msgstr "Número de tareas"
 
 #. module: crm_lead_to_task
 #: model_terms:ir.ui.view,arch_db:crm_lead_to_task.crm_lead_to_task_res_config_settings_view_form
 msgid "Tasks"
-msgstr ""
+msgstr "Tareas"
 
 #. module: crm_lead_to_task
 #. odoo-python
 #: code:addons/crm_lead_to_task/models/crm_lead.py:0
 #: code:addons/crm_lead_to_task/tests/test_crm_lead_task.py:0
 msgid "Tasks from crm lead %s"
-msgstr ""
-
-#~ msgid "Last Modified on"
-#~ msgstr "Última modificación en"
-
-#~ msgid "Customer"
-#~ msgstr "Cliente"
-
-#~ msgid "Related Customer"
-#~ msgstr "Cliente relacionado"
+msgstr "Tareas de iniciativas %s"

@@ -10,13 +10,23 @@ class TestCrmLeadTask(BaseCommon):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
-
-        # Create a CRM lead
-        cls.lead = cls.env["crm.lead"].create(
+        # Create a Company
+        cls.company = cls.env["res.company"].create(
             {
-                "name": "Test Lead",
-                "description": "Description",
+                "name": "Test Company",
+                "crm_archive_lead_on_convert": True,
             }
+        )
+        # Create a CRM lead
+        cls.lead = (
+            cls.env["crm.lead"]
+            .with_company(cls.company)
+            .create(
+                {
+                    "name": "Test Lead",
+                    "description": "Description",
+                }
+            )
         )
 
         # Create Project
@@ -73,8 +83,9 @@ class TestCrmLeadTask(BaseCommon):
         self.assertEqual(task.lead_id, self.lead)
         self.assertIn(task, self.lead.task_ids)
 
-    def test_action_create_and_open_task(self):
-        action = self.lead._action_create_and_open_task(self.project)
+    def test_action_open_task(self):
+        task = self.lead._create_task_from_lead(self.project)
+        action = self.lead._action_open_task(self.project, task)
 
         self.assertEqual(action["type"], "ir.actions.act_window")
         self.assertEqual(action["res_model"], "project.task")
@@ -84,4 +95,20 @@ class TestCrmLeadTask(BaseCommon):
         self.assertEqual(action["name"], "Task created")
         self.assertEqual(
             action["view_id"], self.lead.env.ref("project.view_task_form2").id
+        )
+
+    def test_archive_lead_on_convert(self):
+        self.assertTrue(self.company.crm_archive_lead_on_convert)
+        self.lead._convert_lead_to_task(self.project)
+        self.assertFalse(self.lead.active)
+
+    def test_no_chatter_on_link(self):
+        self.lead.message_post(
+            body="Hello World",
+        )
+        self.lead._link_task_to_lead(self.project)
+        self.assertFalse(
+            self.env["mail.message"].search(
+                [("model", "=", "project.task"), ("body", "=", "Hello World")]
+            )
         )

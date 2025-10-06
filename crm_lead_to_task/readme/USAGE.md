@@ -1,24 +1,25 @@
 1. Open the CRM settings and configure:
-    - Force Project: If set, all tasks created from leads will be assigned to this project without asking the user.
+    - Force Project: If set, "Project" field will be preselected on the creation wizard
+        and the field will be readonly.
     - Archive Lead: If enabled, the lead will be archived after converting it to a task.
 
     ![crm_settings](../static/description/crm_settings.png)
 
 2. Navigate to *CRM \> Sales \> My pipeline*
-3. Open an existing lead or create a new one.
-4. Depending on the Archive Lead setting:
-    - Enabled → The button will be labeled "Convert to Task".
+3. Open an existing lead or create a new one. 
+4. Once in the lead, click to the "Create Task" button.
 
-    ![convert_to_task](../static/description/convert_to_task.png)
+    ![crm_lead_button](../static/description/crm_lead_button.png)
 
-    - Disabled → The button will be labeled "Create Task".
+5. When clicking the button, a pop up will appear:
+    - It will have a "Project" field. This field will
+        become preselected if "Force Project" is configured.
+    - "Convert to task" button: This button will convert the lead to a Task.
+        This includes archive the lead if configured and pass the chatter to the new task
+    - "Create new task and link" button: This button creates a new task
+        and link it to the current lead. This will ignore the archive configuration
+        and will not include the chatter in the new task. 
 
-    ![create_task](../static/description/create_task.png)
-
-5. When clicking the button (either Create Task or Convert to Task), two scenarios are possible:
-    - Force Project set → The task is created immediately and linked to the configured project.
-    - No Force Project set → A popup appears allowing you to select a project.
-Click Create Task in the popup to proceed.
+    ![create_wizard](../static/description/create_wizard.png)
 
 6. After creation, you will be redirected to the new task form view.
-All relevant lead information, including attachments and messages, will be copied to the task.

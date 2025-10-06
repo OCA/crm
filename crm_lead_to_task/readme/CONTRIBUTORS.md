@@ -2,3 +2,4 @@
   - Pedro M. Baeza
   - Carolina Fernandez
 - Ruchir Shukla \<<ruchir@bizzappdev.com>\>
+-   Joel Estrada ([Moduon](https://www.moduon.team/))
