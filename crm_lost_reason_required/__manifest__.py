@@ -1,8 +1,8 @@
 {
     "name":"CRM Lost reason required",
-    "version": "1.0",
-    "author": "Hector del Reguero",
-    "category": "Custom",
+    "version": "17.0.1.0.0",
+    "author": "Open Source Integrators, Odoo Community Association (OCA)",
+    "category": "Custom Relationship managmentgit",
     "depends": ["crm"],
     'data': [
         "views/crm_lead_views.xml",
@@ -11,6 +11,4 @@
     "application": True,
     "auto_install": False,
     "license": "LGPL-3",
-
-
 }
