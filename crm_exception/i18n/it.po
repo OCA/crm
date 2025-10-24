@@ -1,0 +1,73 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* crm_exception
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2025-01-09 11:06+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
+"Language-Team: none\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.6.2\n"
+
+#. module: crm_exception
+#: model:ir.model.fields,field_description:crm_exception.field_exception_rule__model
+msgid "Apply on"
+msgstr "Applica a"
+
+#. module: crm_exception
+#: model:ir.model,name:crm_exception.model_exception_rule
+msgid "Exception Rule"
+msgstr "Regola eccezione"
+
+#. module: crm_exception
+#: model:ir.model.fields,field_description:crm_exception.field_crm_lead__exception_ids
+msgid "Exceptions"
+msgstr "Eccezioni"
+
+#. module: crm_exception
+#: model:ir.model.fields,field_description:crm_exception.field_crm_lead__exceptions_summary
+msgid "Exceptions Summary"
+msgstr "Riepilogo eccezioni"
+
+#. module: crm_exception
+#: model:ir.model.fields,field_description:crm_exception.field_crm_lead__ignore_exception
+msgid "Ignore Exceptions"
+msgstr "Ignora eccezioni"
+
+#. module: crm_exception
+#: model:ir.model.fields.selection,name:crm_exception.selection__exception_rule__model__crm_lead
+msgid "Lead"
+msgstr "Contatto"
+
+#. module: crm_exception
+#: model:ir.model,name:crm_exception.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Contatto/Opportunità"
+
+#. module: crm_exception
+#: model:ir.model.fields,field_description:crm_exception.field_crm_lead__main_exception_id
+msgid "Main Exception"
+msgstr "Eccezione principale"
+
+#. module: crm_exception
+#: model:exception.rule,description:crm_exception.crm_excep_no_partner
+#: model:exception.rule,name:crm_exception.crm_excep_no_partner
+msgid "No Customer"
+msgstr "Nessun cliente"
+
+#. module: crm_exception
+#: model:ir.model.fields,field_description:crm_exception.field_exception_rule__crm_lead_ids
+msgid "Opportunities"
+msgstr "Opportunità"
+
+#. module: crm_exception
+#: model:ir.model.fields,field_description:crm_exception.field_exception_rule__stage_ids
+msgid "Stage"
+msgstr "Fase"
