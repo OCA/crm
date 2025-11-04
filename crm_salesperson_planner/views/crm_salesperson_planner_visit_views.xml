@@ -2,11 +2,11 @@
 <!-- Copyright 2021 Sygel - Valentin Vinagre
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
 <odoo>
-    <record model="ir.ui.view" id="crm_salesperson_planner_visit_tree_view">
-        <field name="name">CRM - Salesperson Planner Visit Tree</field>
+    <record model="ir.ui.view" id="crm_salesperson_planner_visit_list_view">
+        <field name="name">CRM - Salesperson Planner Visit List</field>
         <field name="model">crm.salesperson.planner.visit</field>
         <field name="arch" type="xml">
-            <tree
+            <list
                 decoration-success="state == 'done'"
                 decoration-info="state == 'confirm'"
                 decoration-warning="state == 'incident'"
@@ -56,7 +56,7 @@
                     context="{'att_close_type':'incident'}"
                     title="Close Reasons"
                 />
-            </tree>
+            </list>
         </field>
     </record>
     <record model="ir.ui.view" id="crm_salesperson_planner_visit_form_view">
@@ -266,7 +266,7 @@
     <record model="ir.actions.act_window" id="my_crm_salesperson_planner_visit_action">
         <field name="name">Visits</field>
         <field name="res_model">crm.salesperson.planner.visit</field>
-        <field name="view_mode">tree,form,pivot</field>
+        <field name="view_mode">list,form,pivot</field>
         <field name="context">{
             'search_default_visits_today':1,
         }</field>
@@ -284,7 +284,7 @@
     <record model="ir.actions.act_window" id="all_crm_salesperson_planner_visit_action">
         <field name="name">Visits</field>
         <field name="res_model">crm.salesperson.planner.visit</field>
-        <field name="view_mode">tree,form,pivot</field>
+        <field name="view_mode">list,form,pivot</field>
         <field name="context">{
             'search_default_salesperson':1,
         }</field>
