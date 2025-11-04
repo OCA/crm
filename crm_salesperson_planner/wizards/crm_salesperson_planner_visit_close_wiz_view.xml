@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2021 Sygel - Valentin Vinagre
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="crm_salesperson_planner_visit_close_wiz_view_form" model="ir.ui.view">
+        <field name="name">crm.salesperson.lost.form</field>
+        <field name="model">crm.salesperson.planner.visit.close.wiz</field>
+        <field name="arch" type="xml">
+            <form string="Close Reason">
+                <group>
+                    <field
+                        name="reason_id"
+                        options="{'no_create': True, 'no_edit': True, 'no_open': True}"
+                        domain="[('close_type','=', context.get('att_close_type', 'cancel'))]"
+                    />
+                    <field name="notes" />
+                    <field name="allow_reschedule" invisible="1" />
+                    <field name="reschedule" invisible="not allow_reschedule" />
+                    <field
+                        name="new_date"
+                        invisible="not allow_reschedule and not reschedule"
+                    />
+                    <field
+                        name="new_sequence"
+                        invisible="not allow_reschedule and not reschedule"
+                    />
+                    <field name="require_image" invisible="1" />
+                    <field
+                        name="image"
+                        widget="image"
+                        invisible="not require_image"
+                        required="require_image"
+                    />
+                </group>
+                <footer>
+                    <button
+                        name="action_close_reason_apply"
+                        string="Submit"
+                        type="object"
+                        class="btn-primary"
+                    />
+                    <button string="Cancel" class="btn-secondary" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record
+        id="crm_salesperson_planner_visit_close_wiz_action"
+        model="ir.actions.act_window"
+    >
+        <field name="name">Close Reasons</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">crm.salesperson.planner.visit.close.wiz</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="crm_salesperson_planner_visit_close_wiz_view_form" />
+        <field name="target">new</field>
+    </record>
+</odoo>

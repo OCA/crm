@@ -1,0 +1,9 @@
+- [Sygel](https://www.sygel.es):
+  - Valentin Vinagre
+  - Manuel Regidor
+- [Pesol](https://www.pesol.es):
+  - Gerardo Marin Parra \<<info@pesol.es>\>
+- [Tecnativa](https://www.tecnativa.com):
+  - Víctor Martínez
+- [APSL-Nagarro](<https://apsl.tech>):
+  - Bernat Obrador \<<bobrador@apsl.net>\>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2021 Sygel - Valentin Vinagre
+     Copyright 2021 Sygel - Manuel Regidor
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record model="ir.ui.view" id="crm_salesperson_planner_visit_template_tree_view">
+        <field name="name">CRM - Salesperson Planner Visit Template Tree</field>
+        <field name="model">crm.salesperson.planner.visit.template</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" readonly="1" />
+                <field name="partner_id" readonly="1" />
+                <field name="start_date" />
+                <field name="sequence" />
+                <field name="user_id" />
+                <field name="company_id" groups="base.group_multi_company" />
+                <field name="state" />
+            </tree>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="crm_salesperson_planner_visit_template_form_view">
+        <field name="name">CRM - Salesperson Planner Visit Template Form</field>
+        <field name="model">crm.salesperson.planner.visit.template</field>
+        <field name="arch" type="xml">
+            <form string="Visit Template">
+                <header>
+                    <button
+                        name="action_validate"
+                        string="Validate"
+                        type="object"
+                        invisible="state != 'draft'"
+                    />
+                    <button
+                        name="%(crm_salesperson_planner_visit_template_create_action)d"
+                        string="Manually Create Visits"
+                        type="action"
+                        invisible="state != 'in-progress'"
+                    />
+                    <button
+                        name="action_cancel"
+                        string="Cancel"
+                        type="object"
+                        invisible="state != 'in-progress'"
+                    />
+                    <button
+                        name="action_draft"
+                        string="Send to Draft"
+                        type="object"
+                        invisible="state != 'cancel'"
+                    />
+                    <field
+                        name="state"
+                        widget="statusbar"
+                        statusbar_visible="draft,in-progress,done,cancel"
+                    />
+                </header>
+                <sheet string="Visit Template">
+                    <div class="oe_button_box" name="button_box">
+                        <button
+                            class="oe_stat_button"
+                            type="object"
+                            name="action_view_salesperson_planner_visit"
+                            icon="fa-building"
+                        >
+                            <field
+                                string="Sales Visits"
+                                name="visit_ids_count"
+                                widget="statinfo"
+                            />
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" readonly="1" />
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="partner_id" invisible="1" readonly="1" />
+                            <field name="partner_ids" widget="many2many_tags" />
+                            <field name="start_date" required="1" />
+                            <field name="start" invisible="1" />
+                            <field name="stop" invisible="1" readonly="1" />
+                            <field name="stop_date" invisible="1" />
+                            <field name="start" invisible="1" />
+                            <field name="sequence" />
+                            <field name="user_id" />
+                            <field
+                                name="company_id"
+                                groups="base.group_multi_company"
+                            />
+                            <field name="last_visit_date" />
+                            <field name="auto_validate" />
+                            <field name="event_tz" invisible="1" />
+                            <field name="allday" force_save="1" />
+                            <field name="rrule" invisible="1" />
+                        </group>
+                        <!-- Display fields similar to calendar.event (Display data similar to calendar.event (for UX is better)). -->
+                        <group>
+                            <label for="interval" />
+                            <div class="o_col">
+                                <div class="o_row">
+                                    <field
+                                        name="interval"
+                                        class="oe_inline"
+                                        required="1"
+                                    />
+                                    <field name="rrule_type" required="1" />
+                                </div>
+                                <widget
+                                    name="week_days"
+                                    invisible="rrule_type != 'weekly'"
+                                />
+                            </div>
+                            <label string="Until" for="end_type" />
+                            <div class="o_row">
+                                <field name="end_type" required="1" />
+                                <field
+                                    name="count"
+                                    required="1"
+                                    invisible="end_type != 'count'"
+                                />
+                                <field
+                                    name="until"
+                                    invisible="end_type != 'end_date'"
+                                    required="end_type == 'end_date'"
+                                />
+                            </div>
+                        </group>
+                        <group invisible="rrule_type != 'monthly'">
+                            <label string="Day of Month" for="month_by" />
+                            <div class="o_row">
+                                <field name="month_by" />
+                                <field
+                                    name="day"
+                                    required="month_by == 'date' and rrule_type == 'monthly'"
+                                    invisible="month_by != 'date'"
+                                />
+                                <field
+                                    name="byday"
+                                    string="The"
+                                    required="month_by == 'day' and rrule_type == 'monthly'"
+                                    invisible="month_by != 'day'"
+                                />
+                                <field
+                                    name="weekday"
+                                    nolabel="1"
+                                    required="month_by == 'day' and rrule_type == 'monthly'"
+                                    invisible="month_by != 'day'"
+                                />
+                            </div>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Description">
+                            <field name="description" />
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record
+        model="ir.actions.act_window"
+        id="crm_salesperson_planner_visit_template_action"
+    >
+        <field name="name">Visit Templates</field>
+        <field name="res_model">crm.salesperson.planner.visit.template</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Create and plan commercial visit templates
+            </p>
+        </field>
+    </record>
+</odoo>
