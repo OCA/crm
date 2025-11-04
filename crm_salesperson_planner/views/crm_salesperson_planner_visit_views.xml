@@ -41,7 +41,7 @@
                     invisible="state != 'confirm'"
                 />
                 <button
-                    name="%(crm_salesperson_planner_visit_close_wiz_action)d"
+                    name="%(crm_salesperson_planner.crm_salesperson_planner_visit_close_wiz_action)d"
                     type="action"
                     icon="fa-ban text-danger"
                     invisible="state in ['cancel','incident', 'done']"
@@ -49,7 +49,7 @@
                     title="Close Reasons"
                 />
                 <button
-                    name="%(crm_salesperson_planner_visit_close_wiz_action)d"
+                    name="%(crm_salesperson_planner.crm_salesperson_planner_visit_close_wiz_action)d"
                     type="action"
                     icon="fa-exclamation-triangle"
                     invisible="state != 'confirm'"
@@ -89,7 +89,7 @@
                         invisible="state != 'confirm'"
                     />
                     <button
-                        name="%(crm_salesperson_planner_visit_close_wiz_action)d"
+                        name="%(crm_salesperson_planner.crm_salesperson_planner_visit_close_wiz_action)d"
                         id="action_cancel"
                         string="Cancel"
                         type="action"
@@ -97,7 +97,7 @@
                         context="{'att_close_type':'cancel'}"
                     />
                     <button
-                        name="%(crm_salesperson_planner_visit_close_wiz_action)d"
+                        name="%(crm_salesperson_planner.crm_salesperson_planner_visit_close_wiz_action)d"
                         id="action_incident"
                         string="Incident"
                         type="action"

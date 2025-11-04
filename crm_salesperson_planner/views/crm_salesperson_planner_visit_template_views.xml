@@ -31,7 +31,7 @@
                         invisible="state != 'draft'"
                     />
                     <button
-                        name="%(crm_salesperson_planner_visit_template_create_action)d"
+                        name="%(crm_salesperson_planner.crm_salesperson_planner_visit_template_create_action)d"
                         string="Manually Create Visits"
                         type="action"
                         invisible="state != 'in-progress'"
