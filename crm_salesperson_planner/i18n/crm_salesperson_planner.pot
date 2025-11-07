@@ -4,7 +4,7 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 17.0\n"
+"Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -140,6 +140,7 @@ msgstr ""
 
 #. module: crm_salesperson_planner
 #: model_terms:ir.ui.view,arch_db:crm_salesperson_planner.crm_salesperson_planner_visit_form_view
+#: model_terms:ir.ui.view,arch_db:crm_salesperson_planner.crm_salesperson_planner_visit_tree_view
 msgid "Confirm"
 msgstr ""
 
@@ -244,6 +245,7 @@ msgstr ""
 #. module: crm_salesperson_planner
 #: model:ir.model.fields.selection,name:crm_salesperson_planner.selection__crm_salesperson_planner_visit_template__state__done
 #: model_terms:ir.ui.view,arch_db:crm_salesperson_planner.crm_salesperson_planner_visit_form_view
+#: model_terms:ir.ui.view,arch_db:crm_salesperson_planner.crm_salesperson_planner_visit_tree_view
 msgid "Done"
 msgstr ""
 
@@ -251,6 +253,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:crm_salesperson_planner.selection__crm_salesperson_planner_visit__state__draft
 #: model:ir.model.fields.selection,name:crm_salesperson_planner.selection__crm_salesperson_planner_visit_template__state__draft
 #: model_terms:ir.ui.view,arch_db:crm_salesperson_planner.crm_salesperson_planner_visit_form_view
+#: model_terms:ir.ui.view,arch_db:crm_salesperson_planner.crm_salesperson_planner_visit_tree_view
 msgid "Draft"
 msgstr ""
 
@@ -272,7 +275,6 @@ msgstr ""
 #. module: crm_salesperson_planner
 #. odoo-python
 #: code:addons/crm_salesperson_planner/models/calendar_event.py:0
-#, python-format
 msgid ""
 "Event %(event_name)s is related to salesperson visit %(partner_name)s. "
 "Cancel it to delete this event.\n"
@@ -570,7 +572,6 @@ msgstr ""
 #. odoo-python
 #: code:addons/crm_salesperson_planner/models/crm_salesperson_planner_visit_template.py:0
 #: code:addons/crm_salesperson_planner/tests/test_crm_salesperson_planner_visit.py:0
-#, python-format
 msgid "Only one customer is allowed"
 msgstr ""
 
@@ -833,43 +834,36 @@ msgstr ""
 #. module: crm_salesperson_planner
 #. odoo-python
 #: code:addons/crm_salesperson_planner/wizards/crm_salesperson_planner_visit_close_wiz.py:0
-#, python-format
 msgid "The close reason type haven't a function."
 msgstr ""
 
 #. module: crm_salesperson_planner
 #. odoo-python
 #: code:addons/crm_salesperson_planner/wizards/crm_salesperson_planner_visit_template_create.py:0
-#, python-format
 msgid "The date can't be earlier than today"
 msgstr ""
 
 #. module: crm_salesperson_planner
 #. odoo-python
 #: code:addons/crm_salesperson_planner/models/crm_salesperson_planner_visit.py:0
-#, python-format
 msgid "The visit must be in cancelled, incident or visited state"
 msgstr ""
 
 #. module: crm_salesperson_planner
 #. odoo-python
 #: code:addons/crm_salesperson_planner/models/crm_salesperson_planner_visit.py:0
-#, python-format
 msgid "The visit must be in confirmed state"
 msgstr ""
 
 #. module: crm_salesperson_planner
 #. odoo-python
 #: code:addons/crm_salesperson_planner/models/crm_salesperson_planner_visit.py:0
-#: code:addons/crm_salesperson_planner/models/crm_salesperson_planner_visit.py:0
-#, python-format
 msgid "The visit must be in draft or validated state"
 msgstr ""
 
 #. module: crm_salesperson_planner
 #. odoo-python
 #: code:addons/crm_salesperson_planner/models/crm_salesperson_planner_visit.py:0
-#, python-format
 msgid "The visit must be in draft state"
 msgstr ""
 
@@ -999,7 +993,6 @@ msgstr ""
 #. module: crm_salesperson_planner
 #. odoo-python
 #: code:addons/crm_salesperson_planner/models/crm_salesperson_planner_visit.py:0
-#, python-format
 msgid "Visits must be in cancelled state"
 msgstr ""
 
