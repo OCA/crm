@@ -35,7 +35,7 @@ addon | version | maintainers | summary
 [crm_phonecall](crm_phonecall/) | 17.0.1.0.0 |  | CRM Phone Calls
 [crm_phonecall_summary_predefined](crm_phonecall_summary_predefined/) | 17.0.1.0.0 |  | Allows to choose from a defined summary list
 [crm_project_task](crm_project_task/) | 17.0.1.0.1 | <a href='https://github.com/EmilioPascual'><img src='https://github.com/EmilioPascual.png' width='32' height='32' style='border-radius:50%;' alt='EmilioPascual'/></a> | Create tasks from lead or opportunity
-[crm_salesperson_planner](crm_salesperson_planner/) | 17.0.1.0.1 |  | Crm Salesperson Planner
+[crm_salesperson_planner](crm_salesperson_planner/) | 17.0.1.1.0 |  | Crm Salesperson Planner
 [crm_stage_probability](crm_stage_probability/) | 17.0.1.0.0 |  | Define fixed probability on the stages
 [marketing_crm_partner](marketing_crm_partner/) | 17.0.1.0.0 |  | Copy tracking fields from leads to partners
 
