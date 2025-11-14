@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+    <record id="crm_claim_type_customer" model="crm.claim.type">
+        <field name="name">Customer</field>
+        <field name="active">1</field>
+    </record>
+    <record id="crm_claim_type_supplier" model="crm.claim.type">
+        <field name="name">Supplier</field>
+        <field name="active">1</field>
+    </record>
+    <record id="crm_claim_type_other" model="crm.claim.type">
+        <field name="name">Other</field>
+        <field name="active">1</field>
+    </record>
+</odoo>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="crm_case_claims_form_view" model="ir.ui.view">
+        <field name="name">CRM - Claims Form</field>
+        <field name="model">crm.claim</field>
+        <field name="inherit_id" ref="crm_claim.crm_case_claims_form_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='date']" position="before">
+                <field
+                    name="claim_type"
+                    required="True"
+                    options="{'no_create': True}"
+                />
+            </xpath>
+        </field>
+    </record>
+</odoo>

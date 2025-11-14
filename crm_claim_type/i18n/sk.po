@@ -1,0 +1,161 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * crm_claim_type
+#
+# Translators:
+# OCA Transbot <transbot@odoo-community.org>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-04 15:47+0000\n"
+"PO-Revision-Date: 2017-12-04 15:47+0000\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
+"Language-Team: Slovak (https://www.transifex.com/oca/teams/23907/sk/)\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#. module: crm_claim_type
+#: model:crm.claim.stage,name:crm_claim_type.stage_claim10
+msgid "Accepted"
+msgstr ""
+
+#. module: crm_claim_type
+#: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type__active
+msgid "Active"
+msgstr ""
+
+#. module: crm_claim_type
+#: model:ir.model,name:crm_claim_type.model_crm_claim
+msgid "Claim"
+msgstr ""
+
+#. module: crm_claim_type
+#: model:ir.model,name:crm_claim_type.model_crm_claim_type
+#: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim__claim_type
+#: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_stage__claim_type
+#: model_terms:ir.ui.view,arch_db:crm_claim_type.crm_stage_claim_type_search
+msgid "Claim Type"
+msgstr ""
+
+#. module: crm_claim_type
+#: model:ir.actions.act_window,name:crm_claim_type.crm_claim_type_act
+#: model:ir.ui.menu,name:crm_claim_type.menu_crm_claim_type_act
+msgid "Claim Types"
+msgstr ""
+
+#. module: crm_claim_type
+#: model:ir.model.fields,help:crm_claim_type.field_crm_claim__claim_type
+#: model:ir.model.fields,help:crm_claim_type.field_crm_claim_stage__claim_type
+msgid "Claim classification"
+msgstr ""
+
+#. module: crm_claim_type
+#: model:ir.model,name:crm_claim_type.model_crm_claim_stage
+msgid "Claim stages"
+msgstr ""
+
+#. module: crm_claim_type
+#: model_terms:ir.ui.view,arch_db:crm_claim_type.crm_claim_type_form
+msgid "Claim type"
+msgstr ""
+
+#. module: crm_claim_type
+#: model_terms:ir.ui.view,arch_db:crm_claim_type.crm_claim_type_tree
+msgid "Claim types"
+msgstr ""
+
+#. module: crm_claim_type
+#: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_stage__claim_common
+msgid "Common to All Claim Types"
+msgstr ""
+
+#. module: crm_claim_type
+#: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type__create_uid
+msgid "Created by"
+msgstr "Vytvoril"
+
+#. module: crm_claim_type
+#: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type__create_date
+msgid "Created on"
+msgstr "Vytvorené"
+
+#. module: crm_claim_type
+#: model:crm.claim.type,name:crm_claim_type.crm_claim_type_customer
+msgid "Customer"
+msgstr ""
+
+#. module: crm_claim_type
+#: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type__description
+msgid "Description"
+msgstr ""
+
+#. module: crm_claim_type
+#: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type__display_name
+msgid "Display Name"
+msgstr "Zobraziť meno"
+
+#. module: crm_claim_type
+#: model:crm.claim.stage,name:crm_claim_type.stage_claim11
+msgid "Done"
+msgstr ""
+
+#. module: crm_claim_type
+#: model_terms:ir.ui.view,arch_db:crm_claim_type.crm_stage_claim_type_search
+msgid "Group By"
+msgstr ""
+
+#. module: crm_claim_type
+#: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type__id
+msgid "ID"
+msgstr "ID"
+
+#. module: crm_claim_type
+#: model:ir.model.fields,help:crm_claim_type.field_crm_claim_stage__claim_common
+msgid ""
+"If you check this field, this stage will be proposed by default on each "
+"claim type."
+msgstr ""
+
+#. module: crm_claim_type
+#: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type____last_update
+msgid "Last Modified on"
+msgstr "Posledná modifikácia"
+
+#. module: crm_claim_type
+#: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type__write_uid
+msgid "Last Updated by"
+msgstr "Naposledy upravoval"
+
+#. module: crm_claim_type
+#: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type__write_date
+msgid "Last Updated on"
+msgstr "Naposledy upravované"
+
+#. module: crm_claim_type
+#: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim_type__name
+msgid "Name"
+msgstr "Meno"
+
+#. module: crm_claim_type
+#: model:crm.claim.type,name:crm_claim_type.crm_claim_type_other
+msgid "Other"
+msgstr ""
+
+#. module: crm_claim_type
+#: model_terms:ir.ui.view,arch_db:crm_claim_type.crm_stage_claim_type_search
+msgid "Search Stages"
+msgstr ""
+
+#. module: crm_claim_type
+#: model:ir.model.fields,field_description:crm_claim_type.field_crm_claim__stage_id
+msgid "Stage"
+msgstr ""
+
+#. module: crm_claim_type
+#: model:crm.claim.type,name:crm_claim_type.crm_claim_type_supplier
+msgid "Supplier"
+msgstr ""

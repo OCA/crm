@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+    <record id="crm_claim.stage_claim1" model="crm.claim.stage">
+        <field name="claim_common">1</field>
+    </record>
+    <record id="crm_claim.stage_claim5" model="crm.claim.stage">
+        <field name="claim_common">1</field>
+    </record>
+    <record id="crm_claim.stage_claim2" model="crm.claim.stage">
+        <field name="claim_type" ref="crm_claim_type.crm_claim_type_supplier" />
+    </record>
+    <record id="crm_claim.stage_claim3" model="crm.claim.stage">
+        <field name="claim_type" ref="crm_claim_type.crm_claim_type_supplier" />
+    </record>
+</odoo>
