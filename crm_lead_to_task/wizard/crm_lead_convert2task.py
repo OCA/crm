@@ -43,15 +43,50 @@ class CrmLeadConvert2Task(models.TransientModel):
         }
         task = self.env["project.task"].create(vals)
         # move the mail thread
-        lead.message_change_thread(task)
-        # move attachments
+
+
+
+        # changes to saving messages and attachments
+        messages = self.env["mail.message"].search([
+            ("model", "=", "crm.lead"),
+            ("res_id", "=", lead.id)
+        ], order="id asc")
+        
+        for message in messages:
+            # Copy each message to the task
+            message.copy({
+                "model": "project.task",
+                "res_id": task.id,
+            })
+        
+        # Post cross-reference messages
+        lead.message_post(
+            body=f'Task created: {task.name}',
+            message_type='notification',
+            subtype_xmlid='mail.mt_note',
+        )
+        
+        task.message_post(
+            body=f'Created from Lead: {lead.name}',
+            message_type='notification',
+            subtype_xmlid='mail.mt_note',
+        )
+        
+        # Copy attachments to the task (keep originals on lead)
         attachments = self.env["ir.attachment"].search(
             [("res_model", "=", "crm.lead"), ("res_id", "=", lead.id)]
         )
-        attachments.write({"res_model": "project.task", "res_id": task.id})
-        # archive the lead (can't be unlinked by plain salesmen)
-        lead.active = False
-        # return the action to go to the form view of the new Task
+        for attachment in attachments:
+            attachment.copy({
+                "res_model": "project.task",
+                "res_id": task.id,
+            })
+
+
+
+
+
+
         view = self.env.ref("project.view_task_form2")
         return {
             "name": "Task created",
