@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-    <data>
         <!-- Make lost_reason field required in the lost reason wizard -->
         <record id="view_crm_lead_lost_wizard_required" model="ir.ui.view">
             <field name="name">crm.lead.lost.wizard.required</field>
             <field name="model">crm.lead.lost</field>
-            <field name="inherit_id" ref="crm.crm_lead_lost_view_form"/>
+            <field name="inherit_id" ref="crm.crm_lead_lost_view_form" />
             <field name="arch" type="xml">
                 <!-- Make lost_reason field required in the wizard -->
                 <xpath expr="//field[@name='lost_reason_id']" position="attributes">
@@ -13,7 +12,4 @@
                 </xpath>
             </field>
         </record>
-
-
-    </data>
 </odoo>
