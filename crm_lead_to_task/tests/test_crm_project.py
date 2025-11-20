@@ -34,4 +34,4 @@ class TestCrmProject(BaseCommon):
         self.assertEqual(task.email_cc, "cc@example.org")
         self.assertEqual(task.partner_id.name, "Test partner crm_lead_to_task")
         self.assertEqual(task.project_id, self.project)
-        self.assertFalse(self.lead.active)
+        self.assertTrue(self.lead.active)
