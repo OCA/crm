@@ -76,7 +76,7 @@ class CrmClaim(models.Model):
         comodel_name="crm.team",
         string="Sales Team",
         index=True,
-        default=_get_default_team,
+        default=lambda self: self._get_default_team(),
         help="Responsible sales team. Define Responsible user and Email "
         "account for mail gateway.",
     )
@@ -100,7 +100,7 @@ class CrmClaim(models.Model):
         comodel_name="crm.claim.stage",
         string="Stage",
         tracking=3,
-        default=_get_default_stage_id,
+        default=lambda self: self._get_default_stage_id(),
         domain="['|', ('team_ids', '=', team_id), ('case_default', '=', True)]",
     )
     cause = fields.Text(string="Root Cause")
@@ -150,7 +150,7 @@ class CrmClaim(models.Model):
         new_claims = super().copy(default)
         for _old_claim, new_claim in zip(self, new_claims, strict=False):
             new_claim.stage_id = self._get_default_stage_id()
-            new_claim.name = self.env._(f"{self.name} (copy)")
+            new_claim.name = f"{self.name} (copy)"
         return new_claims
 
     # -------------------------------------------------------
