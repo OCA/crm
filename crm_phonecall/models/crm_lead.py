@@ -18,10 +18,15 @@ class CrmLead(models.Model):
 
     def _compute_phonecall_count(self):
         """Calculate number of phonecalls."""
+        phonecall_data = self.env["crm.phonecall"]._read_group(
+            domain=[("opportunity_id", "in", self.ids)],
+            groupby=["opportunity_id"],
+            aggregates=["opportunity_id:count"],
+        )
+        mapped_data = {p[0].id: p[1] for p in phonecall_data}
         for lead in self:
-            lead.phonecall_count = self.env["crm.phonecall"].search_count(
-                [("opportunity_id", "=", lead.id)]
-            )
+            count = mapped_data.get(lead.id, 0)
+            lead.phonecall_count = count
 
     def button_open_phonecall(self):
         self.ensure_one()

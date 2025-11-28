@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <!-- This view is there, but it is not used in the CRM Menus -->
     <record id="crm_case_form_view_leads_inherit" model="ir.ui.view">

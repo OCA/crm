@@ -15,9 +15,9 @@ class CrmPhonecall(models.Model):
     _order = "id desc"
     _inherit = ["mail.thread", "utm.mixin"]
 
-    date_action_last = fields.Datetime(string="Last Action", readonly=True)
-    date_action_next = fields.Datetime(string="Next Action", readonly=True)
-    create_date = fields.Datetime(string="Creation Date", readonly=True)
+    date_action_last = fields.Datetime(string="Last Action")
+    date_action_next = fields.Datetime(string="Next Action")
+    create_date = fields.Datetime(string="Creation Date")
     team_id = fields.Many2one(
         comodel_name="crm.team",
         string="Sales Team",
@@ -30,7 +30,7 @@ class CrmPhonecall(models.Model):
         default=lambda self: self.env.user,
     )
     partner_id = fields.Many2one(comodel_name="res.partner", string="Contact")
-    company_id = fields.Many2one(comodel_name="res.company", string="Company")
+    company_id = fields.Many2one(comodel_name="res.company")
     description = fields.Text()
     state = fields.Selection(
         [
@@ -48,7 +48,7 @@ class CrmPhonecall(models.Model):
         "to Cancelled.",
     )
     email_from = fields.Char(string="Email", help="These people will receive email.")
-    date_open = fields.Datetime(string="Opened", readonly=True)
+    date_open = fields.Datetime(string="Opened")
     name = fields.Char(string="Call Summary", required=True)
     active = fields.Boolean(required=False, default=True)
     duration = fields.Float(help="Duration in minutes and seconds.")
@@ -60,12 +60,11 @@ class CrmPhonecall(models.Model):
         column2="tag_id",
     )
     partner_phone = fields.Char(string="Phone")
-    partner_mobile = fields.Char("Mobile")
     priority = fields.Selection(
         selection=[("0", "Low"), ("1", "Normal"), ("2", "High")],
         default="1",
     )
-    date_closed = fields.Datetime(string="Closed", readonly=True)
+    date_closed = fields.Datetime(string="Closed")
     date = fields.Datetime(default=lambda self: fields.Datetime.now())
     opportunity_id = fields.Many2one(comodel_name="crm.lead", string="Lead/Opportunity")
     direction = fields.Selection(
@@ -77,7 +76,6 @@ class CrmPhonecall(models.Model):
         """Contact number details should be change based on partner."""
         if self.partner_id:
             self.partner_phone = self.partner_id.phone
-            self.partner_mobile = self.partner_id.mobile
 
     @api.onchange("opportunity_id")
     def _onchange_opportunity_id(self):
@@ -85,7 +83,6 @@ class CrmPhonecall(models.Model):
         if self.opportunity_id:
             self.team_id = self.opportunity_id.team_id.id
             self.partner_phone = self.opportunity_id.phone
-            self.partner_mobile = self.opportunity_id.mobile
             self.partner_id = self.opportunity_id.partner_id.id
             self.tag_ids = self.opportunity_id.tag_ids.ids
 
@@ -111,7 +108,7 @@ class CrmPhonecall(models.Model):
                 phonecall.write(values)
             else:
                 phonecall.duration = 0.0
-        phonecall_no_dates.write({"duration": 0.0})
+        phonecall_no_dates.duration = 0.0
         return True
 
     def get_values_schedule_another_phonecall(self, vals):
@@ -123,7 +120,6 @@ class CrmPhonecall(models.Model):
             "team_id": vals.get("team_id") or self.team_id.id,
             "partner_id": self.partner_id.id,
             "partner_phone": self.partner_phone,
-            "partner_mobile": self.partner_mobile,
             "priority": self.priority,
             "opportunity_id": self.opportunity_id.id,
             "campaign_id": self.campaign_id.id,
@@ -141,7 +137,7 @@ class CrmPhonecall(models.Model):
             values = call.get_values_schedule_another_phonecall(vals)
             new_id = self.create(values)
             if vals.get("action") == "log":
-                call.write({"state": "done"})
+                call.state = "done"
             phonecall_dict[call.id] = new_id
         if return_recordset:
             return reduce(lambda x, y: x + y, phonecall_dict.values())
@@ -198,7 +194,6 @@ class CrmPhonecall(models.Model):
             "name": self.name,
             "partner_id": self.partner_id.id,
             "phone": self.partner_phone or self.partner_id.phone,
-            "mobile": self.partner_mobile or self.partner_id.mobile,
             "email_from": self.partner_id.email,
             "team_id": self.team_id.id,
             "description": self.description,

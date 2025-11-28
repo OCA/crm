@@ -20,13 +20,10 @@ class TestCrmPhoneCall(common.TransactionCase):
             {
                 "name": "Partner1",
                 "phone": "123 456 789",
-                "mobile": "123 456 789",
                 "type": "contact",
             }
         )
-        cls.partner2 = partner_obj.create(
-            {"name": "Partner2", "phone": "789 654 321", "mobile": "789 654 321"}
-        )
+        cls.partner2 = partner_obj.create({"name": "Partner2", "phone": "789 654 321"})
         cls.phonecall1 = cls.env["crm.phonecall"].create(
             {
                 "name": "Call #1 for test",
@@ -40,7 +37,6 @@ class TestCrmPhoneCall(common.TransactionCase):
             {
                 "name": "Call #2 for test",
                 "partner_phone": "123 456 789",
-                "partner_mobile": "987 654 321",
                 "campaign_id": cls.campaign1.id,
                 "source_id": cls.source1.id,
                 "medium_id": cls.medium1.id,
@@ -50,7 +46,6 @@ class TestCrmPhoneCall(common.TransactionCase):
             {
                 "name": "Opportunity #1",
                 "phone": "111 111 111",
-                "mobile": "222 222 222",
                 "partner_id": cls.partner1.id,
             }
         )
@@ -58,15 +53,14 @@ class TestCrmPhoneCall(common.TransactionCase):
             {
                 "name": "Opportunity #2",
                 "phone": "222 222 222",
-                "mobile": "333 333 333",
                 "partner_id": cls.partner2.id,
             }
         )
-        cls.tag = cls.env.ref("sales_team.categ_oppor1")
+        cls.tag = cls.env["crm.tag"].create({"name": "CRM Tag_1"})
 
     def test_compute_phonecall_count_partner(self):
         partner = self.env["res.partner"].create(
-            {"name": "Partner3", "phone": "123 654 007", "mobile": "123 654 007"}
+            {"name": "Partner3", "phone": "123 654 007"}
         )
         phonecall = self.env["crm.phonecall"].create(
             {
@@ -80,7 +74,7 @@ class TestCrmPhoneCall(common.TransactionCase):
 
     def test_compute_duration(self):
         partner = self.env["res.partner"].create(
-            {"name": "Partner4", "phone": "123 456 007", "mobile": "123 456 007"}
+            {"name": "Partner4", "phone": "123 456 007"}
         )
         phonecall = self.env["crm.phonecall"].create(
             {
@@ -98,7 +92,6 @@ class TestCrmPhoneCall(common.TransactionCase):
         phonecall_form.partner_id = self.partner2
         phonecall_form.save()
         self.assertEqual(self.phonecall1.partner_phone, self.partner2.phone)
-        self.assertEqual(self.phonecall1.partner_mobile, self.partner2.mobile)
         self.assertFalse(self.phonecall1.date_closed)
         self.phonecall1.state = "done"
         self.assertTrue(self.phonecall1.date_closed)
@@ -155,7 +148,6 @@ class TestCrmPhoneCall(common.TransactionCase):
         result = self.phonecall2.action_button_convert2opportunity()
         lead = self.env["crm.lead"].browse(result["res_id"])
         self.assertEqual(lead.phone, self.phonecall2.partner_phone)
-        self.assertEqual(lead.mobile, self.phonecall2.partner_mobile)
 
     def test_make_meeting(self):
         """Make a meeting test."""
