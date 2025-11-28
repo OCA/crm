@@ -21,8 +21,8 @@ class CrmPhonecallReport(models.Model):
     _description = "Phone calls by user"
     _auto = False
 
-    user_id = fields.Many2one(comodel_name="res.users", string="User", readonly=True)
-    team_id = fields.Many2one(comodel_name="crm.team", string="Team", readonly=True)
+    user_id = fields.Many2one(comodel_name="res.users", readonly=True)
+    team_id = fields.Many2one(comodel_name="crm.team", readonly=True)
     priority = fields.Selection(
         selection=[("0", "Low"), ("1", "Normal"), ("2", "High")]
     )
@@ -44,12 +44,8 @@ class CrmPhonecallReport(models.Model):
         aggregator="avg",
         help="Number of Days to open the case",
     )
-    partner_id = fields.Many2one(
-        comodel_name="res.partner", string="Partner", readonly=True
-    )
-    company_id = fields.Many2one(
-        comodel_name="res.company", string="Company", readonly=True
-    )
+    partner_id = fields.Many2one(comodel_name="res.partner", readonly=True)
+    company_id = fields.Many2one(comodel_name="res.company", readonly=True)
     opening_date = fields.Datetime(readonly=True, index=True)
     date_closed = fields.Datetime(string="Close Date", readonly=True, index=True)
 

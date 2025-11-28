@@ -30,7 +30,7 @@ class CrmPhonecall2phonecall(models.TransientModel):
         selection=[("schedule", "Schedule a call"), ("log", "Log a call")],
         required=True,
     )
-    partner_id = fields.Many2one(comodel_name="res.partner", string="Partner")
+    partner_id = fields.Many2one(comodel_name="res.partner")
     note = fields.Text()
 
     def get_vals_action_schedule(self):
@@ -47,7 +47,7 @@ class CrmPhonecall2phonecall(models.TransientModel):
     def action_schedule(self):
         """Schedule a phonecall."""
         phonecall_obj = self.env["crm.phonecall"]
-        phonecalls = phonecall_obj.browse(self._context.get("active_ids", []))
+        phonecalls = phonecall_obj.browse(self.env.context.get("active_ids", []))
         vals = self.get_vals_action_schedule()
         new_phonecalls = phonecalls.schedule_another_phonecall(
             vals, return_recordset=True

@@ -17,7 +17,12 @@ class ResPartner(models.Model):
 
     def _compute_phonecall_count(self):
         """Calculate number of phonecalls."""
+        partner_data = self.env["crm.phonecall"]._read_group(
+            domain=[("partner_id", "in", self.ids)],
+            groupby=["partner_id"],
+            aggregates=["partner_id:count"],
+        )
+        mapped_data = {p[0].id: p[1] for p in partner_data}
         for partner in self:
-            partner.phonecall_count = self.env["crm.phonecall"].search_count(
-                [("partner_id", "=", partner.id)]
-            )
+            count = mapped_data.get(partner.id, 0)
+            partner.phonecall_count = count

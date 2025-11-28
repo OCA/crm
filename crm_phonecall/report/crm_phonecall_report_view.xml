@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <record id="view_report_crm_phonecall_graph" model="ir.ui.view">
         <field name="name">crm.phonecall.report.graph</field>
@@ -24,29 +24,32 @@
             </pivot>
         </field>
     </record>
+    <!-- pylint: disable=xml-dangerous-filter-wo-user_id -->
     <record id="filter_crm_phonecall_sales_team" model="ir.filters">
         <field name="name">By Sales Team</field>
         <field name="model_id">crm.phonecall.report</field>
         <field name="domain">[('state','=','done')]</field>
-        <field eval="False" name="user_id" />
+        <field name="user_ids" eval="False" />
         <field name="context">
             {'group_by': ['team_id'], 'pivot_measures': ['nbr_cases', 'duration']}
         </field>
     </record>
+    <!-- pylint: disable=xml-dangerous-filter-wo-user_id -->
     <record id="filter_crm_phonecall_delay_to_close" model="ir.filters">
         <field name="name">Delay To Close</field>
         <field name="model_id">crm.phonecall.report</field>
         <field name="domain">[('state','=','done')]</field>
-        <field eval="False" name="user_id" />
+        <field name="user_ids" eval="False" />
         <field name="context">
             {'group_by': ['team_id'], 'pivot_measures': ['delay_close']}
         </field>
     </record>
+    <!-- pylint: disable=xml-dangerous-filter-wo-user_id -->
     <record id="filter_crm_phonecall_phone_call_to_do" model="ir.filters">
         <field name="name">Phone Calls To Do</field>
         <field name="model_id">crm.phonecall.report</field>
         <field name="domain">[('state','in',('draft','open'))]</field>
-        <field eval="False" name="user_id" />
+        <field name="user_ids" eval="False" />
         <field name="context">
             {'group_by': ['team_id'], 'pivot_measures': ['nbr_cases']}
         </field>
@@ -97,7 +100,7 @@
                     string="Sales Team"
                 />
                 <field name="user_id" string="Salesperson" />
-                <group expand="0" string="Extended Filters...">
+                <group>
                     <field
                         filter_domain="[('partner_id','child_of',self)]"
                         name="partner_id"
@@ -106,7 +109,7 @@
                     <field name="opening_date" />
                     <field name="date_closed" />
                 </group>
-                <group expand="1" string="Group By">
+                <group>
                     <filter
                         context="{'group_by':'user_id'}"
                         name="Salesperson"
@@ -148,12 +151,12 @@
         <field name="name">Phone Calls Analysis</field>
         <field name="res_model">crm.phonecall.report</field>
         <field name="view_mode">pivot,graph</field>
-        <field name="context">{'search_default_team_id': active_id}</field>
+        <field name="context">{'search_default_team_id': id}</field>
     </record>
     <menuitem
+        id="menu_report_crm_phonecalls_tree"
         action="crm_phonecall_report_action"
         groups="sales_team.group_sale_salesman"
-        id="menu_report_crm_phonecalls_tree"
         name="Phone Calls Analysis"
         parent="crm.crm_menu_report"
         sequence="15"
