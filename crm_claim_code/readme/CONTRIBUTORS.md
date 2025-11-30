@@ -1,0 +1,11 @@
+- Ana Juaristi \<<anajuarist@avanzosc.es>\>
+- Iker Coranti \<<ikercoranti@avanzosc.com>\>
+- Oihane Crucelaegui \<<oihanecrucelaegi@avanzosc.es>\>
+- Alfredo de la Fuente \<<alfredodelafuente@avanzosc.es>\>
+- Tharathip Chaweewongphan \<<tharathipc@ecosoft.co.th>\>
+- [Tecnativa](https://www.tecnativa.com):
+  - Ernesto Tejeda
+  - Pedro M. Baeza
+  - Vicent Cubells
+- [APSL-Nagarro](<https://apsl.tech>):
+  - Bernat Obrador \<<bobrador@apsl.net>\>
