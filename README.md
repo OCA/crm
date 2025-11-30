@@ -22,6 +22,7 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [crm_claim](crm_claim/) | 17.0.1.0.1 |  | Track your customers/vendors claims and grievances.
+[crm_claim_code](crm_claim_code/) | 17.0.1.0.0 |  | Sequential Code for Claims
 [crm_claim_type](crm_claim_type/) | 17.0.1.0.0 |  | Claim types for CRM
 [crm_exception](crm_exception/) | 17.0.1.0.0 |  | CRM Exception
 [crm_industry](crm_industry/) | 17.0.1.0.1 |  | Link leads/opportunities to industries
