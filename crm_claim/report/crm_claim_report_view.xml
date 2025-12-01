@@ -57,10 +57,11 @@
             </graph>
         </field>
     </record>
+    <!-- pylint: disable=xml-dangerous-filter-wo-user -->
     <record id="filter_report_crm_claim_workload" model="ir.filters">
         <field name="name">Workload</field>
         <field name="model_id">crm.claim.report</field>
-        <field name="user_id" eval="False" />
+        <field name="user_ids" eval="False" />
         <field
             name="context"
         >{'group_by': ['subject'], 'measures': ['email', 'delay_close']}</field>
@@ -93,7 +94,7 @@
                     string="Sales Team"
                     context="{'invisible_team': False}"
                 />
-                <group expand="0" string="Extended Filters...">
+                <group>
                     <field
                         name="partner_id"
                         filter_domain="[('partner_id','child_of',self)]"
@@ -106,7 +107,7 @@
                     <field name="date_closed" />
                     <field name="date_deadline" />
                 </group>
-                <group expand="1" string="Group By">
+                <group>
                     <filter
                         string="Salesperson"
                         name="Salesperson"

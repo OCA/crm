@@ -3,10 +3,11 @@
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
 from odoo import api, fields, models
+from odoo.fields import Domain
 from odoo.tools import html2plaintext
 
 APPLICABLE_MODELS = [
-    "account.invoice",
+    "account.move",
     "event.registration",
     "hr.applicant",
     "res.partner",
@@ -118,18 +119,11 @@ class CrmClaim(models.Model):
         if team_id:
             team_ids.append(team_id)
         team_ids.extend(self.mapped("team_id").ids)
-        search_domain = []
+        search_domain = Domain([("case_default", "=", True)])
         if team_ids:
-            search_domain += ["|"] * len(team_ids)
-            for team_id in team_ids:
-                search_domain.append(("team_ids", "=", team_id))
-        search_domain.append(("case_default", "=", True))
-        # AND with the domain in parameter
-        search_domain += list(domain)
-        # perform search, return the first found
-        return (
-            self.env["crm.claim.stage"].search(search_domain, order=order, limit=1).id
-        )
+            search_domain |= Domain([("team_ids", "in", team_ids)])
+        final_domain = Domain(domain) & search_domain
+        return self.env["crm.claim.stage"].search(final_domain, order=order, limit=1).id
 
     @api.onchange("partner_id")
     def onchange_partner_id(self):

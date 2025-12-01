@@ -49,3 +49,20 @@ class TestCrmClaim(BaseCommon):
         )
         self.assertEqual(len(items), 1)
         self.assertEqual(items.id, self.claim.id)
+
+    def test_crm_claim_message_new(self):
+        msg = {
+            "subject": "Incoming Claim",
+            "body": "<p>Issue details</p>",
+            "from": "sender@example.com",
+            "cc": "copy@example.com",
+            "author_id": self.partner.id,
+            "priority": "2",
+        }
+        claim = self.env["crm.claim"].message_new(msg)
+        self.assertEqual(claim.name, "Incoming Claim")
+        self.assertEqual(claim.description, "Issue details")
+        self.assertEqual(claim.email_from, "sender@example.com")
+        self.assertEqual(claim.email_cc, "copy@example.com")
+        self.assertEqual(claim.partner_id, self.partner)
+        self.assertEqual(claim.priority, "2")

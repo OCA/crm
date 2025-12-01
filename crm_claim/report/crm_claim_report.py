@@ -3,9 +3,9 @@
 # Copyright 2018 Tecnativa - Cristina Martin R.
 # License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl).
 
-from psycopg2.extensions import AsIs
 
 from odoo import fields, models, tools
+from odoo.tools import SQL
 
 
 class CrmClaimReport(models.Model):
@@ -123,18 +123,19 @@ class CrmClaimReport(models.Model):
         """
 
         tools.drop_view_if_exists(self.env.cr, self._table)
-        self.env.cr.execute(
+        query = SQL(
             """
-            CREATE OR REPLACE VIEW %s AS (
-                %s
-                from
-                %s
-                %s)
-            """,
-            (
-                AsIs(self._table),
-                AsIs(self._select()),
-                AsIs(self._from()),
-                AsIs(self._group_by()),
-            ),
+                CREATE OR REPLACE VIEW %s AS (
+                    %s
+                    FROM
+                    %s
+                    %s
+                )
+                """,
+            SQL.identifier(self._table),
+            SQL(self._select()),
+            SQL(self._from()),
+            SQL(self._group_by()),
         )
+
+        self.env.cr.execute(query)

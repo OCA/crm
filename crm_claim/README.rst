@@ -48,16 +48,16 @@ Configuration
 
 To configure this module, you need to:
 
-- Go to new menu **CRM > Configuration > Claim > Categories** and create
-  as many categories as you need.
-- Go to new menú **CRM > Configuration > Claim > Stages** and create
-  stages for claims.
+-  Go to new menu **CRM > Configuration > Claim > Categories** and
+   create as many categories as you need.
+-  Go to new menú **CRM > Configuration > Claim > Stages** and create
+   stages for claims.
 
 Usage
 =====
 
-- Go to new menu **CRM > After Sale > Services > Claims** and create a
-  new claim.
+-  Go to new menu **CRM > After Sale > Services > Claims** and create a
+   new claim.
 
 Changelog
 =========
@@ -88,18 +88,22 @@ Authors
 Contributors
 ------------
 
-- Odoo S.A.
-- Vicent Cubells <vicent.cubells@tecnativa.com>
-- Bhavesh Odedra <bodedra@ursainfosystems.com>
-- Cristina Martin R. <cristina.martin@tecnativa.com>
-- Ruchir Shukla <ruchir@bizzappdev.com>
-- `Guadaltech <https://www.guadaltech.es>`__:
+-  Odoo S.A.
+-  Vicent Cubells <vicent.cubells@tecnativa.com>
+-  Bhavesh Odedra <bodedra@ursainfosystems.com>
+-  Cristina Martin R. <cristina.martin@tecnativa.com>
+-  Ruchir Shukla <ruchir@bizzappdev.com>
+-  `Guadaltech <https://www.guadaltech.es>`__:
 
-  - Fernando La Chica <fernando.lachica@guadaltech.es>
+   -  Fernando La Chica <fernando.lachica@guadaltech.es>
 
-- `APSL-Nagarro <https://apsl.tech>`__:
+-  `APSL-Nagarro <https://apsl.tech>`__:
 
-  - Bernat Obrador <bobrador@apsl.net>
+   -  Bernat Obrador <bobrador@apsl.net>
+
+-  `Studio73 <https://www.studio73.es/>`__:
+
+   -  Vicent Castells <vicent@studio73.es>
 
 Maintainers
 -----------

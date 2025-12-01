@@ -7,3 +7,5 @@
   - Fernando La Chica \<<fernando.lachica@guadaltech.es>\>
 - [APSL-Nagarro](<https://apsl.tech>):
   - Bernat Obrador \<<bobrador@apsl.net>\>
+- [Studio73](<https://www.studio73.es/>):
+  - Vicent Castells \<<vicent@studio73.es>\>
