@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2024 - TODAY, Marcel Savegnago <marcel.savegnago@escodoo.com.br>
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+
+    <record id="crm_stage_form_inherit" model="ir.ui.view">
+        <field name="model">crm.stage</field>
+        <field name="inherit_id" ref="crm.crm_stage_form" />
+        <field name="arch" type="xml">
+            <field name="requirements" position="before">
+                <separator string="Stage Validation" />
+                <field name="validate_field_ids" widget="many2many_tags" />
+            </field>
+        </field>
+    </record>
+
+</odoo>
