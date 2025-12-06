@@ -31,7 +31,7 @@
                         invisible="state != 'draft'"
                     />
                     <button
-name="%(crm_salesperson_planner_visit_template_create_action)d"
+                        name="%(crm_salesperson_planner_visit_template_create_action)d"
                         string="Manually Create Visits"
                         type="action"
                         invisible="state != 'in-progress'"
@@ -76,7 +76,7 @@ name="%(crm_salesperson_planner_visit_template_create_action)d"
                     </div>
                     <group>
                         <group>
-<field name="partner_ids" widget="many2many_tags" />
+                            <field name="partner_ids" widget="many2many_tags" />
                             <field name="start_date" required="1" />
                             <field name="sequence" />
                             <field name="user_id" />
@@ -86,7 +86,7 @@ name="%(crm_salesperson_planner_visit_template_create_action)d"
                             />
                             <field name="last_visit_date" />
                             <field name="auto_validate" />
-<field name="allday" force_save="1" />
+                            <field name="allday" force_save="1" />
                         </group>
                         <!-- Display fields similar to calendar.event (Display data similar to calendar.event (for UX is better)). -->
                         <group>
