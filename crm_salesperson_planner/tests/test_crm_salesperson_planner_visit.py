@@ -260,7 +260,7 @@ class TestCrmSalespersonPlannerVisitTemplate(common.TransactionCase):
                 (0, 0, {"name": "Customer 3"}),
             ]
 
-        error_msg = _("Only one customer is allowed")
+        error_msg = "Only one customer is allowed"
         self.assertEqual(str(context.exception), error_msg)
 
     def test_action_view_salesperson_planner_visit(self):
