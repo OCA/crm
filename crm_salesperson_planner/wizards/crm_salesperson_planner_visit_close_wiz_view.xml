@@ -17,20 +17,10 @@
                     <field name="allow_reschedule" invisible="1" />
                     <field name="reschedule" invisible="not allow_reschedule" />
                     <field
-                        name="new_date"
-<<<<<<< HEAD
-                        invisible="not allow_reschedule and not reschedule"
-                    />
-                    <field
-                        name="new_sequence"
-                        invisible="not allow_reschedule and not reschedule"
-=======
-                        invisible="not allow_reschedule or not reschedule"
-                    />
+                        name="new_date" invisible="not allow_reschedule or not reschedule" />
                     <field
                         name="new_sequence"
                         invisible="not allow_reschedule or not reschedule"
->>>>>>> upstream/18.0
                     />
                     <field name="require_image" invisible="1" />
                     <field
