@@ -5,7 +5,7 @@ from datetime import timedelta
 
 from dateutil.relativedelta import relativedelta
 
-from odoo import _, fields
+from odoo import fields
 from odoo.exceptions import ValidationError
 from odoo.tests import common
 from odoo.tools import mute_logger
