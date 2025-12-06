@@ -59,5 +59,5 @@ class CrmSalespersonPlannerVisitCloseWiz(models.TransientModel):
                     }
                 ).action_confirm()
         else:
-raise ValueError(self.env._("The close reason type haven't a function."))
+            raise ValueError(self.env._("The close reason type haven't a function."))
         return {"type": "ir.actions.act_window_close"}
