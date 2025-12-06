@@ -1,7 +1,11 @@
 # Copyright 2021 Sygel - Valentin Vinagre
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html)
 
+<<<<<<< HEAD
 from odoo import _, fields, models
+=======
+from odoo import fields, models
+>>>>>>> upstream/18.0
 
 
 class CrmSalespersonPlannerVisitCloseWiz(models.TransientModel):
@@ -59,5 +63,9 @@ class CrmSalespersonPlannerVisitCloseWiz(models.TransientModel):
                     }
                 ).action_confirm()
         else:
+<<<<<<< HEAD
             raise ValueError(_("The close reason type haven't a function."))
+=======
+            raise ValueError(self.env._("The close reason type haven't a function."))
+>>>>>>> upstream/18.0
         return {"type": "ir.actions.act_window_close"}

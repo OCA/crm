@@ -33,3 +33,8 @@ msgstr ""
 #: model:res.groups,name:crm_security_group.group_crm_own_leads
 msgid "User: Own Documents Only"
 msgstr ""
+
+#. module: crm_security_group
+#: model:res.groups,name:crm_security_group.group_crm_team_leads
+msgid "User: Team Documents Only"
+msgstr ""

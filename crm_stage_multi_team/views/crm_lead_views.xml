@@ -1,0 +1,14 @@
+<odoo>
+    <record id="crm_lead_view_form_inherit" model="ir.ui.view">
+        <field name="name">crm.lead.form.inherit</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='stage_id']" position="attributes">
+                <attribute
+                    name="domain"
+                >['|', ('team_ids', 'in', team_id), ('team_ids', '=', False)]</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

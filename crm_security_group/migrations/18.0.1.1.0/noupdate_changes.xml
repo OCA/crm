@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="group_crm_all_leads" model="res.groups">
+        <field
+            name="implied_ids"
+            eval="[(6, 0, [ref('crm_security_group.group_crm_team_leads')])]"
+        />
+    </record>
+</odoo>

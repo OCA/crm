@@ -1,0 +1,50 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* crm_lead_vat
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2025-11-26 17:42+0000\n"
+"Last-Translator: Enric Tobella <etobella@creublanca.es>\n"
+"Language-Team: none\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.10.4\n"
+
+#. module: crm_lead_vat
+#: model_terms:ir.ui.view,arch_db:crm_lead_vat.crm_lead_view_form
+msgid ""
+"<span class=\"fa fa-exclamation-triangle text-warning oe_edit_only\" "
+"title=\"By saving this change, the customer vat number will also be "
+"updated.\" invisible=\"partner_vat_update == False\"/>"
+msgstr ""
+"<span class=\"fa fa-exclamation-triangle text-warning oe_edit_only\" title="
+"\"Al guardar, el NIF del client també s'actualitzará.\" invisible="
+"\"partner_vat_update == False\"/>"
+
+#. module: crm_lead_vat
+#: model:ir.model,name:crm_lead_vat.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Iniciativa/Oportunitat"
+
+#. module: crm_lead_vat
+#: model:ir.model.fields,field_description:crm_lead_vat.field_crm_lead__partner_vat_update
+msgid "Partner VAT will Update"
+msgstr "El DNI del client s'actualitzará"
+
+#. module: crm_lead_vat
+#: model:ir.model.fields,field_description:crm_lead_vat.field_crm_lead__vat
+msgid "TIN"
+msgstr "NIF"
+
+#. module: crm_lead_vat
+#: model:ir.model.fields,help:crm_lead_vat.field_crm_lead__vat
+msgid ""
+"Tax Identification Number. The first 2 characters are the country code."
+msgstr ""
+"Número d'Identificació Fiscal. Els dos primers nombres són el codi de país."

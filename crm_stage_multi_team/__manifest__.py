@@ -3,7 +3,7 @@
 {
     "name": "CRM stage multiple teams ",
     "summary": "Allows multiple teams in crm stage",
-    "version": "18.0.1.0.0",
+    "version": "18.0.1.0.1",
     "development_status": "Alpha",
     "category": "Sales/CRM",
     "website": "https://github.com/OCA/crm",
@@ -12,6 +12,7 @@
     "depends": ["crm"],
     "data": [
         "views/crm_stage_views.xml",
+        "views/crm_lead_views.xml",
     ],
     "post_init_hook": "post_init_hook",
 }

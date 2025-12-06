@@ -89,48 +89,44 @@ class TestCrmStageMultiTeam_NoLeadTeam(BaseCommon):
 
     def test_read_group_stage_ids_users_and_no_team(self):
         """
-        Validates read-group behavior with leads that have NO team_id:
-          - default_team_id=Team A: returns {Only A, Both, Global}, not Only B
-          - default_team_id=Team B: returns {Only B, Both, Global}, not Only A
-          - no default_team_id: returns only Global
-        We pass an empty 'stages' to avoid the '| id in stages.ids' widening effect.
+        Validates _read_group_stage_ids with leads that have NO team_id:
+          - If user's crm_team_ids includes Team A → stages for A + Both + Global
+          - If user's crm_team_ids includes Team B → stages for B + Both + Global
+          - If user has no team → only Global
         """
         empty_stages = self.Stage.browse([])
 
-        # Team A context
-        stage = (
-            self.Lead.with_user(self.user_a)
-            .with_context(
-                default_team_id=self.team_a.id,
-            )
-            ._read_group_stage_ids(empty_stages, domain=[])
-        )
-        self.assertIn(self.stage_only_a, stage)
-        self.assertIn(self.stage_both, stage)
-        self.assertIn(self.stage_global, stage)
-        self.assertNotIn(self.stage_only_b, stage)
+        # Assign crm_team_ids to users dynamically
+        self.user_a.crm_team_ids = [Command.set(self.team_a.ids)]
+        self.user_b.crm_team_ids = [Command.set(self.team_b.ids)]
 
-        # Team B context
-        stage = (
-            self.Lead.with_user(self.user_b)
-            .with_context(
-                default_team_id=self.team_b.id,
-            )
-            ._read_group_stage_ids(empty_stages, domain=[])
-        )
-        self.assertIn(self.stage_only_b, stage)
-        self.assertIn(self.stage_both, stage)
-        self.assertIn(self.stage_global, stage)
-        self.assertNotIn(self.stage_only_a, stage)
-
-        # No team in context
-        stage = self.Lead.with_user(self.user_a)._read_group_stage_ids(
+        # Team A user
+        stages = self.Lead.with_user(self.user_a)._read_group_stage_ids(
             empty_stages, domain=[]
         )
-        self.assertIn(self.stage_global, stage)
-        self.assertNotIn(self.stage_only_a, stage)
-        self.assertNotIn(self.stage_only_b, stage)
-        self.assertNotIn(self.stage_both, stage)
+        self.assertIn(self.stage_only_a, stages)
+        self.assertIn(self.stage_both, stages)
+        self.assertIn(self.stage_global, stages)
+        self.assertNotIn(self.stage_only_b, stages)
+
+        # Team B user
+        stages = self.Lead.with_user(self.user_b)._read_group_stage_ids(
+            empty_stages, domain=[]
+        )
+        self.assertIn(self.stage_only_b, stages)
+        self.assertIn(self.stage_both, stages)
+        self.assertIn(self.stage_global, stages)
+        self.assertNotIn(self.stage_only_a, stages)
+
+        # No team assigned → only global stages visible
+        self.user_a.crm_team_ids = [Command.clear()]
+        stages = self.Lead.with_user(self.user_a)._read_group_stage_ids(
+            empty_stages, domain=[]
+        )
+        self.assertIn(self.stage_global, stages)
+        self.assertNotIn(self.stage_only_a, stages)
+        self.assertNotIn(self.stage_only_b, stages)
+        self.assertNotIn(self.stage_both, stages)
 
     def test_stage_find_users_no_lead_team(self):
         domain_limit = [("id", "in", list(self.custom_stage_ids))]

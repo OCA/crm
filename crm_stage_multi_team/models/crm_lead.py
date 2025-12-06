@@ -45,14 +45,14 @@ class CrmLead(models.Model):
         )
         if test_condition or self.env.context.get("no_crm_stage_multi_team"):
             return super()._read_group_stage_ids(stages, domain)
-        team_id = self._context.get("default_team_id")
-        if team_id:
+        team_ids = self.env.user.crm_team_ids.ids
+        if team_ids:
             search_domain = [
                 "|",
                 ("id", "in", stages.ids),
                 "|",
                 ("team_ids", "=", False),
-                ("team_ids", "=", team_id),
+                ("team_ids", "in", team_ids),
             ]
         else:
             search_domain = ["|", ("id", "in", stages.ids), ("team_ids", "=", False)]

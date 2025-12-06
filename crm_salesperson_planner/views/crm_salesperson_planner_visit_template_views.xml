@@ -3,8 +3,13 @@
      Copyright 2021 Sygel - Manuel Regidor
      License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
 <odoo>
+<<<<<<< HEAD
     <record model="ir.ui.view" id="crm_salesperson_planner_visit_template_list_view">
         <field name="name">CRM - Salesperson Planner Visit Template List</field>
+=======
+    <record model="ir.ui.view" id="crm_salesperson_planner_visit_template_tree_view">
+        <field name="name">CRM - Salesperson Planner Visit Template Tree</field>
+>>>>>>> upstream/18.0
         <field name="model">crm.salesperson.planner.visit.template</field>
         <field name="arch" type="xml">
             <list>
@@ -31,7 +36,11 @@
                         invisible="state != 'draft'"
                     />
                     <button
+<<<<<<< HEAD
                         name="%(crm_salesperson_planner.crm_salesperson_planner_visit_template_create_action)d"
+=======
+                        name="%(crm_salesperson_planner_visit_template_create_action)d"
+>>>>>>> upstream/18.0
                         string="Manually Create Visits"
                         type="action"
                         invisible="state != 'in-progress'"
@@ -76,6 +85,7 @@
                     </div>
                     <group>
                         <group>
+<<<<<<< HEAD
                             <field name="partner_id" invisible="1" readonly="1" />
                             <field name="partner_ids" widget="many2many_tags" />
                             <field name="start_date" required="1" />
@@ -83,6 +93,10 @@
                             <field name="stop" invisible="1" readonly="1" />
                             <field name="stop_date" invisible="1" />
                             <field name="start" invisible="1" />
+=======
+                            <field name="partner_ids" widget="many2many_tags" />
+                            <field name="start_date" required="1" />
+>>>>>>> upstream/18.0
                             <field name="sequence" />
                             <field name="user_id" />
                             <field
@@ -91,9 +105,13 @@
                             />
                             <field name="last_visit_date" />
                             <field name="auto_validate" />
+<<<<<<< HEAD
                             <field name="event_tz" invisible="1" />
                             <field name="allday" force_save="1" />
                             <field name="rrule" invisible="1" />
+=======
+                            <field name="allday" force_save="1" />
+>>>>>>> upstream/18.0
                         </group>
                         <!-- Display fields similar to calendar.event (Display data similar to calendar.event (for UX is better)). -->
                         <group>

@@ -4,9 +4,15 @@
 <odoo>
     <record
         model="ir.ui.view"
+<<<<<<< HEAD
         id="crm_salesperson_planner_visit_close_reason_list_view"
     >
         <field name="name">CRM - Salesperson Planner Visit Close Reason List</field>
+=======
+        id="crm_salesperson_planner_visit_close_reason_tree_view"
+    >
+        <field name="name">CRM - Salesperson Planner Visit Close Reason Tree</field>
+>>>>>>> upstream/18.0
         <field name="model">crm.salesperson.planner.visit.close.reason</field>
         <field name="arch" type="xml">
             <list>

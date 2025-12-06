@@ -4,6 +4,7 @@
 from odoo.exceptions import AccessError
 from odoo.tests import Form, new_test_user
 from odoo.tests.common import users
+from odoo.tools import mute_logger
 
 from odoo.addons.base.tests.common import BaseCommon
 
@@ -41,6 +42,7 @@ class TestCrmSecurity(BaseCommon):
         )
 
     @users("crm_user")
+    @mute_logger("odoo.addons.base.models.ir_model", "odoo.models")
     def test_user_crm_only(self):
         items = self.env["ir.ui.menu"]._visible_menu_ids()
         self.assertIn(self.crm_menu.id, items)
@@ -54,6 +56,7 @@ class TestCrmSecurity(BaseCommon):
         crm_lead_form.save()
 
     @users("sale_user")
+    @mute_logger("odoo.addons.base.models.ir_model", "odoo.models")
     def test_user_sale(self):
         items = self.env["ir.ui.menu"]._visible_menu_ids()
         self.assertNotIn(self.crm_menu.id, items)
@@ -74,6 +77,7 @@ class TestCrmSecurity(BaseCommon):
         sale_order_form.save()
 
     @users("crm_sale_user")
+    @mute_logger("odoo.addons.base.models.ir_model", "odoo.models")
     def test_user_crm_sale(self):
         items = self.env["ir.ui.menu"]._visible_menu_ids()
         self.assertIn(self.crm_menu.id, items)
