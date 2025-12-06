@@ -228,7 +228,7 @@ class TestResPartner(common.TransactionCase):
 
         self.assertEqual(action["domain"], [("partner_id", "child_of", partner.id)])
         self.assertEqual(action["res_model"], "crm.salesperson.planner.visit")
-        self.assertIn("tree", action["view_mode"])
+        self.assertIn("list", action["view_mode"])
         self.assertIn("form", action["view_mode"])
         self.assertIn("pivot", action["view_mode"])
 
