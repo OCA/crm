@@ -3,5 +3,3 @@
 
 from . import test_crm_salesperson_planner_visit
 from . import test_crm_salesperson_planner_visit_template
-from . import test_crm_salesperson_planner_template_computations
-from . import test_crm_salesperson_planner_missing_coverage

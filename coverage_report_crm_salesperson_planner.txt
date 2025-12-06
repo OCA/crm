@@ -1,0 +1,18 @@
+Name                                                                               Stmts   Miss Branch BrPart  Cover   Missing
+------------------------------------------------------------------------------------------------------------------------------
+crm_salesperson_planner/__init__.py                                                    2      0      0      0   100%
+crm_salesperson_planner/models/__init__.py                                             6      0      0      0   100%
+crm_salesperson_planner/models/calendar_event.py                                      30     10     16      3    63%   24->26, 27-34, 47-58
+crm_salesperson_planner/models/crm_lead.py                                             4      0      0      0   100%
+crm_salesperson_planner/models/crm_salesperson_planner_visit.py                       83      8     34      6    85%   103-109, 113, 115->exit, 125, 126->128, 160->163, 168
+crm_salesperson_planner/models/crm_salesperson_planner_visit_close_reason.py           8      0      0      0   100%
+crm_salesperson_planner/models/crm_salesperson_planner_visit_template.py             151     16     46      4    86%   162-171, 185->181, 196-197, 208, 215->214, 236-242, 353-354
+crm_salesperson_planner/models/res_partner.py                                         18      0      4      0   100%
+crm_salesperson_planner/tests/__init__.py                                              2      0      0      0   100%
+crm_salesperson_planner/tests/test_crm_salesperson_planner_visit.py                  130      0      0      0   100%
+crm_salesperson_planner/tests/test_crm_salesperson_planner_visit_template.py         131      0      0      0   100%
+crm_salesperson_planner/wizards/__init__.py                                            2      0      0      0   100%
+crm_salesperson_planner/wizards/crm_salesperson_planner_visit_close_wiz.py            27      1      4      1    94%   62
+crm_salesperson_planner/wizards/crm_salesperson_planner_visit_template_create.py      18      1      2      1    90%   31
+------------------------------------------------------------------------------------------------------------------------------
+TOTAL                                                                                612     36    106     15    91%

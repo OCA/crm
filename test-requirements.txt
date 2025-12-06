@@ -1,0 +1,6 @@
+odoo-addon-base_location==18.0.*
+odoo-addon-mail_message_destiny_link_template==18.0.*
+odoo-addon-partner_firstname==18.0.*
+odoo-addon-partner_industry_secondary==18.0.*
+odoo-addon-partner_phonecall_schedule==18.0.*
+odoo==18.0.*
