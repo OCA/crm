@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-
     <record id="crm_case_tree_view_oppor" model="ir.ui.view">
         <field name="model">crm.lead</field>
         <field name="inherit_id" ref="crm.crm_case_tree_view_oppor" />
@@ -51,5 +50,4 @@
             </xpath>
         </field>
     </record>
-
 </odoo>
