@@ -36,7 +36,7 @@ This Module adds Amount in multicompany reporting currency to CRM Lead
 which can be used as a reporting tool. You can then compare Expected
 Revenue in company currency to amount in multicompany reporting
 currency. Multicompany reporting currency is installed from dependent
-https://github.com/OCA/sale-reporting/base_multicompany_reporting_currency
+https://github.com/OCA/sale-reporting/tree/19.0/base_multicompany_reporting_currency
 module.
 
 **Table of contents**
@@ -60,12 +60,15 @@ Credits
 Authors
 -------
 
-* Camptocamp SA
+* Camptocamp
 
 Contributors
 ------------
 
--  Maksym Yankin <maksym.yankin@camptocamp.com>
+-  [Camptocamp SA](https://www.camptocamp.com):
+
+   -  Maksym Yankin <maksym.yankin@camptocamp.com>
+   -  Silvio Gregorini <silvio.gregorini@camptocamp.com>
 
 Maintainers
 -----------

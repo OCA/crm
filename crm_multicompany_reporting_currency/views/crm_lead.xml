@@ -4,17 +4,20 @@
         <field name="model">crm.lead</field>
         <field name="inherit_id" ref="crm.crm_case_tree_view_oppor" />
         <field name="arch" type="xml">
+            <field name="expected_revenue" position="attributes">
+                <attribute name="sum">Expected Revenues (company currency)</attribute>
+            </field>
             <field name="expected_revenue" position="after">
-                <field name="multicompany_reporting_currency_id" invisible="1" />
-                <field name="type" invisible="1" />
+                <field name="multicompany_reporting_currency_id" column_invisible="1" />
+                <field name="type" column_invisible="1" />
                 <field
                     name="amount_multicompany_reporting_currency"
-                    sum="Total"
-                    string="Total (Multicompany Reporting Currency)"
+                    string="Expected Revenues (multicompany reporting currency)"
+                    sum="Expected Revenues (multicompany reporting currency)"
                     optional="show"
                     widget="monetary"
                     options="{'currency_field': 'multicompany_reporting_currency_id'}"
-                    attrs="{'invisible': [('type', '=', 'lead')]}"
+                    invisible="type == 'lead'"
                 />
             </field>
         </field>
@@ -26,22 +29,24 @@
         <field name="arch" type="xml">
             <xpath expr="//h2" position="after">
                 <br />
-                <h2 class="o_row no-gutters align-items-end">
-                    <div class="col" attrs="{'invisible': [('type', '=', 'lead')]}">
+                <h2 class="row g-0 pb-3 pb-sm-4">
+                    <div
+                        class="col-auto pb-2 pb-md-0 w-100 w-sm-auto"
+                        invisible="type == 'lead'"
+                    >
                         <label
                             for="amount_multicompany_reporting_currency"
                             class="oe_edit_only"
                         />
-                        <div class="o_row">
+                        <div class="d-flex flex-wrap align-items-baseline">
                             <field
                                 name="multicompany_reporting_currency_id"
                                 invisible="1"
                             />
                             <field
                                 name="amount_multicompany_reporting_currency"
-                                string="Total (Multicompany Reporting Currency)"
-                                class="oe_inline"
-                                widget='monetary'
+                                class="o_input_13ch"
+                                widget="monetary"
                                 options="{'currency_field': 'multicompany_reporting_currency_id'}"
                             />
                         </div>
