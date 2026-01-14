@@ -1,0 +1,1 @@
+odoo-addon-partner_revenue @ git+https://github.com/OCA/partner-contact.git@refs/pull/2256/head#subdirectory=partner_revenue
