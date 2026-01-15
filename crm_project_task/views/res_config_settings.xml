@@ -14,7 +14,7 @@
                     <setting
                         help="By default this project will be selected to create task from lead / opportunity"
                     >
-                            <field name="crm_default_project_id" />
+                        <field name="crm_default_project_id" />
                     </setting>
                 </block>
             </xpath>

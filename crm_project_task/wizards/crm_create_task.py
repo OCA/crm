@@ -4,7 +4,7 @@
 
 from markupsafe import Markup
 
-from odoo import _, fields, models
+from odoo import fields, models
 from odoo.exceptions import UserError
 
 
@@ -20,7 +20,7 @@ class CrmCreateTAsk(models.TransientModel):
         project = self.env.company.crm_default_project_id
         if not project:
             raise UserError(
-                _(
+                self.env._(
                     "Project not configured in settings, "
                     "please contact with your administrator."
                 )
@@ -29,14 +29,14 @@ class CrmCreateTAsk(models.TransientModel):
         task = self.env["project.task"].sudo().create(self._get_data_create(project))
         # Messages in chatter
         task.message_post(
-            body=_(
+            body=self.env._(
                 "Task created from lead/opportunity %s",
                 Markup("<a href=# data-oe-model=crm.lead data-oe-id=" "%s>%s</a>.")
                 % (self.lead_id.id, self.lead_id.name),
             )
         )
         self.lead_id.message_post(
-            body=_(
+            body=self.env._(
                 "Task %s created.",
                 Markup("<a href=# data-oe-model=project.task data-oe-id=" "%s>%s</a>")
                 % (task.id, task.display_name),
