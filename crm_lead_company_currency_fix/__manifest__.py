@@ -13,4 +13,8 @@
         # Odoo
         "crm",
     ],
+    # Make sure this module is installed as soon as possible
+    # after ``crm`` is installed: this way, the override of
+    # ``crm.lead._field_to_sql()`` will work correctly
+    "sequence": 0,
 }
