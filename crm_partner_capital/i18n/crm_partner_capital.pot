@@ -6,8 +6,6 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-14 14:04+0000\n"
-"PO-Revision-Date: 2026-01-14 14:04+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -56,8 +54,23 @@ msgid "Lead/Opportunity"
 msgstr ""
 
 #. module: crm_partner_capital
+#: model:ir.model.fields.selection,name:crm_partner_capital.selection__crm_lead__company_size__medium
+msgid "Medium"
+msgstr ""
+
+#. module: crm_partner_capital
+#: model:ir.model.fields.selection,name:crm_partner_capital.selection__crm_lead__company_size__micro
+msgid "Micro"
+msgstr ""
+
+#. module: crm_partner_capital
 #: model:ir.model.fields,help:crm_partner_capital.field_crm_lead__capital_amount
 msgid "Publicly registered capital amount."
+msgstr ""
+
+#. module: crm_partner_capital
+#: model:ir.model.fields.selection,name:crm_partner_capital.selection__crm_lead__company_size__small
+msgid "Small"
 msgstr ""
 
 #. module: crm_partner_capital
@@ -74,19 +87,4 @@ msgstr ""
 #. module: crm_partner_capital
 #: model:ir.model.fields,field_description:crm_partner_capital.field_crm_lead__turnover_range_id
 msgid "Turnover range"
-msgstr ""
-
-#. module: crm_partner_capital
-#: model:ir.model.fields.selection,name:crm_partner_capital.selection__crm_lead__company_size__small
-msgid "Small"
-msgstr ""
-
-#. module: crm_partner_capital
-#: model:ir.model.fields.selection,name:crm_partner_capital.selection__crm_lead__company_size__micro
-msgid "Micro"
-msgstr ""
-
-#. module: crm_partner_capital
-#: model:ir.model.fields.selection,name:crm_partner_capital.selection__crm_lead__company_size__medium
-msgid "Medium"
 msgstr ""
