@@ -15,6 +15,7 @@
     "license": "LGPL-3",
     "installable": True,
     "data": [
+        "data/mail_template_data.xml",
         "security/ir.model.access.csv",
         "wizard/crm_lead_convert2task_views.xml",
         "views/crm_lead_views.xml",
