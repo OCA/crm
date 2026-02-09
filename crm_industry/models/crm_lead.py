@@ -1,20 +1,27 @@
 # Copyright 2015 Antiun Ingenieria S.L. - Javier Iniesta
 # Copyright 2018 ForgeFlow, S.L.
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
-from odoo import api, exceptions, fields, models
+from odoo import Command, api, exceptions, fields, models
 
 
 class CrmLead(models.Model):
     _inherit = "crm.lead"
 
     industry_id = fields.Many2one(
-        comodel_name="res.partner.industry", string="Main Industry"
+        comodel_name="res.partner.industry",
+        string="Main Industry",
+        compute="_compute_industry_id",
+        store=True,
+        readonly=False,
     )
 
     secondary_industry_ids = fields.Many2many(
         comodel_name="res.partner.industry",
         string="Secondary Industries",
         domain="[('id', '!=', industry_id)]",
+        compute="_compute_secondary_industry_ids",
+        store=True,
+        readonly=False,
     )
 
     @api.constrains("industry_id", "secondary_industry_ids")
@@ -42,29 +49,18 @@ class CrmLead(models.Model):
         )
         return values
 
-    @api.onchange("partner_id")
-    def _onchange_partner_id(self):
-        if self.partner_id:
-            if self.partner_id.industry_id:
-                self.industry_id = self.partner_id.industry_id
-            if self.partner_id.secondary_industry_ids:
-                self.secondary_industry_ids = self.partner_id.secondary_industry_ids
+    @api.depends("partner_id")
+    def _compute_industry_id(self):
+        for record in self:
+            if record.partner_id and record.partner_id.industry_id:
+                record.industry_id = record.partner_id.industry_id
+            else:
+                record.industry_id = False
 
-    @api.model_create_multi
-    def create(self, vals_list):
-        for vals in vals_list:
-            if vals.get("partner_id"):
-                customer = self.env["res.partner"].browse(vals["partner_id"])
-                if customer.industry_id and not vals.get("industry_id"):
-                    vals.update({"industry_id": customer.industry_id.id})
-                if customer.secondary_industry_ids and not vals.get(
-                    "secondary_industry_ids"
-                ):
-                    vals.update(
-                        {
-                            "secondary_industry_ids": [
-                                (6, 0, customer.secondary_industry_ids.ids)
-                            ]
-                        }
-                    )
-        return super().create(vals_list)
+    @api.depends("partner_id")
+    def _compute_secondary_industry_ids(self):
+        for record in self:
+            if record.partner_id and record.partner_id.secondary_industry_ids:
+                record.secondary_industry_ids = record.partner_id.secondary_industry_ids
+            else:
+                record.secondary_industry_ids = [Command.clear()]
