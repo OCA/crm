@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: Odoo Server 18.0+e\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-07-25 08:21+0000\n"
-"PO-Revision-Date: 2025-07-25 10:27+0200\n"
-"Last-Translator: \n"
+"PO-Revision-Date: 2026-02-13 10:09+0000\n"
+"Last-Translator: Javier Iza Ca <javier.izaguirre@sygel.es>\n"
 "Language-Team: \n"
-"Language: ca_ES\n"
+"Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.6\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: crm_phonecall_result
 #. odoo-python
@@ -82,7 +82,7 @@ msgstr "El nom ha de ser únic"
 #. module: crm_phonecall_result
 #: model:crm.phonecall.result,name:crm_phonecall_result.phonecall_result_negative
 msgid "Negative"
-msgstr ""
+msgstr "Negatiu"
 
 #. module: crm_phonecall_result
 #: model:ir.model.fields,field_description:crm_phonecall_result.field_crm_phonecall_report__phone_result_id
@@ -107,7 +107,7 @@ msgstr "Resultat de la trucada"
 #. module: crm_phonecall_result
 #: model:crm.phonecall.result,name:crm_phonecall_result.phonecall_result_positive
 msgid "Positive"
-msgstr "positiu"
+msgstr "Positiu"
 
 #. module: crm_phonecall_result
 #: model:ir.model.fields,field_description:crm_phonecall_result.field_crm_phonecall_result__priority
