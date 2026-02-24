@@ -13,6 +13,7 @@ class CrmClaim(models.Model):
         string="Claim Number",
         required=True,
         default="/",
+        readonly=True,
         copy=False,
     )
 
