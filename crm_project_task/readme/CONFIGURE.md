@@ -1,7 +1,6 @@
 To configure this module, you need to:
 
 - Go to Project
-- Create a project with right configuration in order that all salesman
-  have access (usually all employees)
+- Create a project
 - Go to CRM \> Settings \> Configuration \> Projects
 - Set crm default project

@@ -7,6 +7,16 @@
         <field name="model">project.task</field>
         <field name="inherit_id" ref="project.view_task_form2" />
         <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button
+                    name="action_open_parent_lead"
+                    type="object"
+                    class="oe_stat_button"
+                    icon="fa-handshake-o"
+                    invisible="not lead_id"
+                    string="Parent Lead"
+                />
+            </xpath>
             <xpath expr="//page[@name='extra_info']" position="inside">
                 <group name="crm" string="Lead/Opportunity">
                     <field name="lead_id" />

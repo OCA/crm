@@ -32,7 +32,8 @@ CRM Project Task
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
-This module allow create task from leads/opportunities
+This module allows salesman to create linked tasks from
+leads/opportunities in a special project for such tasks
 
 .. IMPORTANT::
    This is an alpha version, the data model and design can change at any time without warning.
@@ -50,8 +51,7 @@ Configuration
 To configure this module, you need to:
 
 - Go to Project
-- Create a project with right configuration in order that all salesman
-  have access (usually all employees)
+- Create a project
 - Go to CRM > Settings > Configuration > Projects
 - Set crm default project
 
@@ -60,13 +60,28 @@ Usage
 
 1. Go to *CRM > Sales > My pipeline*.
 2. Open one of the existing leads or create one.
-3. Click on the button "Create Task".
-4. A popup will appear asking you name and description for create task.
-5. Click on "Create Task" button.
-6. A task will be created with project in settings.
-7. A message chatter will be created in task with link for
-   lead/opportunity. Also, a message chatter will be creat in
-   lead/opportunity with link for task.
+3. If no tasks have been created from this lead, there will be a button
+   "Create Task". Click on it.
+4. What happens next depends on whether you have permission to create
+   tasks in the configured default project or to even create tasks at
+   all.
+
+   - If yes: You will be redirected to a form view to create and edit
+     the new task you are creating.
+
+     - You may also click the status button and view all tasks linked to
+       this lead. You may also add more tasks from these views.
+
+   - If no: A popup will appear asking you for a name and description
+     for the new task you are creating.
+
+     - Click on "Create Task" button. A task will be created in the
+       configured default project and the popup will close.
+     - The status button will show you how many tasks are linked to this
+       lead, but when you click on it you will only see ones to which
+       you have been given access (by being set as a follower or by
+       assignment of the lead to you). You will not be able to add any
+       tasks from this view
 
 Bug Tracker
 ===========
@@ -92,6 +107,9 @@ Contributors
 - Emilio Pascual (`Moduon <https://www.moduon.team/>`__)
 - Rafael Blasco (`Moduon <https://www.moduon.team/>`__)
 - Andrii Kompaniiets (`Moduon <https://www.moduon.team/>`__)
+- `Pyxiris <https://github.com/Pyxiris>`__
+
+  - `Liam Noonan <https://github.com/ljmnoonan>`__
 
 Maintainers
 -----------

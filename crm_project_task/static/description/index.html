@@ -375,7 +375,8 @@ ul.auto-toc {
 !! source digest: sha256:b286a391e3eccae5a71db725e6307de5e28e4c94661676ab56b0e9c9fe1babce
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 <p><a class="reference external image-reference" href="https://odoo-community.org/page/development-status"><img alt="Alpha" src="https://img.shields.io/badge/maturity-Alpha-red.png" /></a> <a class="reference external image-reference" href="http://www.gnu.org/licenses/agpl-3.0-standalone.html"><img alt="License: AGPL-3" src="https://img.shields.io/badge/license-AGPL--3-blue.png" /></a> <a class="reference external image-reference" href="https://github.com/OCA/crm/tree/19.0/crm_project_task"><img alt="OCA/crm" src="https://img.shields.io/badge/github-OCA%2Fcrm-lightgray.png?logo=github" /></a> <a class="reference external image-reference" href="https://translation.odoo-community.org/projects/crm-19-0/crm-19-0-crm_project_task"><img alt="Translate me on Weblate" src="https://img.shields.io/badge/weblate-Translate%20me-F47D42.png" /></a> <a class="reference external image-reference" href="https://runboat.odoo-community.org/builds?repo=OCA/crm&amp;target_branch=19.0"><img alt="Try me on Runboat" src="https://img.shields.io/badge/runboat-Try%20me-875A7B.png" /></a></p>
-<p>This module allow create task from leads/opportunities</p>
+<p>This module allows salesman to create linked tasks from
+leads/opportunities in a special project for such tasks</p>
 <div class="admonition important">
 <p class="first admonition-title">Important</p>
 <p class="last">This is an alpha version, the data model and design can change at any time without warning.
@@ -401,8 +402,7 @@ Only for development or testing purpose, do not use in production.
 <p>To configure this module, you need to:</p>
 <ul class="simple">
 <li>Go to Project</li>
-<li>Create a project with right configuration in order that all salesman
-have access (usually all employees)</li>
+<li>Create a project</li>
 <li>Go to CRM &gt; Settings &gt; Configuration &gt; Projects</li>
 <li>Set crm default project</li>
 </ul>
@@ -412,13 +412,30 @@ have access (usually all employees)</li>
 <ol class="arabic simple">
 <li>Go to <em>CRM &gt; Sales &gt; My pipeline</em>.</li>
 <li>Open one of the existing leads or create one.</li>
-<li>Click on the button “Create Task”.</li>
-<li>A popup will appear asking you name and description for create task.</li>
-<li>Click on “Create Task” button.</li>
-<li>A task will be created with project in settings.</li>
-<li>A message chatter will be created in task with link for
-lead/opportunity. Also, a message chatter will be creat in
-lead/opportunity with link for task.</li>
+<li>If no tasks have been created from this lead, there will be a button
+“Create Task”. Click on it.</li>
+<li>What happens next depends on whether you have permission to create
+tasks in the configured default project or to even create tasks at
+all.<ul>
+<li>If yes: You will be redirected to a form view to create and edit
+the new task you are creating.<ul>
+<li>You may also click the status button and view all tasks linked to
+this lead. You may also add more tasks from these views.</li>
+</ul>
+</li>
+<li>If no: A popup will appear asking you for a name and description
+for the new task you are creating.<ul>
+<li>Click on “Create Task” button. A task will be created in the
+configured default project and the popup will close.</li>
+<li>The status button will show you how many tasks are linked to this
+lead, but when you click on it you will only see ones to which
+you have been given access (by being set as a follower or by
+assignment of the lead to you). You will not be able to add any
+tasks from this view</li>
+</ul>
+</li>
+</ul>
+</li>
 </ol>
 </div>
 <div class="section" id="bug-tracker">
@@ -443,6 +460,10 @@ If you spotted it first, help us to smash it by providing a detailed and welcome
 <li>Emilio Pascual (<a class="reference external" href="https://www.moduon.team/">Moduon</a>)</li>
 <li>Rafael Blasco (<a class="reference external" href="https://www.moduon.team/">Moduon</a>)</li>
 <li>Andrii Kompaniiets (<a class="reference external" href="https://www.moduon.team/">Moduon</a>)</li>
+<li><a class="reference external" href="https://github.com/Pyxiris">Pyxiris</a><ul>
+<li><a class="reference external" href="https://github.com/ljmnoonan">Liam Noonan</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="section" id="maintainers">

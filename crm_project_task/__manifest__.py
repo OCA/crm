@@ -23,6 +23,7 @@
         "wizards/crm_create_task.xml",
         "views/crm_lead.xml",
         "views/project_task.xml",
+        "views/crm_project_task_actions.xml",
     ],
     "demo": [
         "demo/crm_demo.xml",

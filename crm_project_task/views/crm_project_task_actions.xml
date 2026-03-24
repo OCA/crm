@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 Liam Noonan
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl-3.0) -->
+<odoo>
+    <record id="action_new_task" model="ir.actions.act_window">
+        <field name="name">Task</field>
+        <field name="path">related-task</field>
+        <field name="res_model">project.task</field>
+        <field name="view_mode">form</field>
+        <field name="domain">[('lead_id', '=', active_id)]</field>
+        <field name="context">{'default_lead_id': active_id}</field>
+    </record>
+
+    <record id="action_crm_lead_related_tasks" model="ir.actions.act_window">
+        <field name="name">Tasks</field>
+        <field name="path">related-tasks</field>
+        <field name="res_model">project.task</field>
+        <field name="view_mode">kanban,list,form,calendar,pivot,graph,activity</field>
+        <field name="domain">[('lead_id', '=', active_id)]</field>
+        <field name="context">{
+            'search_default_open_tasks': 1,
+            'default_lead_id': active_id,
+        }</field>
+        <field name="search_view_id" ref="project.view_task_search_form" />
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No tasks found. Let's create one!
+            </p>
+            <p>
+                Keep track of the progress of your tasks from creation to completion.<br
+            />
+                Collaborate efficiently by chatting in real-time or via email.
+            </p>
+        </field>
+    </record>
+</odoo>

@@ -5,14 +5,9 @@
         <field name="crm_default_project_id" ref='project.project_project_2' />
     </record>
 
-    <record id="crm_create_task_demo" model="crm.create.task">
+    <record id="crm_project_task_demo_task" model="project.task">
+        <field name="name">Demo task from opportunity</field>
         <field name="lead_id" ref="crm.crm_case_31" />
-        <field name="task_name">Demo Task from Lead</field>
-        <field name="description">This is a demo task created from a lead.</field>
+        <field name="project_id" ref="project.project_project_2" />
     </record>
-    <function
-        model="crm.create.task"
-        name="create_task"
-        eval="[ref('crm_create_task_demo')]"
-    />
 </odoo>
