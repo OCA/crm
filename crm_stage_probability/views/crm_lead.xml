@@ -6,7 +6,7 @@
         <field name="model">crm.lead</field>
         <field name="arch" type="xml">
             <xpath
-                expr="//button[@name='action_set_automated_probability']"
+                expr="//*[@name='action_set_automated_probability']"
                 position="before"
             >
                 <field name="is_stage_probability" invisible="1" />

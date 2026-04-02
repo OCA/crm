@@ -13,8 +13,8 @@ class CrmLead(models.Model):
     probability = fields.Float(default=lambda self: self._default_probability())
 
     def _default_probability(self):
-        if "default_stage_id" in self._context:
-            stage_id = self._context.get("default_stage_id")
+        if "default_stage_id" in self.env.context:
+            stage_id = self.env.context.get("default_stage_id")
         else:
             stage_id = self._stage_find(domain=[("fold", "=", False)]).id
         if stage_id:

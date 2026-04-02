@@ -19,10 +19,7 @@ class CrmStage(models.Model):
         "the opportunity.",
     )
 
-    _sql_constraints = [
-        (
-            "check_probability",
-            "check(probability >= 0 and probability <= 100)",
-            "The probability should be between 0% and 100%!",
-        )
-    ]
+    _check_probability = models.Constraint(
+        "check(probability >= 0 and probability <= 100)",
+        "The probability should be between 0% and 100%!",
+    )

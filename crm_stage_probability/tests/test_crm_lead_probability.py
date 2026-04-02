@@ -12,7 +12,14 @@ class TestCrmLeadProbability(TransactionCase):
         cls.stage_qualified = cls.env.ref("crm.stage_lead2")
         cls.stage_proposition = cls.env.ref("crm.stage_lead3")
         cls.stage_won = cls.env.ref("crm.stage_lead4")
-        cls.opportunity_1 = cls.env.ref("crm.crm_case_32")
+        cls.opportunity_1 = cls.env["crm.lead"].create(
+            {
+                "name": "Opportunity 1",
+                "type": "opportunity",
+                "stage_id": cls.stage_qualified.id,
+                "probability": 12.5,
+            }
+        )
 
     def test_update_probability(self):
         self.assertEqual(self.opportunity_1.stage_id, self.stage_qualified)
@@ -73,25 +80,57 @@ class TestCrmLeadProbability(TransactionCase):
         self.assertFalse(opportunity.is_automated_probability)
 
     def test_mass_update(self):
-        all_stages = self.env["crm.stage"].search([])
-        self.assertTrue(all(all_stages.mapped("on_change")))
+        self.stage_new.write({"on_change": True})
+        self.stage_proposition.write({"on_change": True})
+        stages = self.stage_new + self.stage_proposition
+        leads = self.env["crm.lead"].create(
+            [
+                {
+                    "name": "Mass Update New 1",
+                    "type": "opportunity",
+                    "stage_id": self.stage_new.id,
+                    "probability": 12,
+                },
+                {
+                    "name": "Mass Update New 2",
+                    "type": "opportunity",
+                    "stage_id": self.stage_new.id,
+                    "probability": 22,
+                },
+                {
+                    "name": "Mass Update Proposition 1",
+                    "type": "opportunity",
+                    "stage_id": self.stage_proposition.id,
+                    "probability": 33,
+                },
+            ]
+        )
         wiz = (
             self.env["crm.lead.stage.probability.update"]
-            .with_context(active_ids=all_stages.ids)
+            .with_context(active_ids=stages.ids)
             .create({})
         )
+        expected_counts = {
+            self.stage_new.id: self.env["crm.lead"].search_count(
+                [("stage_id", "=", self.stage_new.id)]
+            ),
+            self.stage_proposition.id: self.env["crm.lead"].search_count(
+                [("stage_id", "=", self.stage_proposition.id)]
+            ),
+        }
         wiz.execute()
-        all_leads = self.env["crm.lead"].search([])
-        self.assertTrue(all(all_leads.mapped("is_stage_probability")))
-        self.assertFalse(all(all_leads.mapped("is_automated_probability")))
+        self.assertTrue(all(leads.mapped("is_stage_probability")))
+        self.assertFalse(any(leads.mapped("is_automated_probability")))
         new_line = wiz.crm_stage_update_ids.filtered(
             lambda x: x.stage_id == self.stage_new
         )
-        self.assertEqual(new_line.lead_count, 13)
-        won_line = wiz.crm_stage_update_ids.filtered(
-            lambda x: x.stage_id == self.stage_won
+        self.assertEqual(new_line.lead_count, expected_counts[self.stage_new.id])
+        proposition_line = wiz.crm_stage_update_ids.filtered(
+            lambda x: x.stage_id == self.stage_proposition
         )
-        self.assertEqual(won_line.lead_count, 3)
+        self.assertEqual(
+            proposition_line.lead_count, expected_counts[self.stage_proposition.id]
+        )
 
     def test_mass_update_no_onchange_stage(self):
         new_stage = self.env["crm.stage"].create(
