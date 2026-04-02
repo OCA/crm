@@ -12,7 +12,7 @@ class TestCrmLeadCode(TransactionCase):
         cls.crm_lead_model = cls.env["crm.lead"]
         cls.ir_sequence_model = cls.env["ir.sequence"]
         cls.crm_sequence = cls.env.ref("crm_lead_code.sequence_lead")
-        cls.crm_lead = cls.env.ref("crm.crm_case_1")
+        cls.crm_lead = cls.crm_lead_model.create({"name": "Base lead for code tests"})
 
     def test_old_lead_code_assign(self):
         crm_leads = self.crm_lead_model.search([])

@@ -12,9 +12,10 @@ class CrmLead(models.Model):
         string="Lead Number", required=True, default="/", readonly=True, copy=False
     )
 
-    _sql_constraints = [
-        ("crm_lead_unique_code", "UNIQUE (code)", "The code must be unique!"),
-    ]
+    _crm_lead_unique_code = models.Constraint(
+        "unique (code)",
+        "The code must be unique!",
+    )
 
     @api.model_create_multi
     def create(self, vals_list):
