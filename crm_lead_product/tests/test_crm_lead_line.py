@@ -83,17 +83,17 @@ class TestCrmLeadLine(TransactionCase):
         self.assertEqual(
             self.lead_line_1.category_id,
             self.product_1.categ_id,
-            "Lead line category should be equal to product 1" "category",
+            "Lead line category should be equal to product 1category",
         )
         self.assertEqual(
             self.lead_line_1.product_tmpl_id,
             self.product_1.product_tmpl_id,
-            "Lead line product template should be equal to " "product 1 template",
+            "Lead line product template should be equal to product 1 template",
         )
         self.assertEqual(
             self.lead_line_3.category_id,
             self.product_3.categ_id,
-            "Lead line category should be equal to product 3" "category",
+            "Lead line category should be equal to product 3category",
         )
 
         lead_line_4 = self.lead_line_obj.create(
@@ -116,7 +116,7 @@ class TestCrmLeadLine(TransactionCase):
         self.assertNotEqual(
             lead_line_4.product_tmpl_id,
             self.product_1.product_tmpl_id,
-            "Lead line product template should be equal " "to None",
+            "Lead line product template should be equal to None",
         )
 
     def test_02_lead_to_opportunity(self):
@@ -144,7 +144,7 @@ class TestCrmLeadLine(TransactionCase):
         self.assertEqual(
             self.lead.lead_line_ids[0].expected_revenue,
             self.product_4.list_price,
-            "Planned revenue should be equal " "to the product standard price",
+            "Planned revenue should be equal to the product standard price",
         )
 
         self.lead.convert_opportunity(self.env.ref("base.res_partner_1"))
@@ -154,7 +154,7 @@ class TestCrmLeadLine(TransactionCase):
         self.assertEqual(
             lead_line_1.prorated_revenue,
             round(lead_line_1.expected_revenue * self.lead.probability * (1 / 100), 2),
-            "Expected revenue should be planned " "revenue times the probability",
+            "Expected revenue should be planned revenue times the probability",
         )
 
         self.lead.write({"probability": 30})
@@ -162,5 +162,5 @@ class TestCrmLeadLine(TransactionCase):
         self.assertEqual(
             lead_line_1.prorated_revenue,
             round(lead_line_1.expected_revenue * self.lead.probability * (1 / 100), 5),
-            "Expected revenue should be planned " "revenue times the probability",
+            "Expected revenue should be planned revenue times the probability",
         )
