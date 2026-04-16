@@ -1,5 +1,6 @@
 # Copyright 2017-2024 ForgeFlow S.L. (https://www.forgeflow.com)
 # License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl.html)
+from uuid import uuid4
 
 from odoo.tests.common import TransactionCase, tagged
 
@@ -10,39 +11,96 @@ class TestCrmLeadLine(TransactionCase):
         super().setUp()
         self.product_obj = self.env["product.product"]
         self.lead_line_obj = self.env["crm.lead.line"]
+        self.partner = self.env["res.partner"].create(
+            {
+                "name": "Test partner 1",
+                "street": "Test street 1",
+                "city": "Test city 1",
+            }
+        )
+        self.partner_2 = self.env["res.partner"].create(
+            {
+                "name": "Test partner 2",
+                "street": "Test street 2",
+                "city": "Test city 2",
+            }
+        )
+        self.team = self.env["crm.team"].create(
+            {
+                "name": "Test team",
+            }
+        )
         self.lead = self.env["crm.lead"].create(
             {
                 "type": "lead",
                 "name": "Test lead new",
-                "partner_id": self.env.ref("base.res_partner_1").id,
+                "partner_id": self.partner.id,
                 "description": "This is the description of the test new lead.",
-                "team_id": self.env.ref("sales_team.team_sales_department").id,
+                "team_id": self.team.id,
             }
         )
+
+        # Categories
+        self.category_1 = self.create_category()
+        self.category_2 = self.create_category()
+        self.category_3 = self.create_category()
 
         # Products
         self.product_1 = self.product_obj.create(
             {
                 "name": "Product 1",
-                "categ_id": self.env.ref("product.product_category_1").id,
+                "categ_id": self.category_1.id,
                 "list_price": 142.0,
             }
         )
         self.product_2 = self.product_obj.create(
             {
                 "name": "Product 2",
-                "categ_id": self.env.ref("product.product_category_2").id,
+                "categ_id": self.category_2.id,
                 "list_price": 1420.0,
             }
         )
         self.product_3 = self.product_obj.create(
             {
                 "name": "Product 3",
-                "categ_id": self.env.ref("product.product_category_3").id,
+                "categ_id": self.category_3.id,
                 "list_price": 14200.0,
             }
         )
-        self.product_4 = self.env.ref("product.product_product_25")
+
+    @classmethod
+    def create_category(cls, name=None, parent=None, **kwargs):
+        """
+        Create a category using a default set of values. Those values can be overridden
+        by passing keyword arguments.
+        :param name: Name of the category
+        :type name: str
+        :return: product.category
+        :rtype: product.category
+        """
+        if name is None:
+            name = "CATEGORY"
+        else:
+            name = f"{name} - {str(uuid4())[:8]}"
+
+        if parent is None:
+            parent = cls.env["product.category"].search(
+                [["parent_id", "=", False]], limit=1
+            )
+            if not parent:
+                parent = cls.env["product.category"].create(
+                    {"name": f"{str(uuid4())[:8]}"}
+                )
+
+        values = {
+            "name": name,
+            "parent_id": parent.id,
+        }
+
+        # If the user has provided values, then update the default values
+        values.update(**kwargs)
+
+        return cls.env["product.category"].create(values)
 
     def test_01_lead_lines(self):
         """Tests for Crm Lead Line"""
@@ -129,10 +187,10 @@ class TestCrmLeadLine(TransactionCase):
                         0,
                         {
                             "lead_id": self.lead.id,
-                            "name": self.product_4.name,
-                            "product_id": self.product_4.id,
-                            "category_id": self.product_4.categ_id.id,
-                            "price_unit": self.product_4.list_price,
+                            "name": self.product_3.name,
+                            "product_id": self.product_3.id,
+                            "category_id": self.product_3.categ_id.id,
+                            "price_unit": self.product_3.list_price,
                         },
                     )
                 ]
@@ -143,11 +201,11 @@ class TestCrmLeadLine(TransactionCase):
         # Check if planned revenue is correctly set for lead line 1
         self.assertEqual(
             self.lead.lead_line_ids[0].expected_revenue,
-            self.product_4.list_price,
+            self.product_3.list_price,
             "Planned revenue should be equal to the product standard price",
         )
 
-        self.lead.convert_opportunity(self.env.ref("base.res_partner_1"))
+        self.lead.convert_opportunity(self.partner_2)
 
         lead_line_1 = self.lead.lead_line_ids[0]
 

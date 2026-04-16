@@ -75,10 +75,11 @@ class CrmLeadLine(models.Model):
                 self.name = product.name
             if (
                 not self.uom_id
-                or product.uom_id.category_id.id != self.uom_id.category_id.id
+                or product.uom_id.relative_uom_id.id != self.uom_id.relative_uom_id.id
             ):
                 self.uom_id = product.uom_id.id
-            domain["uom_id"] = [("category_id", "=", product.uom_id.category_id.id)]
+            allowed_uoms = product.uom_id | product.uom_ids
+            domain["uom_id"] = [("id", "in", allowed_uoms.ids)]
             if self.uom_id and self.uom_id.id != product.uom_id.id:
                 self.price_unit = product.uom_id._compute_price(
                     self.price_unit, self.uom_id
@@ -87,7 +88,6 @@ class CrmLeadLine(models.Model):
 
     @api.onchange("category_id")
     def _onchange_category_id(self):
-        domain = {}
         if not self.lead_id:
             return
         if self.category_id:
@@ -101,11 +101,9 @@ class CrmLeadLine(models.Model):
                 self.name = categ_id.name
             if self.product_tmpl_id and self.product_tmpl_id.categ_id != categ_id:
                 self.product_tmpl_id = None
-        return {"domain": domain}
 
     @api.onchange("product_tmpl_id")
     def _onchange_product_tmpl_id(self):
-        domain = {}
         if not self.lead_id:
             return
         if self.product_tmpl_id:
@@ -119,11 +117,9 @@ class CrmLeadLine(models.Model):
                 if self.product_id.product_tmpl_id != product_tmpl:
                     self.product_id = None
                     self.name = product_tmpl.name
-        return {"domain": domain}
 
     @api.onchange("uom_id")
     def _onchange_uom_id(self):
-        result = {}
         if not self.uom_id:
             self.price_unit = 0.0
         if self.product_id and self.uom_id:
@@ -131,4 +127,3 @@ class CrmLeadLine(models.Model):
             self.price_unit = self.product_id.uom_id._compute_price(
                 price_unit, self.uom_id
             )
-        return result

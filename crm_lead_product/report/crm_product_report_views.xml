@@ -100,7 +100,7 @@
                     name="date_closed_filter"
                     date="date_closed"
                 />
-                <group expand="0" string="Extended Filters">
+                <group>
                     <field
                         name="partner_id"
                         filter_domain="[('partner_id','child_of',self)]"
@@ -108,7 +108,7 @@
                     <field
                         name="stage_id"
                         widget="selection"
-                        domain="['|', ('team_id', '=', False), ('team_id', '=', 'team_id')]"
+                        domain="['|', ('team_ids', '=', False), ('team_ids', 'in', 'team_id')]"
                     />
                     <field name="campaign_id" widget="selection" />
                     <field
@@ -121,7 +121,7 @@
                     <field name="date_open" />
                     <field name="date_closed" />
                 </group>
-                <group expand="1" string="Group By">
+                <group>
                     <filter
                         string="Salesperson"
                         name="salesperson"
@@ -189,10 +189,12 @@
         >{'search_default_opportunity': True, 'search_default_current': True}</field>
         <field
             name="view_ids"
-            eval="[(5, 0, 0),
-                      (0, 0, {'view_mode': 'pivot', 'view_id': ref('crm_opportunity_report_view_pivot')}),
-                      (0, 0, {'view_mode': 'graph', 'view_id': ref('crm_opportunity_report_view_graph')}),
-                      (0, 0, {'view_mode': 'list', 'view_id': ref('crm_opportunity_report_view_tree')})]"
+            eval="[
+                Command.clear(),
+                Command.create({'view_mode': 'pivot', 'view_id': ref('crm_opportunity_report_view_pivot')}),
+                Command.create({'view_mode': 'graph', 'view_id': ref('crm_opportunity_report_view_graph')}),
+                Command.create({'view_mode': 'list', 'view_id': ref('crm_opportunity_report_view_tree')})
+            ]"
         />
         <field name="help">Pipeline Analysis gives you an instant access to
 your opportunities with information such as the expected revenue, planned cost,
