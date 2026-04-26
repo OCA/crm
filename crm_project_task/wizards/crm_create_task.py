@@ -31,14 +31,14 @@ class CrmCreateTAsk(models.TransientModel):
         task.message_post(
             body=self.env._(
                 "Task created from lead/opportunity %s",
-                Markup("<a href=# data-oe-model=crm.lead data-oe-id=" "%s>%s</a>.")
+                Markup("<a href=# data-oe-model=crm.lead data-oe-id=%s>%s</a>.")
                 % (self.lead_id.id, self.lead_id.name),
             )
         )
         self.lead_id.message_post(
             body=self.env._(
                 "Task %s created.",
-                Markup("<a href=# data-oe-model=project.task data-oe-id=" "%s>%s</a>")
+                Markup("<a href=# data-oe-model=project.task data-oe-id=%s>%s</a>")
                 % (task.id, task.display_name),
             )
         )
