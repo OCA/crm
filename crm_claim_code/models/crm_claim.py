@@ -16,9 +16,9 @@ class CrmClaim(models.Model):
         copy=False,
     )
 
-    _sql_constraints = [
-        ("crm_claim_unique_code", "UNIQUE (code)", "The code must be unique!"),
-    ]
+    _crm_claim_unique_code = models.Constraint(
+        "UNIQUE (code)", "The code must be unique!"
+    )
 
     @api.model_create_multi
     def create(self, vals_list):
