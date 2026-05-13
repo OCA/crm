@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 Ctrl-a
+     License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl-3.0) -->
+<odoo>
+    <!-- Form view: add proposal_due_date before date_closed in the Analysis group -->
+    <record id="crm_lead_view_form_inherit_proposal_due_date" model="ir.ui.view">
+        <field name="name">crm.lead.view.form.inherit.proposal.due.date</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//label[@for='date_deadline']" position="before">
+                <field name="proposal_due_date" />
+            </xpath>
+        </field>
+    </record>
+
+    <!-- List (tree) view: add proposal_due_date as optional column -->
+    <record id="crm_case_tree_view_oppor_inherit_proposal_due_date" model="ir.ui.view">
+        <field name="name">crm.lead.tree.opportunity.inherit.proposal.due.date</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_tree_view_oppor" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//field[@name='date_deadline'][@optional='hide']"
+                position="after"
+            >
+                <field name="proposal_due_date" optional="hide" />
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Search view: add proposal_due_date field -->
+    <record
+        id="view_crm_case_opportunities_filter_inherit_proposal_due_date"
+        model="ir.ui.view"
+    >
+        <field name="name">crm.lead.search.opportunity.inherit.proposal.due.date</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.view_crm_case_opportunities_filter" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='activity_state']" position="after">
+                <field name="proposal_due_date" />
+            </xpath>
+        </field>
+    </record>
+</odoo>
