@@ -4,9 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 15.0\n"
+"Project-Id-Version: Odoo Server 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2023-08-01 12:11+0000\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
 "Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
 "Language-Team: none\n"
 "Language: it\n"
@@ -14,7 +15,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.17\n"
 
 #. module: crm_project_task
 #: model:ir.model.fields,field_description:crm_project_task.field_crm_lead__task_count
@@ -69,11 +69,6 @@ msgid "Crm Default Project"
 msgstr "Progetto predefinito"
 
 #. module: crm_project_task
-#: model_terms:ir.ui.view,arch_db:crm_project_task.res_config_settings_view_form
-msgid "Default project"
-msgstr "Progetto predefinito"
-
-#. module: crm_project_task
 #: model:ir.model.fields,field_description:crm_project_task.field_crm_create_task__description
 msgid "Description"
 msgstr "Descrizione"
@@ -89,9 +84,14 @@ msgid "ID"
 msgstr "ID"
 
 #. module: crm_project_task
-#: model:ir.model.fields,field_description:crm_project_task.field_crm_create_task____last_update
-msgid "Last Modified on"
-msgstr "Ultima modifica il"
+#: model_terms:ir.actions.act_window,help:crm_project_task.action_crm_lead_related_tasks
+msgid ""
+"Keep track of the progress of your tasks from creation to completion. \n"
+" Collaborate efficiently by chatting in real-time or via email."
+msgstr ""
+"Tenere traccia dei progressi dei vostri lavori dalla creazione al "
+"completamento. \n"
+" Collaborate in modo efficiente chattando in tempo reale o via e-mail."
 
 #. module: crm_project_task
 #: model:ir.model.fields,field_description:crm_project_task.field_crm_create_task__write_uid
@@ -116,11 +116,21 @@ msgid "Lead/Opportunity"
 msgstr "Contatto/Opportunità"
 
 #. module: crm_project_task
+#: model_terms:ir.actions.act_window,help:crm_project_task.action_crm_lead_related_tasks
+msgid "No tasks found. Let's create one!"
+msgstr "Nessun lavoro trovato. Creiamone uno!"
+
+#. module: crm_project_task
+#: model_terms:ir.ui.view,arch_db:crm_project_task.view_task_form2_inherit_crm_project_task
+#. odoo-python
+#: code:addons/crm_project_task/models/project_task.py:0
+msgid "Parent Lead"
+msgstr "Contatto padre"
+
+#. module: crm_project_task
 #. odoo-python
 #: code:addons/crm_project_task/wizards/crm_create_task.py:0
-#, python-format
-msgid ""
-"Project not configured in settings, please contact with your administrator."
+msgid "Project not configured in settings. Please contact your administrator."
 msgstr ""
 "Manca la configurazione dei progetti nelle impostazioni, contattare "
 "l'amministratore."
@@ -131,21 +141,11 @@ msgid "Projects"
 msgstr "Progetti"
 
 #. module: crm_project_task
+#: model:ir.actions.act_window,name:crm_project_task.action_new_task
 #: model:ir.model,name:crm_project_task.model_project_task
 #: model:ir.model.fields,field_description:crm_project_task.field_crm_lead__task_ids
 msgid "Task"
 msgstr "Lavoro"
-
-#. module: crm_project_task
-#. odoo-python
-#: code:addons/crm_project_task/wizards/crm_create_task.py:0
-#, python-format
-msgid ""
-"Task <a href=# data-oe-model=project.task data-oe-id=%(task)d>%(name)s</a> "
-"created."
-msgstr ""
-"Creato lavoro <a href=# data-oe-model=project.task data-oe-id=%(task)d>"
-"%(name)s</a>."
 
 #. module: crm_project_task
 #: model:ir.model.fields,field_description:crm_project_task.field_crm_create_task__task_name
@@ -153,20 +153,14 @@ msgid "Task Name"
 msgstr "Nome lavoro"
 
 #. module: crm_project_task
-#. odoo-python
-#: code:addons/crm_project_task/wizards/crm_create_task.py:0
-#, python-format
-msgid ""
-"Task created from lead/opportunity <a href=# data-oe-model=crm.lead data-oe-"
-"id=%(lead)d>%(name)s</a>."
-msgstr ""
-"Lavoro creato da contatto/opportunità <a href=# data-oe-model=crm.lead data-"
-"oe-id=%(lead)d>%(name)s</a>."
-
-#. module: crm_project_task
 #: model_terms:ir.ui.view,arch_db:crm_project_task.inherit_crm_lead_view_form_crm_project_task
 msgid "Task(s)"
 msgstr "Lavoro(i)"
+
+#. module: crm_project_task
+#: model:ir.actions.act_window,name:crm_project_task.action_crm_lead_related_tasks
+msgid "Tasks"
+msgstr "Lavori"
 
 #. module: crm_project_task
 #: model:ir.model,name:crm_project_task.model_crm_create_task
