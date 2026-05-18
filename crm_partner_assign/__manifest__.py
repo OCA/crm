@@ -3,7 +3,8 @@
 
 {
     "name": "CRM Partner Assign",
-    "summary": "Assign a Partner to an Opportunity/Lead/Partner to indicate Partnership",
+    "summary": "Assign a Partner to an Opportunity/Lead/Partner to indicate"
+    " Partnership",
     "version": "16.0.0.1.2",
     "development_status": "Alpha",
     "category": "Sales/CRM",

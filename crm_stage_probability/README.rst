@@ -1,3 +1,7 @@
+.. image:: https://odoo-community.org/readme-banner-image
+   :target: https://odoo-community.org/get-involved?utm_source=readme
+   :alt: Odoo Community Association
+
 =====================
 CRM stage probability
 =====================
@@ -13,7 +17,7 @@ CRM stage probability
 .. |badge1| image:: https://img.shields.io/badge/maturity-Alpha-red.png
     :target: https://odoo-community.org/page/development-status
     :alt: Alpha
-.. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
+.. |badge2| image:: https://img.shields.io/badge/license-AGPL--3-blue.png
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fcrm-lightgray.png?logo=github
@@ -28,8 +32,8 @@ CRM stage probability
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
-This module restore the CRM feature from Odoo <= 12.0 with lead probability
-according to its stage.
+This module restore the CRM feature from Odoo <= 12.0 with lead
+probability according to its stage.
 
 .. IMPORTANT::
    This is an alpha version, the data model and design can change at any time without warning.
@@ -63,20 +67,20 @@ Credits
 =======
 
 Authors
-~~~~~~~
+-------
 
 * Camptocamp
 * Odoo SA
 
 Contributors
-~~~~~~~~~~~~
+------------
 
-* Odoo SA
-* Akim Juillerat <akim.juillerat@camptocamp.com>
-* Robin Goots <robin.goots@dynapps.be>
+-  Odoo SA
+-  Akim Juillerat <akim.juillerat@camptocamp.com>
+-  Robin Goots <robin.goots@dynapps.be>
 
 Maintainers
-~~~~~~~~~~~
+-----------
 
 This module is maintained by the OCA.
 

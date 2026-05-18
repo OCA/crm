@@ -9,7 +9,7 @@ from odoo.addons.base_location_nuts.tests.test_base_location_nuts import (
 class TestCrmNuts(TestBaseLocationNuts):
     @classmethod
     def setUpClass(cls):
-        super(TestCrmNuts, cls).setUpClass()
+        super().setUpClass()
         cls.nuts1_1 = cls.env["res.partner.nuts"].search([("code", "=", "ES")])
         cls.lead = cls.env["crm.lead"].create(
             {

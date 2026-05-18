@@ -1,3 +1,7 @@
+.. image:: https://odoo-community.org/readme-banner-image
+   :target: https://odoo-community.org/get-involved?utm_source=readme
+   :alt: Odoo Community Association
+
 ===============
 CRM Claim Types
 ===============
@@ -13,7 +17,7 @@ CRM Claim Types
 .. |badge1| image:: https://img.shields.io/badge/maturity-Beta-yellow.png
     :target: https://odoo-community.org/page/development-status
     :alt: Beta
-.. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
+.. |badge2| image:: https://img.shields.io/badge/license-AGPL--3-blue.png
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fcrm-lightgray.png?logo=github
@@ -28,10 +32,11 @@ CRM Claim Types
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
-Provides a way to classify claims by type and to configure claim stages depending on claim types.
+Provides a way to classify claims by type and to configure claim stages
+depending on claim types.
 
-Includes Customer, Supplier and Other claim types by default,
-as well as stages configuration.
+Includes Customer, Supplier and Other claim types by default, as well as
+stages configuration.
 
 **Table of contents**
 
@@ -41,20 +46,20 @@ as well as stages configuration.
 Configuration
 =============
 
-This module does not require any special configuration.
-It contains a predefined set of claim types.
+This module does not require any special configuration. It contains a
+predefined set of claim types.
 
-If you want to add your own claim types, go to **CRM > Configuration > Claim
-> Claim Types**.
+If you want to add your own claim types, go to **CRM > Configuration >
+Claim > Claim Types**.
 
 Usage
 =====
 
 To use this module, you need to:
 
-* Go to **CRM > After Sale > Claims**, create a claim and fill out at least
-  **Claim Subject** and **Claim Type** fields.
-* Or select an existing claim and fill out all relevant information.
+-  Go to **CRM > After Sale > Claims**, create a claim and fill out at
+   least **Claim Subject** and **Claim Type** fields.
+-  Or select an existing claim and fill out all relevant information.
 
 Bug Tracker
 ===========
@@ -70,27 +75,26 @@ Credits
 =======
 
 Authors
-~~~~~~~
+-------
 
 * Vauxoo
 * Ursa Information Systems
 
 Contributors
-~~~~~~~~~~~~
+------------
 
-* Yanina Aular <yanina.aular@vauxoo.com>
-* Osval Reyes <osval@vauxoo.com>
-* Bhavesh Odedra <bodedra@ursainfosystems.com>
-* Martin Wilderoth <martin.wilderoth@linserv.se>
-* Alexandre Díaz <alexandre.diaz@tecnativa.com>
-* Manuel Marquez <buzondemam@gmail.com>
+-  Yanina Aular <yanina.aular@vauxoo.com>
+-  Osval Reyes <osval@vauxoo.com>
+-  Bhavesh Odedra <bodedra@ursainfosystems.com>
+-  Martin Wilderoth <martin.wilderoth@linserv.se>
+-  Alexandre Díaz <alexandre.diaz@tecnativa.com>
+-  Manuel Marquez <buzondemam@gmail.com>
+-  `Pesol <https://www.pesol.es>`__:
 
-* `Pesol <https://www.pesol.es>`__:
-
-  * Jonathan Oscategui Taza <info@pesol.es>
+   -  Jonathan Oscategui Taza <info@pesol.es>
 
 Maintainers
-~~~~~~~~~~~
+-----------
 
 This module is maintained by the OCA.
 

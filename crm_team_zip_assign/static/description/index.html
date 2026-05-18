@@ -375,8 +375,9 @@ ul.auto-toc {
 !! source digest: sha256:7d92fa09d6fca0fc8ba878f732b19349d772af0ea5136d7a4a4fa8c79b66564d
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 <p><a class="reference external image-reference" href="https://odoo-community.org/page/development-status"><img alt="Beta" src="https://img.shields.io/badge/maturity-Beta-yellow.png" /></a> <a class="reference external image-reference" href="http://www.gnu.org/licenses/agpl-3.0-standalone.html"><img alt="License: AGPL-3" src="https://img.shields.io/badge/license-AGPL--3-blue.png" /></a> <a class="reference external image-reference" href="https://github.com/OCA/crm/tree/16.0/crm_team_zip_assign"><img alt="OCA/crm" src="https://img.shields.io/badge/github-OCA%2Fcrm-lightgray.png?logo=github" /></a> <a class="reference external image-reference" href="https://translation.odoo-community.org/projects/crm-16-0/crm-16-0-crm_team_zip_assign"><img alt="Translate me on Weblate" src="https://img.shields.io/badge/weblate-Translate%20me-F47D42.png" /></a> <a class="reference external image-reference" href="https://runboat.odoo-community.org/builds?repo=OCA/crm&amp;target_branch=16.0"><img alt="Try me on Runboat" src="https://img.shields.io/badge/runboat-Try%20me-875A7B.png" /></a></p>
-<p>Auto-assign CRM teams to partners based on ZIP code patterns using regular expressions.</p>
-<img alt="https://raw.githubusercontent.com/OCA/crm/16.0/crm_team_zip_assign/static/description/crm_team_form_view.png" src="https://raw.githubusercontent.com/OCA/crm/16.0/crm_team_zip_assign/static/description/crm_team_form_view.png" />
+<p>Auto-assign CRM teams to partners based on ZIP code patterns using
+regular expressions.</p>
+<img alt="image" src="https://raw.githubusercontent.com/OCA/crm/16.0/crm_team_zip_assign/static/description/crm_team_form_view.png" />
 <div class="section" id="features">
 <h2>Features</h2>
 <ul class="simple">
@@ -388,16 +389,26 @@ ul.auto-toc {
 <li>Exclusion flag for partners who should not be auto-assigned</li>
 <li>Real-time regex pattern validation prevents invalid patterns</li>
 <li>Contextual action for manual assignment from partner views</li>
-<li>Conditional assignment using pre-zip match conditions: teams can specify a domain expression (Odoo domain syntax) that must be satisfied by the partner before ZIP regex matching is performed. This allows for advanced filtering, e.g., only assign if the partner is a company or meets other criteria.</li>
+<li>Conditional assignment using pre-zip match conditions: teams can
+specify a domain expression (Odoo domain syntax) that must be
+satisfied by the partner before ZIP regex matching is performed. This
+allows for advanced filtering, e.g., only assign if the partner is a
+company or meets other criteria.</li>
 </ul>
 <div class="section" id="assignment-logic">
 <h3>Assignment Logic</h3>
-<p>The assignment is triggered on partner create/write when ZIP, company, country, state, or exclusion flag changes. A contextual action is also available from partner views for manual assignment. The system:</p>
+<p>The assignment is triggered on partner create/write when ZIP, company,
+country, state, or exclusion flag changes. A contextual action is also
+available from partner views for manual assignment. The system:</p>
 <ol class="arabic simple">
-<li>Finds all active teams with ZIP assignment enabled in the partner’s company</li>
+<li>Finds all active teams with ZIP assignment enabled in the partner’s
+company</li>
 <li>Filters teams by matching countries and states (if specified)</li>
-<li>For each eligible team, evaluates the optional pre-zip match condition (Odoo domain expression). If the partner does not satisfy the condition, the team is skipped.</li>
-<li>Tests each remaining team’s regex patterns against the partner’s ZIP code</li>
+<li>For each eligible team, evaluates the optional pre-zip match
+condition (Odoo domain expression). If the partner does not satisfy
+the condition, the team is skipped.</li>
+<li>Tests each remaining team’s regex patterns against the partner’s ZIP
+code</li>
 <li>Selects the team with highest priority if multiple matches exist</li>
 <li>Logs assignment activity for audit purposes</li>
 </ol>
@@ -407,13 +418,19 @@ ul.auto-toc {
 <ol class="arabic simple">
 <li>Only active teams with “Active ZIP Assignment” enabled are considered</li>
 <li>Only teams in the same company as the partner are considered</li>
-<li>Teams must have matching countries (partner’s country must be in team’s countries)</li>
-<li>Teams must have matching states (partner’s state must be in team’s states, if team has states defined)</li>
-<li>If a team has a pre-zip match condition, the partner must satisfy the condition (Odoo domain) before ZIP regex matching is performed. If not set, all partners are considered.</li>
-<li>Partners without a company, ZIP code, country, or state are not assigned</li>
+<li>Teams must have matching countries (partner’s country must be in
+team’s countries)</li>
+<li>Teams must have matching states (partner’s state must be in team’s
+states, if team has states defined)</li>
+<li>If a team has a pre-zip match condition, the partner must satisfy the
+condition (Odoo domain) before ZIP regex matching is performed. If
+not set, all partners are considered.</li>
+<li>Partners without a company, ZIP code, country, or state are not
+assigned</li>
 <li>Partners with “Exclude from ZIP Assignment” checked are not assigned</li>
 <li>When multiple teams match, the team with highest priority is selected</li>
-<li>Invalid regex patterns are prevented by validation constraints at input time</li>
+<li>Invalid regex patterns are prevented by validation constraints at
+input time</li>
 </ol>
 <p><strong>Table of contents</strong></p>
 <div class="contents local topic" id="contents">
@@ -433,37 +450,52 @@ ul.auto-toc {
 <li>Edit or create a CRM team</li>
 <li>Enable “Active ZIP Assignment” checkbox</li>
 <li>Set “ZIP Assignment Priority” (higher number = higher priority)</li>
-<li>Configure geographic coverage:
-- Select “Countries” where this team operates (required)
-- Select “States” within those countries (required)</li>
+<li>Configure geographic coverage:<ul>
+<li>Select “Countries” where this team operates (required)</li>
+<li>Select “States” within those countries (required)</li>
+</ul>
+</li>
 <li>Add ZIP patterns in the “ZIP Patterns” tab</li>
-<li>(Optional) Set a “Pre-Zip Match Condition” using Odoo domain syntax to restrict assignment to partners matching specific criteria (e.g., only companies, only certain types, etc.)</li>
+<li>(Optional) Set a “Pre-Zip Match Condition” using Odoo domain syntax
+to restrict assignment to partners matching specific criteria (e.g.,
+only companies, only certain types, etc.)</li>
 </ol>
 <div class="section" id="geographic-coverage">
 <h3>Geographic Coverage</h3>
 <ul class="simple">
-<li><strong>Countries</strong>: Teams will only be considered for partners located in the selected countries</li>
-<li><strong>States</strong>: Teams will only be considered for partners in the selected states</li>
-<li><strong>Domain Filtering</strong>: State selection is automatically filtered based on selected countries</li>
+<li><strong>Countries</strong>: Teams will only be considered for partners located in
+the selected countries</li>
+<li><strong>States</strong>: Teams will only be considered for partners in the
+selected states</li>
+<li><strong>Domain Filtering</strong>: State selection is automatically filtered based
+on selected countries</li>
 </ul>
 </div>
 <div class="section" id="pre-zip-match-condition">
 <h3>Pre-Zip Match Condition</h3>
-<p>You can further restrict team assignment by specifying a domain condition in the “Pre-Zip Match Condition” field. This uses Odoo’s domain syntax (e.g., <cite>[(‘is_company’, ‘=’, True)]</cite>). Only partners matching this condition will be considered for ZIP pattern matching for this team.</p>
+<p>You can further restrict team assignment by specifying a domain
+condition in the “Pre-Zip Match Condition” field. This uses Odoo’s
+domain syntax (e.g., [(‘is_company’, ‘=’, True)]). Only partners
+matching this condition will be considered for ZIP pattern matching for
+this team.</p>
 </div>
 <div class="section" id="pre-zip-match-condition-examples">
 <h3>Pre-Zip Match Condition Examples</h3>
 <p>Some example domain conditions:</p>
 <ul class="simple">
-<li><cite>[(‘is_company’, ‘=’, True)]</cite> — Only assign to partners that are companies</li>
-<li><cite>[(‘type’, ‘=’, ‘contact’)]</cite> — Only assign to contacts</li>
-<li><cite>[(‘industry_id’, ‘!=’, False)]</cite> — Only assign to partners with an industry set</li>
+<li>[(‘is_company’, ‘=’, True)] — Only assign to partners that are
+companies</li>
+<li>[(‘type’, ‘=’, ‘contact’)] — Only assign to contacts</li>
+<li>[(‘industry_id’, ‘!=’, False)] — Only assign to partners with an
+industry set</li>
 </ul>
-<p>You can combine multiple conditions, e.g. <cite>[(‘is_company’, ‘=’, True), (‘country_id’, ‘=’, ref(‘base.us’))]</cite></p>
+<p>You can combine multiple conditions, e.g. [(‘is_company’, ‘=’, True),
+(‘country_id’, ‘=’, ref(‘base.us’))]</p>
 </div>
 <div class="section" id="zip-pattern-examples">
 <h3>ZIP Pattern Examples</h3>
-<p>All patterns are validated in real-time to ensure they are valid Python regular expressions:</p>
+<p>All patterns are validated in real-time to ensure they are valid Python
+regular expressions:</p>
 <ul class="simple">
 <li><tt class="docutils literal"><span class="pre">^1[0-5].*</span></tt> - ZIP codes starting with 10-15</li>
 <li><tt class="docutils literal"><span class="pre">^2[0-9].*</span></tt> - ZIP codes starting with 20-29</li>
@@ -485,8 +517,11 @@ ul.auto-toc {
 </div>
 <div class="section" id="partner-configuration">
 <h2>Partner Configuration</h2>
-<p>Partners have an “Exclude from ZIP Assignment” checkbox to prevent automatic assignment.</p>
-<p>Teams can have a “Pre-Zip Match Condition” to restrict assignment to partners matching specific criteria before ZIP pattern matching is performed.</p>
+<p>Partners have an “Exclude from ZIP Assignment” checkbox to prevent
+automatic assignment.</p>
+<p>Teams can have a “Pre-Zip Match Condition” to restrict assignment to
+partners matching specific criteria before ZIP pattern matching is
+performed.</p>
 </div>
 <div class="section" id="usage-1">
 <h2>Usage</h2>
@@ -494,20 +529,24 @@ ul.auto-toc {
 <h3>Automatic Assignment</h3>
 <p>Partners are automatically assigned to CRM teams when:</p>
 <ul class="simple">
-<li>A partner is created with complete geographic information (ZIP, country, state)</li>
+<li>A partner is created with complete geographic information (ZIP,
+country, state)</li>
 <li>A partner’s ZIP code is modified</li>
 <li>A partner’s country or state is changed</li>
 <li>A partner’s company is changed</li>
 <li>The exclusion flag is modified</li>
 </ul>
-<p>For each team, if a “Pre-Zip Match Condition” is set, the partner must match this condition before ZIP pattern matching is performed. If not set, all partners are considered for ZIP matching.</p>
+<p>For each team, if a “Pre-Zip Match Condition” is set, the partner must
+match this condition before ZIP pattern matching is performed. If not
+set, all partners are considered for ZIP matching.</p>
 </div>
 <div class="section" id="manual-assignment">
 <h3>Manual Assignment</h3>
 <p>You can also trigger assignment manually:</p>
 <ul class="simple">
 <li>Use the contextual action available in partner views</li>
-<li>This is useful for reassigning existing partners after updating team configurations or after addon installation</li>
+<li>This is useful for reassigning existing partners after updating team
+configurations or after addon installation</li>
 </ul>
 </div>
 <div class="section" id="assignment-requirements">
@@ -532,21 +571,22 @@ If you spotted it first, help us to smash it by providing a detailed and welcome
 <h4>Credits</h4>
 </div>
 </div>
+</div>
 <div class="section" id="authors">
-<h3>Authors</h3>
+<h2>Authors</h2>
 <ul class="simple">
 <li>Binhex</li>
 </ul>
 </div>
 <div class="section" id="contributors">
-<h3>Contributors</h3>
+<h2>Contributors</h2>
 <ul class="simple">
 <li>Adasat Torres de León &lt;<a class="reference external" href="mailto:a.torres&#64;binhex.cloud">a.torres&#64;binhex.cloud</a>&gt;</li>
 <li>Rolando Pérez Rebollo &lt;<a class="reference external" href="mailto:r.perez&#64;binhex.cloud">r.perez&#64;binhex.cloud</a>&gt;</li>
 </ul>
 </div>
 <div class="section" id="maintainers">
-<h3>Maintainers</h3>
+<h2>Maintainers</h2>
 <p>This module is maintained by the OCA.</p>
 <a class="reference external image-reference" href="https://odoo-community.org">
 <img alt="Odoo Community Association" src="https://odoo-community.org/logo.png" />
@@ -556,7 +596,6 @@ mission is to support the collaborative development of Odoo features and
 promote its widespread use.</p>
 <p>This module is part of the <a class="reference external" href="https://github.com/OCA/crm/tree/16.0/crm_team_zip_assign">OCA/crm</a> project on GitHub.</p>
 <p>You are welcome to contribute. To learn how please visit <a class="reference external" href="https://odoo-community.org/page/Contribute">https://odoo-community.org/page/Contribute</a>.</p>
-</div>
 </div>
 </div>
 </div>

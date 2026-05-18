@@ -64,9 +64,7 @@ class Lead(models.Model):
 
     def _prepare_customer_values(self, partner_name, is_company=False, parent_id=False):
         """Add VAT to partner."""
-        res = super(Lead, self)._prepare_customer_values(
-            partner_name, is_company, parent_id
-        )
+        res = super()._prepare_customer_values(partner_name, is_company, parent_id)
         res.update(
             {
                 "vat": self.vat,
@@ -76,7 +74,7 @@ class Lead(models.Model):
 
     def _prepare_values_from_partner(self, partner):
         """Recover VAT from partner if available."""
-        result = super(Lead, self)._prepare_values_from_partner(partner)
+        result = super()._prepare_values_from_partner(partner)
         if not partner:
             return result
         if partner.vat:

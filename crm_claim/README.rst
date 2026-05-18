@@ -1,3 +1,7 @@
+.. image:: https://odoo-community.org/readme-banner-image
+   :target: https://odoo-community.org/get-involved?utm_source=readme
+   :alt: Odoo Community Association
+
 =================
 Claims Management
 =================
@@ -13,7 +17,7 @@ Claims Management
 .. |badge1| image:: https://img.shields.io/badge/maturity-Beta-yellow.png
     :target: https://odoo-community.org/page/development-status
     :alt: Beta
-.. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
+.. |badge2| image:: https://img.shields.io/badge/license-AGPL--3-blue.png
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fcrm-lightgray.png?logo=github
@@ -44,23 +48,23 @@ Configuration
 
 To configure this module, you need to:
 
-* Go to new menu **CRM > Configuration > Claim > Categories** and create as
-  many categories as you need.
-* Go to new menú **CRM > Configuration > Claim > Stages** and create stages for
-  claims.
+-  Go to new menu **CRM > Configuration > Claim > Categories** and
+   create as many categories as you need.
+-  Go to new menú **CRM > Configuration > Claim > Stages** and create
+   stages for claims.
 
 Usage
 =====
 
-* Go to new menu **CRM > After Sale > Services > Claims** and create a new
-  claim.
+-  Go to new menu **CRM > After Sale > Services > Claims** and create a
+   new claim.
 
 Changelog
 =========
 
-**This module is a backport from Odoo SA and as such, it is not included in the
-OCA CLA. That means we do not have a copy of the copyright on it like all
-other OCA modules.**
+**This module is a backport from Odoo SA and as such, it is not included
+in the OCA CLA. That means we do not have a copy of the copyright on it
+like all other OCA modules.**
 
 Bug Tracker
 ===========
@@ -76,25 +80,25 @@ Credits
 =======
 
 Authors
-~~~~~~~
+-------
 
 * Odoo S.A.
 * Tecnativa
 
 Contributors
-~~~~~~~~~~~~
+------------
 
-* Odoo S.A.
-* Vicent Cubells <vicent.cubells@tecnativa.com>
-* Bhavesh Odedra <bodedra@ursainfosystems.com>
-* Cristina Martin R. <cristina.martin@tecnativa.com>
-* Ruchir Shukla <ruchir@bizzappdev.com>
-* `Guadaltech <https://www.guadaltech.es>`_:
+-  Odoo S.A.
+-  Vicent Cubells <vicent.cubells@tecnativa.com>
+-  Bhavesh Odedra <bodedra@ursainfosystems.com>
+-  Cristina Martin R. <cristina.martin@tecnativa.com>
+-  Ruchir Shukla <ruchir@bizzappdev.com>
+-  `Guadaltech <https://www.guadaltech.es>`__:
 
-  * Fernando La Chica <fernando.lachica@guadaltech.es>
+   -  Fernando La Chica <fernando.lachica@guadaltech.es>
 
 Maintainers
-~~~~~~~~~~~
+-----------
 
 This module is maintained by the OCA.
 

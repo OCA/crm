@@ -32,7 +32,8 @@ Crm Stage Mail
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
-This module allows you to specify an email template for each stage so that when you change stages, an email is sent using that template.
+This module allows you to specify an email template for each stage so
+that when you change stages, an email is sent using that template.
 
 **Table of contents**
 
@@ -42,9 +43,10 @@ This module allows you to specify an email template for each stage so that when 
 Usage
 =====
 
-- Define a template (Welcome Demo, for example) in a stage (Qualified, for example).
-- Change a lead to the stage defined in the previous point.
-- An email will be sent to the lead's partner.
+-  Define a template (Welcome Demo, for example) in a stage (Qualified,
+   for example).
+-  Change a lead to the stage defined in the previous point.
+-  An email will be sent to the lead's partner.
 
 Bug Tracker
 ===========
@@ -60,19 +62,19 @@ Credits
 =======
 
 Authors
-~~~~~~~
+-------
 
 * Tecnativa
 
 Contributors
-~~~~~~~~~~~~
+------------
 
-* `Tecnativa <https://www.tecnativa.com>`__:
+-  `Tecnativa <https://www.tecnativa.com>`__:
 
-  * Víctor Martínez
+   -  Víctor Martínez
 
 Maintainers
-~~~~~~~~~~~
+-----------
 
 This module is maintained by the OCA.
 

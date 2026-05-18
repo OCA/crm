@@ -1,3 +1,7 @@
+.. image:: https://odoo-community.org/readme-banner-image
+   :target: https://odoo-community.org/get-involved?utm_source=readme
+   :alt: Odoo Community Association
+
 ===============
 CRM Phone Calls
 ===============
@@ -13,7 +17,7 @@ CRM Phone Calls
 .. |badge1| image:: https://img.shields.io/badge/maturity-Beta-yellow.png
     :target: https://odoo-community.org/page/development-status
     :alt: Beta
-.. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
+.. |badge2| image:: https://img.shields.io/badge/license-AGPL--3-blue.png
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fcrm-lightgray.png?logo=github
@@ -40,19 +44,20 @@ Usage
 
 To use this module, you need to:
 
-#. Go to *CRM > Phone Calls > Logged Calls > New*.
-#. If your user has *Show Scheduled Calls Menu* permission, you will see
+1. Go to *CRM > Phone Calls > Logged Calls > New*.
+2. If your user has *Show Scheduled Calls Menu* permission, you will see
    scheduled calls menu too.
-#. In any moment you can schedule another call, schedule a meeting or convert
-   call contact to opportunity.
-#. Calls can be categorized and you can manage categories in *CRM >
+3. In any moment you can schedule another call, schedule a meeting or
+   convert call contact to opportunity.
+4. Calls can be categorized and you can manage categories in *CRM >
    Configuration > Phone Calls > Categories*.
-#. Calls can be analyzed in *CRM > Reporting > Phone Calls Analysis*.
+5. Calls can be analyzed in *CRM > Reporting > Phone Calls Analysis*.
 
 Known issues / Roadmap
 ======================
 
-* Simplify the function schedule_another_phonecall returning always a recordset
+-  Simplify the function schedule_another_phonecall returning always a
+   recordset
 
 Bug Tracker
 ===========
@@ -68,36 +73,34 @@ Credits
 =======
 
 Authors
-~~~~~~~
+-------
 
 * Odoo S.A.
 * Tecnativa
 
 Contributors
-~~~~~~~~~~~~
+------------
 
-* Odoo S.A.
-* `Tecnativa <https://www.tecnativa.com>`_
+-  Odoo S.A.
+-  `Tecnativa <https://www.tecnativa.com>`__
 
-  * Vicent Cubells
-  * Jairo Llopis
-  * David Vidal
-  * Alexandre Díaz
-  * Stefan Ungureanu
+   -  Vicent Cubells
+   -  Jairo Llopis
+   -  David Vidal
+   -  Alexandre Díaz
+   -  Stefan Ungureanu
 
-* RIDA YAHLA <mireda2012@gmail.com>
+-  RIDA YAHLA <mireda2012@gmail.com>
+-  Anand Kansagra <kansagraanand@hotmail.com>
+-  `Druidoo <https://www.druidoo.io>`__
 
-* Anand Kansagra <kansagraanand@hotmail.com>
+   -  Iván Todorovich <ivan.todorovich@druidoo.io>
+   -  Manuel Marquez <manuel.marquez@druidoo.io>
 
-* `Druidoo <https://www.druidoo.io>`_
-
-  * Iván Todorovich <ivan.todorovich@druidoo.io>
-  * Manuel Marquez <manuel.marquez@druidoo.io>
-
-* Ruchir Shukla <ruchir@bizzappdev.com>
+-  Ruchir Shukla <ruchir@bizzappdev.com>
 
 Maintainers
-~~~~~~~~~~~
+-----------
 
 This module is maintained by the OCA.
 

@@ -32,15 +32,20 @@ Lead Line Product
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
+This module allows the user to link multiple products, product
+categories or product templates to a lead or an opportunity in order to
+be able to do a product demand forecasting taking into account the leads
+and opportunities defined in odoo. Included in the product line there
+are two computed fields, the planned revenue and expected revenue. On
+one hand, the planned revenue is computed as the selling price times the
+quantity. On the other hand, the expected revenue takes into account the
+probability of the opportunity and is computed as the planned revenue
+times the probability.
 
-This module allows the user to link multiple products, product categories or product templates to a lead or an opportunity
-in order to be able to do a product demand forecasting taking into account the leads and opportunities defined in odoo.
-Included in the product line there are two computed fields, the planned revenue and expected revenue. On one hand, the
-planned revenue is computed as the selling price times the quantity. On the other hand, the expected revenue takes into account
-the probability of the opportunity and is computed as the planned revenue times the probability.
-
-The module also includes a reporting section where the user can easily see in a pivot and graph view the relationship
-between products, stage of the lead/opportunity and the planned or expected revenue for that product.
+The module also includes a reporting section where the user can easily
+see in a pivot and graph view the relationship between products, stage
+of the lead/opportunity and the planned or expected revenue for that
+product.
 
 **Table of contents**
 
@@ -50,16 +55,18 @@ between products, stage of the lead/opportunity and the planned or expected reve
 Configuration
 =============
 
-
-To configure this module to be available for the Leads the user needs to activate the Leads option in CRM settings
+To configure this module to be available for the Leads the user needs to
+activate the Leads option in CRM settings
 
 Usage
 =====
 
-
-* Go to menu **CRM > Lead** and create or edit a Lead adding all the products associated to it.
-* Go to menu **CRM > My Pipeline** and create or edit an Opportunity adding all the products associated to it.
-* Go to menu **CRM > Reporting > Pipeline by Product** to run the report that relates product to planned and expected revenue per stage
+-  Go to menu **CRM > Lead** and create or edit a Lead adding all the
+   products associated to it.
+-  Go to menu **CRM > My Pipeline** and create or edit an Opportunity
+   adding all the products associated to it.
+-  Go to menu **CRM > Reporting > Pipeline by Product** to run the
+   report that relates product to planned and expected revenue per stage
 
 Bug Tracker
 ===========
@@ -75,19 +82,18 @@ Credits
 =======
 
 Authors
-~~~~~~~
+-------
 
 * ForgeFlow
 
 Contributors
-~~~~~~~~~~~~
+------------
 
-
-* Adria Gil Sorribes <adria.gil@forgeflow.com>
-* Adria Palleja Bove <adria.palleja@coopdevs.org>
+-  Adria Gil Sorribes <adria.gil@forgeflow.com>
+-  Adria Palleja Bove <adria.palleja@coopdevs.org>
 
 Maintainers
-~~~~~~~~~~~
+-----------
 
 This module is maintained by the OCA.
 

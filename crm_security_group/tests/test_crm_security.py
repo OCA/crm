@@ -28,7 +28,7 @@ class TestCrmSecurity(BaseCommon):
         new_test_user(
             cls.env,
             login="crm_sale_user",
-            groups="%s,%s" % (group_crm_all_leads, group_sale_salesman_all_leads),
+            groups=f"{group_crm_all_leads},{group_sale_salesman_all_leads}",
         )
         cls.crm_menu = cls.env.ref("crm.crm_menu_root")
         cls.sale_menu = cls.env.ref("sale.sale_menu_root")

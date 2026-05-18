@@ -1,3 +1,7 @@
+.. image:: https://odoo-community.org/readme-banner-image
+   :target: https://odoo-community.org/get-involved?utm_source=readme
+   :alt: Odoo Community Association
+
 ============
 VAT in leads
 ============
@@ -13,7 +17,7 @@ VAT in leads
 .. |badge1| image:: https://img.shields.io/badge/maturity-Beta-yellow.png
     :target: https://odoo-community.org/page/development-status
     :alt: Beta
-.. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
+.. |badge2| image:: https://img.shields.io/badge/license-AGPL--3-blue.png
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fcrm-lightgray.png?logo=github
@@ -28,8 +32,9 @@ VAT in leads
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
-This module was written to extend the functionality of CRM leads to support
-setting the VAT identification number (https://en.wikipedia.org/wiki/VAT_identification_number).
+This module was written to extend the functionality of CRM leads to
+support setting the VAT identification number
+(https://en.wikipedia.org/wiki/VAT_identification_number).
 
 **Table of contents**
 
@@ -41,11 +46,12 @@ Usage
 
 To use this module, you need to:
 
-* Go to *CRM > Leads*.
-* Open a lead.
-* You will see the new field.
-* If you change vat in partner, it change in lead.
-* If you change vat in lead, a warning will show informing you that if you save, vat change in partner.
+-  Go to *CRM > Leads*.
+-  Open a lead.
+-  You will see the new field.
+-  If you change vat in partner, it change in lead.
+-  If you change vat in lead, a warning will show informing you that if
+   you save, vat change in partner.
 
 Bug Tracker
 ===========
@@ -61,25 +67,24 @@ Credits
 =======
 
 Authors
-~~~~~~~
+-------
 
 * Antiun Ingeniería S.L.
 
 Contributors
-~~~~~~~~~~~~
+------------
 
-* Rafael Blasco <rafaelbn@antiun.com>
-* Jairo Llopis <yajo.sk8@gmail.com>
-* Tharathip Chaweewongphan <tharathipc@ecosoft.co.th>
+-  Rafael Blasco <rafaelbn@antiun.com>
+-  Jairo Llopis <yajo.sk8@gmail.com>
+-  Tharathip Chaweewongphan <tharathipc@ecosoft.co.th>
+-  `Tecnativa <https://www.tecnativa.com>`__:
 
-* `Tecnativa <https://www.tecnativa.com>`_:
+   -  Stefan Ungureanu
 
-  * Stefan Ungureanu
-
-* Emilio Pascual (`Moduon <https://www.moduon.team/>`__)
+-  Emilio Pascual (`Moduon <https://www.moduon.team/>`__)
 
 Maintainers
-~~~~~~~~~~~
+-----------
 
 This module is maintained by the OCA.
 

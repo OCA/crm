@@ -32,9 +32,16 @@ Crm Salesperson Planner
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
-This application allows you to track and schedule salespeople visits to your customers, allowing you to determine which opportunities are going to be dealt on each visit. Visits create an all day event in calendar, and they can be easily rescheduled.
-Visits can be automatically created from a template, in which it is possible to select the frequency of visits, as well as the start and end dates. The last visit can also be calculated by selecting the total number of repetitions.
-This module creates a cron that generates visits from templates, but an option to create them manually is available from the template form view when the template is validated.
+This application allows you to track and schedule salespeople visits to
+your customers, allowing you to determine which opportunities are going
+to be dealt on each visit. Visits create an all day event in calendar,
+and they can be easily rescheduled. Visits can be automatically created
+from a template, in which it is possible to select the frequency of
+visits, as well as the start and end dates. The last visit can also be
+calculated by selecting the total number of repetitions. This module
+creates a cron that generates visits from templates, but an option to
+create them manually is available from the template form view when the
+template is validated.
 
 **Table of contents**
 
@@ -46,17 +53,22 @@ Configuration
 
 To configure this module, you need to:
 
-* Go to new menu **CRM > Configuration > Salesperson Planner > Close Reasons** and create a close reason for 'Cancel' and 'Incident' types.
+-  Go to new menu **CRM > Configuration > Salesperson Planner > Close
+   Reasons** and create a close reason for 'Cancel' and 'Incident'
+   types.
 
 Usage
 =====
 
-Go to new menu **CRM > Salesperson Planner > My Visits or All Visits** and create a new visit.
-or
-Go to **CRM > Salesperson Planner > Visit Templates** and create a new recurring template for create periodical visits. In this case, it is necessary to select a start date. The date of the last repetition can be calculated by selection the total number of repetitions or an end date.
-There are two options available to reschedule visits that is already validated:
-* Change the date from the visit.
-* Change the date straight from the event automatically created in the calendar.
+Go to new menu **CRM > Salesperson Planner > My Visits or All Visits**
+and create a new visit. or Go to **CRM > Salesperson Planner > Visit
+Templates** and create a new recurring template for create periodical
+visits. In this case, it is necessary to select a start date. The date
+of the last repetition can be calculated by selection the total number
+of repetitions or an end date. There are two options available to
+reschedule visits that is already validated: \* Change the date from the
+visit. \* Change the date straight from the event automatically created
+in the calendar.
 
 Bug Tracker
 ===========
@@ -72,28 +84,28 @@ Credits
 =======
 
 Authors
-~~~~~~~
+-------
 
 * Sygel Technology
 
 Contributors
-~~~~~~~~~~~~
+------------
 
-* `Sygel <https://www.sygel.es>`__:
+-  `Sygel <https://www.sygel.es>`__:
 
-  * Valentin Vinagre
-  * Manuel Regidor
+   -  Valentin Vinagre
+   -  Manuel Regidor
 
-* `Pesol <https://www.pesol.es>`__:
+-  `Pesol <https://www.pesol.es>`__:
 
-  * Gerardo Marin Parra <info@pesol.es>
+   -  Gerardo Marin Parra <info@pesol.es>
 
-* `Tecnativa <https://www.tecnativa.com>`_:
+-  `Tecnativa <https://www.tecnativa.com>`__:
 
-  * Víctor Martínez
+   -  Víctor Martínez
 
 Maintainers
-~~~~~~~~~~~
+-----------
 
 This module is maintained by the OCA.
 

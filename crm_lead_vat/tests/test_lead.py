@@ -6,7 +6,7 @@ from odoo.tests.common import TransactionCase
 
 class LeadCase(TransactionCase):
     def setUp(self):
-        super(LeadCase, self).setUp()
+        super().setUp()
         self.lead = self.env["crm.lead"].create(
             {"name": __file__, "partner_name": "HÎ"}
         )

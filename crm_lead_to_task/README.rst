@@ -1,3 +1,7 @@
+.. image:: https://odoo-community.org/readme-banner-image
+   :target: https://odoo-community.org/get-involved?utm_source=readme
+   :alt: Odoo Community Association
+
 ============
 Lead to Task
 ============
@@ -13,7 +17,7 @@ Lead to Task
 .. |badge1| image:: https://img.shields.io/badge/maturity-Beta-yellow.png
     :target: https://odoo-community.org/page/development-status
     :alt: Beta
-.. |badge2| image:: https://img.shields.io/badge/licence-LGPL--3-blue.png
+.. |badge2| image:: https://img.shields.io/badge/license-LGPL--3-blue.png
     :target: http://www.gnu.org/licenses/lgpl-3.0-standalone.html
     :alt: License: LGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fcrm-lightgray.png?logo=github
@@ -30,9 +34,9 @@ Lead to Task
 
 This module allows to convert leads/opportunities to tasks.
 
-**DISCLAIMER:** This module is a forward-port of a module from Odoo S.A. and as
-such, it is not included in the OCA CLA. That means we do not have a copy of the
-copyright on it like all other OCA modules.
+**DISCLAIMER:** This module is a forward-port of a module from Odoo S.A.
+and as such, it is not included in the OCA CLA. That means we do not
+have a copy of the copyright on it like all other OCA modules.
 
 **Table of contents**
 
@@ -42,19 +46,20 @@ copyright on it like all other OCA modules.
 Configuration
 =============
 
-#. You need to have at least "Project User" and "Salesman" permissions to be
-   able to convert leads to tasks.
+1. You need to have at least "Project User" and "Salesman" permissions
+   to be able to convert leads to tasks.
 
 Usage
 =====
 
-#. Go to *CRM > Sales > My pipeline*.
-#. Open one of the existing leads or create one.
-#. Click on the button "Convert to Task".
-#. A popup will appear asking you for a possible project for the task.
-#. Click on "Create Task" button.
-#. You will be redirected to the recently created task, that contains all the
-   information from the lead, including attachments and messages.
+1. Go to *CRM > Sales > My pipeline*.
+2. Open one of the existing leads or create one.
+3. Click on the button "Convert to Task".
+4. A popup will appear asking you for a possible project for the task.
+5. Click on "Create Task" button.
+6. You will be redirected to the recently created task, that contains
+   all the information from the lead, including attachments and
+   messages.
 
 Bug Tracker
 ===========
@@ -70,22 +75,23 @@ Credits
 =======
 
 Authors
-~~~~~~~
+-------
 
 * Odoo S.A.
 * Tecnativa
 
 Contributors
-~~~~~~~~~~~~
+------------
 
-* `Tecnativa <https://www.tecnativa.com>`__:
+-  `Tecnativa <https://www.tecnativa.com>`__:
 
-  * Pedro M. Baeza
-  * Carolina Fernandez
-* Ruchir Shukla <ruchir@bizzappdev.com>
+   -  Pedro M. Baeza
+   -  Carolina Fernandez
+
+-  Ruchir Shukla <ruchir@bizzappdev.com>
 
 Maintainers
-~~~~~~~~~~~
+-----------
 
 This module is maintained by the OCA.
 
