@@ -62,5 +62,5 @@ class TestCrmCreateProject(TransactionCase):
         self.assertEqual(self.lead.project_id.name, "Test Project")
         self.assertEqual(
             self.lead.project_id.description,
-            Markup("<p>Test Description</p>"),
+            Markup("<span>Test Description</span>"),
         )
