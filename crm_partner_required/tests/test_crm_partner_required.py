@@ -2,15 +2,11 @@
 # License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl-3.0)
 
 from odoo.tests import Form
-from odoo.tests.common import TransactionCase
+
+from odoo.addons.base.tests.common import BaseCommon
 
 
-class TestCRMPartnerRequired(TransactionCase):
-    @classmethod
-    def setUpClass(cls):
-        super().setUpClass()
-        cls.partner = cls.env["res.partner"].create({"name": "Test Partner"})
-
+class TestCRMPartnerRequired(BaseCommon):
     def test_crm_partner_required(self):
         """Check partner_id required in opportunity"""
         # Check required in opportunity in default form

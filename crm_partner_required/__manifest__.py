@@ -4,7 +4,7 @@
 {
     "name": "CRM Partner Required",
     "summary": "Field partner required in the opportunity",
-    "version": "18.0.1.0.2",
+    "version": "19.0.1.0.0",
     "development_status": "Alpha",
     "category": "Sales/CRM",
     "website": "https://github.com/OCA/crm",
