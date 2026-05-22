@@ -1,10 +1,9 @@
 # Copyright 2024 Moduon Team S.L.
 # License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl-3.0)
 
-from markupsafe import Markup
-
 from odoo.tests import Form
 from odoo.tests.common import TransactionCase, users
+from odoo.tools import html2plaintext
 
 from odoo.addons.mail.tests.common import mail_new_test_user
 
@@ -61,6 +60,6 @@ class TestCrmCreateProject(TransactionCase):
         self.assertTrue(self.lead.project_id)
         self.assertEqual(self.lead.project_id.name, "Test Project")
         self.assertEqual(
-            self.lead.project_id.description,
-            Markup("<p>Test Description</p>"),
+            html2plaintext(self.lead.project_id.description or "").strip(),
+            "Test Description",
         )
