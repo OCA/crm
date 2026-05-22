@@ -11,7 +11,6 @@ class CrmLead(models.Model):
 
     location_id = fields.Many2one(
         comodel_name="res.city.zip",
-        string="Location",
         index="btree",
         help="Use the city name or the zip code to search the location",
         compute="_compute_location_id",
