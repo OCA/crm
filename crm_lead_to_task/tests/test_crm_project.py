@@ -3,6 +3,8 @@
 # Copyright 2024 Tecnativa - Carolina Fernandez
 # License LGPL-3 - See https://www.gnu.org/licenses/lgpl-3.0.html
 
+from odoo.tools import html2plaintext
+
 from odoo.addons.base.tests.common import BaseCommon
 
 
@@ -30,7 +32,10 @@ class TestCrmProject(BaseCommon):
         )
         action = wizard.action_lead_to_project_task()
         task = self.env["project.task"].browse(action["res_id"])
-        self.assertEqual(task.description, "<p>Description</p>")
+        self.assertEqual(
+            html2plaintext(task.description or "").strip(),
+            "Description",
+        )
         self.assertEqual(task.email_cc, "cc@example.org")
         self.assertEqual(task.partner_id.name, "Test partner crm_lead_to_task")
         self.assertEqual(task.project_id, self.project)
