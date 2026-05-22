@@ -19,10 +19,8 @@ class CrmLeadConvert2Task(models.TransientModel):
             result["lead_id"] = lead_id
         return result
 
-    lead_id = fields.Many2one(
-        comodel_name="crm.lead", string="Lead", domain=[("type", "=", "lead")]
-    )
-    project_id = fields.Many2one(comodel_name="project.project", string="Project")
+    lead_id = fields.Many2one(comodel_name="crm.lead", domain=[("type", "=", "lead")])
+    project_id = fields.Many2one(comodel_name="project.project")
 
     def action_lead_to_project_task(self):
         return self.lead_id._action_create_and_open_task(self.project_id)
