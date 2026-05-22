@@ -83,10 +83,9 @@ class CrmClaim(models.Model):
     )
     company_id = fields.Many2one(
         comodel_name="res.company",
-        string="Company",
         default=lambda self: self.env.company,
     )
-    partner_id = fields.Many2one(comodel_name="res.partner", string="Partner")
+    partner_id = fields.Many2one(comodel_name="res.partner")
     email_cc = fields.Text(
         string="Watchers Emails",
         help="These email addresses will be added to the CC field of all "
@@ -99,7 +98,6 @@ class CrmClaim(models.Model):
     partner_phone = fields.Char(string="Phone")
     stage_id = fields.Many2one(
         comodel_name="crm.claim.stage",
-        string="Stage",
         tracking=3,
         default=lambda self: self._get_default_stage_id(),
         domain="['|', ('team_ids', '=', team_id), ('case_default', '=', True)]",

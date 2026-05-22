@@ -15,14 +15,13 @@ class CrmClaimReport(models.Model):
     _auto = False
     _description = "CRM Claim Report"
 
-    user_id = fields.Many2one(comodel_name="res.users", string="User")
-    team_id = fields.Many2one(comodel_name="crm.team", string="Team")
+    user_id = fields.Many2one(comodel_name="res.users")
+    team_id = fields.Many2one(comodel_name="crm.team")
     nbr_claims = fields.Integer(
         string="# of Claims",
     )
     company_id = fields.Many2one(
         comodel_name="res.company",
-        string="Company",
     )
     create_date = fields.Datetime(index=True)
     claim_date = fields.Datetime()
@@ -34,7 +33,6 @@ class CrmClaimReport(models.Model):
     )
     stage_id = fields.Many2one(
         comodel_name="crm.claim.stage",
-        string="Stage",
         domain="[('team_ids','=',team_id)]",
     )
     categ_id = fields.Many2one(
@@ -43,7 +41,6 @@ class CrmClaimReport(models.Model):
     )
     partner_id = fields.Many2one(
         comodel_name="res.partner",
-        string="Partner",
     )
     priority = fields.Selection(
         selection=[("0", "Low"), ("1", "Normal"), ("2", "High")]
