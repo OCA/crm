@@ -7,4 +7,4 @@ from odoo import fields, models
 class CrmLead(models.Model):
     _inherit = "crm.lead"
 
-    project_id = fields.Many2one("project.project", string="Project")
+    project_id = fields.Many2one(comodel_name="project.project")
