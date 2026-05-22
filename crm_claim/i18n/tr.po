@@ -31,6 +31,13 @@ msgid "# of Claims"
 msgstr ""
 
 #. module: crm_claim
+#: model_terms:ir.actions.act_window,help:crm_claim.action_report_crm_claim
+msgid ""
+"<span>Have a general overview of all claims processed in the system by "
+"sorting them with specific criteria.</span>"
+msgstr ""
+
+#. module: crm_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
 msgid "Action Description..."
 msgstr ""
@@ -314,17 +321,13 @@ msgstr ""
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category__display_name
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__display_name
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage__display_name
+#: model:ir.model.fields,field_description:crm_claim.field_res_partner__display_name
 msgid "Display Name"
 msgstr ""
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__email_from
 msgid "Email"
-msgstr ""
-
-#. module: crm_claim
-#: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
-msgid "Extended Filters..."
 msgstr ""
 
 #. module: crm_claim
@@ -353,21 +356,8 @@ msgid "Font awesome icon e.g. fa-tasks"
 msgstr ""
 
 #. module: crm_claim
-#: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
-#: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
-msgid "Group By"
-msgstr ""
-
-#. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__has_message
 msgid "Has Message"
-msgstr ""
-
-#. module: crm_claim
-#: model_terms:ir.actions.act_window,help:crm_claim.action_report_crm_claim
-msgid ""
-"Have a general overview of all claims processed in the system by sorting "
-"them with specific criteria."
 msgstr ""
 
 #. module: crm_claim
@@ -381,6 +371,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category__id
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__id
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage__id
+#: model:ir.model.fields,field_description:crm_claim.field_res_partner__id
 msgid "ID"
 msgstr ""
 
@@ -513,6 +504,12 @@ msgid "Next Activity Type"
 msgstr ""
 
 #. module: crm_claim
+#. odoo-python
+#: code:addons/crm_claim/models/crm_claim.py:0
+msgid "No Subject"
+msgstr ""
+
+#. module: crm_claim
 #: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim__priority__1
 #: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim_report__priority__1
 msgid "Normal"
@@ -558,6 +555,11 @@ msgid "Partner"
 msgstr ""
 
 #. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
+msgid "Partner (including children)"
+msgstr ""
+
+#. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__partner_phone
 msgid "Phone"
 msgstr ""
@@ -594,8 +596,10 @@ msgstr ""
 msgid ""
 "Record and track your customers' claims.\n"
 "                Claims may be linked to a sales order or a lot.\n"
-"                You can send emails with attachments and keep the full history for a claim (emails sent, intervention type and so on).\n"
-"                Claims may automatically be linked to an email address using the mail gateway module."
+"                You can send emails with attachments and keep the full "
+"history for a claim (emails sent, intervention type and so on).\n"
+"                Claims may automatically be linked to an email address using "
+"the mail gateway module."
 msgstr ""
 
 #. module: crm_claim

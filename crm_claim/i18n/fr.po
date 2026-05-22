@@ -33,6 +33,13 @@ msgid "# of Claims"
 msgstr "réclamations"
 
 #. module: crm_claim
+#: model_terms:ir.actions.act_window,help:crm_claim.action_report_crm_claim
+msgid ""
+"<span>Have a general overview of all claims processed in the system by "
+"sorting them with specific criteria.</span>"
+msgstr ""
+
+#. module: crm_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
 msgid "Action Description..."
 msgstr ""
@@ -323,6 +330,7 @@ msgstr "Courriel de destination pour la passerelle de messagerie."
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category__display_name
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__display_name
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage__display_name
+#: model:ir.model.fields,field_description:crm_claim.field_res_partner__display_name
 msgid "Display Name"
 msgstr ""
 
@@ -330,11 +338,6 @@ msgstr ""
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__email_from
 msgid "Email"
 msgstr "email"
-
-#. module: crm_claim
-#: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
-msgid "Extended Filters..."
-msgstr "Filtres étendus..."
 
 #. module: crm_claim
 #: model:crm.claim.category,name:crm_claim.categ_claim1
@@ -362,24 +365,9 @@ msgid "Font awesome icon e.g. fa-tasks"
 msgstr "Icône \"Font awesome\", par exemple fa-tasks"
 
 #. module: crm_claim
-#: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
-#: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
-msgid "Group By"
-msgstr ""
-
-#. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__has_message
 msgid "Has Message"
 msgstr "A un message"
-
-#. module: crm_claim
-#: model_terms:ir.actions.act_window,help:crm_claim.action_report_crm_claim
-msgid ""
-"Have a general overview of all claims processed in the system by sorting "
-"them with specific criteria."
-msgstr ""
-"Avoir une vue d'ensemble de toutes les demandes traitées dans le système en "
-"les triant selon des critères spécifiques."
 
 #. module: crm_claim
 #: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim__priority__2
@@ -392,6 +380,7 @@ msgstr "Élevée"
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category__id
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__id
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage__id
+#: model:ir.model.fields,field_description:crm_claim.field_res_partner__id
 msgid "ID"
 msgstr ""
 
@@ -531,6 +520,12 @@ msgid "Next Activity Type"
 msgstr "Type d'activité suivante"
 
 #. module: crm_claim
+#. odoo-python
+#: code:addons/crm_claim/models/crm_claim.py:0
+msgid "No Subject"
+msgstr "Pas de sujet"
+
+#. module: crm_claim
 #: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim__priority__1
 #: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim_report__priority__1
 msgid "Normal"
@@ -574,6 +569,11 @@ msgstr "Dépassement du délai"
 #: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
 msgid "Partner"
 msgstr "Partenaire"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
+msgid "Partner (including children)"
+msgstr ""
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__partner_phone
@@ -830,13 +830,19 @@ msgstr ""
 "toutes les étapes nécessaires à la résolution d'une réclamation.\n"
 "            nécessaires à la résolution d'une réclamation."
 
+#~ msgid "Extended Filters..."
+#~ msgstr "Filtres étendus..."
+
+#~ msgid ""
+#~ "Have a general overview of all claims processed in the system by sorting "
+#~ "them with specific criteria."
+#~ msgstr ""
+#~ "Avoir une vue d'ensemble de toutes les demandes traitées dans le système "
+#~ "en les triant selon des critères spécifiques."
+
 #, python-format
 #~ msgid "%s (copy)"
 #~ msgstr "%s (copie)"
 
 #~ msgid "Main Attachment"
 #~ msgstr "Attachement principal"
-
-#, python-format
-#~ msgid "No Subject"
-#~ msgstr "Pas de sujet"

@@ -33,6 +33,13 @@ msgid "# of Claims"
 msgstr "# de reclamacions"
 
 #. module: crm_claim
+#: model_terms:ir.actions.act_window,help:crm_claim.action_report_crm_claim
+msgid ""
+"<span>Have a general overview of all claims processed in the system by "
+"sorting them with specific criteria.</span>"
+msgstr ""
+
+#. module: crm_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
 msgid "Action Description..."
 msgstr "Descripció de l'acció..."
@@ -322,6 +329,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category__display_name
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__display_name
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage__display_name
+#: model:ir.model.fields,field_description:crm_claim.field_res_partner__display_name
 msgid "Display Name"
 msgstr "Nom a mostrar"
 
@@ -329,11 +337,6 @@ msgstr "Nom a mostrar"
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__email_from
 msgid "Email"
 msgstr "Correu electrònic"
-
-#. module: crm_claim
-#: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
-msgid "Extended Filters..."
-msgstr "Filtres extesos..."
 
 #. module: crm_claim
 #: model:crm.claim.category,name:crm_claim.categ_claim1
@@ -361,24 +364,9 @@ msgid "Font awesome icon e.g. fa-tasks"
 msgstr "Icona Font aewsome p.e. fa-tasks"
 
 #. module: crm_claim
-#: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
-#: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
-msgid "Group By"
-msgstr "Agrupar per"
-
-#. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__has_message
 msgid "Has Message"
 msgstr "Té un missatge"
-
-#. module: crm_claim
-#: model_terms:ir.actions.act_window,help:crm_claim.action_report_crm_claim
-msgid ""
-"Have a general overview of all claims processed in the system by sorting "
-"them with specific criteria."
-msgstr ""
-"Tenir una visió general de totes les reclamacions processades al sistema "
-"ordenant-les amb criteris específics."
 
 #. module: crm_claim
 #: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim__priority__2
@@ -391,6 +379,7 @@ msgstr "Alta"
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category__id
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__id
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage__id
+#: model:ir.model.fields,field_description:crm_claim.field_res_partner__id
 msgid "ID"
 msgstr "ID"
 
@@ -527,6 +516,12 @@ msgid "Next Activity Type"
 msgstr "Tipus de la propera activitat"
 
 #. module: crm_claim
+#. odoo-python
+#: code:addons/crm_claim/models/crm_claim.py:0
+msgid "No Subject"
+msgstr "Sense assumpte"
+
+#. module: crm_claim
 #: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim__priority__1
 #: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim_report__priority__1
 msgid "Normal"
@@ -570,6 +565,11 @@ msgstr "Termini superat"
 #: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
 msgid "Partner"
 msgstr "Contacte"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
+msgid "Partner (including children)"
+msgstr ""
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__partner_phone
@@ -824,6 +824,19 @@ msgstr ""
 "             al sistema. Les etapes defineixen tots els passos\n"
 "             necessaris per a la resolució d'una reclamació."
 
+#~ msgid "Extended Filters..."
+#~ msgstr "Filtres extesos..."
+
+#~ msgid "Group By"
+#~ msgstr "Agrupar per"
+
+#~ msgid ""
+#~ "Have a general overview of all claims processed in the system by sorting "
+#~ "them with specific criteria."
+#~ msgstr ""
+#~ "Tenir una visió general de totes les reclamacions processades al sistema "
+#~ "ordenant-les amb criteris específics."
+
 #, python-format
 #~ msgid "%s (copy)"
 #~ msgstr "%s (còpia)"
@@ -833,7 +846,3 @@ msgstr ""
 
 #~ msgid "Main Attachment"
 #~ msgstr "Annexe principal"
-
-#, python-format
-#~ msgid "No Subject"
-#~ msgstr "Sense assumpte"

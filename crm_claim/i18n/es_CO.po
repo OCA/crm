@@ -10,8 +10,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-03 03:39+0000\n"
 "PO-Revision-Date: 2018-03-03 03:39+0000\n"
-"Last-Translator: JOSE ALEJANDRO ECHEVERRI VALENCIA <josealejandroeche@gmail."
-"com>, 2018\n"
+"Last-Translator: JOSE ALEJANDRO ECHEVERRI VALENCIA "
+"<josealejandroeche@gmail.com>, 2018\n"
 "Language-Team: Spanish (Colombia) (https://www.transifex.com/oca/teams/23907/"
 "es_CO/)\n"
 "Language: es_CO\n"
@@ -35,6 +35,13 @@ msgstr "# Emails"
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__nbr_claims
 msgid "# of Claims"
 msgstr "# de Reclamaciones"
+
+#. module: crm_claim
+#: model_terms:ir.actions.act_window,help:crm_claim.action_report_crm_claim
+msgid ""
+"<span>Have a general overview of all claims processed in the system by "
+"sorting them with specific criteria.</span>"
+msgstr ""
 
 #. module: crm_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
@@ -324,17 +331,13 @@ msgstr ""
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category__display_name
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__display_name
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage__display_name
+#: model:ir.model.fields,field_description:crm_claim.field_res_partner__display_name
 msgid "Display Name"
 msgstr ""
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__email_from
 msgid "Email"
-msgstr ""
-
-#. module: crm_claim
-#: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
-msgid "Extended Filters..."
 msgstr ""
 
 #. module: crm_claim
@@ -363,21 +366,8 @@ msgid "Font awesome icon e.g. fa-tasks"
 msgstr ""
 
 #. module: crm_claim
-#: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
-#: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
-msgid "Group By"
-msgstr ""
-
-#. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__has_message
 msgid "Has Message"
-msgstr ""
-
-#. module: crm_claim
-#: model_terms:ir.actions.act_window,help:crm_claim.action_report_crm_claim
-msgid ""
-"Have a general overview of all claims processed in the system by sorting "
-"them with specific criteria."
 msgstr ""
 
 #. module: crm_claim
@@ -391,6 +381,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category__id
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__id
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage__id
+#: model:ir.model.fields,field_description:crm_claim.field_res_partner__id
 msgid "ID"
 msgstr ""
 
@@ -524,6 +515,12 @@ msgid "Next Activity Type"
 msgstr "Tipo de Acción"
 
 #. module: crm_claim
+#. odoo-python
+#: code:addons/crm_claim/models/crm_claim.py:0
+msgid "No Subject"
+msgstr ""
+
+#. module: crm_claim
 #: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim__priority__1
 #: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim_report__priority__1
 msgid "Normal"
@@ -566,6 +563,11 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
 #: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
 msgid "Partner"
+msgstr ""
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
+msgid "Partner (including children)"
 msgstr ""
 
 #. module: crm_claim
