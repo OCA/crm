@@ -1,0 +1,1 @@
+from . import test_crm_lead_partner_interest_group
