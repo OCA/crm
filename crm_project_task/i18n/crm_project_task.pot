@@ -70,19 +70,27 @@ msgstr ""
 
 #. module: crm_project_task
 #: model:ir.model.fields,field_description:crm_project_task.field_crm_create_task__display_name
+#: model:ir.model.fields,field_description:crm_project_task.field_crm_lead__display_name
+#: model:ir.model.fields,field_description:crm_project_task.field_project_task__display_name
+#: model:ir.model.fields,field_description:crm_project_task.field_res_company__display_name
+#: model:ir.model.fields,field_description:crm_project_task.field_res_config_settings__display_name
 msgid "Display Name"
 msgstr ""
 
 #. module: crm_project_task
 #: model:ir.model.fields,field_description:crm_project_task.field_crm_create_task__id
+#: model:ir.model.fields,field_description:crm_project_task.field_crm_lead__id
+#: model:ir.model.fields,field_description:crm_project_task.field_project_task__id
+#: model:ir.model.fields,field_description:crm_project_task.field_res_company__id
+#: model:ir.model.fields,field_description:crm_project_task.field_res_config_settings__id
 msgid "ID"
 msgstr ""
 
 #. module: crm_project_task
 #: model_terms:ir.actions.act_window,help:crm_project_task.action_crm_lead_related_tasks
 msgid ""
-"Keep track of the progress of your tasks from creation to completion. \n"
-" Collaborate efficiently by chatting in real-time or via email."
+"Keep track of the progress of your tasks from creation to completion.<br>\n"
+"                Collaborate efficiently by chatting in real-time or via email."
 msgstr ""
 
 #. module: crm_project_task
@@ -96,13 +104,13 @@ msgid "Last Updated on"
 msgstr ""
 
 #. module: crm_project_task
+#: model:ir.model,name:crm_project_task.model_crm_lead
 #: model:ir.model.fields,field_description:crm_project_task.field_crm_create_task__lead_id
 #: model:ir.model.fields,field_description:crm_project_task.field_project_task__lead_id
 msgid "Lead"
 msgstr ""
 
 #. module: crm_project_task
-#: model:ir.model,name:crm_project_task.model_crm_lead
 #: model_terms:ir.ui.view,arch_db:crm_project_task.view_task_form2_inherit_crm_project_task
 msgid "Lead/Opportunity"
 msgstr ""
@@ -113,14 +121,15 @@ msgid "No tasks found. Let's create one!"
 msgstr ""
 
 #. module: crm_project_task
-#: model_terms:ir.ui.view,arch_db:crm_project_task.view_task_form2_inherit_crm_project_task
 #. odoo-python
 #: code:addons/crm_project_task/models/project_task.py:0
+#: model_terms:ir.ui.view,arch_db:crm_project_task.view_task_form2_inherit_crm_project_task
 msgid "Parent Lead"
 msgstr ""
 
 #. module: crm_project_task
 #. odoo-python
+#: code:addons/crm_project_task/models/crm_lead.py:0
 #: code:addons/crm_project_task/wizards/crm_create_task.py:0
 msgid "Project not configured in settings. Please contact your administrator."
 msgstr ""
@@ -150,6 +159,20 @@ msgstr ""
 #. module: crm_project_task
 #: model:ir.actions.act_window,name:crm_project_task.action_crm_lead_related_tasks
 msgid "Tasks"
+msgstr ""
+
+#. module: crm_project_task
+#: model:ir.model.fields,help:crm_project_task.field_project_task__display_name
+msgid ""
+"Use these keywords in the title to set new tasks:\n"
+"\n"
+"            #tags Set tags on the task\n"
+"            @user Assign the task to a user\n"
+"            ! Set the task a medium priority\n"
+"            !! Set the task a high priority\n"
+"            !!! Set the task a urgent priority\n"
+"\n"
+"            Make sure to use the right format and order e.g. Improve the configuration screen #feature #v16 @Mitchell !"
 msgstr ""
 
 #. module: crm_project_task
