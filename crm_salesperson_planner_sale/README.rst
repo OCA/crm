@@ -1,3 +1,7 @@
+.. image:: https://odoo-community.org/readme-banner-image
+   :target: https://odoo-community.org/get-involved?utm_source=readme
+   :alt: Odoo Community Association
+
 ============================
 Crm Salesperson Planner Sale
 ============================
@@ -13,7 +17,7 @@ Crm Salesperson Planner Sale
 .. |badge1| image:: https://img.shields.io/badge/maturity-Beta-yellow.png
     :target: https://odoo-community.org/page/development-status
     :alt: Beta
-.. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
+.. |badge2| image:: https://img.shields.io/badge/license-AGPL--3-blue.png
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fcrm-lightgray.png?logo=github
@@ -28,8 +32,8 @@ Crm Salesperson Planner Sale
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
-This module allows you to manage sales from commercial visits.
-You can create Sales Quotations from visits and check the related ones.
+This module allows you to manage sales from commercial visits. You can
+create Sales Quotations from visits and check the related ones.
 
 **Table of contents**
 
@@ -39,10 +43,12 @@ You can create Sales Quotations from visits and check the related ones.
 Usage
 =====
 
-* Go to any "Validated" or "Visited" visit.
-* Click "New Quotation" button or click in the smart button "Quotation" and create a quotation.
+-  Go to any "Validated" or "Visited" visit.
+-  Click "New Quotation" button or click in the smart button "Quotation"
+   and create a quotation.
 
-In the Quotation or Sale Order you will have a new field that is related to the salesperson visit.
+In the Quotation or Sale Order you will have a new field that is related
+to the salesperson visit.
 
 Bug Tracker
 ===========
@@ -58,28 +64,28 @@ Credits
 =======
 
 Authors
-~~~~~~~
+-------
 
 * Sygel Technology
 * Tecnativa
 
 Contributors
-~~~~~~~~~~~~
+------------
 
-* `Sygel <https://www.sygel.es>`__:
+-  `Sygel <https://www.sygel.es>`__:
 
-  * Valentin Vinagre
+   -  Valentin Vinagre
 
-* `Tecnativa <https://www.tecnativa.com>`_:
+-  `Tecnativa <https://www.tecnativa.com>`__:
 
-  * Víctor Martínez
+   -  Víctor Martínez
 
-* `Pesol <https://www.pesol.es>`__:
+-  `Pesol <https://www.pesol.es>`__:
 
-  * Gerardo Marin Parra <info@pesol.es>
+   -  Gerardo Marin Parra <info@pesol.es>
 
 Maintainers
-~~~~~~~~~~~
+-----------
 
 This module is maintained by the OCA.
 

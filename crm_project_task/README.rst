@@ -1,3 +1,7 @@
+.. image:: https://odoo-community.org/readme-banner-image
+   :target: https://odoo-community.org/get-involved?utm_source=readme
+   :alt: Odoo Community Association
+
 ================
 CRM Project Task
 ================
@@ -13,7 +17,7 @@ CRM Project Task
 .. |badge1| image:: https://img.shields.io/badge/maturity-Alpha-red.png
     :target: https://odoo-community.org/page/development-status
     :alt: Alpha
-.. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
+.. |badge2| image:: https://img.shields.io/badge/license-AGPL--3-blue.png
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fcrm-lightgray.png?logo=github
@@ -45,21 +49,24 @@ Configuration
 
 To configure this module, you need to:
 
-* Go to Project
-* Create a project with right configuration in order that all salesman have access (usually all employees)
-* Go to CRM > Configuration > Project
-* Set crm default project
+-  Go to Project
+-  Create a project with right configuration in order that all salesman
+   have access (usually all employees)
+-  Go to CRM > Configuration > Project
+-  Set crm default project
 
 Usage
 =====
 
-#. Go to *CRM > Sales > My pipeline*.
-#. Open one of the existing leads or create one.
-#. Click on the button "Create Task".
-#. A popup will appear asking you name and description for create task.
-#. Click on "Create Task" button.
-#. A task will be created with project in settings.
-#. A message chatter will be created in task with link for lead/opportunity. Also, a message chatter will be creat in lead/opportunity with link for task.
+1. Go to *CRM > Sales > My pipeline*.
+2. Open one of the existing leads or create one.
+3. Click on the button "Create Task".
+4. A popup will appear asking you name and description for create task.
+5. Click on "Create Task" button.
+6. A task will be created with project in settings.
+7. A message chatter will be created in task with link for
+   lead/opportunity. Also, a message chatter will be creat in
+   lead/opportunity with link for task.
 
 Bug Tracker
 ===========
@@ -75,18 +82,18 @@ Credits
 =======
 
 Authors
-~~~~~~~
+-------
 
 * Moduon
 
 Contributors
-~~~~~~~~~~~~
+------------
 
-* Emilio Pascual (`Moduon <https://www.moduon.team/>`__)
-* Rafael Blasco (`Moduon <https://www.moduon.team/>`__)
+-  Emilio Pascual (`Moduon <https://www.moduon.team/>`__)
+-  Rafael Blasco (`Moduon <https://www.moduon.team/>`__)
 
 Maintainers
-~~~~~~~~~~~
+-----------
 
 This module is maintained by the OCA.
 

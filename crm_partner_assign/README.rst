@@ -1,3 +1,7 @@
+.. image:: https://odoo-community.org/readme-banner-image
+   :target: https://odoo-community.org/get-involved?utm_source=readme
+   :alt: Odoo Community Association
+
 ==================
 CRM Partner Assign
 ==================
@@ -13,7 +17,7 @@ CRM Partner Assign
 .. |badge1| image:: https://img.shields.io/badge/maturity-Alpha-red.png
     :target: https://odoo-community.org/page/development-status
     :alt: Alpha
-.. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
+.. |badge2| image:: https://img.shields.io/badge/license-AGPL--3-blue.png
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fcrm-lightgray.png?logo=github
@@ -28,9 +32,10 @@ CRM Partner Assign
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
-This module extends the functionality of CRM Leads to support assigning an associate partner to leads
-and to allow you to check if a Lead is being worked on by an associate partner.
-Also you can link a Partner to another Partner as an implementation partner.
+This module extends the functionality of CRM Leads to support assigning
+an associate partner to leads and to allow you to check if a Lead is
+being worked on by an associate partner. Also you can link a Partner to
+another Partner as an implementation partner.
 
 .. IMPORTANT::
    This is an alpha version, the data model and design can change at any time without warning.
@@ -45,19 +50,25 @@ Also you can link a Partner to another Partner as an implementation partner.
 Installation
 ============
 
-This module is the minimum viable product of the *website_crm_partner_assign* module.
-If you have the *website* module installed and you want a more complete module, take a look at the *website_crm_partner_assign* module.
-This module uses the same field names as the *website_crm_partner_assign* module, so if you want to use *website_crm_partner_assign* and don't lose data, you must install *website_crm_partner_assign* and then uninstall this module (in this order).
+This module is the minimum viable product of the
+*website_crm_partner_assign* module. If you have the *website* module
+installed and you want a more complete module, take a look at the
+*website_crm_partner_assign* module. This module uses the same field
+names as the *website_crm_partner_assign* module, so if you want to use
+*website_crm_partner_assign* and don't lose data, you must install
+*website_crm_partner_assign* and then uninstall this module (in this
+order).
 
 Usage
 =====
 
 To use this module, you need to:
 
-#. Go to Lead and assign a partner to it. You can assign a partner contact too.
-#. You can filter the leads by assigned partner.
-#. Go to Partner form and assign an partner to it.
-#. You can group Partners by assigned partner.
+1. Go to Lead and assign a partner to it. You can assign a partner
+   contact too.
+2. You can filter the leads by assigned partner.
+3. Go to Partner form and assign an partner to it.
+4. You can group Partners by assigned partner.
 
 Bug Tracker
 ===========
@@ -73,25 +84,25 @@ Credits
 =======
 
 Authors
-~~~~~~~
+-------
 
 * Moduon
 
 Contributors
-~~~~~~~~~~~~
+------------
 
-* Eduardo de Miguel (`Moduon <https://www.moduon.team/>`__)
-* Rafael Blasco (`Moduon <https://www.moduon.team/>`__)
+-  Eduardo de Miguel (`Moduon <https://www.moduon.team/>`__)
+-  Rafael Blasco (`Moduon <https://www.moduon.team/>`__)
 
 Other credits
-~~~~~~~~~~~~~
+-------------
 
 The development of this module has been financially supported by:
 
-* Moduon Team S.L.
+-  Moduon Team S.L.
 
 Maintainers
-~~~~~~~~~~~
+-----------
 
 This module is maintained by the OCA.
 

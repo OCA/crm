@@ -4,7 +4,6 @@ from odoo import fields, models
 
 
 class CrmStage(models.Model):
-
     _inherit = "crm.stage"
 
     probability = fields.Float(

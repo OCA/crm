@@ -32,7 +32,7 @@ Sequential Code for Claims
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
-* This module adds a sequential code for claims.
+-  This module adds a sequential code for claims.
 
 **Table of contents**
 
@@ -44,8 +44,9 @@ Usage
 
 To use this module, you need to:
 
-* Go to menu **CRM > After Sale > Claims** and create a new claim.
-* Enter claim subject and Save it. You must see a new number for this claim.
+-  Go to menu **CRM > After Sale > Claims** and create a new claim.
+-  Enter claim subject and Save it. You must see a new number for this
+   claim.
 
 Bug Tracker
 ===========
@@ -61,27 +62,27 @@ Credits
 =======
 
 Authors
-~~~~~~~
+-------
 
 * AvanzOSC
 * Tecnativa
 
 Contributors
-~~~~~~~~~~~~
+------------
 
-* Ana Juaristi <anajuarist@avanzosc.es>
-* Iker Coranti <ikercoranti@avanzosc.com>
-* Oihane Crucelaegui <oihanecrucelaegi@avanzosc.es>
-* Alfredo de la Fuente <alfredodelafuente@avanzosc.es>
-* Tharathip Chaweewongphan <tharathipc@ecosoft.co.th>
-* `Tecnativa <https://www.tecnativa.com>`_:
+-  Ana Juaristi <anajuarist@avanzosc.es>
+-  Iker Coranti <ikercoranti@avanzosc.com>
+-  Oihane Crucelaegui <oihanecrucelaegi@avanzosc.es>
+-  Alfredo de la Fuente <alfredodelafuente@avanzosc.es>
+-  Tharathip Chaweewongphan <tharathipc@ecosoft.co.th>
+-  `Tecnativa <https://www.tecnativa.com>`__:
 
-  * Ernesto Tejeda
-  * Pedro M. Baeza
-  * Vicent Cubells
+   -  Ernesto Tejeda
+   -  Pedro M. Baeza
+   -  Vicent Cubells
 
 Maintainers
-~~~~~~~~~~~
+-----------
 
 This module is maintained by the OCA.
 

@@ -1,3 +1,7 @@
+.. image:: https://odoo-community.org/readme-banner-image
+   :target: https://odoo-community.org/get-involved?utm_source=readme
+   :alt: Odoo Community Association
+
 ==========================
 CRM Won Restrict Per Stage
 ==========================
@@ -13,7 +17,7 @@ CRM Won Restrict Per Stage
 .. |badge1| image:: https://img.shields.io/badge/maturity-Beta-yellow.png
     :target: https://odoo-community.org/page/development-status
     :alt: Beta
-.. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
+.. |badge2| image:: https://img.shields.io/badge/license-AGPL--3-blue.png
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fcrm-lightgray.png?logo=github
@@ -28,10 +32,10 @@ CRM Won Restrict Per Stage
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
-This module adds the possibility to set CRM stages that are being able to see the won
-button (hiding it for the rest).
-It also restricts to change to a won stage won from an stage that doesn't have this
-check marked.
+This module adds the possibility to set CRM stages that are being able
+to see the won button (hiding it for the rest). It also restricts to
+change to a won stage won from an stage that doesn't have this check
+marked.
 
 **Table of contents**
 
@@ -47,9 +51,11 @@ To configure this module, you need to:
 2. Check or uncheck "Show Won Button".
 
 If you unchecked "Show Won Button", on that stage disappears Won Button.
-Additionally, you won't be able to change to won stage from a stage with this configuration.
+Additionally, you won't be able to change to won stage from a stage with
+this configuration.
 
-When installing the module, all CRM stages created are set by default to "Show Won Button".
+When installing the module, all CRM stages created are set by default to
+"Show Won Button".
 
 Bug Tracker
 ===========
@@ -65,20 +71,20 @@ Credits
 =======
 
 Authors
-~~~~~~~
+-------
 
 * Tecnativa
 
 Contributors
-~~~~~~~~~~~~
+------------
 
-* `Tecnativa <https://www.tecnativa.com>`_:
+-  `Tecnativa <https://www.tecnativa.com>`__:
 
-    * Carolina Fernandez
-    * Pedro M. Baeza
+      -  Carolina Fernandez
+      -  Pedro M. Baeza
 
 Maintainers
-~~~~~~~~~~~
+-----------
 
 This module is maintained by the OCA.
 

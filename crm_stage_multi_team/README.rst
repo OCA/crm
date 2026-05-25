@@ -32,17 +32,18 @@ CRM stage multiple teams
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
-This module extends the CRM functionality to support **multi-team stages**.
+This module extends the CRM functionality to support **multi-team
+stages**.
 
 **Features:**
 
-- Adds a many2many field ``team_ids`` on CRM stages, allowing a stage to be shared
-  by multiple sales teams.
+-  Adds a many2many field ``team_ids`` on CRM stages, allowing a stage
+   to be shared by multiple sales teams.
 
 **Use cases:**
 
-- A company with multiple sales teams sharing some stages but also having
-  exclusive ones.
+-  A company with multiple sales teams sharing some stages but also
+   having exclusive ones.
 -  Cleaner kanban views per team, avoiding irrelevant stages.
 
 .. IMPORTANT::
@@ -58,15 +59,17 @@ This module extends the CRM functionality to support **multi-team stages**.
 Configuration
 =============
 
-- Assign one or more teams to each stage in CRM > Configuration > Stages.
-- Global stages (with no teams) are visible for all teams.
+-  Assign one or more teams to each stage in CRM > Configuration >
+   Stages.
+-  Global stages (with no teams) are visible for all teams.
 
 Usage
 =====
 
-- When creating or moving a lead/opportunity, the stage list will be filtered
-  according to the team of the lead or the context ``default_team_id``.
-- In kanban view, only relevant stages will be shown.
+-  When creating or moving a lead/opportunity, the stage list will be
+   filtered according to the team of the lead or the context
+   ``default_team_id``.
+-  In kanban view, only relevant stages will be shown.
 
 Bug Tracker
 ===========
@@ -82,19 +85,20 @@ Credits
 =======
 
 Authors
-~~~~~~~
+-------
 
 * Tecnativa
 * Odoo SA
 
 Contributors
-~~~~~~~~~~~~
+------------
 
-- [Tecnativa](https://www.tecnativa.com):
-  - Eduardo Ezerouali
+-  [Tecnativa](https://www.tecnativa.com):
+
+   -  Eduardo Ezerouali
 
 Maintainers
-~~~~~~~~~~~
+-----------
 
 This module is maintained by the OCA.
 

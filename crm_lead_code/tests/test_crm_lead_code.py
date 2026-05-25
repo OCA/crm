@@ -7,7 +7,7 @@ from odoo.tests.common import TransactionCase
 
 class TestCrmLeadCode(TransactionCase):
     def setUp(self):
-        super(TestCrmLeadCode, self).setUp()
+        super().setUp()
         self.crm_lead_model = self.env["crm.lead"]
         self.ir_sequence_model = self.env["ir.sequence"]
         self.crm_sequence = self.env.ref("crm_lead_code.sequence_lead")

@@ -32,7 +32,9 @@ CRM Only Security Groups
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
-This module adds new security options to CRM by creating 4 groups (Own Documents Only, Team Documents Only, All Documents and Administrator) to separate Sales and CRM apps permissions
+This module adds new security options to CRM by creating 4 groups (Own
+Documents Only, Team Documents Only, All Documents and Administrator) to
+separate Sales and CRM apps permissions
 
 **Table of contents**
 
@@ -42,7 +44,8 @@ This module adds new security options to CRM by creating 4 groups (Own Documents
 Known issues / Roadmap
 ======================
 
-- Remove sale_crm dependency (now is not possible), maybe split this part in other addon
+-  Remove sale_crm dependency (now is not possible), maybe split this
+   part in other addon
 
 Bug Tracker
 ===========
@@ -58,19 +61,19 @@ Credits
 =======
 
 Authors
-~~~~~~~
+-------
 
 * Tecnativa
 
 Contributors
-~~~~~~~~~~~~
+------------
 
-* `Tecnativa <https://www.tecnativa.com>`__:
+-  `Tecnativa <https://www.tecnativa.com>`__:
 
-  * Víctor Martínez
+   -  Víctor Martínez
 
 Maintainers
-~~~~~~~~~~~
+-----------
 
 This module is maintained by the OCA.
 

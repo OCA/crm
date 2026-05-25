@@ -1,3 +1,7 @@
+.. image:: https://odoo-community.org/readme-banner-image
+   :target: https://odoo-community.org/get-involved?utm_source=readme
+   :alt: Odoo Community Association
+
 =================
 CRM Lead Currency
 =================
@@ -13,7 +17,7 @@ CRM Lead Currency
 .. |badge1| image:: https://img.shields.io/badge/maturity-Beta-yellow.png
     :target: https://odoo-community.org/page/development-status
     :alt: Beta
-.. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
+.. |badge2| image:: https://img.shields.io/badge/license-AGPL--3-blue.png
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fcrm-lightgray.png?logo=github
@@ -28,11 +32,12 @@ CRM Lead Currency
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
-This module allows to select a specific currency for a lead or an opportunity.
-If the selected currency is different to the company currency, an amount in the customer
-currency can be set and the expected revenue of the opportunity will automatically be
-computed in the company currency. The default rate used for the computation is the rate
-of the day.
+This module allows to select a specific currency for a lead or an
+opportunity. If the selected currency is different to the company
+currency, an amount in the customer currency can be set and the expected
+revenue of the opportunity will automatically be computed in the company
+currency. The default rate used for the computation is the rate of the
+day.
 
 **Table of contents**
 
@@ -47,15 +52,16 @@ Just install the module.
 Configuration
 =============
 
-No specific configuration is needed but multi-currency should be enabled for the module
-to make sense.
+No specific configuration is needed but multi-currency should be enabled
+for the module to make sense.
 
 Usage
 =====
 
 To use this module, you need to:
 
-#. Created a new opportunity in the CRM and set a customer currency on it.
+1. Created a new opportunity in the CRM and set a customer currency on
+   it.
 
 Bug Tracker
 ===========
@@ -71,18 +77,18 @@ Credits
 =======
 
 Authors
-~~~~~~~
+-------
 
 * Camptocamp SA
 * Vauxoo
 
 Contributors
-~~~~~~~~~~~~
+------------
 
-* Thierry Ducrest <thierry.ducrest@camptocamp.com>
+-  Thierry Ducrest <thierry.ducrest@camptocamp.com>
 
 Maintainers
-~~~~~~~~~~~
+-----------
 
 This module is maintained by the OCA.
 

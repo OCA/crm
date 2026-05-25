@@ -1,2 +1,0 @@
-* Adasat Torres de León <a.torres@binhex.cloud>
-* Rolando Pérez Rebollo <r.perez@binhex.cloud>

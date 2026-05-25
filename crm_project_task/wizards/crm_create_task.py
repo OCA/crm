@@ -31,7 +31,8 @@ class CrmCreateTAsk(models.TransientModel):
         if not lead:
             raise UserError(
                 _(
-                    "Lead/Opportunity not found. Please, create task from lead/opportunity."
+                    "Lead/Opportunity not found. "
+                    "Please, create task from lead/opportunity."
                 )
             )
 

@@ -1,3 +1,7 @@
+.. image:: https://odoo-community.org/readme-banner-image
+   :target: https://odoo-community.org/get-involved?utm_source=readme
+   :alt: Odoo Community Association
+
 ===========================
 Tracking Fields in Partners
 ===========================
@@ -13,7 +17,7 @@ Tracking Fields in Partners
 .. |badge1| image:: https://img.shields.io/badge/maturity-Beta-yellow.png
     :target: https://odoo-community.org/page/development-status
     :alt: Beta
-.. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
+.. |badge2| image:: https://img.shields.io/badge/license-AGPL--3-blue.png
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fcrm-lightgray.png?logo=github
@@ -28,9 +32,9 @@ Tracking Fields in Partners
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
-This module extends the functionality of the CRM to support having the tracking
-fields available in the partner and copy them there automatically when the
-partner is created from a lead/opportunity.
+This module extends the functionality of the CRM to support having the
+tracking fields available in the partner and copy them there
+automatically when the partner is created from a lead/opportunity.
 
 **Table of contents**
 
@@ -42,16 +46,16 @@ Usage
 
 To use this module, you need to:
 
-#. Go to **CRM > Leads > Create**.
-#. Fill the required fields.
-#. Go to **Extra Info > Tracking** and fill those 3 fields.
-#. **Save**.
-#. **Convert to Opportunity**.
-#. Choose the option **Customer > Create a new customer**.
-#. **Create Opportunity**.
-#. Click on the name of the newly linked partner.
-#. Go to tab **Sales & Purchases**.
-#. There you have the new fulfilled fields.
+1.  Go to **CRM > Leads > Create**.
+2.  Fill the required fields.
+3.  Go to **Extra Info > Tracking** and fill those 3 fields.
+4.  **Save**.
+5.  **Convert to Opportunity**.
+6.  Choose the option **Customer > Create a new customer**.
+7.  **Create Opportunity**.
+8.  Click on the name of the newly linked partner.
+9.  Go to tab **Sales & Purchases**.
+10. There you have the new fulfilled fields.
 
 Bug Tracker
 ===========
@@ -67,25 +71,25 @@ Credits
 =======
 
 Authors
-~~~~~~~
+-------
 
 * Tecnativa
 
 Contributors
-~~~~~~~~~~~~
+------------
 
-* `Tecnativa <https://www.tecnativa.com>`__:
+-  `Tecnativa <https://www.tecnativa.com>`__:
 
-  * Rafael Blasco <rafael.blasco@tecnativa.com>
-  * Jairo Llopis <jairo.llopis@tecnativa.com>
-  * Vicent Cubells <vicent.cubells@tecnativa.com>
-  * David Vidal <david.vidal@tecnativa.com>
-  * Cristina Martin R. <cristina.martin@tecnativa.com>
-  * Marcel Savegnago <marcel.savegnago@escodoo.com.br>
-  * Ahmet Yiğit Budak <yigit@altinkaya.com.tr>
+   -  Rafael Blasco <rafael.blasco@tecnativa.com>
+   -  Jairo Llopis <jairo.llopis@tecnativa.com>
+   -  Vicent Cubells <vicent.cubells@tecnativa.com>
+   -  David Vidal <david.vidal@tecnativa.com>
+   -  Cristina Martin R. <cristina.martin@tecnativa.com>
+   -  Marcel Savegnago <marcel.savegnago@escodoo.com.br>
+   -  Ahmet Yiğit Budak <yigit@altinkaya.com.tr>
 
 Maintainers
-~~~~~~~~~~~
+-----------
 
 This module is maintained by the OCA.
 

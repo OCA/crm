@@ -1,3 +1,7 @@
+.. image:: https://odoo-community.org/readme-banner-image
+   :target: https://odoo-community.org/get-involved?utm_source=readme
+   :alt: Odoo Community Association
+
 ===================
 NUTS Regions in CRM
 ===================
@@ -13,7 +17,7 @@ NUTS Regions in CRM
 .. |badge1| image:: https://img.shields.io/badge/maturity-Beta-yellow.png
     :target: https://odoo-community.org/page/development-status
     :alt: Beta
-.. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
+.. |badge2| image:: https://img.shields.io/badge/license-AGPL--3-blue.png
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fcrm-lightgray.png?logo=github
@@ -28,8 +32,8 @@ NUTS Regions in CRM
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
-This module adds the concept of NUTS region to the CRM main objects (lead,
-opportunity), and propagate them through the workflow.
+This module adds the concept of NUTS region to the CRM main objects
+(lead, opportunity), and propagate them through the workflow.
 
 **Table of contents**
 
@@ -39,19 +43,20 @@ opportunity), and propagate them through the workflow.
 Usage
 =====
 
-- Go to CRM configuration and enable "Leads"
-- Create a new Lead (or edit an existing one):
-- Set a contact name or a company name.
-- Set NUTS values as desired.
-- Save it an convert to opportunity.
-- In the dialog, choose **Create a new customer** and click create.
-- If you browse the new customer, the NUTS values should have been propagated.
+-  Go to CRM configuration and enable "Leads"
+-  Create a new Lead (or edit an existing one):
+-  Set a contact name or a company name.
+-  Set NUTS values as desired.
+-  Save it an convert to opportunity.
+-  In the dialog, choose **Create a new customer** and click create.
+-  If you browse the new customer, the NUTS values should have been
+   propagated.
 
 Known issues / Roadmap
 ======================
 
-- It would be cleaner an more reusable to put the repeated methods and fields
-  into an abstract model.
+-  It would be cleaner an more reusable to put the repeated methods and
+   fields into an abstract model.
 
 Bug Tracker
 ===========
@@ -67,31 +72,31 @@ Credits
 =======
 
 Authors
-~~~~~~~
+-------
 
 * Tecnativa
 
 Contributors
-~~~~~~~~~~~~
+------------
 
-* `Tecnativa <https://www.tecnativa.com>`_:
+-  `Tecnativa <https://www.tecnativa.com>`__:
 
-  * Antonio Espinosa
-  * David Vidal
-  * Alexandre Díaz
-  * Ernesto Tejeda
+   -  Antonio Espinosa
+   -  David Vidal
+   -  Alexandre Díaz
+   -  Ernesto Tejeda
 
-* `Moduon <https://www.moduon.es/>`_:
+-  `Moduon <https://www.moduon.es/>`__:
 
-  * Eduardo López
+   -  Eduardo López
 
 Other credits
-~~~~~~~~~~~~~
+-------------
 
-* Icon park: `Icon http://icon-park.com/icon/location-map-pin-orange3/`
+-  Icon park: Icon http://icon-park.com/icon/location-map-pin-orange3/
 
 Maintainers
-~~~~~~~~~~~
+-----------
 
 This module is maintained by the OCA.
 

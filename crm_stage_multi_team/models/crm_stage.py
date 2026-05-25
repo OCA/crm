@@ -12,5 +12,5 @@ class CrmStage(models.Model):
         for record in self:
             if record.team_id and record.team_id not in record.team_ids:
                 vals["team_ids"] = [(6, 0, [record.team_id.id])]
-        res = super(CrmStage, self).write(vals)
+        res = super().write(vals)
         return res

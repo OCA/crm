@@ -431,7 +431,8 @@ class TestZipAssignment(BaseCommon):
 
     def test_pre_zip_match_condition(self):
         """Test that pre_zip_match_condition filters partners as expected."""
-        # Setup: two teams, same country/state/zip/priority, different pre_zip_match_condition
+        # Setup: two teams, same country/state/zip/priority,
+        # different pre_zip_match_condition
         # Partner is a company
         partner_company = self.env["res.partner"].create(
             {

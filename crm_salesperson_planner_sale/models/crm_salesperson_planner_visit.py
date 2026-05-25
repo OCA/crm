@@ -70,7 +70,7 @@ class CrmSalespersonPlannerVisit(models.Model):
         ]
         if self.quotation_count == 1:
             action["views"] = [(self.env.ref("sale.view_order_form").id, "form")]
-            quotation = self.order_ids.filtered(lambda l: l.state in ("draft", "sent"))
+            quotation = self.order_ids.filtered(lambda o: o.state in ("draft", "sent"))
             action["res_id"] = quotation.id
         return action
 
@@ -84,7 +84,7 @@ class CrmSalespersonPlannerVisit(models.Model):
         if self.sale_order_count == 1:
             action["views"] = [(self.env.ref("sale.view_order_form").id, "form")]
             order = self.order_ids.filtered(
-                lambda l: l.state not in ("draft", "sent", "cancel")
+                lambda o: o.state not in ("draft", "sent", "cancel")
             )
             action["res_id"] = order.id
         return action

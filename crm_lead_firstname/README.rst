@@ -1,3 +1,7 @@
+.. image:: https://odoo-community.org/readme-banner-image
+   :target: https://odoo-community.org/get-involved?utm_source=readme
+   :alt: Odoo Community Association
+
 ===============================
 Firstname and Lastname in Leads
 ===============================
@@ -13,7 +17,7 @@ Firstname and Lastname in Leads
 .. |badge1| image:: https://img.shields.io/badge/maturity-Beta-yellow.png
     :target: https://odoo-community.org/page/development-status
     :alt: Beta
-.. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
+.. |badge2| image:: https://img.shields.io/badge/license-AGPL--3-blue.png
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fcrm-lightgray.png?logo=github
@@ -28,13 +32,13 @@ Firstname and Lastname in Leads
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
-This module extends the functionality of CRM leads to support split first and
-last name fields for contacts and allow you to port that information to and
-from partners.
-Since leads are expected to create partners only when needed and after
-information is correctly set up, in leads there is no inverse logic to
-transform the old single name in the new split names automatically. The old
-single name will simply be the firstname now.
+This module extends the functionality of CRM leads to support split
+first and last name fields for contacts and allow you to port that
+information to and from partners. Since leads are expected to create
+partners only when needed and after information is correctly set up, in
+leads there is no inverse logic to transform the old single name in the
+new split names automatically. The old single name will simply be the
+firstname now.
 
 **Table of contents**
 
@@ -46,21 +50,24 @@ Installation
 
 To install this module, you need to:
 
-* Install `OCA/partner-contact <https://github.com/OCA/partner-contact>`_ repo.
+-  Install
+   `OCA/partner-contact <https://github.com/OCA/partner-contact>`__
+   repo.
 
 Usage
 =====
 
 To use this module, you need to:
 
-* Go to *CRM > Leads > Leads > Create*.
-* You have the new split fields *Firstname* and *Lastname*. Fill them.
-* Press *Convert to Opportunity*.
-* In *Related Customer* choose *Create a new customer*.
-* Press *Create Opportunity*.
-* In the new opportunity, go to *Followup* tab. There are the new fields too.
-* If you go to the partner you just created, you will see that its first and
-  last names match those in the lead.
+-  Go to *CRM > Leads > Leads > Create*.
+-  You have the new split fields *Firstname* and *Lastname*. Fill them.
+-  Press *Convert to Opportunity*.
+-  In *Related Customer* choose *Create a new customer*.
+-  Press *Create Opportunity*.
+-  In the new opportunity, go to *Followup* tab. There are the new
+   fields too.
+-  If you go to the partner you just created, you will see that its
+   first and last names match those in the lead.
 
 Bug Tracker
 ===========
@@ -76,20 +83,20 @@ Credits
 =======
 
 Authors
-~~~~~~~
+-------
 
 * Tecnativa
 
 Contributors
-~~~~~~~~~~~~
+------------
 
-* Rafael Blasco
-* Jairo Llopis
-* Raf Ven <raf.ven@dynapps.be>
-* Nikos Tsirintanis <ntsirintanis@therp.nl>
+-  Rafael Blasco
+-  Jairo Llopis
+-  Raf Ven <raf.ven@dynapps.be>
+-  Nikos Tsirintanis <ntsirintanis@therp.nl>
 
 Maintainers
-~~~~~~~~~~~
+-----------
 
 This module is maintained by the OCA.
 

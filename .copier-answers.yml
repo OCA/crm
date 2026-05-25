@@ -1,8 +1,8 @@
 # Do NOT update manually; changes here will be overwritten by Copier
-_commit: v1.31
+_commit: v1.42
 _src_path: gh:oca/oca-addons-repo-template
-ci: GitHub
-convert_readme_fragments_to_markdown: false
+additional_ruff_rules: []
+convert_readme_fragments_to_markdown: true
 enable_checklog_odoo: false
 generate_requirements_txt: true
 github_check_license: true
@@ -19,10 +19,11 @@ org_slug: OCA
 rebel_module_groups:
 - crm_date_deadline_required
 - crm_partner_required
-repo_description: 'TODO: add repo description.'
+repo_description: 'Modules to extend and improve Odoo CRM features: opportunities,
+    leads, sales activities, and related integrations.'
 repo_name: crm
 repo_slug: crm
 repo_website: https://github.com/OCA/crm
-use_pyproject_toml: false
-use_ruff: false
+use_pyproject_toml: true
+use_ruff: true
 

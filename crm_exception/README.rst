@@ -1,3 +1,7 @@
+.. image:: https://odoo-community.org/readme-banner-image
+   :target: https://odoo-community.org/get-involved?utm_source=readme
+   :alt: Odoo Community Association
+
 =============
 CRM Exception
 =============
@@ -13,7 +17,7 @@ CRM Exception
 .. |badge1| image:: https://img.shields.io/badge/maturity-Beta-yellow.png
     :target: https://odoo-community.org/page/development-status
     :alt: Beta
-.. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
+.. |badge2| image:: https://img.shields.io/badge/license-AGPL--3-blue.png
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fcrm-lightgray.png?logo=github
@@ -28,8 +32,9 @@ CRM Exception
 
 |badge1| |badge2| |badge3| |badge4| |badge5|
 
-This module allows you to attach several customizable exceptions to your opportunities.
-You can also define an exception rule to be applied to specific CRM stages.
+This module allows you to attach several customizable exceptions to your
+opportunities. You can also define an exception rule to be applied to
+specific CRM stages.
 
 **Table of contents**
 
@@ -41,22 +46,25 @@ Configuration
 
 **To configure CRM exception rule:**
 
-#. Create a new exception rule.
-#. Select "Lead" in the "Apply On" field (the 'stage_ids' field will be displayed).
-#. Choose the CRM stage to which you want to apply the exception rule.
-#. Specify the exception type and define the condition, then save the rule.
+1. Create a new exception rule.
+2. Select "Lead" in the "Apply On" field (the 'stage_ids' field will be
+   displayed).
+3. Choose the CRM stage to which you want to apply the exception rule.
+4. Specify the exception type and define the condition, then save the
+   rule.
 
-**Note:** 
-If you don't specify a CRM stage for stage_ids (leave it blank), the rule will be checked at every stage.
+**Note:** If you don't specify a CRM stage for stage_ids (leave it
+blank), the rule will be checked at every stage.
 
 Known issues / Roadmap
 ======================
 
 **No Exception checking in the create function.**
 
-Adding exception checking to the create function would trigger an Odoo Client Error
-related to JavaScript (Error: Component is destroyed) when attempting to create a new opportunity
-in the pipeline's kanban view and clicking the edit button.
+Adding exception checking to the create function would trigger an Odoo
+Client Error related to JavaScript (Error: Component is destroyed) when
+attempting to create a new opportunity in the pipeline's kanban view and
+clicking the edit button.
 
 Bug Tracker
 ===========
@@ -72,19 +80,19 @@ Credits
 =======
 
 Authors
-~~~~~~~
+-------
 
 * Quartile Limited
 
 Contributors
-~~~~~~~~~~~~
+------------
 
-* `Quartile <https://www.quartile.co>`__:
+-  `Quartile <https://www.quartile.co>`__:
 
-  * Aung Ko Ko Lin
+   -  Aung Ko Ko Lin
 
 Maintainers
-~~~~~~~~~~~
+-----------
 
 This module is maintained by the OCA.
 

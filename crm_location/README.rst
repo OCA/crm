@@ -1,3 +1,7 @@
+.. image:: https://odoo-community.org/readme-banner-image
+   :target: https://odoo-community.org/get-involved?utm_source=readme
+   :alt: Odoo Community Association
+
 ============
 CRM location
 ============
@@ -13,7 +17,7 @@ CRM location
 .. |badge1| image:: https://img.shields.io/badge/maturity-Beta-yellow.png
     :target: https://odoo-community.org/page/development-status
     :alt: Beta
-.. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
+.. |badge2| image:: https://img.shields.io/badge/license-AGPL--3-blue.png
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fcrm-lightgray.png?logo=github
@@ -42,8 +46,8 @@ Installation
 
 To install this module, you need:
 
-* crm
-* base_location located in OCA/partner-contact repo
+-  crm
+-  base_location located in OCA/partner-contact repo
 
 Bug Tracker
 ===========
@@ -59,22 +63,22 @@ Credits
 =======
 
 Authors
-~~~~~~~
+-------
 
 * Tecnativa
 
 Contributors
-~~~~~~~~~~~~
+------------
 
-* Endika Iglesias <endikaig@antiun.com>
-* Rafael Blasco <rafael.blasco@tecnativa.com>
-* Luis M. Ontalba <luis.martinez@tecnativa.com>
-* Alexandre Díaz <alexandre.diaz@tecnativa.com>
-* Tharathip Chaweewongphan <tharathipc@ecosoft.co.th>
-* Ruchir Shukla <ruchir@bizzappdev.com>
+-  Endika Iglesias <endikaig@antiun.com>
+-  Rafael Blasco <rafael.blasco@tecnativa.com>
+-  Luis M. Ontalba <luis.martinez@tecnativa.com>
+-  Alexandre Díaz <alexandre.diaz@tecnativa.com>
+-  Tharathip Chaweewongphan <tharathipc@ecosoft.co.th>
+-  Ruchir Shukla <ruchir@bizzappdev.com>
 
 Maintainers
-~~~~~~~~~~~
+-----------
 
 This module is maintained by the OCA.
 
