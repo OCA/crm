@@ -21,6 +21,11 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. module: crm_lead_to_task
+#: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead__task_count
+msgid "#Task"
+msgstr ""
+
+#. module: crm_lead_to_task
 #: model_terms:ir.ui.view,arch_db:crm_lead_to_task.crm_lead_view_form
 msgid ""
 "<span class=\"o_stat_text\" invisible=\"task_count &lt; 2\">Tasks</span>\n"
@@ -89,7 +94,11 @@ msgid "Default project to be used when creating a task from a lead."
 msgstr ""
 
 #. module: crm_lead_to_task
+#: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead__display_name
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task__display_name
+#: model:ir.model.fields,field_description:crm_lead_to_task.field_project_task__display_name
+#: model:ir.model.fields,field_description:crm_lead_to_task.field_res_company__display_name
+#: model:ir.model.fields,field_description:crm_lead_to_task.field_res_config_settings__display_name
 msgid "Display Name"
 msgstr "顯示名稱"
 
@@ -100,7 +109,11 @@ msgid "Force Project"
 msgstr ""
 
 #. module: crm_lead_to_task
+#: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead__id
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task__id
+#: model:ir.model.fields,field_description:crm_lead_to_task.field_project_task__id
+#: model:ir.model.fields,field_description:crm_lead_to_task.field_res_company__id
+#: model:ir.model.fields,field_description:crm_lead_to_task.field_res_config_settings__id
 msgid "ID"
 msgstr "ID"
 
@@ -122,6 +135,7 @@ msgid "Last Updated on"
 msgstr "最後更新時間"
 
 #. module: crm_lead_to_task
+#: model:ir.model,name:crm_lead_to_task.model_crm_lead
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task__lead_id
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_project_task__lead_id
 msgid "Lead"
@@ -131,11 +145,6 @@ msgstr "線索"
 #: model:ir.model,name:crm_lead_to_task.model_crm_lead_convert2task
 msgid "Lead convert to Task"
 msgstr "潛在客戶轉換為任務"
-
-#. module: crm_lead_to_task
-#: model:ir.model,name:crm_lead_to_task.model_crm_lead
-msgid "Lead/Opportunity"
-msgstr ""
 
 #. module: crm_lead_to_task
 #. odoo-python
@@ -156,11 +165,6 @@ msgid "Task"
 msgstr ""
 
 #. module: crm_lead_to_task
-#: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead__task_count
-msgid "Task Count"
-msgstr ""
-
-#. module: crm_lead_to_task
 #: model_terms:ir.ui.view,arch_db:crm_lead_to_task.crm_lead_to_task_res_config_settings_view_form
 msgid "Tasks"
 msgstr ""
@@ -170,6 +174,21 @@ msgstr ""
 #: code:addons/crm_lead_to_task/models/crm_lead.py:0
 #: code:addons/crm_lead_to_task/tests/test_crm_lead_task.py:0
 msgid "Tasks from crm lead %s"
+msgstr ""
+
+#. module: crm_lead_to_task
+#: model:ir.model.fields,help:crm_lead_to_task.field_project_task__display_name
+msgid ""
+"Use these keywords in the title to set new tasks:\n"
+"\n"
+"            #tags Set tags on the task\n"
+"            @user Assign the task to a user\n"
+"            ! Set the task a medium priority\n"
+"            !! Set the task a high priority\n"
+"            !!! Set the task a urgent priority\n"
+"\n"
+"            Make sure to use the right format and order e.g. Improve the "
+"configuration screen #feature #v16 @Mitchell !"
 msgstr ""
 
 #~ msgid "Last Modified on"
