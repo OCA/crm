@@ -10,15 +10,15 @@ msgstr ""
 "Project-Id-Version: Odoo Server 11.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-06 08:33+0000\n"
-"PO-Revision-Date: 2023-10-29 07:04+0000\n"
-"Last-Translator: kikopeiro <francisco.peiro@factorlibre.com>\n"
+"PO-Revision-Date: 2026-05-26 13:46+0000\n"
+"Last-Translator: SandraNetkia <sandra.perez@netkia.es>\n"
 "Language-Team: Spanish (https://www.transifex.com/oca/teams/23907/es/)\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.17\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_res_partner__claim_count
@@ -42,6 +42,8 @@ msgid ""
 "<span>Have a general overview of all claims processed in the system by "
 "sorting them with specific criteria.</span>"
 msgstr ""
+"<span>Obtener una visión general de todas las reclamaciones procesadas "
+"ordenándolas según un criterio específico.</span>"
 
 #. module: crm_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
@@ -573,7 +575,7 @@ msgstr "Empresa"
 #. module: crm_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
 msgid "Partner (including children)"
-msgstr ""
+msgstr "Contacto (incluyendo hijos)"
 
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__partner_phone
@@ -605,7 +607,7 @@ msgstr "Prioridad"
 #. module: crm_claim
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__rating_ids
 msgid "Ratings"
-msgstr ""
+msgstr "Calificaciones"
 
 #. module: crm_claim
 #: model_terms:ir.actions.act_window,help:crm_claim.crm_claim_category_claim0
