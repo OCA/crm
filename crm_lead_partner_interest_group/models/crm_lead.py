@@ -16,6 +16,6 @@ class CrmLead(models.Model):
         values = super()._prepare_customer_values(
             partner_name, is_company=is_company, parent_id=parent_id
         )
-        if self.interest_group_ids:
+        if self.interest_group_ids and not is_company:
             values["interest_group_ids"] = [(6, 0, self.interest_group_ids.ids)]
         return values

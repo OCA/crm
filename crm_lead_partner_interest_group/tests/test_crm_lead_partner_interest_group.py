@@ -68,7 +68,7 @@ class TestCrmLeadPartnerInterestGroup(TransactionCase):
         partner = lead.partner_id
         self.assertTrue(partner)
         self.assertEqual(partner.interest_group_ids, self.group_a)
-        # The parent company partner is also created from the lead values
-        # and therefore should carry the interest groups too.
+        # The parent company partner should NOT carry interest groups,
+        # as those belong to the individual contact only.
         self.assertTrue(partner.parent_id)
-        self.assertEqual(partner.parent_id.interest_group_ids, self.group_a)
+        self.assertFalse(partner.parent_id.interest_group_ids)
