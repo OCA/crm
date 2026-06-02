@@ -37,15 +37,6 @@ msgid "# of Claims"
 msgstr "Nº de reclamaciones"
 
 #. module: crm_claim
-#: model_terms:ir.actions.act_window,help:crm_claim.action_report_crm_claim
-msgid ""
-"<span>Have a general overview of all claims processed in the system by "
-"sorting them with specific criteria.</span>"
-msgstr ""
-"<span>Obtener una visión general de todas las reclamaciones procesadas "
-"ordenándolas según un criterio específico.</span>"
-
-#. module: crm_claim
 #: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
 msgid "Action Description..."
 msgstr "Descripción de la acción..."
@@ -373,6 +364,15 @@ msgstr "Icona Font awesome p.e. fa-tasks"
 #: model:ir.model.fields,field_description:crm_claim.field_crm_claim__has_message
 msgid "Has Message"
 msgstr "Té un missatge"
+
+#. module: crm_claim
+#: model_terms:ir.actions.act_window,help:crm_claim.action_report_crm_claim
+msgid ""
+"Have a general overview of all claims processed in the system by sorting "
+"them with specific criteria."
+msgstr ""
+"Obtenga una visión global de todas las reclamaciones procesadas en el "
+"sistema ordenándolas con criterios específicos."
 
 #. module: crm_claim
 #: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim__priority__2
@@ -831,18 +831,18 @@ msgstr ""
 "los pasos\n"
 "            necesarios para la resolución de una reclamación."
 
+#~ msgid ""
+#~ "<span>Have a general overview of all claims processed in the system by "
+#~ "sorting them with specific criteria.</span>"
+#~ msgstr ""
+#~ "<span>Obtener una visión general de todas las reclamaciones procesadas "
+#~ "ordenándolas según un criterio específico.</span>"
+
 #~ msgid "Extended Filters..."
 #~ msgstr "Filtros extendidos..."
 
 #~ msgid "Group By"
 #~ msgstr "Agrupar por"
-
-#~ msgid ""
-#~ "Have a general overview of all claims processed in the system by sorting "
-#~ "them with specific criteria."
-#~ msgstr ""
-#~ "Obtenga una visión global de todas las reclamaciones procesadas en el "
-#~ "sistema ordenándolas con criterios específicos."
 
 #, python-format
 #~ msgid "%s (copy)"
