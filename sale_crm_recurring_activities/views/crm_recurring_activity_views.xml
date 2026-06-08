@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="crm_recurring_activity_view_tree" model="ir.ui.view">
+        <field name="name">crm.recurring.activity.tree</field>
+        <field name="model">crm.recurring.activity</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="activity_type_id" />
+                <field name="user_id" />
+                <field name="summary" />
+                <field name="note" />
+                <field name="scheduled_days" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="crm_recurring_activity_action_config" model="ir.actions.act_window">
+        <field name="name">Recurring Activities</field>
+        <field name="res_model">crm.recurring.activity</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <menuitem
+        id="crm_team_menu_config_recurring_activity"
+        name="Recurring Activities"
+        parent="crm.crm_menu_config"
+        action="crm_recurring_activity_action_config"
+        sequence="10"
+    />
+</odoo>
