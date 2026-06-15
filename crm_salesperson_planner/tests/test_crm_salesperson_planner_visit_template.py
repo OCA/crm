@@ -14,16 +14,6 @@ class TestCrmSalespersonPlannerVisitTemplate(BaseCommon):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
-        cls.env = cls.env(
-            context=dict(
-                cls.env.context,
-                mail_create_nolog=True,
-                mail_create_nosubscribe=True,
-                mail_notrack=True,
-                no_reset_password=True,
-                tracking_disable=True,
-            )
-        )
         cls.visit_template_model = cls.env["crm.salesperson.planner.visit.template"]
         cls.partner_model = cls.env["res.partner"]
         cls.close_reason_mode = cls.env["crm.salesperson.planner.visit.close.reason"]
@@ -159,7 +149,7 @@ class TestCrmSalespersonPlannerVisitTemplate(BaseCommon):
             }
         )
         visit_template.create_visits(days=10)
-        visit_0 = fields.first(visit_template.visit_ids)
+        visit_0 = visit_template.visit_ids[:1]
         event_id_0 = visit_0.calendar_event_id
         self.assertEqual(visit_0.date, event_id_0.start_date)
         visit_0.write({"date": fields.Date.today() + timedelta(days=7)})
@@ -185,7 +175,7 @@ class TestCrmSalespersonPlannerVisitTemplate(BaseCommon):
             }
         )
         visit_template.create_visits(days=10)
-        first_visit = fields.first(visit_template.visit_ids)
+        first_visit = visit_template.visit_ids[:1]
         self.assertTrue(first_visit.calendar_event_id)
         with self.assertRaises(exceptions.ValidationError):
             first_visit.unlink()

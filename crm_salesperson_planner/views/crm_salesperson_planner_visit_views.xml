@@ -131,11 +131,6 @@
                                 widget="phone"
                                 invisible="not partner_id"
                             />
-                            <field
-                                name="partner_mobile"
-                                widget="phone"
-                                invisible="not partner_id"
-                            />
                         </group>
                         <group>
                             <field name="date" />
@@ -208,23 +203,23 @@
                     domain="[('user_id', '=', uid)]"
                     help="Visits that are assigned to me"
                 />
-                <separator orientation="vertical" />
+                <separator />
                 <filter
                     string="Late Visits"
                     name="visits_overdue"
-                    domain="[('date', '&lt;', context_today().strftime('%Y-%m-%d'))]"
+                    domain="[('date', '&lt;', context_today())]"
                 />
                 <filter
                     string="Today Visits"
                     name="visits_today"
-                    domain="[('date', '=', context_today().strftime('%Y-%m-%d'))]"
+                    domain="[('date', '=', context_today())]"
                 />
                 <filter
                     string="Future Visits"
                     name="visits_upcoming_all"
-                    domain="[('date', '&gt;', context_today().strftime('%Y-%m-%d'))]"
+                    domain="[('date', '&gt;', context_today())]"
                 />
-                <group expand="0" name="visits" string="Group By">
+                <group name="visits">
                     <filter
                         string="Salesperson"
                         name="salesperson"
@@ -246,11 +241,10 @@
                         context="{'group_by':'company_id'}"
                         groups="base.group_multi_company"
                     />
-                    <separator orientation="vertical" />
                     <filter
                         string="Visit by Date"
                         context="{'group_by':'date'}"
-                        name="date"
+                        name="visit_date"
                     />
                 </group>
             </search>

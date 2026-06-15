@@ -24,7 +24,6 @@ class CrmSalespersonPlannerVisit(models.Model):
         required=True,
     )
     partner_phone = fields.Char(string="Phone", related="partner_id.phone")
-    partner_mobile = fields.Char(string="Mobile", related="partner_id.mobile")
     date = fields.Date(
         default=fields.Date.context_today,
         required=True,
@@ -35,7 +34,6 @@ class CrmSalespersonPlannerVisit(models.Model):
     )
     company_id = fields.Many2one(
         comodel_name="res.company",
-        string="Company",
         default=lambda self: self.env.company,
     )
     user_id = fields.Many2one(
@@ -71,24 +69,19 @@ class CrmSalespersonPlannerVisit(models.Model):
         default="draft",
     )
     close_reason_id = fields.Many2one(
-        comodel_name="crm.salesperson.planner.visit.close.reason", string="Close Reason"
+        comodel_name="crm.salesperson.planner.visit.close.reason",
     )
     close_reason_image = fields.Image(max_width=1024, max_height=1024, attachment=True)
     close_reason_notes = fields.Text()
     visit_template_id = fields.Many2one(
-        comodel_name="crm.salesperson.planner.visit.template", string="Visit Template"
+        comodel_name="crm.salesperson.planner.visit.template"
     )
-    calendar_event_id = fields.Many2one(
-        comodel_name="calendar.event", string="Calendar Event"
-    )
+    calendar_event_id = fields.Many2one(comodel_name="calendar.event")
 
-    _sql_constraints = [
-        (
-            "crm_salesperson_planner_visit_name",
-            "UNIQUE (name)",
-            "The visit number must be unique!",
-        ),
-    ]
+    _name_uniq = models.Constraint(
+        "unique (name)",
+        "The visit number must be unique!",
+    )
 
     @api.model_create_multi
     def create(self, vals_list):
@@ -179,9 +172,12 @@ class CrmSalespersonPlannerVisit(models.Model):
             }
         )
 
-    def unlink(self):
+    def _check_visits_state(self):
         if any(sel.state not in ["draft", "cancel"] for sel in self):
             raise ValidationError(self.env._("Visits must be in cancelled state"))
+
+    def unlink(self):
+        self._check_visits_state()
         return super().unlink()
 
     def write(self, values):

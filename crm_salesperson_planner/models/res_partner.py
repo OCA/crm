@@ -14,14 +14,17 @@ class ResPartner(models.Model):
 
     def _compute_salesperson_planner_visit_count(self):
         partners = self | self.mapped("child_ids")
-        partner_data = self.env["crm.salesperson.planner.visit"].read_group(
-            [("partner_id", "in", partners.ids)], ["partner_id"], ["partner_id"]
+
+        partner_data = self.env["crm.salesperson.planner.visit"]._read_group(
+            domain=[("partner_id", "in", partners.ids)],
+            groupby=["partner_id"],
+            aggregates=["__count"],
         )
-        mapped_data = {m["partner_id"][0]: m["partner_id_count"] for m in partner_data}
+        mapped_data = {m[0]: m[1] for m in partner_data}
         for partner in self:
-            visit_count = mapped_data.get(partner.id, 0)
+            visit_count = mapped_data.get(partner, 0)
             for child in partner.child_ids:
-                visit_count += mapped_data.get(child.id, 0)
+                visit_count += mapped_data.get(child, 0)
             partner.salesperson_planner_visit_count = visit_count
 
     def action_view_salesperson_planner_visit(self):

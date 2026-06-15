@@ -7,6 +7,7 @@ from dateutil.relativedelta import relativedelta
 
 from odoo import Command, fields
 from odoo.exceptions import ValidationError
+from odoo.tests import new_test_user
 from odoo.tools import mute_logger
 
 from odoo.addons.base.tests.common import BaseCommon
@@ -16,16 +17,6 @@ class TestCrmSalespersonPlannerVisitBase(BaseCommon):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
-        cls.env = cls.env(
-            context=dict(
-                cls.env.context,
-                mail_create_nolog=True,
-                mail_create_nosubscribe=True,
-                mail_notrack=True,
-                no_reset_password=True,
-                tracking_disable=True,
-            )
-        )
         cls.visit_model = cls.env["crm.salesperson.planner.visit"]
         cls.partner_model = cls.env["res.partner"]
         cls.close_model = cls.env["crm.salesperson.planner.visit.close.reason"]
@@ -81,6 +72,29 @@ class TestCrmSalespersonPlannerVisitBase(BaseCommon):
                 "reschedule": False,
             }
         )
+        cls.user_demo = new_test_user(
+            cls.env,
+            name="User test",
+            login="user_test",
+            password="user_test",
+            email="user_test@test.com",
+            group_ids=cls.get_default_groups().ids,
+            company_id=cls.env.company.id,
+        )
+
+        cls.another_user = new_test_user(
+            cls.env,
+            name="Another User",
+            login="another_user",
+            password="another_user",
+            email="another_user@test.com",
+            group_ids=cls.get_default_groups().ids,
+            company_id=cls.env.company.id,
+        )
+
+    @classmethod
+    def get_default_groups(cls):
+        return super().get_default_groups() | cls.quick_ref("base.group_system")
 
 
 class TestCrmSalespersonPlannerVisit(TestCrmSalespersonPlannerVisitBase):
@@ -176,23 +190,22 @@ class TestCrmSalespersonPlannerVisit(TestCrmSalespersonPlannerVisitBase):
         visit = self.env["crm.salesperson.planner.visit"].create(
             {
                 "name": "Test Visit",
-                "user_id": self.env.ref("base.user_demo").id,
+                "user_id": self.user_demo.id,
                 "partner_id": partner.id,
             }
         )
         calendar_event = self.env["calendar.event"].create(
             {
                 "name": "Test Event",
-                "user_id": self.env.ref("base.user_demo").id,
+                "user_id": self.user_demo.id,
                 "partner_id": partner.id,
             }
         )
         visit.write({"calendar_event_id": calendar_event.id})
 
-        new_user = self.env.ref("base.user_admin")
-        visit.write({"user_id": new_user.id})
+        visit.write({"user_id": self.another_user.id})
 
-        self.assertEqual(calendar_event.user_id, new_user)
+        self.assertEqual(calendar_event.user_id, self.another_user)
 
     def test_action_done(self):
         partner = self.env["res.partner"].create(

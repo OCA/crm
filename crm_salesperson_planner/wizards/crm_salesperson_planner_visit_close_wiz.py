@@ -22,7 +22,6 @@ class CrmSalespersonPlannerVisitCloseWiz(models.TransientModel):
 
     reason_id = fields.Many2one(
         comodel_name="crm.salesperson.planner.visit.close.reason",
-        string="Reason",
         required=True,
     )
     image = fields.Image(max_width=1024, max_height=1024)

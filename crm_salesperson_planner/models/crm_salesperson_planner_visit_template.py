@@ -60,7 +60,6 @@ class CrmSalespersonPlannerVisitTemplate(models.Model):
     )
     company_id = fields.Many2one(
         comodel_name="res.company",
-        string="Company",
         default=lambda self: self.env.company,
     )
     categ_ids = fields.Many2many(comodel_name="calendar.event.type", string="Tags")
@@ -150,25 +149,19 @@ class CrmSalespersonPlannerVisitTemplate(models.Model):
     byday = fields.Selection(BYDAY_SELECTION)
     until = fields.Date()
 
-    _sql_constraints = [
-        (
-            "crm_salesperson_planner_visit_template_name",
-            "UNIQUE (name)",
-            "The visit template number must be unique!",
-        ),
-    ]
+    _name_uniq = models.Constraint(
+        "unique (name)", "The visit template number must be unique!."
+    )
 
     def _compute_visit_ids_count(self):
-        visit_data = self.env["crm.salesperson.planner.visit"].read_group(
-            [("visit_template_id", "in", self.ids)],
-            ["visit_template_id"],
-            ["visit_template_id"],
+        visit_data = self.env["crm.salesperson.planner.visit"]._read_group(
+            domain=[("visit_template_id", "in", self.ids)],
+            groupby=["visit_template_id"],
+            aggregates=["__count"],
         )
-        mapped_data = {
-            m["visit_template_id"][0]: m["visit_template_id_count"] for m in visit_data
-        }
+        mapped_data = {m[0]: m[1] for m in visit_data}
         for sel in self:
-            sel.visit_ids_count = mapped_data.get(sel.id, 0)
+            sel.visit_ids_count = mapped_data.get(sel, 0)
 
     @api.depends("visit_ids.date")
     def _compute_last_visit_date(self):
@@ -274,9 +267,7 @@ class CrmSalespersonPlannerVisitTemplate(models.Model):
     def _prepare_crm_salesperson_planner_visit_vals(self, dates):
         return [
             {
-                "partner_id": (
-                    fields.first(self.partner_ids).id if self.partner_ids else False
-                ),
+                "partner_id": (self.partner_ids[:1].id if self.partner_ids else False),
                 "date": date,
                 "sequence": self.sequence,
                 "user_id": self.user_id.id,
@@ -350,5 +341,5 @@ class CrmSalespersonPlannerVisitTemplate(models.Model):
                 item.state = "done"
 
     def _cron_create_visits(self, days=7):
-        templates = self.search([("state", "=", "in-progress")])
+        templates = self.search([("state", "=", "in-progress")], limit=None)
         templates.create_visits(days)
