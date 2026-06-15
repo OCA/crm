@@ -7,7 +7,7 @@ from odoo import api, fields, models
 class CrmSalespersonPlannerVisit(models.Model):
     _inherit = "crm.salesperson.planner.visit"
 
-    order_ids = fields.One2many("sale.order", "visit_id", string="Orders")
+    order_ids = fields.One2many("sale.order", "visit_id")
     sale_order_count = fields.Integer(
         compute="_compute_sale_data", string="Number of Sale Orders", store=True
     )
@@ -21,23 +21,21 @@ class CrmSalespersonPlannerVisit(models.Model):
             ("visit_id", "in", self.ids),
             ("state", "in", ("draft", "sent")),
         ]
-        quotation_data = self.env["sale.order"].read_group(
-            domain=quotation_domain, fields=["visit_id"], groupby=["visit_id"]
+        quotation_data = self.env["sale.order"]._read_group(
+            domain=quotation_domain, groupby=["visit_id"], aggregates=["__count"]
         )
         sale_domain = [
             ("visit_id", "in", self.ids),
             ("state", "not in", ("draft", "sent", "cancel")),
         ]
-        sale_data = self.env["sale.order"].read_group(
-            domain=sale_domain, fields=["visit_id"], groupby=["visit_id"]
+        sale_data = self.env["sale.order"]._read_group(
+            domain=sale_domain, groupby=["visit_id"], aggregates=["__count"]
         )
-        mapped_quotation_data = {
-            m["visit_id"][0]: m["visit_id_count"] for m in quotation_data
-        }
-        mapped_sale_data = {m["visit_id"][0]: m["visit_id_count"] for m in sale_data}
+        mapped_quotation_data = {m[0]: m[1] for m in quotation_data}
+        mapped_sale_data = {m[0]: m[1] for m in sale_data}
         for sel in self:
-            sel.quotation_count = mapped_quotation_data.get(sel.id, 0)
-            sel.sale_order_count = mapped_sale_data.get(sel.id, 0)
+            sel.quotation_count = mapped_quotation_data.get(sel, 0)
+            sel.sale_order_count = mapped_sale_data.get(sel, 0)
 
     def _prepare_context_from_action(self):
         return {
@@ -70,7 +68,9 @@ class CrmSalespersonPlannerVisit(models.Model):
         ]
         if self.quotation_count == 1:
             action["views"] = [(self.env.ref("sale.view_order_form").id, "form")]
-            quotation = self.order_ids.filtered(lambda l: l.state in ("draft", "sent"))
+            quotation = self.order_ids.filtered(
+                lambda order: order.state in ("draft", "sent")
+            )
             action["res_id"] = quotation.id
         return action
 
@@ -84,7 +84,7 @@ class CrmSalespersonPlannerVisit(models.Model):
         if self.sale_order_count == 1:
             action["views"] = [(self.env.ref("sale.view_order_form").id, "form")]
             order = self.order_ids.filtered(
-                lambda l: l.state not in ("draft", "sent", "cancel")
+                lambda order: order.state not in ("draft", "sent", "cancel")
             )
             action["res_id"] = order.id
         return action

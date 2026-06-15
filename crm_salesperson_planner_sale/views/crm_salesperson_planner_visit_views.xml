@@ -16,7 +16,7 @@
                     name="action_sale_quotation_new"
                     type="object"
                     class="oe_highlight"
-                    attrs="{'invisible': [('state', 'not in', ('confirm', 'done'))]}"
+                    invisible="state not in ('confirm', 'done')"
                 />
             </header>
             <xpath expr="//div[@name='button_box']" position="inside">
@@ -25,7 +25,7 @@
                     type="object"
                     name="action_view_sale_quotation"
                     icon="fa-pencil-square-o"
-                    attrs="{'invisible': [('state', '=', 'draft')]}"
+                    invisible="state == 'draft'"
                 >
                     <field
                         name="quotation_count"
@@ -36,7 +36,7 @@
                 <button
                     class="oe_stat_button"
                     type="object"
-                    attrs="{'invisible': ['|',('sale_order_count', '=', 0), ('state', '=', 'draft')]}"
+                    invisible="sale_order_count == 0 or state == 'draft'"
                     name="action_view_sale_order"
                     icon="fa-usd"
                 >

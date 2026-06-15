@@ -3,7 +3,7 @@
 
 from odoo.tests import Form
 
-from odoo.addons.crm_salesperson_planner.tests.test_crm_salesperson_planner_visit import (
+from odoo.addons.crm_salesperson_planner.tests.test_crm_salesperson_planner_visit import (  # noqa: E501
     TestCrmSalespersonPlannerVisitBase,
 )
 
