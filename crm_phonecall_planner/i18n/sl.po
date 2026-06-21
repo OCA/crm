@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-13 03:59+0000\n"
-"PO-Revision-Date: 2026-06-07 10:08+0000\n"
+"PO-Revision-Date: 2026-06-21 19:46+0000\n"
 "Last-Translator: Matjaz Mozetic <matjaz@luxim.si>\n"
 "Language-Team: Slovenian (https://www.transifex.com/oca/teams/23907/sl/)\n"
 "Language: sl\n"
@@ -27,21 +27,23 @@ msgid ""
 "Allow repeated calls for the same partner, campaign, medium and source "
 "combination?"
 msgstr ""
+"Ali naj se dovoli večkratno klicanje za isto kombinacijo partnerja, "
+"kampanje, medija in vira?"
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__name
 msgid "Call Summary"
-msgstr ""
+msgstr "Povzetek klica"
 
 #. module: crm_phonecall_planner
 #: model_terms:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
 msgid "Call details"
-msgstr ""
+msgstr "Podrobnosti klica"
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__duration
 msgid "Call duration"
-msgstr ""
+msgstr "Trajanje klica"
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__campaign_id
@@ -66,7 +68,7 @@ msgstr "Ustvarjeno"
 #. module: crm_phonecall_planner
 #: model_terms:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
 msgid "Criteria"
-msgstr ""
+msgstr "Kriterij"
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__days_gap
@@ -86,12 +88,12 @@ msgstr "Konec"
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner__res_partner_domain
 msgid "Filter the parters that will get a scheduled call."
-msgstr ""
+msgstr "Filtrirajte partnerje, ki bodo prejeli načrtovani klic."
 
 #. module: crm_phonecall_planner
 #: model_terms:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
 msgid "Generate planning"
-msgstr ""
+msgstr "Izdelaj načrt"
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__id
@@ -116,7 +118,7 @@ msgstr "Zadnjič posodobljeno"
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner__duration
 msgid "Leave this free time between phone calls."
-msgstr ""
+msgstr "Med telefonskimi klici pustite ta prazen čas."
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__medium_id
@@ -126,28 +128,28 @@ msgstr "Srednja"
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__res_partner_domain
 msgid "Partners filter"
-msgstr ""
+msgstr "Filtriranje partnerjev"
 
 #. module: crm_phonecall_planner
 #: model:ir.model,name:crm_phonecall_planner.model_crm_phonecall_planner
 msgid "Phonecall planner"
-msgstr ""
+msgstr "Načrtovalnik telefonskih klicev"
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__planned_calls
 msgid "Planned Calls"
-msgstr ""
+msgstr "Načrtovani klici"
 
 #. module: crm_phonecall_planner
 #: model:ir.actions.act_window,name:crm_phonecall_planner.crm_phonecall_planner_open
 #: model:ir.ui.menu,name:crm_phonecall_planner.crm_phonecall_planner_menu
 msgid "Planner"
-msgstr ""
+msgstr "Načrtovalnik"
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__repeat_calls
 msgid "Repeat Calls"
-msgstr ""
+msgstr "Ponovljeni klici"
 
 #. module: crm_phonecall_planner
 #: model_terms:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
@@ -170,6 +172,8 @@ msgid ""
 "Schedule calls from this moment. The time you select will be used as the "
 "plan starting time for each day in the range."
 msgstr ""
+"Od sedaj naprej načrtujte klice. Izbrani čas bo veljal kot začetni čas "
+"načrta za vsak dan v tem obdobju."
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner__end
@@ -177,16 +181,18 @@ msgid ""
 "Schedule calls until this moment. The time you select will be used as the "
 "plan ending time for each day in the range."
 msgstr ""
+"Načrtujte klice do tega trenutka. Izbrani čas bo uporabljen kot čas "
+"zaključka načrta za vsak dan v tem obdobju."
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner__days_gap
 msgid "Schedule one call each X days to the same partner."
-msgstr ""
+msgstr "Načrtuj en klic na vsakih X dni istemu partnerju."
 
 #. module: crm_phonecall_planner
 #: model_terms:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
 msgid "Scheduling"
-msgstr ""
+msgstr "Načrtovanje"
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__source_id
@@ -202,7 +208,7 @@ msgstr "Zagon"
 #: code:addons/crm_phonecall_planner/wizards/crm_phonecall_planner.py:0
 #, python-format
 msgid "Starting date must be less than ending date"
-msgstr ""
+msgstr "Začetni datum mora biti pred končnim"
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__tag_ids
@@ -211,27 +217,25 @@ msgstr "Oznake"
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner__campaign_id
-#, fuzzy
 msgid ""
 "This is a name that helps you keep track of your different campaign efforts, "
 "e.g. Fall_Drive, Christmas_Special"
 msgstr ""
-"Naziv, ki pomaga slediti različnim kampanjskim podvigom; npr. "
-"jesenska_razprodaja, božične_ugodnosti"
+"To je naziv, ki vam pomaga slediti različnim kampanjam, npr. "
+"Jesenska_akcija, Božična_posebna ponudba"
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner__medium_id
-#, fuzzy
 msgid "This is the method of delivery, e.g. Postcard, Email, or Banner Ad"
-msgstr "Metoda dostave; npr. pošta, e-pošta, spletna pasica"
+msgstr "To je način dostave, npr. razglednica, e-pošta ali pasica"
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner__source_id
-#, fuzzy
 msgid ""
 "This is the source of the link, e.g. Search Engine, another domain, or name "
 "of email list"
-msgstr "Vir povezave; npr. iskalnik, druga domena, naziv e-poštnega seznama"
+msgstr ""
+"To je vir povezave, npr. iskalnik, druga domena ali naziv e-poštnega seznama"
 
 #. module: crm_phonecall_planner
 #: model_terms:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
