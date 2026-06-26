@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server saas~11.5\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-09-21 13:17+0000\n"
-"PO-Revision-Date: 2026-06-07 10:12+0000\n"
+"PO-Revision-Date: 2026-06-26 10:00+0000\n"
 "Last-Translator: Matjaz Mozetic <matjaz@luxim.si>\n"
 "Language-Team: Slovenian (https://www.transifex.com/odoo/teams/41243/sl/)\n"
 "Language: sl\n"
@@ -28,7 +28,7 @@ msgstr ""
 #. module: crm_lead_to_task
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead__task_count
 msgid "#Task"
-msgstr ""
+msgstr "Št. opravil"
 
 #. module: crm_lead_to_task
 #: model_terms:ir.ui.view,arch_db:crm_lead_to_task.crm_lead_view_form
@@ -37,16 +37,19 @@ msgid ""
 "                        <span class=\"o_stat_text\" invisible=\"task_count "
 "&gt; 1\">Task</span>"
 msgstr ""
+"<span class=\"o_stat_text\" invisible=\"task_count &lt; 2\">Opravil</span>\n"
+"                        <span class=\"o_stat_text\" invisible=\"task_count "
+"&gt; 1\">Opravilo</span>"
 
 #. module: crm_lead_to_task
 #: model_terms:ir.ui.view,arch_db:crm_lead_to_task.view_task_form2
 msgid "<span class=\"o_stat_text\">CRM Lead</span>"
-msgstr ""
+msgstr "<span class=\"o_stat_text\">CRM Indic</span>"
 
 #. module: crm_lead_to_task
 #: model_terms:ir.ui.view,arch_db:crm_lead_to_task.crm_lead_to_task_res_config_settings_view_form
 msgid "Archive lead"
-msgstr ""
+msgstr "Arhiviraj indic"
 
 #. module: crm_lead_to_task
 #: model_terms:ir.ui.view,arch_db:crm_lead_to_task.crm_lead_convert2task_view_form
@@ -56,12 +59,12 @@ msgstr "Prekliči"
 #. module: crm_lead_to_task
 #: model:ir.model,name:crm_lead_to_task.model_res_company
 msgid "Companies"
-msgstr ""
+msgstr "Družbe"
 
 #. module: crm_lead_to_task
 #: model:ir.model,name:crm_lead_to_task.model_res_config_settings
 msgid "Config Settings"
-msgstr ""
+msgstr "Nastavitve"
 
 #. module: crm_lead_to_task
 #: model:ir.actions.act_window,name:crm_lead_to_task.crm_lead_convert2task_action
@@ -91,12 +94,12 @@ msgstr "Ustvarjeno"
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_res_company__crm_archive_lead_on_convert
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_res_config_settings__crm_archive_lead_on_convert
 msgid "Crm Archive Lead On Convert"
-msgstr ""
+msgstr "CRM arhiviraj indic pri pretvorbi"
 
 #. module: crm_lead_to_task
 #: model_terms:ir.ui.view,arch_db:crm_lead_to_task.crm_lead_to_task_res_config_settings_view_form
 msgid "Default project to be used when creating a task from a lead."
-msgstr ""
+msgstr "Privzeti projekt, ki se uporabi pri ustvarjanju opravila iz indica."
 
 #. module: crm_lead_to_task
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead__display_name
@@ -111,7 +114,7 @@ msgstr "Prikazani naziv"
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_res_company__crm_force_project_id
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_res_config_settings__crm_force_project_id
 msgid "Force Project"
-msgstr ""
+msgstr "Vsili projekt"
 
 #. module: crm_lead_to_task
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead__id
@@ -128,6 +131,8 @@ msgid ""
 "If enabled, leads will be archived automatically after converting it to a "
 "task."
 msgstr ""
+"Če je ta možnost omogočena, se indici po pretvorbi v opravilo samodejno "
+"arhivirajo."
 
 #. module: crm_lead_to_task
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task__write_uid
@@ -156,7 +161,7 @@ msgstr "Pretvori indic v opravilo"
 #: code:addons/crm_lead_to_task/models/project_task.py:0
 #: code:addons/crm_lead_to_task/tests/test_crm_lead_task.py:0
 msgid "Lead: %s"
-msgstr ""
+msgstr "Indic: %s"
 
 #. module: crm_lead_to_task
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task__project_id
@@ -167,19 +172,19 @@ msgstr "Projekt"
 #: model:ir.model,name:crm_lead_to_task.model_project_task
 #: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead__task_ids
 msgid "Task"
-msgstr ""
+msgstr "Opravilo"
 
 #. module: crm_lead_to_task
 #: model_terms:ir.ui.view,arch_db:crm_lead_to_task.crm_lead_to_task_res_config_settings_view_form
 msgid "Tasks"
-msgstr ""
+msgstr "Opravila"
 
 #. module: crm_lead_to_task
 #. odoo-python
 #: code:addons/crm_lead_to_task/models/crm_lead.py:0
 #: code:addons/crm_lead_to_task/tests/test_crm_lead_task.py:0
 msgid "Tasks from crm lead %s"
-msgstr ""
+msgstr "Opravila iz crm indica %s"
 
 #. module: crm_lead_to_task
 #: model:ir.model.fields,help:crm_lead_to_task.field_project_task__display_name
@@ -195,6 +200,16 @@ msgid ""
 "            Make sure to use the right format and order e.g. Improve the "
 "configuration screen #feature #v16 @Mitchell !"
 msgstr ""
+"Za nastavitev novih opravil uporabite te ključne besede v naslovu:\n"
+"\n"
+"            #oznake Nastavite oznake za opravilo\n"
+"            @uporabnik Dodeli opravilo uporabniku\n"
+"            ! Nastavite opravilo na srednjo prioriteto\n"
+"            !! Nastavite opravilo na visoko prioriteto\n"
+"            !!! Nastavite opravilo na nujno prioriteto\n"
+"\n"
+"            Prepričajte se, da uporabljate pravilno obliko in vrstni red, "
+"npr. Izboljšajte nastavitveni zaslon #funkcija #v16 @Mitchell !"
 
 #~ msgid "Last Modified on"
 #~ msgstr "Zadnjič spremenjeno"
