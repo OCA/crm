@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-12-04 15:47+0000\n"
-"PO-Revision-Date: 2023-04-11 13:27+0000\n"
+"PO-Revision-Date: 2026-06-26 10:00+0000\n"
 "Last-Translator: Matjaz Mozetic <matjaz@luxim.si>\n"
 "Language-Team: Slovenian (https://www.transifex.com/oca/teams/23907/sl/)\n"
 "Language: sl\n"
@@ -18,12 +18,12 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
 "n%100==4 ? 2 : 3;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: crm_lead_code
 #: model:ir.model.fields,field_description:crm_lead_code.field_crm_lead__code
 msgid "Lead Number"
-msgstr ""
+msgstr "Številka indica"
 
 #. module: crm_lead_code
 #: model:ir.model,name:crm_lead_code.model_crm_lead
@@ -36,4 +36,4 @@ msgstr "Indic/priložnost"
 #: model:ir.model.constraint,message:crm_lead_code.constraint_crm_lead_crm_lead_unique_code
 #, python-format
 msgid "The code must be unique!"
-msgstr ""
+msgstr "Koda mora biti unikatna!"
