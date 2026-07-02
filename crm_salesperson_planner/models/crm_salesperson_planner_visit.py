@@ -43,7 +43,7 @@ class CrmSalespersonPlannerVisit(models.Model):
         tracking=True,
         default=lambda self: self.env.user,
         domain=lambda self: [
-            ("groups_id", "in", self.env.ref("sales_team.group_sale_salesman").id)
+            ("group_ids", "in", self.env.ref("sales_team.group_sale_salesman").id)
         ],
     )
     opportunity_ids = fields.Many2many(

@@ -40,7 +40,7 @@ class CrmSalespersonPlannerVisitTemplate(models.Model):
         tracking=True,
         default=lambda self: self.env.user,
         domain=lambda self: [
-            ("groups_id", "in", self.env.ref("sales_team.group_sale_salesman").id)
+            ("group_ids", "in", self.env.ref("sales_team.group_sale_salesman").id)
         ],
     )
     partner_id = fields.Many2one(
