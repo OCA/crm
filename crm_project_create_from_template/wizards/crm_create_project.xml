@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 Odoo Community Association (OCA)
+     License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl-3.0) -->
+<odoo>
+    <record id="crm_create_project_view_form_inherit" model="ir.ui.view">
+        <field name="name">CRM Create Project Form From Template</field>
+        <field name="model">crm.create.project</field>
+        <field
+            name="inherit_id"
+            ref="crm_project_create.crm_create_project_view_form"
+        />
+        <field name="arch" type="xml">
+            <field name="project_name" position="before">
+                <field name="project_template_id" context="{'active_test': False}" />
+            </field>
+        </field>
+    </record>
+</odoo>
