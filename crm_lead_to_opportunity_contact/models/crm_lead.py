@@ -2,8 +2,9 @@
 # @author: Alexis de Lattre <alexis.delattre@akretion.com>
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
-from odoo import _, models
+from odoo import models
 from odoo.exceptions import UserError
+from odoo.tools import parse_contact_from_email
 
 
 class CrmLead(models.Model):
@@ -15,10 +16,10 @@ class CrmLead(models.Model):
         rpo = self.env["res.partner"]
         contact_name = self.contact_name
         if not contact_name and self.email_from:
-            contact_name = rpo._parse_partner_name(self.email_from)[0]
+            contact_name = parse_contact_from_email(self.email_from)[0]
         if not contact_name:
             raise UserError(
-                _("Contact name is not set on lead '%s'.") % self.display_name
+                self.env._("Contact name is not set on lead %s.", self.display_name)
             )
         vals = self.with_context(
             default_user_id=self.user_id.id

@@ -1,0 +1,2 @@
+- Alexis de Lattre \<alexis.delattre@akretion.com\>
+- Marc Gimeno Morales \<marc.gimeno@forgeflow.com\>
