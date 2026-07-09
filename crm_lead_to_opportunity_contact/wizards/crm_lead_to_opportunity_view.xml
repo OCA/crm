@@ -2,6 +2,7 @@
 <!--
   Copyright 2023 Akretion France (http://www.akretion.com/)
   @author: Alexis de Lattre <alexis.delattre@akretion.com>
+  Copyright 2026 ForgeFlow S.L.
   License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 -->
 <odoo>
@@ -9,20 +10,48 @@
         <field name="model">crm.lead2opportunity.partner</field>
         <field name="inherit_id" ref="crm.view_crm_lead2opportunity_partner" />
         <field name="arch" type="xml">
-            <xpath
-                expr="//field[@name='partner_id']/ancestor::div[hasclass('row')][1]"
-                position="inside"
-            >
-                <t invisible="action != 'create_child'">
-                    <label for="create_child_partner_id" class="col-3 p-0" />
-                    <field
-                        name="create_child_partner_id"
-                        class="col p-0"
-                        widget="res_partner_many2one"
-                        context="{'res_partner_search_mode': 'customer', 'show_vat': True}"
-                        required="action == 'create_child'"
-                    />
-                </t>
+            <xpath expr="//div[@name='action']" position="after">
+                <field name="partner_is_company" invisible="1" />
+                <div
+                    name="contact_action"
+                    invisible="name != 'convert' or action != 'exist' or not partner_is_company or not lead_contact_name"
+                    class="row"
+                >
+                    <div class="col-3 offset-1">
+                        <field name="contact_action" nolabel="1" widget="radio" />
+                    </div>
+                    <div class="col-4">
+                        <div class="row" style="height: 33.33%;">
+                            <t invisible="contact_action != 'create_contact'">
+                                <label
+                                    for="lead_contact_name"
+                                    class="col-3 p-0"
+                                    string="Contact"
+                                />
+                                <field
+                                    name="lead_contact_name"
+                                    class="col p-0"
+                                    readonly="1"
+                                />
+                            </t>
+                        </div>
+                        <div class="row" style="height: 33.33%;">
+                            <t invisible="contact_action != 'link_contact'">
+                                <label for="contact_partner_id" class="col-3 p-0" />
+                                <!-- `required` must never be true while the block
+                                     is hidden: Odoo only skips the validation of
+                                     fields carrying their own `invisible`. -->
+                                <field
+                                    name="contact_partner_id"
+                                    class="col p-0"
+                                    domain="[('parent_id', '=', partner_id), ('is_company', '=', False)]"
+                                    required="name == 'convert' and contact_action == 'link_contact'"
+                                />
+                            </t>
+                        </div>
+                        <div class="row" style="height: 33.33%;" />
+                    </div>
+                </div>
             </xpath>
         </field>
     </record>

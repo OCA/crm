@@ -1,5 +1,6 @@
 # Copyright 2023 Akretion France (http://www.akretion.com/)
 # @author: Alexis de Lattre <alexis.delattre@akretion.com>
+# Copyright 2026 ForgeFlow S.L.
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 {
@@ -7,8 +8,7 @@
     "version": "19.0.1.0.0",
     "category": "CRM",
     "license": "AGPL-3",
-    "summary": "Lead to opportunity: option to create a contact on an existing "
-    "customer",
+    "summary": "Lead to opportunity: create or link a contact on an existing customer",
     "author": "Akretion,Odoo Community Association (OCA)",
     "maintainers": ["alexis-via"],
     "website": "https://github.com/OCA/crm",

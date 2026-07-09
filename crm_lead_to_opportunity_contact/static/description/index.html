@@ -375,13 +375,32 @@ ul.auto-toc {
 !! source digest: sha256:4ed7fe64c973da857fdc999167004b63b97c43d00c2e48e4561aa75a4f73bc0e
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 <p><a class="reference external image-reference" href="https://odoo-community.org/page/development-status"><img alt="Beta" src="https://img.shields.io/badge/maturity-Beta-yellow.png" /></a> <a class="reference external image-reference" href="http://www.gnu.org/licenses/agpl-3.0-standalone.html"><img alt="License: AGPL-3" src="https://img.shields.io/badge/license-AGPL--3-blue.png" /></a> <a class="reference external image-reference" href="https://github.com/OCA/crm/tree/19.0/crm_lead_to_opportunity_contact"><img alt="OCA/crm" src="https://img.shields.io/badge/github-OCA%2Fcrm-lightgray.png?logo=github" /></a> <a class="reference external image-reference" href="https://translation.odoo-community.org/projects/crm-19-0/crm-19-0-crm_lead_to_opportunity_contact"><img alt="Translate me on Weblate" src="https://img.shields.io/badge/weblate-Translate%20me-F47D42.png" /></a> <a class="reference external image-reference" href="https://runboat.odoo-community.org/builds?repo=OCA/crm&amp;target_branch=19.0"><img alt="Try me on Runboat" src="https://img.shields.io/badge/runboat-Try%20me-875A7B.png" /></a></p>
-<p>In the wizard to convert a lead to an opportunity, you have 2 options:</p>
+<p>When converting a lead to an opportunity, the native wizard can already
+attach the lead’s contact to an existing company: pick <strong>Create a new
+customer</strong> and fill the <strong>Company</strong> field.</p>
+<p>That field is only editable when the lead carries <strong>no company name</strong>,
+though. As soon as the lead has one — which is the usual case for leads
+coming from a website form or an import — the native wizard leaves no
+way to do it:</p>
 <ul class="simple">
-<li>Create a new customer</li>
-<li>Link to an existing customer</li>
+<li><strong>Create a new customer</strong> creates a <em>second</em> company out of the lead’s
+company name, even when that company already exists;</li>
+<li><strong>Link to an existing customer</strong> links the company, and the lead’s
+contact is never created.</li>
 </ul>
-<p>This module adds a third option: <strong>Create a new contact on an existing
-customer</strong>.</p>
+<p>This module fills that gap. It adds a sub-question under <strong>Link to an
+existing customer</strong>, shown when the lead has a contact name and the
+selected customer is a company, to decide what to do with that contact:</p>
+<ul class="simple">
+<li><strong>Create a new contact</strong> on the existing company</li>
+<li><strong>Link to an existing contact</strong> of that company</li>
+<li><strong>Do not add a contact</strong> (keep the native behaviour: link the company,
+and leave the lead’s contact aside)</li>
+</ul>
+<p>If a contact of the company already matches the lead’s email, it is
+pre-selected, so that no duplicate is created. When the lead has no
+contact name, or the selected customer is a person, the native behaviour
+is kept.</p>
 <p><img alt="Screenshot lead to opportunity wizard" src="https://raw.githubusercontent.com/OCA/crm/19.0/crm_lead_to_opportunity_contact/static/description/crm_lead_to_opportunity_contact-sshot.png" /></p>
 <p><strong>Table of contents</strong></p>
 <div class="contents local topic" id="contents">

@@ -1,32 +1,30 @@
 # Copyright 2023 Akretion France (http://www.akretion.com/)
 # @author: Alexis de Lattre <alexis.delattre@akretion.com>
+# Copyright 2026 ForgeFlow S.L.
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
 from odoo import models
-from odoo.exceptions import UserError
-from odoo.tools import parse_contact_from_email
 
 
 class CrmLead(models.Model):
     _inherit = "crm.lead"
 
-    def _create_child_partner(self, parent_partner_id):
+    def _find_contact_in_company(self, company):
+        """Return a contact of ``company`` matching the lead's email, if any.
+
+        Matching is done by email, which is the key Odoo itself uses to look up
+        partners, and the oldest one wins for the very same reason: it is
+        considered the most relevant.
+        """
         self.ensure_one()
-        assert parent_partner_id
-        rpo = self.env["res.partner"]
-        contact_name = self.contact_name
-        if not contact_name and self.email_from:
-            contact_name = parse_contact_from_email(self.email_from)[0]
-        if not contact_name:
-            raise UserError(
-                self.env._("Contact name is not set on lead %s.", self.display_name)
-            )
-        vals = self.with_context(
-            default_user_id=self.user_id.id
-        )._prepare_customer_values(
-            contact_name,
-            is_company=False,
-            parent_id=parent_partner_id,
+        if not company or not self.email_normalized:
+            return self.env["res.partner"]
+        return self.env["res.partner"].search(
+            [
+                ("parent_id", "=", company.id),
+                ("is_company", "=", False),
+                ("email_normalized", "=", self.email_normalized),
+            ],
+            limit=1,
+            order="id",
         )
-        partner = rpo.create(vals)
-        return partner
