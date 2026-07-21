@@ -28,8 +28,8 @@
                 />
                 <div style="font-size: 0.9rem;">
                     <p style="margin-bottom: 10px; font-size: 1rem;">Dear <t
-                            t-out="object.name or ''"
-                        >User</t>,
+                        t-out="object.name or ''"
+                    >User</t>,
                     </p>
                     <p>Below are your active CRM app tasks due in the next 7 days:
                     </p>
@@ -47,8 +47,8 @@
                                     <span t-out="activity_obj.display_name" />
                                     -
                                     <span
-                                        t-out="activity.summary or activity_obj.activity_type_id.display_name"
-                                    />
+                                    t-out="activity.summary or activity_obj.activity_type_id.display_name"
+                                />
                                 </p>
                             </li>
                         </t>
@@ -66,22 +66,21 @@
                     <t t-if="object.company_id.email">
                         |
                         <a
-                            t-att-href="'mailto:%s' % object.company_id.email"
-                            style="text-decoration:none; color: #454748;"
-                            t-out="object.company_id.email or ''"
-                        />
+                        t-att-href="'mailto:%s' % object.company_id.email"
+                        style="text-decoration:none; color: #454748;"
+                        t-out="object.company_id.email or ''"
+                    />
 
                     </t>
                     <t t-if="object.company_id.website">
                         |
                         <a
-                            t-att-href="'%s' % object.company_id.website"
-                            style="text-decoration:none; color: #454748;"
-                            t-out="object.company_id.website or ''"
-                        />
+                        t-att-href="'%s' % object.company_id.website"
+                        style="text-decoration:none; color: #454748;"
+                        t-out="object.company_id.website or ''"
+                    />
                     </t>
                 </div>
-
             </div>
         </field>
     </record>
