@@ -41,7 +41,10 @@
                                     t-value="object.env[activity.res_model].browse(activity.res_id)"
                                 />
                                 <p style="margin-bottom: 5px">Deadline:
-                                    <span t-out="activity.date_deadline" />
+                                    <span
+                                    t-field="activity.date_deadline"
+                                    t-options="{'widget': 'date'}"
+                                />
                                 </p>
                                 <p style="margin-top: 5px">
                                     <span t-out="activity_obj.display_name" />

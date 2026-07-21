@@ -1,14 +1,17 @@
 from dateutil.relativedelta import relativedelta
 
 from odoo import fields
-from odoo.tests.common import TransactionCase, new_test_user
+from odoo.tests.common import new_test_user
+
+from odoo.addons.base.tests.common import BaseCommon
 
 
-class TestEmailReminderPlannedActivity(TransactionCase):
+class TestEmailReminderPlannedActivity(BaseCommon):
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
 
+        cls.env = cls.env(context=dict(cls.env.context, tracking_disable=True))
         cls.user_a = new_test_user(
             cls.env,
             login="user_a",
