@@ -14,7 +14,6 @@ class CrmPhonecall2phonecall(models.TransientModel):
     )
     summary_id = fields.Many2one(
         comodel_name="crm.phonecall.summary",
-        string="Summary",
         required=True,
         ondelete="restrict",
     )

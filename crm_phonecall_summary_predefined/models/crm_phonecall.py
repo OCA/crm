@@ -18,7 +18,6 @@ class CRMPhonecall(models.Model):
     )
     summary_id = fields.Many2one(
         comodel_name="crm.phonecall.summary",
-        string="Summary",
         required=True,
         ondelete="restrict",
     )
@@ -34,9 +33,10 @@ class CRMPhonecallSummary(models.Model):
 
     _name = "crm.phonecall.summary"
     _description = "Crm Phonecall Summary"
-    _sql_constraints = [
-        ("name_unique", "UNIQUE (name)", "Name must be unique"),
-    ]
+    _name_unique = models.Constraint(
+        "UNIQUE (name)",
+        "Name must be unique",
+    )
 
     name = fields.Char(required=True)
     phonecall_ids = fields.One2many(
