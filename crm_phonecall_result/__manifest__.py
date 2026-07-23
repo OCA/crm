@@ -3,7 +3,7 @@
 {
     "name": "Crm Phonecall Result",
     "summary": "Adds phone call result tracking and reporting to CRM phonecalls",
-    "version": "18.0.1.0.0",
+    "version": "19.0.1.0.0",
     "category": "Partner Management",
     "website": "https://github.com/OCA/crm",
     "author": "Odoo Community Association (OCA)",
