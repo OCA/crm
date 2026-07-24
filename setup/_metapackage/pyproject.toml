@@ -1,6 +1,6 @@
 [project]
 name = "odoo-addons-oca-crm"
-version = "17.0.20251130.0"
+version = "17.0.20260724.0"
 dependencies = [
     "odoo-addon-crm_claim>=17.0dev,<17.1dev",
     "odoo-addon-crm_claim_code>=17.0dev,<17.1dev",
@@ -14,6 +14,7 @@ dependencies = [
     "odoo-addon-crm_lead_to_task>=17.0dev,<17.1dev",
     "odoo-addon-crm_lead_vat>=17.0dev,<17.1dev",
     "odoo-addon-crm_location>=17.0dev,<17.1dev",
+    "odoo-addon-crm_lost_reason_required>=17.0dev,<17.1dev",
     "odoo-addon-crm_partner_assign>=17.0dev,<17.1dev",
     "odoo-addon-crm_phonecall>=17.0dev,<17.1dev",
     "odoo-addon-crm_phonecall_summary_predefined>=17.0dev,<17.1dev",
