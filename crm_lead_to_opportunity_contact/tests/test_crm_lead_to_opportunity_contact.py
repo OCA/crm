@@ -3,9 +3,13 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
 from odoo.exceptions import UserError
-from odoo.tests import TransactionCase
+from odoo.tests import TransactionCase, tagged
 
 
+# Partners are created here, so every module extending res.partner must be
+# loaded already: at install time the registry only knows this module's
+# dependencies, while the database columns of the other ones are there.
+@tagged("post_install", "-at_install")
 class TestCrmLeadToOpportunityContact(TransactionCase):
     @classmethod
     def setUpClass(cls):
