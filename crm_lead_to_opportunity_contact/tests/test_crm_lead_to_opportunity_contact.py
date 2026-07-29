@@ -133,6 +133,26 @@ class TestCrmLeadToOpportunityContact(TransactionCase):
         self.assertEqual(wizard.contact_action, "link_contact")
         self.assertEqual(wizard.contact_partner_id, self.contact)
 
+    def test_smart_default_matches_a_malformed_email(self):
+        """An email that cannot be normalized is compared as it was typed.
+
+        Odoo keys partners on the normalized email and falls back to the raw
+        input when normalization fails, so the customer lookup matches such
+        leads; the contact lookup must not be stricter.
+        """
+        broken = self.env["res.partner"].create(
+            {
+                "name": "Typo Peter",
+                "parent_id": self.company.id,
+                "email": "peter.example.com",
+            }
+        )
+        self.assertFalse(broken.email_normalized)
+        lead = self._make_lead(contact_name="Peter", email_from="peter.example.com")
+        wizard = self._wizard(lead, action="exist", partner_id=self.company.id)
+        self.assertEqual(wizard.contact_action, "link_contact")
+        self.assertEqual(wizard.contact_partner_id, broken)
+
     def test_smart_default_without_match(self):
         lead = self._make_lead(contact_name="New", email_from="new@example.com")
         wizard = self._wizard(lead, action="exist", partner_id=self.company.id)
