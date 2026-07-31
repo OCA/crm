@@ -17,6 +17,7 @@ class CrmLead(models.Model):
             ("customer", "Customer Lead"),
             ("supplier", "Supplier Lead"),
         ],
+        default="customer",
     )
     purchase_amount_total = fields.Monetary(
         compute="_compute_purchase_amount_total",
