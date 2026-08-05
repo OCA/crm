@@ -3,7 +3,7 @@
 {
     "name": "CRM stage probability",
     "summary": "Define fixed probability on the stages",
-    "version": "19.0.1.0.0",
+    "version": "19.0.1.0.1",
     "development_status": "Alpha",
     "category": "Sales/CRM",
     "website": "https://github.com/OCA/crm",
