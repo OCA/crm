@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+    <record id="email_template_crm_reminder_activities" model="mail.template">
+        <field name="name">Reminder CRM planned activities</field>
+        <field name="model_id" ref="base.model_res_users" />
+        <field name="email_from">{{object.env.user.email_formatted}}</field>
+        <field name="partner_to">{{object.partner_id.id}}</field>
+        <field name="auto_delete" eval="True" />
+        <field name="subject">Reminder CRM planned activities</field>
+        <field name="body_html" type="html">
+            <div style="max-width: 500px">
+                <!-- HEADER -->
+                <span style="font-size: 0.75rem;">Reminder CRM planned activities
+                </span>
+                <br />
+                <span style="font-size: 1.3rem; font-weight: bold; margin-top: 14px;">
+                    <t t-out="object.name or ''">User</t>
+                </span>
+                <hr
+                    width="100%"
+                    style="background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0;margin: 16px 0px;"
+                />
+
+                <!-- CONTENT -->
+                <t
+                    t-set="activities"
+                    t-value="object._get_crm_activities(user=object)"
+                />
+                <div style="font-size: 0.9rem;">
+                    <p style="margin-bottom: 10px; font-size: 1rem;">Dear <t
+                        t-out="object.name or ''"
+                    >User</t>,
+                    </p>
+                    <p>Below are your active CRM app tasks due in the next 7 days:
+                    </p>
+                    <ul>
+                        <t t-foreach="activities" t-as="activity">
+                            <li>
+                                <t
+                                    t-set="activity_obj"
+                                    t-value="object.env[activity.res_model].browse(activity.res_id)"
+                                />
+                                <p style="margin-bottom: 5px">Deadline:
+                                    <span t-out="activity.date_deadline" />
+                                </p>
+                                <p style="margin-top: 5px">
+                                    <span t-out="activity_obj.display_name" />
+                                    -
+                                    <span
+                                    t-out="activity.summary or activity_obj.activity_type_id.display_name"
+                                />
+                                </p>
+                            </li>
+                        </t>
+                    </ul>
+                </div>
+                <hr
+                    width="100%"
+                    style="background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0;margin: 16px 0px;"
+                />
+
+                <!-- FOOTER -->
+                <p t-out="object.company_id.name or ''" style="font-size: 0.8rem;" />
+                <div style="font-size: 0.8rem;opacity: 0.7;">
+                    <t t-out="object.company_id.phone or ''" />
+                    <t t-if="object.company_id.email">
+                        |
+                        <a
+                        t-att-href="'mailto:%s' % object.company_id.email"
+                        style="text-decoration:none; color: #454748;"
+                        t-out="object.company_id.email or ''"
+                    />
+
+                    </t>
+                    <t t-if="object.company_id.website">
+                        |
+                        <a
+                        t-att-href="'%s' % object.company_id.website"
+                        style="text-decoration:none; color: #454748;"
+                        t-out="object.company_id.website or ''"
+                    />
+                    </t>
+                </div>
+            </div>
+        </field>
+    </record>
+</odoo>
