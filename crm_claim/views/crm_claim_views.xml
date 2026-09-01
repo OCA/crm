@@ -63,7 +63,7 @@
                                 string="Claim/Action Description"
                                 groups="base.group_user"
                             >
-                                <field name="description" nolabel="1" />
+                                <field name="description" nolabel="1" colspan="2" />
                             </group>
                         </page>
                         <page string="Follow Up" groups="base.group_user">
