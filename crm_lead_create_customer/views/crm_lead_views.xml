@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+  Copyright 2026 ForgeFlow S.L. (https://www.forgeflow.com)
+  License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl).
+-->
+<odoo>
+    <record id="crm_lead_view_form_create_customer" model="ir.ui.view">
+        <field name="name">crm.lead.form.create.customer</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form" />
+        <field name="arch" type="xml">
+            <!-- Opportunities only expose the customer, the email and the
+                 phone. Bring back the fields the customer is built from so
+                 that an opportunity that never was a lead can be completed. -->
+            <xpath
+                expr="//group[@name='opportunity_partner']/field[@name='partner_id']"
+                position="after"
+            >
+                <field name="contact_name" invisible="partner_id" />
+                <field name="partner_name" invisible="partner_id" />
+                <field name="function" invisible="partner_id" />
+                <label for="street" string="Address" invisible="partner_id" />
+                <div class="o_address_format" invisible="partner_id">
+                    <field
+                        name="street"
+                        placeholder="Street..."
+                        class="o_address_street"
+                    />
+                    <field
+                        name="street2"
+                        placeholder="Street 2..."
+                        class="o_address_street"
+                    />
+                    <field name="city" placeholder="City" class="o_address_city" />
+                    <field
+                        name="state_id"
+                        placeholder="State"
+                        class="o_address_state"
+                        options="{'no_open': True}"
+                    />
+                    <field name="zip" placeholder="ZIP" class="o_address_zip" />
+                    <field
+                        name="country_id"
+                        placeholder="Country"
+                        class="o_address_country"
+                        options="{'no_open': True, 'no_create': True}"
+                    />
+                </div>
+                <field
+                    name="website"
+                    widget="url"
+                    placeholder="e.g. https://www.odoo.com"
+                    invisible="partner_id"
+                />
+            </xpath>
+            <!-- Sits in the header next to Won / Enrich / Lost, anchored on
+                 a core button so crm_iap_enrich keeps its own xpath. -->
+            <xpath expr="//header/button[@name='action_restore']" position="before">
+                <button
+                    name="action_create_customer"
+                    type="object"
+                    string="Create Customer"
+                    class="oe_highlight"
+                    data-hotkey="c"
+                    title="Create the customer from the contact details of this opportunity"
+                    invisible="partner_id or type == 'lead' or not active"
+                />
+            </xpath>
+        </field>
+    </record>
+</odoo>
