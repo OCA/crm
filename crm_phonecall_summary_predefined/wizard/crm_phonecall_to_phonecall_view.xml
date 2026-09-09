@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html). -->
+<odoo>
+    <record id="crm_case_form_view_leads_inherit" model="ir.ui.view">
+        <field name="name">crm.phonecall2phonecall.form</field>
+        <field name="model">crm.phonecall2phonecall</field>
+        <field name="inherit_id" ref="crm_phonecall.phonecall_to_phonecall_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="summary_id" />
+            </xpath>
+        </field>
+    </record>
+</odoo>
