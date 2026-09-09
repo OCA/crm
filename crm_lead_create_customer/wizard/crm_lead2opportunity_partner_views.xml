@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+  Copyright 2026 ForgeFlow S.L. (https://www.forgeflow.com)
+  License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl).
+-->
+<odoo>
+    <!-- Same wizard as the lead conversion, reshaped: reached from an
+         opportunity there is nothing to convert, so the convert/merge radio
+         is replaced by a plain "merge the duplicates" checkbox. The labels
+         have to live in the arch, since the web client strips the context
+         before loading the field metadata. -->
+    <record id="crm_lead2opportunity_partner_view_form_customer" model="ir.ui.view">
+        <field name="name">crm.lead2opportunity.partner.form.customer</field>
+        <field name="model">crm.lead2opportunity.partner</field>
+        <field name="inherit_id" ref="crm.view_crm_lead2opportunity_partner" />
+        <field name="mode">primary</field>
+        <field name="priority">100</field>
+        <field name="arch" type="xml">
+            <form position="attributes">
+                <attribute name="string">Create Customer</attribute>
+            </form>
+            <xpath expr="//group[@name='name']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//group[@name='name']" position="after">
+                <group name="merge_duplicates">
+                    <field name="has_duplicates" invisible="1" />
+                    <field
+                        name="merge_duplicates"
+                        string="Merge with the duplicate opportunities found"
+                        invisible="not has_duplicates"
+                    />
+                </group>
+            </xpath>
+            <xpath
+                expr="//field[@name='duplicated_lead_ids']/ancestor::group[1]"
+                position="attributes"
+            >
+                <attribute name="invisible">not merge_duplicates</attribute>
+            </xpath>
+            <!-- The customer choice stays available when merging, since the
+                 merge has to produce the customer too. -->
+            <xpath expr="//div[@name='action']" position="attributes">
+                <attribute name="invisible">0</attribute>
+            </xpath>
+            <xpath expr="//footer/button[@name='action_apply']" position="attributes">
+                <attribute name="string">Create Customer</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="crm_lead_customer_create_action" model="ir.actions.act_window">
+        <field name="name">Create Customer</field>
+        <field name="res_model">crm.lead2opportunity.partner</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="crm_lead2opportunity_partner_view_form_customer" />
+        <field name="target">new</field>
+    </record>
+</odoo>
