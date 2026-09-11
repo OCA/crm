@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 ForgeFlow S.L.
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="crm_lead_view_form" model="ir.ui.view">
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form" />
+        <field name="arch" type="xml">
+            <group name="lead_priority" position="after">
+                <group name="crm_lead_escalation" string="Follow-up">
+                    <field name="last_followup_date" />
+                    <field
+                        name="escalation_rule_ids"
+                        widget="many2many_tags"
+                        invisible="not escalation_rule_ids"
+                    />
+                </group>
+            </group>
+        </field>
+    </record>
+
+    <record id="view_crm_case_opportunities_filter" model="ir.ui.view">
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.view_crm_case_opportunities_filter" />
+        <field name="arch" type="xml">
+            <filter name="unassigned" position="after">
+                <separator />
+                <filter
+                    string="Escalated"
+                    name="escalated"
+                    domain="[('escalation_rule_ids', '!=', False)]"
+                    help="Leads a manager has already been warned about"
+                />
+            </filter>
+        </field>
+    </record>
+</odoo>

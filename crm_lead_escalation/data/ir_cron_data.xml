@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 ForgeFlow S.L.
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo noupdate="1">
+    <record forcecreate="True" id="ir_cron_crm_lead_escalation" model="ir.cron">
+        <field name="name">CRM: Escalate Leads</field>
+        <field name="model_id" ref="model_crm_lead_escalation_rule" />
+        <field name="state">code</field>
+        <field name="code">model._cron_escalate_leads()</field>
+        <field name="user_id" ref="base.user_root" />
+        <field name="interval_number">5</field>
+        <field name="interval_type">minutes</field>
+        <field name="active" eval="True" />
+    </record>
+</odoo>
