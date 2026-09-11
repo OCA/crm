@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 ForgeFlow S.L.
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo noupdate="1">
+    <record id="mail_template_crm_lead_escalation" model="mail.template">
+        <field name="name">CRM: Lead Escalation</field>
+        <field name="model_id" ref="crm.model_crm_lead" />
+        <field name="subject">Lead needs attention: {{ object.name }}</field>
+        <field
+            name="description"
+        >Sent to the escalation recipient when a lead is not followed up in time.</field>
+        <field name="body_html" type="html">
+            <div style="margin: 0px; padding: 0px;">
+                <p>Hello,</p>
+                <p>
+                    The lead
+                    <t t-out="object.name or ''" />
+                    has not moved forward and needs your attention.
+                </p>
+                <ul>
+                    <li t-if="object.partner_id">Customer: <t
+                        t-out="object.partner_id.display_name"
+                    /></li>
+                    <li t-if="object.user_id">Salesperson: <t
+                        t-out="object.user_id.display_name"
+                    /></li>
+                    <li t-if="object.team_id">Sales Team: <t
+                        t-out="object.team_id.display_name"
+                    /></li>
+                    <li t-if="object.stage_id">Stage: <t
+                        t-out="object.stage_id.display_name"
+                    /></li>
+                    <li t-if="object.last_followup_date">Last follow-up: <t
+                        t-out="object.last_followup_date"
+                    /></li>
+                </ul>
+                <p>A to-do activity has been scheduled on the lead for you.</p>
+            </div>
+        </field>
+        <field name="auto_delete" eval="True" />
+    </record>
+</odoo>
