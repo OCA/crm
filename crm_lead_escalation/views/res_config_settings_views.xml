@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 ForgeFlow S.L.
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="crm.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <setting id="crm_lead" position="after">
+                <setting
+                    id="crm_lead_escalation"
+                    string="Lead Escalation"
+                    help="Warn a manager when a lead is left without follow-up, or is neither won nor lost, for too long"
+                >
+                    <button
+                        type="action"
+                        name="crm_lead_escalation.crm_lead_escalation_rule_action"
+                        string="Manage Escalation Rules"
+                        icon="oi-arrow-right"
+                        class="oe_link"
+                    />
+                </setting>
+            </setting>
+        </field>
+    </record>
+</odoo>
