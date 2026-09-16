@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+  Copyright 2026 ForgeFlow S.L. (https://www.forgeflow.com)
+  License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+    <record id="crm_lead_view_form_interest_group" model="ir.ui.view">
+        <field name="name">crm.lead.form.interest.group</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//group[@invisible=&quot;type == 'lead'&quot;]/field[@name='tag_ids']"
+                position="after"
+            >
+                <field
+                    name="interest_group_ids"
+                    widget="many2many_tags"
+                    options="{'no_create': True}"
+                />
+            </xpath>
+            <xpath
+                expr="//group[@name='lead_priority']/field[@name='tag_ids']"
+                position="after"
+            >
+                <field
+                    name="interest_group_ids"
+                    widget="many2many_tags"
+                    options="{'no_create': True}"
+                />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_crm_case_leads_filter_interest_group" model="ir.ui.view">
+        <field name="name">crm.lead.search.lead.interest.group</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.view_crm_case_leads_filter" />
+        <field name="arch" type="xml">
+            <field name="tag_ids" position="after">
+                <field name="interest_group_ids" />
+            </field>
+        </field>
+    </record>
+
+    <record id="view_crm_case_opportunities_filter_interest_group" model="ir.ui.view">
+        <field name="name">crm.lead.search.opportunity.interest.group</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.view_crm_case_opportunities_filter" />
+        <field name="arch" type="xml">
+            <field name="tag_ids" position="after">
+                <field name="interest_group_ids" />
+            </field>
+        </field>
+    </record>
+</odoo>
