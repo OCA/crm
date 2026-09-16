@@ -30,9 +30,9 @@
         <field name="model_id">crm.phonecall.report</field>
         <field name="domain">[('state','=','done')]</field>
         <field name="user_ids" eval="False" />
-        <field name="context">
-            {'group_by': ['team_id'], 'pivot_measures': ['nbr_cases', 'duration']}
-        </field>
+        <field
+            name="context"
+        >{'group_by': ['team_id'], 'pivot_measures': ['nbr_cases', 'duration']}</field>
     </record>
     <!-- pylint: disable=xml-dangerous-filter-wo-user_id -->
     <record id="filter_crm_phonecall_delay_to_close" model="ir.filters">
@@ -40,9 +40,9 @@
         <field name="model_id">crm.phonecall.report</field>
         <field name="domain">[('state','=','done')]</field>
         <field name="user_ids" eval="False" />
-        <field name="context">
-            {'group_by': ['team_id'], 'pivot_measures': ['delay_close']}
-        </field>
+        <field
+            name="context"
+        >{'group_by': ['team_id'], 'pivot_measures': ['delay_close']}</field>
     </record>
     <!-- pylint: disable=xml-dangerous-filter-wo-user_id -->
     <record id="filter_crm_phonecall_phone_call_to_do" model="ir.filters">
@@ -50,9 +50,9 @@
         <field name="model_id">crm.phonecall.report</field>
         <field name="domain">[('state','in',('draft','open'))]</field>
         <field name="user_ids" eval="False" />
-        <field name="context">
-            {'group_by': ['team_id'], 'pivot_measures': ['nbr_cases']}
-        </field>
+        <field
+            name="context"
+        >{'group_by': ['team_id'], 'pivot_measures': ['nbr_cases']}</field>
     </record>
     <record id="view_report_crm_phonecall_filter" model="ir.ui.view">
         <field name="name">crm.phonecall.report.selecqt</field>
