@@ -25,7 +25,12 @@ class CrmLead(models.Model):
             raise UserError(
                 self.env._("%s already has a customer assigned.", self.display_name)
             )
-        if not (self.contact_name or self.partner_name or self.email_from):
+        if not (
+            self.contact_name
+            or self.partner_name
+            or self.email_from
+            or self._find_matching_partner()
+        ):
             raise UserError(
                 self.env._(
                     "Fill in the contact name, the company name or the email "
