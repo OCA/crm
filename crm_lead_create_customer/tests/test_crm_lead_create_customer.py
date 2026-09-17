@@ -4,9 +4,13 @@
 from lxml import etree
 
 from odoo.exceptions import UserError
-from odoo.tests import Form, TransactionCase
+from odoo.tests import Form, TransactionCase, tagged
 
 
+# The tests create partners, so every module extending res.partner must be
+# loaded already: at install time the registry only knows this module's
+# dependencies, while the database columns of the other ones are there.
+@tagged("post_install", "-at_install")
 class TestCrmLeadCreateCustomer(TransactionCase):
     @classmethod
     def setUpClass(cls):
