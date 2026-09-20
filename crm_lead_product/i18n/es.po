@@ -1,0 +1,366 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* crm_lead_product
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2019-02-04 19:50+0000\n"
+"Last-Translator: Marta Vázquez Rodríguez <vazrodmar@gmail.com>\n"
+"Language-Team: none\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.4\n"
+
+#. module: crm_lead_product
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: crm_lead_product
+#: model:ir.model,name:crm_lead_product.model_crm_product_report
+msgid "CRM Pipeline by Product Analysis"
+msgstr "CRM Pipeline por Analísis de producto"
+
+#. module: crm_lead_product
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__campaign_id
+msgid "Campaing"
+msgstr "Campaña"
+
+#. module: crm_lead_product
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__category_id
+msgid "Category"
+msgstr "Categoría"
+
+#. module: crm_lead_product
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__date_closed
+#: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_search
+msgid "Closed Date"
+msgstr "Fecha de cierre"
+
+#. module: crm_lead_product
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__company_id
+#: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_search
+msgid "Company"
+msgstr "Compañía"
+
+#. module: crm_lead_product
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__partner_name
+msgid "Contact Name"
+msgstr "Nombre Contacto"
+
+#. module: crm_lead_product
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__date_conversion
+#: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_search
+msgid "Conversion Date"
+msgstr "Fecha de Conversión"
+
+#. module: crm_lead_product
+#: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_search
+msgid "Conversion Date from Lead to Opportunity"
+msgstr "Fecha de Conversión de Iniciativa a Oportunidad"
+
+#. module: crm_lead_product
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__country_id
+#: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_search
+msgid "Country"
+msgstr "País"
+
+#. module: crm_lead_product
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__create_date
+msgid "Create Date"
+msgstr "Fecha Creación"
+
+#. module: crm_lead_product
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_lead_line__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: crm_lead_product
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_lead_line__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: crm_lead_product
+#: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_search
+msgid "Creation Date"
+msgstr "Fecha de creación"
+
+#. module: crm_lead_product
+#: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_search
+msgid "Date Closed"
+msgstr "Fecha de cierre"
+
+#. module: crm_lead_product
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__date_deadline
+msgid "Deadline Date"
+msgstr "Fecha límite"
+
+#. module: crm_lead_product
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_lead_line__name
+msgid "Description"
+msgstr "Descripción"
+
+#. module: crm_lead_product
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_lead_line__display_name
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__display_name
+msgid "Display Name"
+msgstr "Nombre a mostrar"
+
+#. module: crm_lead_product
+#: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_search
+msgid "Expected Closing"
+msgstr "Cierre esperado"
+
+#. module: crm_lead_product
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__expected_revenue
+msgid "Expected Revenue"
+msgstr "Ingresos esperados"
+
+#. module: crm_lead_product
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_lead_line__expected_revenue
+#: model_terms:ir.ui.view,arch_db:crm_lead_product.view_tree_lead_line
+msgid "Expected revenue"
+msgstr "Ingresos esperados"
+
+#. module: crm_lead_product
+#: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_search
+msgid "Extended Filters"
+msgstr "Filtros extendidos"
+
+#. module: crm_lead_product
+#: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_search
+msgid "Group By"
+msgstr "Agrupar por"
+
+#. module: crm_lead_product
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_lead_line__id
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__id
+msgid "ID"
+msgstr "ID"
+
+#. module: crm_lead_product
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_lead_line____last_update
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report____last_update
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: crm_lead_product
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_lead_line__write_uid
+msgid "Last Updated by"
+msgstr "Última modificación por"
+
+#. module: crm_lead_product
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_lead_line__write_date
+msgid "Last Updated on"
+msgstr "Última modificación en"
+
+#. module: crm_lead_product
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_lead_line__lead_id
+#: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_search
+msgid "Lead"
+msgstr "Iniciativa"
+
+#. module: crm_lead_product
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_lead__lead_line_ids
+msgid "Lead Lines"
+msgstr "Líneas Iniciativa"
+
+#. module: crm_lead_product
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__name
+msgid "Lead Name"
+msgstr "Nombre iniciativa"
+
+#. module: crm_lead_product
+#: model:ir.model,name:crm_lead_product.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Iniciativa/Oportunidad"
+
+#. module: crm_lead_product
+#: model:ir.model,name:crm_lead_product.model_crm_lead_line
+msgid "Line in CRM Lead"
+msgstr "Línea en Iniciativa CRM"
+
+#. module: crm_lead_product
+#: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_search
+msgid "Lost"
+msgstr "Perdido"
+
+#. module: crm_lead_product
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__lost_reason
+#: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_search
+msgid "Lost Reason"
+msgstr "Razón Perdida"
+
+#. module: crm_lead_product
+#: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_search
+msgid "My Opportunities"
+msgstr "Mis Oportunidades"
+
+#. module: crm_lead_product
+#: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_search
+msgid "Open"
+msgstr "Abierto"
+
+#. module: crm_lead_product
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__date_open
+msgid "Open Date"
+msgstr "Fecha de apertura"
+
+#. module: crm_lead_product
+#: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_search
+msgid "Opportunities Analysis"
+msgstr "Análisis de oportunidades"
+
+#. module: crm_lead_product
+#: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_search
+msgid "Opportunity"
+msgstr "Oportunidad"
+
+#. module: crm_lead_product
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__partner_id
+msgid "Partner/Customer"
+msgstr "Empresa/Cliente"
+
+#. module: crm_lead_product
+#: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_graph
+#: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_pivot
+#: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_tree
+msgid "Pipeline Analysis"
+msgstr "Análisis Pipeline"
+
+#. module: crm_lead_product
+#: model_terms:ir.actions.act_window,help:crm_lead_product.crm_product_report_action
+msgid ""
+"Pipeline Analysis gives you an instant access to\n"
+"your opportunities with information such as the expected revenue, planned "
+"cost,\n"
+"missed deadlines or the number of interactions per opportunity. This report "
+"is\n"
+"mainly used by the sales manager in order to do the periodic review with "
+"the\n"
+"teams of the sales pipeline."
+msgstr ""
+"El análisis Pipeline proporciona en tiempo real acceso a tus oportunidades "
+"con información como los ingresos esperados, coste previsto, el número de "
+"interacciones por oportunidad o fechas límite incumplidas. Este informe es "
+"utilizado principalmente por el Gerente de ventas con el fin de realizar la "
+"revisión periódica con los equipos de canalización de ventas."
+
+#. module: crm_lead_product
+#: model:ir.actions.act_window,name:crm_lead_product.crm_product_report_action
+msgid "Pipeline by Product Analysis"
+msgstr "Pipeline por Análisis de producto"
+
+#. module: crm_lead_product
+#: model:ir.ui.menu,name:crm_lead_product.crm_product_report_menu
+msgid "Pipeline by product"
+msgstr "Pipeline por producto"
+
+#. module: crm_lead_product
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__planned_revenue
+msgid "Planned Revenue"
+msgstr "Ingresos previstos"
+
+#. module: crm_lead_product
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_lead_line__planned_revenue
+#: model_terms:ir.ui.view,arch_db:crm_lead_product.view_tree_lead_line
+msgid "Planned revenue"
+msgstr "Ingresos previstos"
+
+#. module: crm_lead_product
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_lead_line__price_unit
+#: model_terms:ir.ui.view,arch_db:crm_lead_product.view_tree_lead_line
+msgid "Price Unit"
+msgstr "Precio unitario"
+
+#. module: crm_lead_product
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__probability
+msgid "Probability"
+msgstr "Probabilidad"
+
+#. module: crm_lead_product
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_lead_line__product_id
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__product_id
+msgid "Product"
+msgstr "Producto"
+
+#. module: crm_lead_product
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_lead_line__category_id
+msgid "Product Category"
+msgstr "Categoría de producto"
+
+#. module: crm_lead_product
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_lead_line__product_qty
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__product_qty
+msgid "Product Quantity"
+msgstr "Cantidad de producto"
+
+#. module: crm_lead_product
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_lead_line__product_tmpl_id
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__product_tmpl_id
+msgid "Product Template"
+msgstr "Plantilla de producto"
+
+#. module: crm_lead_product
+#: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_lead_view_form
+#: model_terms:ir.ui.view,arch_db:crm_lead_product.view_tree_lead_line
+msgid "Products"
+msgstr "Productos"
+
+#. module: crm_lead_product
+#: model_terms:ir.ui.view,arch_db:crm_lead_product.view_tree_lead_line
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: crm_lead_product
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__team_id
+#: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_search
+msgid "Sales Team"
+msgstr "Equipos de Venta"
+
+#. module: crm_lead_product
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__user_id
+#: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_search
+msgid "Salesperson"
+msgstr "Comercial"
+
+#. module: crm_lead_product
+#: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_search
+msgid "Show only lead"
+msgstr "Mostrar sólo iniciativa"
+
+#. module: crm_lead_product
+#: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_search
+msgid "Show only opportunity"
+msgstr "Mostrar sólo Oportunidad"
+
+#. module: crm_lead_product
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__stage_id
+#: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_search
+msgid "Stage"
+msgstr "Etapa"
+
+#. module: crm_lead_product
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_product_report__type
+msgid "Type"
+msgstr "Tipo"
+
+#. module: crm_lead_product
+#: model:ir.model.fields,help:crm_lead_product.field_crm_product_report__type
+msgid "Type is used to separate Leads and Opportunities"
+msgstr "El tipo se utiliza para separar las Iniciativas y las Oportunidades"
+
+#. module: crm_lead_product
+#: model:ir.model.fields,field_description:crm_lead_product.field_crm_lead_line__uom_id
+msgid "Unit of Measure"
+msgstr "Unidad de Medida"
+
+#. module: crm_lead_product
+#: model_terms:ir.ui.view,arch_db:crm_lead_product.crm_opportunity_report_view_search
+msgid "Won"
+msgstr "Ganado"
