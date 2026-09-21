@@ -1,0 +1,11 @@
+<odoo noupdate="1">
+    <record id="phonecall_result_positive" model="crm.phonecall.result">
+        <field name="name">Positive</field>
+    </record>
+    <record id="phonecall_result_negative" model="crm.phonecall.result">
+        <field name="name">Negative</field>
+    </record>
+    <record id="phonecall_result_wrong_number" model="crm.phonecall.result">
+        <field name="name">Wrong number</field>
+    </record>
+</odoo>
