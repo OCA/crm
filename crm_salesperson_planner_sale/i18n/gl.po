@@ -1,0 +1,63 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* crm_salesperson_planner_sale
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-05-23 17:47+0000\n"
+"Last-Translator: Pablo Castelo <pablocv@gmx.es>\n"
+"Language-Team: none\n"
+"Language: gl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15.2\n"
+
+#. module: crm_salesperson_planner_sale
+#: model_terms:ir.ui.view,arch_db:crm_salesperson_planner_sale.crm_salesperson_planner_visit_sale_form_view
+msgid "New Quotation"
+msgstr "Novo orzamento"
+
+#. module: crm_salesperson_planner_sale
+#: model:ir.model.fields,field_description:crm_salesperson_planner_sale.field_crm_salesperson_planner_visit__quotation_count
+msgid "Number of Quotations"
+msgstr "Nº de orzamentos"
+
+#. module: crm_salesperson_planner_sale
+#: model:ir.model.fields,field_description:crm_salesperson_planner_sale.field_crm_salesperson_planner_visit__sale_order_count
+msgid "Number of Sale Orders"
+msgstr "Nº de ordenes de venda"
+
+#. module: crm_salesperson_planner_sale
+#: model:ir.model.fields,field_description:crm_salesperson_planner_sale.field_crm_salesperson_planner_visit__order_ids
+#: model_terms:ir.ui.view,arch_db:crm_salesperson_planner_sale.crm_salesperson_planner_visit_sale_form_view
+msgid "Orders"
+msgstr "Vendas"
+
+#. module: crm_salesperson_planner_sale
+#: model:ir.actions.act_window,name:crm_salesperson_planner_sale.crm_salesperson_visit_action_quotation_new
+msgid "Quotation"
+msgstr "Orzamento"
+
+#. module: crm_salesperson_planner_sale
+#: model_terms:ir.ui.view,arch_db:crm_salesperson_planner_sale.crm_salesperson_planner_visit_sale_form_view
+msgid "Quotations"
+msgstr "Orzamentos"
+
+#. module: crm_salesperson_planner_sale
+#: model:ir.model,name:crm_salesperson_planner_sale.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de venda"
+
+#. module: crm_salesperson_planner_sale
+#: model:ir.model,name:crm_salesperson_planner_sale.model_crm_salesperson_planner_visit
+msgid "Salesperson Planner Visit"
+msgstr "Planificador de visitas comerciais"
+
+#. module: crm_salesperson_planner_sale
+#: model:ir.model.fields,field_description:crm_salesperson_planner_sale.field_sale_order__visit_id
+msgid "Visit"
+msgstr "Visita"
