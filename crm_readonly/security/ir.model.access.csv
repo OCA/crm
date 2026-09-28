@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_crm_lead_readonly,crm.lead.readonly,crm.model_crm_lead,sales_team_readonly.group_sales_readonly,1,0,0,0
+access_crm_recurring_plan_readonly,crm.recurring.plan.readonly,crm.model_crm_recurring_plan,sales_team_readonly.group_sales_readonly,1,0,0,0
+access_crm_lead_scoring_frequency_readonly,crm.lead.scoring.frequency.readonly,crm.model_crm_lead_scoring_frequency,sales_team_readonly.group_sales_readonly,1,0,0,0
+access_crm_lead_scoring_frequency_field_readonly,crm.lead.scoring.frequency.field.readonly,crm.model_crm_lead_scoring_frequency_field,sales_team_readonly.group_sales_readonly,1,0,0,0
+access_crm_activity_report_readonly,crm.activity.report.readonly,crm.model_crm_activity_report,sales_team_readonly.group_sales_readonly,1,0,0,0

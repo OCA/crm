@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Expose the CRM application and the salesman-level menus to the shared
+         read-only group. Menu visibility is a union of group_ids, so this is
+         purely additive for the standard groups. The "Leads" menu
+         (crm.crm_menu_leads) is intentionally left untouched: it is gated by
+         the crm.group_use_lead feature toggle, which still applies to
+         read-only users exactly like it does for sales users. -->
+    <record id="crm.crm_menu_root" model="ir.ui.menu">
+        <field
+            name="group_ids"
+            eval="[(4, ref('sales_team_readonly.group_sales_readonly'))]"
+        />
+    </record>
+    <record id="crm.crm_menu_report" model="ir.ui.menu">
+        <field
+            name="group_ids"
+            eval="[(4, ref('sales_team_readonly.group_sales_readonly'))]"
+        />
+    </record>
+    <record id="crm.crm_lead_menu_my_activities" model="ir.ui.menu">
+        <field
+            name="group_ids"
+            eval="[(4, ref('sales_team_readonly.group_sales_readonly'))]"
+        />
+    </record>
+</odoo>
