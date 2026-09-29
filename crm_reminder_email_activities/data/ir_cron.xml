@@ -2,7 +2,7 @@
 <odoo noupdate="1">
     <record id="crm_email_reminder_activities_cron" model="ir.cron">
         <field name="name">Reminder CRM planned activities</field>
-        <field name="model_id" ref="model_res_users" />
+        <field name="model_id" ref="model_crm_lead" />
         <field name="active" eval="True" />
         <field name="state">code</field>
         <field name="code">model.cron_send_crm_reminder_activities()</field>

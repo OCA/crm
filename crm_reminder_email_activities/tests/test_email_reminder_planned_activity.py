@@ -75,7 +75,7 @@ class TestEmailReminderPlannedActivity(BaseCommon):
             self.lead_1, self.user_b, self.today + relativedelta(days=8)
         )
 
-        result = self.env["res.users"]._get_crm_activities(user=self.user_a)
+        result = self.env["crm.lead"]._get_crm_activities(user=self.user_a)
 
         self.assertIn(act_today, result)
         self.assertIn(act_day7, result)
@@ -103,7 +103,7 @@ class TestEmailReminderPlannedActivity(BaseCommon):
 
         lead_activity = self._create_activity(self.lead_1, self.user_a, self.today)
 
-        result = self.env["res.users"]._get_crm_activities(user=self.user_a)
+        result = self.env["crm.lead"]._get_crm_activities(user=self.user_a)
 
         self.assertIn(lead_activity, result)
         self.assertNotIn(partner_activity, result)
@@ -118,7 +118,27 @@ class TestEmailReminderPlannedActivity(BaseCommon):
             self.lead_1, self.user_b, self.today + relativedelta(days=8)
         )
 
-        result = self.env["res.users"]._get_crm_activities()
+        result = self.env["crm.lead"]._get_crm_activities()
 
         self.assertIn(act_in, result)
         self.assertNotIn(act_out, result)
+
+    def test_send_reminder_mail_without_template(self):
+        """check behaviour of sending crm activities
+        reminder mail when mail template not exist"""
+        self.env.ref(
+            "crm_reminder_email_activities.email_template_crm_reminder_activities"
+        ).unlink()
+        error_msg = "CRM Reminder Activities Mail Template not found."
+        with self.assertRaisesRegex(ValueError, error_msg):
+            self.env["crm.lead"].cron_send_crm_reminder_activities()
+
+    def test_send_mail(self):
+        self._create_activity(self.lead_1, self.user_a, self.today)
+        self.env["crm.lead"].cron_send_crm_reminder_activities()
+        mail = self.env["mail.mail"].search(
+            [("email_to", "=", self.user_a.email)], order="id desc", limit=1
+        )
+        self.assertTrue(mail)
+        self.assertIn("Dear Reminder User A", mail.body_html)
+        self.assertIn("Reminder Lead 1", mail.body_html)
