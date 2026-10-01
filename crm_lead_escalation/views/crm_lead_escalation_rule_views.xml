@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 ForgeFlow S.L.
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record id="crm_lead_escalation_rule_view_list" model="ir.ui.view">
+        <field name="model">crm.lead.escalation.rule</field>
+        <field name="arch" type="xml">
+            <list string="Escalation Rules">
+                <field name="sequence" widget="handle" />
+                <field name="name" />
+                <field name="trigger" />
+                <field name="delay_display" string="Delay" />
+                <field name="recipient_type" />
+                <field name="recipient_user_id" optional="hide" />
+                <field name="assign_recipient" optional="hide" />
+                <field name="company_id" groups="base.group_multi_company" />
+            </list>
+        </field>
+    </record>
+
+    <record id="crm_lead_escalation_rule_view_form" model="ir.ui.view">
+        <field name="model">crm.lead.escalation.rule</field>
+        <field name="arch" type="xml">
+            <form string="Escalation Rule">
+                <sheet>
+                    <widget
+                        name="web_ribbon"
+                        title="Archived"
+                        bg_color="text-bg-danger"
+                        invisible="active"
+                    />
+                    <div class="oe_title">
+                        <label for="name" />
+                        <h1>
+                            <field name="name" placeholder="e.g. Stalled leads" />
+                        </h1>
+                    </div>
+                    <field name="active" invisible="1" />
+                    <group>
+                        <group string="Escalate When">
+                            <field name="trigger" />
+                            <label for="delay_value" string="After" />
+                            <div class="o_row">
+                                <field name="delay_value" class="oe_inline" />
+                                <field name="delay_unit" class="oe_inline" />
+                            </div>
+                            <field name="lead_type" />
+                            <field name="assigned_only" />
+                        </group>
+                        <group string="Then">
+                            <field name="recipient_type" />
+                            <field
+                                name="recipient_user_id"
+                                invisible="recipient_type != 'user'"
+                                required="recipient_type == 'user'"
+                            />
+                            <field name="assign_recipient" />
+                            <field name="mail_template_id" />
+                        </group>
+                    </group>
+                    <group string="Restrict To">
+                        <field
+                            name="team_ids"
+                            widget="many2many_tags"
+                            placeholder="Leave empty for every sales team"
+                        />
+                        <field name="company_id" groups="base.group_multi_company" />
+                        <field name="sequence" groups="base.group_no_one" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="crm_lead_escalation_rule_view_search" model="ir.ui.view">
+        <field name="model">crm.lead.escalation.rule</field>
+        <field name="arch" type="xml">
+            <search string="Escalation Rules">
+                <field name="name" />
+                <field name="team_ids" />
+                <field name="recipient_user_id" />
+                <filter
+                    name="filter_no_followup"
+                    string="No Follow-up"
+                    domain="[('trigger', '=', 'no_followup')]"
+                />
+                <filter
+                    name="filter_not_closed"
+                    string="Not Won nor Lost"
+                    domain="[('trigger', '=', 'not_closed')]"
+                />
+                <separator />
+                <filter
+                    name="filter_inactive"
+                    string="Archived"
+                    domain="[('active', '=', False)]"
+                />
+                <group>
+                    <filter
+                        name="group_by_trigger"
+                        string="Trigger"
+                        context="{'group_by': 'trigger'}"
+                    />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="crm_lead_escalation_rule_action" model="ir.actions.act_window">
+        <field name="name">Lead Escalation Rules</field>
+        <field name="res_model">crm.lead.escalation.rule</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Create an escalation rule</p>
+            <p>
+                Escalation rules warn a manager when a lead is left without
+                follow-up, or is neither won nor lost, for too long.
+            </p>
+        </field>
+    </record>
+
+    <menuitem
+        id="crm_lead_escalation_rule_menu"
+        name="Lead Escalation Rules"
+        parent="crm.crm_menu_config"
+        action="crm_lead_escalation_rule_action"
+        groups="sales_team.group_sale_manager"
+        sequence="25"
+    />
+</odoo>
