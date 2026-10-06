@@ -1,4 +1,4 @@
-from odoo import _, api, fields, models
+from odoo import api, fields, models
 from odoo.exceptions import ValidationError
 
 
@@ -43,14 +43,14 @@ class CrmRecurringActivity(models.Model):
                 continue
             if not user.active or user.share:
                 raise ValidationError(
-                    _(
+                    self.env._(
                         "You can only assign recurring activities "
                         "to active internal users."
                     )
                 )
             if company not in user.company_ids:
                 raise ValidationError(
-                    _(
+                    self.env._(
                         "Assigned user %(user)s "
                         "does not have access to company: %(company)s.",
                         user=user.display_name,
@@ -59,7 +59,7 @@ class CrmRecurringActivity(models.Model):
                 )
             if not user.has_group("sales_team.group_sale_salesman"):
                 raise ValidationError(
-                    _("The user does not have permission to use the CRM app")
+                    self.env._("The user does not have permission to use the CRM app")
                 )
 
     @api.depends("activity_type_id")
