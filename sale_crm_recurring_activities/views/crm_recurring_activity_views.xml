@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-
     <record id="crm_recurring_activity_view_tree" model="ir.ui.view">
         <field name="name">crm.recurring.activity.tree</field>
         <field name="model">crm.recurring.activity</field>
