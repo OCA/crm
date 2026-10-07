@@ -5,6 +5,7 @@
 from datetime import timedelta
 
 from odoo import Command, exceptions, fields
+from odoo.tests import Form
 from odoo.tools import mute_logger
 
 from odoo.addons.base.tests.common import BaseCommon
@@ -315,3 +316,12 @@ class TestCrmSalespersonPlannerVisitTemplate(BaseCommon):
             self.visit_template_base.last_visit_date,
             fields.Date.from_string("2025-03-08"),
         )
+
+    def test_08_create_allday_template(self):
+        with Form(self.visit_template_model) as template_form:
+            template_form.partner_ids.add(self.partner1)
+            template_form.start_date = fields.Date.today()
+            template_form.end_type = "count"
+            template_form.count = 1
+        visit_template = template_form.record
+        self.assertTrue(visit_template.allday)
