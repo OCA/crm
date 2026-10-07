@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="group_sales_readonly" model="res.groups">
+        <field name="name">Readonly</field>
+        <field name="sequence">5</field>
+        <field name="privilege_id" ref="sales_team.res_groups_privilege_sales" />
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]" />
+        <field name="comment">the user has a read-only access to sales
+            documents (leads, quotations, sales orders and their details).</field>
+    </record>
+</odoo>

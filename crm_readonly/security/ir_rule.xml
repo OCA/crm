@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="crm_lead_rule_group_readonly" model="ir.rule">
+        <field name="name">CRM Lead Readonly: All Documents</field>
+        <field name="model_id" ref="crm.model_crm_lead" />
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field
+            name="groups"
+            eval="[(4, ref('sales_team_readonly.group_sales_readonly'))]"
+        />
+        <field name="perm_write" eval="False" />
+        <field name="perm_create" eval="False" />
+        <field name="perm_unlink" eval="False" />
+    </record>
+
+    <record id="crm_activity_report_rule_group_readonly" model="ir.rule">
+        <field name="name">Activities Analysis Readonly: All Documents</field>
+        <field name="model_id" ref="crm.model_crm_activity_report" />
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field
+            name="groups"
+            eval="[(4, ref('sales_team_readonly.group_sales_readonly'))]"
+        />
+        <field name="perm_write" eval="False" />
+        <field name="perm_create" eval="False" />
+        <field name="perm_unlink" eval="False" />
+    </record>
+</odoo>
