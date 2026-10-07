@@ -1,0 +1,2 @@
+from . import test_crm_project_create_from_template_common
+from . import test_crm_project_create_from_template

@@ -1,0 +1,32 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* crm_project_create_from_template
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-01 01:19+0000\n"
+"PO-Revision-Date: 2026-07-01 01:19+0000\n"
+"Last-Translator: Edilio Escalona Almira <e.escalona@binhex.cloud>\n"
+"Language-Team: \n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. module: crm_project_create_from_template
+#: model:ir.model.fields,field_description:crm_project_create_from_template.field_crm_create_project__project_template_id
+msgid "Project Template"
+msgstr "Plantilla de proyecto"
+
+#. module: crm_project_create_from_template
+#: model:ir.model.fields,help:crm_project_create_from_template.field_crm_create_project__project_template_id
+msgid "Project to copy when creating the new project."
+msgstr "Proyecto que se copiará al crear el nuevo proyecto."
+
+#. module: crm_project_create_from_template
+#: model:ir.model,name:crm_project_create_from_template.model_crm_create_project
+msgid "Wizart to create Project from Lead/Opportunity"
+msgstr "Asistente para crear un proyecto desde la iniciativa/oportunidad"
