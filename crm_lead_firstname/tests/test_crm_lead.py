@@ -29,6 +29,7 @@ class FirstNameCase(TransactionCase):
         partner = self.partner_model.browse(self.lead.partner_id.id)
         self.assertEqual(self.lead.contact_name, partner.firstname)
         self.assertEqual(self.lead.contact_lastname, partner.lastname)
+        self.assertEqual(partner.parent_id.name, self.lead.partner_name)
 
     def test_create_contact_empty(self):
         """No problems creating a contact without names."""

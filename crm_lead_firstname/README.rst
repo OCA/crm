@@ -93,6 +93,9 @@ Contributors
 - Jairo Llopis
 - Raf Ven <raf.ven@dynapps.be>
 - Nikos Tsirintanis <ntsirintanis@therp.nl>
+- `Adgents <https://github.com/adgents>`__:
+
+  - Vincent Garcies <vincent.garcies@gmail.com>
 
 Maintainers
 -----------
