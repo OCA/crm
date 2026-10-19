@@ -2,7 +2,9 @@
 # Copyright 2017 Tecnativa - Vicent Cubells
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
+from datetime import timedelta
 from functools import reduce
+from typing import ClassVar
 
 from odoo import api, fields, models
 
@@ -13,7 +15,7 @@ class CrmPhonecall(models.Model):
     _name = "crm.phonecall"
     _description = "Phonecall"
     _order = "id desc"
-    _inherit = ["mail.thread", "utm.mixin"]
+    _inherit: ClassVar[list[str]] = ["mail.thread", "utm.mixin"]
 
     date_action_last = fields.Datetime(string="Last Action")
     date_action_next = fields.Datetime(string="Next Action")
@@ -66,10 +68,20 @@ class CrmPhonecall(models.Model):
     )
     date_closed = fields.Datetime(string="Closed")
     date = fields.Datetime(default=lambda self: fields.Datetime.now())
+    date_stop = fields.Datetime(compute="_compute_date_stop")
     opportunity_id = fields.Many2one(comodel_name="crm.lead", string="Lead/Opportunity")
     direction = fields.Selection(
         [("in", "In"), ("out", "Out")], default="out", required=True
     )
+
+    @api.depends("date", "duration")
+    def _compute_date_stop(self):
+        for phonecall in self:
+            phonecall.date_stop = (
+                phonecall.date + timedelta(minutes=phonecall.duration or 0)
+                if phonecall.date
+                else False
+            )
 
     @api.onchange("partner_id")
     def _onchange_partner_id(self):

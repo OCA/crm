@@ -3,7 +3,7 @@
 
 {
     "name": "CRM Phone Calls",
-    "version": "19.0.1.0.1",
+    "version": "20.0.1.0.1",
     "category": "Customer Relationship Management",
     "author": "Odoo S.A., Tecnativa, Odoo Community Association (OCA)",
     "website": "https://github.com/OCA/crm",
@@ -11,7 +11,7 @@
     "depends": ["crm", "calendar"],
     "data": [
         "security/crm_security.xml",
-        "security/ir.model.access.csv",
+        "security/ir.access.csv",
         "wizard/crm_phonecall_to_phonecall_view.xml",
         "views/crm_phonecall_view.xml",
         "views/res_partner_view.xml",
