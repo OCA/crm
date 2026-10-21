@@ -9,15 +9,14 @@ msgstr ""
 "Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-13 03:59+0000\n"
-"PO-Revision-Date: 2026-02-13 20:09+0000\n"
-"Last-Translator: Ediz Duman <neps1192@gmail.com>\n"
+"PO-Revision-Date: 2018-03-13 03:59+0000\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2018\n"
 "Language-Team: Turkish (https://www.transifex.com/oca/teams/23907/tr/)\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Weblate 5.15.2\n"
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner__repeat_calls
@@ -25,28 +24,26 @@ msgid ""
 "Allow repeated calls for the same partner, campaign, medium and source "
 "combination?"
 msgstr ""
-"Aynı iş ortağı, kampanya, ortam ve kaynak kombinasyonu için tekrarlı "
-"aramalara izin verilsin mi?"
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__name
 msgid "Call Summary"
-msgstr "Arama Özeti"
+msgstr ""
 
 #. module: crm_phonecall_planner
 #: model_terms:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
 msgid "Call details"
-msgstr "Arama detayları"
+msgstr ""
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__duration
 msgid "Call duration"
-msgstr "Arama süresi"
+msgstr ""
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__campaign_id
 msgid "Campaign"
-msgstr "Kampanya"
+msgstr ""
 
 #. module: crm_phonecall_planner
 #: model_terms:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
@@ -66,12 +63,12 @@ msgstr "Oluşturuldu"
 #. module: crm_phonecall_planner
 #: model_terms:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
 msgid "Criteria"
-msgstr "Kriterler"
+msgstr ""
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__days_gap
 msgid "Days Gap"
-msgstr "Gün Aralığı"
+msgstr ""
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__display_name
@@ -81,17 +78,17 @@ msgstr "Görünen İsim"
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__end
 msgid "End"
-msgstr "Bitiş"
+msgstr ""
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner__res_partner_domain
 msgid "Filter the parters that will get a scheduled call."
-msgstr "Planlı arama yapılacak iş ortaklarını filtrele."
+msgstr ""
 
 #. module: crm_phonecall_planner
 #: model_terms:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
 msgid "Generate planning"
-msgstr "Planlama oluştur"
+msgstr ""
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__id
@@ -116,53 +113,53 @@ msgstr "Son güncelleme"
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner__duration
 msgid "Leave this free time between phone calls."
-msgstr "Telefon görüşmeleri arasında bu boş zamanı bırakın."
+msgstr ""
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__medium_id
 msgid "Medium"
-msgstr "Ortam"
+msgstr ""
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__res_partner_domain
 msgid "Partners filter"
-msgstr "İş ortağı filtresi"
+msgstr ""
 
 #. module: crm_phonecall_planner
 #: model:ir.model,name:crm_phonecall_planner.model_crm_phonecall_planner
 msgid "Phonecall planner"
-msgstr "Telefon görüşmesi planlayıcısı"
+msgstr ""
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__planned_calls
 msgid "Planned Calls"
-msgstr "Planlanan Aramalar"
+msgstr ""
 
 #. module: crm_phonecall_planner
 #: model:ir.actions.act_window,name:crm_phonecall_planner.crm_phonecall_planner_open
 #: model:ir.ui.menu,name:crm_phonecall_planner.crm_phonecall_planner_menu
 msgid "Planner"
-msgstr "Planlayıcı"
+msgstr ""
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__repeat_calls
 msgid "Repeat Calls"
-msgstr "Aramaları Tekrarla"
+msgstr ""
 
 #. module: crm_phonecall_planner
 #: model_terms:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
 msgid "Repetition"
-msgstr "Tekrar"
+msgstr ""
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__user_id
 msgid "Responsible"
-msgstr "Sorumlu"
+msgstr ""
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__team_id
 msgid "Sales Team"
-msgstr "Satış Ekibi"
+msgstr ""
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner__start
@@ -170,8 +167,6 @@ msgid ""
 "Schedule calls from this moment. The time you select will be used as the "
 "plan starting time for each day in the range."
 msgstr ""
-"Bu andan itibaren aramaları planla. Seçtiğiniz saat, aralıktaki her gün için "
-"plan başlangıç saati olarak kullanılacaktır."
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner__end
@@ -179,39 +174,37 @@ msgid ""
 "Schedule calls until this moment. The time you select will be used as the "
 "plan ending time for each day in the range."
 msgstr ""
-"Bu ana kadar olan aramaları planla. Seçtiğiniz saat, aralıktaki her gün için "
-"plan bitiş saati olarak kullanılacaktır."
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner__days_gap
 msgid "Schedule one call each X days to the same partner."
-msgstr "Aynı iş ortağına her X günde bir arama planla."
+msgstr ""
 
 #. module: crm_phonecall_planner
 #: model_terms:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
 msgid "Scheduling"
-msgstr "Planlama"
+msgstr ""
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__source_id
 msgid "Source"
-msgstr "Kaynak"
+msgstr ""
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__start
 msgid "Start"
-msgstr "Başlangıç"
+msgstr ""
 
 #. module: crm_phonecall_planner
 #: code:addons/crm_phonecall_planner/wizards/crm_phonecall_planner.py:0
 #, python-format
 msgid "Starting date must be less than ending date"
-msgstr "Başlangıç tarihi bitiş tarihinden küçük olmalıdır"
+msgstr ""
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,field_description:crm_phonecall_planner.field_crm_phonecall_planner__tag_ids
 msgid "Tags"
-msgstr "Etiketler"
+msgstr ""
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner__campaign_id
@@ -219,13 +212,11 @@ msgid ""
 "This is a name that helps you keep track of your different campaign efforts, "
 "e.g. Fall_Drive, Christmas_Special"
 msgstr ""
-"Bu, farklı kampanya çabalarınızı takip etmenize yardımcı olan bir addır, "
-"örn. Sonbahar_Kampanyası, Yılbaşı_Ozel"
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner__medium_id
 msgid "This is the method of delivery, e.g. Postcard, Email, or Banner Ad"
-msgstr "Bu, teslimat yöntemidir, örn. Kartpostal, E-posta veya Banner Reklamı"
+msgstr ""
 
 #. module: crm_phonecall_planner
 #: model:ir.model.fields,help:crm_phonecall_planner.field_crm_phonecall_planner__source_id
@@ -233,10 +224,8 @@ msgid ""
 "This is the source of the link, e.g. Search Engine, another domain, or name "
 "of email list"
 msgstr ""
-"Bu, bağlantının kaynağıdır, örn. Arama Motoru, başka bir alan adı veya e-"
-"posta listesinin adı"
 
 #. module: crm_phonecall_planner
 #: model_terms:ir.ui.view,arch_db:crm_phonecall_planner.crm_phonecall_plan_view_form
 msgid "Times"
-msgstr "Zamanlar"
+msgstr ""
