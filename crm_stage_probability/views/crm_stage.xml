@@ -25,12 +25,12 @@
         <field name="model">crm.stage</field>
         <field name="inherit_id" ref="crm.crm_stage_form" />
         <field name="arch" type="xml">
-            <field name="team_count" position="after">
+            <xpath expr="//group/group[field[@name='fold']]" position="after">
                 <group name="probability">
                     <field name="on_change" />
                     <field name="probability" invisible="not on_change" />
                 </group>
-            </field>
+            </xpath>
         </field>
     </record>
 </odoo>
