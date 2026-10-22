@@ -29,20 +29,20 @@ class CrmLead(models.Model):
             )
 
     @api.depends("probability", "automated_probability")
+    # pylint: disable=missing-return
     def _compute_is_automated_probability(self):
         for lead in self:
             if lead.probability != lead.stage_id.probability:
                 super(CrmLead, lead)._compute_is_automated_probability()
                 continue
             lead.is_automated_probability = False
-        return
 
     @api.depends(
         lambda self: ["tag_ids", "stage_id", "team_id"] + self._pls_get_safe_fields()
     )
     def _compute_probabilities(self):
-        self = self.with_context(_auto_update_probability=True)
-        return super()._compute_probabilities()
+        leads = self.with_context(_auto_update_probability=True)
+        return super(CrmLead, leads)._compute_probabilities()
 
     @api.model
     def _onchange_stage_id_values(self, stage_id):
