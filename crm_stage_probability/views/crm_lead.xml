@@ -17,7 +17,8 @@
                     invisible="is_stage_probability"
                 >
                     <i
-                        class="fa fa-gear"
+                        class="oi oi-filled"
+                        data-icon="settings"
                         role="img"
                         title="Switch to stage probability"
                         aria-label="Switch to stage probability"
