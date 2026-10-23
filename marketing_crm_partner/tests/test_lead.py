@@ -7,6 +7,9 @@ from odoo.addons.base.tests.common import BaseCommon
 
 
 class LeadCase(BaseCommon):
+    # since 20.0 BaseCommon runs the test as a plain internal user
+    _test_user_groups = ("sales_team.group_sale_salesman_all_leads",)
+
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
@@ -19,6 +22,8 @@ class LeadCase(BaseCommon):
                 "medium_id": cls.medium.id,
                 "campaign_id": cls.campaign.id,
                 "source_id": cls.source.id,
+                # since 20.0 tracking_fields() also returns this reference field
+                "utm_reference": f"utm.campaign,{cls.campaign.id}",
             }
         )
 

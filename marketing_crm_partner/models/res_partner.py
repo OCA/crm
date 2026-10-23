@@ -7,4 +7,4 @@ from odoo import models
 
 class ResPartner(models.Model):
     _name = "res.partner"
-    _inherit = [_name, "utm.mixin"]
+    _inherit = [_name, "utm.mixin"]  # noqa: RUF012
