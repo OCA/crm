@@ -25,7 +25,7 @@
                     name="team_ids"
                     widget="many2many_tags"
                     options='{"no_open": True, "no_create": True}'
-                    invisible="team_count >= 1"
+                    invisible="team_count &lt;= 1"
                     kanban_view_ref="%(sales_team.crm_team_view_kanban)s"
                 />
             </field>

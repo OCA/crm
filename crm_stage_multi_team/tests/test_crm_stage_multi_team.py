@@ -2,7 +2,7 @@
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl)
 
 from odoo import Command
-from odoo.tests import new_test_user, tagged
+from odoo.tests import Form, new_test_user, tagged
 
 from odoo.addons.base.tests.common import BaseCommon
 
@@ -161,3 +161,12 @@ class TestCrmStageMultiTeam_NoLeadTeam(BaseCommon):
             order="sequence, id",
         )
         self.assertEqual(stage, self.stage_both)
+
+    def test_stage_form_team_ids_editable(self):
+        # With several teams, the teams of a stage can be set from its form
+        with Form(self.Stage) as stage_form:
+            stage_form.name = "Stage from form"
+            stage_form.team_ids.add(self.team_a)
+            stage_form.team_ids.add(self.team_b)
+        stage = stage_form.save()
+        self.assertEqual(stage.team_ids, self.team_a | self.team_b)
