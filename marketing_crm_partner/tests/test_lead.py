@@ -7,6 +7,8 @@ from odoo.addons.base.tests.common import BaseCommon
 
 
 class LeadCase(BaseCommon):
+    _test_user_groups = ("sales_team.group_sale_salesman_all_leads",)
+
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
@@ -19,13 +21,14 @@ class LeadCase(BaseCommon):
                 "medium_id": cls.medium.id,
                 "campaign_id": cls.campaign.id,
                 "source_id": cls.source.id,
+                "utm_reference": f"utm.campaign,{cls.campaign.id}",
             }
         )
 
     def test_transfered_values(self):
         """Fields get transfered when creating partner."""
         self.lead._handle_partner_assignment()
-        if self.lead.partner_id:
-            for _key, field, _cookie in self.env["utm.mixin"].tracking_fields():
-                self.assertEqual(self.lead[field], self.lead.partner_id[field])
-                self.assertIsNot(False, self.lead.partner_id[field])
+        self.assertTrue(self.lead.partner_id)
+        for _key, field, _cookie in self.env["utm.mixin"].tracking_fields():
+            self.assertEqual(self.lead[field], self.lead.partner_id[field])
+            self.assertIsNot(False, self.lead.partner_id[field])
