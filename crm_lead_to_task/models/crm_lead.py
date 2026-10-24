@@ -86,9 +86,9 @@ class CrmLead(models.Model):
                 self.company_id.crm_force_project_id
             )
         else:
-            action = self.env.ref(
+            action = self.env["ir.actions.act_window"]._for_xml_id(
                 "crm_lead_to_task.crm_lead_convert2task_action"
-            ).read()[0]
+            )
             action["context"] = {"default_lead_id": self.id}
 
         return action
