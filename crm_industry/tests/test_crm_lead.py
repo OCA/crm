@@ -4,10 +4,13 @@
 
 from odoo.exceptions import UserError
 from odoo.tests import Form
-from odoo.tests.common import TransactionCase
+
+from odoo.addons.base.tests.common import BaseCommon
 
 
-class TestCrmLead(TransactionCase):
+class TestCrmLead(BaseCommon):
+    _test_user_groups = None
+
     def test_check_industries(self):
         industry = self.env["res.partner.industry"].create({"name": "Test"})
         with self.assertRaises(UserError):
@@ -36,7 +39,7 @@ class TestCrmLead(TransactionCase):
         }
         lead = self.env["crm.lead"].create(lead_vals)
         partner = self.env["res.partner"].create(
-            lead._prepare_customer_values(lead.partner_name, is_company=True)
+            lead._prepare_customer_values(lead.partner_name)
         )
         self.assertEqual(partner.industry_id, lead.industry_id)
         self.assertEqual(partner.secondary_industry_ids, lead.secondary_industry_ids)
