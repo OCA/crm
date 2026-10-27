@@ -1,0 +1,1 @@
+odoo-addon-partner_industry_secondary @ git+https://github.com/OCA/partner-contact.git@refs/pull/2505/head#subdirectory=partner_industry_secondary

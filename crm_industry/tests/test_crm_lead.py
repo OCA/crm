@@ -1,0 +1,133 @@
+# Copyright 2015 Antiun Ingenieria S.L. - Javier Iniesta
+# Copyright 2018 ForgeFlow, S.L.
+# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html).
+
+from odoo.exceptions import UserError
+from odoo.tests import Form
+
+from odoo.addons.base.tests.common import BaseCommon
+
+
+class TestCrmLead(BaseCommon):
+    _test_user_groups = None
+
+    def test_check_industries(self):
+        industry = self.env["res.partner.industry"].create({"name": "Test"})
+        with self.assertRaises(UserError):
+            self.env["crm.lead"].create(
+                {
+                    "name": "Test",
+                    "industry_id": industry.id,
+                    "secondary_industry_ids": [(4, industry.id)],
+                }
+            )
+
+    def test_lead_create_contact(self):
+        industry_pool = self.env["res.partner.industry"]
+        industry_1 = industry_pool.create({"name": "Test 01"})
+        industry_2 = industry_pool.create(
+            {"name": "Test 02", "parent_id": industry_1.id}
+        )
+        industry_3 = industry_pool.create(
+            {"name": "Test 03", "parent_id": industry_1.id}
+        )
+        lead_vals = {
+            "name": "test",
+            "partner_name": "test",
+            "industry_id": industry_1.id,
+            "secondary_industry_ids": [(4, industry_2.id, 0), (4, industry_3.id, 0)],
+        }
+        lead = self.env["crm.lead"].create(lead_vals)
+        partner = self.env["res.partner"].create(
+            lead._prepare_customer_values(lead.partner_name)
+        )
+        self.assertEqual(partner.industry_id, lead.industry_id)
+        self.assertEqual(partner.secondary_industry_ids, lead.secondary_industry_ids)
+
+    def test_propagate_industries_from_contact(self):
+        res_partner_industry = self.env["res.partner.industry"]
+        industry_1 = res_partner_industry.create({"name": "IT/Communications"})
+        industry_2 = res_partner_industry.create(
+            {"name": "AI/Machine Learning", "parent_id": industry_1.id}
+        )
+        industry_3 = res_partner_industry.create(
+            {"name": "ERP Systems", "parent_id": industry_1.id}
+        )
+        customer = self.env["res.partner"].create(
+            {
+                "name": "Test Customer",
+                "industry_id": industry_1.id,
+                "secondary_industry_ids": [
+                    (4, industry_2.id, 0),
+                    (4, industry_3.id, 0),
+                ],
+            }
+        )
+        lead_form = Form(self.env["crm.lead"])
+        lead_form.name = "Test Lead"
+        lead_form.partner_id = customer
+        lead = lead_form.save()
+        self.assertEqual(lead.industry_id, customer.industry_id)
+        self.assertEqual(lead.secondary_industry_ids, customer.secondary_industry_ids)
+
+        def test_override_propagate_industries_from_contact(self):
+            res_partner_industry = self.env["res.partner.industry"].create(
+                {"name": "Parent Industry"}
+            )
+            industry_a, industry_b = res_partner_industry.create(
+                [
+                    {"name": "IT/Communications", "parent_id": res_partner_industry.id},
+                    {
+                        "name": "AI/Machine Learning",
+                        "parent_id": res_partner_industry.id,
+                    },
+                ]
+            )
+
+            customer = self.env["res.partner"].create(
+                {
+                    "name": "Test Customer",
+                    "industry_id": res_partner_industry.id,
+                    "secondary_industry_ids": [(6, 0, [industry_a.id, industry_b.id])],
+                }
+            )
+
+            lead_form = Form(self.env["crm.lead"])
+            lead_form.name = "Lead from partner"
+            lead_form.partner_id = customer
+            lead = lead_form.save()
+
+            self.assertEqual(lead.industry_id, customer.industry_id)
+            self.assertEqual(
+                lead.secondary_industry_ids, customer.secondary_industry_ids
+            )
+
+        def test_create_with_partner_does_not_override_explicit_vals(self):
+            industry_test = self.env["res.partner.industry"].create({"name": "Test"})
+            industry_1, industry_2, industry_3 = self.env[
+                "res.partner.industry"
+            ].create(
+                [
+                    {"name": "Test 01", "parent_id": industry_test.id},
+                    {"name": "Test 02", "parent_id": industry_test.id},
+                    {"name": "Test 03", "parent_id": industry_test.id},
+                ]
+            )
+
+            customer = self.env["res.partner"].create(
+                {
+                    "name": "Test Customer",
+                    "industry_id": industry_1.id,
+                    "secondary_industry_ids": [(6, 0, [industry_2.id])],
+                }
+            )
+
+            lead_form = Form(self.env["crm.lead"])
+            lead_form.name = "Test lead"
+            lead_form.partner_id = customer
+            lead_form.industry_id = industry_2
+            lead_form.secondary_industry_ids.add(industry_3)
+            lead = lead_form.save()
+
+            self.assertEqual(lead.industry_id, industry_2)
+            self.assertEqual(lead.secondary_industry_ids.ids, [industry_3.id])
