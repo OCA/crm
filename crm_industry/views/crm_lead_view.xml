@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <!-- Copyright 2015 Antiun Ingenieria S.L. - Javier Iniesta
      Copyright 2018 ForgeFlow, S.L.
      Copyright 2019 Tecnativa - Alexandre Díaz <alexandre.diaz@tecnativa.com>
@@ -21,7 +21,7 @@
             </group>
         </field>
     </record>
-    <record model="ir.ui.view" id="crm_case_tree_view_leads">
+    <record id="crm_case_tree_view_leads" model="ir.ui.view">
         <field name="name">Add industry field as tree column</field>
         <field name="model">crm.lead</field>
         <field name="inherit_id" ref="crm.crm_case_tree_view_leads" />
@@ -31,7 +31,7 @@
             </field>
         </field>
     </record>
-    <record model="ir.ui.view" id="view_crm_case_leads_filter">
+    <record id="view_crm_case_leads_filter" model="ir.ui.view">
         <field name="name">Add industry field for searching and grouping</field>
         <field name="model">crm.lead</field>
         <field name="inherit_id" ref="crm.view_crm_case_leads_filter" />
@@ -49,7 +49,7 @@
             </filter>
         </field>
     </record>
-    <record model="ir.ui.view" id="crm_case_tree_view_oppor">
+    <record id="crm_case_tree_view_oppor" model="ir.ui.view">
         <field name="name">Add industry field as tree column</field>
         <field name="model">crm.lead</field>
         <field name="inherit_id" ref="crm.crm_case_tree_view_oppor" />
@@ -59,7 +59,7 @@
             </field>
         </field>
     </record>
-    <record model="ir.ui.view" id="view_crm_case_opportunities_filter">
+    <record id="view_crm_case_opportunities_filter" model="ir.ui.view">
         <field name="name">Add industry field for searching and grouping</field>
         <field name="model">crm.lead</field>
         <field name="inherit_id" ref="crm.view_crm_case_opportunities_filter" />
