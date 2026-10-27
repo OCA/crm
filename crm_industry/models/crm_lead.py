@@ -35,16 +35,14 @@ class CrmLead(models.Model):
                     )
                 )
 
-    def _prepare_customer_values(self, partner_name, is_company=False, parent_id=False):
-        """Propagate industries in the creation of partner."""
-        values = super()._prepare_customer_values(
-            partner_name, is_company=is_company, parent_id=parent_id
-        )
+    def _prepare_customer_values(self, partner_name, parent_id=False):
+        # Propagate industries in the creation of partner
+        values = super()._prepare_customer_values(partner_name, parent_id=parent_id)
         main, secondary = self.industry_id, self.secondary_industry_ids
         values.update(
             {
                 "industry_id": main.id,
-                "secondary_industry_ids": [(6, 0, secondary.ids)],
+                "secondary_industry_ids": [Command.set(secondary.ids)],
             }
         )
         return values
