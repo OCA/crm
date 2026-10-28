@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 ForgeFlow S.L.
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo noupdate="1">
+    <record id="config_parameter_batch_size" model="ir.config_parameter">
+        <field name="key">crm_lead_escalation.batch_size</field>
+        <field name="value">1000</field>
+    </record>
+</odoo>
