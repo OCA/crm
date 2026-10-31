@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="crm_task_template_demo_1" model="crm.task.template">
+        <field name="name">Demo Task</field>
+        <field name="stage_id" ref="crm.stage_lead2" />
+        <field name="description">
+            Create a new task
+        </field>
+        <field name="user_ids" />
+    </record>
+
+</odoo>
