@@ -6,6 +6,8 @@ from odoo.addons.base.tests.common import BaseCommon
 
 
 class TestCrmLocation(BaseCommon):
+    _test_user_groups = ("sales_team.group_sale_salesman",)
+
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
@@ -29,7 +31,9 @@ class TestCrmLocation(BaseCommon):
         cls.location = cls.env["res.city.zip"].create(
             {"name": "12345", "city_id": cls.city.id}
         )
-        cls.lead = cls.env["crm.lead"].create({"name": "Test lead"})
+        cls.lead = cls.env["crm.lead"].create(
+            {"name": "Test lead", "user_id": cls._test_user.id}
+        )
         cls.partner = cls.env["res.partner"].create(
             {
                 "name": "Test partner name",
