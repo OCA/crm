@@ -6,25 +6,37 @@
         <field name="name">crm.lead.view.form.inherit.crm.project.task</field>
         <field name="model">crm.lead</field>
         <field name="inherit_id" ref="crm.crm_lead_view_form" />
+        <!-- Applied after crm_sale_project and sale_crm, which also insert their
+             buttons after the meeting one: ours then lands first, next to
+             "Projects / Tasks" -->
+        <field name="priority" eval="20" />
         <field name="arch" type="xml">
             <xpath expr="header" position="inside">
                 <button
                     class="oe_highlight"
                     context="{'default_lead_id': id, 'default_task_name': name}"
-                    invisible="active == False or task_count != 0"
+                    invisible="active == False or lead_task_count != 0"
                     name="action_create_task"
                     string="Create Task"
                     type="object"
                 />
             </xpath>
-            <xpath expr="//div[hasclass('oe_button_box')]" position="inside">
+            <!-- Next to crm_sale_project's "Projects / Tasks", which also goes after
+                 the meeting button, so both task counters show together -->
+            <xpath expr="//button[@name='action_schedule_meeting']" position="after">
                 <button
                     class="oe_stat_button"
-                    icon="fa-tasks"
+                    icon="checklist"
                     name="action_view_tasks"
                     type="object"
+                    invisible="not lead_task_count"
+                    help="Tasks linked directly to this lead/opportunity through their Lead/Opportunity field, whatever project they belong to. Tasks of projects created from this opportunity are not counted here unless they are also linked to it."
                 >
-                    <field name="task_count" string="Task(s)" widget="statinfo" />
+                    <field
+                        name="lead_task_count"
+                        string="Lead Tasks"
+                        widget="statinfo"
+                    />
                 </button>
             </xpath>
         </field>

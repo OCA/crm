@@ -11,14 +11,14 @@ class CrmLead(models.Model):
     _inherit = "crm.lead"
 
     task_ids = fields.One2many("project.task", "lead_id")
-    task_count = fields.Integer(
-        "#Task", compute_sudo=True, compute="_compute_task_count"
+    lead_task_count = fields.Integer(
+        "#Task", compute_sudo=True, compute="_compute_lead_task_count"
     )
 
     @api.depends("task_ids")
-    def _compute_task_count(self):
+    def _compute_lead_task_count(self):
         for lead in self:
-            lead.task_count = len(lead.task_ids)
+            lead.lead_task_count = len(lead.task_ids)
 
     def _get_crm_default_project(self):
         self.ensure_one()
