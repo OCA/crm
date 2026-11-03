@@ -224,16 +224,16 @@ class TestCrmProjectTask(TransactionCase):
 
     # -- Other model extensions ------------------------------------------------
 
-    def test_task_count_computed_from_related_tasks(self):
-        self.assertEqual(self.lead.task_count, 0)
+    def test_lead_task_count_computed_from_related_tasks(self):
+        self.assertEqual(self.lead.lead_task_count, 0)
         self.env["project.task"].create(
             {"name": "Task 1", "lead_id": self.lead.id, "project_id": self.project.id}
         )
         self.env["project.task"].create(
             {"name": "Task 2", "lead_id": self.lead.id, "project_id": self.project.id}
         )
-        self.lead.invalidate_recordset(["task_ids", "task_count"])
-        self.assertEqual(self.lead.task_count, 2)
+        self.lead.invalidate_recordset(["task_ids", "lead_task_count"])
+        self.assertEqual(self.lead.lead_task_count, 2)
 
     def test_merge_get_fields_specific_keeps_tasks_linked(self):
         task_1 = self.env["project.task"].create(

@@ -4,7 +4,7 @@
 {
     "name": "CRM Project Task",
     "summary": "Create tasks from lead or opportunity",
-    "version": "19.0.1.0.0",
+    "version": "20.0.1.0.0",
     "development_status": "Alpha",
     "category": "Sales/CRM",
     "website": "https://github.com/OCA/crm",
@@ -18,7 +18,7 @@
         "project",
     ],
     "data": [
-        "security/ir.model.access.csv",
+        "security/ir.access.csv",
         "views/res_config_settings.xml",
         "wizards/crm_create_task.xml",
         "views/crm_lead.xml",
