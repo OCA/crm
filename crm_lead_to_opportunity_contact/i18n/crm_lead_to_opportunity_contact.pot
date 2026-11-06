@@ -1,0 +1,104 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* crm_lead_to_opportunity_contact
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: crm_lead_to_opportunity_contact
+#: model:ir.model.fields,help:crm_lead_to_opportunity_contact.field_crm_lead2opportunity_partner__partner_is_company
+#: model:ir.model.fields,help:crm_lead_to_opportunity_contact.field_crm_lead2opportunity_partner_mass__partner_is_company
+msgid "Check if the contact is a company, otherwise it is a person"
+msgstr ""
+
+#. module: crm_lead_to_opportunity_contact
+#: model:ir.model.fields,field_description:crm_lead_to_opportunity_contact.field_crm_lead2opportunity_partner__contact_partner_id
+#: model:ir.model.fields,field_description:crm_lead_to_opportunity_contact.field_crm_lead2opportunity_partner_mass__contact_partner_id
+#: model_terms:ir.ui.view,arch_db:crm_lead_to_opportunity_contact.view_crm_lead2opportunity_partner
+msgid "Contact"
+msgstr ""
+
+#. module: crm_lead_to_opportunity_contact
+#: model:ir.model.fields,field_description:crm_lead_to_opportunity_contact.field_crm_lead2opportunity_partner__contact_action
+#: model:ir.model.fields,field_description:crm_lead_to_opportunity_contact.field_crm_lead2opportunity_partner_mass__contact_action
+msgid "Contact Action"
+msgstr ""
+
+#. module: crm_lead_to_opportunity_contact
+#: model:ir.model,name:crm_lead_to_opportunity_contact.model_crm_lead2opportunity_partner_mass
+msgid "Convert Lead to Opportunity (in mass)"
+msgstr ""
+
+#. module: crm_lead_to_opportunity_contact
+#: model:ir.model,name:crm_lead_to_opportunity_contact.model_crm_lead2opportunity_partner
+msgid "Convert Lead to Opportunity (not in mass)"
+msgstr ""
+
+#. module: crm_lead_to_opportunity_contact
+#: model:ir.model.fields.selection,name:crm_lead_to_opportunity_contact.selection__crm_lead2opportunity_partner__contact_action__create_contact
+#: model:ir.model.fields.selection,name:crm_lead_to_opportunity_contact.selection__crm_lead2opportunity_partner_mass__contact_action__create_contact
+msgid "Create a new contact"
+msgstr ""
+
+#. module: crm_lead_to_opportunity_contact
+#: model:ir.model.fields,field_description:crm_lead_to_opportunity_contact.field_crm_lead2opportunity_partner__display_name
+#: model:ir.model.fields,field_description:crm_lead_to_opportunity_contact.field_crm_lead2opportunity_partner_mass__display_name
+#: model:ir.model.fields,field_description:crm_lead_to_opportunity_contact.field_crm_lead__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: crm_lead_to_opportunity_contact
+#: model:ir.model.fields.selection,name:crm_lead_to_opportunity_contact.selection__crm_lead2opportunity_partner__contact_action__no_contact
+#: model:ir.model.fields.selection,name:crm_lead_to_opportunity_contact.selection__crm_lead2opportunity_partner_mass__contact_action__no_contact
+msgid "Do not add a contact"
+msgstr ""
+
+#. module: crm_lead_to_opportunity_contact
+#: model:ir.model.fields,field_description:crm_lead_to_opportunity_contact.field_crm_lead2opportunity_partner__id
+#: model:ir.model.fields,field_description:crm_lead_to_opportunity_contact.field_crm_lead2opportunity_partner_mass__id
+#: model:ir.model.fields,field_description:crm_lead_to_opportunity_contact.field_crm_lead__id
+msgid "ID"
+msgstr ""
+
+#. module: crm_lead_to_opportunity_contact
+#: model:ir.model.fields,field_description:crm_lead_to_opportunity_contact.field_crm_lead2opportunity_partner__partner_is_company
+#: model:ir.model.fields,field_description:crm_lead_to_opportunity_contact.field_crm_lead2opportunity_partner_mass__partner_is_company
+msgid "Is a Company"
+msgstr ""
+
+#. module: crm_lead_to_opportunity_contact
+#: model:ir.model,name:crm_lead_to_opportunity_contact.model_crm_lead
+msgid "Lead"
+msgstr ""
+
+#. module: crm_lead_to_opportunity_contact
+#: model:ir.model.fields.selection,name:crm_lead_to_opportunity_contact.selection__crm_lead2opportunity_partner__contact_action__link_contact
+#: model:ir.model.fields.selection,name:crm_lead_to_opportunity_contact.selection__crm_lead2opportunity_partner_mass__contact_action__link_contact
+msgid "Link to an existing contact"
+msgstr ""
+
+#. module: crm_lead_to_opportunity_contact
+#. odoo-python
+#: code:addons/crm_lead_to_opportunity_contact/wizards/crm_lead_to_opportunity.py:0
+msgid "The contact %(contact)s is archived."
+msgstr ""
+
+#. module: crm_lead_to_opportunity_contact
+#. odoo-python
+#: code:addons/crm_lead_to_opportunity_contact/wizards/crm_lead_to_opportunity.py:0
+msgid "The contact %(contact)s is not a contact of %(customer)s."
+msgstr ""
+
+#. module: crm_lead_to_opportunity_contact
+#. odoo-python
+#: code:addons/crm_lead_to_opportunity_contact/wizards/crm_lead_to_opportunity.py:0
+msgid "You must select a Contact."
+msgstr ""
