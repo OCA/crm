@@ -9,6 +9,8 @@ from odoo.addons.base.tests.common import BaseCommon
 
 
 class TestCrmProject(BaseCommon):
+    _test_user_groups = None
+
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
@@ -17,7 +19,6 @@ class TestCrmProject(BaseCommon):
                 "name": "Test lead",
                 "description": "Description",
                 "partner_name": "Test partner crm_lead_to_task",
-                "email_cc": "cc@example.org",
             }
         )
         cls.project = cls.env["project.project"].create({"name": "Test project"})
@@ -36,7 +37,9 @@ class TestCrmProject(BaseCommon):
             html2plaintext(task.description or "").strip(),
             "Description",
         )
-        self.assertEqual(task.email_cc, "cc@example.org")
-        self.assertEqual(task.partner_id.name, "Test partner crm_lead_to_task")
+        self.assertEqual(
+            task.partner_id.parent_id.name, "Test partner crm_lead_to_task"
+        )
+        self.assertEqual(task.partner_id.name, "Test lead")
         self.assertEqual(task.project_id, self.project)
         self.assertFalse(self.lead.active)

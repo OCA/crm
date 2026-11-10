@@ -33,7 +33,7 @@
                     name="action_view_tasks"
                     type="object"
                     class="oe_stat_button"
-                    icon="fa-pencil"
+                    icon="edit"
                     invisible="task_count &lt; 1"
                 >
                     <div class="o_stat_info">

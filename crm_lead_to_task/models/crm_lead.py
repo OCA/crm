@@ -20,14 +20,9 @@ class CrmLead(models.Model):
 
     def action_view_tasks(self):
         self.ensure_one()
-        return {
-            "type": "ir.actions.act_window",
-            "res_model": "project.task",
-            "view_mode": "list,form",
-            "domain": [("lead_id", "=", self.id)],
-            "context": {"default_search_lead_id": self.id},
-            "name": self.env._("Tasks from crm lead %s", self.name),
-        }
+        return self.task_ids._get_records_action(
+            name=self.env._("Tasks from crm lead %s", self.name),
+        )
 
     def _get_values_task_from_lead(self, project):
         """Prepare values to create a task from the lead."""
@@ -42,7 +37,6 @@ class CrmLead(models.Model):
             "description": self.description,
             "project_id": project.id,
             "partner_id": partner.id,
-            "email_cc": self.email_cc,
             "lead_id": self.id,
         }
 

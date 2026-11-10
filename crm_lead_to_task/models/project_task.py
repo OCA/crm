@@ -11,11 +11,6 @@ class ProjectTask(models.Model):
 
     def action_view_lead(self):
         self.ensure_one()
-        return {
-            "type": "ir.actions.act_window",
-            "res_model": "crm.lead",
-            "view_mode": "form",
-            "res_id": self.lead_id.id,
-            "target": "current",
-            "name": self.env._("Lead: %s", self.lead_id.name),
-        }
+        return self.lead_id._get_records_action(
+            name=self.env._("Lead: %s", self.lead_id.name)
+        )

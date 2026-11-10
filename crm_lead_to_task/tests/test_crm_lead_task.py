@@ -6,6 +6,8 @@ from odoo.addons.base.tests.common import BaseCommon
 
 
 class TestCrmLeadTask(BaseCommon):
+    _test_user_groups = None
+
     @classmethod
     def setUpClass(cls):
         super().setUpClass()
@@ -44,12 +46,11 @@ class TestCrmLeadTask(BaseCommon):
         """Test that action_view_tasks returns the correct action"""
         action = self.lead.action_view_tasks()
 
-        expected_domain = [("lead_id", "=", self.lead.id)]
+        expected_domain = [("id", "in", self.lead.task_ids.ids)]
         self.assertEqual(action["type"], "ir.actions.act_window")
         self.assertEqual(action["res_model"], "project.task")
-        self.assertEqual(action["view_mode"], "list,form")
+        self.assertEqual(action["views"], [(False, "list"), (False, "form")])
         self.assertEqual(action["domain"], expected_domain)
-        self.assertEqual(action["context"]["default_search_lead_id"], self.lead.id)
         self.assertEqual(
             action["name"], self.env._("Tasks from crm lead %s", self.lead.name)
         )
@@ -60,7 +61,7 @@ class TestCrmLeadTask(BaseCommon):
 
         self.assertEqual(action["type"], "ir.actions.act_window")
         self.assertEqual(action["res_model"], "crm.lead")
-        self.assertEqual(action["view_mode"], "form")
+        self.assertEqual(action["views"], [(False, "form")])
         self.assertEqual(action["res_id"], self.lead.id)
         self.assertEqual(action["name"], self.env._("Lead: %s", self.lead.name))
 
