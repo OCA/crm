@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="crm_case_form_view_oppor" model="ir.ui.view">
+        <field name="name">crm.lead.oppor.inherited.crm</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="sale_crm.crm_case_form_view_oppor" />
+        <field name="arch" type="xml">
+            <button name="action_sale_quotations_new" position="attributes">
+                <attribute name="groups">sales_team.group_sale_salesman</attribute>
+            </button>
+            <button name="action_view_sale_quotation" position="attributes">
+                <attribute name="groups">sales_team.group_sale_salesman</attribute>
+            </button>
+            <button name="action_view_sale_order" position="attributes">
+                <attribute name="groups">sales_team.group_sale_salesman</attribute>
+            </button>
+        </field>
+    </record>
+</odoo>
