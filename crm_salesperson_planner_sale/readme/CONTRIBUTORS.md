@@ -1,0 +1,6 @@
+- [Sygel](https://www.sygel.es):
+  - Valentin Vinagre
+- [Tecnativa](https://www.tecnativa.com):
+  - Víctor Martínez
+- [Pesol](https://www.pesol.es):
+  - Gerardo Marin Parra \<info@pesol.es\>

@@ -1,0 +1,1 @@
+odoo-addon-crm-salesperson-planner @ git+https://github.com/OCA/crm.git@refs/pull/751/head#subdirectory=crm_salesperson_planner
