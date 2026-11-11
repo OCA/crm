@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2021 Sygel - Valentin Vinagre
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo noupdate="1">
+    <record id="sequence_salesperson_planner_visit" model="ir.sequence">
+        <field name="name">Salesperson Planner visit Code</field>
+        <field name="code">salesperson.planner.visit</field>
+        <field eval="6" name="padding" />
+        <field name="prefix">SPPV/</field>
+    </record>
+    <record id="sequence_salesperson_planner_visit_template" model="ir.sequence">
+        <field name="name">Salesperson Planner visit Template Code</field>
+        <field name="code">salesperson.planner.visit.template</field>
+        <field eval="6" name="padding" />
+        <field name="prefix">SPPVT/</field>
+    </record>
+</odoo>
