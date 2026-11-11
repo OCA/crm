@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-06-01 02:38+0000\n"
-"PO-Revision-Date: 2018-11-08 13:54+0000\n"
-"Last-Translator: Piotr Cierkosz <piotr.w.cierkosz@icloud.com>\n"
+"PO-Revision-Date: 2026-11-11 13:46+0000\n"
+"Last-Translator: leszekszczepkowski <leszekszczepkowski@gmail.com>\n"
 "Language-Team: Polish (https://www.transifex.com/oca/teams/23907/pl/)\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
@@ -19,12 +19,12 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && "
 "(n%100<12 || n%100>=14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && "
 "n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
-"X-Generator: Weblate 3.2.2\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__nbr_cases
 msgid "# of Cases"
-msgstr "# Spraw"
+msgstr "Liczba spraw"
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
@@ -68,9 +68,8 @@ msgstr "Akcja"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_needaction
-#, fuzzy
 msgid "Action Needed"
-msgstr "Akcja"
+msgstr "Wymagane działanie"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__active
@@ -80,7 +79,7 @@ msgstr "Aktywne"
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
 msgid "Additional Info"
-msgstr ""
+msgstr "Dodatkowe informacje"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__user_id
@@ -90,12 +89,12 @@ msgstr "Przypisz do"
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_attachment_count
 msgid "Attachment Count"
-msgstr ""
+msgstr "Liczba załączników"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_res_config_settings__group_show_form_view
 msgid "By default form is disabled for calls, with this group it is enabled."
-msgstr ""
+msgstr "Domyślnie formularz połączeń jest wyłączony; ta grupa go włącza."
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.res_config_settings_view_form
@@ -103,21 +102,23 @@ msgid ""
 "By default form view is disabled for calls, with this setting it is enabled "
 "for all users."
 msgstr ""
+"Domyślnie widok formularza połączeń jest wyłączony; to ustawienie włącza go "
+"wszystkim użytkownikom."
 
 #. module: crm_phonecall
 #: model:ir.model,name:crm_phonecall.model_calendar_event
 msgid "Calendar Event"
-msgstr ""
+msgstr "Wydarzenie w kalendarzu"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__name
 msgid "Call Summary"
-msgstr "Podsumowanie Połączenia"
+msgstr "Podsumowanie połączenia"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__name
 msgid "Call summary"
-msgstr "Podsumowanie Połączenia"
+msgstr "Podsumowanie połączenia"
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_form_view_leads_inherit
@@ -133,12 +134,12 @@ msgstr "Daty połączeń według miesiąca"
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
 msgid "Calls by status"
-msgstr ""
+msgstr "Połączenia według statusu"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__campaign_id
 msgid "Campaign"
-msgstr ""
+msgstr "Kampania"
 
 #. module: crm_phonecall
 #: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall__state__cancel
@@ -154,22 +155,22 @@ msgstr "Kategorie"
 #. module: crm_phonecall
 #: model_terms:ir.actions.act_window,help:crm_phonecall.crm_phonecall_categ_action
 msgid "Click to add a new category."
-msgstr "Kliknij aby dodać nową kategorię."
+msgstr "Kliknij, aby dodać nową kategorię."
 
 #. module: crm_phonecall
 #: model_terms:ir.actions.act_window,help:crm_phonecall.crm_case_categ_phone_incoming0
 msgid "Click to log the summary of a phone call."
-msgstr "Kliknij aby zapisać podsumowanie połączenia."
+msgstr "Kliknij, aby zapisać podsumowanie połączenia."
 
 #. module: crm_phonecall
 #: model_terms:ir.actions.act_window,help:crm_phonecall.crm_case_categ_phone_outgoing0
 msgid "Click to schedule a call"
-msgstr "Kliknj aby zaplanować połączenie"
+msgstr "Kliknij, aby zaplanować połączenie"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__date_closed
 msgid "Close Date"
-msgstr "Data Zamknięcia"
+msgstr "Data zamknięcia"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__date_closed
@@ -185,7 +186,7 @@ msgstr "Firma"
 #. module: crm_phonecall
 #: model:ir.model,name:crm_phonecall.model_res_config_settings
 msgid "Config Settings"
-msgstr ""
+msgstr "Konfiguracja ustawień"
 
 #. module: crm_phonecall
 #: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall__state__open
@@ -202,13 +203,13 @@ msgstr "Kontakt"
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
 msgid "Convert To Opportunity"
-msgstr "Zamień na Możliwość"
+msgstr "Zamień na szansę"
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_inbound_phone_tree_view
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_tree_view
 msgid "Convert to Opportunity"
-msgstr "Zamień na Możliwość"
+msgstr "Zamień na szansę"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__create_date
@@ -221,35 +222,35 @@ msgid ""
 "Create specific phone call categories to better define the type of\n"
 "            calls tracked in the system."
 msgstr ""
-"Utwórz kategorie połączeń telefonicznych aby śledzić je dokładniej w "
-"systemie."
+"Utwórz kategorie połączeń telefonicznych, aby dokładniej określać rodzaj\n"
+"            połączeń śledzonych w systemie."
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__create_uid
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__create_uid
 msgid "Created by"
-msgstr "Utworzone przez"
+msgstr "Utworzył(a)"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__create_date
 msgid "Created on"
-msgstr "Utworzono"
+msgstr "Data utworzenia"
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
 msgid "Creation"
-msgstr "Utwórz"
+msgstr "Utworzenie"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__create_date
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
 msgid "Creation Date"
-msgstr "Data Utworzenia"
+msgstr "Data utworzenia"
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
 msgid "Creation Month"
-msgstr "Miesiąc Utworzenia"
+msgstr "Miesiąc utworzenia"
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
@@ -266,12 +267,12 @@ msgstr "Data"
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__delay_close
 msgid "Delay to close"
-msgstr "Opóźnij do zamknięcia"
+msgstr "Dni do zamknięcia"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__delay_open
 msgid "Delay to open"
-msgstr "Opóźnij do otwarcia"
+msgstr "Dni do otwarcia"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__description
@@ -285,21 +286,20 @@ msgstr "Opis..."
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__direction
-#, fuzzy
 msgid "Direction"
-msgstr "Utwórz"
+msgstr "Kierunek"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__display_name
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__display_name
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__display_name
 msgid "Display Name"
-msgstr "Wyświetlana nazwa"
+msgstr "Nazwa wyświetlana"
 
 #. module: crm_phonecall
 #: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall_report__state__draft
 msgid "Draft"
-msgstr "Szkic"
+msgstr "Wersja robocza"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__duration
@@ -321,33 +321,33 @@ msgstr "Email"
 #: model:ir.model.fields,field_description:crm_phonecall.field_res_config_settings__group_show_form_view
 #: model:res.groups,name:crm_phonecall.group_show_form_view
 msgid "Enable form view for phone calls"
-msgstr ""
+msgstr "Włącz widok formularza połączeń"
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
 msgid "Extended Filters..."
-msgstr "Rozszerzone Filtry..."
+msgstr "Rozszerzone filtry..."
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_follower_ids
 msgid "Followers"
-msgstr ""
+msgstr "Obserwujący"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_partner_ids
 msgid "Followers (Partners)"
-msgstr ""
+msgstr "Obserwujący (kontrahenci)"
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
 msgid "Group By"
-msgstr "Grupuj"
+msgstr "Grupuj wg"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__has_message
 msgid "Has Message"
-msgstr ""
+msgstr "Ma wiadomość"
 
 #. module: crm_phonecall
 #: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall__state__done
@@ -372,17 +372,18 @@ msgstr "ID"
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__message_needaction
 msgid "If checked, new messages require your attention."
-msgstr ""
+msgstr "Jeśli zaznaczone, nowe wiadomości wymagają twojej uwagi."
 
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__message_has_error
 msgid "If checked, some messages have a delivery error."
 msgstr ""
+"Jeśli zaznaczone, niektóre wiadomości napotkały błędy podczas doręczenia."
 
 #. module: crm_phonecall
 #: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall__direction__in
 msgid "In"
-msgstr ""
+msgstr "Przychodzące"
 
 #. module: crm_phonecall
 #: model_terms:ir.actions.act_window,help:crm_phonecall.crm_case_categ_phone_incoming0
@@ -390,47 +391,46 @@ msgid ""
 "In order to follow up on the call, you can trigger a request for\n"
 "            another call, a meeting or an opportunity."
 msgstr ""
-"W celu kontynuacji rozmowy w późniejszym terminie możesz\n"
-"…zaplanować kolejne połączenie, spotkanie albo możliwość."
+"Aby kontynuować sprawę po rozmowie, możesz zaplanować\n"
+"            kolejne połączenie, spotkanie albo szansę."
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
-#, fuzzy
 msgid "Incoming Calls"
-msgstr "Połączenia Telefoniczne"
+msgstr "Połączenia przychodzące"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_is_follower
 msgid "Is Follower"
-msgstr ""
+msgstr "Jest obserwatorem"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__date_action_last
 msgid "Last Action"
-msgstr "Ostatnia Czynność"
+msgstr "Ostatnia czynność"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__write_uid
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__write_uid
 msgid "Last Updated by"
-msgstr "Ostatnio modyfikowane przez"
+msgstr "Ostatnio aktualizowane przez"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__write_date
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__write_date
 msgid "Last Updated on"
-msgstr "Ostatnia zmiana"
+msgstr "Data ostatniej aktualizacji"
 
 #. module: crm_phonecall
 #: model:ir.model,name:crm_phonecall.model_crm_lead
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__opportunity_id
 msgid "Lead/Opportunity"
-msgstr "Lead/Możliwość"
+msgstr "Lead/szansa"
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.phonecall_to_phonecall_view
 msgid "Log Call"
-msgstr "Zapisz Połączenie"
+msgstr "Zapisz połączenie"
 
 #. module: crm_phonecall
 #: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall2phonecall__action__log
@@ -441,7 +441,7 @@ msgstr "Zapisz połączenie"
 #: model:ir.actions.act_window,name:crm_phonecall.crm_case_categ_phone_incoming0
 #: model:ir.ui.menu,name:crm_phonecall.menu_crm_case_phone_inbound
 msgid "Logged Calls"
-msgstr "Zapisane Połączenia"
+msgstr "Zapisane połączenia"
 
 #. module: crm_phonecall
 #: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall__priority__0
@@ -452,7 +452,7 @@ msgstr "Niski"
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__medium_id
 msgid "Medium"
-msgstr ""
+msgstr "Medium"
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_inbound_phone_tree_view
@@ -463,12 +463,12 @@ msgstr "Spotkanie"
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_has_error
 msgid "Message Delivery error"
-msgstr ""
+msgstr "Błąd doręczenia wiadomości"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_ids
 msgid "Messages"
-msgstr ""
+msgstr "Wiadomości"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__partner_mobile
@@ -488,27 +488,27 @@ msgstr "Miesiąc połączenia"
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
 msgid "My Phone Calls"
-msgstr "Moje Połączenia Telefoniczne"
+msgstr "Moje połączenia telefoniczne"
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
 msgid "My Phonecalls"
-msgstr "Moje Telefony"
+msgstr "Moje połączenia"
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
 msgid "My Sales Team(s)"
-msgstr "Moje Grupy Sprzedażowe"
+msgstr "Moje zespoły sprzedaży"
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
 msgid "My Team"
-msgstr "Moja Drużyna"
+msgstr "Mój zespół"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__date_action_next
 msgid "Next Action"
-msgstr "Następna Akcja"
+msgstr "Następna czynność"
 
 #. module: crm_phonecall
 #: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall__priority__1
@@ -519,7 +519,7 @@ msgstr "Normalny"
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
 msgid "Not Held"
-msgstr "Nie przeprowadzone"
+msgstr "Nieprzeprowadzone"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__note
@@ -528,35 +528,33 @@ msgstr "Notatka"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_needaction_counter
-#, fuzzy
 msgid "Number of Actions"
-msgstr "Następna Akcja"
+msgstr "Liczba akcji"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall_report__delay_close
 msgid "Number of Days to close the case"
-msgstr "Ilość dni do zamknięcia sprawy"
+msgstr "Liczba dni do zamknięcia sprawy"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall_report__delay_open
 msgid "Number of Days to open the case"
-msgstr "Ilość dni do otwarcia sprawy"
+msgstr "Liczba dni do otwarcia sprawy"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_has_error_counter
-#, fuzzy
 msgid "Number of errors"
-msgstr "Następna Akcja"
+msgstr "Liczba błędów"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__message_needaction_counter
 msgid "Number of messages requiring action"
-msgstr ""
+msgstr "Liczba wiadomości wymagających akcji"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__message_has_error_counter
 msgid "Number of messages with delivery error"
-msgstr ""
+msgstr "Liczba wiadomości z błędami przy doręczeniu"
 
 #. module: crm_phonecall
 #: model_terms:ir.actions.act_window,help:crm_phonecall.crm_case_categ_phone_outgoing0
@@ -564,8 +562,8 @@ msgid ""
 "Odoo allows you to easily define all the calls to be done\n"
 "            by your sales team and follow up based on their summary."
 msgstr ""
-"Odoo umożliwia łątwe planowanie połączeń przez Twoje\n"
-"grupy sprzedażowe i sledzenie ich przy pomocy opisu."
+"Odoo pozwala łatwo zaplanować wszystkie połączenia\n"
+"            twojego zespołu sprzedaży i śledzić je na podstawie podsumowań."
 
 #. module: crm_phonecall
 #: model_terms:ir.actions.act_window,help:crm_phonecall.crm_case_categ_phone_incoming0
@@ -575,9 +573,9 @@ msgid ""
 "another\n"
 "            team member."
 msgstr ""
-"Odoo pozwala na zapisywanie połączeń przychodzących\n"
-"aby śledziń historie komunikacji z klientem lub przekazać\n"
-"odpowiednie informacje członkom grupy."
+"Odoo pozwala na bieżąco zapisywać połączenia przychodzące, żeby śledzić\n"
+"            historię kontaktu z klientem albo przekazać informację innemu\n"
+"            członkowi zespołu."
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__date_open
@@ -593,20 +591,19 @@ msgstr "Data otwarcia"
 #. module: crm_phonecall
 #: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall__direction__out
 msgid "Out"
-msgstr ""
+msgstr "Wychodzące"
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
-#, fuzzy
 msgid "Outgoing Calls"
-msgstr "Połączenia Telefoniczne"
+msgstr "Połączenia wychodzące"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__partner_id
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__partner_id
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
 msgid "Partner"
-msgstr "Partner"
+msgstr "Kontrahent"
 
 #. module: crm_phonecall
 #: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall__state__pending
@@ -634,14 +631,14 @@ msgstr "Połączenie telefoniczne"
 #: model:ir.ui.menu,name:crm_phonecall.menu_crm_config_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_calendar_view
 msgid "Phone Calls"
-msgstr "Połączenia Telefoniczne"
+msgstr "Połączenia telefoniczne"
 
 #. module: crm_phonecall
 #: model:ir.actions.act_window,name:crm_phonecall.crm_phonecall_report_action
 #: model:ir.actions.act_window,name:crm_phonecall.crm_phonecall_report_action_team
 #: model:ir.ui.menu,name:crm_phonecall.menu_report_crm_phonecalls_tree
 msgid "Phone Calls Analysis"
-msgstr "Analiza Połączeń Telefonicznych"
+msgstr "Analiza połączeń telefonicznych"
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
@@ -662,7 +659,7 @@ msgstr "Połączenia telefoniczne na użytkownika"
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
 msgid "Phone calls that are assigned to one of the sale teams I manage"
-msgstr "Połączenia przypisane do grupy sprzedażowej którą zarządzam"
+msgstr "Połączenia przypisane do zespołu sprzedaży, którym zarządzam"
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
@@ -688,20 +685,19 @@ msgstr "Połączenie"
 #. module: crm_phonecall
 #: model:ir.actions.act_window,name:crm_phonecall.crm_phonecall_categ_action
 msgid "Phonecall Categories"
-msgstr "Kategorie Połączeń"
+msgstr "Kategorie połączeń"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_lead__phonecall_count
 #: model:ir.model.fields,field_description:crm_phonecall.field_res_partner__phonecall_count
 #: model:ir.model.fields,field_description:crm_phonecall.field_res_users__phonecall_count
-#, fuzzy
 msgid "Phonecall Count"
-msgstr "Połączenie"
+msgstr "Liczba połączeń"
 
 #. module: crm_phonecall
 #: model:ir.model,name:crm_phonecall.model_crm_phonecall2phonecall
 msgid "Phonecall To Phonecall"
-msgstr "Połączenie do Połączenia"
+msgstr "Połączenie z połączenia"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_lead__phonecall_ids
@@ -726,7 +722,7 @@ msgstr "Priorytet"
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__rating_ids
 msgid "Ratings"
-msgstr ""
+msgstr "Oceny"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__user_id
@@ -740,12 +736,12 @@ msgstr "Odpowiedzialny"
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
 msgid "Sales Team"
-msgstr "Drużyna Sprzedażowa"
+msgstr "Zespół sprzedaży"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__team_id
 msgid "Sales team to which Case belongs to."
-msgstr "Drużyna do której sprawa jest przypisana."
+msgstr "Zespół sprzedaży, do którego należy sprawa."
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
@@ -755,13 +751,13 @@ msgstr "Sprzedawca"
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.phonecall_to_phonecall_view
 msgid "Schedule Call"
-msgstr "Zaplanuj Połączenie"
+msgstr "Zaplanuj połączenie"
 
 #. module: crm_phonecall
 #: model:ir.actions.act_window,name:crm_phonecall.phonecall_to_phonecall_act
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_inbound_phone_tree_view
 msgid "Schedule Other Call"
-msgstr "Zaplanuj Inne Połączenie"
+msgstr "Zaplanuj kolejne połączenie"
 
 #. module: crm_phonecall
 #: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall2phonecall__action__schedule
@@ -771,13 +767,13 @@ msgstr "Zaplanuj połączenie"
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.phonecall_to_phonecall_view
 msgid "Schedule/Log a Call"
-msgstr "Zaplanuj/Zapisz Połączenie"
+msgstr "Zaplanuj/zapisz połączenie"
 
 #. module: crm_phonecall
 #: model:ir.actions.act_window,name:crm_phonecall.crm_case_categ_phone_outgoing0
 #: model:ir.ui.menu,name:crm_phonecall.menu_crm_case_phone_outbound
 msgid "Scheduled Calls"
-msgstr "Zaplanowane Połączenia"
+msgstr "Zaplanowane połączenia"
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
@@ -787,17 +783,17 @@ msgstr "Szukaj"
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
 msgid "Search Phonecalls"
-msgstr "Szukaj Połączeń"
+msgstr "Szukaj połączeń"
 
 #. module: crm_phonecall
 #: model:res.groups,name:crm_phonecall.group_scheduled_calls
 msgid "Show Scheduled Calls Menu"
-msgstr "Pokaż Menu Zaplanowanych Połączeń"
+msgstr "Pokaż menu zaplanowanych połączeń"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__source_id
 msgid "Source"
-msgstr ""
+msgstr "Źródło"
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
@@ -821,7 +817,7 @@ msgstr "Tagi"
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__team_id
 msgid "Team"
-msgstr "Drużyna"
+msgstr "Zespół"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__state
@@ -830,14 +826,14 @@ msgid ""
 "When the call is over, the status is set to Held.\n"
 "If the callis not applicable anymore, the status can be set to Cancelled."
 msgstr ""
-"Status jest ustawiany jako Potwierdzony gdy sprawa jest tworzona.\n"
-"Po zakończeniu połączenia status zmienia się na Przeprowadzony.\n"
-"Jeśli połączenie jest niepotrzebna można je Anulować."
+"Po utworzeniu sprawy status to Potwierdzone.\n"
+"Po zakończeniu rozmowy status zmienia się na Przeprowadzone.\n"
+"Jeśli połączenie nie jest już potrzebne, można ustawić status Anulowane."
 
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__email_from
 msgid "These people will receive email."
-msgstr "Te osoby otrzymają połączenie."
+msgstr "Te osoby otrzymają e-mail."
 
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__campaign_id
@@ -845,11 +841,13 @@ msgid ""
 "This is a name that helps you keep track of your different campaign efforts, "
 "e.g. Fall_Drive, Christmas_Special"
 msgstr ""
+"Nazwa, która pomaga śledzić różne kampanie, np. Jesienna_Akcja, "
+"Promocja_Swiateczna"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__medium_id
 msgid "This is the method of delivery, e.g. Postcard, Email, or Banner Ad"
-msgstr ""
+msgstr "Sposób dotarcia, np. pocztówka, e-mail albo baner reklamowy"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__source_id
@@ -857,11 +855,12 @@ msgid ""
 "This is the source of the link, e.g. Search Engine, another domain, or name "
 "of email list"
 msgstr ""
+"Źródło odnośnika, np. wyszukiwarka, inna domena albo nazwa listy mailingowej"
 
 #. module: crm_phonecall
 #: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
 msgid "To Do"
-msgstr "Do Zrobienia"
+msgstr "Do zrobienia"
 
 #. module: crm_phonecall
 #: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall_report__state__open
@@ -887,19 +886,21 @@ msgstr "Użytkownik"
 #. module: crm_phonecall
 #: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__website_message_ids
 msgid "Website Messages"
-msgstr ""
+msgstr "Wiadomości"
 
 #. module: crm_phonecall
 #: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__website_message_ids
 msgid "Website communication history"
-msgstr ""
+msgstr "Historia komunikacji"
 
 #. module: crm_phonecall
 #: model_terms:ir.actions.act_window,help:crm_phonecall.crm_case_categ_phone_outgoing0
 msgid ""
 "You can use the import feature to massively import a new list of\n"
 "            prospects to qualify."
-msgstr "Możesz zaimportować masowo całą listę."
+msgstr ""
+"Możesz użyć importu, żeby wczytać naraz nową listę\n"
+"            potencjalnych klientów do kwalifikacji."
 
 #~ msgid "Last Modified on"
 #~ msgstr "Ostatnio modyfikowano"
