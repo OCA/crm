@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+     Copyright 2026 Binhex -  Adasat Torres de León
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl.html). -->
+<odoo>
+    <record id="crm_lead_view_form" model="ir.ui.view">
+        <field name="name">Add partner employee quantity field</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='extra']/group" position="inside">
+                <group name="employee_quanity" string="Employee quantity">
+                    <field name="employee_quantity" />
+                    <field name="employee_quantity_range_id" />
+                </group>
+            </xpath>
+            <xpath expr="//page[@name='lead']/group" position="inside">
+                <group name="employee_quanity" string="Employee quantity">
+                    <field name="employee_quantity" />
+                    <field name="employee_quantity_range_id" />
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="crm_case_tree_view_leads">
+        <field name="name">Add employee quantity field as tree column</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_tree_view_leads" />
+        <field name="arch" type="xml">
+            <field name="partner_id" position="after">
+                <field name="employee_quantity" optional="hide" />
+                <field name="employee_quantity_range_id" optional="hide" />
+            </field>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="crm_case_tree_view_oppor">
+        <field name="name">Add employee quantity field as tree column</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_tree_view_oppor" />
+        <field name="arch" type="xml">
+            <field name="partner_id" position="after">
+                <field name="employee_quantity" optional="hide" />
+                <field name="employee_quantity_range_id" optional="hide" />
+            </field>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_crm_case_opportunities_filter">
+        <field name="name">Add employee range filter</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.view_crm_case_opportunities_filter" />
+        <field name="arch" type="xml">
+            <xpath expr="//group" position="inside">
+                <filter
+                    string="Employee Quantity Range"
+                    name="employee_range"
+                    context="{'group_by': 'employee_quantity_range_id'}"
+                />
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_crm_case_leads_filter">
+        <field name="name">Add employee range range filter</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.view_crm_case_leads_filter" />
+        <field name="arch" type="xml">
+            <xpath expr="//group" position="inside">
+                <filter
+                    string="Employee Quantity Range"
+                    name="employee_range"
+                    context="{'group_by': 'employee_quantity_range_id'}"
+                />
+            </xpath>
+        </field>
+    </record>
+</odoo>
