@@ -1,0 +1,90 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* crm_partner_capital
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: crm_partner_capital
+#: model:ir.model.fields.selection,name:crm_partner_capital.selection__crm_lead__company_size__big
+msgid "Big"
+msgstr ""
+
+#. module: crm_partner_capital
+#: model_terms:ir.ui.view,arch_db:crm_partner_capital.crm_lead_view_form
+msgid "Capital"
+msgstr ""
+
+#. module: crm_partner_capital
+#: model:ir.model.fields,field_description:crm_partner_capital.field_crm_lead__capital_amount
+msgid "Capital amount"
+msgstr ""
+
+#. module: crm_partner_capital
+#: model:ir.model.fields,field_description:crm_partner_capital.field_crm_lead__capital_country_id
+msgid "Capital country"
+msgstr ""
+
+#. module: crm_partner_capital
+#: model:ir.model.fields,field_description:crm_partner_capital.field_crm_lead__capital_currency_id
+msgid "Capital currency"
+msgstr ""
+
+#. module: crm_partner_capital
+#: model:ir.model.fields,field_description:crm_partner_capital.field_crm_lead__company_size
+msgid "Company size"
+msgstr ""
+
+#. module: crm_partner_capital
+#: model:ir.model.fields,help:crm_partner_capital.field_crm_lead__capital_country_id
+msgid "Country of origin of this company's capital."
+msgstr ""
+
+#. module: crm_partner_capital
+#: model:ir.model,name:crm_partner_capital.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr ""
+
+#. module: crm_partner_capital
+#: model:ir.model.fields.selection,name:crm_partner_capital.selection__crm_lead__company_size__medium
+msgid "Medium"
+msgstr ""
+
+#. module: crm_partner_capital
+#: model:ir.model.fields.selection,name:crm_partner_capital.selection__crm_lead__company_size__micro
+msgid "Micro"
+msgstr ""
+
+#. module: crm_partner_capital
+#: model:ir.model.fields,help:crm_partner_capital.field_crm_lead__capital_amount
+msgid "Publicly registered capital amount."
+msgstr ""
+
+#. module: crm_partner_capital
+#: model:ir.model.fields.selection,name:crm_partner_capital.selection__crm_lead__company_size__small
+msgid "Small"
+msgstr ""
+
+#. module: crm_partner_capital
+#: model:ir.model.fields,field_description:crm_partner_capital.field_crm_lead__turnover_amount
+msgid "Turnover Amount"
+msgstr ""
+
+#. module: crm_partner_capital
+#: model_terms:ir.ui.view,arch_db:crm_partner_capital.view_crm_case_leads_filter
+#: model_terms:ir.ui.view,arch_db:crm_partner_capital.view_crm_case_opportunities_filter
+msgid "Turnover Range"
+msgstr ""
+
+#. module: crm_partner_capital
+#: model:ir.model.fields,field_description:crm_partner_capital.field_crm_lead__turnover_range_id
+msgid "Turnover range"
+msgstr ""

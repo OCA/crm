@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 Binhex - Adasat Torres de León
+     License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl-3.0) -->
+<odoo>
+    <record id="crm_lead_view_form" model="ir.ui.view">
+        <field name="name">Add partner capital fields</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='extra']/group" position="inside">
+                <group name="capital" string="Capital">
+                    <field name="capital_amount" />
+                    <field name="capital_currency_id" />
+                    <field name="capital_country_id" />
+                    <field name="turnover_amount" />
+                    <field name="turnover_range_id" />
+                    <field name="company_size" />
+                </group>
+            </xpath>
+            <xpath expr="//page[@name='lead']/group" position="inside">
+                <group name="capital" string="Capital">
+                    <field name="capital_amount" />
+                    <field name="capital_currency_id" />
+                    <field name="capital_country_id" />
+                    <field name="turnover_amount" />
+                    <field name="turnover_range_id" />
+                    <field name="company_size" />
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="crm_case_tree_view_leads">
+        <field name="name">Add revenue range field as tree column</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_tree_view_leads" />
+        <field name="arch" type="xml">
+            <field name="partner_id" position="after">
+                <field name="capital_amount" optional="hide" />
+                <field name="capital_currency_id" optional="hide" />
+                <field name="capital_country_id" optional="hide" />
+                <field name="turnover_amount" optional="hide" />
+                <field name="turnover_range_id" optional="hide" />
+                <field name="company_size" optional="hide" />
+            </field>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="crm_case_tree_view_oppor">
+        <field name="name">Add revenue range field as tree column</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_tree_view_oppor" />
+        <field name="arch" type="xml">
+            <field name="partner_id" position="after">
+                <field name="capital_amount" optional="hide" />
+                <field name="capital_currency_id" optional="hide" />
+                <field name="capital_country_id" optional="hide" />
+                <field name="turnover_amount" optional="hide" />
+                <field name="turnover_range_id" optional="hide" />
+                <field name="company_size" optional="hide" />
+            </field>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_crm_case_opportunities_filter">
+        <field name="name">Add turnover range filter</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.view_crm_case_opportunities_filter" />
+        <field name="arch" type="xml">
+            <xpath expr="//group" position="inside">
+                <filter
+                    string="Turnover Range"
+                    name="turnover_range"
+                    context="{'group_by': 'turnover_range_id'}"
+                />
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_crm_case_leads_filter">
+        <field name="name">Add turnover range filter</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.view_crm_case_leads_filter" />
+        <field name="arch" type="xml">
+            <xpath expr="//group" position="inside">
+                <filter
+                    string="Turnover Range"
+                    name="turnover_range"
+                    context="{'group_by': 'turnover_range_id'}"
+                />
+            </xpath>
+        </field>
+    </record>
+</odoo>
