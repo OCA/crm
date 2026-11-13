@@ -1,8 +1,9 @@
 [project]
 name = "odoo-addons-oca-crm"
-version = "20.0.20261113.0"
+version = "20.0.20261113.1"
 dependencies = [
     "odoo-addon-crm_project_task==20.0.*",
+    "odoo-addon-crm_stage_probability==20.0.*",
 ]
 classifiers=[
     "Programming Language :: Python",
