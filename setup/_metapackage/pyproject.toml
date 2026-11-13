@@ -1,0 +1,11 @@
+[project]
+name = "odoo-addons-oca-crm"
+version = "20.0.20261113.0"
+dependencies = [
+    "odoo-addon-crm_project_task==20.0.*",
+]
+classifiers=[
+    "Programming Language :: Python",
+    "Framework :: Odoo",
+    "Framework :: Odoo :: 20.0",
+]
