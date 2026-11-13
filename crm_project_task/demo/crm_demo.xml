@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+    <!-- Set Reasearch and Development as the default project for the main company -->
+    <record id="base.main_company" model="res.company">
+        <field name="crm_default_project_id" ref='project.project_project_2' />
+    </record>
+
+    <record id="crm_project_task_demo_task" model="project.task">
+        <field name="name">Demo task from opportunity</field>
+        <field name="lead_id" ref="crm.crm_case_31" />
+        <field name="project_id" ref="project.project_project_2" />
+    </record>
+</odoo>
