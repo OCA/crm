@@ -213,16 +213,21 @@ class CrmSalespersonPlannerVisitTemplate(models.Model):
         """Same method as in calendar.event."""
         for item in self:
             if item.allday:
-                enddate = fields.Datetime.from_string(item.stop_date)
+                enddate = fields.Datetime.from_string(item.stop_date or item.stop)
                 enddate = enddate.replace(hour=18)
-                startdate = fields.Datetime.from_string(item.start_date)
+                startdate = fields.Datetime.from_string(item.start_date or item.start)
                 startdate = startdate.replace(hour=8)
-                item.write(
-                    {
+                if item.start_date and item.stop_date:
+                    vals = {
                         "start": startdate.replace(tzinfo=None),
                         "stop": enddate.replace(tzinfo=None),
                     }
-                )
+                else:
+                    vals = {
+                        "start_date": startdate.replace(tzinfo=None),
+                        "stop_date": enddate.replace(tzinfo=None),
+                    }
+                item.write(vals)
 
     @api.constrains("partner_ids")
     def _constrains_partner_ids(self):

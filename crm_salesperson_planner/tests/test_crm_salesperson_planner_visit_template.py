@@ -7,7 +7,7 @@ from datetime import timedelta
 from freezegun import freeze_time
 
 from odoo import exceptions, fields
-from odoo.tests import common
+from odoo.tests import Form, common
 from odoo.tools import mute_logger
 
 
@@ -341,3 +341,24 @@ class TestCrmSalespersonPlannerVisitTemplate(common.TransactionCase):
             self.visit_template_base.last_visit_date,
             fields.Date.from_string("2025-03-08"),
         )
+
+    def test_08_create_allday_template(self):
+        with Form(self.visit_template_model) as template_form:
+            template_form.partner_ids.add(self.partner1)
+            template_form.start_date = fields.Date.today()
+            template_form.end_type = "count"
+            template_form.count = 1
+        visit_template = template_form.record
+        self.assertTrue(visit_template.allday)
+
+    def test_09_create_allday_template_without_stop_date(self):
+        today = fields.Date.today()
+        visit_template = self.visit_template_model.create(
+            {
+                "partner_ids": [(6, False, self.partner1.ids)],
+                "start_date": today,
+                "stop_date": False,
+            }
+        )
+        self.assertEqual(visit_template.start_date, today)
+        self.assertTrue(visit_template.stop_date)
