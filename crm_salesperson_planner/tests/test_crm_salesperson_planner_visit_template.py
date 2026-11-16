@@ -350,3 +350,15 @@ class TestCrmSalespersonPlannerVisitTemplate(common.TransactionCase):
             template_form.count = 1
         visit_template = template_form.record
         self.assertTrue(visit_template.allday)
+
+    def test_09_create_allday_template_without_stop_date(self):
+        today = fields.Date.today()
+        visit_template = self.visit_template_model.create(
+            {
+                "partner_ids": [(6, False, self.partner1.ids)],
+                "start_date": today,
+                "stop_date": False,
+            }
+        )
+        self.assertEqual(visit_template.start_date, today)
+        self.assertTrue(visit_template.stop_date)
