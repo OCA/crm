@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2021 Sygel - Valentin Vinagre
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <record
+        id="crm_salesperson_planner_visit_template_create_view_form"
+        model="ir.ui.view"
+    >
+        <field name="name">crm.salesperson.planner.visit.template.create.form</field>
+        <field name="model">crm.salesperson.planner.visit.template.create</field>
+        <field name="arch" type="xml">
+            <form string="Create Visits">
+                <group class="oe_title">
+                    <field name="date_to" />
+                </group>
+                <footer>
+                    <button
+                        name="create_visits"
+                        string="Create"
+                        type="object"
+                        class="btn-primary"
+                    />
+                    <button string="Cancel" class="btn-secondary" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record
+        id="crm_salesperson_planner_visit_template_create_action"
+        model="ir.actions.act_window"
+    >
+        <field name="name">Create Visits</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">crm.salesperson.planner.visit.template.create</field>
+        <field name="view_mode">form</field>
+        <field
+            name="view_id"
+            ref="crm_salesperson_planner_visit_template_create_view_form"
+        />
+        <field name="target">new</field>
+    </record>
+</odoo>
