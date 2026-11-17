@@ -1,0 +1,921 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * crm_phonecall
+#
+# Translators:
+# OCA Transbot <transbot@odoo-community.org>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-06-01 02:38+0000\n"
+"PO-Revision-Date: 2026-07-01 14:46+0000\n"
+"Last-Translator: Laura V <laura.valls@forgeflow.com>\n"
+"Language-Team: Danish (https://www.transifex.com/oca/teams/23907/da/)\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15.2\n"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__nbr_cases
+msgid "# of Cases"
+msgstr "Antal sager"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
+msgid "<b>min(s)</b>"
+msgstr "<b>min.</b>"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
+msgid ""
+"<span>\n"
+"                                Convert\n"
+"                                <br/>\n"
+"                                To Opportunity\n"
+"                            </span>"
+msgstr ""
+"<span>\n"
+"                                Konverter\n"
+"                                <br/>\n"
+"                                til mulighed\n"
+"                            </span>"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
+msgid ""
+"<span>\n"
+"                                Schedule\n"
+"                                <br/>\n"
+"                                A Meeting\n"
+"                            </span>"
+msgstr ""
+"<span>\n"
+"                                Planlæg\n"
+"                                <br/>\n"
+"                                et møde\n"
+"                            </span>"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
+msgid ""
+"<span>\n"
+"                                Schedule\n"
+"                                <br/>\n"
+"                                Other Call\n"
+"                            </span>"
+msgstr ""
+"<span>\n"
+"                                Planlæg\n"
+"                                <br/>\n"
+"                                andet opkald\n"
+"                            </span>"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__action
+msgid "Action"
+msgstr "Handling"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_needaction
+msgid "Action Needed"
+msgstr "Handling påkrævet"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__active
+msgid "Active"
+msgstr "Aktiv"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
+msgid "Additional Info"
+msgstr "Yderligere oplysninger"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__user_id
+msgid "Assign To"
+msgstr "Tildel til"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_attachment_count
+msgid "Attachment Count"
+msgstr "Antal vedhæftede filer"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,help:crm_phonecall.field_res_config_settings__group_show_form_view
+msgid "By default form is disabled for calls, with this group it is enabled."
+msgstr ""
+"Som standard er formularen deaktiveret for opkald; med denne gruppe "
+"aktiveres den."
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.res_config_settings_view_form
+msgid ""
+"By default form view is disabled for calls, with this setting it is enabled "
+"for all users."
+msgstr ""
+"Som standard er formularvisningen deaktiveret for opkald; med denne "
+"indstilling aktiveres den for alle brugere."
+
+#. module: crm_phonecall
+#: model:ir.model,name:crm_phonecall.model_calendar_event
+msgid "Calendar Event"
+msgstr "Kalenderbegivenhed"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__name
+msgid "Call Summary"
+msgstr "Opkaldsresumé"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__name
+msgid "Call summary"
+msgstr "Opkaldsresumé"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_form_view_leads_inherit
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_partners_form_crm_calls_inherit
+msgid "Calls"
+msgstr "Opkald"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+msgid "Calls Date by Month"
+msgstr "Opkaldsdato pr. måned"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+msgid "Calls by status"
+msgstr "Opkald efter status"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__campaign_id
+msgid "Campaign"
+msgstr "Kampagne"
+
+#. module: crm_phonecall
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall__state__cancel
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall_report__state__cancel
+msgid "Cancelled"
+msgstr "Annulleret"
+
+#. module: crm_phonecall
+#: model:ir.ui.menu,name:crm_phonecall.menu_crm_case_phonecall-act
+msgid "Categories"
+msgstr "Kategorier"
+
+#. module: crm_phonecall
+#: model_terms:ir.actions.act_window,help:crm_phonecall.crm_phonecall_categ_action
+msgid "Click to add a new category."
+msgstr "Klik for at tilføje en ny kategori."
+
+#. module: crm_phonecall
+#: model_terms:ir.actions.act_window,help:crm_phonecall.crm_case_categ_phone_incoming0
+msgid "Click to log the summary of a phone call."
+msgstr "Klik for at registrere resuméet af et telefonopkald."
+
+#. module: crm_phonecall
+#: model_terms:ir.actions.act_window,help:crm_phonecall.crm_case_categ_phone_outgoing0
+msgid "Click to schedule a call"
+msgstr "Klik for at planlægge et opkald"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__date_closed
+msgid "Close Date"
+msgstr "Lukkedato"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__date_closed
+msgid "Closed"
+msgstr "Lukket"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__company_id
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__company_id
+msgid "Company"
+msgstr "Virksomhed"
+
+#. module: crm_phonecall
+#: model:ir.model,name:crm_phonecall.model_res_config_settings
+msgid "Config Settings"
+msgstr "Konfigurationsindstillinger"
+
+#. module: crm_phonecall
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall__state__open
+msgid "Confirmed"
+msgstr "Bekræftet"
+
+#. module: crm_phonecall
+#: model:ir.model,name:crm_phonecall.model_res_partner
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__contact_name
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__partner_id
+msgid "Contact"
+msgstr "Kontakt"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
+msgid "Convert To Opportunity"
+msgstr "Konverter til mulighed"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_inbound_phone_tree_view
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_tree_view
+msgid "Convert to Opportunity"
+msgstr "Konverter til mulighed"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__create_date
+msgid "Create Date"
+msgstr "Oprettelsesdato"
+
+#. module: crm_phonecall
+#: model_terms:ir.actions.act_window,help:crm_phonecall.crm_phonecall_categ_action
+msgid ""
+"Create specific phone call categories to better define the type of\n"
+"            calls tracked in the system."
+msgstr ""
+"Opret specifikke telefonopkaldskategorier for bedre at definere typen af\n"
+"            opkald, der spores i systemet."
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__create_uid
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__create_uid
+msgid "Created by"
+msgstr "Oprettet af"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__create_date
+msgid "Created on"
+msgstr "Oprettet den"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+msgid "Creation"
+msgstr "Oprettelse"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__create_date
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+msgid "Creation Date"
+msgstr "Oprettelsesdato"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
+msgid "Creation Month"
+msgstr "Oprettelsesmåned"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
+msgid "Customer"
+msgstr "Kunde"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__date
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__date
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+msgid "Date"
+msgstr "Dato"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__delay_close
+msgid "Delay to close"
+msgstr "Forsinkelse til lukning"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__delay_open
+msgid "Delay to open"
+msgstr "Forsinkelse til åbning"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__description
+msgid "Description"
+msgstr "Beskrivelse"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
+msgid "Description..."
+msgstr "Beskrivelse..."
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__direction
+msgid "Direction"
+msgstr "Retning"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__display_name
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__display_name
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__display_name
+msgid "Display Name"
+msgstr "Vist navn"
+
+#. module: crm_phonecall
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall_report__state__draft
+msgid "Draft"
+msgstr "Kladde"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__duration
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__duration
+msgid "Duration"
+msgstr "Varighed"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__duration
+msgid "Duration in minutes and seconds."
+msgstr "Varighed i minutter og sekunder."
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__email_from
+msgid "Email"
+msgstr "E-mail"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_res_config_settings__group_show_form_view
+#: model:res.groups,name:crm_phonecall.group_show_form_view
+msgid "Enable form view for phone calls"
+msgstr "Aktivér formularvisning for telefonopkald"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
+msgid "Extended Filters..."
+msgstr "Udvidede filtre..."
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_follower_ids
+msgid "Followers"
+msgstr "Følgere"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Følgere (partnere)"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
+msgid "Group By"
+msgstr "Gruppér efter"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__has_message
+msgid "Has Message"
+msgstr "Har besked"
+
+#. module: crm_phonecall
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall__state__done
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall_report__state__done
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
+msgid "Held"
+msgstr "Afholdt"
+
+#. module: crm_phonecall
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall__priority__2
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall_report__priority__2
+msgid "High"
+msgstr "Høj"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__id
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__id
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__id
+msgid "ID"
+msgstr "Id"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Hvis markeret, kræver nye beskeder din opmærksomhed."
+
+#. module: crm_phonecall
+#: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Hvis markeret, har nogle beskeder en leveringsfejl."
+
+#. module: crm_phonecall
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall__direction__in
+msgid "In"
+msgstr "Indgående"
+
+#. module: crm_phonecall
+#: model_terms:ir.actions.act_window,help:crm_phonecall.crm_case_categ_phone_incoming0
+msgid ""
+"In order to follow up on the call, you can trigger a request for\n"
+"            another call, a meeting or an opportunity."
+msgstr ""
+"For at følge op på opkaldet kan du anmode om\n"
+"            et nyt opkald, et møde eller en mulighed."
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+msgid "Incoming Calls"
+msgstr "Indgående opkald"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_is_follower
+msgid "Is Follower"
+msgstr "Er følger"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__date_action_last
+msgid "Last Action"
+msgstr "Seneste handling"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__write_uid
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__write_uid
+msgid "Last Updated by"
+msgstr "Sidst opdateret af"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__write_date
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__write_date
+msgid "Last Updated on"
+msgstr "Sidst opdateret den"
+
+#. module: crm_phonecall
+#: model:ir.model,name:crm_phonecall.model_crm_lead
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__opportunity_id
+msgid "Lead/Opportunity"
+msgstr "Emne/Mulighed"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.phonecall_to_phonecall_view
+msgid "Log Call"
+msgstr "Registrér opkald"
+
+#. module: crm_phonecall
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall2phonecall__action__log
+msgid "Log a call"
+msgstr "Registrér et opkald"
+
+#. module: crm_phonecall
+#: model:ir.actions.act_window,name:crm_phonecall.crm_case_categ_phone_incoming0
+#: model:ir.ui.menu,name:crm_phonecall.menu_crm_case_phone_inbound
+msgid "Logged Calls"
+msgstr "Registrerede opkald"
+
+#. module: crm_phonecall
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall__priority__0
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall_report__priority__0
+msgid "Low"
+msgstr "Lav"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__medium_id
+msgid "Medium"
+msgstr "Medium"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_inbound_phone_tree_view
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_tree_view
+msgid "Meeting"
+msgstr "Møde"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_has_error
+msgid "Message Delivery error"
+msgstr "Fejl i beskedlevering"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_ids
+msgid "Messages"
+msgstr "Beskeder"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__partner_mobile
+msgid "Mobile"
+msgstr "Mobil"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+msgid "Month"
+msgstr "Måned"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
+msgid "Month of call"
+msgstr "Opkaldsmåned"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
+msgid "My Phone Calls"
+msgstr "Mine telefonopkald"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+msgid "My Phonecalls"
+msgstr "Mine telefonopkald"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
+msgid "My Sales Team(s)"
+msgstr "Mine salgsteam(s)"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+msgid "My Team"
+msgstr "Mit team"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__date_action_next
+msgid "Next Action"
+msgstr "Næste handling"
+
+#. module: crm_phonecall
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall__priority__1
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall_report__priority__1
+msgid "Normal"
+msgstr "Normal"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
+msgid "Not Held"
+msgstr "Ikke afholdt"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__note
+msgid "Note"
+msgstr "Bemærkning"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Antal handlinger"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall_report__delay_close
+msgid "Number of Days to close the case"
+msgstr "Antal dage til at lukke sagen"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall_report__delay_open
+msgid "Number of Days to open the case"
+msgstr "Antal dage til at åbne sagen"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__message_has_error_counter
+msgid "Number of errors"
+msgstr "Antal fejl"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Antal beskeder, der kræver handling"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Antal beskeder med leveringsfejl"
+
+#. module: crm_phonecall
+#: model_terms:ir.actions.act_window,help:crm_phonecall.crm_case_categ_phone_outgoing0
+msgid ""
+"Odoo allows you to easily define all the calls to be done\n"
+"            by your sales team and follow up based on their summary."
+msgstr ""
+"Odoo giver dig mulighed for nemt at definere alle de opkald, der skal "
+"foretages\n"
+"            af dit salgsteam, og følge op baseret på deres resumé."
+
+#. module: crm_phonecall
+#: model_terms:ir.actions.act_window,help:crm_phonecall.crm_case_categ_phone_incoming0
+msgid ""
+"Odoo allows you to log inbound calls on the fly to track the\n"
+"            history of the communication with a customer or to inform "
+"another\n"
+"            team member."
+msgstr ""
+"Odoo giver dig mulighed for at registrere indgående opkald løbende for at "
+"spore\n"
+"            kommunikationshistorikken med en kunde eller informere et andet\n"
+"            teammedlem."
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__date_open
+msgid "Opened"
+msgstr "Åbnet"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__opening_date
+msgid "Opening Date"
+msgstr "Åbningsdato"
+
+#. module: crm_phonecall
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall__direction__out
+msgid "Out"
+msgstr "Udgående"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+msgid "Outgoing Calls"
+msgstr "Udgående opkald"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__partner_id
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__partner_id
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+msgid "Partner"
+msgstr "Partner"
+
+#. module: crm_phonecall
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall__state__pending
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall_report__state__pending
+msgid "Pending"
+msgstr "Afventer"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__phone
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__partner_phone
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
+msgid "Phone"
+msgstr "Telefon"
+
+#. module: crm_phonecall
+#. odoo-python
+#: code:addons/crm_phonecall/models/crm_phonecall.py:0
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
+msgid "Phone Call"
+msgstr "Telefonopkald"
+
+#. module: crm_phonecall
+#: model:ir.actions.act_window,name:crm_phonecall.crm_case_categ_phone0
+#: model:ir.ui.menu,name:crm_phonecall.menu_crm_case_phone
+#: model:ir.ui.menu,name:crm_phonecall.menu_crm_config_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_calendar_view
+msgid "Phone Calls"
+msgstr "Telefonopkald"
+
+#. module: crm_phonecall
+#: model:ir.actions.act_window,name:crm_phonecall.crm_phonecall_report_action
+#: model:ir.actions.act_window,name:crm_phonecall.crm_phonecall_report_action_team
+#: model:ir.ui.menu,name:crm_phonecall.menu_report_crm_phonecalls_tree
+msgid "Phone Calls Analysis"
+msgstr "Analyse af telefonopkald"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
+msgid "Phone Calls that are assigned to me"
+msgstr "Telefonopkald, der er tildelt mig"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_graph
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_pivot
+msgid "Phone calls"
+msgstr "Telefonopkald"
+
+#. module: crm_phonecall
+#: model:ir.model,name:crm_phonecall.model_crm_phonecall_report
+msgid "Phone calls by user"
+msgstr "Telefonopkald pr. bruger"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
+msgid "Phone calls that are assigned to one of the sale teams I manage"
+msgstr "Telefonopkald, der er tildelt et af de salgsteams, jeg administrerer"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
+msgid "Phone calls which are in closed state"
+msgstr "Telefonopkald, der er i lukket tilstand"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
+msgid "Phone calls which are in draft and open state"
+msgstr "Telefonopkald, der er i kladde- og åbentilstand"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
+msgid "Phone calls which are in pending state"
+msgstr "Telefonopkald, der er i afventende tilstand"
+
+#. module: crm_phonecall
+#: model:ir.model,name:crm_phonecall.model_crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_calendar_event__phonecall_id
+msgid "Phonecall"
+msgstr "Telefonopkald"
+
+#. module: crm_phonecall
+#: model:ir.actions.act_window,name:crm_phonecall.crm_phonecall_categ_action
+msgid "Phonecall Categories"
+msgstr "Telefonopkaldskategorier"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_lead__phonecall_count
+#: model:ir.model.fields,field_description:crm_phonecall.field_res_partner__phonecall_count
+#: model:ir.model.fields,field_description:crm_phonecall.field_res_users__phonecall_count
+msgid "Phonecall Count"
+msgstr "Antal telefonopkald"
+
+#. module: crm_phonecall
+#: model:ir.model,name:crm_phonecall.model_crm_phonecall2phonecall
+msgid "Phonecall To Phonecall"
+msgstr "Telefonopkald til telefonopkald"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_lead__phonecall_ids
+#: model:ir.model.fields,field_description:crm_phonecall.field_res_partner__phonecall_ids
+#: model:ir.model.fields,field_description:crm_phonecall.field_res_users__phonecall_ids
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.res_config_settings_view_form
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+msgid "Phonecalls"
+msgstr "Telefonopkald"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.phonecall_to_phonecall_view
+msgid "Planned Date"
+msgstr "Planlagt dato"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__priority
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__priority
+msgid "Priority"
+msgstr "Prioritet"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__rating_ids
+msgid "Ratings"
+msgstr "Bedømmelser"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__user_id
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+msgid "Responsible"
+msgstr "Ansvarlig"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__team_id
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__team_id
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
+msgid "Sales Team"
+msgstr "Salgsteam"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__team_id
+msgid "Sales team to which Case belongs to."
+msgstr "Det salgsteam, som sagen tilhører."
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
+msgid "Salesperson"
+msgstr "Sælger"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.phonecall_to_phonecall_view
+msgid "Schedule Call"
+msgstr "Planlæg opkald"
+
+#. module: crm_phonecall
+#: model:ir.actions.act_window,name:crm_phonecall.phonecall_to_phonecall_act
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_inbound_phone_tree_view
+msgid "Schedule Other Call"
+msgstr "Planlæg andet opkald"
+
+#. module: crm_phonecall
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall2phonecall__action__schedule
+msgid "Schedule a call"
+msgstr "Planlæg et opkald"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.phonecall_to_phonecall_view
+msgid "Schedule/Log a Call"
+msgstr "Planlæg/registrér et opkald"
+
+#. module: crm_phonecall
+#: model:ir.actions.act_window,name:crm_phonecall.crm_case_categ_phone_outgoing0
+#: model:ir.ui.menu,name:crm_phonecall.menu_crm_case_phone_outbound
+msgid "Scheduled Calls"
+msgstr "Planlagte opkald"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
+msgid "Search"
+msgstr "Søg"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+msgid "Search Phonecalls"
+msgstr "Søg telefonopkald"
+
+#. module: crm_phonecall
+#: model:res.groups,name:crm_phonecall.group_scheduled_calls
+msgid "Show Scheduled Calls Menu"
+msgstr "Vis menu for planlagte opkald"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__source_id
+msgid "Source"
+msgstr "Kilde"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+msgid "State"
+msgstr "Tilstand"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__state
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__state
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
+msgid "Status"
+msgstr "Status"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall2phonecall__tag_ids
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__tag_ids
+msgid "Tags"
+msgstr "Tags"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__team_id
+msgid "Team"
+msgstr "Team"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__state
+msgid ""
+"The status is set to Confirmed, when a case is created.\n"
+"When the call is over, the status is set to Held.\n"
+"If the callis not applicable anymore, the status can be set to Cancelled."
+msgstr ""
+"Status sættes til Bekræftet, når en sag oprettes.\n"
+"Når opkaldet er slut, sættes status til Afholdt.\n"
+"Hvis opkaldet ikke længere er relevant, kan status sættes til Annulleret."
+
+#. module: crm_phonecall
+#: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__email_from
+msgid "These people will receive email."
+msgstr "Disse personer vil modtage e-mail."
+
+#. module: crm_phonecall
+#: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__campaign_id
+msgid ""
+"This is a name that helps you keep track of your different campaign efforts, "
+"e.g. Fall_Drive, Christmas_Special"
+msgstr ""
+"Dette er et navn, der hjælper dig med at holde styr på dine forskellige "
+"kampagneindsatser, f.eks. Efterårs_kampagne, Jule_tilbud"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__medium_id
+msgid "This is the method of delivery, e.g. Postcard, Email, or Banner Ad"
+msgstr "Dette er leveringsmetoden, f.eks. Postkort, E-mail eller Bannerreklame"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__source_id
+msgid ""
+"This is the source of the link, e.g. Search Engine, another domain, or name "
+"of email list"
+msgstr ""
+"Dette er kilden til linket, f.eks. Søgemaskine, et andet domæne eller navn "
+"på e-mailliste"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+msgid "To Do"
+msgstr "At gøre"
+
+#. module: crm_phonecall
+#: model:ir.model.fields.selection,name:crm_phonecall.selection__crm_phonecall_report__state__open
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_report_crm_phonecall_filter
+msgid "Todo"
+msgstr "At gøre"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.crm_case_phone_form_view
+msgid "Tracking"
+msgstr "Sporing"
+
+#. module: crm_phonecall
+#: model_terms:ir.ui.view,arch_db:crm_phonecall.view_crm_case_phonecalls_filter
+msgid "Unassigned"
+msgstr "Ikke tildelt"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall_report__user_id
+msgid "User"
+msgstr "Bruger"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,field_description:crm_phonecall.field_crm_phonecall__website_message_ids
+msgid "Website Messages"
+msgstr "Hjemmesidebeskeder"
+
+#. module: crm_phonecall
+#: model:ir.model.fields,help:crm_phonecall.field_crm_phonecall__website_message_ids
+msgid "Website communication history"
+msgstr "Hjemmesidekommunikationshistorik"
+
+#. module: crm_phonecall
+#: model_terms:ir.actions.act_window,help:crm_phonecall.crm_case_categ_phone_outgoing0
+msgid ""
+"You can use the import feature to massively import a new list of\n"
+"            prospects to qualify."
+msgstr ""
+"Du kan bruge importfunktionen til masseimport af en ny liste over\n"
+"            kundeemner, der skal kvalificeres."
+
+#~ msgid "Last Modified on"
+#~ msgstr "Sidst ændret den"
