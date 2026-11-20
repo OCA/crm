@@ -80,6 +80,17 @@ OCA, or the Odoo Community Association, is a nonprofit organization whose
 mission is to support the collaborative development of Odoo features and
 promote its widespread use.
 
+.. |maintainer-anusriNPS| image:: https://github.com/anusriNPS.png?size=40px
+    :target: https://github.com/anusriNPS
+    :alt: anusriNPS
+.. |maintainer-SirPyTech| image:: https://github.com/SirPyTech.png?size=40px
+    :target: https://github.com/SirPyTech
+    :alt: SirPyTech
+
+Current `maintainers <https://odoo-community.org/page/maintainer-role>`__:
+
+|maintainer-anusriNPS| |maintainer-SirPyTech| 
+
 This module is part of the `OCA/crm <https://github.com/OCA/crm/tree/18.0/crm_reminder_email_activities>`_ project on GitHub.
 
 You are welcome to contribute. To learn how please visit https://odoo-community.org/page/Contribute.

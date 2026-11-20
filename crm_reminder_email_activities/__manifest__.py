@@ -6,6 +6,10 @@
     """,
     "version": "18.0.1.0.0",
     "author": "PyTech SRL, Odoo Community Association (OCA)",
+    "maintainers": [
+        "anusriNPS",
+        "SirPyTech",
+    ],
     "license": "AGPL-3",
     "website": "https://github.com/OCA/crm",
     "application": False,

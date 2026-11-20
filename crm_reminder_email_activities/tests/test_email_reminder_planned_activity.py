@@ -1,6 +1,7 @@
 from dateutil.relativedelta import relativedelta
 
 from odoo import fields
+from odoo.exceptions import UserError
 from odoo.tests.common import new_test_user
 
 from odoo.addons.base.tests.common import BaseCommon
@@ -11,7 +12,6 @@ class TestEmailReminderPlannedActivity(BaseCommon):
     def setUpClass(cls):
         super().setUpClass()
 
-        cls.env = cls.env(context=dict(cls.env.context, tracking_disable=True))
         cls.user_a = new_test_user(
             cls.env,
             login="user_a",
@@ -41,6 +41,9 @@ class TestEmailReminderPlannedActivity(BaseCommon):
         )
 
         cls.today = fields.Date.context_today(cls.env.user)
+        cls.mail_template = cls.env.ref(
+            "crm_reminder_email_activities.email_template_crm_reminder_activities"
+        )
 
     def _create_activity(self, lead, user, deadline):
         return self.env["mail.activity"].create(
@@ -75,7 +78,7 @@ class TestEmailReminderPlannedActivity(BaseCommon):
             self.lead_1, self.user_b, self.today + relativedelta(days=8)
         )
 
-        result = self.env["res.users"]._get_crm_activities(user=self.user_a)
+        result = self.env["crm.lead"]._get_crm_activities(user=self.user_a)
 
         self.assertIn(act_today, result)
         self.assertIn(act_day7, result)
@@ -103,7 +106,7 @@ class TestEmailReminderPlannedActivity(BaseCommon):
 
         lead_activity = self._create_activity(self.lead_1, self.user_a, self.today)
 
-        result = self.env["res.users"]._get_crm_activities(user=self.user_a)
+        result = self.env["crm.lead"]._get_crm_activities(user=self.user_a)
 
         self.assertIn(lead_activity, result)
         self.assertNotIn(partner_activity, result)
@@ -118,7 +121,26 @@ class TestEmailReminderPlannedActivity(BaseCommon):
             self.lead_1, self.user_b, self.today + relativedelta(days=8)
         )
 
-        result = self.env["res.users"]._get_crm_activities()
+        result = self.env["crm.lead"]._get_crm_activities()
 
         self.assertIn(act_in, result)
         self.assertNotIn(act_out, result)
+
+    def test_send_reminder_mail_without_template(self):
+        """check behaviour of sending crm activities
+        reminder mail when mail template not exist"""
+        self.mail_template.unlink()
+        error_msg = "CRM Reminder Activities Mail Template not found."
+        with self.assertRaisesRegex(UserError, error_msg):
+            self.env["crm.lead"].cron_send_activities_reminder()
+
+    def test_send_mail(self):
+        self._create_activity(self.lead_1, self.user_a, self.today)
+        self.mail_template.write({"auto_delete": False})
+        self.env["crm.lead"].cron_send_activities_reminder()
+        mail = self.env["mail.mail"].search(
+            [("res_id", "=", self.user_a.id)], order="id desc", limit=1
+        )
+        self.assertTrue(mail)
+        self.assertIn("Dear Reminder User A", mail.body_html)
+        self.assertIn("Reminder Lead 1", mail.body_html)
