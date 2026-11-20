@@ -1,0 +1,240 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * crm_project
+#
+# Translators:
+# Martin Trigaux, 2018
+# Paolo Valier, 2018
+# Sergio Zanchetta <primes2h@gmail.com>, 2019
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~11.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-21 13:17+0000\n"
+"PO-Revision-Date: 2026-05-26 09:46+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
+"Language-Team: Italian (https://www.transifex.com/odoo/teams/41243/it/)\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15.2\n"
+
+#. module: crm_lead_to_task
+#: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead__task_count
+msgid "#Task"
+msgstr "N. lavoro"
+
+#. module: crm_lead_to_task
+#: model_terms:ir.ui.view,arch_db:crm_lead_to_task.crm_lead_view_form
+msgid ""
+"<span class=\"o_stat_text\" invisible=\"task_count &lt; 2\">Tasks</span>\n"
+"                        <span class=\"o_stat_text\" invisible=\"task_count "
+"&gt; 1\">Task</span>"
+msgstr ""
+"<span class=\"o_stat_text\" invisible=\"task_count &lt; 2\">Lavori</span>\n"
+"                        <span class=\"o_stat_text\" invisible=\"task_count "
+"&gt; 1\">Lavoro</span>"
+
+#. module: crm_lead_to_task
+#: model_terms:ir.ui.view,arch_db:crm_lead_to_task.view_task_form2
+msgid "<span class=\"o_stat_text\">CRM Lead</span>"
+msgstr "<span class=\"o_stat_text\">Contatto CRM</span>"
+
+#. module: crm_lead_to_task
+#: model_terms:ir.ui.view,arch_db:crm_lead_to_task.crm_lead_to_task_res_config_settings_view_form
+msgid "Archive lead"
+msgstr "Contatto attivo"
+
+#. module: crm_lead_to_task
+#: model_terms:ir.ui.view,arch_db:crm_lead_to_task.crm_lead_convert2task_view_form
+msgid "Cancel"
+msgstr "Annulla"
+
+#. module: crm_lead_to_task
+#: model:ir.model,name:crm_lead_to_task.model_res_company
+msgid "Companies"
+msgstr "Aziende"
+
+#. module: crm_lead_to_task
+#: model:ir.model,name:crm_lead_to_task.model_res_config_settings
+msgid "Config Settings"
+msgstr "Impostazioni configurazione"
+
+#. module: crm_lead_to_task
+#: model:ir.actions.act_window,name:crm_lead_to_task.crm_lead_convert2task_action
+#: model_terms:ir.ui.view,arch_db:crm_lead_to_task.crm_lead_convert2task_view_form
+#: model_terms:ir.ui.view,arch_db:crm_lead_to_task.crm_lead_view_form
+msgid "Convert to Task"
+msgstr "Converti in lavoro"
+
+#. module: crm_lead_to_task
+#: model_terms:ir.ui.view,arch_db:crm_lead_to_task.crm_lead_convert2task_view_form
+#: model_terms:ir.ui.view,arch_db:crm_lead_to_task.crm_lead_view_form
+msgid "Create Task"
+msgstr "Crea lavoro"
+
+#. module: crm_lead_to_task
+#: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task__create_uid
+msgid "Created by"
+msgstr "Creato da"
+
+#. module: crm_lead_to_task
+#: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task__create_date
+msgid "Created on"
+msgstr "Creato il"
+
+#. module: crm_lead_to_task
+#: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead__crm_archive_lead_on_convert
+#: model:ir.model.fields,field_description:crm_lead_to_task.field_res_company__crm_archive_lead_on_convert
+#: model:ir.model.fields,field_description:crm_lead_to_task.field_res_config_settings__crm_archive_lead_on_convert
+msgid "Crm Archive Lead On Convert"
+msgstr "Contatto attivo CRM su conversione"
+
+#. module: crm_lead_to_task
+#: model_terms:ir.ui.view,arch_db:crm_lead_to_task.crm_lead_to_task_res_config_settings_view_form
+msgid "Default project to be used when creating a task from a lead."
+msgstr "Progetto predefinito da usare quando si crea un lavoro da un contatto."
+
+#. module: crm_lead_to_task
+#: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead__display_name
+#: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task__display_name
+#: model:ir.model.fields,field_description:crm_lead_to_task.field_project_task__display_name
+#: model:ir.model.fields,field_description:crm_lead_to_task.field_res_company__display_name
+#: model:ir.model.fields,field_description:crm_lead_to_task.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "Nome visualizzato"
+
+#. module: crm_lead_to_task
+#: model:ir.model.fields,field_description:crm_lead_to_task.field_res_company__crm_force_project_id
+#: model:ir.model.fields,field_description:crm_lead_to_task.field_res_config_settings__crm_force_project_id
+msgid "Force Project"
+msgstr "Forza progetto"
+
+#. module: crm_lead_to_task
+#: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead__id
+#: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task__id
+#: model:ir.model.fields,field_description:crm_lead_to_task.field_project_task__id
+#: model:ir.model.fields,field_description:crm_lead_to_task.field_res_company__id
+#: model:ir.model.fields,field_description:crm_lead_to_task.field_res_config_settings__id
+msgid "ID"
+msgstr "ID"
+
+#. module: crm_lead_to_task
+#: model_terms:ir.ui.view,arch_db:crm_lead_to_task.crm_lead_to_task_res_config_settings_view_form
+msgid ""
+"If enabled, leads will be archived automatically after converting it to a "
+"task."
+msgstr ""
+"Se abilitata, i contatti verranno archiviati automaticamente alla "
+"conversione in un lavoro."
+
+#. module: crm_lead_to_task
+#: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task__write_uid
+msgid "Last Updated by"
+msgstr "Ultimo aggiornamento di"
+
+#. module: crm_lead_to_task
+#: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task__write_date
+msgid "Last Updated on"
+msgstr "Ultimo aggiornamento il"
+
+#. module: crm_lead_to_task
+#: model:ir.model,name:crm_lead_to_task.model_crm_lead
+#: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task__lead_id
+#: model:ir.model.fields,field_description:crm_lead_to_task.field_project_task__lead_id
+msgid "Lead"
+msgstr "Contatto"
+
+#. module: crm_lead_to_task
+#: model:ir.model,name:crm_lead_to_task.model_crm_lead_convert2task
+msgid "Lead convert to Task"
+msgstr "Contatto convertito in lavoro"
+
+#. module: crm_lead_to_task
+#. odoo-python
+#: code:addons/crm_lead_to_task/models/project_task.py:0
+#: code:addons/crm_lead_to_task/tests/test_crm_lead_task.py:0
+msgid "Lead: %s"
+msgstr "Contatto: %s"
+
+#. module: crm_lead_to_task
+#: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead_convert2task__project_id
+msgid "Project"
+msgstr "Progetto"
+
+#. module: crm_lead_to_task
+#: model:ir.model,name:crm_lead_to_task.model_project_task
+#: model:ir.model.fields,field_description:crm_lead_to_task.field_crm_lead__task_ids
+msgid "Task"
+msgstr "Lavoro"
+
+#. module: crm_lead_to_task
+#: model_terms:ir.ui.view,arch_db:crm_lead_to_task.crm_lead_to_task_res_config_settings_view_form
+msgid "Tasks"
+msgstr "Lavori"
+
+#. module: crm_lead_to_task
+#. odoo-python
+#: code:addons/crm_lead_to_task/models/crm_lead.py:0
+#: code:addons/crm_lead_to_task/tests/test_crm_lead_task.py:0
+msgid "Tasks from crm lead %s"
+msgstr "Lavori cal contatto CRM %s"
+
+#. module: crm_lead_to_task
+#: model:ir.model.fields,help:crm_lead_to_task.field_project_task__display_name
+msgid ""
+"Use these keywords in the title to set new tasks:\n"
+"\n"
+"            #tags Set tags on the task\n"
+"            @user Assign the task to a user\n"
+"            ! Set the task a medium priority\n"
+"            !! Set the task a high priority\n"
+"            !!! Set the task a urgent priority\n"
+"\n"
+"            Make sure to use the right format and order e.g. Improve the "
+"configuration screen #feature #v16 @Mitchell !"
+msgstr ""
+"Utilizzare queste parole chiave nel titolo per impostare nuovi lavori:\n"
+"\n"
+"            #tags Assegna etichetta al lavoro\n"
+"            @user Assegna il lavoro a un utente\n"
+"            ! Imposta la priorità del lavoro su media\n"
+"            !! Imposta la priorità del lavoro su alta\n"
+"            !!! Imposta la priorità del lavoro su urgente\n"
+"\n"
+"Assicurarsi di utilizzare il formato e l'ordine corretti, ad esempio: "
+"Migliora la schermata di configurazione #feature #v16 @Mitchell !"
+
+#~ msgid "Lead/Opportunity"
+#~ msgstr "Contatto/Opportunità"
+
+#~ msgid "Task Count"
+#~ msgstr "Numero lavori"
+
+#~ msgid "Last Modified on"
+#~ msgstr "Ultima modifica il"
+
+#~ msgid ""
+#~ "<span class=\"o_stat_text\">Convert To</span>\n"
+#~ "                            <span class=\"o_stat_text\">Task</span>"
+#~ msgstr ""
+#~ "<span class=\"o_stat_text\">Converti in</span>\n"
+#~ "                            <span class=\"o_stat_text\">lavoro</span>"
+
+#~ msgid "Create a new customer"
+#~ msgstr "Crea nuovo cliente"
+
+#~ msgid "Customer"
+#~ msgstr "Cliente"
+
+#~ msgid "Do not link to a customer"
+#~ msgstr "Non collegare a un cliente"
+
+#~ msgid "Link to an existing customer"
+#~ msgstr "Collega a un cliente esistente"
+
+#~ msgid "Related Customer"
+#~ msgstr "Cliente collegato"

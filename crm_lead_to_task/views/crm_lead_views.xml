@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- inherit view of Lead Form : adding the "convert to task" button -->
+    <record id="crm_lead_view_form" model="ir.ui.view">
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form" />
+        <field name="arch" type="xml">
+            <field name="stage_id" position="before">
+                <!--Create a Task button (no archive) -->
+                <button
+                    id="action_create_task_from_lead"
+                    class="oe_stat_button"
+                    name="action_crm_to_task"
+                    type="object"
+                    string="Create Task"
+                    groups="project.group_project_user"
+                    invisible="not active or crm_archive_lead_on_convert"
+                />
+                <!-- Convert to Task button (archive) -->
+                <button
+                    id="action_convert_task_from_lead"
+                    class="oe_stat_button"
+                    name="action_crm_to_task"
+                    type="object"
+                    string="Convert to Task"
+                    groups="project.group_project_user"
+                    invisible="not active or not crm_archive_lead_on_convert"
+                />
+            </field>
+            <!-- Add a smart button to the tasks created from this lead -->
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button
+                    name="action_view_tasks"
+                    type="object"
+                    class="oe_stat_button"
+                    icon="edit"
+                    invisible="task_count &lt; 1"
+                >
+                    <div class="o_stat_info">
+                        <field name="task_count" class="o_stat_value" />
+                        <span
+                            class="o_stat_text"
+                            invisible="task_count &lt; 2"
+                        >Tasks</span>
+                        <span
+                            class="o_stat_text"
+                            invisible="task_count &gt; 1"
+                        >Task</span>
+                    </div>
+                </button>
+            </xpath>
+        </field>
+    </record>
+</odoo>
