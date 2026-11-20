@@ -17,6 +17,12 @@ class TestCrmLeadTask(BaseCommon):
                 "description": "Description",
             }
         )
+        cls.lead2 = cls.env["crm.lead"].create(
+            {
+                "name": "Test Lead 2",
+                "description": "Description",
+            }
+        )
 
         # Create Project
         cls.project = cls.env["project.project"].create({"name": "Test Project"})
@@ -86,3 +92,24 @@ class TestCrmLeadTask(BaseCommon):
         self.assertEqual(
             action["view_id"], self.lead.env.ref("project.view_task_form2").id
         )
+
+    def test_action_create_subtask_with_lead(self):
+        task = self.env["project.task"].create(
+            {
+                "project_id": self.project.id,
+                "parent_id": self.task1.id,
+                "name": "Test Task 2",
+                "lead_id": self.lead2.id,
+            }
+        )
+        self.assertEqual(task.effective_lead_id, self.lead2)
+
+    def test_action_create_subtask_without_lead(self):
+        task = self.env["project.task"].create(
+            {
+                "project_id": self.project.id,
+                "parent_id": self.task1.id,
+                "name": "Test Task 2",
+            }
+        )
+        self.assertEqual(task.effective_lead_id, self.lead)
