@@ -1,0 +1,2 @@
+- [PyTech SRL](https://pytech.it):
+  - Alessandro Pecchini \<<alessandro.pecchini@pytech.it>\>
