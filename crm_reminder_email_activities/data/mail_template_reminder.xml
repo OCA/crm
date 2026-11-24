@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+    <record id="email_template_crm_reminder_activities" model="mail.template">
+        <field name="name">Reminder CRM planned activities</field>
+        <field name="model_id" ref="base.model_res_users" />
+        <field name="email_from">{{object.env.user.email_formatted}}</field>
+        <field name="partner_to">{{object.partner_id.id}}</field>
+        <field name="auto_delete" eval="True" />
+        <field name="lang">{{ object.partner_id.lang }}</field>
+        <field name="subject">Reminder CRM planned activities</field>
+        <field name="body_html" type="html">
+            <div>
+                <span style="font-size: 0.75rem;">Reminder CRM planned activities
+            </span>
+                <br />
+                <span style="font-size: 1.3rem; font-weight: bold;margin-top: 14px;">
+                    <t t-out="object.name or ''">User</t>
+                </span>
+                <div style="font-size: 0.9rem">
+                    <p>Dear <t t-out="object.name or ''">User</t>,
+                </p>
+                    <p>
+                Below are your active CRM app tasks due in the next 7 days:
+                </p>
+                    <ul>
+                        <t t-set="activities" t-value="ctx.get('activities', '')" />
+                        <t t-foreach="activities" t-as="activity">
+                            <li>
+                                <t
+                                    t-set="activity_obj"
+                                    t-value="object.env[activity.res_model].browse(activity.res_id)"
+                                />
+                                <p style="margin-bottom:0 !important;">Deadline:
+                                <span
+                                    t-field="activity.date_deadline"
+                                    t-options="{'widget': 'date'}"
+                                />
+                            </p>
+                                <p style="margin:0 !important;">
+                                <span t-out="activity_obj.display_name" />
+                                        -
+                                <span
+                                    t-out="activity.summary or activity_obj.activity_type_id.display_name"
+                                />
+                            </p>
+                            </li>
+                        </t>
+                    </ul>
+                </div>
+            </div>
+        </field>
+    </record>
+</odoo>
