@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_crm_phonecall_form_inherit_result" model="ir.ui.view">
+        <field name="name">crm.phonecall.form.inherit.result</field>
+        <field name="model">crm.phonecall</field>
+        <field name="inherit_id" ref="crm_phonecall.crm_case_phone_form_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='priority']" position="after">
+                <field name="phone_result_id" />
+            </xpath>
+        </field>
+    </record>
+    <record id="view_crm_phonecall_list_inherit_result" model="ir.ui.view">
+        <field name="name">crm.phonecall.list.inherit.result</field>
+        <field name="model">crm.phonecall</field>
+        <field name="inherit_id" ref="crm_phonecall.crm_case_inbound_phone_tree_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='state']" position="after">
+                <field name="phone_result_id" />
+            </xpath>
+        </field>
+    </record>
+    <record id="view_crm_phonecall_search_inherit_result" model="ir.ui.view">
+        <field name="name">crm.phonecall.search.inherit.result</field>
+        <field name="model">crm.phonecall</field>
+        <field name="inherit_id" ref="crm_phonecall.view_crm_case_phonecalls_filter" />
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='unassigned']" position="after">
+                <filter
+                    domain="[('phone_result_id','!=',False)]"
+                    name="call_result"
+                    string="Call result"
+                />
+            </xpath>
+            <xpath expr="//field[@name='opportunity_id']" position="after">
+                <field name="phone_result_id" />
+            </xpath>
+            <xpath expr="//group/filter[@name='groupby_state']" position="after">
+                <filter
+                    context="{'group_by':'phone_result_id'}"
+                    name="groupby_phone_result"
+                    string="Call result"
+                />
+            </xpath>
+        </field>
+    </record>
+    <record id="view_crm_phonecall_pivot_inherit_result" model="ir.ui.view">
+        <field name="name">crm.phonecall.pivot.inherit.result</field>
+        <field name="model">crm.phonecall.report</field>
+        <field name="inherit_id" ref="crm_phonecall.view_report_crm_phonecall_pivot" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='duration']" position="after">
+                <field name="phone_result_id" type="row" />
+            </xpath>
+        </field>
+    </record>
+</odoo>
