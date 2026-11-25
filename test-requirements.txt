@@ -1,0 +1,1 @@
+odoo-addon-partner_capital @ git+https://github.com/OCA/partner-contact.git@refs/pull/2534/head#subdirectory=partner_capital
