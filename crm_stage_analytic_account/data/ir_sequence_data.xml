@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+    <record id="seq_crm_lead_analytic_account" model="ir.sequence">
+        <field name="name">CRM Lead Analytic Account</field>
+        <field name="code">crm.lead.analytic.account</field>
+        <field name="prefix">FICHA/</field>
+        <field name="padding">5</field>
+        <field name="implementation">no_gap</field>
+    </record>
+</odoo>
