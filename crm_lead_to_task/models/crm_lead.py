@@ -51,14 +51,14 @@ class CrmLead(models.Model):
         task = self.env["project.task"].create(vals)
 
         # Move mail thread + attachments
-        self.message_change_thread(task)
-
-        self.env["ir.attachment"].search(
-            [
-                ("res_model", "=", "crm.lead"),
-                ("res_id", "=", self.id),
-            ]
-        ).write({"res_model": "project.task", "res_id": task.id})
+        if self.company_id.crm_archive_lead_on_convert:
+            self.message_change_thread(task)
+            self.env["ir.attachment"].search(
+                [
+                    ("res_model", "=", "crm.lead"),
+                    ("res_id", "=", self.id),
+                ]
+            ).write({"res_model": "project.task", "res_id": task.id})
 
         return task
 
