@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- Copyright 2021 Sygel - Valentin Vinagre
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+<odoo>
+    <menuitem
+        id="menu_salesperson_planner"
+        name="Salesperson Planner"
+        groups="sales_team.group_sale_salesman"
+        parent="crm.crm_menu_root"
+        sequence="4"
+    />
+    <menuitem
+        name="My Visits"
+        id="menu_crm_salesperson_planner_my_visits"
+        parent="menu_salesperson_planner"
+        action="my_crm_salesperson_planner_visit_action"
+        sequence="1"
+    />
+    <menuitem
+        name="All Visits"
+        id="menu_crm_salesperson_planner_visits"
+        parent="menu_salesperson_planner"
+        action="all_crm_salesperson_planner_visit_action"
+        sequence="2"
+        groups="sales_team.group_sale_salesman_all_leads"
+    />
+    <menuitem
+        name="Visit Templates"
+        id="menu_crm_salesperson_planner_visit_template"
+        parent="menu_salesperson_planner"
+        action="crm_salesperson_planner_visit_template_action"
+        sequence="3"
+    />
+    <!-- CONFIGURATION -->
+    <menuitem
+        id="menu_crm_config_salesperson_planner"
+        name="Salesperson Planner"
+        parent="crm.crm_menu_config"
+        sequence="30"
+        groups="sales_team.group_sale_manager"
+    />
+    <menuitem
+        name="Close Reasons"
+        id="menu_crm_config_salesperson_planner_close_reason"
+        parent="menu_crm_config_salesperson_planner"
+        action="crm_salesperson_planner_visit_close_reason_action"
+        sequence="2"
+    />
+</odoo>
