@@ -8,6 +8,16 @@ class ProjectTask(models.Model):
     _inherit = "project.task"
 
     lead_id = fields.Many2one("crm.lead")
+    effective_lead_id = fields.Many2one(
+        "crm.lead", compute="_compute_effective_lead_id"
+    )
+
+    def _compute_effective_lead_id(self):
+        for task in self:
+            lead = task.lead_id
+            if not lead and task.parent_id:
+                lead = task.parent_id.effective_lead_id
+            task.effective_lead_id = lead
 
     def action_view_lead(self):
         self.ensure_one()
