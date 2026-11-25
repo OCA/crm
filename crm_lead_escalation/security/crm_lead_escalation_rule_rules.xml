@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Copyright 2026 ForgeFlow S.L.
+     License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl). -->
+<odoo noupdate="1">
+    <record id="crm_lead_escalation_rule_comp_rule" model="ir.rule">
+        <field name="name">CRM Lead Escalation Rule multi-company</field>
+        <field name="model_id" ref="model_crm_lead_escalation_rule" />
+        <field name="domain_force">[('company_id', 'in', company_ids + [False])]</field>
+    </record>
+</odoo>
