@@ -1,0 +1,1 @@
+odoo-addon-crm_claim @ git+https://github.com/OCA/crm@refs/pull/795/head#subdirectory=crm_claim
