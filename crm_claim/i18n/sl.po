@@ -1,0 +1,822 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* crm_claim
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-06-26 10:19+0000\n"
+"Last-Translator: Matjaz Mozetic <matjaz@luxim.si>\n"
+"Language-Team: none\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 5.15.2\n"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_res_partner__claim_count
+#: model:ir.model.fields,field_description:crm_claim.field_res_users__claim_count
+msgid "# Claims"
+msgstr "Št. zahtevkov"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__email
+msgid "# Emails"
+msgstr "Št. e-pošte"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__nbr_claims
+msgid "# of Claims"
+msgstr "Št. zahtevkov"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
+msgid "Action Description..."
+msgstr "Opis ukrepa..."
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_needaction
+msgid "Action Needed"
+msgstr "Potrebno ukrepanje"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__type_action
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__type_action
+msgid "Action Type"
+msgstr "Tip ukrepa"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__active
+msgid "Active"
+msgstr "Aktivno"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__activity_ids
+msgid "Activities"
+msgstr "Aktivnosti"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Dekoracija izjeme"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__activity_state
+msgid "Activity State"
+msgstr "Stanje aktivnosti"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Ikona tipa aktivnosti"
+
+#. module: crm_claim
+#: model:ir.ui.menu,name:crm_claim.menu_aftersale
+msgid "After Sale"
+msgstr "Poprodaja"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_attachment_count
+msgid "Attachment Count"
+msgstr "Št. priponk"
+
+#. module: crm_claim
+#: model:ir.model,name:crm_claim.model_crm_claim_report
+msgid "CRM Claim Report"
+msgstr "Poročilo o CRM zahtevku"
+
+#. module: crm_claim
+#: model:ir.ui.menu,name:crm_claim.menu_crm_case_claim-act
+msgid "Categories"
+msgstr "Kategorije"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__categ_id
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__categ_id
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
+msgid "Category"
+msgstr "Kategorija"
+
+#. module: crm_claim
+#: model:ir.model,name:crm_claim.model_crm_claim_category
+msgid "Category of claim"
+msgstr "Kategorija zahtevka"
+
+#. module: crm_claim
+#: model:ir.model,name:crm_claim.model_crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_res_partner__claim_ids
+#: model:ir.model.fields,field_description:crm_claim.field_res_users__claim_ids
+#: model:ir.ui.menu,name:crm_claim.menu_config_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
+msgid "Claim"
+msgstr "Zahtevek"
+
+#. module: crm_claim
+#: model:ir.actions.act_window,name:crm_claim.crm_claim_categ_action
+#: model_terms:ir.ui.view,arch_db:crm_claim.crm_claim_category_form
+msgid "Claim Categories"
+msgstr "Kategorije zahtevkov"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__date
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__claim_date
+msgid "Claim Date"
+msgstr "Datum zahtevka"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
+msgid "Claim Date by Month"
+msgstr "Datum zahtevkov po mesecih"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
+msgid "Claim Description"
+msgstr "Opis zahtevka"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
+msgid "Claim Month"
+msgstr "Mesec zahtevka"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
+msgid "Claim Reporter"
+msgstr "Prijavitelj zahtevka"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.crm_claim_stage_form
+msgid "Claim Stage"
+msgstr "Stopnja zahtevka"
+
+#. module: crm_claim
+#: model:ir.actions.act_window,name:crm_claim.crm_claim_stage_act
+msgid "Claim Stages"
+msgstr "Stopnje zahtevka"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__name
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__subject
+msgid "Claim Subject"
+msgstr "Predmet zahtevka"
+
+#. module: crm_claim
+#: model:ir.model,name:crm_claim.model_crm_claim_stage
+msgid "Claim stages"
+msgstr "Stopnje zahtevka"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
+msgid "Claim/Action Description"
+msgstr "Zahtevek/Opis ukrepa"
+
+#. module: crm_claim
+#: model:ir.actions.act_window,name:crm_claim.crm_claim_category_claim0
+#: model:ir.ui.menu,name:crm_claim.menu_crm_case_claims
+#: model:ir.ui.menu,name:crm_claim.menu_report_crm_claim_tree
+#: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_calendar_view
+#: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_claim_res_partner_info_form
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_graph
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_pivot
+msgid "Claims"
+msgstr "Zahtevki"
+
+#. module: crm_claim
+#: model:ir.actions.act_window,name:crm_claim.action_report_crm_claim
+msgid "Claims Analysis"
+msgstr "Analiza zahtevkov"
+
+#. module: crm_claim
+#: model_terms:ir.actions.act_window,help:crm_claim.crm_claim_categ_action
+msgid "Click to create a claim category."
+msgstr "Kliknite, da ustvarite kategorijo zahtevka."
+
+#. module: crm_claim
+#: model_terms:ir.actions.act_window,help:crm_claim.crm_claim_stage_act
+msgid "Click to setup a new stage in the processing of the claims."
+msgstr "Kliknite, da nastavite novo fazo v obdelavi zahtevkov."
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__date_closed
+msgid "Close Date"
+msgstr "Datum zaključka"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__date_closed
+msgid "Closed"
+msgstr "Zaključeno"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
+msgid "Closure"
+msgstr "Zaključek"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage__case_default
+msgid "Common to All Teams"
+msgstr "Skupno vsem ekipam"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__company_id
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__company_id
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
+msgid "Company"
+msgstr "Družba"
+
+#. module: crm_claim
+#: model:ir.model,name:crm_claim.model_res_partner
+msgid "Contact"
+msgstr "Stik"
+
+#. module: crm_claim
+#: model:utm.campaign,title:crm_claim.claim_source1
+msgid "Corrective"
+msgstr "Korekcijski"
+
+#. module: crm_claim
+#: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim__type_action__correction
+#: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim_report__type_action__correction
+msgid "Corrective Action"
+msgstr "Korektivni ukrep"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__create_date
+msgid "Create Date"
+msgstr "Datum nastanka"
+
+#. module: crm_claim
+#: model_terms:ir.actions.act_window,help:crm_claim.crm_claim_categ_action
+msgid ""
+"Create claim categories to better manage and classify your\n"
+"            claims. Some examples of claims can be: preventive action,\n"
+"            corrective action."
+msgstr ""
+"Ustvarite kategorije zahtevkov, da boste lažje upravljali in razvrščali "
+"svoje\n"
+"            zahtevke. Nekateri primeri zahtevkov so: preventivni ukrepi,\n"
+"            korekcijski ukrepi."
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__create_uid
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category__create_uid
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage__create_uid
+msgid "Created by"
+msgstr "Ustvaril"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category__create_date
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage__create_date
+msgid "Created on"
+msgstr "Ustvarjeno"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__create_date
+msgid "Creation Date"
+msgstr "Datum nastanka"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
+msgid "Creation Month"
+msgstr "Mesec nastanka"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
+msgid "Date Closed"
+msgstr "Datum zaključka"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
+msgid "Dates"
+msgstr "Datumi"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__date_deadline
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__date_deadline
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
+msgid "Deadline"
+msgstr "Rok izvedbe"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__delay_close
+msgid "Delay to close"
+msgstr "Zamik do zaključka"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__description
+msgid "Description"
+msgstr "Opis"
+
+#. module: crm_claim
+#: model:ir.model.fields,help:crm_claim.field_crm_claim__email_from
+msgid "Destination email for email gateway."
+msgstr "Ciljni e-poštni naslov."
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__display_name
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category__display_name
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__display_name
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage__display_name
+#: model:ir.model.fields,field_description:crm_claim.field_res_partner__display_name
+msgid "Display Name"
+msgstr "Prikazani naziv"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__email_from
+msgid "Email"
+msgstr "E-pošta"
+
+#. module: crm_claim
+#: model:crm.claim.category,name:crm_claim.categ_claim1
+msgid "Factual Claims"
+msgstr "Dejanski zahtevki"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
+msgid "Follow Up"
+msgstr "Nadaljnje ukrepanje"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_follower_ids
+msgid "Followers"
+msgstr "Sledilci"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Sledilci (partnerji)"
+
+#. module: crm_claim
+#: model:ir.model.fields,help:crm_claim.field_crm_claim__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Font awesome ikona, npr. fa-tasks"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__has_message
+msgid "Has Message"
+msgstr "Vsebuje sporočilo"
+
+#. module: crm_claim
+#: model_terms:ir.actions.act_window,help:crm_claim.action_report_crm_claim
+msgid ""
+"Have a general overview of all claims processed in the system by sorting "
+"them with specific criteria."
+msgstr ""
+"Pridobite splošen pregled nad vsemi zahtevki, obdelanimi v sistemu, tako da "
+"jih razvrstite po določenih merilih."
+
+#. module: crm_claim
+#: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim__priority__2
+#: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim_report__priority__2
+msgid "High"
+msgstr "Visoka"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__id
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category__id
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__id
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage__id
+#: model:ir.model.fields,field_description:crm_claim.field_res_partner__id
+msgid "ID"
+msgstr "ID"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__activity_exception_icon
+msgid "Icon"
+msgstr "Ikona"
+
+#. module: crm_claim
+#: model:ir.model.fields,help:crm_claim.field_crm_claim__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Ikona za prikaz izjem pri aktivnostih."
+
+#. module: crm_claim
+#: model:ir.model.fields,help:crm_claim.field_crm_claim__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Če je označeno, nova sporočila zahtevajo vašo pozornost."
+
+#. module: crm_claim
+#: model:ir.model.fields,help:crm_claim.field_crm_claim__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+"Kadar je označeno, pomeni, da je pri nekaterih sporočilih prišlo do napake "
+"pri dostavi."
+
+#. module: crm_claim
+#: model:ir.model.fields,help:crm_claim.field_crm_claim_stage__case_default
+msgid ""
+"If you check this field, this stage will be proposed by default on each "
+"sales team. It will not assign this stage to existing teams."
+msgstr ""
+"Če označite to polje, bo ta stopnja privzeto predlagana vsaki prodajni "
+"ekipi, ne bo pa dodeljena obstoječim ekipam."
+
+#. module: crm_claim
+#: model:crm.claim.stage,name:crm_claim.stage_claim5
+msgid "In Progress"
+msgstr "V teku"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_is_follower
+msgid "Is Follower"
+msgstr "Je sledilec"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__write_uid
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category__write_uid
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage__write_uid
+msgid "Last Updated by"
+msgstr "Zadnji posodobil"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category__write_date
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage__write_date
+msgid "Last Updated on"
+msgstr "Zadnjič posodobljeno"
+
+#. module: crm_claim
+#: model:ir.model.fields,help:crm_claim.field_crm_claim_stage__team_ids
+msgid ""
+"Link between stages and sales teams. When set, this limitate the current "
+"stage to the selected sales teams."
+msgstr ""
+"Povezava med stopnjami in prodajnimi ekipami. Ko je nastavljeno, omejuje "
+"trenutno stopnjo le za izbrane prodajne ekipe."
+
+#. module: crm_claim
+#: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim__priority__0
+#: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim_report__priority__0
+msgid "Low"
+msgstr "Nizka"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_has_error
+msgid "Message Delivery error"
+msgstr "Napaka ob dostavi sporočila"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_ids
+msgid "Messages"
+msgstr "Sporočila"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__model_ref_id
+msgid "Model Reference"
+msgstr "Sklic modela"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
+msgid "Month of claim"
+msgstr "Mesec zahtevka"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Rok mojih aktivnosti"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
+msgid "My Company"
+msgstr "Moja družba"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
+msgid "My Sales Team(s)"
+msgstr "Moje prodajne ekipe"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category__name
+msgid "Name"
+msgstr "Naziv"
+
+#. module: crm_claim
+#: model:crm.claim.stage,name:crm_claim.stage_claim1
+msgid "New"
+msgstr "Novo"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "Naslednji dogodek v koledarju aktivnosti"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Rok naslednje aktivnosti"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__activity_summary
+msgid "Next Activity Summary"
+msgstr "Povzetek naslednje aktivnosti"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__activity_type_id
+msgid "Next Activity Type"
+msgstr "Tip naslednje aktivnosti"
+
+#. module: crm_claim
+#. odoo-python
+#: code:addons/crm_claim/models/crm_claim.py:0
+msgid "No Subject"
+msgstr "Brez predmeta"
+
+#. module: crm_claim
+#: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim__priority__1
+#: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim_report__priority__1
+msgid "Normal"
+msgstr "Običajna"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Število ukrepov"
+
+#. module: crm_claim
+#: model:ir.model.fields,help:crm_claim.field_crm_claim_report__delay_close
+msgid "Number of Days to close the case"
+msgstr "Število dni do zaključka primera"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__message_has_error_counter
+msgid "Number of errors"
+msgstr "Število napak"
+
+#. module: crm_claim
+#: model:ir.model.fields,help:crm_claim.field_crm_claim__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Število sporočil, ki zahtevajo ukrepanje"
+
+#. module: crm_claim
+#: model:ir.model.fields,help:crm_claim.field_crm_claim__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Število sporočil, ki niso bila pravilno dostavljena"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__delay_expected
+msgid "Overpassed Deadline"
+msgstr "Presežen končni rok"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__partner_id
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__partner_id
+#: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
+msgid "Partner"
+msgstr "Partner"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
+msgid "Partner (including children)"
+msgstr "Partner (vključno podrejeni)"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__partner_phone
+msgid "Phone"
+msgstr "Telefon"
+
+#. module: crm_claim
+#: model:crm.claim.category,name:crm_claim.categ_claim3
+msgid "Policy Claims"
+msgstr "Zahtevki glede pravil"
+
+#. module: crm_claim
+#: model:utm.campaign,title:crm_claim.claim_source2
+msgid "Preventive"
+msgstr "Preventivni"
+
+#. module: crm_claim
+#: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim__type_action__prevention
+#: model:ir.model.fields.selection,name:crm_claim.selection__crm_claim_report__type_action__prevention
+msgid "Preventive Action"
+msgstr "Preventivni ukrep"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__priority
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__priority
+msgid "Priority"
+msgstr "Prioriteta"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__rating_ids
+msgid "Ratings"
+msgstr "Ocene"
+
+#. module: crm_claim
+#: model_terms:ir.actions.act_window,help:crm_claim.crm_claim_category_claim0
+msgid ""
+"Record and track your customers' claims.\n"
+"                Claims may be linked to a sales order or a lot.\n"
+"                You can send emails with attachments and keep the full history for a claim (emails sent, intervention type and so on).\n"
+"                Claims may automatically be linked to an email address using the mail gateway module."
+msgstr ""
+"Knjiženje in sledenje reklamacijskim zahtevkom kupcev.\n"
+"                Zahtevki so lahko povezani s prodajnim nalogom ali lotom.\n"
+"                Pošiljate lahko e-pošto s prilogami in vodite celotno "
+"zgodovino zahtevka (poslana e-pošta, tip intervencije itd.).\n"
+"                Zahtevki se lahko samodejno povežejo z e-poštnim naslovom "
+"preko modula mail gateway."
+
+#. module: crm_claim
+#: model:crm.claim.stage,name:crm_claim.stage_claim3
+msgid "Rejected"
+msgstr "Zavrnjeno"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__resolution
+msgid "Resolution"
+msgstr "Resolucija"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
+msgid "Resolution Actions"
+msgstr "Resolucijski ukrepi"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
+msgid "Responsibilities"
+msgstr "Odgovornosti"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__user_id
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
+msgid "Responsible"
+msgstr "Odgovorni"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__activity_user_id
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
+msgid "Responsible User"
+msgstr "Odgovorni uporabnik"
+
+#. module: crm_claim
+#: model:ir.model.fields,help:crm_claim.field_crm_claim__team_id
+msgid ""
+"Responsible sales team. Define Responsible user and Email account for mail "
+"gateway."
+msgstr ""
+"Odgovorna prodajna ekipa. Določite odgovornega uporabnika in e-poštni naslov."
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__cause
+msgid "Root Cause"
+msgstr "Osnovni vzrok"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_form_view
+msgid "Root Causes"
+msgstr "Osnovni vzroki"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__team_id
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_category__team_id
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
+msgid "Sales Team"
+msgstr "Prodajna ekipa"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
+msgid "Salesperson"
+msgstr "Prodajalec"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
+msgid "Search"
+msgstr "Iskanje"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
+msgid "Search Claims"
+msgstr "Iskanje zahtevkov"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage__sequence
+msgid "Sequence"
+msgstr "Zaporedje"
+
+#. module: crm_claim
+#: model:crm.claim.stage,name:crm_claim.stage_claim2
+msgid "Settled"
+msgstr "Poravnano"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__stage_id
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__stage_id
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_report_crm_claim_filter
+msgid "Stage"
+msgstr "Stopnja"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage__name
+msgid "Stage Name"
+msgstr "Naziv stopnje"
+
+#. module: crm_claim
+#: model:ir.ui.menu,name:crm_claim.menu_claim_stage_view
+msgid "Stages"
+msgstr "Stopnje"
+
+#. module: crm_claim
+#: model:ir.model.fields,help:crm_claim.field_crm_claim__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Status glede na aktivnosti\n"
+"Prekoračeno: rok izvedbe je že prekoračen\n"
+"Danes: Datum aktivnosti je današnji dan\n"
+"Planirano: Bodoče aktivnosti."
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__team_id
+msgid "Team"
+msgstr "Ekipa"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_stage__team_ids
+msgid "Teams"
+msgstr "Ekipe"
+
+#. module: crm_claim
+#: model:ir.model.fields,help:crm_claim.field_crm_claim__email_cc
+msgid ""
+"These email addresses will be added to the CC field of all inbound and "
+"outbound emails for this record before being sent. Separate multiple email "
+"addresses with a comma"
+msgstr ""
+"Ti e-poštni naslovni bodo dodani v polje CC za vso vhodno in izhodno pošto "
+"glede tega zapisa. V primeru več naslovov jih ločujte z vejico"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__user_fault
+msgid "Trouble Responsible"
+msgstr "Odgovorni za težave"
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.crm_case_claims_tree_view
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
+msgid "Type"
+msgstr "Tip"
+
+#. module: crm_claim
+#: model:ir.model.fields,help:crm_claim.field_crm_claim__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Tip izjeme pri aktivnosti na zapisu."
+
+#. module: crm_claim
+#: model_terms:ir.ui.view,arch_db:crm_claim.view_crm_case_claims_filter
+msgid "Unassigned Claims"
+msgstr "Nedodeljeni zahtevki"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__write_date
+msgid "Update Date"
+msgstr "Datum posodobitve"
+
+#. module: crm_claim
+#: model:ir.model.fields,help:crm_claim.field_crm_claim_stage__sequence
+msgid "Used to order stages. Lower is better."
+msgstr "Uporabljeno za vrstni red stopenj. Nižje je bolje."
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim_report__user_id
+msgid "User"
+msgstr "Uporabnik"
+
+#. module: crm_claim
+#: model:crm.claim.category,name:crm_claim.categ_claim2
+msgid "Value Claims"
+msgstr "Vrednostni zahtevki"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__email_cc
+msgid "Watchers Emails"
+msgstr "E-pošta opazovalcev"
+
+#. module: crm_claim
+#: model:ir.model.fields,field_description:crm_claim.field_crm_claim__website_message_ids
+msgid "Website Messages"
+msgstr "Sporočila spletne strani"
+
+#. module: crm_claim
+#: model:ir.model.fields,help:crm_claim.field_crm_claim__website_message_ids
+msgid "Website communication history"
+msgstr "Kronologija komunikacij spletne strani"
+
+#. module: crm_claim
+#: model_terms:ir.actions.act_window,help:crm_claim.crm_claim_stage_act
+msgid ""
+"You can create claim stages to categorize the status of every\n"
+"            claim entered in the system. The stages define all the steps\n"
+"            required for the resolution of a claim."
+msgstr ""
+"Lahko ustvarite faze zahtevkov, da kategorizirate status vsakega\n"
+"            zahtevka, vnesenega v sistem. Faze opredeljujejo vse korake,\n"
+"            potrebne za rešitev zahtevka."

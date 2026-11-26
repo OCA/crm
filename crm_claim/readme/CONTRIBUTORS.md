@@ -1,0 +1,13 @@
+- Odoo S.A.
+- Vicent Cubells \<<vicent.cubells@tecnativa.com>\>
+- Bhavesh Odedra \<<bodedra@ursainfosystems.com>\>
+- Cristina Martin R. \<<cristina.martin@tecnativa.com>\>
+- Ruchir Shukla \<<ruchir@bizzappdev.com>\>
+- [Guadaltech](https://www.guadaltech.es):
+  - Fernando La Chica \<<fernando.lachica@guadaltech.es>\>
+- [APSL-Nagarro](<https://apsl.tech>):
+  - Bernat Obrador \<<bobrador@apsl.net>\>
+- [Studio73](<https://www.studio73.es/>):
+  - Vicent Castells \<<vicent@studio73.es>\>
+- [Heliconia Solutions Pvt. Ltd.](https://www.heliconia.io)
+  - Bhavesh Heliconia

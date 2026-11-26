@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+    <record id="categ_claim1" model="crm.claim.category">
+        <field name="name">Factual Claims</field>
+        <field name="team_id" ref="sales_team.team_sales_department" />
+    </record>
+    <record id="categ_claim2" model="crm.claim.category">
+        <field name="name">Value Claims</field>
+        <field name="team_id" ref="sales_team.team_sales_department" />
+    </record>
+    <record id="categ_claim3" model="crm.claim.category">
+        <field name="name">Policy Claims</field>
+        <field name="team_id" ref="sales_team.team_sales_department" />
+    </record>
+    <record id="claim_source1" model="utm.campaign">
+        <field name="name">Corrective</field>
+    </record>
+    <record id="claim_source2" model="utm.campaign">
+        <field name="name">Preventive</field>
+    </record>
+    <record id="stage_claim1" model="crm.claim.stage">
+        <field name="name">New</field>
+        <field name="sequence" eval="1" />
+        <field name="case_default" eval="True" />
+    </record>
+    <record id="stage_claim5" model="crm.claim.stage">
+        <field name="name">In Progress</field>
+        <field name="sequence" eval="27" />
+        <field name="case_default" eval="True" />
+    </record>
+    <record id="stage_claim2" model="crm.claim.stage">
+        <field name="name">Settled</field>
+        <field name="sequence" eval="28" />
+        <field name="case_default" eval="True" />
+    </record>
+    <record id="stage_claim3" model="crm.claim.stage">
+        <field name="name">Rejected</field>
+        <field name="sequence" eval="29" />
+        <field name="case_default" eval="True" />
+    </record>
+</odoo>
