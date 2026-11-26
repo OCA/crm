@@ -12,7 +12,8 @@
                     type="action"
                     context="{'search_default_partner_id': id, 'default_partner_id': id}"
                     name="%(crm_claim_category_claim0)d"
-                    icon="fa-comments"
+                    icon="chat_bubble"
+                    icon_class="oi-filled"
                     groups="sales_team.group_sale_salesman"
                 >
                     <field

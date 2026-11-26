@@ -9,3 +9,5 @@
   - Bernat Obrador \<<bobrador@apsl.net>\>
 - [Studio73](<https://www.studio73.es/>):
   - Vicent Castells \<<vicent@studio73.es>\>
+- [Heliconia Solutions Pvt. Ltd.](https://www.heliconia.io)
+  - Bhavesh Heliconia
