@@ -9,14 +9,7 @@
         <field name="arch" type="xml">
             <!-- LEAD -->
             <xpath
-                expr="//group[@name='lead_partner']/field[@name='website']"
-                position="before"
-            >
-                <field name="partner_contact_assigned_id" />
-                <field name="partner_assigned_id" readonly="True" />
-            </xpath>
-            <xpath
-                expr="//group[@name='opportunity_partner']/label[@for='email_from']"
+                expr="//group[@name='lead_partner']/label[@for='email_from']"
                 position="before"
             >
                 <field name="partner_contact_assigned_id" />
@@ -54,7 +47,7 @@
         <field name="model">crm.lead</field>
         <field name="inherit_id" ref="crm.view_crm_case_leads_filter" />
         <field name="arch" type="xml">
-            <xpath expr="//search/field[@name='activity_state']" position="before">
+            <xpath expr="//search/field[@name='lead_properties']" position="before">
                 <field name="partner_assigned_id" />
             </xpath>
             <xpath expr="//search/group/separator" position="before">
