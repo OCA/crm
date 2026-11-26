@@ -3,8 +3,7 @@
 
 {
     "name": "CRM Lead Currency",
-    "summary": """
-        On leads/opportunities, add the amount in the customer's currency.""",
+    "summary": "On leads/opportunities, add the amount in the customer's currency.",
     "maintainers": [
         "luisg123v",
     ],
