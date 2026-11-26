@@ -4,7 +4,7 @@
 {
     "name": "CRM Project Create",
     "summary": "Allow create projects from lead/opportunity",
-    "version": "19.0.1.0.0",
+    "version": "20.0.1.0.0",
     "category": "Sales/CRM",
     "website": "https://github.com/OCA/crm",
     "author": "Moduon, Odoo Community Association (OCA)",
@@ -14,7 +14,7 @@
     "installable": True,
     "depends": ["crm", "sale_project", "mail_message_destiny_link_template"],
     "data": [
-        "security/ir.model.access.csv",
+        "security/ir.access.csv",
         "wizards/crm_create_project.xml",
         "views/crm_lead.xml",
     ],
