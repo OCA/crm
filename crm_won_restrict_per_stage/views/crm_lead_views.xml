@@ -9,7 +9,12 @@
                 <field name="show_won_button" invisible="1" />
             </field>
             <button name="action_set_won_rainbowman" position="attributes">
-                <attribute name="invisible">not show_won_button</attribute>
+                <attribute name="invisible">(
+                    not show_won_button
+                    or won_status == 'won'
+                    or type == 'lead'
+                    or not active
+                )</attribute>
             </button>
         </field>
     </record>
