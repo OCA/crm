@@ -1,0 +1,59 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* crm_lead_vat
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-07-09 08:23+0000\n"
+"Last-Translator: Laura V <laura.valls@forgeflow.com>\n"
+"Language-Team: none\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15.2\n"
+
+#. module: crm_lead_vat
+#: model_terms:ir.ui.view,arch_db:crm_lead_vat.crm_lead_view_form
+msgid ""
+"<span class=\"fa fa-exclamation-triangle text-warning oe_edit_only\" "
+"title=\"By saving this change, the customer vat number will also be "
+"updated.\" invisible=\"partner_vat_update == False\"/>"
+msgstr ""
+"<span class=\"fa fa-exclamation-triangle text-warning oe_edit_only\" "
+"title=\"Ved at gemme denne ændring vil kundens CVR/moms-nummer også blive "
+"opdateret.\" invisible=\"partner_vat_update == False\"/>"
+
+#. module: crm_lead_vat
+#: model:ir.model.fields,field_description:crm_lead_vat.field_crm_lead__display_name
+msgid "Display Name"
+msgstr "Vis navn"
+
+#. module: crm_lead_vat
+#: model:ir.model.fields,field_description:crm_lead_vat.field_crm_lead__id
+msgid "ID"
+msgstr "ID"
+
+#. module: crm_lead_vat
+#: model:ir.model,name:crm_lead_vat.model_crm_lead
+msgid "Lead"
+msgstr "Kundeemne"
+
+#. module: crm_lead_vat
+#: model:ir.model.fields,field_description:crm_lead_vat.field_crm_lead__partner_vat_update
+msgid "Partner VAT will Update"
+msgstr "Kontaktens CVR/moms-nummer opdateres"
+
+#. module: crm_lead_vat
+#: model:ir.model.fields,field_description:crm_lead_vat.field_crm_lead__vat
+msgid "TIN"
+msgstr "TIN"
+
+#. module: crm_lead_vat
+#: model:ir.model.fields,help:crm_lead_vat.field_crm_lead__vat
+msgid ""
+"Tax Identification Number. The first 2 characters are the country code."
+msgstr "Skatteidentifikationsnummer. De første 2 tegn er landekoden."
