@@ -1,0 +1,40 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* crm_won_restrict_per_stage
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2024-04-19 10:36+0000\n"
+"Last-Translator: mymage <stefano.consolaro@mymage.it>\n"
+"Language-Team: none\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17\n"
+
+#. module: crm_won_restrict_per_stage
+#: model:ir.model,name:crm_won_restrict_per_stage.model_crm_stage
+msgid "CRM Stages"
+msgstr "Fasi CRM"
+
+#. module: crm_won_restrict_per_stage
+#: model:ir.model,name:crm_won_restrict_per_stage.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Contatto/Opportunità"
+
+#. module: crm_won_restrict_per_stage
+#: model:ir.model.fields,field_description:crm_won_restrict_per_stage.field_crm_lead__show_won_button
+#: model:ir.model.fields,field_description:crm_won_restrict_per_stage.field_crm_stage__show_won_button
+msgid "Show Won Button"
+msgstr "Visualizza pulsante Vinto"
+
+#. module: crm_won_restrict_per_stage
+#. odoo-python
+#: code:addons/crm_won_restrict_per_stage/models/crm_lead.py:0
+#, python-format
+msgid "You can't change to this stage from the current stage."
+msgstr "Non si può passare a questo stato dall'attuale."
