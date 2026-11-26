@@ -4,7 +4,7 @@
 
 {
     "name": "CRM Lost Reason Required",
-    "version": "19.0.1.0.0",
+    "version": "20.0.1.0.0",
     "category": "Customer Relationship Management",
     "summary": "Make the lost reason mandatory when marking a lead/opportunity as lost",
     "author": "Hector del Reguero, Gray Matter Logic, Odoo Community Association (OCA)",

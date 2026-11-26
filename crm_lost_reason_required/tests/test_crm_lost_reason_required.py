@@ -7,6 +7,8 @@ from odoo.addons.base.tests.common import BaseCommon
 
 
 class TestCrmLostReasonRequired(BaseCommon):
+    _test_user_groups = ("sales_team.group_sale_salesman",)
+
     def test_lost_reason_required_on_wizard_view(self):
         view = self.env.ref("crm.crm_lead_lost_view_form")
         result = self.env["crm.lead.lost"].get_view(view_id=view.id, view_type="form")
