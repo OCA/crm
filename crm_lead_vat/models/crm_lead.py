@@ -61,9 +61,9 @@ class Lead(models.Model):
             return self.vat != self.partner_id.vat
         return False
 
-    def _prepare_customer_values(self, partner_name, is_company=False, parent_id=False):
+    def _prepare_customer_values(self, partner_name, parent_id=False):
         """Add VAT to partner."""
-        res = super()._prepare_customer_values(partner_name, is_company, parent_id)
+        res = super()._prepare_customer_values(partner_name, parent_id=parent_id)
         res.update(
             {
                 "vat": self.vat,
