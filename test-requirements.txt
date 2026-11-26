@@ -1,0 +1,1 @@
+odoo-addon-mail_message_destiny_link_template @ git+https://github.com/OCA/server-ux@refs/pull/1373/head#subdirectory=mail_message_destiny_link_template
