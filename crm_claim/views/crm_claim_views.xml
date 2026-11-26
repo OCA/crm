@@ -1,6 +1,6 @@
-<?xml version="1.0" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-    <record model="ir.ui.view" id="crm_case_claims_tree_view">
+    <record id="crm_case_claims_tree_view" model="ir.ui.view">
         <field name="name">CRM - Claims Tree</field>
         <field name="model">crm.claim</field>
         <field name="arch" type="xml">
@@ -15,7 +15,7 @@
             </list>
         </field>
     </record>
-    <record model="ir.ui.view" id="crm_case_claims_form_view">
+    <record id="crm_case_claims_form_view" model="ir.ui.view">
         <field name="name">CRM - Claims Form</field>
         <field name="model">crm.claim</field>
         <field name="arch" type="xml">
@@ -89,7 +89,7 @@
             </form>
         </field>
     </record>
-    <record model="ir.ui.view" id="crm_case_claims_calendar_view">
+    <record id="crm_case_claims_calendar_view" model="ir.ui.view">
         <field name="name">Claims Actions</field>
         <field name="model">crm.claim</field>
         <field name="priority" eval="2" />
@@ -175,7 +175,7 @@
             </search>
         </field>
     </record>
-    <record model="ir.actions.act_window" id="crm_claim_category_claim0">
+    <record id="crm_claim_category_claim0" model="ir.actions.act_window">
         <field name="name">Claims</field>
         <field name="res_model">crm.claim</field>
         <field name="view_mode">list,calendar,form</field>
@@ -192,19 +192,19 @@
             </p>
         </field>
     </record>
-    <record model="ir.actions.act_window.view" id="action_crm_tag_tree_claim0">
+    <record id="action_crm_tag_tree_claim0" model="ir.actions.act_window.view">
         <field name="sequence" eval="1" />
         <field name="view_mode">list</field>
         <field name="view_id" ref="crm_case_claims_tree_view" />
         <field name="act_window_id" ref="crm_claim_category_claim0" />
     </record>
-    <record model="ir.actions.act_window.view" id="action_crm_tag_calendar_claim0">
+    <record id="action_crm_tag_calendar_claim0" model="ir.actions.act_window.view">
         <field name="sequence" eval="2" />
         <field name="view_mode">calendar</field>
         <field name="view_id" ref="crm_case_claims_calendar_view" />
         <field name="act_window_id" ref="crm_claim_category_claim0" />
     </record>
-    <record model="ir.actions.act_window.view" id="action_crm_tag_form_claim0">
+    <record id="action_crm_tag_form_claim0" model="ir.actions.act_window.view">
         <field name="sequence" eval="3" />
         <field name="view_mode">form</field>
         <field name="view_id" ref="crm_case_claims_form_view" />

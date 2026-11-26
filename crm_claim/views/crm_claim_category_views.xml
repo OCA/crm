@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <menuitem
         id="menu_config_claim"
@@ -45,9 +45,9 @@
         </field>
     </record>
     <menuitem
+        id="menu_crm_case_claim-act"
         action="crm_claim_categ_action"
         name="Categories"
-        id="menu_crm_case_claim-act"
         parent="menu_config_claim"
         groups="base.group_no_one"
     />
