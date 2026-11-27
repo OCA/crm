@@ -45,17 +45,19 @@ class CrmLead(models.Model):
         )
         if test_condition or self.env.context.get("no_crm_stage_multi_team"):
             return super()._read_group_stage_ids(stages, domain)
-        team_ids = self.env.user.crm_team_ids.ids
-        if team_ids:
+        # retrieve team_id from the context, as the core does, instead of using
+        # all the teams of the user (which ignores the active company)
+        team_id = self.env.context.get("default_team_id")
+        if team_id:
             search_domain = [
                 "|",
                 ("id", "in", stages.ids),
                 "|",
                 ("team_ids", "=", False),
-                ("team_ids", "in", team_ids),
+                ("team_ids", "in", [team_id]),
             ]
         else:
             search_domain = ["|", ("id", "in", stages.ids), ("team_ids", "=", False)]
         # perform search
-        stage_ids = stages._search(search_domain, order=stages._order)
+        stage_ids = stages.sudo()._search(search_domain, order=stages._order)
         return stages.browse(stage_ids)

@@ -1,0 +1,1 @@
+This module should be evaluated during the migration to 19.0, since Odoo has integrated similar functionality into the core (https://github.com/odoo/odoo/blob/19.0/addons/crm/models/crm_stage.py#L31)
