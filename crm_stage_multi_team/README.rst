@@ -1,7 +1,3 @@
-.. image:: https://odoo-community.org/readme-banner-image
-   :target: https://odoo-community.org/get-involved?utm_source=readme
-   :alt: Odoo Community Association
-
 =========================
 CRM stage multiple teams 
 =========================
@@ -17,7 +13,7 @@ CRM stage multiple teams
 .. |badge1| image:: https://img.shields.io/badge/maturity-Alpha-red.png
     :target: https://odoo-community.org/page/development-status
     :alt: Alpha
-.. |badge2| image:: https://img.shields.io/badge/license-AGPL--3-blue.png
+.. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
     :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
     :alt: License: AGPL-3
 .. |badge3| image:: https://img.shields.io/badge/github-OCA%2Fcrm-lightgray.png?logo=github
@@ -70,6 +66,13 @@ Usage
   filtered according to the team of the lead or the context
   ``default_team_id``.
 - In kanban view, only relevant stages will be shown.
+
+Known issues / Roadmap
+======================
+
+This module should be evaluated during the migration to 19.0, since Odoo
+has integrated similar functionality into the core
+(https://github.com/odoo/odoo/blob/19.0/addons/crm/models/crm_stage.py#L31)
 
 Bug Tracker
 ===========
